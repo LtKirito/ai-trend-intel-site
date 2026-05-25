@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-22",
+  "title": "2026-05-22 AI 信息差日报",
+  "summary": "DeepSeek V4-Pro 永久降价成为本周最大价格事件；Anthropic Agent SDK 计费拆分引发社区广泛讨论；Qwen 3.7-Max 展示 35 小时自主 Agent 运行。",
+  "body": "5 月 22 日的核心事件集中在定价和生态层面：DeepSeek 将此前 75% 的临时折扣转为永久定价，在成本端持续施压。Anthropic 的 Agent SDK 计费拆分公告虽然在 5 月 14 日发布，但社区讨论在本周达到高峰——6 月 15 日的生效日期正在逼近。同时阿里在 Apsara 峰会上展示了 Qwen 3.7-Max 的 1M 上下文和 35 小时自主运行能力，虽然目前只是 Preview 阶段。",
+  "judgement": "本周的关键词是成本。如果你重度使用 Claude Code 做自动化，现在就需要评估迁移方案。DeepSeek V4-Pro 是当前性价比最高的替代选择，Cursor Composer 2.5 是编程场景的新选项。",
+  "tags": ["DeepSeek", "Anthropic", "Qwen 3.7", "Pricing"],
+  "signals": [
+    {"rank": "P0", "title": "DeepSeek V4-Pro 75% 折扣永久化", "desc": "输入 $0.435/M token，输出 $0.87/M token，缓存命中仅 $0.0036/M。比 Claude Opus 4.7 便宜 8-10 倍。", "tags": ["Pricing", "DeepSeek"], "source": "https://api-docs.deepseek.com/quick_start/pricing"},
+    {"rank": "P0", "title": "Anthropic Agent SDK 计费拆分倒计时", "desc": "6 月 15 日生效：Pro 用户 Agent SDK 额度仅 $20/月，claude -p 和第三方框架调用从独立额度池扣费。", "tags": ["Policy", "Anthropic"], "source": "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/"},
+    {"rank": "P1", "title": "Qwen 3.7-Max-Preview 展示 35h 自主 Agent 运行", "desc": "1M token 上下文窗口，LM Arena 编程 #10/数学 #7，演示中完成 1000+ 次工具调用。但仍是 Preview 阶段。", "tags": ["Model", "Qwen", "Agent"], "source": "https://www.marktechpost.com/2026/05/21/qwen-introduces-qwen3-7-max/"}
+  ]
+}

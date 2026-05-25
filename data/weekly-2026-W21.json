@@ -1,0 +1,19 @@
+{
+  "week": "2026-W21",
+  "title": "2026 W21 GitHub 星级周报",
+  "summary": "本周编程 Agent 与开源设计工具占据多数席位。Cursor 自研模型 Composer 2.5、Open Design 开源爆发、Anthropic 计费拆分成为三大驱动事件。AI 开源热度正向可集成、可部署的工程化方向集中。",
+  "count": "10 个项目",
+  "theme": "编程 Agent · 开源设计 · 计费重构",
+  "rows": [
+    {"rank": "01", "name": "Open Design", "category": "DevTools", "stars": "51.5k", "growth": "+5.2k", "why": "开源 Claude Design 替代品，132 技能包，17 引擎适配，Apache-2.0。本周 GitHub 增速最快的 AI 项目之一。", "url": "https://github.com/nexu-io/open-design"},
+    {"rank": "02", "name": "Cursor Composer 2.5", "category": "Agent", "stars": "—", "growth": "新发布", "why": "Cursor 首个自研前沿编程模型，SWE-Bench 多语言 79.8%，定价比 Opus 便宜 10-50 倍。", "url": "https://cursor.com/blog/composer-2-5"},
+    {"rank": "03", "name": "OpenClaw", "category": "Agent", "stars": "302k", "growth": "+4.2k", "why": "本地 AI 助理，连接 50+ 集成，自主编写新技能。社区持续高速增长。", "url": "https://github.com/PerFluent/openclaw"},
+    {"rank": "04", "name": "n8n", "category": "DevTools", "stars": "179k", "growth": "+3.1k", "why": "开源工作流自动化平台，原生 AI 集成 + 自定义 Agent 工作流。企业自托管场景持续升温。", "url": "https://github.com/n8n-io/n8n"},
+    {"rank": "05", "name": "Dify", "category": "DevTools", "stars": "132k", "growth": "+2.8k", "why": "AI 应用构建平台，5 月更新加强 MCP 协议集成。面向生产环境的 Agent 工作流开发。", "url": "https://github.com/langgenius/dify"},
+    {"rank": "06", "name": "ZAYA1-8B", "category": "Infra", "stars": "—", "growth": "+2.2k", "why": "8B MoE 模型，每次推理仅激活 760M 参数，完全 AMD 硬件训练。低算力高效推理的标杆。", "url": "https://github.com/Zyphra/ZAYA1"},
+    {"rank": "07", "name": "Mistral Medium 3.5", "category": "Infra", "stars": "—", "growth": "+1.9k", "why": "128B 密集模型，统一代码生成与复杂推理。Modified MIT 许可证，开源社区持续贡献。", "url": "https://mistral.ai/news/"},
+    {"rank": "08", "name": "Gemini 3.5 Flash", "category": "Multimodal", "stars": "新发布", "growth": "新发布", "why": "Google I/O 发布，Agent-first 设计，输出速度比竞品快 4 倍。Flash 系列首次以下克上。", "url": "https://blog.google/.../gemini-3-5/"},
+    {"rank": "09", "name": "opencode", "category": "DevTools", "stars": "—", "growth": "+1.8k", "why": "可视化桌面应用，用于自主开发。28 天增长 +1,841，开源编码 Agent 新势力。", "url": "https://opencode.ai/"},
+    {"rank": "10", "name": "llama.cpp", "category": "Infra", "stars": "—", "growth": "+690", "why": "高性能 C++ LLM 推理框架，支持多种量化。消费级硬件运行大模型的事实标准。", "url": "https://github.com/ggerganov/llama.cpp"}
+  ]
+}

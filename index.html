@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NextSignal — AI 资讯与新兴技术入口</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <button class="brand" data-view-link="home" aria-label="返回首页">
+        <span class="brand-mark">AI</span>
+        <span>
+          <span class="brand-name">NextSignal</span>
+          <span class="brand-sub">AI 资讯与新兴技术入口</span>
+        </span>
+      </button>
+
+      <nav class="nav" aria-label="主导航">
+        <button class="active" data-view-link="home">首页</button>
+        <button data-view-link="daily">AI 日报</button>
+        <button data-view-link="github">GitHub 周报</button>
+        <button data-view-link="opendesign">OpenDesign</button>
+      </nav>
+
+      <input class="search" type="search" placeholder="搜索项目、日报、专题…" id="globalSearch" />
+      <button class="mobile-menu" id="mobileMenu" aria-expanded="false">菜单</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HOME ==================== -->
+    <section class="screen active" id="screen-home">
+      <div class="container hero">
+        <div class="hero-card">
+          <div>
+            <div class="kicker">AI Trend Intel · NextSignal</div>
+            <h1>你的 AI 信息差侦察兵。</h1>
+            <p class="lead">AI 日报、GitHub 星级周报、OpenDesign 重点追踪 — 三个模块，一个入口。先选日期/周期，再深入查看内容。</p>
+
+            <div class="module-buttons" aria-label="三个核心模块入口">
+              <button class="module-button primary" data-view-link="daily">
+                <span class="module-title">📰 AI 日报</span>
+                <span class="module-meta">先选择哪一天，再查看当日重点</span>
+              </button>
+              <button class="module-button" data-view-link="github">
+                <span class="module-title">⭐ GitHub 星级周报</span>
+                <span class="module-meta">先选择哪一周，再查看 Top10</span>
+              </button>
+              <button class="module-button" data-view-link="opendesign">
+                <span class="module-title">🔍 OpenDesign 追踪</span>
+                <span class="module-meta">PR / Issue / 趋势 / 风险观察</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <div class="today-note">
+              <div class="kicker">实时数据概览</div>
+              <strong>本周 / 本日 / OpenDesign</strong>
+              <p>首页展示各模块最新统计，详细内容请在对应模块中查看。</p>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <span class="stat-value" id="homeDailyCount">—</span>
+                <span class="stat-label">日报可用天数</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value" id="homeWeeklyCount">—</span>
+                <span class="stat-label">周报可用周数</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value" id="homeODCount">—</span>
+                <span class="stat-label">OpenDesign 动态条目</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="container section">
+        <div class="section-head">
+          <div>
+            <h2>各模块最新动态</h2>
+            <p>点击卡片直接跳转到对应模块，查看完整内容。</p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card clickable" data-view-link="daily" id="homeDailyCard">
+            <div class="card-head">
+              <div><div class="kicker">最新日报</div><h3>加载中…</h3></div>
+            </div>
+            <p class="card-desc">正在加载最新日报摘要…</p>
+          </article>
+
+          <article class="card clickable" data-view-link="github" id="homeWeeklyCard">
+            <div class="card-head">
+              <div><div class="kicker">最新周报</div><h3>加载中…</h3></div>
+            </div>
+            <p class="card-desc">正在加载最新周报摘要…</p>
+          </article>
+
+          <article class="card clickable" data-view-link="opendesign" id="homeODCard">
+            <div class="card-head">
+              <div><div class="kicker">OpenDesign 动态</div><h3>加载中…</h3></div>
+            </div>
+            <p class="card-desc">正在加载 OpenDesign 数据…</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DAILY ==================== -->
+    <section class="screen" id="screen-daily">
+      <div class="container page-title">
+        <div class="kicker">AI daily brief</div>
+        <h1>AI 日报</h1>
+        <p>先选择日期，再查看当日精选 AI 情报。每条信息附带优先级、来源链接和实操建议。</p>
+      </div>
+
+      <div class="container section">
+        <section class="selector-panel" aria-label="选择日报日期">
+          <div class="selector-header">
+            <div>
+              <div class="kicker">Step 1 · Choose a date</div>
+              <h3>选择要查看的日报日期</h3>
+              <p>有数据的日期会显示摘要和条目数量。</p>
+            </div>
+            <div class="filter-row">
+              <select class="select" id="dailyMonth">
+                <option value="2026-05">2026 年 5 月</option>
+                <option value="2026-04">2026 年 4 月</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="period-grid" id="dailyPeriodGrid">
+            <div class="loading">加载日报索引中…</div>
+          </div>
+        </section>
+
+        <div class="selected-banner">
+          <div>
+            <div class="kicker">Step 2 · Selected daily brief</div>
+            <h3 id="dailyTitle">—</h3>
+            <p id="dailySummary">—</p>
+          </div>
+          <button class="button primary" id="copyDailyLink">复制链接</button>
+        </div>
+
+        <div class="layout-main">
+          <article class="article">
+            <h3>今日摘要</h3>
+            <p id="dailyBody">—</p>
+
+            <div class="callout">
+              <strong>编辑判断</strong>
+              <p id="dailyJudgement">—</p>
+            </div>
+
+            <h3>重点条目</h3>
+            <div class="signal-list" id="dailySignals">
+              <div class="loading">请选择日期查看日报内容</div>
+            </div>
+          </article>
+
+          <aside class="side-stack">
+            <section class="card">
+              <div class="kicker">使用说明</div>
+              <h3>日报来源</h3>
+              <p class="card-desc">每日 9:00 AM 自动从英文主源（GitHub/Product Hunt/HN/官方博客）和中文辅源（知乎/B站/即刻）采集，经五维评分（新颖性/实用性/可信度/内容价值/时效性）筛选。</p>
+            </section>
+            <section class="card">
+              <div class="kicker">优先级说明</div>
+              <h3>P0 / P1 / P2</h3>
+              <div class="tag-row">
+                <span class="tag accent">P0 · 头条必读</span>
+                <span class="tag warn">P1 · 重要信息</span>
+                <span class="tag">P2 · 值得关注</span>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GITHUB WEEKLY ==================== -->
+    <section class="screen" id="screen-github">
+      <div class="container page-title">
+        <div class="kicker">GitHub stars weekly report</div>
+        <h1>GitHub 星级周报</h1>
+        <p>每周一更新 AI 领域涨星最快的 Top 10 开源项目，附带趋势分析和类别分布。</p>
+      </div>
+
+      <div class="container section">
+        <section class="selector-panel" aria-label="选择 GitHub 周报">
+          <div class="selector-header">
+            <div>
+              <div class="kicker">Step 1 · Choose a week</div>
+              <h3>选择要查看的 GitHub 星级周报</h3>
+              <p>每一张周报卡都能直接进入对应 Top10 榜单。</p>
+            </div>
+            <div class="filter-row">
+              <select class="select" id="githubYear">
+                <option value="2026">2026 年</option>
+                <option value="2025">2025 年</option>
+              </select>
+              <select class="select" id="githubQuarter">
+                <option value="all">全部周次</option>
+                <option value="q1">Q1</option>
+                <option value="q2">Q2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="period-grid" id="weekPeriodGrid">
+            <div class="loading">加载周报索引中…</div>
+          </div>
+        </section>
+
+        <div class="selected-banner">
+          <div>
+            <div class="kicker">Step 2 · Selected weekly report</div>
+            <h3 id="weekSummaryTitle">—</h3>
+            <p id="weekSummaryText">—</p>
+          </div>
+          <div class="filter-row">
+            <select class="select" id="categoryFilter" aria-label="按类别筛选">
+              <option value="all">全部类别</option>
+              <option value="Agent">Agent</option>
+              <option value="DevTools">DevTools</option>
+              <option value="Multimodal">多模态</option>
+              <option value="Infra">基础设施</option>
+            </select>
+            <button class="button primary" id="copyWeekLink">复制链接</button>
+          </div>
+        </div>
+
+        <div class="layout-main">
+          <div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Project</th>
+                    <th>Category</th>
+                    <th>Stars</th>
+                    <th>Growth</th>
+                    <th>Why it matters</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody id="githubTable">
+                  <tr><td colspan="7" class="loading">请选择周次查看榜单</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="height:16px"></div>
+            <div class="grid grid-3" id="githubCards"></div>
+          </div>
+
+          <aside class="side-stack">
+            <section class="card">
+              <div class="kicker">类别分布</div>
+              <h3>本周项目方向</h3>
+              <p class="card-desc">不同类别项目在 Top 10 中的占比。</p>
+              <div class="mini-chart" aria-label="类别分布">
+                <div class="bar-row"><span>Agent</span><div class="bar-track"><div class="bar-fill" id="barAgent" style="width:0%"></div></div><span id="countAgent">0</span></div>
+                <div class="bar-row"><span>DevTools</span><div class="bar-track"><div class="bar-fill" id="barDevTools" style="width:0%"></div></div><span id="countDevTools">0</span></div>
+                <div class="bar-row"><span>Infra</span><div class="bar-track"><div class="bar-fill" id="barInfra" style="width:0%"></div></div><span id="countInfra">0</span></div>
+                <div class="bar-row"><span>Multi</span><div class="bar-track"><div class="bar-fill" id="barMultimodal" style="width:0%"></div></div><span id="countMultimodal">0</span></div>
+              </div>
+            </section>
+            <section class="card">
+              <div class="kicker">数据说明</div>
+              <h3>排名依据</h3>
+              <p class="card-desc">基于 GitHub 上 AI/ML/LLM/Agent 相关仓库的本周新增 Star 数排序。每周一 9:00 AM 自动生成。</p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OPENDESIGN ==================== -->
+    <section class="screen" id="screen-opendesign">
+      <div class="container page-title">
+        <div class="kicker">OpenDesign tracker</div>
+        <h1>OpenDesign 重点专题页</h1>
+        <p>追踪 nexu-io/open-design 仓库的 PR、Issue 和版本演进，从原始开发动态中提炼趋势和可行动建议。</p>
+      </div>
+
+      <div class="container section">
+        <div class="layout-main">
+          <div class="grid">
+            <!-- Overview -->
+            <section class="card" id="od-overview">
+              <div class="loading">正在加载 OpenDesign 数据…</div>
+            </section>
+
+            <!-- PR Section -->
+            <section class="card">
+              <div class="card-head">
+                <div>
+                  <div class="kicker">PR 板块</div>
+                  <h3>近期合并与待评审</h3>
+                </div>
+              </div>
+              <div class="timeline" id="od-prs">
+                <div class="timeline-item"><span class="time">—</span><div><div class="signal-title">加载中…</div></div></div>
+              </div>
+            </section>
+
+            <!-- Issue Section -->
+            <section class="card">
+              <div class="card-head">
+                <div>
+                  <div class="kicker">Issue 板块</div>
+                  <h3>问题、讨论与风险</h3>
+                </div>
+              </div>
+              <div class="timeline" id="od-issues">
+                <div class="timeline-item"><span class="time">—</span><div><div class="signal-title">加载中…</div></div></div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="side-stack" id="od-trends">
+            <section class="card">
+              <div class="kicker">趋势分析</div>
+              <h3>加载中…</h3>
+              <p class="card-desc">等待数据更新…</p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>NextSignal · AI Trend Intel Agent 驱动 · 每日 9:00 AM 自动更新</span>
+      <span>数据来源：GitHub · Product Hunt · 官方博客 · 技术社区</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">已复制链接</div>
+
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/daily.js"></script>
+  <script src="js/weekly.js"></script>
+  <script src="js/opendesign.js"></script>
+</body>
+</html>

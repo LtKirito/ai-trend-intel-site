@@ -1,0 +1,41 @@
+{
+  "repo": {
+    "name": "nexu-io/open-design",
+    "description": "🎨 Local-first, open-source Claude Design alternative",
+    "stars": 51860,
+    "forks": 5923,
+    "open_issues": 359,
+    "language": "TypeScript",
+    "created": "2026-04-28",
+    "updated": "2026-05-25T14:58:06Z",
+    "latest_release": {
+      "version": "v0.8.0",
+      "date": "2026-05-22",
+      "title": "Open Design 0.8.0 — Plugin Engine + Headless + #DeFigma",
+      "summary": "305 PRs · 75 contributors · 7 days。插件引擎重建、Headless by default、149 设计系统、19 语言支持、Windows/macOS 自动更新。"
+    }
+  },
+  "recent_prs": [
+    {"number": 26, "title": "修复非交互权限：Claude Code 等 CLI Agents 在 Web UI 中卡住", "state": "merged", "author": "JoKer049", "labels": ["bug"], "impact": "解决了浏览器中使用 Claude Code/Codex 时代理会话因权限提示卡死的关键问题", "url": "https://github.com/nexu-io/open-design/pull/26"},
+    {"number": 14, "title": "Per-CLI 模型选择器：支持本地 Agent 模型切换", "state": "merged", "author": "pftom", "labels": ["feature"], "impact": "为每个 CLI Agent（Claude/Codex/Cursor/Qwen 等）提供独立模型选择，OpenCode 支持 175 个模型", "url": "https://github.com/nexu-io/open-design/pull/14"},
+    {"number": 35, "title": "锁定安装工具链：pnpm + Node 20-22 + nvmrc", "state": "merged", "author": "mrcfps", "labels": ["bug"], "impact": "修复 Node 24 下 better-sqlite3 编译失败问题，统一安装流程", "url": "https://github.com/nexu-io/open-design/pull/35"},
+    {"number": 4, "title": "修复欢迎对话框覆盖用户 Agent 选择的问题", "state": "merged", "author": "heylakatos", "labels": ["bug"], "impact": "修复首次使用时 SettingsDialog 的 Save 按钮静默回退 agent 选择的关键 bug", "url": "https://github.com/nexu-io/open-design/pull/4"},
+    {"number": 7, "title": "允许 Claude Code 读取 skill 种子文件和设计系统规范", "state": "merged", "author": "pftom", "labels": ["bug"], "impact": "修复 Claude Code 因路径权限问题无法读取 skills/ 模板文件的阻塞性 bug", "url": "https://github.com/nexu-io/open-design/pull/7"}
+  ],
+  "recent_issues": [
+    {"number": 1637, "title": "Creative Memory System: 基于品味记忆和迭代学习的长期创意记忆系统", "author": "itsmeved24", "labels": ["feature", "needs-product-direction", "help wanted"], "comments": 46, "summary": "最热门的特性提案——让 Open Design 从生成工具进化为长期创意协作者。提案包括品味记忆层和迭代学习两个核心模块。46 条评论显示社区高度关注。", "url": "https://github.com/nexu-io/open-design/issues/1637"},
+    {"number": 1772, "title": "允许用户配置 Artifact 存储目录", "author": "coconilu", "labels": ["good first issue", "type/feature", "needs-product-direction"], "comments": 20, "summary": "Good First Issue。用户希望将生成的 Artifact 放到 Documents/Desktop/项目目录而非 .od/artifacts。设置中添加 Storage 面板。", "url": "https://github.com/nexu-io/open-design/issues/1772"},
+    {"number": 963, "title": "添加 /finalize/claude-code 路由以便 Max 用户避免按 Token 付费", "author": "bankielewicz", "labels": ["feature", "needs-product-direction"], "comments": 20, "summary": "Max 订阅用户通过 Claude Code CLI 调用 finalize 可完全免费，但当前 /finalize/anthropic 走 API 按量计费。需要加 CLI 路由。", "url": "https://github.com/nexu-io/open-design/issues/963"},
+    {"number": 1969, "title": "PPTX 导出采用四模式架构（可编辑+截图+自定义字体+Google 字体）", "author": "zhangdongming0607", "labels": ["feature", "needs-product-direction"], "comments": 4, "summary": "详细对比了 Claude Design 的四模式导出方案，建议 Open Design 也支持：可编辑·自定义字体、可编辑·通用字体、可编辑·Google 字体、截图模式。", "url": "https://github.com/nexu-io/open-design/issues/1969"},
+    {"number": 2930, "title": "无法切换对话（最新 Bug）", "author": "xiaobinHub", "labels": ["bug", "help wanted"], "comments": 7, "summary": "v0.8.0-preview.2 中创建新对话后无法切换回旧对话。5/25 最新报告的 Bug，需要修复。", "url": "https://github.com/nexu-io/open-design/issues/2930"},
+    {"number": 2197, "title": "Windows 打包版 Codex CLI 连接测试始终超时", "author": "duyedoudou", "labels": ["bug", "priority:p1"], "comments": 4, "summary": "Windows 安装版中 Codex CLI 测试超时（45036ms），但手动命令行运行正常。推测为打包版环境变量/子进程启动的问题。", "url": "https://github.com/nexu-io/open-design/issues/2197"},
+    {"number": 1838, "title": "同步并展示 CLI 安装的 MCP 和 Skill", "author": "Tilmirs", "labels": ["enhancement", "good first issue"], "comments": 9, "summary": "用户通过 Claude Code CLI 安装的 MCP/Skill 无法在客户端查看和管理，需要在设置中添加统一管理页面。", "url": "https://github.com/nexu-io/open-design/issues/1838"}
+  ],
+  "trends": {
+    "direction": "插件引擎 v0.8.0 重构完成 + Windows 稳定性修复 + 社区特性提案激增",
+    "affected_modules": ["plugin-engine", "windows-packaging", "design-systems", "ppt-export", "agent-cli-integration"],
+    "risks": ["Windows 安装版多个 CLI Agent 兼容性问题", "对话切换 Bug 影响用户体验", "PPTX 导出质量不达预期"],
+    "actions": ["关注 priority:p1 标签的 Bug 修复进度", "评估 Creative Memory System 提案对设计工作流的影响", "测试 Windows 版 Claude Code/Codex 稳定性"],
+    "next_week": "v0.8.0 发布后的 Bug 修复密集期，预计会有 patch 版本。Windows 打包版优化是重点方向。"
+  }
+}
