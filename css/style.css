@@ -760,6 +760,11 @@ p { margin: 0; }
   color: #fff;
   font-weight: 600;
 }
+.zh-title-fallback {
+  color: var(--fg-dim);
+  font-weight: 500;
+  font-size: 13px;
+}
 .zh-pending {
   color: var(--warn);
   font-style: italic;

@@ -2,12 +2,12 @@
   "repo": {
     "name": "nexu-io/open-design",
     "description": "Local-first, open-source Claude Design alternative",
-    "stars": 52240,
-    "forks": 5951,
-    "open_issues": 350,
+    "stars": 52350,
+    "forks": 5960,
+    "open_issues": 349,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-05-26T04:05:42Z",
+    "updated": "2026-05-26T06:37:15Z",
     "latest_release": {
       "version": "open-design-v0.8.0",
       "date": "2026-05-22",
@@ -16,56 +16,52 @@
     }
   },
   "recent_prs": [
-    {"number": 2879, "title": "refactor(web): extract shared UI primitives", "state": "open", "author": "mrcfps", "labels": ["size/XL", "risk/high", "type/refactor"], "impact": "大规模重构：从 Web 模块中提取共享 UI 原语组件，降低代码耦合度", "url": "https://github.com/nexu-io/open-design/pull/2879"},
-    {"number": 2906, "title": "Consolidate chat comments preview on main", "state": "open", "author": "zoeforfun", "labels": ["size/XXL", "risk/high", "type/feature"], "impact": "整合主分支上的聊天评论预览功能，XXL 级别变更，涉及聊天渲染核心逻辑", "url": "https://github.com/nexu-io/open-design/pull/2906"},
-    {"number": 2935, "title": "fix(ci): run fork visual reports from trusted code", "state": "open", "author": "mrcfps", "labels": ["size/L", "risk/high", "type/bugfix"], "impact": "修复 CI 安全问题：确保 fork 仓库的视觉报告仅从受信代码执行", "url": "https://github.com/nexu-io/open-design/pull/2935"},
-    {"number": 1496, "title": "feat(web): render GFM tables in markdown artifact and chat renderers", "state": "merged", "author": "mutoe", "labels": ["size/M", "risk/medium", "type/feature"], "impact": "在 Markdown Artifact 和聊天渲染器中支持 GFM 表格渲染，提升富文本展示能力", "url": "https://github.com/nexu-io/open-design/pull/1496"},
-    {"number": 1098, "title": "fix: resolve mobile frame screen paths as project files", "state": "closed", "author": "xxiaoxiong", "labels": ["size/S", "risk/high", "type/bugfix"], "impact": "修复移动端 Frame 屏幕路径识别问题，确保项目文件路径正确解析", "url": "https://github.com/nexu-io/open-design/pull/1098"},
-    {"number": 763, "title": "feat(daemon): close pi adapter parity gaps — imagePaths, extraAllowedDirs, error events, sendAgentEvent routing", "state": "merged", "author": "monotykamary", "labels": ["feature"], "impact": "补齐 Daemon PI 适配器差距：图片路径、额外允许目录、错误事件、Agent 事件路由", "url": "https://github.com/nexu-io/open-design/pull/763"},
-    {"number": 553, "title": "refactor(daemon): eliminate duplicate dist tree from two-tsconfig build", "state": "merged", "author": "dabing1022", "labels": [], "impact": "消除双 tsconfig 构建中的重复 dist 目录，简化 Daemon 构建流程", "url": "https://github.com/nexu-io/open-design/pull/553"},
-    {"number": 2009, "title": "Improve agent failure UX for daemon stderr exits", "state": "open", "author": "bulai0408", "labels": ["size/XL", "risk/medium", "type/bugfix"], "impact": "改进 Agent 因 Daemon stderr 退出时的失败 UX 体验，减少用户困惑", "url": "https://github.com/nexu-io/open-design/pull/2009"}
+    {"number": 75, "title": "fix(daemon): mitigate Windows ENAMETOOLONG and fix daemon crash on cleanup", "state": "merged", "author": "ONEGAYI", "labels": ["bug-fix"], "impact": "修复 Windows 上 Daemon 因路径过长(ENAMETOOLONG)崩溃和清理异常，提升 Windows 稳定性", "url": "https://github.com/nexu-io/open-design/pull/75"},
+    {"number": 2929, "title": "fix(web): prune draft tokens when the plugin chip strip clears", "state": "open", "author": "estelledc", "labels": ["size/XXL", "risk/medium", "type/bugfix"], "impact": "插件芯片条清除时自动清理草稿令牌，XXL 级变更防止 Token 泄漏和内存问题", "url": "https://github.com/nexu-io/open-design/pull/2929"},
+    {"number": 2966, "title": "fix(web): hide recent project pagination chrome", "state": "open", "author": "YUHAO-corn", "labels": ["size/S", "risk/medium", "type/bugfix"], "impact": "隐藏首页 Recent Projects 卡片的分页控件覆盖层，修复首页 UI 体验问题", "url": "https://github.com/nexu-io/open-design/pull/2966"},
+    {"number": 2355, "title": "feat(runtimes): register AMR (vela) as an ACP stdio agent", "state": "open", "author": "lefarcen", "labels": ["size/XXL", "risk/high", "type/feature"], "impact": "注册 AMR (Vela) 作为 ACP stdio Agent，XXL 级扩展运行时生态，支持更多 AI 模型接入", "url": "https://github.com/nexu-io/open-design/pull/2355"},
+    {"number": 2932, "title": "fix: synchronously update URL when creating new conversation to prevent route-sync", "state": "merged", "author": "xxiaoxiong", "labels": ["size/XS", "risk/medium", "type/bugfix"], "impact": "修复创建新对话时 URL 同步问题，防止路由状态不一致导致页面跳转异常", "url": "https://github.com/nexu-io/open-design/pull/2932"},
+    {"number": 899, "title": "feat(design-systems): add Slack design system", "state": "merged", "author": "MubashirYaqoob", "labels": ["size/L", "risk/low", "risk/medium", "type/feature"], "impact": "新增 Slack 设计系统，扩展内置设计系统库，L 级特性增强设计生态", "url": "https://github.com/nexu-io/open-design/pull/899"},
+    {"number": 938, "title": "fix(web): correct srcdoc injection and deck bridge for JS strings", "state": "merged", "author": "Morzorz", "labels": ["size/S", "risk/medium", "type/bugfix"], "impact": "修复 srcdoc 注入和 Deck 桥接的 JS 字符串处理问题，提升预览渲染稳定性", "url": "https://github.com/nexu-io/open-design/pull/938"},
+    {"number": 2958, "title": "feat(landing-page): plugin detail page interactive preview + share dialog", "state": "open", "author": "522700967-wq", "labels": ["size/L", "risk/medium", "type/feature"], "impact": "落地页插件详情页新增交互式预览和分享对话框，L 级功能提升用户转化和社交传播", "url": "https://github.com/nexu-io/open-design/pull/2958"}
   ],
   "recent_issues": [
-    {"number": 2954, "title": "Hide the pagination control overlay on Recent Projects cover cards on Home", "author": "AmyShang-alt", "labels": ["bug", "good first issue", "help wanted"], "comments": 2, "summary": "首页 Recent Projects 卡片上的分页控件覆盖层应隐藏，影响首页 UI 体验", "url": "https://github.com/nexu-io/open-design/issues/2954"},
-    {"number": 2143, "title": "When I try Tweaks / Draw / comment / Edit... the open preview reset to the home page", "author": "USFHunTer", "labels": ["bug", "help wanted", "priority:p1"], "comments": 14, "summary": "进行 Tweaks/Draw/编辑等操作时预览会重置回首页，P1 级 Bug 影响核心工作流", "url": "https://github.com/nexu-io/open-design/issues/2143"},
-    {"number": 2953, "title": "Image generation not working — generates code instead", "author": "aru08ldh-blip", "labels": ["bug"], "comments": 2, "summary": "图片生成功能失效，AI 返回代码而非图片，影响设计工具核心能力", "url": "https://github.com/nexu-io/open-design/issues/2953"},
-    {"number": 2913, "title": "Artifact generation chat output can leak raw HTML source into the conversation", "author": "AmyShang-alt", "labels": ["bug"], "comments": 6, "summary": "Artifact 生成时聊天面板可能泄露原始 HTML 源码，影响对话体验和安全性", "url": "https://github.com/nexu-io/open-design/issues/2913"},
-    {"number": 2950, "title": "Fix project-folder linking in chat", "author": "DeloBelo123", "labels": ["enhancement", "feature", "needs-product-direction"], "comments": 3, "summary": "项目文件夹链接功能损坏，AI 无法读取用户项目目录结构进行设计", "url": "https://github.com/nexu-io/open-design/issues/2950"},
-    {"number": 2011, "title": "Codex adapter needs configurable sandbox/approval mode for Playwright Chromium on macOS", "author": "xAsh-Ai", "labels": ["type/enhancement"], "comments": 3, "summary": "macOS 上 Codex 适配器的 Playwright/Chromium PDF 生成在默认沙箱中失败，需配置化", "url": "https://github.com/nexu-io/open-design/issues/2011"},
-    {"number": 1106, "title": "BYOK Connect but no tool access", "author": "qwertyaya", "labels": ["bug", "priority:p1", "looper:worker-ready"], "comments": 5, "summary": "BYOK 模式连接成功但无法使用工具，P1 级 Bug 影响自定义模型用户", "url": "https://github.com/nexu-io/open-design/issues/1106"},
-    {"number": 479, "title": "Can we hook up to other image or video generators", "author": "trevorius", "labels": ["question", "looper:worker-ready"], "comments": 15, "summary": "社区热议：希望支持接入其他图片/视频生成器（GPT Image 2、Seedance 2.0 之外），15 条评论", "url": "https://github.com/nexu-io/open-design/issues/479"},
-    {"number": 2489, "title": "Usability - Importing design system confusion", "author": "detrio", "labels": ["bug", "enhancement", "help wanted", "priority:p2"], "comments": 4, "summary": "设计系统导入语言混乱：design.md、skills、plugins 等概念界限不清，影响用户体验", "url": "https://github.com/nexu-io/open-design/issues/2489"},
-    {"number": 1862, "title": "Unable to import a zip file into a new project", "author": "tritecko", "labels": ["bug", "enhancement", "priority:p1"], "comments": 11, "summary": "无法通过导入 ZIP 文件创建新项目，P1 级 Bug 影响 Claude Design 迁移用户", "url": "https://github.com/nexu-io/open-design/issues/1862"}
+    {"number": 2954, "title": "Hide the pagination control overlay on Recent Projects cover cards on Home", "author": "AmyShang-alt", "labels": ["bug", "good first issue", "help wanted"], "comments": 5, "summary": "首页 Recent Projects 卡片分页控件覆盖层需隐藏，影响首页 UI，Good First Issue，已有 PR 修复中(#2966)", "url": "https://github.com/nexu-io/open-design/issues/2954"},
+    {"number": 2965, "title": "Windows: Claude Code native CLI test fails with Git Bash error even after configuring Git Bash path", "author": "ccTryFlow", "labels": ["bug", "help wanted"], "comments": 3, "summary": "Windows 下 Claude Code 原生 CLI 测试因 Git Bash 路径报错，即使已配置路径仍失败", "url": "https://github.com/nexu-io/open-design/issues/2965"},
+    {"number": 2143, "title": "When I try Tweaks / Draw / comment / Edit... the open preview reset to the home page", "author": "USFHunTer", "labels": ["bug", "help wanted", "priority:p1"], "comments": 15, "summary": "Tweaks/Draw/编辑操作导致预览重置回首页，P1 级核心 Bug，15 条评论表明用户痛点强烈", "url": "https://github.com/nexu-io/open-design/issues/2143"},
+    {"number": 1894, "title": "i18n locale coverage drift: 13 of 14 locales bypass key-parity test, with 56–351 missing keys vs English", "author": "leessju", "labels": ["bug", "help wanted", "priority:p2"], "comments": 9, "summary": "多语言覆盖偏差：13/14 语言绕过 Key 对等测试，各语言缺失 56–351 个翻译 Key", "url": "https://github.com/nexu-io/open-design/issues/1894"},
+    {"number": 2902, "title": "Localize Scheduled Routine error messages when the system language is Chinese", "author": "AmyShang-alt", "labels": ["bug", "good first issue", "help wanted"], "comments": 7, "summary": "中文系统下定时任务错误信息未国际化，仍显示英文，Good First Issue", "url": "https://github.com/nexu-io/open-design/issues/2902"},
+    {"number": 2961, "title": "mission-control: token mismatch between DESIGN.md spec and tokens.css", "author": "sittinonsukhaya", "labels": ["bug", "good first issue", "help wanted"], "comments": 3, "summary": "mission-control 模块 DESIGN.md 规格与 tokens.css 的 Design Token 不一致", "url": "https://github.com/nexu-io/open-design/issues/2961"},
+    {"number": 2960, "title": "Web editor: CSS/content editing fails when page is not fullscreen", "author": "leilei926524-tech", "labels": ["bug"], "comments": 1, "summary": "Web 编辑器在非全屏状态下 CSS/内容编辑功能失效，影响编辑体验", "url": "https://github.com/nexu-io/open-design/issues/2960"},
+    {"number": 2959, "title": "Bad request — check the API key and model. While using Claude", "author": "ga1205", "labels": ["bug"], "comments": 2, "summary": "使用 Claude 时出现 Bad Request 错误，API Key 或模型校验异常", "url": "https://github.com/nexu-io/open-design/issues/2959"}
   ],
   "trends": {
-    "direction": "v0.8.0 发布后进入大规模重构与 Bug 修复并行阶段，Web 层 UI 原语提取（PR#2879）和聊天渲染整合（PR#2906）是当前主战场，同时 Daemon 层适配器差距正在快速补齐。",
-    "affected_modules": ["web-ui-primitives", "chat-renderer", "daemon-pi-adapter", "ci-pipeline", "markdown-gfm-renderer", "agent-failure-ux", "mobile-frame"],
-    "risks": ["预览重置 Bug（#2143 P1）影响核心编辑工作流，14 条评论表明用户痛点强烈", "图片生成功能失效（#2953）触及设计工具核心卖点", "BYOK 工具访问 Bug（#1106 P1）影响自定义模型用户群体", "多个 XL/XXL 级 PR 并行开发可能引入回归风险"],
-    "actions": ["重点跟踪 P1 Bug 修复进展（#2143、#1106、#1862），优先级最高", "关注 Web UI 原语重构（PR#2879）合并后的回归测试结果", "评估聊天评论预览整合（PR#2906）对现有对话流程的影响", "观察 Daemon PI 适配器补齐后的整体稳定性变化"],
-    "next_week": "预计 v0.8.1 patch 版本发布，集中修复预览重置和图片生成两个核心 Bug。Web 层重构 PR 若顺利合并，将显著改善后续开发效率。社区对多模态生成器扩展的呼声（#479, 15 条评论）可能促使产品方向调整。"
+    "direction": "v0.8.0 发布后进入快速迭代期，今天 8 条活跃 PR 中 4 条已合并。Web UI 修复（分页控件隐藏 #2966、路由同步 #2932）和运行时扩展（AMR Agent #2355）是主要方向。Windows 兼容性（路径过长 #75、Git Bash #2965）是持续痛点。",
+    "affected_modules": ["web-ui", "daemon-windows", "runtimes-acp", "design-systems", "i18n", "landing-page", "mission-control", "web-editor"],
+    "risks": ["预览重置 Bug（#2143 P1，15条评论）影响核心编辑工作流，至今无修复 PR", "Windows 平台兼容性连续出现问题（#75 路径过长 + #2965 Git Bash），可能影响用户增长", "XXL 级 PR（#2929 Token 清理 + #2355 AMR 运行时）并行开发可能引入回归", "多语言覆盖偏差（#1894）影响非英语用户体验"],
+    "actions": ["重点跟踪 P1 预览重置 Bug（#2143）的修复进展", "关注 AMR Agent 运行时扩展（#2355）合并后的生态影响", "监控 Windows 兼容性问题是否持续增加", "插件详情页预览功能（#2958）合并后将提升用户转化率"],
+    "next_week": "预计继续修复 Web UI Bug（分页、编辑、路由），关注 AMR Agent 运行时扩展的上线节奏。v0.8.1 patch 可能聚焦预览重置和 Windows 兼容性两大痛点。Slack 设计系统合并后生态持续丰富。"
   },
-  "cached_at": "2026-05-26T12:00:00+08:00",
-  "overview_summary": "v0.8.0 发布后进入大规模重构与 Bug 修复并行期。Web 层 UI 原语提取（PR#2879）和聊天渲染整合（PR#2906）是当前主战场。预览重置 Bug（#2143 P1，14条评论）和图片生成失效（#2953）是当前最痛的 Bug。社区对多模态生成器扩展呼声很高（#479，15条评论）。预计近期发布 v0.8.1 patch 修复核心问题。",
+  "cached_at": "2026-05-26T14:37:00+08:00",
+  "overview_summary": "v0.8.0 发布后第四天，进入快速迭代期。今日 8 条活跃 PR 中 4 条已合并（Windows Daemon 修复、Slack 设计系统、URL 路由同步、srcdoc 注入修复）。Web UI 修复和运行时扩展是当前主战场。Windows 兼容性为持续痛点，#2143 预览重置 P1 Bug 仍无修复 PR。AMR Agent 运行时扩展将显著增强多模型生态。",
   "pr_map": {
-    "2879": "大规模重构：从 Web 模块提取共享 UI 原语组件，降低代码耦合度，XL 级变更，高风险",
-    "2906": "整合主分支聊天评论预览功能，XXL 级变更，涉及聊天渲染核心逻辑",
-    "2935": "修复 CI 安全漏洞：确保 fork 仓库视觉报告仅从受信代码执行",
-    "1496": "Markdown Artifact 和聊天渲染器支持 GFM 表格渲染，提升富文本能力",
-    "1098": "修复移动端 Frame 屏幕路径识别，确保项目文件路径正确解析",
-    "763": "补齐 Daemon PI 适配器差距：图片路径、额外允许目录、错误事件路由",
-    "553": "消除双 tsconfig 构建中的重复 dist 目录，简化 Daemon 构建流程",
-    "2009": "改进 Agent 因 Daemon stderr 退出时的失败 UX，减少用户困惑"
+    "75": "修复 Windows Daemon 路径过长(ENAMETOOLONG)崩溃和清理异常",
+    "2929": "插件芯片条清除时清理草稿令牌，XXL 级防泄漏",
+    "2966": "隐藏首页 Recent Projects 分页控件覆盖层，修复 UI 体验",
+    "2355": "注册 AMR(Vela) 为 ACP stdio Agent，XXL 级运行时扩展",
+    "2932": "修复新建对话时 URL 同步，防止路由状态不一致",
+    "899": "新增 Slack 设计系统，L 级扩展内置设计系统库",
+    "938": "修复 srcdoc 注入和 Deck 桥接的 JS 字符串处理",
+    "2958": "插件详情页交互式预览 + 分享对话框，提升转化"
   },
   "issue_map": {
-    "2954": "首页 Recent Projects 卡片分页控件覆盖层应隐藏，影响首页 UI，Good First Issue",
-    "2143": "Tweaks/Draw/编辑操作导致预览重置回首页，P1 级核心 Bug，14条评论等待修复",
-    "2953": "图片生成功能失效，AI 返回代码而非图片，影响设计工具核心能力",
-    "2913": "Artifact 生成时聊天面板泄露原始 HTML 源码，影响对话体验",
-    "2950": "项目文件夹链接功能损坏，AI 无法读取用户项目目录结构",
-    "2011": "macOS 上 Codex 适配器的 Playwright/Chromium 在默认沙箱中失败，需配置化",
-    "1106": "BYOK 模式连接成功但无法使用工具，P1 级 Bug 影响自定义模型用户",
-    "479": "社区热议：希望接入更多图片/视频生成器，15条评论讨论扩展方向",
-    "2489": "设计系统导入语言混乱，design.md/skills/plugins 概念界限不清",
-    "1862": "无法通过导入 ZIP 文件创建新项目，P1 级 Bug 影响 Claude Design 迁移用户"
+    "2954": "首页分页控件覆盖层需隐藏，Good First Issue，已有修复 PR",
+    "2965": "Windows Claude Code CLI 测试因 Git Bash 路径报错",
+    "2143": "Tweaks/Draw/编辑导致预览重置回首页，P1 核心 Bug，15条评论",
+    "1894": "多语言覆盖偏差：13/14 语言缺失 56-351 个翻译 Key",
+    "2902": "中文系统定时任务错误信息未国际化，Good First Issue",
+    "2961": "mission-control DESIGN.md 与 tokens.css Token 不一致",
+    "2960": "Web 编辑器非全屏时 CSS/内容编辑失效",
+    "2959": "Claude 使用时 Bad Request 错误，API Key 校验异常"
   }
 }

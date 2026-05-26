@@ -16,14 +16,14 @@ async function renderOpenDesign() {
 
   try {
     odLiveData = await fetchLiveData();
-    odStaticData = await loadJSON(STATIC_FALLBACK); // 加载中文缓存
+    odStaticData = state.opendesignData || await loadJSON(STATIC_FALLBACK);
     renderFromLive(odLiveData, odStaticData);
     startAutoRefresh();
     updateHomeODSummary(odLiveData);
   } catch (err) {
     console.warn('GitHub API 不可用，降级到静态缓存:', err.message);
     try {
-      odStaticData = await loadJSON(STATIC_FALLBACK);
+      odStaticData = state.opendesignData || await loadJSON(STATIC_FALLBACK);
       if (odStaticData) {
         renderFromStatic(odStaticData);
         updateHomeODSummary(odStaticData);
@@ -137,10 +137,10 @@ function renderFromLive(d, zhCache) {
       <span class="time">PR #${pr.number}</span>
       <div>
         <div class="signal-title">
-          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : '<span class="zh-pending">待分析</span>'}
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(pr.title)}</span> <span class="zh-pending">[待分析]</span>`}
           <a href="${pr.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
         </div>
-        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，点击查看原始详情</p>` : ''}
+        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，显示英文原标题</p>` : ''}
         <div class="tag-row">
           <span class="tag ${pr.state === 'merged' ? 'success' : pr.state === 'open' ? 'accent' : ''}">${pr.state}</span>
           ${(pr.labels || []).slice(0, 3).map(l => `<span class="tag">${l}</span>`).join('')}
@@ -158,10 +158,10 @@ function renderFromLive(d, zhCache) {
       <span class="time">#${iss.number}</span>
       <div>
         <div class="signal-title">
-          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : '<span class="zh-pending">待分析</span>'}
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(iss.title)}</span> <span class="zh-pending">[待分析]</span>`}
           <a href="${iss.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
         </div>
-        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，点击查看原始详情</p>` : ''}
+        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，显示英文原标题</p>` : ''}
         <div class="tag-row">
           ${(iss.labels || []).slice(0, 3).map(l => `<span class="tag ${l.includes('bug')?'danger':l.includes('feature')||l.includes('enhancement')?'accent':''}">${l}</span>`).join('')}
           ${iss.author ? `<span class="tag">by ${iss.author}</span>` : ''}
@@ -291,7 +291,7 @@ function startAutoRefresh() {
     if (state.currentScreen !== 'opendesign') return;
     try {
       odLiveData = await fetchLiveData();
-      odStaticData = await loadJSON(STATIC_FALLBACK);
+      odStaticData = state.opendesignData || await loadJSON(STATIC_FALLBACK);
       renderFromLive(odLiveData, odStaticData);
     } catch {}
   }, AUTO_REFRESH_MS);
