@@ -1,23 +1,23 @@
-/* === NextSignal OpenDesign — 实时数据模块 === */
-/* 策略：前端直连 GitHub 公开 API（免认证），降级到 opendesign.json 静态缓存 */
+/* === NextSignal OpenDesign — 实时数据 + 中文摘要模块 === */
+/* 策略：前端直连 GitHub 公开 API 获取实时元数据 + opendesign.json 提供中文摘要缓存 */
 
 const GITHUB_REPO = 'nexu-io/open-design';
 const API_BASE = `https://api.github.com/repos/${GITHUB_REPO}`;
 const STATIC_FALLBACK = 'data/opendesign.json';
-const AUTO_REFRESH_MS = 5 * 60 * 1000; // 5 分钟自动刷新
+const AUTO_REFRESH_MS = 5 * 60 * 1000;
 let odRefreshTimer = null;
 
-let odLiveData = null;  // API 实时数据
-let odStaticData = null; // JSON 降级缓存
+let odLiveData = null;
+let odStaticData = null;
 
 async function renderOpenDesign() {
   const overviewEl = document.getElementById('od-overview');
   overviewEl.innerHTML = '<div class="loading">正在连接 GitHub API 获取实时数据…</div>';
 
-  // 先尝试 GitHub 实时 API，失败则降级到 JSON
   try {
     odLiveData = await fetchLiveData();
-    renderFromLive(odLiveData);
+    odStaticData = await loadJSON(STATIC_FALLBACK); // 加载中文缓存
+    renderFromLive(odLiveData, odStaticData);
     startAutoRefresh();
     updateHomeODSummary(odLiveData);
   } catch (err) {
@@ -38,8 +38,6 @@ async function renderOpenDesign() {
 
 /* ---- 实时 API 数据获取 ---- */
 async function fetchLiveData() {
-  const cacheKey = 'opendesign_api_' + Date.now();
-
   const [repo, release, pulls, issues] = await Promise.all([
     fetch(`${API_BASE}`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : null),
     fetch(`${API_BASE}/releases/latest`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : null),
@@ -49,25 +47,21 @@ async function fetchLiveData() {
 
   if (!repo) throw new Error('Repo API failed');
 
-  // 格式化 PR
   const recent_prs = (pulls || []).slice(0, 5).map(pr => ({
     number: pr.number,
     title: pr.title || '',
     state: pr.merged_at ? 'merged' : (pr.state === 'closed' ? 'closed' : 'open'),
     author: pr.user ? pr.user.login : '',
     labels: (pr.labels || []).map(l => l.name),
-    impact: pr.body ? pr.body.substring(0, 120).replace(/\n/g, ' ') + '...' : '',
     url: pr.html_url || `https://github.com/${GITHUB_REPO}/pull/${pr.number}`
   }));
 
-  // 格式化 Issue
   const recent_issues = (issues || []).slice(0, 7).map(iss => ({
     number: iss.number,
     title: iss.title || '',
     author: iss.user ? iss.user.login : '',
     labels: (iss.labels || []).map(l => l.name),
     comments: iss.comments || 0,
-    summary: iss.body ? iss.body.substring(0, 150).replace(/\n/g, ' ') + '...' : '',
     url: iss.html_url || `https://github.com/${GITHUB_REPO}/issues/${iss.number}`
   }));
 
@@ -90,11 +84,13 @@ async function fetchLiveData() {
   };
 }
 
-/* ---- 实时数据渲染 ---- */
-function renderFromLive(d) {
+/* ---- 实时数据渲染（含中文缓存配对） ---- */
+function renderFromLive(d, zhCache) {
   const repo = d.repo || {};
   const prs = d.recent_prs || [];
   const issues = d.recent_issues || [];
+  const prMap = zhCache?.pr_map || {};
+  const issueMap = zhCache?.issue_map || {};
 
   // Overview
   document.getElementById('od-overview').innerHTML = `
@@ -104,8 +100,8 @@ function renderFromLive(d) {
         <h3>${repo.latest_release ? repo.latest_release.version : '—'}</h3>
       </div>
       <div style="display:flex;gap:8px;align-items:center">
-        <span class="tag" style="font-size:11px">更新于 ${new Date(d._fetched_at).toLocaleTimeString('zh-CN')}</span>
-        <button class="button primary" onclick="renderOpenDesign()">🔄 刷新数据</button>
+        <span class="tag" style="font-size:11px">${new Date(d._fetched_at).toLocaleTimeString('zh-CN')}</span>
+        <button class="button primary" onclick="renderOpenDesign()">🔄 刷新</button>
       </div>
     </div>
     <div class="stat-card">
@@ -122,52 +118,69 @@ function renderFromLive(d) {
       <div class="stat-card-item">
         <div class="stat-card-value">${repo.open_issues}</div>
         <div class="stat-card-label">Open Issues</div>
-        <div class="stat-card-meta">最新版: ${repo.latest_release ? repo.latest_release.date : '—'}</div>
+        <div class="stat-card-meta">最新: ${repo.latest_release ? repo.latest_release.date : '—'}</div>
       </div>
     </div>
+    ${zhCache?.overview_summary ? `<div class="od-summary"><h4>📊 仓库动态总结</h4><p>${zhCache.overview_summary}</p></div>` : ''}
     <div class="meta-line">
       <a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
       <a href="https://open-design.ai" target="_blank" rel="noopener">官方网站 ↗</a>
-      <span style="color:var(--fg-dim)">数据来源：GitHub 公开 API（实时）</span>
+      <span style="color:var(--fg-dim)">来源：GitHub 公开 API（实时）</span>
     </div>
   `;
 
-  // PR timeline
-  document.getElementById('od-prs').innerHTML = prs.length > 0 ? prs.map(pr => `
+  // PR timeline (中文优先)
+  document.getElementById('od-prs').innerHTML = prs.length > 0 ? prs.map(pr => {
+    const zh = prMap[pr.number];
+    return `
     <div class="timeline-item">
       <span class="time">PR #${pr.number}</span>
       <div>
-        <div class="signal-title"><a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a></div>
-        <p class="signal-desc">${escapeHtml(pr.impact || '')}</p>
+        <div class="signal-title">
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : '<span class="zh-pending">待分析</span>'}
+          <a href="${pr.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
+        </div>
+        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，点击查看原始详情</p>` : ''}
         <div class="tag-row">
           <span class="tag ${pr.state === 'merged' ? 'success' : pr.state === 'open' ? 'accent' : ''}">${pr.state}</span>
-          ${(pr.labels || []).map(l => `<span class="tag">${l}</span>`).join('')}
+          ${(pr.labels || []).slice(0, 3).map(l => `<span class="tag">${l}</span>`).join('')}
           ${pr.author ? `<span class="tag">by ${pr.author}</span>` : ''}
         </div>
       </div>
-    </div>
-  `).join('') : '<div class="timeline-item"><span class="time">—</span><div><p class="signal-desc">暂无 PR 数据</p></div></div>';
+    </div>`;
+  }).join('') : '<div class="timeline-item"><span class="time">—</span><div><p class="signal-desc">暂无 PR 数据</p></div></div>';
 
-  // Issue timeline
-  document.getElementById('od-issues').innerHTML = issues.length > 0 ? issues.map(iss => `
+  // Issue timeline (中文优先)
+  document.getElementById('od-issues').innerHTML = issues.length > 0 ? issues.map(iss => {
+    const zh = issueMap[iss.number];
+    return `
     <div class="timeline-item">
       <span class="time">#${iss.number}</span>
       <div>
-        <div class="signal-title"><a href="${iss.url}" target="_blank" rel="noopener">${escapeHtml(iss.title)}</a></div>
-        <p class="signal-desc">${escapeHtml(iss.summary || '')}</p>
+        <div class="signal-title">
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : '<span class="zh-pending">待分析</span>'}
+          <a href="${iss.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
+        </div>
+        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，点击查看原始详情</p>` : ''}
         <div class="tag-row">
-          ${(iss.labels || []).map(l => `<span class="tag ${l.includes('bug')?'danger':l.includes('feature')||l.includes('enhancement')?'accent':''}">${l}</span>`).join('')}
+          ${(iss.labels || []).slice(0, 3).map(l => `<span class="tag ${l.includes('bug')?'danger':l.includes('feature')||l.includes('enhancement')?'accent':''}">${l}</span>`).join('')}
           ${iss.author ? `<span class="tag">by ${iss.author}</span>` : ''}
           ${iss.comments > 0 ? `<span class="tag">💬 ${iss.comments}</span>` : ''}
         </div>
       </div>
-    </div>
-  `).join('') : '<div class="timeline-item"><span class="time">—</span><div><p class="signal-desc">暂无 Issue 数据</p></div></div>';
+    </div>`;
+  }).join('') : '<div class="timeline-item"><span class="time">—</span><div><p class="signal-desc">暂无 Issue 数据</p></div></div>';
 
-  // Try to load trends from static cache
-  loadJSON(STATIC_FALLBACK).then(staticData => {
-    renderTrends(staticData ? staticData.trends : null);
-  });
+  // Sidebar: trends
+  if (zhCache?.trends) {
+    renderTrends(zhCache.trends);
+  } else {
+    document.getElementById('od-trends').innerHTML = '<div class="card"><div class="kicker">趋势分析</div><p class="card-desc">等待 AI 分析更新…</p></div>';
+  }
+
+  // Sidebar: zh-cards for PRs
+  renderZhCards('odPrCards', prs, prMap, 'PR', true);
+  renderZhCards('odIssueCards', issues, issueMap, 'Issue', false);
 }
 
 /* ---- 静态降级渲染 ---- */
@@ -175,6 +188,8 @@ function renderFromStatic(d) {
   const repo = d.repo || {};
   const prs = d.recent_prs || [];
   const issues = d.recent_issues || [];
+  const prMap = d.pr_map || {};
+  const issueMap = d.issue_map || {};
   const trends = d.trends || {};
 
   document.getElementById('od-overview').innerHTML = `
@@ -199,35 +214,61 @@ function renderFromStatic(d) {
         <div class="stat-card-label">Open Issues</div>
       </div>
     </div>
+    ${d.overview_summary ? `<div class="od-summary"><h4>📊 仓库动态总结</h4><p>${d.overview_summary}</p></div>` : ''}
     <div class="meta-line"><span style="color:var(--warn)">⚠️ 使用缓存数据，点击刷新获取实时数据</span></div>
   `;
 
-  document.getElementById('od-prs').innerHTML = prs.length > 0 ? prs.map(pr => `
+  document.getElementById('od-prs').innerHTML = prs.length > 0 ? prs.map(pr => {
+    const zh = pr.impact || prMap[pr.number] || '';
+    return `
     <div class="timeline-item">
       <span class="time">PR #${pr.number}</span>
       <div>
-        <div class="signal-title"><a href="${pr.url}" target="_blank">${escapeHtml(pr.title)}</a></div>
-        <p class="signal-desc">${escapeHtml(pr.impact || '')}</p>
+        <div class="signal-title">${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : pr.title}
+        <a href="${pr.url}" target="_blank" class="en-original">[原文]</a></div>
         <div class="tag-row">
           <span class="tag ${pr.state === 'merged' ? 'success' : 'accent'}">${pr.state}</span>
-          ${(pr.labels || []).map(l => `<span class="tag">${l}</span>`).join('')}
+          ${(pr.labels || []).slice(0, 3).map(l => `<span class="tag">${l}</span>`).join('')}
         </div>
       </div>
-    </div>
-  `).join('') : '';
+    </div>`;
+  }).join('') : '';
 
-  document.getElementById('od-issues').innerHTML = issues.length > 0 ? issues.map(iss => `
+  document.getElementById('od-issues').innerHTML = issues.length > 0 ? issues.map(iss => {
+    const zh = iss.summary || issueMap[iss.number] || '';
+    return `
     <div class="timeline-item">
       <span class="time">#${iss.number}</span>
       <div>
-        <div class="signal-title"><a href="${iss.url}" target="_blank">${escapeHtml(iss.title)}</a></div>
-        <p class="signal-desc">${escapeHtml(iss.summary || '')}</p>
-        <div class="tag-row">${(iss.labels || []).map(l => `<span class="tag">${l}</span>`).join('')}${iss.comments > 0 ? `<span class="tag">💬 ${iss.comments}</span>` : ''}</div>
+        <div class="signal-title">${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : iss.title}
+        <a href="${iss.url}" target="_blank" class="en-original">[原文]</a></div>
+        <div class="tag-row">${(iss.labels || []).slice(0, 3).map(l => `<span class="tag">${l}</span>`).join('')}${iss.comments > 0 ? `<span class="tag">💬 ${iss.comments}</span>` : ''}</div>
       </div>
-    </div>
-  `).join('') : '';
+    </div>`;
+  }).join('') : '';
 
   renderTrends(trends);
+  renderZhCards('odPrCards', prs, prMap, 'PR', true);
+  renderZhCards('odIssueCards', issues, issueMap, 'Issue', false);
+}
+
+/* ---- 中文摘要卡片（侧栏） ---- */
+function renderZhCards(containerId, items, map, prefix, isPR) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const mapped = items.map(item => {
+    const zh = map[item.number];
+    return { number: item.number, zh: zh || null, labels: (item.labels || []).slice(0, 3), comments: item.comments, url: item.url };
+  });
+  el.innerHTML = mapped.length > 0 ? mapped.map(m => `
+    <div class="zh-card ${m.zh ? '' : 'zh-card-pending'}">
+      <a href="${m.url}" target="_blank" rel="noopener">
+        <span class="zh-card-num">${prefix} #${m.number}</span>
+        <span class="zh-card-text">${m.zh ? escapeHtml(m.zh) : '待 AI 分析…'}</span>
+      </a>
+      <div class="tag-row">${m.labels.map(l => `<span class="tag">${l}</span>`).join('')}${m.comments > 0 ? `<span class="tag">💬 ${m.comments}</span>` : ''}</div>
+    </div>
+  `).join('') : '<div class="zh-card"><span class="zh-card-text" style="color:var(--fg-dim)">暂无数据</span></div>';
 }
 
 /* ---- 趋势面板 ---- */
@@ -250,12 +291,12 @@ function startAutoRefresh() {
     if (state.currentScreen !== 'opendesign') return;
     try {
       odLiveData = await fetchLiveData();
-      renderFromLive(odLiveData);
+      odStaticData = await loadJSON(STATIC_FALLBACK);
+      renderFromLive(odLiveData, odStaticData);
     } catch {}
   }, AUTO_REFRESH_MS);
 }
 
-/* ---- 停止自动刷新（离开页面时） ---- */
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     if (odRefreshTimer) clearInterval(odRefreshTimer);
@@ -264,7 +305,6 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
-/* ---- 工具函数 ---- */
 function formatNumber(n) {
   if (!n && n !== 0) return '—';
   if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
