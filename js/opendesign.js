@@ -131,7 +131,7 @@ function renderFromLive(d, zhCache) {
 
   // PR timeline (中文优先)
   document.getElementById('od-prs').innerHTML = prs.length > 0 ? prs.map(pr => {
-    const zh = prMap[pr.number];
+    const zh = prMap[pr.number] || (zhCache?.recent_prs || []).find(p => p.number === pr.number)?.impact || null;
     return `
     <div class="timeline-item">
       <span class="time">PR #${pr.number}</span>
@@ -152,7 +152,7 @@ function renderFromLive(d, zhCache) {
 
   // Issue timeline (中文优先)
   document.getElementById('od-issues').innerHTML = issues.length > 0 ? issues.map(iss => {
-    const zh = issueMap[iss.number];
+    const zh = issueMap[iss.number] || (zhCache?.recent_issues || []).find(i => i.number === iss.number)?.summary || null;
     return `
     <div class="timeline-item">
       <span class="time">#${iss.number}</span>
