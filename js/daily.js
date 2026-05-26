@@ -45,6 +45,10 @@ async function selectDay(dateStr) {
     document.getElementById('dailyBody').textContent = '';
     document.getElementById('dailyJudgement').textContent = '';
     document.getElementById('dailySignals').innerHTML = '<div class="error-state"><p>⚠️ 无法加载该日期日报数据</p></div>';
+    document.getElementById('dailyTools').innerHTML = '';
+    document.getElementById('dailyVideos').innerHTML = '';
+    document.getElementById('dailyNoise').innerHTML = '';
+    document.getElementById('dailyTracking').innerHTML = '';
     renderDailyPeriods();
     return;
   }
@@ -54,21 +58,81 @@ async function selectDay(dateStr) {
   document.getElementById('dailyBody').textContent = data.body || '';
   document.getElementById('dailyJudgement').textContent = data.judgement || '';
 
+  // Conclusions
+  renderDailyConclusions(data.conclusions || []);
+
+  // Signals (enhanced)
   const signals = data.signals || [];
-  document.getElementById('dailySignals').innerHTML = signals.map(item => `
+  document.getElementById('dailySignals').innerHTML = signals.map(item => {
+    const rankClass = (item.rank || '') === 'P0' ? 'danger' : (item.rank === 'P1' ? 'warn' : 'accent');
+    const sources = item.sources || (item.source ? [item.source] : []);
+    return `
     <article class="signal">
-      <span class="rank">${item.rank || item[0] || ''}</span>
+      <span class="rank" style="color:var(--${rankClass})">${item.rank || ''}</span>
       <div>
-        <div class="signal-title">${item.title || item[1] || ''}</div>
-        <p class="signal-desc">${item.desc || item[2] || ''}</p>
-        ${(item.tags || item[3] || []).length ? `<div class="tag-row">${(item.tags || item[3] || []).map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
-        ${item.source ? `<div class="meta-line"><a href="${item.source}" target="_blank" rel="noopener">查看来源 →</a></div>` : ''}
+        <div class="signal-title">${item.title || ''}</div>
+        <div class="signal-desc">${item.summary || item.desc || ''}</div>
+        ${item.why ? `<div class="signal-why"><strong>为什么重要：</strong>${item.why}</div>` : ''}
+        ${item.action_fact || item.action_judge ? `<div class="signal-actions">
+          ${item.action_fact ? `<div class="action-fact">${item.action_fact}</div>` : ''}
+          ${item.action_judge ? `<div class="action-judge">${item.action_judge}</div>` : ''}
+        </div>` : ''}
+        <div class="tag-row">${(item.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        ${sources.length ? `<div class="signal-sources">${sources.map((url, i) => `<a href="${url}" target="_blank" rel="noopener">来源${i+1} ↗</a>`).join('')}</div>` : ''}
       </div>
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
+
+  // Tools
+  const tools = data.tools || [];
+  document.getElementById('dailyTools').innerHTML = tools.length > 0 ? tools.map(t => `
+    <tr>
+      <td><strong>${t.name || ''}</strong></td>
+      <td><span class="tag">${t.type || ''}</span></td>
+      <td>${t.highlight || ''}</td>
+      <td>${t.audience || ''}</td>
+      <td>${t.action || ''}</td>
+      <td>${t.url ? `<a href="${t.url}" target="_blank">链接 ↗</a>` : '—'}</td>
+    </tr>
+  `).join('') : '<tr><td colspan="6" style="color:var(--fg-dim)">—</td></tr>';
+
+  // Video Topics
+  const videos = data.video_topics || [];
+  document.getElementById('dailyVideos').innerHTML = videos.length > 0 ? videos.map(v => `
+    <tr>
+      <td><strong>${v.title || ''}</strong></td>
+      <td>${v.hook || ''}</td>
+      <td>${v.angle || ''}</td>
+      <td>${v.materials || ''}</td>
+      <td><span class="tag ${(v.difficulty||'')==='低'?'success':(v.difficulty||'')==='高'?'danger':'warn'}">${v.difficulty || ''}</span></td>
+    </tr>
+  `).join('') : '<tr><td colspan="5" style="color:var(--fg-dim)">—</td></tr>';
+
+  // Noise
+  const noise = data.noise_items || [];
+  document.getElementById('dailyNoise').innerHTML = noise.length > 0 ? noise.map(n => `
+    <div class="noise-item">
+      <strong>${n.item || ''}</strong>
+      <div class="reason">❌ ${n.reason || ''}</div>
+    </div>
+  `).join('') : '<div class="loading" style="color:var(--fg-dim)">—</div>';
+
+  // Tracking
+  const tracking = data.tracking_items || [];
+  document.getElementById('dailyTracking').innerHTML = tracking.length > 0 ? tracking.map(t => `
+    <li><span class="name">${t.item || ''}</span><div class="desc">${t.reason || ''}</div></li>
+  `).join('') : '<li style="color:var(--fg-dim)">—</li>';
 
   renderDailyPeriods();
   updateHomeDailySummary(data);
+}
+
+/* ---- Render Conclusions ---- */
+function renderDailyConclusions(conclusions) {
+  const bodyEl = document.getElementById('dailyBody');
+  if (!conclusions.length) return;
+  const list = conclusions.map((c, i) => `<li><span class="c-num">${i+1}.</span>${c}</li>`).join('');
+  bodyEl.innerHTML = `<ul class="conclusions-list">${list}</ul>`;
 }
 
 /* ---- Daily Month Filter ---- */

@@ -1,15 +1,44 @@
 {
   "date": "2026-05-22",
   "title": "2026-05-22 AI信息差日报",
-  "summary": "本周是'AI Agent元年'的真正落地周：Google I/O 全面转向Agent生态、阿里Qwen3.7-Max主打Agent能力、Cohere Command A+定位企业Agent。国产模型首次在Agent维度接近国际顶流。",
-  "body": "本周期（5/19-5/22）最核心的变化是 AI 从'聊天模型'切换到'干活模型'。Google I/O 2026 发布了 Gemini 3.5 Flash（Agent-first设计）、Gemini Omni（视频世界模型）、Gemini Spark（全天候Agent），将 Gemini 从聊天助手升级为覆盖全栈的 Agent 平台。阿里 Qwen3.7-Max 展示了 35 小时自主编写芯片软件的完整流程，Arena 排名国产第一。Cohere Command A+ 以 Apache 2.0 发布 218B MoE 企业Agent模型，单次推理仅激活 25B 参数。Claude Skills 生态正形成'名人 IP 效应'。",
-  "judgement": "本周最重要的认知转变：AI Agent 不再是 demo，而是可部署、可测试、可付费的产品形态。三个动向值得行动：① 如果你在做 AI 应用，现在必须把 Agent 能力纳入路线图；② 国产模型的 Agent 能力在快速追赶，Qwen3.7-Max 的 35 小时自主运行 Demo 是真实的信号；③ 开源 Agent 模型（Cohere Command A+）让中小企业自建 Agent 团队的门槛大幅降低。",
-  "tags": ["Google I/O", "Qwen 3.7", "Cohere", "Agent", "Gemini"],
+  "coverage": "覆盖 5/19 ~ 5/22 情报窗口",
+  "sources": "Google Blog、快科技、Knightli、Cohere官方、GitHub、IT之家",
+  "conclusions": [
+    "本周是「AI Agent元年」的真正落地周：Google I/O全面转向Agent生态、阿里Qwen3.7-Max主打Agent能力、Cohere Command A+定位企业Agent——三大事件不约而同指向同一方向。",
+    "国产模型第一次在Agent维度接近国际顶流：Qwen3.7-Max在Arena总榜排名国产第一，35小时自主编写芯片软件的Demo极其有力。",
+    "Claude Skills生态正在形成「名人IP效应」：Karpathy、Matt Pocock、Addy Osmani等头部开发者将自己的工作流打包为Skills开源，一个月内新增数十万stars。",
+    "开源Agent模型迎来里程碑：Cohere Command A+以Apache 2.0协议发布，218B MoE只需2张H100，单次推理仅激活25B参数。",
+    "AI视频工具进入「多模态编辑」新阶段：Gemini Omni做世界模型理解、LANCE做统一多模态、hyperframes把HTML当视频源代码。"
+  ],
+  "summary": "本周是AI Agent元年落地周：Google I/O全面Agent化、阿里Qwen3.7-Max国产第一、Cohere Command A+开源企业Agent。国产模型首次在Agent维度接近国际顶流。",
+  "body": "本周期（5/19-5/22）最核心的变化是AI从「聊天模型」切换到「干活模型」。Google I/O 2026发布了Gemini 3.5 Flash、Gemini Omni、Gemini Spark、Antigravity 2.0。阿里Qwen3.7-Max展示了35小时自主编写芯片软件。Cohere Command A+以Apache 2.0发布218B MoE企业Agent模型。Claude Skills生态正形成名人IP效应。",
+  "judgement": "本周最重要的认知转变：AI Agent不再是demo，而是可部署、可测试、可付费的产品形态。三个动向值得行动：①如果你在做AI应用，现在必须把Agent能力纳入路线图；②国产模型的Agent能力在快速追赶；③开源Agent模型让中小企业自建Agent团队的门槛大幅降低。",
+  "tags": ["Google I/O", "Qwen 3.7", "Cohere", "Gemini", "Agent"],
   "signals": [
-    {"rank": "P0", "title": "阿里发布 Qwen3.7-Max：国产 Agent 旗舰模型", "desc": "Arena国产排名第一，35小时自主完成芯片软件开发。1M token上下文，LM Arena编程#10/数学#7。国产模型在长程Agent任务上首次接近国际顶流。", "tags": ["Model", "Agent", "Qwen"], "source": "https://news.qq.com/rain/a/20260520A04TWS00"},
-    {"rank": "P0", "title": "Google I/O 2026 全系列发布：Agent 全面落地", "desc": "Gemini 3.5 Flash(Agent-first)、Gemini Omni(视频世界模型)、Gemini Spark(全天候Agent)、Antigravity 2.0(多Agent开发平台)。Google将Gemini升级为覆盖搜索/Android/开发/视频的全栈Agent平台。", "tags": ["Google", "Agent", "Multimodal"], "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"},
-    {"rank": "P0", "title": "Cohere Command A+ 开源发布：218B MoE 企业Agent模型", "desc": "Apache 2.0协议发布，单次推理仅激活25B参数，只需2张H100即可运行。主打企业私有部署和数据主权，为中小企业自建Agent扫清算力障碍。", "tags": ["Model", "Agent", "Open Source"], "source": "https://cohere.com/blog/command-a-plus"},
-    {"rank": "P1", "title": "Claude Skills 生态爆发：名人IP效应形成", "desc": "Karpathy、Matt Pocock、Addy Osmani 等头部开发者将工作流打包为Skills开源，一个月新增数十万stars。Skills正从配置项变成知识资产。", "tags": ["Claude", "Skills", "Ecosystem"], "source": "https://github.com/anthropics/claude-code"},
-    {"rank": "P1", "title": "AI视频工具进入多模态编辑新阶段", "desc": "Google Gemini Omni(世界模型理解)、ByteDance LANCE(统一多模态)、HeyGen hyperframes(HTML即视频源码)三项目从不同角度推进AI视频能力。", "tags": ["Video", "Multimodal"], "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/"}
+    {"rank": "P0", "title": "阿里发布 Qwen3.7-Max：国产 Agent 旗舰模型", "summary": "Arena国产排名第一，35小时自主完成芯片软件开发。1M token上下文，LM Arena编程#10/数学#7。", "why": "国产模型在长程Agent任务能力上首次达到国际顶流水平，且给出实际可验证的Demo。", "action_fact": "API上线阿里云百炼，可用来做长程编程、文档分析、自动化办公Agent。", "action_judge": "关注其开源版（Plus变体）预计6月中下旬发布，1M上下文对长文档分析场景有价值。", "tags": ["Model", "Agent", "Qwen"], "sources": ["https://news.qq.com/rain/a/20260520A04TWS00", "https://www.weste.net/2026/05-21/Qwen3.7-Max.html"]},
+    {"rank": "P0", "title": "Google I/O 2026 全系列发布：Agent 全面落地", "summary": "Gemini 3.5 Flash(Agent-first)、Gemini Omni(视频世界模型)、Gemini Spark(全天候Agent)、Antigravity 2.0(多Agent开发平台)。", "why": "Google将Gemini从聊天助手升级为覆盖搜索/Android/开发/视频/购物/Workspace的全栈Agent平台。", "action_fact": "开发者：用Antigravity 2.0做多Agent编排；Android开发者：学习AppFunctions接入Agent。", "action_judge": "这是Google对OpenAI和Anthropic的最强回应——从单一模型升级为全栈Agent生态。", "tags": ["Google", "Agent", "Multimodal"], "sources": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/", "https://knightli.com/en/2026/05/21/google-io-2026-gemini-agentic-ai-summary/"]},
+    {"rank": "P0", "title": "Cohere Command A+ 开源发布：218B MoE 企业Agent模型", "summary": "Apache 2.0协议发布，单次推理仅激活25B参数，只需2张H100即可运行。主打企业私有部署和数据主权。", "why": "为中小企业自建Agent团队扫清算力障碍。Apache 2.0协议意味着企业可以完全自主部署，无数据泄露风险。", "action_fact": "下载模型权重，在2张H100上即可部署；企业可自建Agent推理服务。", "action_judge": "适合对数据主权敏感的企业客户——金融/医疗/政务等场景。", "tags": ["Model", "Agent", "Open Source"], "sources": ["https://cohere.com/blog/command-a-plus"]},
+    {"rank": "P1", "title": "Claude Skills 生态爆发：名人IP效应形成", "summary": "Karpathy、Matt Pocock、Addy Osmani 等头部开发者将工作流打包为Skills开源，一个月新增数十万stars。Skills正从配置项变成知识资产。", "why": "Skills生态代表着AI工具的知识网络化——最优秀开发者的工作流可以通过一个文件被所有人复用。", "action_fact": "搜索GitHub上的Claude Skills合集，导入你常用的项目工作流。", "action_judge": "关注名人Skills的质量——Karpathy的Skill应该是AI编程领域的最佳实践。", "tags": ["Claude", "Skills", "Ecosystem"], "sources": ["https://github.com/anthropics/claude-code"]},
+    {"rank": "P1", "title": "AI视频工具进入多模态编辑新阶段", "summary": "Google Gemini Omni(世界模型理解)、ByteDance LANCE(统一多模态)、HeyGen hyperframes(HTML即视频源码)三项目从不同角度推进AI视频能力。", "why": "AI视频正从「生成」进入「编辑+理解」的阶段——Omni能理解物理世界、hyperframes把视频变成可编程的HTML。", "action_fact": "关注Omni Flash（已向Plus用户开放）和hyperframes的GitHub开源仓库。", "action_judge": "视频创作者应提前学习world model和hyperframes概念——这是下一代视频制作范式。", "tags": ["Video", "Multimodal"], "sources": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/"]}
+  ],
+  "tools": [
+    {"name": "Qwen3.7-Max API", "type": "LLM Agent API", "highlight": "1M上下文+35h自主运行+国产第一Arena排名", "audience": "需要国产大模型的开发者和企业", "action": "注册阿里云百炼平台；接入API做长程编程和文档分析", "url": "https://news.qq.com/rain/a/20260520A04TWS00"},
+    {"name": "Cohere Command A+", "type": "开源Agent模型", "highlight": "Apache 2.0开源，2张H100可跑，25B激活参数", "audience": "需要私有部署Agent模型的企业", "action": "下载模型权重；在2张H100上部署；测试企业级Agent场景", "url": "https://cohere.com/blog/command-a-plus"},
+    {"name": "Google Antigravity 2.0", "type": "Agent开发平台", "highlight": "多Agent编排+Gemini生态全栈集成", "audience": "AI Agent开发者", "action": "注册Google AI Studio；体验多Agent编排；关注AppFunctions SDK", "url": "https://blog.google/"}
+  ],
+  "video_topics": [
+    {"title": "阿里Qwen3.7-Max：国产AI的Agent逆袭", "hook": "国产模型35小时自主编写芯片软件，Arena国产第一", "angle": "实测+分析：Qwen3.7-Max在长程编程任务上的表现对比Claude/GPT", "materials": "阿里云百炼API录屏 + Arena排名截图 + 编码任务对比", "difficulty": "中"},
+    {"title": "Google I/O 2026全解析：AI的「Agent之年」", "hook": "Google把整个生态系统变成Agent平台", "angle": "趋势解读：从Gemini 3.5到Spark到Omni，Google的Agent全栈战略", "materials": "Google I/O演讲截图 + 产品矩阵图", "difficulty": "低"},
+    {"title": "Cohere Command A+：2张H100就能跑的企业级Agent", "hook": "开源+Apache 2.0+25B激活参数，企业AI的门槛被打破了", "angle": "实操教程：下载部署Command A+ → 搭建企业Agent服务 → 测试效果", "materials": "HuggingFace模型下载录屏 + Agent任务演示", "difficulty": "高"}
+  ],
+  "noise_items": [
+    {"item": "GPT-5 / GPT-5.6 发布时间预测和性能泄露", "reason": "OpenAI未发布任何官方信息，网上流传的Benchmark数据未经证实。"},
+    {"item": "Llama 5 发布传闻", "reason": "无Meta官方公告，无HuggingFace权重，已被证实为虚假信息。"},
+    {"item": "中文自媒体拼凑的「AI模型排行榜」", "reason": "无来源链接无测试方法说明，纯列表文。归入Noise。"}
+  ],
+  "tracking_items": [
+    {"item": "Qwen3.7-Max API 正式开放和定价公布", "reason": "目前Preview阶段，关注正式版API和定价"},
+    {"item": "Cohere Command A+ 社区反馈和实际部署案例", "reason": "关注企业级部署的实际表现和社区微调模型"},
+    {"item": "Gemini Omni 更广泛的上线时间和使用体验", "reason": "目前仅向Plus/Ultra用户开放，关注公开发布日期"}
   ]
 }

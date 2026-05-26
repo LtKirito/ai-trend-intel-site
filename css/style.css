@@ -613,6 +613,58 @@ p { margin: 0; }
   color: var(--fg-dim);
   font-size: 14px;
 }
+.signal-why {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(99,102,241,0.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  color: var(--fg-dim);
+}
+.signal-why strong { color: var(--accent); }
+.signal-actions {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+}
+.action-fact, .action-judge {
+  font-size: 13px;
+  padding: 4px 0;
+}
+.action-fact { color: var(--success); }
+.action-fact::before { content: "📋 "; }
+.action-judge { color: var(--warn); }
+.action-judge::before { content: "💡 "; }
+.signal-sources {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.signal-sources a {
+  color: var(--accent);
+  font-size: 12px;
+}
+.conclusions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.conclusions-list li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+}
+.conclusions-list li .c-num {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 8px;
+}
 
 /* === ARTICLE === */
 .article {

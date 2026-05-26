@@ -1,16 +1,43 @@
 {
   "date": "2026-05-24",
   "title": "2026-05-24 AI信息差日报（周六版）",
-  "summary": "Claude Code连续三天密集迭代（v2.1.148→149→150）；Google I/O余波持续：Gemini Spark(24/7 Agent)和Omni(视频)是本周最大叙事；TanStack供应链攻击波及OpenAI员工设备。",
-  "body": "周六版覆盖5/22-5/24情报窗口。Claude Code以「日更」节奏推进：v2.1.149包含4项新功能+25项修复+多项安全补丁，说明竞争白热化。Google I/O发布的Gemini Spark代表「会话AI→自主代理」的范式转移，Gemini Omni让Google在视频生成领域正式入场。TanStack供应链攻击影响170+npm包，OpenAI两台员工设备被入侵——供应链安全警钟敲响。Open Design升级到v0.8.0：50K Stars、132技能、150设计系统。",
-  "judgement": "本周核心主题=Agent化全面爆发+安全隐患浮出水面+视频赛道格局反转。Claude Code用户务必立即update到最新版（安全修复+新功能密集）。中国AI视频（Seedance/Kling/Vidu）被FT评价为超越美国——这是AI竞赛中罕见的非LLM领域反超信号。",
+  "coverage": "覆盖 5/22 ~ 5/24 情报窗口",
+  "sources": "Claude Code Changelog、TechCrunch、Decrypt、ReleaseBot、explainx.ai",
+  "conclusions": [
+    "Claude Code 连续三天密集迭代：v2.1.148→149→150，其中149版本包含4项新功能+25项修复+多项安全补丁，Anthropic 正以「日更」节奏推进。",
+    "Google I/O 余波持续发酵：Gemini Spark（24/7 Agent）和 Gemini Omni（视频生成）是本周最大叙事。Spark 代表「会话AI→自主代理」的范式转移。",
+    "TanStack 供应链攻击波及 OpenAI：Mini Shai-Hulud 攻击影响 170+ npm 包，OpenAI 两台员工设备被入侵——对整个行业的供应链安全警钟。",
+    "Open Design 升级到 v0.8.0：50K GitHub Stars、132 技能、150 设计系统、17 个编码代理适配器——开源设计工具生态正在加速成熟。",
+    "中国 AI 视频生成被 FT 评价为「超越美国」：Seedance/Kling/Vidu 在实用性和质量上领先，是 AI 竞赛中罕见的非 LLM 领域反超信号。"
+  ],
+  "summary": "Claude Code连续三天密集迭代（v2.1.148→149→150）；Google I/O余波：Gemini Spark(24/7 Agent)和Omni(视频)是本周最大叙事；TanStack供应链攻击波及OpenAI员工设备。",
+  "body": "周六版覆盖5/22-5/24情报窗口。Claude Code以「日更」节奏推进：v2.1.149包含4项新功能+25项修复+多项安全补丁，说明竞争白热化。Google I/O发布的Gemini Spark代表「会话AI→自主代理」的范式转移。TanStack供应链攻击影响170+npm包，OpenAI两台员工设备被入侵——供应链安全警钟敲响。Open Design升级到v0.8.0：50K Stars、132技能、150设计系统。",
+  "judgement": "本周核心主题=Agent化全面爆发+安全隐患浮出水面+视频赛道格局反转。Claude Code用户务必立即update到最新版（安全修复+新功能密集）。中国AI视频被FT评价超越美国——这是AI竞赛中罕见的非LLM领域反超信号。",
   "tags": ["Claude Code", "Gemini", "供应链安全", "Open Design", "AI视频"],
   "signals": [
-    {"rank": "P0", "title": "Claude Code v2.1.149大更新", "desc": "/usage分类明细、/diff键盘滚动、GFM任务列表渲染+25项Bug修复含PowerShell权限绕过等安全修复。近期最重量级单次更新。", "tags": ["Claude Code", "DevTools"], "source": "https://www.claudeupdates.dev/version/2.1.149"},
-    {"rank": "P0", "title": "Gemini Spark：24/7全天候AI代理平台", "desc": "设备关闭也能在云端持续工作，跨Gmail/Docs/Sheets执行任务。从「被动回答」到「主动替你干活」的范式转移。", "tags": ["Google", "Agent"], "source": "https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant/"},
-    {"rank": "P0", "title": "Gemini Omni多模态视频模型", "desc": "融合Gemini+Veo+Nano Banana+Genie的全能模型，支持对话式视频编辑、世界模拟、角色一致性。Flash版已向AI Plus用户开放。", "tags": ["Google", "Multimodal", "Video"], "source": "https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world"},
-    {"rank": "P0", "title": "TanStack供应链攻击波及OpenAI", "desc": "Mini Shai-Hulud攻击影响170+npm包，OpenAI两台员工设备被入侵。整个行业的供应链安全警钟。", "tags": ["Security", "Supply Chain"], "source": "https://techcrunch.com/"},
-    {"rank": "P1", "title": "Open Design升级v0.8.0", "desc": "50K GitHub Stars, 132技能, 150设计系统, 17个编码代理适配器。开源设计工具生态加速成熟。", "tags": ["Open Design", "Open Source"], "source": "https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0"},
-    {"rank": "P1", "title": "中国AI视频被FT评价超越美国", "desc": "Seedance/Kling/Vidu在实用性和质量上领先。AI竞赛中罕见的非LLM领域反超信号。", "tags": ["AI Video", "China"], "source": "https://www.ft.com/"}
+    {"rank": "P0", "title": "Claude Code v2.1.149大更新", "summary": "/usage分类明细、/diff键盘滚动、GFM任务列表渲染+25项Bug修复含PowerShell权限绕过等安全修复。近期最重量级单次更新。", "why": "这是Claude Code近期最重量级的单次更新。/usage让你清楚知道钱花在哪；安全修复直接关系到生产环境安全性。", "action_fact": "立即 claude update 到最新版；试试 /usage 看你的 token 消耗分布。", "action_judge": "如果你用 Windows PowerShell，务必更新——修复了PowerShell权限绕过等安全问题。", "tags": ["Claude Code", "DevTools"], "sources": ["https://www.claudeupdates.dev/version/2.1.149", "https://releasebot.io/updates/anthropic"]},
+    {"rank": "P0", "title": "Gemini Spark：24/7全天候AI代理平台", "summary": "设备关闭也能在云端持续工作，跨Gmail/Docs/Sheets执行任务。从「被动回答」到「主动替你干活」的范式转移。", "why": "从「被动回答问题」到「主动替你干活」的范式转移。这是Google对Codex Goal Mode / Claude Managed Agents的直接回应，Agent赛道进入全天候时代。", "action_fact": "如果你在美国且有AI Ultra订阅（$100/月），下周可抢先体验。", "action_judge": "国内用户关注其架构思路——本地Agent如何实现持久化运行。", "tags": ["Google", "Agent"], "sources": ["https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant/"]},
+    {"rank": "P0", "title": "Gemini Omni多模态视频模型", "summary": "融合Gemini+Veo+Nano Banana+Genie的全能模型，支持对话式视频编辑、世界模拟、角色一致性。Flash版已向AI Plus用户开放。", "why": "Google终于在视频生成领域正式入场。Omni不是单一模型而是「模型组合拳」，能处理图/音/视/文全模态。", "action_fact": "AI Plus用户可尝试Omni Flash生成短视频或教育动画。", "action_judge": "如果你做内容创作，对比Sora 2 / Seedance 2.0做实测评测。", "tags": ["Google", "Multimodal", "Video"], "sources": ["https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world"]},
+    {"rank": "P0", "title": "TanStack供应链攻击波及OpenAI", "summary": "Mini Shai-Hulud攻击影响170+npm包，OpenAI两台员工设备被入侵。整个行业的供应链安全警钟。", "why": "供应链安全是最容易被忽视的AI基础设施风险点。OpenAI被入侵说明即使顶级AI公司也无法免疫。", "action_fact": "检查你的npm依赖是否受影响的包；更新到修复版本。", "action_judge": "将供应链安全检查纳入你的AI开发工作流。", "tags": ["Security", "Supply Chain"], "sources": ["https://techcrunch.com/"]},
+    {"rank": "P1", "title": "Open Design升级v0.8.0", "summary": "50K GitHub Stars, 132技能, 150设计系统, 17个编码代理适配器。开源设计工具生态加速成熟。", "why": "插件引擎重建、Headless by default、149 设计系统，开源设计工具正对标Claude Design的能力边界。", "action_fact": "git clone 或 npm create 体验 v0.8.0 新功能。", "action_judge": "关注插件引擎和Design System生态——这决定了Open Design能否持续追赶Claude Design。", "tags": ["Open Design", "Open Source"], "sources": ["https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0"]}
+  ],
+  "tools": [
+    {"name": "Claude Code v2.1.149", "type": "编码工具", "highlight": "/usage明细+25项Bug修复+安全补丁，日更迭代节奏", "audience": "Claude Code用户", "action": "claude update；试用/usage看token分布；检查PowerShell相关修复", "url": "https://www.claudeupdates.dev/version/2.1.149"},
+    {"name": "Gemini Omni Flash", "type": "视频生成", "highlight": "对话式视频编辑、世界模拟、角色一致性，Flash版已开放", "audience": "内容创作者、视频制作者", "action": "AI Plus订阅用户可直接试用Omni Flash", "url": "https://decrypt.co/368393/"},
+    {"name": "Open Design v0.8.0", "type": "AI设计工具", "highlight": "插件引擎重建+Headless+149设计系统+自动更新", "audience": "产品设计师、全栈开发者", "action": "git clone或npm create体验；尝试DESIGN.md模板", "url": "https://github.com/nexu-io/open-design"}
+  ],
+  "video_topics": [
+    {"title": "Gemini Omni实测：Google进军AI视频的第一枪", "hook": "Google终于发布了AI视频模型，效果如何？", "angle": "对比测评：Omni Flash vs Sora 2 vs Seedance 2.0", "materials": "各平台生成的视频片段对比 + 编辑体验录屏", "difficulty": "高"},
+    {"title": "Claude Code日更的真相：Anthropic在急什么？", "hook": "三天三个版本，Claude Code的迭代速度说明什么？", "angle": "趋势解读：从v2.1.148→149→150的变更看Anthropic的竞争策略", "materials": "Changelog对比 + 关键功能截图", "difficulty": "低"},
+    {"title": "AI视频「中国超越美国」？Seedance/Kling/Vidu到底强在哪", "hook": "FT评价中国AI视频超越美国，这是真的吗？", "angle": "对比测评+行业分析：三大国产AI视频工具横评", "materials": "各工具生成视频片段 + FT报道截图", "difficulty": "中"}
+  ],
+  "noise_items": [
+    {"item": "社交平台的 Claude Sonnet 4.8/GPT-5.6 发布时间预测", "reason": "无官方确认，纯猜测，不可信。"},
+    {"item": "中文自媒体「AI将取代XX职业」标题党文章", "reason": "旧话题换标题，无新信息量，归入Noise。"}
+  ],
+  "tracking_items": [
+    {"item": "Claude Code v2.1.149+ 稳定性和用户反馈", "reason": "关注GitHub Issues和Reddit的bug报告"},
+    {"item": "Gemini Spark 公测体验报告", "reason": "关注首批测试者的实际使用体验"},
+    {"item": "TanStack供应链攻击后续影响", "reason": "关注受影响的npm包数量和修复进度"}
   ]
 }

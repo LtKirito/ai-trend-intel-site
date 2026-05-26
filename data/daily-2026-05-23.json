@@ -1,15 +1,43 @@
 {
   "date": "2026-05-23",
   "title": "2026-05-23 AI信息差日报",
-  "summary": "OpenAI Codex三连发（Appshots/Goal转正/锁屏执行）标志Codex从代码助手升级为后台自主代理；Anthropic Project Glasswing联合11家巨头启动AI安全基础设施级合作；Claude Code v2.1.147/148密集迭代。",
-  "body": "5月22-23日的核心事件围绕Codex全面升级和AI安全新格局展开。OpenAI发布了Appshots（Mac窗口截图直喂Codex）、/goal命令正式转正、锁屏远程执行三大功能，Codex正向「后台自主代理」进化的趋势十分明确。Anthropic则联合IBM/AWS/苹果/微软/英伟达等巨头启动Project Glasswing，用Claude扫描关键基础设施漏洞。Claude Code同步发布v2.1.147/148，/code-review替代/simplify，支持GitHub PR内联评论。",
-  "judgement": "本周的关键词是「代理化」——Codex和Claude Code都在从工具进化成能自主执行任务的代理。对于开发者，建议：1) Mac用户立即升级Codex试用Appshots+Goal模式；2) Claude Code用户升级v2.1.148体验/code-review；3) 企业安全团队关注Project Glasswing进展。",
+  "coverage": "覆盖窗口：2026-05-21 ~ 2026-05-23",
+  "sources": "OpenAI 官方/news、Anthropic Release Notes、IT之家、财联社、ReleaseBot、byteiota.com、9to5mac.com",
+  "conclusions": [
+    "OpenAI Codex 三连发（5月22日）：Appshots（Mac窗口截图直喂AI）、/goal 命令转正、锁屏远程执行 —— Codex 正从「代码助手」变成「后台自主代理」。",
+    "Anthropic Project Glasswing 全面启动（5月22-23日）：联合 IBM/AWS/苹果/微软/英伟达等巨头，用 Claude 扫描关键基础设施漏洞，已发现数千个高危漏洞。",
+    "DeepSeek V4-Pro 永久降价（5月22日）：75%促销折扣转正为永久定价，输入 $0.435/1M tokens，比 Claude Opus 4.7 便宜约 8-10 倍。",
+    "Claude Code v2.1.147 功能大版本（5月22日）：/code-review 命令取代 /simplify，支持 GitHub PR 内联评论；企业级开发体验大幅提升。",
+    "Open Design 持续发酵：作为 Claude Design 的开源本地替代，本周持续受到关注，AI 设计工具生态正在从封闭走向开源竞争。"
+  ],
+  "summary": "OpenAI Codex三连发（Appshots/Goal转正/锁屏执行）标志Codex从代码助手升级为后台自主代理；Anthropic Project Glasswing联合11家巨头启动AI安全基础设施级合作。",
+  "body": "5月22-23日的核心事件围绕Codex全面升级和AI安全新格局展开。OpenAI发布了Appshots、/goal命令正式转正、锁屏远程执行三大功能。Anthropic则联合IBM/AWS/苹果/微软/英伟达等启动Project Glasswing。Claude Code同步发布v2.1.147/148，/code-review替代/simplify，支持GitHub PR内联评论。",
+  "judgement": "本周的关键词是「代理化」——Codex和Claude Code都在从工具进化成能自主执行任务的代理。建议：1) Mac用户立即升级Codex试用Appshots+Goal模式；2) Claude Code用户升级v2.1.148体验/code-review；3) 企业安全团队关注Project Glasswing进展。",
   "tags": ["Codex", "Claude Code", "Project Glasswing", "DeepSeek"],
   "signals": [
-    {"rank": "P0", "title": "OpenAI Codex Appshots：窗口截图直喂AI", "desc": "双击Command将当前窗口截图+文本直接注入Codex对话，无需复制粘贴。彻底消除「把屏幕内容告诉AI」的摩擦成本。仅macOS但方向明确。", "tags": ["Codex", "OpenAI"], "source": "https://byteiota.com/codex-appshots-goal-mode-may-2026/"},
-    {"rank": "P0", "title": "OpenAI Codex /goal命令正式转正", "desc": "Beta状态的/goal命令正式毕业为稳定功能，标志着OpenAI对AI自主编码代理的信心。与Claude Code Routines形成正面竞争。", "tags": ["Codex", "Agent"], "source": "https://www.aihub.cn/news/codex-appshots-goal-locked-use/"},
-    {"rank": "P0", "title": "DeepSeek V4-Pro永久定价生效", "desc": "75%折扣转永久：输入$0.435/1M，输出$0.87/1M。最强开源编程模型里最便宜的选择，比Claude Opus 4.7便宜8-10倍。", "tags": ["DeepSeek", "Pricing"], "source": "https://codersera.com/blog/ai-models-released-may-2026-monthly-roundup/"},
-    {"rank": "P0", "title": "Anthropic Project Glasswing正式启动", "desc": "联合IBM/AWS/苹果/微软/英伟达/CrowdStrike/谷歌等11家巨头，用Claude扫描关键软件基础设施漏洞，已发现数百个漏洞。AI安全进入基础设施级。", "tags": ["Anthropic", "Security"], "source": "https://finance.eastmoney.com/a/202605233747101628.html"},
-    {"rank": "P1", "title": "Claude Code v2.1.147/148：/code-review + GitHub PR集成", "desc": "/simplify重命名为/code-review，支持按力度检测Bug并直接发GitHub PR内联评论。CI/CD集成更顺畅。", "tags": ["Claude Code", "DevTools"], "source": "https://releasebot.io/updates/anthropic/claude-code"}
+    {"rank": "P0", "title": "OpenAI Codex Appshots：窗口截图直喂AI", "summary": "双击Command将当前窗口截图+文本直接注入Codex对话，无需复制粘贴。彻底消除「把屏幕内容告诉AI」的摩擦成本。", "why": "彻底消除上下文切换的摩擦成本；Codex从对话工具升级为上下文感知代理；仅macOS但方向明确。", "action_fact": "Mac用户升级Codex桌面版，双击Command即可使用。", "action_judge": "适用于错误堆栈、API文档、Figma设计稿等场景，可大幅减少上下文切换。", "tags": ["Codex", "OpenAI"], "sources": ["https://byteiota.com/codex-appshots-goal-mode-may-2026/", "https://9to5mac.com/2026/05/21/codex-for-mac-updated-with-new-appshots-feature/"]},
+    {"rank": "P0", "title": "OpenAI Codex /goal命令正式转正", "summary": "Beta状态的/goal命令正式毕业为稳定功能，标志着OpenAI对AI自主编码代理的信心。", "why": "与Claude Code Routines形成正面竞争；标志着OpenAI对AI自主编码代理的信心。", "action_fact": "在Codex中输入 /goal 后描述任务目标即可。", "action_judge": "适合需要多步操作的编码任务，如「重构这个模块并跑通测试」。", "tags": ["Codex", "Agent"], "sources": ["https://www.aihub.cn/news/codex-appshots-goal-locked-use/", "https://news.qq.com/rain/a/20260522A02OAM00"]},
+    {"rank": "P0", "title": "DeepSeek V4-Pro永久定价生效", "summary": "75%折扣转永久：输入$0.435/1M，输出$0.87/1M。最强开源编程模型里最便宜的选择，比Claude Opus 4.7便宜8-10倍。", "why": "是目前最强开源权重编程模型里最便宜的；对高并发、大面积代码生成场景是成本杀手锏。", "action_fact": "通过DeepSeek API或兼容接口可直接使用新价格。", "action_judge": "如果项目中大量使用AI编码，切换DeepSeek V4-Pro可显著降低成本。", "tags": ["DeepSeek", "Pricing"], "sources": ["https://codersera.com/blog/ai-models-released-may-2026-monthly-roundup/"]},
+    {"rank": "P0", "title": "Anthropic Project Glasswing正式启动", "summary": "联合IBM/AWS/苹果/微软/英伟达/CrowdStrike/谷歌等11家巨头，用Claude扫描关键软件基础设施漏洞，已发现数百个漏洞。", "why": "AI安全进入「基础设施级」；Anthropic以此建立企业安全护城河；合作伙伴已发现数百个漏洞。", "action_fact": "项目下周正式展开，Mythos Preview将向符合条件的客户开放。", "action_judge": "企业安全团队应关注Anthropic企业博客，申请Mythos Preview Early Access。", "tags": ["Anthropic", "Security"], "sources": ["https://finance.eastmoney.com/a/202605233747101628.html", "https://so.html5.qq.com/page/real/search_news?docid=70000021_06069d75a5580852"]},
+    {"rank": "P1", "title": "Claude Code v2.1.147/148：/code-review + GitHub PR集成", "summary": "/simplify重命名为/code-review，支持按力度检测Bug并直接发GitHub PR内联评论。修复MCP分页、退出码127等30+ bug。", "why": "/code-review直接打通GitHub PR，是Claude Code向「自动化代码审查」迈出的关键一步。", "action_fact": "升级Claude Code至2.1.148，使用/code-review命令。", "action_judge": "可在PR流程中引入Claude Code Review，减少人工Code Review成本。", "tags": ["Claude Code", "DevTools"], "sources": ["https://releasebot.io/updates/anthropic/claude-code", "https://code.claude.com/docs/en/changelog"]}
+  ],
+  "tools": [
+    {"name": "OpenAI Codex（升级版）", "type": "编程代理", "highlight": "Appshots截图上下文+Goal自主编码+锁屏后台执行三大功能上线", "audience": "Mac开发者、需要自动化编码的团队", "action": "升级Codex桌面版；试用Appshots截图直接问AI代码问题；配置锁屏继续执行", "url": "https://byteiota.com/codex-appshots-goal-mode-may-2026/"},
+    {"name": "Claude Code v2.1.148", "type": "编码工具", "highlight": "/code-review直接打通GitHub PR，30+bug修复，后台会话保活", "audience": "Claude Code用户、需要代码审查的团队", "action": "claude update 到最新版；在PR中使用/code-review；配置CI/CD集成", "url": "https://code.claude.com/docs/en/changelog"},
+    {"name": "DeepSeek V4-Pro API", "type": "LLM API", "highlight": "永久降价75%，比Claude Opus 4.7便宜8-10倍，缓存命中仅$0.0036/M", "audience": "需要大量API调用的开发者和企业", "action": "注册DeepSeek API；迁移非关键工作流测试成本节省；对比输出质量", "url": "https://api-docs.deepseek.com/"}
+  ],
+  "video_topics": [
+    {"title": "Codex Appshots实测：截图直接喂AI编程，效率提升多少？", "hook": "Mac上双击Command窗口截图直喂AI，从此不用复制粘贴", "angle": "实操测评：Appshots vs 传统截图粘贴，实际编码场景效率对比", "materials": "Codex桌面录屏 + 对比流程 + 时间统计", "difficulty": "低"},
+    {"title": "DeepSeek V4-Pro永久降价：比Claude便宜10倍的真相", "hook": "75%折扣永久化，性价比之王易主", "angle": "价格对比测评：同一编码任务在DeepSeek/Claude/GPT上的效果和成本", "materials": "API价格对比图 + 编码质量对比 + 成本计算", "difficulty": "中"},
+    {"title": "Claude Code /code-review：AI自动Code Review体验", "hook": "Claude Code可以自动审查你的GitHub PR了", "angle": "实操演示：提交PR → Claude Code自动评论 → 人工验证准确率", "materials": "Claude Code终端录屏 + GitHub PR截图", "difficulty": "低"}
+  ],
+  "noise_items": [
+    {"item": "社交平台上的 Claude Sonnet 4.8 发布传闻", "reason": "无官方确认，纯社区猜测，不可信。"},
+    {"item": "营销号转载的 AI 模型排行榜（无链接无证据）", "reason": "纯列表文，不符合信息源质量要求。"}
+  ],
+  "tracking_items": [
+    {"item": "OpenAI Codex 后续功能发布", "reason": "Appshots目前仅Mac，关注Windows/Linux支持时间线"},
+    {"item": "Project Glasswing 首批公开成果", "reason": "关注Anthropic企业博客发布的漏洞报告"},
+    {"item": "Claude Code .147/.148 稳定性反馈", "reason": "关注GitHub Issues中用户遇到的问题"}
   ]
 }

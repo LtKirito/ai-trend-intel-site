@@ -1,15 +1,87 @@
 {
   "date": "2026-05-25",
-  "title": "2026-05-25 AI 信息差日报",
+  "title": "2026-05-25 AI 信息差日报（周一）",
+  "coverage": "覆盖 5/18-5/25 · 搜索源：英文主源 + 中文辅源 · 策略：48h 窗口",
+  "sources": "GitHub Trending / Product Hunt / HN / Anthropic/OpenAI/Google 官方博客 / 即刻 / 少数派 / 知乎 / B站",
+  "conclusions": [
+    "Open Design 是本周期最大发现——开源 Claude Design 平替，51.5K星，132个可组合技能，17种AI引擎适配。这是你自己的 Claude Design，且完全免费。",
+    "编程模型「三国杀」白热化——Cursor Composer 2.5（自研前沿编程模型）、Gemini 3.5 Flash（Agent-first设计）、Qwen 3.7-Max（1M上下文+35h自主运行）。三个方向同时发力。",
+    "Anthropic计费拆分倒计时21天——6月15日起Claude Agent SDK独立计费，Pro用户Agent调用额度仅$20/月。如果你在用Claude Code做自动化，现在就该评估迁移方案。"
+  ],
   "summary": "Open Design 是本周期最大发现 — 开源 Claude Design 平替 51.5K 星；编程模型「三国杀」白热化：Cursor Composer 2.5、Gemini 3.5 Flash、Qwen 3.7-Max 三方向同时发力；Anthropic 计费拆分倒计时 21 天。",
-  "body": "本周期（5/18-5/25）的核心主线是「编程 Agent 的护城河在快速消失」：Cursor 推出了自己的前沿编程模型 Composer 2.5，Google 的 Gemini 3.5 Flash 定位 Agent-first，阿里的 Qwen 3.7-Max 展示了 35 小时自主运行。与此同时，Open Design 以 51.5K 星的开源力量直接挑战 Claude Design，DeepSeek 将 75% 折扣永久化，Anthropic 宣布了 Agent SDK 独立计费——价格战和生态战同时在打。",
+  "body": "本周期（5/18-5/25）的核心主线是「编程 Agent 的护城河在快速消失」：Cursor 推出了自己的前沿编程模型 Composer 2.5，Google 的 Gemini 3.5 Flash 定位 Agent-first，阿里的 Qwen 3.7-Max 展示了 35 小时自主运行。与此同时，Open Design 以 51.5K 星的开源力量直接挑战 Claude Design，DeepSeek 将 75% 折扣永久化，Anthropic 宣布了 Agent SDK 独立计费。",
   "judgement": "对于 AI 从业者和开发者，本周最值得行动的三件事：1) 立即试用 Open Design（免费、本地、17 引擎适配）；2) 如果你是 Cursor 用户，趁首周双倍用量促销测试 Composer 2.5；3) 评估 Anthropic 6/15 计费拆分对你工作流的影响，提前规划替代方案。",
   "tags": ["Open Design", "Cursor Composer 2.5", "Gemini 3.5 Flash", "DeepSeek", "Anthropic"],
   "signals": [
-    {"rank": "P0", "title": "Open Design v0.8.0 — 开源 Claude Design 替代品", "desc": "51.5K GitHub Stars，132 个可组合技能包，支持 17 种 AI 引擎，Apache-2.0 协议。这是 AI 设计工具的 Llama 时刻。", "tags": ["Design", "Open Source", "Tool"], "source": "https://open-design.ai"},
-    {"rank": "P0", "title": "Cursor Composer 2.5 — 首个自研前沿编程模型", "desc": "SWE-Bench Multilingual 79.8%，宣称与 Claude Opus 4.7 和 GPT-5.5 持平。编程工具从套壳到自研引擎的转折点。", "tags": ["Coding Model", "Cursor"], "source": "https://cursor.com/blog/composer-2-5"},
-    {"rank": "P0", "title": "Google Gemini 3.5 Flash — Agent-first 设计", "desc": "Google I/O 2026 发布，输出速度比竞品快 4 倍，在编程/Agent/多模态基准上超越 Gemini 3.1 Pro。Flash 系列首次以下克上。", "tags": ["Model", "Agent", "Google"], "source": "https://blog.google/.../gemini-3-5/"},
-    {"rank": "P1", "title": "DeepSeek V4-Pro 永久降价", "desc": "75% 折扣转为永久价格：输入 $0.435/M、输出 $0.87/M，比 Claude Opus 4.7 便宜约 8-10 倍。", "tags": ["Pricing", "DeepSeek"], "source": "https://api-docs.deepseek.com/quick_start/pricing"},
-    {"rank": "P1", "title": "Anthropic Agent SDK 计费拆分", "desc": "6 月 15 日起 Claude Agent SDK 独立计费，Pro 用户 Agent 额度仅 $20/月。直接影响所有 Claude Code 自动化用户。", "tags": ["Policy", "Anthropic", "Claude Code"], "source": "https://thenewstack.io/anthropic-agent-sdk-credits/"}
+    {
+      "rank": "P0", "title": "Open Design v0.8.0 — 开源 Claude Design 替代品",
+      "summary": "51.5K GitHub Stars，132 个可组合技能包，支持 17 种 AI 引擎，Apache-2.0 协议。这是 AI 设计工具的 Llama 时刻。",
+      "why": "Claude Design 证明了大模型可以直接生成 UI，Open Design 把这条路完全开源了。51.5K 星=社区已验证。",
+      "action_fact": "git clone 后即可用，无需付费；支持你自己的 API key（DeepSeek 省钱方案）；150个 DESIGN.md 模板可直接用（Linear/Stripe/Apple风格）",
+      "action_judge": "视频号绝佳选题。如果你在做 AI 产品设计，这周必须上手。",
+      "tags": ["Design", "Open Source", "Tool"],
+      "sources": ["https://open-design.ai", "https://github.com/nexu-io/open-design"]
+    },
+    {
+      "rank": "P0", "title": "Cursor Composer 2.5 — 首个自研前沿编程模型",
+      "summary": "SWE-Bench Multilingual 79.8%，宣称与 Claude Opus 4.7 和 GPT-5.5 持平。编程工具从套壳到自研引擎的转折点。",
+      "why": "编程工具从「套壳API」到「自研模型」的转折点。Cursor 不再只是 Claude 的壳，直接威胁 Anthropic 的 API 收入。",
+      "action_fact": "定价 $0.50入/$2.50出（标准版），比 Opus 4.7 便宜 10-50 倍；首周双倍用量促销，现在是最佳时机。",
+      "action_judge": "如果你是 Cursor 用户，立即试用 Composer 2.5 替代 Claude 模式。",
+      "tags": ["Coding Model", "Cursor"],
+      "sources": ["https://cursor.com/blog/composer-2-5"]
+    },
+    {
+      "rank": "P0", "title": "Google Gemini 3.5 Flash — Agent-first 设计",
+      "summary": "Google I/O 2026 发布，输出速度比竞品快 4 倍，在编程/Agent/多模态基准上超越 Gemini 3.1 Pro。Flash 系列首次以下克上。",
+      "why": "Flash 系列首次「以下克上」——轻量模型超越上一代旗舰。「Agent-first」定位说明 Google 终于理解：AI 的未来不是聊天，是自动执行。",
+      "action_fact": "通过 Gemini API 和 AI Studio 可立即使用（有免费额度）。速度优势适合需要低延迟的场景。",
+      "action_judge": "如果你在做 Agent 开发，用它替代 GPT-4o-mini 做工具调用。",
+      "tags": ["Model", "Agent", "Google"],
+      "sources": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"]
+    },
+    {
+      "rank": "P1", "title": "DeepSeek V4-Pro 永久降价",
+      "summary": "75% 折扣转为永久价格：输入 $0.435/M、输出 $0.87/M，比 Claude Opus 4.7 便宜约 8-10 倍。",
+      "why": "对于大量 API 调用的场景，这是真金白银的成本优势。缓存命中 $0.0036/M，适合重复提示词场景。",
+      "action_fact": "通过 DeepSeek API 或兼容接口可直接使用新价格。",
+      "action_judge": "评估你的 AI 调用工作负载，算从 GPT/Claude 迁移到 DeepSeek V4-Pro 能省多少。",
+      "tags": ["Pricing", "DeepSeek"],
+      "sources": ["https://api-docs.deepseek.com/quick_start/pricing"]
+    },
+    {
+      "rank": "P1", "title": "Anthropic Agent SDK 计费拆分",
+      "summary": "6 月 15 日起 Claude Agent SDK 独立计费，Pro 用户 Agent 额度仅 $20/月。直接影响所有 Claude Code 自动化用户。",
+      "why": "如果你在 CI/CD、定时任务、批量处理中用 Claude Code，费用可能翻几倍。交互式 Claude Code 不受影响。",
+      "action_fact": "6月15日前评估你的使用模式；交互式Claude Code不受影响。",
+      "action_judge": "考虑将非交互任务迁移到 DeepSeek V4-Pro 或 Cursor Composer 2.5。",
+      "tags": ["Policy", "Anthropic", "Claude Code"],
+      "sources": ["https://thenewstack.io/anthropic-agent-sdk-credits/", "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/"]
+    }
+  ],
+  "tools": [
+    {"name": "Open Design", "type": "AI设计工具", "highlight": "开源 Claude Design 替代，132技能+150设计系统+17引擎，本地优先 BYOK", "audience": "产品设计师、全栈开发者、AI产品经理", "action": "git clone → npm install → open-design init；选一个 DESIGN.md 模板开始；接入你的 API key（DeepSeek 省钱方案）", "url": "https://github.com/nexu-io/open-design"},
+    {"name": "Cursor Composer 2.5", "type": "编程模型", "highlight": "自研前沿编程模型，SWE-Bench多语言79.8%，比Opus便宜10-50倍", "audience": "Cursor用户、编程Agent重度用户", "action": "更新Cursor → 切换模型为Composer 2.5；首周双倍用量，尽快测试；与Claude模式对比编码质量", "url": "https://cursor.com/blog/composer-2-5"},
+    {"name": "DeepSeek V4-Pro", "type": "LLM API", "highlight": "永久降价75%，缓存命中仅$0.0036/M，性价比远超Claude和GPT", "audience": "AI应用开发者、高并发API调用场景", "action": "注册 DeepSeek API；迁移一个非关键工作流测试效果；对比输出质量与成本", "url": "https://api-docs.deepseek.com/"}
+  ],
+  "video_topics": [
+    {"title": "白嫖 Claude Design？这个开源工具51K星了", "hook": "Claude Design 要付费？Open Design 完全免费+开源", "angle": "对比测评：Claude Design vs Open Design 实际效果对比，展示用DeepSeek API跑Open Design超省钱方案", "materials": "Open Design 录屏 + Claude Design 对比 + 生成的HTML页面", "difficulty": "中"},
+    {"title": "Cursor 自己造了个模型，比 Claude 便宜50倍", "hook": "编程工具不再只是套壳，Cursor自研模型正面挑战Claude", "angle": "趋势解读+实操：为什么Cursor从套壳变成造引擎？实际编程任务对比（Composer 2.5 vs Claude Opus）", "materials": "Cursor Composer 2.5编码录屏 + 价格对比图 + SWE-Bench数据", "difficulty": "中"},
+    {"title": "Claude Code 用户注意：6月15日起你的账单要变了", "hook": "Anthropic拆分了Agent SDK计费，费用可能翻3-5倍", "angle": "预警+对策：新计费规则拆解+算一笔账+三种替代方案（DeepSeek/Cursor/API直调）", "materials": "计费对比表格 + 账单模拟 + 替代方案演示", "difficulty": "低"},
+    {"title": "Google 偷偷搞了个Agent模型，速度比GPT快4倍", "hook": "Gemini 3.5 Flash定位Agent优先而非聊天优先", "angle": "工具测评：什么是Agent-first设计？实际跑Agent任务对比Gemini 3.5 Flash vs GPT-4o-mini", "materials": "Google AI Studio操作录屏 + Agent任务速度对比", "difficulty": "中"}
+  ],
+  "noise_items": [
+    {"item": "Claude Sonnet 4.8「即将发布」", "reason": "社交媒体传言，Anthropic 5月开发者活动未提及，无官方公告。可信度=1，归入Noise。"},
+    {"item": "GPT-5.6「预测市场概率80-89%」", "reason": "预测市场猜测，OpenAI未做任何公告。新颖性=1，归入Noise。"},
+    {"item": "Llama 5「4月8日发布」", "reason": "已被证实为虚假信息——无Meta公告、无权重、无模型卡。可信度=0，归入Noise。"},
+    {"item": "PH榜单刷票产品（StoreClaw 63万票等）", "reason": "投票数异常偏高，疑似刷票/营销，缺乏实质技术内容。降权为P2。"},
+    {"item": "泛滥的 MCP 入门教程", "reason": "知乎/CSDN/掘金大量重复内容，新颖性=1-2。仅保留一篇高质量教程。"}
+  ],
+  "tracking_items": [
+    {"item": "Anthropic 6/15计费拆分影响", "reason": "关注社区反应、替代方案涌现、OpenClaw等第三方框架适配策略"},
+    {"item": "Open Design 生态扩展", "reason": "关注GitHub issues/PRs、新适配器和DESIGN.md模板提交"},
+    {"item": "Qwen 3.7 开源版（Plus变体）", "reason": "预计6月中下旬发布，关注1M上下文和Agent能力"},
+    {"item": "Gemini 3.5 Pro 发布", "reason": "Google已确认内部使用中，预计6月推出"},
+    {"item": "Cursor Composer 2.5 用户反馈", "reason": "关注Reddit/Twitter/HN上的实际使用体验，影响工具选择"}
   ]
 }
