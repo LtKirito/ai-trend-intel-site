@@ -137,10 +137,9 @@ function renderFromLive(d, zhCache) {
       <span class="time">PR #${pr.number}</span>
       <div>
         <div class="signal-title">
-          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(pr.title)}</span> <span class="zh-pending">[待分析]</span>`}
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(pr.title)}</span>`}
           <a href="${pr.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
         </div>
-        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，显示英文原标题</p>` : ''}
         <div class="tag-row">
           <span class="tag ${pr.state === 'merged' ? 'success' : pr.state === 'open' ? 'accent' : ''}">${pr.state}</span>
           ${(pr.labels || []).slice(0, 3).map(l => `<span class="tag">${l}</span>`).join('')}
@@ -158,10 +157,9 @@ function renderFromLive(d, zhCache) {
       <span class="time">#${iss.number}</span>
       <div>
         <div class="signal-title">
-          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(iss.title)}</span> <span class="zh-pending">[待分析]</span>`}
+          ${zh ? `<span class="zh-title">${escapeHtml(zh)}</span>` : `<span class="zh-title-fallback">${escapeHtml(iss.title)}</span>`}
           <a href="${iss.url}" target="_blank" rel="noopener" class="en-original">[原文]</a>
         </div>
-        ${!zh ? `<p class="signal-desc" style="font-size:12px;color:var(--warn)">⚠️ 暂无 AI 中文摘要，显示英文原标题</p>` : ''}
         <div class="tag-row">
           ${(iss.labels || []).slice(0, 3).map(l => `<span class="tag ${l.includes('bug')?'danger':l.includes('feature')||l.includes('enhancement')?'accent':''}">${l}</span>`).join('')}
           ${iss.author ? `<span class="tag">by ${iss.author}</span>` : ''}
@@ -264,7 +262,7 @@ function renderZhCards(containerId, items, map, prefix, isPR) {
     <div class="zh-card ${m.zh ? '' : 'zh-card-pending'}">
       <a href="${m.url}" target="_blank" rel="noopener">
         <span class="zh-card-num">${prefix} #${m.number}</span>
-        <span class="zh-card-text">${m.zh ? escapeHtml(m.zh) : '待 AI 分析…'}</span>
+        <span class="zh-card-text">${m.zh ? escapeHtml(m.zh) : '查看详情 →'}</span>
       </a>
       <div class="tag-row">${m.labels.map(l => `<span class="tag">${l}</span>`).join('')}${m.comments > 0 ? `<span class="tag">💬 ${m.comments}</span>` : ''}</div>
     </div>
