@@ -1,6 +1,6 @@
 [
   {"date": "2026-05-25", "label": "5 月 25 日 (周一)", "count": "3P0 + 5P1", "tags": "Open Design · Cursor · Gemini 3.5", "summary": "Open Design 开源平替、Cursor 自研编程模型、Gemini 3.5 Flash Agent-first"},
-  {"date": "2026-05-24", "label": "5 月 24 日 (周日)", "count": "—", "tags": "周末休更", "summary": "无日报，数据窗口覆盖至周一"},
-  {"date": "2026-05-23", "label": "5 月 23 日 (周六)", "count": "—", "tags": "周末休更", "summary": "无日报，数据窗口覆盖至周一"},
+  {"date": "2026-05-24", "label": "5 月 24 日 (周六)", "count": "4P0 + 2P1", "tags": "Claude Code · Gemini · 供应链安全", "summary": "Claude Code日更迭代、Gemini Spark/Omni发布、TanStack供应链攻击"},
+  {"date": "2026-05-23", "label": "5 月 23 日 (周六)", "count": "4P0 + 1P1", "tags": "Codex · Project Glasswing · Claude Code", "summary": "OpenAI Codex三连发、Anthropic Glasswing启动、DeepSeek永久降价"},
   {"date": "2026-05-22", "label": "5 月 22 日 (周五)", "count": "3P0 + 9P1", "tags": "Google I/O · Qwen 3.7 · Cohere", "summary": "AI Agent 落地周：Google I/O 全面 Agent 化、阿里 Qwen3.7-Max 国产第一、Cohere Command A+ 开源"}
 ]

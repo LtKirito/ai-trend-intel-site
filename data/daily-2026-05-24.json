@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-24",
+  "title": "2026-05-24 AI信息差日报（周六版）",
+  "summary": "Claude Code连续三天密集迭代（v2.1.148→149→150）；Google I/O余波持续：Gemini Spark(24/7 Agent)和Omni(视频)是本周最大叙事；TanStack供应链攻击波及OpenAI员工设备。",
+  "body": "周六版覆盖5/22-5/24情报窗口。Claude Code以「日更」节奏推进：v2.1.149包含4项新功能+25项修复+多项安全补丁，说明竞争白热化。Google I/O发布的Gemini Spark代表「会话AI→自主代理」的范式转移，Gemini Omni让Google在视频生成领域正式入场。TanStack供应链攻击影响170+npm包，OpenAI两台员工设备被入侵——供应链安全警钟敲响。Open Design升级到v0.8.0：50K Stars、132技能、150设计系统。",
+  "judgement": "本周核心主题=Agent化全面爆发+安全隐患浮出水面+视频赛道格局反转。Claude Code用户务必立即update到最新版（安全修复+新功能密集）。中国AI视频（Seedance/Kling/Vidu）被FT评价为超越美国——这是AI竞赛中罕见的非LLM领域反超信号。",
+  "tags": ["Claude Code", "Gemini", "供应链安全", "Open Design", "AI视频"],
+  "signals": [
+    {"rank": "P0", "title": "Claude Code v2.1.149大更新", "desc": "/usage分类明细、/diff键盘滚动、GFM任务列表渲染+25项Bug修复含PowerShell权限绕过等安全修复。近期最重量级单次更新。", "tags": ["Claude Code", "DevTools"], "source": "https://www.claudeupdates.dev/version/2.1.149"},
+    {"rank": "P0", "title": "Gemini Spark：24/7全天候AI代理平台", "desc": "设备关闭也能在云端持续工作，跨Gmail/Docs/Sheets执行任务。从「被动回答」到「主动替你干活」的范式转移。", "tags": ["Google", "Agent"], "source": "https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant/"},
+    {"rank": "P0", "title": "Gemini Omni多模态视频模型", "desc": "融合Gemini+Veo+Nano Banana+Genie的全能模型，支持对话式视频编辑、世界模拟、角色一致性。Flash版已向AI Plus用户开放。", "tags": ["Google", "Multimodal", "Video"], "source": "https://decrypt.co/368393/google-unveils-gemini-omni-next-gen-ai-video-builder-simulate-world"},
+    {"rank": "P0", "title": "TanStack供应链攻击波及OpenAI", "desc": "Mini Shai-Hulud攻击影响170+npm包，OpenAI两台员工设备被入侵。整个行业的供应链安全警钟。", "tags": ["Security", "Supply Chain"], "source": "https://techcrunch.com/"},
+    {"rank": "P1", "title": "Open Design升级v0.8.0", "desc": "50K GitHub Stars, 132技能, 150设计系统, 17个编码代理适配器。开源设计工具生态加速成熟。", "tags": ["Open Design", "Open Source"], "source": "https://github.com/nexu-io/open-design/releases/tag/open-design-v0.8.0"},
+    {"rank": "P1", "title": "中国AI视频被FT评价超越美国", "desc": "Seedance/Kling/Vidu在实用性和质量上领先。AI竞赛中罕见的非LLM领域反超信号。", "tags": ["AI Video", "China"], "source": "https://www.ft.com/"}
+  ]
+}

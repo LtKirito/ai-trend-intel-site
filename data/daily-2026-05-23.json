@@ -1,0 +1,15 @@
+{
+  "date": "2026-05-23",
+  "title": "2026-05-23 AI信息差日报",
+  "summary": "OpenAI Codex三连发（Appshots/Goal转正/锁屏执行）标志Codex从代码助手升级为后台自主代理；Anthropic Project Glasswing联合11家巨头启动AI安全基础设施级合作；Claude Code v2.1.147/148密集迭代。",
+  "body": "5月22-23日的核心事件围绕Codex全面升级和AI安全新格局展开。OpenAI发布了Appshots（Mac窗口截图直喂Codex）、/goal命令正式转正、锁屏远程执行三大功能，Codex正向「后台自主代理」进化的趋势十分明确。Anthropic则联合IBM/AWS/苹果/微软/英伟达等巨头启动Project Glasswing，用Claude扫描关键基础设施漏洞。Claude Code同步发布v2.1.147/148，/code-review替代/simplify，支持GitHub PR内联评论。",
+  "judgement": "本周的关键词是「代理化」——Codex和Claude Code都在从工具进化成能自主执行任务的代理。对于开发者，建议：1) Mac用户立即升级Codex试用Appshots+Goal模式；2) Claude Code用户升级v2.1.148体验/code-review；3) 企业安全团队关注Project Glasswing进展。",
+  "tags": ["Codex", "Claude Code", "Project Glasswing", "DeepSeek"],
+  "signals": [
+    {"rank": "P0", "title": "OpenAI Codex Appshots：窗口截图直喂AI", "desc": "双击Command将当前窗口截图+文本直接注入Codex对话，无需复制粘贴。彻底消除「把屏幕内容告诉AI」的摩擦成本。仅macOS但方向明确。", "tags": ["Codex", "OpenAI"], "source": "https://byteiota.com/codex-appshots-goal-mode-may-2026/"},
+    {"rank": "P0", "title": "OpenAI Codex /goal命令正式转正", "desc": "Beta状态的/goal命令正式毕业为稳定功能，标志着OpenAI对AI自主编码代理的信心。与Claude Code Routines形成正面竞争。", "tags": ["Codex", "Agent"], "source": "https://www.aihub.cn/news/codex-appshots-goal-locked-use/"},
+    {"rank": "P0", "title": "DeepSeek V4-Pro永久定价生效", "desc": "75%折扣转永久：输入$0.435/1M，输出$0.87/1M。最强开源编程模型里最便宜的选择，比Claude Opus 4.7便宜8-10倍。", "tags": ["DeepSeek", "Pricing"], "source": "https://codersera.com/blog/ai-models-released-may-2026-monthly-roundup/"},
+    {"rank": "P0", "title": "Anthropic Project Glasswing正式启动", "desc": "联合IBM/AWS/苹果/微软/英伟达/CrowdStrike/谷歌等11家巨头，用Claude扫描关键软件基础设施漏洞，已发现数百个漏洞。AI安全进入基础设施级。", "tags": ["Anthropic", "Security"], "source": "https://finance.eastmoney.com/a/202605233747101628.html"},
+    {"rank": "P1", "title": "Claude Code v2.1.147/148：/code-review + GitHub PR集成", "desc": "/simplify重命名为/code-review，支持按力度检测Bug并直接发GitHub PR内联评论。CI/CD集成更顺畅。", "tags": ["Claude Code", "DevTools"], "source": "https://releasebot.io/updates/anthropic/claude-code"}
+  ]
+}
