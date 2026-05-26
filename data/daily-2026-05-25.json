@@ -1,8 +1,8 @@
 {
   "date": "2026-05-25",
   "title": "2026-05-25 AI 信息差日报",
-  "summary": "Open Design 是本周期最大发现 — 开源 Claude Design 平替 51.5K 星；编程模型"三国杀"白热化：Cursor Composer 2.5、Gemini 3.5 Flash、Qwen 3.7-Max 三方向同时发力；Anthropic 计费拆分倒计时 21 天。",
-  "body": "本周期（5/18-5/25）的核心主线是"编程 Agent 的护城河在快速消失"：Cursor 推出了自己的前沿编程模型 Composer 2.5，Google 的 Gemini 3.5 Flash 定位 Agent-first，阿里的 Qwen 3.7-Max 展示了 35 小时自主运行。与此同时，Open Design 以 51.5K 星的开源力量直接挑战 Claude Design，DeepSeek 将 75% 折扣永久化，Anthropic 宣布了 Agent SDK 独立计费——价格战和生态战同时在打。",
+  "summary": "Open Design 是本周期最大发现 — 开源 Claude Design 平替 51.5K 星；编程模型「三国杀」白热化：Cursor Composer 2.5、Gemini 3.5 Flash、Qwen 3.7-Max 三方向同时发力；Anthropic 计费拆分倒计时 21 天。",
+  "body": "本周期（5/18-5/25）的核心主线是「编程 Agent 的护城河在快速消失」：Cursor 推出了自己的前沿编程模型 Composer 2.5，Google 的 Gemini 3.5 Flash 定位 Agent-first，阿里的 Qwen 3.7-Max 展示了 35 小时自主运行。与此同时，Open Design 以 51.5K 星的开源力量直接挑战 Claude Design，DeepSeek 将 75% 折扣永久化，Anthropic 宣布了 Agent SDK 独立计费——价格战和生态战同时在打。",
   "judgement": "对于 AI 从业者和开发者，本周最值得行动的三件事：1) 立即试用 Open Design（免费、本地、17 引擎适配）；2) 如果你是 Cursor 用户，趁首周双倍用量促销测试 Composer 2.5；3) 评估 Anthropic 6/15 计费拆分对你工作流的影响，提前规划替代方案。",
   "tags": ["Open Design", "Cursor Composer 2.5", "Gemini 3.5 Flash", "DeepSeek", "Anthropic"],
   "signals": [

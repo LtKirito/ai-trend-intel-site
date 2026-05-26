@@ -44,7 +44,7 @@ async function fetchLiveData() {
     fetch(`${API_BASE}`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : null),
     fetch(`${API_BASE}/releases/latest`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : null),
     fetch(`${API_BASE}/pulls?state=all&sort=updated&per_page=8`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : []),
-    fetch(`${API_BASE}/issues?state=open&sort=updated&per_page=10&labels=bug,feature,enhancement,help+wanted,good+first+issue', {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : [])
+    fetch(`${API_BASE}/issues?state=open&sort=updated&per_page=10`, {headers: {Accept: 'application/vnd.github.v3+json'}}).then(r => r.ok ? r.json() : [])
   ]);
 
   if (!repo) throw new Error('Repo API failed');
