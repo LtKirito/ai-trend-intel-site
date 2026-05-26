@@ -1,41 +1,48 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "description": "🎨 Local-first, open-source Claude Design alternative",
-    "stars": 51860,
-    "forks": 5923,
-    "open_issues": 359,
+    "description": "Local-first, open-source Claude Design alternative",
+    "stars": 52240,
+    "forks": 5951,
+    "open_issues": 350,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-05-25T14:58:06Z",
+    "updated": "2026-05-26T04:05:42Z",
     "latest_release": {
-      "version": "v0.8.0",
+      "version": "open-design-v0.8.0",
       "date": "2026-05-22",
       "title": "Open Design 0.8.0 — Plugin Engine + Headless + #DeFigma",
       "summary": "305 PRs · 75 contributors · 7 days。插件引擎重建、Headless by default、149 设计系统、19 语言支持、Windows/macOS 自动更新。"
     }
   },
   "recent_prs": [
-    {"number": 26, "title": "修复非交互权限：Claude Code 等 CLI Agents 在 Web UI 中卡住", "state": "merged", "author": "JoKer049", "labels": ["bug"], "impact": "解决了浏览器中使用 Claude Code/Codex 时代理会话因权限提示卡死的关键问题", "url": "https://github.com/nexu-io/open-design/pull/26"},
-    {"number": 14, "title": "Per-CLI 模型选择器：支持本地 Agent 模型切换", "state": "merged", "author": "pftom", "labels": ["feature"], "impact": "为每个 CLI Agent（Claude/Codex/Cursor/Qwen 等）提供独立模型选择，OpenCode 支持 175 个模型", "url": "https://github.com/nexu-io/open-design/pull/14"},
-    {"number": 35, "title": "锁定安装工具链：pnpm + Node 20-22 + nvmrc", "state": "merged", "author": "mrcfps", "labels": ["bug"], "impact": "修复 Node 24 下 better-sqlite3 编译失败问题，统一安装流程", "url": "https://github.com/nexu-io/open-design/pull/35"},
-    {"number": 4, "title": "修复欢迎对话框覆盖用户 Agent 选择的问题", "state": "merged", "author": "heylakatos", "labels": ["bug"], "impact": "修复首次使用时 SettingsDialog 的 Save 按钮静默回退 agent 选择的关键 bug", "url": "https://github.com/nexu-io/open-design/pull/4"},
-    {"number": 7, "title": "允许 Claude Code 读取 skill 种子文件和设计系统规范", "state": "merged", "author": "pftom", "labels": ["bug"], "impact": "修复 Claude Code 因路径权限问题无法读取 skills/ 模板文件的阻塞性 bug", "url": "https://github.com/nexu-io/open-design/pull/7"}
+    {"number": 2879, "title": "refactor(web): extract shared UI primitives", "state": "open", "author": "mrcfps", "labels": ["size/XL", "risk/high", "type/refactor"], "impact": "大规模重构：从 Web 模块中提取共享 UI 原语组件，降低代码耦合度", "url": "https://github.com/nexu-io/open-design/pull/2879"},
+    {"number": 2906, "title": "Consolidate chat comments preview on main", "state": "open", "author": "zoeforfun", "labels": ["size/XXL", "risk/high", "type/feature"], "impact": "整合主分支上的聊天评论预览功能，XXL 级别变更，涉及聊天渲染核心逻辑", "url": "https://github.com/nexu-io/open-design/pull/2906"},
+    {"number": 2935, "title": "fix(ci): run fork visual reports from trusted code", "state": "open", "author": "mrcfps", "labels": ["size/L", "risk/high", "type/bugfix"], "impact": "修复 CI 安全问题：确保 fork 仓库的视觉报告仅从受信代码执行", "url": "https://github.com/nexu-io/open-design/pull/2935"},
+    {"number": 1496, "title": "feat(web): render GFM tables in markdown artifact and chat renderers", "state": "merged", "author": "mutoe", "labels": ["size/M", "risk/medium", "type/feature"], "impact": "在 Markdown Artifact 和聊天渲染器中支持 GFM 表格渲染，提升富文本展示能力", "url": "https://github.com/nexu-io/open-design/pull/1496"},
+    {"number": 1098, "title": "fix: resolve mobile frame screen paths as project files", "state": "closed", "author": "xxiaoxiong", "labels": ["size/S", "risk/high", "type/bugfix"], "impact": "修复移动端 Frame 屏幕路径识别问题，确保项目文件路径正确解析", "url": "https://github.com/nexu-io/open-design/pull/1098"},
+    {"number": 763, "title": "feat(daemon): close pi adapter parity gaps — imagePaths, extraAllowedDirs, error events, sendAgentEvent routing", "state": "merged", "author": "monotykamary", "labels": ["feature"], "impact": "补齐 Daemon PI 适配器差距：图片路径、额外允许目录、错误事件、Agent 事件路由", "url": "https://github.com/nexu-io/open-design/pull/763"},
+    {"number": 553, "title": "refactor(daemon): eliminate duplicate dist tree from two-tsconfig build", "state": "merged", "author": "dabing1022", "labels": [], "impact": "消除双 tsconfig 构建中的重复 dist 目录，简化 Daemon 构建流程", "url": "https://github.com/nexu-io/open-design/pull/553"},
+    {"number": 2009, "title": "Improve agent failure UX for daemon stderr exits", "state": "open", "author": "bulai0408", "labels": ["size/XL", "risk/medium", "type/bugfix"], "impact": "改进 Agent 因 Daemon stderr 退出时的失败 UX 体验，减少用户困惑", "url": "https://github.com/nexu-io/open-design/pull/2009"}
   ],
   "recent_issues": [
-    {"number": 1637, "title": "Creative Memory System: 基于品味记忆和迭代学习的长期创意记忆系统", "author": "itsmeved24", "labels": ["feature", "needs-product-direction", "help wanted"], "comments": 46, "summary": "最热门的特性提案——让 Open Design 从生成工具进化为长期创意协作者。提案包括品味记忆层和迭代学习两个核心模块。46 条评论显示社区高度关注。", "url": "https://github.com/nexu-io/open-design/issues/1637"},
-    {"number": 1772, "title": "允许用户配置 Artifact 存储目录", "author": "coconilu", "labels": ["good first issue", "type/feature", "needs-product-direction"], "comments": 20, "summary": "Good First Issue。用户希望将生成的 Artifact 放到 Documents/Desktop/项目目录而非 .od/artifacts。设置中添加 Storage 面板。", "url": "https://github.com/nexu-io/open-design/issues/1772"},
-    {"number": 963, "title": "添加 /finalize/claude-code 路由以便 Max 用户避免按 Token 付费", "author": "bankielewicz", "labels": ["feature", "needs-product-direction"], "comments": 20, "summary": "Max 订阅用户通过 Claude Code CLI 调用 finalize 可完全免费，但当前 /finalize/anthropic 走 API 按量计费。需要加 CLI 路由。", "url": "https://github.com/nexu-io/open-design/issues/963"},
-    {"number": 1969, "title": "PPTX 导出采用四模式架构（可编辑+截图+自定义字体+Google 字体）", "author": "zhangdongming0607", "labels": ["feature", "needs-product-direction"], "comments": 4, "summary": "详细对比了 Claude Design 的四模式导出方案，建议 Open Design 也支持：可编辑·自定义字体、可编辑·通用字体、可编辑·Google 字体、截图模式。", "url": "https://github.com/nexu-io/open-design/issues/1969"},
-    {"number": 2930, "title": "无法切换对话（最新 Bug）", "author": "xiaobinHub", "labels": ["bug", "help wanted"], "comments": 7, "summary": "v0.8.0-preview.2 中创建新对话后无法切换回旧对话。5/25 最新报告的 Bug，需要修复。", "url": "https://github.com/nexu-io/open-design/issues/2930"},
-    {"number": 2197, "title": "Windows 打包版 Codex CLI 连接测试始终超时", "author": "duyedoudou", "labels": ["bug", "priority:p1"], "comments": 4, "summary": "Windows 安装版中 Codex CLI 测试超时（45036ms），但手动命令行运行正常。推测为打包版环境变量/子进程启动的问题。", "url": "https://github.com/nexu-io/open-design/issues/2197"},
-    {"number": 1838, "title": "同步并展示 CLI 安装的 MCP 和 Skill", "author": "Tilmirs", "labels": ["enhancement", "good first issue"], "comments": 9, "summary": "用户通过 Claude Code CLI 安装的 MCP/Skill 无法在客户端查看和管理，需要在设置中添加统一管理页面。", "url": "https://github.com/nexu-io/open-design/issues/1838"}
+    {"number": 2954, "title": "Hide the pagination control overlay on Recent Projects cover cards on Home", "author": "AmyShang-alt", "labels": ["bug", "good first issue", "help wanted"], "comments": 2, "summary": "首页 Recent Projects 卡片上的分页控件覆盖层应隐藏，影响首页 UI 体验", "url": "https://github.com/nexu-io/open-design/issues/2954"},
+    {"number": 2143, "title": "When I try Tweaks / Draw / comment / Edit... the open preview reset to the home page", "author": "USFHunTer", "labels": ["bug", "help wanted", "priority:p1"], "comments": 14, "summary": "进行 Tweaks/Draw/编辑等操作时预览会重置回首页，P1 级 Bug 影响核心工作流", "url": "https://github.com/nexu-io/open-design/issues/2143"},
+    {"number": 2953, "title": "Image generation not working — generates code instead", "author": "aru08ldh-blip", "labels": ["bug"], "comments": 2, "summary": "图片生成功能失效，AI 返回代码而非图片，影响设计工具核心能力", "url": "https://github.com/nexu-io/open-design/issues/2953"},
+    {"number": 2913, "title": "Artifact generation chat output can leak raw HTML source into the conversation", "author": "AmyShang-alt", "labels": ["bug"], "comments": 6, "summary": "Artifact 生成时聊天面板可能泄露原始 HTML 源码，影响对话体验和安全性", "url": "https://github.com/nexu-io/open-design/issues/2913"},
+    {"number": 2950, "title": "Fix project-folder linking in chat", "author": "DeloBelo123", "labels": ["enhancement", "feature", "needs-product-direction"], "comments": 3, "summary": "项目文件夹链接功能损坏，AI 无法读取用户项目目录结构进行设计", "url": "https://github.com/nexu-io/open-design/issues/2950"},
+    {"number": 2011, "title": "Codex adapter needs configurable sandbox/approval mode for Playwright Chromium on macOS", "author": "xAsh-Ai", "labels": ["type/enhancement"], "comments": 3, "summary": "macOS 上 Codex 适配器的 Playwright/Chromium PDF 生成在默认沙箱中失败，需配置化", "url": "https://github.com/nexu-io/open-design/issues/2011"},
+    {"number": 1106, "title": "BYOK Connect but no tool access", "author": "qwertyaya", "labels": ["bug", "priority:p1", "looper:worker-ready"], "comments": 5, "summary": "BYOK 模式连接成功但无法使用工具，P1 级 Bug 影响自定义模型用户", "url": "https://github.com/nexu-io/open-design/issues/1106"},
+    {"number": 479, "title": "Can we hook up to other image or video generators", "author": "trevorius", "labels": ["question", "looper:worker-ready"], "comments": 15, "summary": "社区热议：希望支持接入其他图片/视频生成器（GPT Image 2、Seedance 2.0 之外），15 条评论", "url": "https://github.com/nexu-io/open-design/issues/479"},
+    {"number": 2489, "title": "Usability - Importing design system confusion", "author": "detrio", "labels": ["bug", "enhancement", "help wanted", "priority:p2"], "comments": 4, "summary": "设计系统导入语言混乱：design.md、skills、plugins 等概念界限不清，影响用户体验", "url": "https://github.com/nexu-io/open-design/issues/2489"},
+    {"number": 1862, "title": "Unable to import a zip file into a new project", "author": "tritecko", "labels": ["bug", "enhancement", "priority:p1"], "comments": 11, "summary": "无法通过导入 ZIP 文件创建新项目，P1 级 Bug 影响 Claude Design 迁移用户", "url": "https://github.com/nexu-io/open-design/issues/1862"}
   ],
   "trends": {
-    "direction": "插件引擎 v0.8.0 重构完成 + Windows 稳定性修复 + 社区特性提案激增",
-    "affected_modules": ["plugin-engine", "windows-packaging", "design-systems", "ppt-export", "agent-cli-integration"],
-    "risks": ["Windows 安装版多个 CLI Agent 兼容性问题", "对话切换 Bug 影响用户体验", "PPTX 导出质量不达预期"],
-    "actions": ["关注 priority:p1 标签的 Bug 修复进度", "评估 Creative Memory System 提案对设计工作流的影响", "测试 Windows 版 Claude Code/Codex 稳定性"],
-    "next_week": "v0.8.0 发布后的 Bug 修复密集期，预计会有 patch 版本。Windows 打包版优化是重点方向。"
-  }
+    "direction": "v0.8.0 发布后进入大规模重构与 Bug 修复并行阶段，Web 层 UI 原语提取（PR#2879）和聊天渲染整合（PR#2906）是当前主战场，同时 Daemon 层适配器差距正在快速补齐。",
+    "affected_modules": ["web-ui-primitives", "chat-renderer", "daemon-pi-adapter", "ci-pipeline", "markdown-gfm-renderer", "agent-failure-ux", "mobile-frame"],
+    "risks": ["预览重置 Bug（#2143 P1）影响核心编辑工作流，14 条评论表明用户痛点强烈", "图片生成功能失效（#2953）触及设计工具核心卖点", "BYOK 工具访问 Bug（#1106 P1）影响自定义模型用户群体", "多个 XL/XXL 级 PR 并行开发可能引入回归风险"],
+    "actions": ["重点跟踪 P1 Bug 修复进展（#2143、#1106、#1862），优先级最高", "关注 Web UI 原语重构（PR#2879）合并后的回归测试结果", "评估聊天评论预览整合（PR#2906）对现有对话流程的影响", "观察 Daemon PI 适配器补齐后的整体稳定性变化"],
+    "next_week": "预计 v0.8.1 patch 版本发布，集中修复预览重置和图片生成两个核心 Bug。Web 层重构 PR 若顺利合并，将显著改善后续开发效率。社区对多模态生成器扩展的呼声（#479, 15 条评论）可能促使产品方向调整。"
+  },
+  "cached_at": "2026-05-26T12:00:00+08:00"
 }
