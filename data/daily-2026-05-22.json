@@ -1,13 +1,15 @@
 {
   "date": "2026-05-22",
-  "title": "2026-05-22 AI 信息差日报",
-  "summary": "DeepSeek V4-Pro 永久降价成为本周最大价格事件；Anthropic Agent SDK 计费拆分引发社区广泛讨论；Qwen 3.7-Max 展示 35 小时自主 Agent 运行。",
-  "body": "5 月 22 日的核心事件集中在定价和生态层面：DeepSeek 将此前 75% 的临时折扣转为永久定价，在成本端持续施压。Anthropic 的 Agent SDK 计费拆分公告虽然在 5 月 14 日发布，但社区讨论在本周达到高峰——6 月 15 日的生效日期正在逼近。同时阿里在 Apsara 峰会上展示了 Qwen 3.7-Max 的 1M 上下文和 35 小时自主运行能力，虽然目前只是 Preview 阶段。",
-  "judgement": "本周的关键词是成本。如果你重度使用 Claude Code 做自动化，现在就需要评估迁移方案。DeepSeek V4-Pro 是当前性价比最高的替代选择，Cursor Composer 2.5 是编程场景的新选项。",
-  "tags": ["DeepSeek", "Anthropic", "Qwen 3.7", "Pricing"],
+  "title": "2026-05-22 AI信息差日报",
+  "summary": "本周是'AI Agent元年'的真正落地周：Google I/O 全面转向Agent生态、阿里Qwen3.7-Max主打Agent能力、Cohere Command A+定位企业Agent。国产模型首次在Agent维度接近国际顶流。",
+  "body": "本周期（5/19-5/22）最核心的变化是 AI 从'聊天模型'切换到'干活模型'。Google I/O 2026 发布了 Gemini 3.5 Flash（Agent-first设计）、Gemini Omni（视频世界模型）、Gemini Spark（全天候Agent），将 Gemini 从聊天助手升级为覆盖全栈的 Agent 平台。阿里 Qwen3.7-Max 展示了 35 小时自主编写芯片软件的完整流程，Arena 排名国产第一。Cohere Command A+ 以 Apache 2.0 发布 218B MoE 企业Agent模型，单次推理仅激活 25B 参数。Claude Skills 生态正形成'名人 IP 效应'。",
+  "judgement": "本周最重要的认知转变：AI Agent 不再是 demo，而是可部署、可测试、可付费的产品形态。三个动向值得行动：① 如果你在做 AI 应用，现在必须把 Agent 能力纳入路线图；② 国产模型的 Agent 能力在快速追赶，Qwen3.7-Max 的 35 小时自主运行 Demo 是真实的信号；③ 开源 Agent 模型（Cohere Command A+）让中小企业自建 Agent 团队的门槛大幅降低。",
+  "tags": ["Google I/O", "Qwen 3.7", "Cohere", "Agent", "Gemini"],
   "signals": [
-    {"rank": "P0", "title": "DeepSeek V4-Pro 75% 折扣永久化", "desc": "输入 $0.435/M token，输出 $0.87/M token，缓存命中仅 $0.0036/M。比 Claude Opus 4.7 便宜 8-10 倍。", "tags": ["Pricing", "DeepSeek"], "source": "https://api-docs.deepseek.com/quick_start/pricing"},
-    {"rank": "P0", "title": "Anthropic Agent SDK 计费拆分倒计时", "desc": "6 月 15 日生效：Pro 用户 Agent SDK 额度仅 $20/月，claude -p 和第三方框架调用从独立额度池扣费。", "tags": ["Policy", "Anthropic"], "source": "https://codersera.com/blog/anthropic-june-2026-billing-change-claude-code/"},
-    {"rank": "P1", "title": "Qwen 3.7-Max-Preview 展示 35h 自主 Agent 运行", "desc": "1M token 上下文窗口，LM Arena 编程 #10/数学 #7，演示中完成 1000+ 次工具调用。但仍是 Preview 阶段。", "tags": ["Model", "Qwen", "Agent"], "source": "https://www.marktechpost.com/2026/05/21/qwen-introduces-qwen3-7-max/"}
+    {"rank": "P0", "title": "阿里发布 Qwen3.7-Max：国产 Agent 旗舰模型", "desc": "Arena国产排名第一，35小时自主完成芯片软件开发。1M token上下文，LM Arena编程#10/数学#7。国产模型在长程Agent任务上首次接近国际顶流。", "tags": ["Model", "Agent", "Qwen"], "source": "https://news.qq.com/rain/a/20260520A04TWS00"},
+    {"rank": "P0", "title": "Google I/O 2026 全系列发布：Agent 全面落地", "desc": "Gemini 3.5 Flash(Agent-first)、Gemini Omni(视频世界模型)、Gemini Spark(全天候Agent)、Antigravity 2.0(多Agent开发平台)。Google将Gemini升级为覆盖搜索/Android/开发/视频的全栈Agent平台。", "tags": ["Google", "Agent", "Multimodal"], "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"},
+    {"rank": "P0", "title": "Cohere Command A+ 开源发布：218B MoE 企业Agent模型", "desc": "Apache 2.0协议发布，单次推理仅激活25B参数，只需2张H100即可运行。主打企业私有部署和数据主权，为中小企业自建Agent扫清算力障碍。", "tags": ["Model", "Agent", "Open Source"], "source": "https://cohere.com/blog/command-a-plus"},
+    {"rank": "P1", "title": "Claude Skills 生态爆发：名人IP效应形成", "desc": "Karpathy、Matt Pocock、Addy Osmani 等头部开发者将工作流打包为Skills开源，一个月新增数十万stars。Skills正从配置项变成知识资产。", "tags": ["Claude", "Skills", "Ecosystem"], "source": "https://github.com/anthropics/claude-code"},
+    {"rank": "P1", "title": "AI视频工具进入多模态编辑新阶段", "desc": "Google Gemini Omni(世界模型理解)、ByteDance LANCE(统一多模态)、HeyGen hyperframes(HTML即视频源码)三项目从不同角度推进AI视频能力。", "tags": ["Video", "Multimodal"], "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/"}
   ]
 }
