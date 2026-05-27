@@ -1,0 +1,152 @@
+{
+  "date": "2026-05-27",
+  "title": "2026-05-27 AI信息差日报",
+  "coverage": "覆盖窗口：5/25 ~ 5/27",
+  "sources": "信息源：Anthropic · GitHub · TechCrunch · PromptArmor · Google AI · Product Hunt · The Next Web · Hacker News · 掘金 · 博客园",
+  "conclusions": [
+    "ClickUp 用 3000 个 AI Agent 替换 22% 员工，SaaS 行业首个规模化「AI 替代人」案例，AI Agent 从辅助工具正式迈入劳动力替代阶段",
+    "Microsoft Copilot Cowork 曝出严重间接提示注入漏洞，攻击者可窃取 M365 租户文件——Agent 自动审批机制的安全隐患首次在巨头产品中被实证",
+    "DeepSeek V4 Pro 将限时降价改为永久降价 75%，API 价格降至同级别最低，对 OpenAI/Anthropic 定价体系形成直接压力",
+    "Anthropic 密集发布官方插件生态：knowledge-work-plugins + claude-plugins-official 目录 + Claude Code 远程 System Prompt，企业级 Agent 管控体系成型",
+    "Runway Agent 和 Google AI Studio 分别实现对话式视频制作和自然语言生成 Android 应用，AI 创作门槛继续下探"
+  ],
+  "summary": "ClickUp 用 3000 AI Agent 替换 22% 员工、Microsoft Copilot Cowork 曝严重安全漏洞、DeepSeek V4 Pro 永久降价 75%",
+  "body": "今日情报集中于三个维度：AI Agent 劳动力替代（ClickUp 大规模裁员换 Agent）、AI 安全风险实证化（Copilot Cowork 提示注入漏洞、Claude Code 沙箱绕过）、以及生态价格战（DeepSeek 永久降价 + Anthropic 官方插件体系成型）。相比昨日 Google I/O 信息轰炸，今日更凸显发布会的涟漪效应与各家的实际落地动作。",
+  "judgement": "今日最大信号不是单一产品发布，而是三个趋势同时加速：Agent 从辅助跨入替代、Agent 安全问题被实证化、价格战进入新阶段。Anthropic 三天三连发的生态策略意图明显——要在 Claude Code 周围建起护城河，策略堪比苹果 App Store。",
+  "tags": ["AI Agent", "ClickUp", "Microsoft Copilot", "DeepSeek", "Anthropic", "安全漏洞", "Claude Code"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "ClickUp 用 3000 AI Agent 替换 22% 员工",
+      "summary": "SaaS 公司首次规模化用 AI Agent 替代人类员工，裁减 22% 后由 3000 个 Agent 接管工作流",
+      "why": "AI Agent 从「增效工具」正式跨越到「劳动力替代」阶段。这是行业转折点——不是理论，而是真实发生的大规模案例。",
+      "action_fact": "关注 ClickUp 的 Agent 架构设计和技术栈选型",
+      "action_judge": "立即审视你的工作流中哪些环节可用 Agent 替代，在别人动手前先优化自己",
+      "tags": ["AI Agent", "SaaS", "劳动力替代", "ClickUp"],
+      "sources": ["https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/", "https://aitoolly.com/ai-news/article/2026-05-26-clickup-mass-layoffs-and-the-shift-to-ai-agents-analyzing-the-future-of-work"]
+    },
+    {
+      "rank": "P0",
+      "title": "Microsoft Copilot Cowork 间接提示注入漏洞",
+      "summary": "攻击者通过中毒 Skill 实现间接提示注入，利用不安全自动审批窃取 M365 租户文件",
+      "why": "对 Claude Opus 4.7 等先进模型有高成功率，暴露企业级 Agent 委托权限设计的系统性风险——「自动审批」机制是安全黑洞。",
+      "action_fact": "企业应立即审计 Copilot Cowork 的权限范围和自动审批设置",
+      "action_judge": "所有 Agent 工具的「自动审批」功能都应重新评估风险",
+      "tags": ["安全漏洞", "Microsoft", "Copilot", "提示注入", "Agent安全"],
+      "sources": ["https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files", "https://news.qq.com/rain/a/20260526A069V600"]
+    },
+    {
+      "rank": "P0",
+      "title": "DeepSeek V4 Pro 永久降价 75%",
+      "summary": "此前限时优惠转为永久生效：输入 $0.435/M、输出 $0.87/M tokens",
+      "why": "同级别最强推理模型价格降至最低档，对 OpenAI o3/Claude Opus 定价形成直接压力，对整个 AI API 生态是价格锚点重置。",
+      "action_fact": "如果你在用 DeepSeek API，成本直接降 75%",
+      "action_judge": "可在 Agent 工作流中把 DeepSeek V4 Pro 设为复杂推理任务的默认模型",
+      "tags": ["DeepSeek", "价格战", "API定价", "V4 Pro"],
+      "sources": ["https://thenextweb.com/news/deepseek-v4-pro-75-percent-price-cut-permanent"]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic 官方发布 knowledge-work-plugins",
+      "summary": "面向知识工作者的官方 Claude 插件集合，覆盖文档处理、信息提取、数据分析等场景",
+      "why": "Anthropic 将 Claude 从「编程助手」扩展到「知识工作者」，给插件生态定了标准范式。",
+      "action_fact": "直接 clone 仓库查看插件架构，复制模板开发自己的知识工作插件",
+      "action_judge": "知识工作者（非开发者）也能用 Claude 插件了，门槛大降",
+      "tags": ["Anthropic", "Claude", "插件", "知识工作"],
+      "sources": ["https://github.com/anthropics/knowledge-work-plugins", "https://txtmix.com/posts/tech/anthropics-knowledge-work-plugins-guide/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google AI Studio：自然语言生成 Android 应用",
+      "summary": "自然语言描述功能需求直接生成可运行的 Android 项目，含 UI、网络请求、数据绑定",
+      "why": "Vibe Coding 正式进入移动端。非开发者描述一句需求就能跑出一个完整 App，移动开发门槛被拉到地板。",
+      "action_fact": "打开 Google AI Studio，用自然语言描述一个 App 试试",
+      "action_judge": "适合原型验证和 MVP 快速上线，不适合复杂商用 App",
+      "tags": ["Google", "AI Studio", "Android", "Vibe Coding"],
+      "sources": ["https://juejin.cn/post/7642258996859502618"]
+    },
+    {
+      "rank": "P1",
+      "title": "Runway Agent：对话式全流程视频制作",
+      "summary": "通过自然语言对话完成视频生成、剪辑、音效设计全流程",
+      "why": "AI 视频工具从「单点功能」进化到「全流程 Agent」，专业视频剪辑技能正在被自然语言替代。",
+      "action_fact": "去 Runway 试用 Agent 功能，输入视频需求对比传统剪辑效率",
+      "action_judge": "自媒体运营和营销团队的生产效率将有数量级提升",
+      "tags": ["Runway", "视频生成", "AI Agent", "内容创作"],
+      "sources": ["https://www.producthunt.com/products/runway-agent"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code 远程 System Prompt 注入",
+      "summary": "企业管理员可远程集中控制 Claude Code 行为规范，无需修改本地配置",
+      "why": "AI 编码工具从「个人工具」升级为「企业管控平台」，对使用 Claude Code 的团队意味着统一的代码规范和安全策略成为可能。",
+      "action_fact": "企业 Claude Code 用户联系 Anthropic 了解远程 System Prompt 配置",
+      "action_judge": "这个功能可能意味着 Claude Code Enterprise 版本即将上线",
+      "tags": ["Claude Code", "企业管理", "System Prompt", "Anthropic"],
+      "sources": ["https://news.ycombinator.com/item?id=48259288"]
+    },
+    {
+      "rank": "P1",
+      "title": "CodeGraph：本地代码知识图谱降低 Token 消耗",
+      "summary": "预索引代码知识图谱，兼容 Claude Code/Codex/Cursor 等主流 AI 编程助手",
+      "why": "解决 AI 编程工具的最大痛点——上下文消耗过多 Token。本地运行 + 隐私保护 + 降低 API 费用。",
+      "action_fact": "clone 仓库，对当前项目跑一次索引，看 Token 消耗变化",
+      "action_judge": "大型项目（10万+行代码）收益最明显，小项目意义不大",
+      "tags": ["CodeGraph", "代码知识图谱", "Token优化", "开源"],
+      "sources": ["https://github.com/colbymchenry/codegraph"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Skill File 规范：Agent 技能标准化",
+      "summary": "Google I/O 提出的标准化 Agent 技能描述格式，可版本管理、共享、复用",
+      "why": "如果被行业采纳，Agent 技能将从「各写各的 prompt」变成「标准化可互换模块」，是 Agent 生态成熟的必要条件。",
+      "action_fact": "查看 Skill File 规范文档，理解其与 Claude Skills 的差异",
+      "action_judge": "这个规范若普及，ROLES.md/SOUL.md 这类人设文件将有标准格式",
+      "tags": ["Google", "Agent标准", "Skill File", "I/O 2026"],
+      "sources": ["https://dev.to/sreejit_/everyones-talking-about-gemini-35-flash-the-real-story-at-google-io-2026-was-a-skill-file-4f3c"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code SOCKS5 沙箱绕过漏洞（更新）",
+      "summary": "安全研究员关傲男披露第二个完整沙箱绕过漏洞，5.5 个月未修复",
+      "why": "这是 5 月 20 日就暴露的问题但仍在发酵。Claude Code 用户数据安全存在证据确凿的风险。",
+      "action_fact": "如果使用 Claude Code，检查版本是否为最新补丁",
+      "action_judge": "在沙箱安全彻底修复前，不要在 Claude Code 中访问敏感数据",
+      "tags": ["Claude Code", "安全漏洞", "沙箱", "SOCKS5"],
+      "sources": ["https://tech.ifeng.com/c/8tNinyflk5w", "https://news.qq.com/rain/a/20260524A02J9D00"]
+    }
+  ],
+  "tools": [
+    {"name": "CodeGraph", "type": "AI编程辅助", "highlight": "本地预索引代码知识图谱，大幅降低 Token 消耗", "audience": "大型项目开发者", "action": "clone 后对项目跑索引", "url": "https://github.com/colbymchenry/codegraph"},
+    {"name": "anthropics/knowledge-work-plugins", "type": "Claude 插件", "highlight": "官方知识工作插件模板", "audience": "知识工作者", "action": "clone 查看插件架构", "url": "https://github.com/anthropics/knowledge-work-plugins"},
+    {"name": "Runway Agent", "type": "AI视频制作", "highlight": "对话式全流程视频制作", "audience": "内容创作者", "action": "访问 Runway 试用", "url": "https://www.producthunt.com/products/runway-agent"},
+    {"name": "Google AI Studio (Android)", "type": "AI应用生成", "highlight": "自然语言→原生 Android 应用", "audience": "产品经理/原型开发者", "action": "打开 AI Studio 描述需求", "url": "https://aistudio.google.com"},
+    {"name": "andrej-karpathy-skills", "type": "Claude 提示优化", "highlight": "Karpathy 调优，+80.8K stars/月", "audience": "Claude Code 用户", "action": "复制 CLAUDE.md 到项目", "url": "https://github.com/multica-ai/andrej-karpathy-skills"},
+    {"name": "addyosmani/agent-skills", "type": "AI 编码技能", "highlight": "Google Chrome 团队生产级技能", "audience": "前端/全栈工程师", "action": "查看技能架构", "url": "https://github.com/addyosmani/agent-skills"},
+    {"name": "Free Claude Code", "type": "Claude Code 集成", "highlight": "终端/VSCode/Discord 多平台+语音", "audience": "多平台开发者", "action": "安装对应平台扩展", "url": "https://github.com/Alishahryar1/free-claude-code"}
+  ],
+  "video_topics": [
+    {"title": "ClickUp 用 3000 AI Agent 开除了 22% 员工，你的工作安全吗？", "hook": "首个规模化 AI 替代人真实案例", "angle": "事实复盘+分析：裁了什么岗、Agent 做了什么、对白领意味着什么", "materials": "ClickUp 公告截图、TechCrunch 报道截图", "difficulty": "低"},
+    {"title": "微软 Copilot Cowork 能泄露你公司的全部文件！看完立刻关掉", "hook": "微软产品安全漏洞+企业数据泄露", "angle": "漏洞原理图解→影响范围→防护措施", "materials": "PromptArmor 报告截图、攻击流程动图", "difficulty": "中"},
+    {"title": "DeepSeek V4 Pro 永久降价75%，你可能白花钱了", "hook": "价格对比冲击+省钱实用贴", "angle": "价格对比表格→切换指南→能省多少", "materials": "官网价格截图、费用计算表", "difficulty": "低"},
+    {"title": "Google AI Studio：说句话就能生成 App？我实测给你看", "hook": "一句话生成 App 的 wow 效果", "angle": "现场演示全流程，指出极限和不足", "materials": "AI Studio 操作录屏、App 运行效果", "difficulty": "低"},
+    {"title": "Anthropic 3天连发3个重磅：Claude 插件生态正式成型", "hook": "Anthropic 生态战略解读", "angle": "时间线梳理+插件架构解读+实战演示", "materials": "GitHub 截图、插件搭建录屏", "difficulty": "中"}
+  ],
+  "noise_items": [
+    {"item": "Claude Opus 4.8 / Sonnet 4.8 / Mythos 1 曝光传言", "reason": "未正式发布，来源为 Google Vertex AI 后台泄漏，无可验证的官方信息"},
+    {"item": "GPT-5.5 / GPT-5.6 发布传言", "reason": "连续多日出现在聚合器中，无新信息，纯转发旧闻"},
+    {"item": "FTC 处罚 AI 手机监听虚假营销案", "reason": "Cox Media 声称可用 AI 监听手机但实际不具该能力——营销诈骗非 AI 技术新闻"},
+    {"item": "「2026 AI 编码工具终极对比」类列表文章", "reason": "纯列表文，无一手信息、无实测数据、无链接，典型 SEO 内容"},
+    {"item": "AI 编程书籍销量下滑 / 实体技术书籍衰落", "reason": "有趣的行业趋势但不属于情报范畴，无法产出可行动建议"},
+    {"item": "Scailium AI 初创公司破产出售", "reason": "小型以色列公司破产，不具行业代表性，无技术价值"},
+    {"item": "挪威国家图书馆 2PB 华为闪存部署", "reason": "属于基础设施采购新闻，与 AI 情报主体关联弱"}
+  ],
+  "tracking_items": [
+    {"item": "ClickUp 裁员后续", "reason": "行业内首个大规模 AI 替代人的案例，预计会有更多公司跟进或回应"},
+    {"item": "Microsoft Copilot Cowork 漏洞修复进展", "reason": "企业级 AI Agent 安全漏洞，微软的响应速度极具参考价值"},
+    {"item": "Claude Code 沙箱安全问题后续", "reason": "5.5 个月未修复的安全漏洞，关注 Anthropic 正式回应和补丁"},
+    {"item": "Anthropic 生态体系扩展", "reason": "三天三连发，密切关注后续动作"},
+    {"item": "Apple WWDC 2026 AI 功能", "reason": "Gen AI 专题网站已上线，WWDC 预计发布重大 AI 更新"},
+    {"item": "OpenDesign / HyperFrames 更新", "reason": "已将 HyperFrames 作为一等视频模型接入，值得关注新版本"}
+  ]
+}

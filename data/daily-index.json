@@ -1,4 +1,5 @@
 [
+  {"date": "2026-05-27", "label": "5 月 27 日 (周三)", "count": "3P0 + 7P1", "tags": "ClickUp · Copilot漏洞 · DeepSeek · Anthropic", "summary": "ClickUp用AI Agent替代22%员工、Copilot Cowork文件泄露漏洞、DeepSeek永久降价75%"},
   {"date": "2026-05-25", "label": "5 月 25 日 (周一)", "count": "3P0 + 5P1", "tags": "Open Design · Cursor · Gemini 3.5", "summary": "Open Design 开源平替、Cursor 自研编程模型、Gemini 3.5 Flash Agent-first"},
   {"date": "2026-05-24", "label": "5 月 24 日 (周六)", "count": "4P0 + 2P1", "tags": "Claude Code · Gemini · 供应链安全", "summary": "Claude Code日更迭代、Gemini Spark/Omni发布、TanStack供应链攻击"},
   {"date": "2026-05-23", "label": "5 月 23 日 (周六)", "count": "4P0 + 1P1", "tags": "Codex · Project Glasswing · Claude Code", "summary": "OpenAI Codex三连发、Anthropic Glasswing启动、DeepSeek永久降价"},
