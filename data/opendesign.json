@@ -2,158 +2,212 @@
   "repo": {
     "name": "nexu-io/open-design",
     "description": "Local-first, open-source Claude Design alternative",
-    "stars": 53097,
-    "forks": 6024,
-    "open_issues": 362,
+    "stars": 55538,
+    "forks": 6281,
+    "open_issues": 368,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-05-27T03:59:47Z",
+    "updated": "2026-05-30T04:11:19Z",
     "latest_release": {
       "version": "open-design-v0.8.0",
       "date": "2026-05-22",
       "title": "Open Design 0.8.0 — Plugin Engine + Headless + #DeFigma",
-      "summary": "305 PRs · 75 contributors · 7 days。插件引擎重建、Headless by default、149 设计系统、19 语言支持、Windows/macOS 自动更新。"
+      "summary": "305 PRs · 75 contributors · 7 天。插件引擎重建、Headless by default、149 设计系统、19 语言支持、Windows/macOS 自动更新。v0.8.0 发布第八天，Stars 已突破 55,000。"
     }
   },
   "recent_prs": [
     {
-      "number": 3010, "title": "feat(landing-page): localize plugins library across 18 locales",
-      "state": "open", "author": "522700967-wq", "labels": ["size/XXL", "risk/medium", "type/feature"],
-      "impact": "将插件库页面 /plugins/ 本地化为 18 种语言。之前 PR #2926/#2958 上线插件库 Hub 后 UI 仅有英文，/zh/plugins/ 等本地化路径仍显示英文 marketplace 占位符。本 PR 覆盖 18 个 locale 的 i18n 翻译链，包括详情页和搜索结果的多语言渲染，是 i18n 完整度的关键里程碑。",
-      "url": "https://github.com/nexu-io/open-design/pull/3010"
+      "number": 3303,
+      "title": "fix(#3247): Detect, terminate, and warn on fabricated role markers across all agent paths",
+      "state": "merged",
+      "author": "JasonBroderick",
+      "labels": ["size/XL", "risk/high", "type/bugfix"],
+      "impact": "关键安全修复：检测并阻断模型输出中伪造的角色标记（## user / ## assistant），防止 Claude 在多轮对话中自行伪造用户指令并执行未授权操作。在 claude-sonnet-4-6 的长对话中有约 20% 污染率，修复后流截断、进程 SIGTERM、UI 警告三层防御同时生效。",
+      "url": "https://github.com/nexu-io/open-design/pull/3303"
     },
     {
-      "number": 3068, "title": "Refine edit target selection for grouped elements",
-      "state": "open", "author": "zoeforfun", "labels": ["size/XL", "risk/medium", "type/bugfix"],
-      "impact": "修复 Studio 编辑模式中分组元素的点击目标选择问题。当前分组预览元素可能吞掉较小子元素的 source-mapped 选中，导致编辑面板描述父级分组而非用户实际点击的 label/button/span。修复后编辑面板精确显示被点击子元素信息。",
-      "url": "https://github.com/nexu-io/open-design/pull/3068"
+      "number": 3313,
+      "title": "fix(web): preserve preview scroll across tools",
+      "state": "merged",
+      "author": "CtriXin",
+      "labels": ["size/M", "risk/high", "type/bugfix"],
+      "impact": "修复预览滚动位置跨工具切换时重置的问题。用户滚动到页面深处后切换 Draw/Comment 工具，预览会跳回顶部。修复后通过 odPreviewBridge=scroll 捕获并恢复滚动位置，与 #2143 预览重置问题同属核心编辑体验改善。",
+      "url": "https://github.com/nexu-io/open-design/pull/3313"
     },
     {
-      "number": 2022, "title": "feat(daemon): add CodeBuddy Code as independent CLI agent",
-      "state": "open", "author": "whinc", "labels": ["size/XL", "risk/high", "type/feature"],
-      "impact": "将 CodeBuddy Code 注册为独立 CLI Agent。CodeBuddy Code 兼容 Claude Code 的 stream-json 协议但此前未被检测到。用户安装后在 Agent 设置中自动出现「CodeBuddy Code」选项。对神州数码用户（开发主力工具为 CodeBuddy）意义重大——可直接用 CodeBuddy Code 驱动 Open Design 生成。",
-      "url": "https://github.com/nexu-io/open-design/pull/2022"
+      "number": 3315,
+      "title": "feat(media): expand image provider configuration",
+      "state": "open",
+      "author": "CtriXin",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "扩展媒体提供商配置能力：支持 MiniMax TokenPlan 图片/音乐、Google Vertex Imagen（ADC 认证）、多个 OpenAI 兼容自定义端点。选择器自动隐藏未配置的提供商，避免用户选到无法使用的模型。直接解决 v0.8.0 版本图片生成相关的配置混乱问题。",
+      "url": "https://github.com/nexu-io/open-design/pull/3315"
     },
     {
-      "number": 2929, "title": "fix(web): prune draft tokens when the plugin chip strip clears (#2881)",
-      "state": "open", "author": "estelledc", "labels": ["size/XXL", "risk/medium", "type/bugfix"],
-      "impact": "修复 @提及 残留 Bug：在 ChatComposer 中选择并移除插件 chip 后，文本区中的 @plugin-name token 未被同步清除，导致残留的提及渲染为「未知」样式引发布局抖动。修复方案：让 PluginsSection 的 onCleared 回调传递 ContextItem[]，ChatComposer 监听后同步修剪草稿 token。",
-      "url": "https://github.com/nexu-io/open-design/pull/2929"
+      "number": 3334,
+      "title": "fix(daemon): dedupe Claude stream wrappers",
+      "state": "open",
+      "author": "RyanCheng77",
+      "labels": ["size/M", "risk/high", "type/bugfix"],
+      "impact": "修复 Claude 流式输出重复问题（Issue #3325）：新版 Claude Code 流式传输 thinking_delta/text_delta 后发出无 message.id 的最终 assistant 包装，导致思考过程和文本内容在设计系统生成时重复显示。",
+      "url": "https://github.com/nexu-io/open-design/pull/3334"
     },
     {
-      "number": 2355, "title": "feat(runtimes): register AMR (vela) as an ACP stdio agent",
-      "state": "open", "author": "lefarcen", "labels": ["size/XXL", "risk/high", "type/feature"],
-      "impact": "将 AMR(vela CLI) 注册为标准 ACP stdio Agent。之前使用自定义 json-event-stream 解析器 + 8 个 server.ts 分支硬编码，现改为走 ACP JSON-RPC over stdio 标准传输，删除定制解析和认证路径。vela 安装后 Agent 选择器自动出现「AMR (vela)」选项，与 CodeBuddy Code 并列扩展多 Agent 生态。",
-      "url": "https://github.com/nexu-io/open-design/pull/2355"
+      "number": 3308,
+      "title": "fix(media): hide OpenAI OAuth-only image credentials",
+      "state": "open",
+      "author": "CtriXin",
+      "labels": ["size/L", "risk/high", "type/bugfix"],
+      "impact": "修复媒体生成凭证识别错误：OpenAI OAuth token（来自 Hermes/Codex 登录）不应被当作图片 API 凭证，导致 OpenAI 图片模型在未配置 API Key 时仍显示为可用状态。修复后图片选择器仅展示真正配置好的提供商。",
+      "url": "https://github.com/nexu-io/open-design/pull/3308"
     },
     {
-      "number": 2620, "title": "feat(preview): url-load bridges — scroll restore, Cmd/Ctrl-wheel zoom, Comment/Inspect sub-page keep",
-      "state": "open", "author": "leessju", "labels": ["size/L", "risk/high", "type/feature"],
-      "impact": "修复多页面原型预览体验三重痛点：(1) Comment/Inspect 模式下切换子页面 srcDoc 重建导致回退到首页（与 #2143 同根源）；(2) 页面跳转后滚动位置重置到 0,0；(3) 缺少缩放控制。修复后 Comment/Inspect 保持当前子页面状态，支持滚动恢复和 Cmd/Ctrl+滚轮缩放，直接改善核心编辑工作流体验。",
-      "url": "https://github.com/nexu-io/open-design/pull/2620"
+      "number": 3204,
+      "title": "fix(web): remove design file mentions with chips",
+      "state": "open",
+      "author": "mturac",
+      "labels": ["size/M", "risk/medium", "type/bugfix"],
+      "impact": "修复 ChatComposer 中设计文件引用的状态同步问题（#3200）：移除 staged 设计文件 chip 后，输入框中的 @designs/... inline token 未同步删除，导致 composer 展示两种不一致状态。",
+      "url": "https://github.com/nexu-io/open-design/pull/3204"
     },
     {
-      "number": 2898, "title": "fix: clear pendingPrompt when navigating back to Home",
-      "state": "open", "author": "xxiaoxiong", "labels": ["size/XS", "risk/medium", "type/bugfix"],
-      "impact": "修复新建会话继承旧会话 prompt 的隔离问题 (#2878)。handleBack 仅导航到首页但未清空 pendingPrompt，导致新项目创建时复用旧草稿。修复后在 handleBack 中同步清除 pendingPrompt，确保新会话从干净状态开始。",
-      "url": "https://github.com/nexu-io/open-design/pull/2898"
+      "number": 3309,
+      "title": "fix(web): theme home hero select menu",
+      "state": "merged",
+      "author": "CtriXin",
+      "labels": ["size/S", "risk/low", "type/bugfix"],
+      "impact": "修复深色主题下 HomeHero 媒体模型选择器下拉菜单背景硬编码为 #fff 的问题，导致深色模式下选项文字低对比度不可读。修复后改用 CSS token 变量，单色 logo 在深色面板上自动反色显示。",
+      "url": "https://github.com/nexu-io/open-design/pull/3309"
     },
     {
-      "number": 3059, "title": "docs: add W4 runtime validation planning artifacts",
-      "state": "open", "author": "bestvcboy", "labels": ["size/XL", "risk/medium", "type/docs"],
-      "impact": "新增 W4 运行时验证基础规划文档和设计规格。将本地 runtime validation 设计/规格制品合并到上游 main，为后续多 Agent 运行时（CodeBuddy Code、AMR、DeepSeek TUI、Codex）的兼容性验证奠定工程化基础。",
-      "url": "https://github.com/nexu-io/open-design/pull/3059"
+      "number": 1704,
+      "title": "feat(daemon): add network security, API key auth, and self-hosting guide",
+      "state": "open",
+      "author": "epicsagas",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "为 daemon 添加完整的网络安全层：IP 白名单、API Key 认证（非回环地址自动启用）、Settings → Network UI、`od auth key` CLI 子命令、跨平台自托管指南（LAN/Tailscale/Cloudflare Tunnel/PM2）。支持团队局域网共享和远程 MCP 接入，共 24 条评论为目前讨论最活跃的功能 PR。",
+      "url": "https://github.com/nexu-io/open-design/pull/1704"
     }
   ],
   "recent_issues": [
     {
-      "number": 2955, "title": "Fix broken image rendering for some official projects on the Home page",
-      "author": "AmyShang-alt", "labels": ["bug", "help wanted"], "comments": 7,
-      "summary": "首页 Community/official project 区域的某些项目卡片预览图显示异常（裂图或文本叠加覆盖），而非正确的封面缩略图。影响首页官方项目的视觉可信度，7 条评论显示多位用户遇到了相同问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/2955"
+      "number": 982,
+      "title": "Improve agent failure UX: surface structured errors (quota, auth, rate limit) instead of raw stderr tails",
+      "author": "gabrielvaz",
+      "labels": ["enhancement", "help wanted"],
+      "comments": 11,
+      "summary": "Agent 失败时 UI 仅截取最后 400 字节 stderr 显示，实际错误信息（429 配额、401 认证失败、ENOENT 找不到二进制）被堆栈帧淹没。请求结构化错误分类器，为常见错误类型提供一行用户友好提示 + 折叠的完整 stderr。上次更新在今日，表明社区持续关注。",
+      "url": "https://github.com/nexu-io/open-design/issues/982"
     },
     {
-      "number": 2953, "title": "image generation not working — generates code instead of image",
-      "author": "aru08ldh-blip", "labels": ["bug"], "comments": 20,
-      "summary": "图片生成功能在最新版本中失效——用户要求生成图片时 Open Design 输出代码而非图片。20 条评论为本周最热 Issue，表明这是 v0.8.0 版本中影响范围最广的功能性回退，图片生成是版本核心卖点之一。",
-      "url": "https://github.com/nexu-io/open-design/issues/2953"
+      "number": 3335,
+      "title": "[0.8.0] sayyada — Full app crash on macOS Apple Silicon",
+      "author": "ololu",
+      "labels": ["bug", "preview/v0.8.0"],
+      "comments": 2,
+      "summary": "v0.8.0 在 macOS Apple Silicon 上整个应用崩溃（Scratch 版本）。今日新开，标记为 v0.8.0 preview Bug，信息较少但为最新崩溃报告。",
+      "url": "https://github.com/nexu-io/open-design/issues/3335"
     },
     {
-      "number": 3067, "title": "[0.8.0] DeepSeek-TUI 生成页面时提示词超限 (30,000 token limit)",
-      "author": "YvesWOUS", "labels": ["feature", "preview/v0.8.0"], "comments": 2,
-      "summary": "使用 DeepSeek TUI 生成页面时提示词被硬限制在 30,000 token，用户反馈不清楚为何有此限制，且频繁触发超限错误导致生成中断。期望上限可配置或提升至更实用的范围。",
-      "url": "https://github.com/nexu-io/open-design/issues/3067"
+      "number": 3325,
+      "title": "Duplicated output (repeated 'Thinking' steps and paragraphs) during design system generation",
+      "author": "ramarivera",
+      "labels": ["bug", "help wanted"],
+      "comments": 11,
+      "summary": "设计系统生成流程中，Agent 输出内容重复出现——同段落连续打印两次，'Thinking' 思考步骤也被复制。与今日合入的 PR #3334 直接关联，该 PR 已提交修复方案，修复进度为目前活跃度最高的 Bug 之一（11 条评论）。",
+      "url": "https://github.com/nexu-io/open-design/issues/3325"
     },
     {
-      "number": 3064, "title": "Plugin preview details modal renders under sticky workspace headers",
-      "author": "jaehanbyun", "labels": ["bug", "good first issue", "help wanted"], "comments": 5,
-      "summary": "macOS 桌面应用中，从侧边 Chat @ 插件选择器打开的插件预览/详情弹窗渲染在固定工作区 header 下方（z-index 层级问题），导致部分内容被遮挡不可见。Good First Issue，适合新手修复。",
-      "url": "https://github.com/nexu-io/open-design/issues/3064"
+      "number": 1021,
+      "title": "docs: comprehensive cloud deployment documentation",
+      "author": "lefarcen",
+      "labels": ["documentation", "good first issue"],
+      "comments": 16,
+      "summary": "缺乏完整的云部署文档，需覆盖 Docker、AWS/GCP/Azure/阿里云/腾讯云、Railway/Vercel/Render、Kubernetes Helm Chart 等路径，并提供中英双语版本。16 条评论且今日仍有更新，社区需求旺盛，与 PR #1704 自托管指南形成互补。",
+      "url": "https://github.com/nexu-io/open-design/issues/1021"
     },
     {
-      "number": 2143, "title": "Preview resets to home page when using Tweaks / Draw / Comment / Edit",
-      "author": "USFHunTer", "labels": ["bug", "help wanted", "priority:p1"], "comments": 16,
-      "summary": "HTML 项目编辑工作流中，每次打开 Tweaks/Draw/Edit 给模型指令时，预览窗口重置回首页而非保持当前子页面。16 条评论持续一周以上未解决，是最影响核心编辑体验的 P1 Bug，与 #2620 (url-load bridges) 同根源。",
+      "number": 2186,
+      "title": "docs(README): skills/design-systems counts are stale (31/72 in docs, 64/139 actual on v0.4.1)",
+      "author": "madgegja",
+      "labels": ["good first issue", "help wanted", "type/docs"],
+      "comments": 24,
+      "summary": "README 和徽章中 Skills/Design Systems 数量严重过期（文档标注 31/72，实际 v0.4.1 已是 64/139，v0.8.0 更是 259+/149+）。24 条评论为本 Issue 目前评论量最多，今日仍有活动。Good First Issue，适合新手贡献。",
+      "url": "https://github.com/nexu-io/open-design/issues/2186"
+    },
+    {
+      "number": 3330,
+      "title": "Can we add Azure AI - Media Provider by using OAuth (Entra ID)",
+      "author": "Bad-Fish666",
+      "labels": ["enhancement", "needs-product-direction"],
+      "comments": 2,
+      "summary": "请求支持 Azure AI 媒体提供商通过 OAuth（Entra ID）认证，因为 Azure 租户已禁用 API Key 认证，目前仅 xAI 支持 OAuth 方式。作者表示愿意贡献 PR。",
+      "url": "https://github.com/nexu-io/open-design/issues/3330"
+    },
+    {
+      "number": 3328,
+      "title": "Windows packaged app exits on startup with STATUS_BREAKPOINT unless launched with --no-sandbox",
+      "author": "MayukXT",
+      "labels": ["bug", "help wanted"],
+      "comments": 3,
+      "summary": "v0.8.0 Windows 安装版从开始菜单/搜索栏启动时立即退出（退出码 0x80000003 STATUS_BREAKPOINT），必须手动添加 --no-sandbox 参数才能正常运行。崩溃发生在 daemon/web sidecar 启动之前，属于 Windows 签名/沙箱问题，阻碍普通 Windows 用户使用打包版。",
+      "url": "https://github.com/nexu-io/open-design/issues/3328"
+    },
+    {
+      "number": 2143,
+      "title": "When I try Tweaks / Draw / comment / Edit... the open preview reset to the home page",
+      "author": "USFHunTer",
+      "labels": ["bug", "help wanted", "priority:p1"],
+      "comments": 21,
+      "summary": "HTML 项目中使用 Tweaks/Draw/Edit/Comment 等工具时预览窗口强制重置回首页，无法在当前子页面上进行标注编辑。P1 紧急 Bug，21 条评论持续两周以上，今日 PR #3313（滚动位置保持）已作为部分修复合入，完整修复仍在进行中。",
       "url": "https://github.com/nexu-io/open-design/issues/2143"
     },
     {
-      "number": 2801, "title": "Source install (pnpm tools-dev) is broken end-to-end",
-      "author": "bencium", "labels": ["bug"], "comments": 6,
-      "summary": "README/QUICKSTART 文档中的源码安装路径 `pnpm tools-dev` 全程不可用：od 未加入 PATH、默认端口不正确、缺少前置依赖、文档引用了不存在的 skills。6 条评论显示多个用户在 macOS 干净安装后碰到相同问题，直接阻碍新开发者参与贡献。",
-      "url": "https://github.com/nexu-io/open-design/issues/2801"
+      "number": 3326,
+      "title": "Using local AMR (Vela) CLI causes the process to hang until user provides input",
+      "author": "ramarivera",
+      "labels": ["bug", "help wanted"],
+      "comments": 6,
+      "summary": "使用本地 AMR (Vela) CLI 进行设计任务时，整个生成过程会完全卡住直到用户手动在终端输入内容才能继续。可能是 PTY/stdin 处理问题，影响 AMR 本地 CLI 的可用性，与 PR #2355 AMR Agent 接入直接相关。",
+      "url": "https://github.com/nexu-io/open-design/issues/3326"
     },
     {
-      "number": 3062, "title": "Codex CLI is not detected when Open Design is launched from Windows shell",
-      "author": "Zo-arch", "labels": ["bug", "help wanted"], "comments": 4,
-      "summary": "Windows 用户从开始菜单/快捷方式正常启动 Open Design 时无法检测到已安装的 Codex CLI，Agent 列表显示「No agents detected yet」。用户需手动指定可执行路径才能使用，暴露 Windows PATH 环境继承问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/3062"
-    },
-    {
-      "number": 2959, "title": "Bad request — check the API key and model while using Claude",
-      "author": "ga1205", "labels": ["bug"], "comments": 5,
-      "summary": "macOS 用户使用 Claude Code 本地 CLI 点击「Finalize Design Package」时报 Bad request 错误，提示检查 API key 和 model。5 条评论显示非个例问题，可能涉及 Claude Code API key 格式或模型名称映射兼容性。",
-      "url": "https://github.com/nexu-io/open-design/issues/2959"
-    },
-    {
-      "number": 2978, "title": "Project empty state should provide a direct 'New Project' entry",
-      "author": "AmyShang-alt", "labels": ["good first issue", "help wanted", "type/enhancement"], "comments": 7,
-      "summary": "项目列表空状态页面仅提示用户从左侧边栏创建项目，未提供直接的「New Project」入口按钮。降低新用户首次使用体验，需要额外的导航认知成本。7 条评论表示这是低门槛高价值的 UX 改进点。",
-      "url": "https://github.com/nexu-io/open-design/issues/2978"
-    },
-    {
-      "number": 2917, "title": "Localize the Automation page when the system language is Chinese",
-      "author": "AmyShang-alt", "labels": ["bug", "good first issue", "help wanted"], "comments": 8,
-      "summary": "中文系统语言下 Automation（自动化）页面仍完全显示英文，包括页面级 UI 元素和操作文本。8 条评论显示多语言用户对 i18n 覆盖完整度的持续需求，与 #3010 本地化 PR 形成联动修复链。",
-      "url": "https://github.com/nexu-io/open-design/issues/2917"
+      "number": 3324,
+      "title": "Open Design sometimes forces Claude login even when using OpenClaude fallback",
+      "author": "luizgdemetrio",
+      "labels": ["bug", "help wanted"],
+      "comments": 3,
+      "summary": "配置 OpenClaude 为主要 Agent 时，Open Design 有时仍尝试启动 Claude Code 并因认证错误弹出登录提示，需要手动点击 Continue 才能继续。预期行为是未认证时自动跳过 Claude Code 使用 OpenClaude，表明 Agent 降级逻辑存在问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/3324"
     }
   ],
   "trends": {
-    "direction": "v0.8.0 发布第五天，进入 Agent 运行时生态扩展 + 多语言完整度攻坚阶段。AMR Agent (#2355) 和 CodeBuddy Code Agent (#2022) 两个新 CLI Agent 并行接入，配合 W4 运行时验证规划 (#3059) 为多 Agent 兼容性奠定工程基础。插件库 18 语言本地化 (#3010) 和预览动态加载优化 (#2620) 是体验层的双主线。同时，图片生成功能回退 (#2953, 20 评论) 和预览重置 Bug (#2143, P1/16 评论) 是需要紧急修复的核心痛点。",
+    "direction": "v0.8.0 发布第八天，Stars 突破 55,000（+2,441 vs 三天前），进入安全修复 + 媒体生成完善双主线。今日连续合入三个关键 PR：伪造角色标记安全漏洞修复 (#3303)、预览滚动保持 (#3313)、深色主题选择器修复 (#3309)，安全性和编辑体验同步提升。媒体生成侧 (#3315/#3308) 正系统性修复 v0.8.0 的图片提供商配置混乱问题，网络安全/自托管 PR (#1704) 正在终审阶段。",
     "affected_modules": [
-      "daemon-agent-runtime",
-      "i18n-localization",
-      "preview-editing",
-      "web-ui-chat",
-      "landing-plugins",
-      "design-systems-tokens",
-      "cli-native-windows",
-      "runtime-validation"
+      "daemon-security-stream",
+      "preview-scroll-bridge",
+      "media-provider-config",
+      "web-ui-dark-theme",
+      "network-auth-daemon",
+      "claude-stream-dedup",
+      "agent-fallback-logic",
+      "windows-packaged-app"
     ],
     "risks": [
-      "图片生成功能大面积失效 (#2953, 20 评论) 为本周最热 Issue，直接影响 v0.8.0 版本核心卖点的可信度",
-      "预览重置 P1 Bug (#2143, 16 评论) 持续一周以上未解决，影响所有多页面 HTML 项目的编辑工作流",
-      "多 Agent 运行时同时接入 (AMR + CodeBuddy Code + DeepSeek TUI + Codex/CodeWhale) 增加兼容性回归风险，W4 验证规划 (#3059) 仍处于文档阶段",
-      "Windows 平台问题持续暴露：Codex 不检测 (#3062)、源码安装失败 (#2801)，可能限制 Windows 用户增长",
-      "i18n 覆盖虽在推进 (#3010)，但 Automation/定时任务等非首页页面仍有大量英文残余 (#2917)"
+      "伪造角色标记安全漏洞 (#3247/PR#3303) 虽已修复合入，但涉及 claude-sonnet-4-6 多轮对话的系统级安全问题，需观察是否有后续旁路绕过案例",
+      "媒体生成配置混乱仍在处理中 (#3315/#3308)：OpenAI OAuth token 误识别为图片 API 凭证是 v0.8.0 版本的质量缺陷，两个相关 PR 均未合入",
+      "Windows STATUS_BREAKPOINT 崩溃 (#3328) 阻碍未使用 --no-sandbox 的普通 Windows 用户，安装包未签名问题持续制约 Windows 用户增长",
+      "AMR (Vela) CLI 卡死问题 (#3326) 与今日仍开放的 PR #2355 并行，本地 AMR 生态接入出现阻塞，影响 AMR 用户的 Agent 运行时体验",
+      "Claude 流式输出重复 Bug (#3325/PR#3334) 直接影响设计系统生成的核心工作流，PR 已提交但尚未合入"
     ],
     "actions": [
-      "密切跟踪图片生成修复 (#2953) —— 这是 v0.8.0 发布后最致命的回退，修复节奏将影响版本口碑",
-      "关注 AMR Agent (#2355) 和 CodeBuddy Code Agent (#2022) 的合入时间 —— 对神州数码用户直接可用 CodeBuddy Code 驱动 OD",
-      "跟踪预览重置 (#2143) 的修复进展 —— 与 url-load bridges (#2620) 同根源，后者合入可能一次性解决",
-      "插件库 18 语言本地化 (#3010) 合入后，评估首页到 /plugins/ 的多语言转化路径完整度"
+      "关注 PR #3334（Claude 流去重）和 PR #3315（媒体提供商扩展）的合入时间——两者直接解决 v0.8.0 用户最频繁的操作卡点",
+      "跟踪 PR #1704（网络安全/自托管）的 review 进展——24 条评论显示社区高度关注，合入后可开启局域网多人协作场景",
+      "观察 #3328（Windows STATUS_BREAKPOINT）修复优先级——如无沙箱无法启动会显著限制 Windows 用户增长，需确认是否计划在 v0.8.1 中修复",
+      "关注 #3325（输出重复）和 #3326（AMR 卡死）两个高频 Bug 的修复节奏，两者均与 v0.8.0 新功能（Claude 流处理/AMR 接入）直接关联"
     ],
-    "next_week": "预计 AMR Agent (#2355) 和 CodeBuddy Code Agent (#2022) 有望合入 main，新增 2 个 CLI Agent 选项。url-load bridges (#2620) 合入后将一次性修复预览重置 (#2143) 和滚动/缩放问题。图片生成功能 (#2953) 若本周修复，v0.8.1 补丁版本将进入规划。插件库本地化 (#3010) 合入后多语言覆盖率将成为新的社区关注指标。"
+    "next_week": "预计 PR #3334（Claude 流去重）本周合入，从根本上解决设计系统生成输出重复的问题。PR #3315（媒体提供商扩展）合入后将全面修复 v0.8.0 图片生成配置混乱，潜在触发 v0.8.1 补丁版本规划。网络安全 PR #1704 如完成终审将成为 v0.8.0 后最重要的功能里程碑，启动 Open Design 自托管生态。Windows 启动崩溃 (#3328) 若本周确认修复计划，将成为吸引企业/团队 Windows 用户的关键信号。"
   },
-  "cached_at": "2026-05-27T12:00:00+08:00",
-  "overview_summary": "v0.8.0 发布第五天。Stars 52,350→53,097 (+747)，Forks 5,960→6,024 (+64)，保持高速增长。8 活跃 PR 聚焦 Agent 生态扩展 (CodeBuddy Code #2022 + AMR #2355)、多语言 (18 语言插件库 #3010) 和编辑体验优化 (#3068 分组选择 + #2620 预览桥接)。近期已合并：CodeWhale TUI 检测 (#3025)、CI trace upload (#3013)、E2E 测试扩展 (#2992)。Issue 侧图片生成失效 (#2953, 20 评论) 和预览重置 P1 Bug (#2143, 16 评论) 为最紧迫痛点，Windows 兼容性 (#3062/#2801) 持续受关注。"
+  "cached_at": "2026-05-30T12:00:00+08:00",
+  "overview_summary": "v0.8.0 发布第八天。Stars 53,097→55,538 (+2,441)，Forks 6,024→6,281 (+257)，开放 Issues 362→368（+6），增势强劲。今日关键动态：伪造角色标记安全漏洞修复（#3303 已合入，防止 Claude 自发执行未授权指令），预览滚动保持（#3313 已合入），深色主题修复（#3309 已合入）。待合入重点 PR：媒体提供商配置扩展（#3315）、OpenAI OAuth 凭证修复（#3308）、Claude 流去重（#3334）、网络安全/自托管（#1704，24 条评论）。活跃 Issue 侧：Claude 输出重复（#3325，11 评论）、Agent 失败 UX（#982，11 评论）、Windows 崩溃（#3328）、AMR 卡死（#3326）为今日最值得关注的四个问题。"
 }
