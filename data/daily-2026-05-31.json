@@ -1,0 +1,190 @@
+{
+  "date": "2026-05-31",
+  "title": "2026-05-31 AI信息差日报",
+  "coverage": "覆盖窗口：5/29 18:00 ~ 5/31 10:00",
+  "sources": "xix.ai / NVIDIA arXiv / Anthropic Blog / Google Blog / Android Authority / CNBlogs",
+  "conclusions": [
+    "NVIDIA Polar开源：AI Agent训练进入\"工业化量产\"时代。首次用强化学习（RL）零侵入训练Claude Code/Codex/Qwen等已有Agent，Codex经过Polar训练后SWE-Bench从3.8%飙到26.4%（+594%），GPU利用率从20%提升到87%。",
+    "OpenAI打算起诉苹果：大模型厂商和平台方的\"第一次正面冲突\"。起因是ChatGPT在iOS被边缘化，苹果又引入Gemini做备选，这不只是一家公司纠纷，而是在定义AI时代的分销权归属。",
+    "智谱AutoClaw iOS上线：AI Agent开始从PC走向手机。国内首个移动端多Agent管理应用，支持本地/云端双模式切换，AI Agent的战场正在从命令行扩展到移动端。",
+    "Google Maps接入Gemini：AI开始改造每个人都在用的超级App。一句话规划行程加3D沉浸式导航，说明AI不是独立赛道，而是所有产品的底层引擎。",
+    "豆包和MiMo排名飙升：国产模型正在逐个击破细分赛道。豆包综合71.53分，距GPT-5.4仅差0.95；MiMo数学推理84.03分，国产模型在特定维度上开始具备可替代能力。"
+  ],
+  "summary": "NVIDIA Polar开源强化学习训练框架成为今日P0；智谱AutoClaw iOS、Google Maps+Gemini、DeepMind TIPSv2、OpenAI与苹果分销权冲突、豆包/MiMo排名飙升构成今日核心信息差。",
+  "body": "今日重点不是单个模型发布，而是AI Agent和AI功能进入工程化、移动化、平台化三个方向：Polar代表Agent训练工业化，AutoClaw代表移动Agent入口，Google Maps代表超级App AI化，OpenAI与苹果的冲突代表AI分销权争夺。",
+  "judgement": "今天最值得投入精力的是NVIDIA Polar。它如果在社区复现中站得住，将改变Agent优化方式：从prompt经验工程转向可度量的RL训练。OpenAI起诉苹果仍属待验证行业信号，不应当作既定事实，但值得持续跟踪。",
+  "tags": ["NVIDIA-Polar", "Agent-RL", "AutoClaw", "Google-Maps", "Gemini", "TIPSv2", "OpenAI-Apple", "Doubao", "MiMo"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "NVIDIA Polar框架开源",
+      "summary": "首个零侵入强化学习训练框架，将Codex/Claude Code/Qwen等已有AI Agent的性能大幅提升，Codex SWE-Bench从3.8%提升到26.4%。",
+      "why": "AI Agent训练正在从手写prompt调优进入自动化RL量产时代。GPU利用率从20%提升到87%，训练成本和效率都出现关键变化。",
+      "action_fact": "GitHub开源，论文arXiv:2605.24220，支持Anthropic/OpenAI/Google API。无需修改Agent源码即可接入。",
+      "action_judge": "如果有自研Agent应用，这是第一个值得严肃评估的RL训练方案。建议先用Codex/Qwen做小规模实验，验证ROI后再考虑生产化。",
+      "tags": ["Agent Workflow", "RL Training", "NVIDIA", "SWE-Bench"],
+      "sources": ["https://arxiv.org/pdf/2605.24220", "https://xix.ai/zh/ainews/nvidia-open-sources-polar-framework-for-zerobarrier-ai-coding-agent-evolution-via-reinforcement-learning.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "智谱AI AutoClaw iOS上线",
+      "summary": "国内首个移动端多Agent管理应用，支持本地\"龙虾\"模式和云端\"Lobster\"模式双切换，可在手机上创建、编辑、运行AI Agent。",
+      "why": "AI Agent从PC/CLI走向移动端的关键一步。本地模式保护隐私，云端模式提升可用性，开始定义Agent即服务的移动范式。",
+      "action_fact": "App Store已上架，与PC版账户同步，支持多Agent协作和群聊管理。初期不含MCP/技能商店。",
+      "action_judge": "适合已有Agent使用习惯的用户尝鲜。隐私敏感任务优先用本地模式。目前功能偏基础，适合轻度Agent管理。",
+      "tags": ["AI Tool", "Mobile Agent", "ZhipuAI"],
+      "sources": ["https://xix.ai/zh/ainews/zhipu-ai-unveils-autoclaw-ios-app-mobile-agent-embarks-on-dualmode-evolution.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Maps整合Gemini",
+      "summary": "Google Maps十年来最大升级：用自然语言规划完整行程，并加入3D沉浸式导航。",
+      "why": "这不是AI新产品，而是AI改造月活超10亿的超级App。证明AI as feature可以在消费级产品中爆发。",
+      "action_fact": "Ask Maps已在美国和印度上线，3D导航逐步推送iOS/Android。CEO Pichai公开确认。",
+      "action_judge": "国内用户暂不可用，但这是AI+地图的标杆案例。建议关注用户体验反馈和高德/百度地图等竞品跟进。",
+      "tags": ["AI Tool", "Consumer AI", "Gemini", "Google Maps"],
+      "sources": ["https://xix.ai/zh/ainews/google-maps-integrates-gemini-for-onesentence-trip-plans-and-3d-immersive-navigation-its-biggest-upgrade-in-a-decade.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google DeepMind TIPSv2",
+      "summary": "TIPSv2在20个权威数据集9项任务上领先，零样本语义分割提升14.1pp，训练参数减少42%。",
+      "why": "解决VLM长期痛点：全局理解强但局部定位差。对医学影像、自动驾驶、工业检测等精度敏感场景意义重大。",
+      "action_fact": "代码和权重完全开源，使用Gemini生成多粒度文本配对训练。",
+      "action_judge": "研究人员可直接复现。工程团队应关注其精度提升能否在具体场景带来ROI，例如质检缺陷识别率。",
+      "tags": ["New Model", "Computer Vision", "VLM", "DeepMind"],
+      "sources": ["https://www.alphaxiv.org/abs/2604.12012", "https://xix.ai/zh/ainews/google-deepminds-tipsv2-ai-that-truly-understands-images-not-just-glances.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI计划起诉苹果",
+      "summary": "OpenAI指控苹果未真诚推广ChatGPT集成，Siri二级指令导致订阅转化不达标，且苹果引入Gemini侵蚀先发优势。",
+      "why": "这是AI时代的分销权冲突：模型厂商与平台方围绕用户入口、默认位置和收入转化展开博弈。",
+      "action_fact": "报道日期5/30，来源Android Authority，OpenAI和苹果均未官方确认。",
+      "action_judge": "仍在传闻阶段，但信号强烈。若起诉成立，可能迫使iOS调整第三方AI交互逻辑，利好更多AI厂商。",
+      "tags": ["Industry", "Legal", "Distribution", "OpenAI", "Apple"],
+      "sources": ["https://xix.ai/zh/ainews/openai-plans-to-sue-apple-over-chatgpts-ios-marginalization.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "豆包/MiMo排名飙升",
+      "summary": "豆包Doubao-Seed-2.0-pro综合71.53分，距GPT-5.4仅差0.95；MiMo-V2-Pro数学推理84.03分，单项领先。",
+      "why": "国产模型策略从全面追赶转向逐个击破，不在所有维度争第一，但在特定维度做到可替代。",
+      "action_fact": "Doubao国内第一，Agent任务规划进入全球前五。MiMo开源版Flash也在榜单中。",
+      "action_judge": "编程/Agent场景仍建议Claude/GPT，数学推理场景可优先考虑MiMo。Doubao适合国内合规场景的通用替代。",
+      "tags": ["New Model", "Domestic", "Doubao", "MiMo"],
+      "sources": ["https://xix.ai/zh/ainews/domestic-models-surge-doubao-joins-global-elite-xiaomi-mimo-top-in-math-reasoning.html"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "NVIDIA Polar",
+      "type": "RL训练框架",
+      "highlight": "零侵入接入Claude Code/Codex，SWE-Bench提升594%，GPU利用率87%",
+      "audience": "AI Agent开发者、RL研究员",
+      "action": "阅读论文，准备API key，跑论文中的reproduce实验",
+      "url": "https://arxiv.org/pdf/2605.24220"
+    },
+    {
+      "name": "智谱AutoClaw iOS",
+      "type": "移动Agent管理",
+      "highlight": "本地/云端双模式，多Agent协作，App Store直装",
+      "audience": "Agent使用者、移动办公人群",
+      "action": "App Store搜索AutoClaw下载，登录同步PC账户",
+      "url": "https://xix.ai/zh/ainews/zhipu-ai-unveils-autoclaw-ios-app-mobile-agent-embarks-on-dualmode-evolution.html"
+    },
+    {
+      "name": "Google DeepMind TIPSv2",
+      "type": "视觉理解模型",
+      "highlight": "零样本分割提升14.1pp，训练参数减少42%，完全开源",
+      "audience": "CV研究人员、医学影像/工业检测工程师",
+      "action": "下载代码和权重，跑zero-shot segmentation benchmark",
+      "url": "https://www.alphaxiv.org/abs/2604.12012"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "NVIDIA Polar：用强化学习把你的AI编程助手训练成超级赛亚人",
+      "hook": "Codex SWE-Bench从3.8%提升到26.4%，提升594%",
+      "angle": "教程型：手把手跑Polar训练流程，展示训练前后的代码能力对比",
+      "materials": "Polar运行录屏、训练前后SWE-Bench结果、GPU利用率图表",
+      "difficulty": "中"
+    },
+    {
+      "title": "实测Google Maps+Gemini：一句话规划完美旅行，AI导航到底强在哪？",
+      "hook": "十年来最大升级，一句话搞定附近餐厅和路线规划",
+      "angle": "测评型：录屏展示Ask Maps功能，对比传统搜索方式的时间差",
+      "materials": "Google Maps录屏、传统vs AI对比画面、3D导航截图",
+      "difficulty": "低"
+    },
+    {
+      "title": "OpenAI要告苹果？大模型厂商和平台方的第一次世界大战",
+      "hook": "ChatGPT被藏进Siri二级菜单，苹果又引入Gemini",
+      "angle": "解读型：梳理事件时间线、Siri实测对比、分析AI分销权未来",
+      "materials": "Siri调用ChatGPT录屏、iOS设置截图、各平台AI集成对比图",
+      "difficulty": "低"
+    },
+    {
+      "title": "手机上管AI Agent？智谱AutoClaw实测：靠谱吗？",
+      "hook": "国内首个移动Agent管理App，本地/云端双模式切换",
+      "angle": "测评型：下载安装、创建Agent、下达任务、对比PC体验",
+      "materials": "App Store截图、操作录屏、PC+手机同框对比",
+      "difficulty": "低"
+    },
+    {
+      "title": "豆包 vs MiMo：国产大模型排名飙升，到底谁更强？",
+      "hook": "豆包距GPT-5.4仅差0.95分，MiMo数学推理84.03分",
+      "angle": "对比测评型：同一套测试题让豆包和MiMo做，可视化对比结果",
+      "materials": "测试题截图、用时对比动画、成绩雷达图",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Intel AI推理GPU泄露图",
+      "reason": "纯传言，无官方确认，图片来源不明。芯片类泄露需要等待正式发布或多源交叉验证。"
+    },
+    {
+      "item": "TikTok高管春晚AI视频模型Seedance 2.0",
+      "reason": "时效性不匹配。春节联欢晚会已过去数月，此报道更像公关回顾而非新闻。"
+    },
+    {
+      "item": "Anthropic与特朗普政府关系缓和",
+      "reason": "政治类内容，非Agent专注方向，且与AI技术发展无直接关联。"
+    },
+    {
+      "item": "Particle播客标题AI",
+      "reason": "应用场景过窄，仅为播客标题朗读，技术含量低，新颖性不足。"
+    },
+    {
+      "item": "甲骨文裁员谈判、Valley Schmitz CEO被嘘",
+      "reason": "企业人事与社会新闻，虽有AI背景但不具备信息差价值。"
+    },
+    {
+      "item": "各种5月AI汇总、最火20个开源项目等聚合列表文",
+      "reason": "纯列表文，无一手信息增量。源头大多为5月上旬信息，已在前几期日报中覆盖。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "NVIDIA Polar社区反馈",
+      "reason": "追踪开源后48小时内GitHub Star趋势、社区复现报告、与主流Agent框架集成进展。"
+    },
+    {
+      "item": "OpenAI vs Apple诉讼进展",
+      "reason": "等待任何一方官方声明或法庭文件。若确认起诉，将成为2026年重要AI行业法律案件。"
+    },
+    {
+      "item": "Claude Opus 4.8持续发酵",
+      "reason": "继续关注Dynamic Workflows社区实测效果、Fast模式实际成本数据、竞品应对动作。"
+    },
+    {
+      "item": "Google Maps+Gemini用户体验反馈",
+      "reason": "关注美印用户首批评价、Ask Maps实际准确率、3D导航对驾驶体验的影响。"
+    },
+    {
+      "item": "周一复工后的集中发布潮",
+      "reason": "周日相对冷清，预计周一将有密集模型/工具更新，重点关注OpenAI、Anthropic、Google官方blog。"
+    }
+  ]
+}
