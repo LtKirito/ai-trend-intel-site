@@ -1,0 +1,138 @@
+{
+  "date": "2026-06-01",
+  "title": "2026-06-01 AI信息差日报",
+  "coverage": "覆盖窗口：5/30 ~ 6/1",
+  "sources": "Anthropic官方 / NVIDIA Computex 2026 / Microsoft Build预告 / GitHub Trending / AIToolly / BuildFastWithAI / Codersera / 钛媒体",
+  "conclusions": [
+    "Anthropic Claude Opus 4.8 于5月28日上线，诚实度提升4倍，编码基准全线上扬；Dynamic Workflows 可并行调度最多1000个子代理",
+    "NVIDIA 在 Computex 2026 正式揭晓 N1X ARM SoC（20核CPU + RTX 5070级GPU），Dell/Lenovo/Asus年底发售，直接挑战 Apple Silicon",
+    "微软将在 Build 2026（6月2日开幕）发布自研 MAI 编程模型用于 GitHub Copilot，正式在底座模型层面与 OpenAI 脱钩",
+    "OpenAI Codex Pro 的 2x 容量促销今日结束，$100/月不变但有效吞吐量减半；GitHub Copilot 同步转为按用量计费",
+    "Apple WWDC 2026（6月8日）确认 Siri 2.0 整合 Gemini，为15年来最大规模 Siri 升级；Google Gemini 3.5 Pro 确认本月发布"
+  ],
+  "summary": "Computex微软Build苹果WWDC密集发布会周：NVIDIA N1X ARM笔记本SoC炸场，微软MAI自研编程模型明日亮相，Claude Opus 4.8诚实度4倍提升",
+  "body": "本周AI情报以硬件+平台级发布为主线。NVIDIA Computex今日揭晓首款Windows笔记本ARM SoC，微软Build明日发布自研编程模型打破OpenAI依赖，Apple WWDC下周Siri 2.0整合Gemini。工具层面：MarkItDown开源文档转Markdown、Harness元技能框架、VoxCPM2无分词器TTS值得关注。",
+  "judgement": "6月第一周将是2026年AI硬件+平台最密集的发布周。NVIDIA N1X对AI开发者意义大于普通消费者（CUDA全栈+ARM能效），微软MAI模型标志着GitHub Copilot生态的重大转变。Codex Pro和Copilot定价变动需要现有用户立即评估成本影响。",
+  "tags": ["NVIDIA-N1X", "Microsoft-Build", "MAI模型", "Claude-Opus4.8", "WWDC-Siri2.0", "Codex-Pro定价", "Gemini-3.5-Pro", "MarkItDown", "Harness"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "NVIDIA N1X ARM SoC 正式揭晓",
+      "summary": "NVIDIA 首款面向 Windows 笔记本的 ARM SoC：20核CPU（MediaTek）+ 6144 CUDA核心GPU（RTX 5070级），TSMC 3nm，NVLink 300GB/s",
+      "why": "NVIDIA第一次把桌面级GPU做进ARM笔记本SoC，Apple Silicon独霸ARM笔记本GPU性能的时代正式受到挑战。NVIDIA+Microsoft+Arm三方联合平台推进",
+      "action_fact": "【事实】Dell/Lenovo/Asus/MSI已确认首发，2026年假日季前上市，2027年初大规模供货。设备定价高端区间（TSMC 3nm+LPDDR5X成本高）",
+      "action_judge": "【判断】AI开发者应关注N1X笔记本的CUDA全栈+ARM能效组合，年底是升级本地推理设备的好时机。现在开始评估ARM+CUDA生态迁移方案",
+      "tags": ["NVIDIA", "ARM", "SoC", "Computex"],
+      "sources": ["https://www.techtimes.com/articles/317446/20260530/computex-2026-jensen-huang-keynote-n1x-reveal-arc-g3-snapdragon-c-all-land-this-week.htm", "https://videocardz.com/newz/jensen-huang-set-to-deliver-computex-2026-keynote-nvidia-n1x-launch-possibly-in-focus"]
+    },
+    {
+      "rank": "P0",
+      "title": "微软 Build 2026 明日开幕：MAI 自研编程模型亮相",
+      "summary": "微软AI部门（Mustafa Suleyman领导）将在Build 2026发布多款自研MAI模型，含专门用于GitHub Copilot的编程模型",
+      "why": "微软在底座模型层面与OpenAI脱钩，标志着GitHub Copilot生态的重大转变。Claude Code已在企业开发者采用中超越Copilot",
+      "action_fact": "【事实】Reuters/The Information 5月28日报道。模型套件涵盖编程、语音转写、逻辑推理等多个方向。微软4月与OpenAI重新谈判解除模型训练限制",
+      "action_judge": "【判断】GitHub Copilot用户关注明天主题演讲，自研模型可能带来更低成本或更好性能。AI编程工具赛道已足够大、足够成熟",
+      "tags": ["Microsoft", "Build2026", "MAI", "Copilot"],
+      "sources": ["https://www.tmtpost.com/agent/ai-article/16971", "https://uicn.cn/news/microsoft-build-2026-coding-model", "https://www.buildfastwithai.com/blogs/ai-news-today-may-31-2026"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Opus 4.8 发布：诚实度提升4倍，Dynamic Workflows登场",
+      "summary": "SWE-bench Verified 88.6%，USAMO数学96.7%；Dynamic Workflows可并行调度最多1000个子代理；快速模式比4.7便宜3倍",
+      "why": "诚实度（标记自身代码缺陷）提升4倍是AI编程工具最重要的升级方向。Dynamic Workflows让Claude Code从单代理进化为可编排的大规模并行系统",
+      "action_fact": "【事实】Anthropic 5月28日发布，定价不变（$5/$25 per M tokens）。Bun创建者用Dynamic Workflows在11天内迁移75万行Rust代码。Opus 4.8已为Claude Code默认模型(v2.1.154+)",
+      "action_judge": "【判断】Claude Code用户立即升级到v2.1.154+开启Dynamic Workflows。Opus 4.8更不容易产生误导性代码，适合长期代码库级别的自主任务",
+      "tags": ["Anthropic", "Claude-Opus4.8", "Dynamic-Workflows"],
+      "sources": ["https://www.anthropic.com/news/claude-opus-4-8", "https://www.buildfastwithai.com/blogs/claude-opus-4-8-review-benchmarks-dynamic-workflows-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Codex Pro 2x 促销今日结束 + Copilot 转按用量计费",
+      "summary": "Codex Pro $100/月价格不变，2x容量倍数于6月1日到期，有效吞吐量约减半；GitHub Copilot同步转为按用量计费",
+      "why": "直接影响现有用户成本。AI编程工具进入后促销时代，定价模式从固定月费向按用量转变",
+      "action_fact": "【事实】Codex Pro发布时的限时2x容量倍数5月31日到期。GitHub Copilot从固定按席位计费转为按用量计费，每积分美元费率尚未公布。接近限制时限流而非切断服务",
+      "action_judge": "【判断】Codex Pro用户检查Profile统计评估标准容量下是否需要降级。GitHub Copilot按用量计费可能让重度用户成本上升，建议监控下月账单",
+      "tags": ["OpenAI", "Codex-Pro", "Copilot", "定价"],
+      "sources": ["https://aitoolsrecap.com/Blog/openai-codex-pro-pricing-promo-ends-june-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple WWDC 2026：Siri 2.0 + Gemini 整合确认",
+      "summary": "苹果将在WWDC 2026（6月8日）发布Siri 2.0，整合Google Gemini驱动，支持跨应用操作和持续对话；iOS 27将Apple Intelligence升级为系统底层智能中枢",
+      "why": "15年来最大规模Siri升级，Gemini覆盖20亿Apple设备，iOS 27 Extensions系统可能对第三方AI工具开放",
+      "action_fact": "【事实】彭博社Mark Gurman、FAQ.com.tw等多方确认。Siri 2.0将独立为单独应用。WWDC 6月8日开幕，主题演讲北京时间凌晨1点",
+      "action_judge": "【判断】AI产品开发者关注Siri 2.0的Extensions系统接入机会。iPhone用户关注Siri 2.0的实际体验改善",
+      "tags": ["Apple", "WWDC", "Siri", "Gemini"],
+      "sources": ["https://www.itbear.com.cn/html/2026-05/1363155.html", "https://aiproducthub.cn/newsflash/apple-wwdc-2026-siri-2-gemini-integration/", "https://faq.com.tw/zh/products/2026-05-05-wwdc-2026-preview-ios27-siri-gemini-zh/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Gemini 3.5 Pro 本月发布确认",
+      "summary": "Gemini 3.5 Pro确认6月发布，Vertex AI白名单已开放；需超越GPQA Diamond>90%、SWE-bench Pro>65%才能赢得开发者关注",
+      "why": "继Opus 4.8之后最重要的基准参照模型，将直接影响AI编程工具市场格局",
+      "action_fact": "【事实】Sundar Pichai在I/O 2026承诺6月发布。Gemini 3.5 Flash已发布，Pro版本是完整推理模型。Vertex AI Model Garden白名单已对企业GCP客户开放",
+      "action_judge": "【判断】Gemini API用户Pro发布后可能替代2.5 Pro成为主力。AI评测者需要准备对比基准",
+      "tags": ["Google", "Gemini", "3.5-Pro"],
+      "sources": ["https://codersera.com/blog/gemini-3-5-complete-guide-2026/", "https://ofox.ai/blog/gemini-3-5-pro-release-date-expected-specs-2026/"]
+    },
+    {
+      "rank": "P1",
+      "title": "微软开源 MarkItDown：全格式文档转 Markdown",
+      "summary": "微软开源Python工具MarkItDown，支持PDF/Word/Excel/PPT/图片/音频转Markdown，专为LLM和RAG管道优化",
+      "why": "解决RAG管道中文档解析的标准化问题，比手写解析器省大量时间",
+      "action_fact": "【事实】microsoft/markitdown已在GitHub开源，支持PyPI安装。已积累11万+stars",
+      "action_judge": "【判断】RAG开发者立即pip install markitdown试试，一键把Office文档转成LLM友好的Markdown",
+      "tags": ["Microsoft", "开源", "Markdown", "RAG"],
+      "sources": ["https://github.com/microsoft/markitdown", "https://aitoolly.com/zh/ai-news/2026-06-01"]
+    },
+    {
+      "rank": "P1",
+      "title": "Harness：Claude Code 元技能框架",
+      "summary": "元技能框架，能为特定领域自动生成AI代理团队及其所需技能；支持Claude Code/Codex/Cursor",
+      "why": "构建复杂多代理协作系统的新思路，用AI设计AI团队的技能分配方案",
+      "action_fact": "【事实】revfactory/harness已开源，文档站revfactory.github.io/harness提供完整指南。核心创新：自动生成代理执行任务所需技能",
+      "action_judge": "【判断】Claude Code用户做复杂任务（大规模代码迁移、多步骤研究）时值得尝试Harness自动设计代理团队结构",
+      "tags": ["Claude-Code", "Agent", "元技能"],
+      "sources": ["https://github.com/revfactory/harness", "https://revfactory.github.io/harness/"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Rosalind Biodefense 项目启动",
+      "summary": "OpenAI启动Rosalind Biodefense，向获批合作伙伴提供生物学专用前沿模型GPT-Rosalind，用于生物防御和大流行病准备",
+      "why": "OpenAI首次在生物学领域部署双层架构（受限模型+公开工具），与Anthropic Glasswing形成对标",
+      "action_fact": "【事实】OpenAI 5月30日宣布。GPT-Rosalind不通过标准API提供，仅限获批政府机构和开发者。合作伙伴包括CAISI、UK AISI、Los Alamos国家实验室",
+      "action_judge": "【判断】普通开发者暂无法访问，但值得跟踪后续是否开放研究访问。对比Anthropic Glasswing进展有参考价值",
+      "tags": ["OpenAI", "Rosalind", "生物防御"],
+      "sources": ["https://aitoolsrecap.com/Blog/openai-rosalind-biodefense-gpt-biology-pandemic-2026"]
+    }
+  ],
+  "tools": [
+    {"name": "MarkItDown", "type": "文档转换工具", "highlight": "支持PDF/Word/Excel/PPT/图片/音频转Markdown，专为LLM/RAG优化", "audience": "RAG开发者、文档处理工程师", "action": "pip install markitdown，然后 markitdown file.pdf > output.md", "url": "https://github.com/microsoft/markitdown"},
+    {"name": "Harness", "type": "元技能框架", "highlight": "自动设计领域专属AI代理团队，支持Claude Code/Codex/Cursor", "audience": "AI代理开发者、复杂任务自动化工程师", "action": "访问revfactory.github.io/harness按Quick Start配置", "url": "https://github.com/revfactory/harness"},
+    {"name": "VoxCPM2", "type": "TTS语音合成模型", "highlight": "2B参数、无分词器、30语言语音生成和音色克隆、48kHz音质", "audience": "内容创作者、语音应用开发者", "action": "访问voxcpm.space在线体验或Docker本地部署", "url": "https://github.com/OpenBMB/VoxCPM"},
+    {"name": "Compound Engineering Plugin", "type": "Claude Code插件", "highlight": "EveryInc官方发布，提升AI在复杂编程任务中的工程化表现", "audience": "Claude Code重度用户", "action": "在Claude Code中安装compound-engineering-plugin", "url": "https://github.com/EveryInc/compound-engineering-plugin"},
+    {"name": "Mistral Search Toolkit", "type": "RAG/搜索工具栈", "highlight": "Mistral开源，统一生产搜索管道的摄取、检索和评估", "audience": "RAG架构师、企业AI团队", "action": "访问Mistral AI博客获取安装指南", "url": "https://mistral.ai/news/search-toolkit/"},
+    {"name": "MoneyPrinterTurbo", "type": "AI视频生成", "highlight": "利用AI大模型一键生成高清短视频，GitHub Trending热门", "audience": "内容创作者、短视频运营", "action": "克隆harry0703/MoneyPrinterTurbo按README配置", "url": "https://github.com/harry0703/MoneyPrinterTurbo"}
+  ],
+  "video_topics": [
+    {"title": "NVIDIA N1X炸场：Windows笔记本终于有对手打苹果了？", "hook": "NVIDIA第一次做ARM笔记本芯片，黄仁勋今日Computex演讲", "angle": "对比N1X vs Apple M4：CPU/GPU/生态，预测年底价格和性能", "materials": "黄仁勋Computex演讲片段 + NVIDIA规格图 + M4跑分对比", "difficulty": "低"},
+    {"title": "微软Build悄悄放大招：GitHub Copilot要换心了", "hook": "微软自研编程模型，不再完全依赖OpenAI", "angle": "解读MAI模型对Copilot用户的实际影响：更便宜？更聪明？", "materials": "Build 2026主题演讲录屏 + Copilot使用对比演示", "difficulty": "中"},
+    {"title": "Claude Opus 4.8测评：诚实度提升4倍是什么概念？", "hook": "AI不再'自信地胡说'可能是最重要的升级", "angle": "用同一道陷阱题分别测Opus 4.7和4.8，展示诚实度差异", "materials": "Claude Code实操录屏：4.7 vs 4.8回复对比", "difficulty": "中"},
+    {"title": "6月AI圈太疯狂：四场发布会连发", "hook": "一周内四场顶级发布会，AI界史无前例", "angle": "时间线梳理：6/1 NVIDIA → 6/2微软 → 6/8苹果 → 6月内Google", "materials": "四场发布会海报拼图 + 关键爆点文字卡片", "difficulty": "低"},
+    {"title": "微软开源MarkItDown：5行代码把100页Word变成AI能读的Markdown", "hook": "微软官方工具，比手写解析器省10倍时间", "angle": "手把手演示安装→转换→接入LLM问答", "materials": "终端录屏：pip install→转换命令→LLM问答效果展示", "difficulty": "低"}
+  ],
+  "noise_items": [
+    {"item": "GPT-5.6泄露（iris-alpha）", "reason": "单一来源未获OpenAI官方确认，属未经证实传言（可信度=1）"},
+    {"item": "Anthropic估值$9000亿'超越OpenAI'", "reason": "数字失实，原始来源为BuildFastWithAI估算非官方公告（可信度=2），实际H轮估值$650亿"},
+    {"item": "Claude 4.8/5.5版本号混乱", "reason": "部分中文媒体混淆Claude Opus 4.8（真实发布）与其他未确认版本号，属旧传言换包装（新颖性=1）"},
+    {"item": "Nightmare Eclipse漏洞事件", "reason": "与AI情报定位无关，属纯安全事件，不纳入AI信息差日报覆盖范围"},
+    {"item": "OnlyFans数据'超级泄露'", "reason": "实际为历史泄露数据的关联匹配非新漏洞，且与AI无关"}
+  ],
+  "tracking_items": [
+    {"item": "微软Build 2026主题演讲（6月2日）", "reason": "MAI自研模型详细发布，关注编程模型基准和Copilot集成计划"},
+    {"item": "NVIDIA Computex完整演讲（今日11:00台北）", "reason": "N1X详细规格、供货时间、CUDA对ARM的支持进度"},
+    {"item": "Claude Mythos Preview公开发布进展", "reason": "Anthropic承诺数周内发布，当前仅50家合作伙伴使用"},
+    {"item": "Apple WWDC 2026（6月8日）", "reason": "Siri 2.0+Gemini整合细节，iOS 27 Extensions系统开放程度"},
+    {"item": "GitHub Copilot按用量计费细则", "reason": "6月1日起生效，关注具体费率和用量计算方式"}
+  ]
+}

@@ -1,4 +1,5 @@
 [
+  {"date": "2026-06-01", "label": "6 月 1 日 (周日)", "count": "3P0 + 6P1", "tags": "NVIDIA-N1X · Microsoft-MAI · Claude-Opus4.8 · Codex-Pro定价 · WWDC-Siri2.0 · Gemini-3.5-Pro", "summary": "NVIDIA N1X ARM笔记本SoC炸场Computex、微软Build明日发布MAI自研编程模型、Claude Opus 4.8诚实度4倍提升、Codex Pro 2x容量到期"},
   {"date": "2026-05-31", "label": "5 月 31 日 (周日)", "count": "1P0 + 5P1", "tags": "NVIDIA-Polar · AutoClaw · Google-Maps · TIPSv2 · OpenAI-Apple", "summary": "NVIDIA Polar开源强化学习训练框架，智谱AutoClaw iOS上线，Google Maps接入Gemini，DeepMind TIPSv2开源，OpenAI与苹果分销权冲突浮出水面"},
   {"date": "2026-05-30", "label": "5 月 30 日 (周六)", "count": "2P0 + 4P1", "tags": "Anthropic · Opus-4.8 · Span-XFRA · SpaceX · 诚实机制", "summary": "Anthropic $9650亿估值发酵、Opus 4.8 诚实机制讨论、Span XFRA 后院数据中心、Claude Code 降价优化成本"},
   {"date": "2026-05-29", "label": "5 月 29 日 (周五)", "count": "2P0 + 5P1", "tags": "Anthropic · Opus-4.8 · KPMG · DeployCo · Cohere", "summary": "Anthropic $650亿H轮超越OpenAI、Opus 4.8+Dynamic Workflows、KPMG 27.6万部署、OpenAI DeployCo $40亿"},
