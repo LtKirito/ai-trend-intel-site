@@ -1,0 +1,281 @@
+{
+  "date": "2026-06-02",
+  "title": "2026-06-02 AI信息差日报",
+  "coverage": "覆盖窗口：6/1 ～ 6/2",
+  "sources": "Microsoft Build 2026 Keynote / NVIDIA Computex 2026 / chatforest.com / explainx.ai / yitukeji.cn / studioglobal.ai / 腾讯云开发者社区 / liuqi.dev",
+  "conclusions": [
+    "Microsoft Build 2026 炸裂开幕：Project Polaris 成为 GitHub Copilot 新引擎，彻底脱离 OpenAI。自研 Mixture-of-Experts 编码模型在 HumanEval/MBPP 上超越 GPT-4 Turbo，支持 100,000 行多文件上下文，8月开始全量替换。这是继 OpenAI 联合创始人出走之后，微软与 OpenAI 关系的最大裂痕信号。",
+    "Windows 正式成为 'Agent 操作系统'：Windows Agent Framework MIT 开源，Agent Runtime 嵌入系统内核。纳德拉宣告'未来操作系统不是管理文件和窗口的，而是管理 Agent 和任务的'。这是自 Windows 95 以来最大的 OS 范式变革。",
+    "NVIDIA Computex 正式开展：Nemotron 3 Ultra 550B 开源模型发布，推理速度是 Qwen3.5 的 5 倍。Cosmos 3 是全球首个开放 Physical AI 全模态模型，7项基准测试全部排名第一。",
+    "DeepSeek V4 Pro 永久降价 75%，大模型 API 进入'白菜价'时代。输入降至每百万 Token 仅 2.5 分钱（缓存命中），5月31日限时优惠到期后直接宣布永久化。",
+    "MCP 协议 2026 最大更新发布 + OpenAI 推出 Secure MCP Tunnel。无状态协议架构+安全隧道，MCP 从实验性本地连接迈向生产级远程 Agent 基础设施。"
+  ],
+  "summary": "Microsoft Build 2026 首日：Project Polaris 取代 GPT-4 成为 Copilot 新引擎，Windows 重构为 Agent 原生操作系统（WAF MIT开源）。NVIDIA Computex 发布 Nemotron 3 Ultra 550B（推理速度Qwen3.5的5倍）和 Cosmos 3 Physical AI 全模态模型。DeepSeek V4 Pro 永久降价75%。MCP 发布 2026 史上最大规范更新。",
+  "body": "Microsoft Build 2026 Day 1 宣布三项核心 AI 变革：①Project Polaris（微软自研编码模型，8月起替换 GPT-4 Turbo 成为 GitHub Copilot 默认引擎，100K行上下文，HumanEval/MBPP超越GPT-4）；②Windows Agent Platform（WAF v1.0 MIT开源+Agent Runtime系统内核级+Agent Store 85%分成）；③Copilot Workspace GA（Fleet/Autopilot自主模式+Jira/Datadog Extensions）。NVIDIA Computex 2026：Nemotron 3 Ultra 550B混合Mamba-Transformer MoE发布，300+tps推理速度，Agent任务完成率91%；Cosmos 3 全球首个Physical AI全模态模型。DeepSeek V4 Pro 永久降价75%，输入¥0.025/百万Token创全球最低。MCP 2026 无状态协议更新+OpenAI Secure MCP Tunnel。",
+  "judgement": "2026年6月2日将成为 AI 行业格局重塑的关键一天。微软在 Build 大会上释放了清晰的'去 OpenAI 化'信号（Project Polaris+MAI v2全品类自研+取消Claude Code许可），这意味着 AI 产业从'单一模型依赖'进入'多模型平台化'时代。NVIDIA 的全栈野心（芯片→模型→Agent 平台→硬件）也在 Computex 上全面展示。两场大会的共同主题：'AI 正在从消费端工具变成基础设施级别的操作系统能力'。",
+  "tags": ["Microsoft-Build-2026", "Project-Polaris", "Windows-Agent-Platform", "NVIDIA-Computex", "Nemotron-3-Ultra", "Cosmos-3", "DeepSeek-V4-Pro", "MCP-2026", "Copilot-Workspace", "Agent-OS"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Project Polaris：微软自研编码模型取代 GPT-4 成为 GitHub Copilot 默认引擎",
+      "summary": "微软全自研 Mixture-of-Experts 编码模型，在 HumanEval/MBPP 上超越 GPT-4 Turbo，支持 100,000 行多文件上下文和自主测试生成，8月起全量替换。运行于 Azure Maia AI 加速器。",
+      "why": "微软与 OpenAI 合作关系自 Project Polaris 暴露最大裂痕。Copilot 是 GitHub 的核心金牛业务，微软不可能把命脉交给第三方。AI 编程工具市场格局将重塑。",
+      "action_fact": "【事实】8月起 GitHub Copilot 默认使用 Polaris 替代 GPT-4 Turbo，提供三个月可退回期。在 Rust、Haskell 等低资源语言上提升尤为显著。目前可在 Azure AI Foundry 预览。",
+      "action_judge": "【判断】所有 Copilot 用户应在 8 月前关注自己仓库的代码补全质量变化。如果你的团队用 Copilot 做主力编程工具，建议 8-11 月新旧模型并跑对比再决定是否退回。",
+      "tags": ["Project-Polaris", "GitHub-Copilot", "Microsoft", "编码模型", "战略脱钩"],
+      "sources": [
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/",
+        "https://www.yitukeji.cn/blog/microsoft-build-2026-agent-platform",
+        "https://www.studioglobal.ai/zh-cn/discover/answers/what-were-the-key-announcements-and-wall-6a1da6a779d2e38c59613829"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Windows Agent Platform：Windows 重构为 Agent 原生操作系统",
+      "summary": "Windows Agent Framework v1.0 MIT 开源，Agent Runtime 嵌入系统内核，Agent Store 85% 分成。YAML 定义 Agent，支持跨平台本地/W365/Azure Arc 部署。6月起 Insiders 预览。",
+      "why": "自 Windows 95 GUI 以来最大的 OS 设计范式转变。Agent 从应用层进入操作系统层，开发者获得整个 Windows 系统的原生 Agent API。",
+      "action_fact": "【事实】WAF v1.0 已 MIT 开源在 GitHub（microsoft/agent-framework）。Agent Runtime 6 月起向 Windows Insiders 开放。早期设计合作伙伴包括 Adobe（自动 InDesign）和 Zoom（会议代参）。支持 Ambient Agent 常驻后台。",
+      "action_judge": "【判断】Windows 开发者应立即关注 WAF 仓库。如果你是做 Windows 端 Agent 产品的，现在就该评估：你的 Agent 能否直接从内核层运行？Agent Store 的 85% 分成是否比应用商店更有利？",
+      "tags": ["Windows-Agent-Platform", "WAF", "Agent-Runtime", "操作系统", "MIT开源"],
+      "sources": [
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/",
+        "https://github.com/microsoft/agent-framework",
+        "https://www.yitukeji.cn/blog/microsoft-build-2026-agent-platform"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "微软取消 Claude Code 企业许可，迁移至 GitHub Copilot CLI",
+      "summary": "微软 Build 大会确认内部大范围取消 Claude Code 许可，6月30日前迁移到 Copilot CLI。单一团队月度成本超 50 万美元——企业 AI 工具成本危机正式浮出水面。",
+      "why": "AI 编程工具从'烧钱抢市场'进入'ROI 驱动的成本优化期'。Anthropic 失去最大企业客户之一，可能触发全行业定价重构。",
+      "action_fact": "【事实】微软 5月中旬启动迁移，6月底前完成。Copilot CLI 新功能 Fleet 模式（无需确认自主运行）、Autopilot 模式（定时后台自主处理 Issue）作为替代方案。Polaris 自研模型是成本优化的技术底座。",
+      "action_judge": "【判断】如果你是 Anthropic 的客户，关注这次事件的后续发展——Anthropic 是否会降价应对？如果你是 AI 工具选型中的企业，不要只看模型质量，TCO（总拥有成本）同样重要。",
+      "tags": ["Claude-Code", "Copilot-CLI", "成本危机", "企业AI", "Microsoft-Build"],
+      "sources": [
+        "https://cloud.tencent.com/developer/news/3921547",
+        "https://www.x-headline.com/2026/05/22/ai企业成本危机：微软取消claude许可/",
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "NVIDIA Nemotron 3 Ultra 550B 开源模型发布",
+      "summary": "550B 参数混合 Mamba-Transformer MoE架构，输出速度 300+ tps（Qwen3.5的5倍），Agent 任务完成率 91%。在 Intelligence Index、HumanEval、MMLU 等基准上全面超越 GPT-OSS 和 Qwen3.5。",
+      "why": "NVIDIA 从硬件厂商进化为全栈 AI 公司。开源权重+5倍推理速度=企业级 TCO 优势。550B 模型能以更低的推理成本服务复杂任务。",
+      "action_fact": "【事实】Q2-Q3 2026 可用，最低 300GB+ VRAM（量化后）。已开源 Nemotron-CC-v2.1（2.5T tokens）等全套训练数据集。Nano(31.6B)和Super(120B)已可用。",
+      "action_judge": "【判断】关注 Hugging Face 权重发布时间。如果你在做企业级 AI 部署，Nemotron 的推理速度优势意味着相同硬件可以服务更多并发请求——在算力成本敏感的当下，这是核心竞争力。",
+      "tags": ["NVIDIA", "Nemotron-3-Ultra", "开源模型", "MoE", "Computex-2026"],
+      "sources": [
+        "https://www.explainx.ai/blog/nvidia-computex-2026-nemotron-3-ultra-complete-recap",
+        "https://36kr.com/p/3831878986014729"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "NVIDIA Cosmos 3：全球首个开放 Physical AI 全模态模型",
+      "summary": "统一视觉推理+世界生成+动作生成，在 Physics-IQ、PAI-Bench、R-Bench 等 7 项基准测试全部排名第一。模型先'思考'物理再行动，专为机器人/具身智能设计。",
+      "why": "Physical AI 是 2026 年最大叙事之一。Cosmos 3 开放发布意味着机器人训练仿真的门槛被大幅拉低——任何初创公司都能用。",
+      "action_fact": "【事实】Cosmos 3 Nano (8B) 和 Super (32B) 已可用，开放许可发布。支持图像→物理视频+环境音频生成。数十亿多模态训练样本。",
+      "action_judge": "【判断】如果你是做机器人或具身 AI 的，现在就下载 Cosmos 3 测试仿真质量。如果你是做 AI 内容创作的，关注图像→视频+音频的全模态生成能力。",
+      "tags": ["NVIDIA", "Cosmos-3", "Physical-AI", "具身智能", "全模态"],
+      "sources": [
+        "https://www.explainx.ai/blog/nvidia-computex-2026-nemotron-3-ultra-complete-recap",
+        "https://36kr.com/p/3831878986014729"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "DeepSeek V4 Pro 永久降价 75%",
+      "summary": "限时2.5折优惠5月31日到期后转为永久定价。输入 ¥0.025/百万 Token（缓存命中）、输出 ¥6/百万 Token，全球大模型 API 最低价，逆向定价策略引发市场震动。",
+      "why": "在算力成本普遍上涨的背景下，DeepSeek 逆向降价意味着其推理成本优化取得实质性突破。'一杯奶茶=500万次API调用'的性价比时代到来。",
+      "action_fact": "【事实】DeepSeek V4 Pro 是全球最大开源 MoE 模型（1.6T总参数/49B激活参数）。新价格自6月1日起永久生效。输入（缓存命中）¥0.025/MToken，输入（未命中）¥0.265/MToken，输出 ¥6/MToken。",
+      "action_judge": "【判断】如果你之前因为价格因素没用 V4 Pro，现在没有理由不试了。关注其他 API 提供商是否跟进降价——这可能是新一轮价格战的开始。",
+      "tags": ["DeepSeek", "V4-Pro", "降价", "API定价", "开源模型"],
+      "sources": [
+        "https://so.html5.qq.com/page/real/search_news?docid=70000021_8606a1d149600952",
+        "https://www.cnblogs.com/qiniushanghai/p/19925642"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub Copilot Workspace GA：Fleet + Autopilot 自主编程模式",
+      "summary": "Copilot Workspace 正式从 Beta 毕业。新增 Copilot Extensions（Jira/Datadog/ServiceNow）、Fleet 模式（CLI自主运行）、Autopilot 模式（定时后台处理 Issue）。",
+      "why": "AI 编程从'副驾驶'正式变为'自动驾驶'——开发者早上打开 GitHub 发现 Copilot 夜间已经修了 3 个 bug。",
+      "action_fact": "【事实】支持跨完整代码仓库推理、多文件编辑、自主测试生成。Extensions 生态首批集成 Jira、Datadog、ServiceNow。",
+      "action_judge": "【判断】Autopilot 模式最激进——建议先在有界 Issue 上测试，观察自主修改的质量。Fleet 模式适合 CI/CD 管道中的重复性任务。",
+      "tags": ["Copilot-Workspace", "GA", "Autopilot", "Fleet", "AI编程"],
+      "sources": [
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "MCP 2026 无状态协议最大更新 + OpenAI Secure MCP Tunnel",
+      "summary": "MCP 发布 2026-07-28 RC 版本，转向无状态协议架构解决生产级负载均衡痛点。OpenAI 同时推出 Secure MCP Tunnel，解决远程 MCP 通信安全。",
+      "why": "无状态协议意味着 MCP 可以真正部署在 Kubernetes 集群中横向扩展。OpenAI 安全隧道补齐远程 Agent 通信的'最后一公里'。MCP 正在从'实验功能'变成'企业基础设施'。",
+      "action_fact": "【事实】MCP 已从 Anthropic 项目发展为 Linux Foundation 旗下 AAIF 的中立治理项目。生态系统超 1000 个开源 MCP Server。安全隧道支持不受信任网络环境。",
+      "action_judge": "【判断】MCP Server 开发者应关注无状态协议迁移——现有的有状态实现需要重构。企业安全团队应评估 OpenAI Secure MCP Tunnel 是否满足合规要求。",
+      "tags": ["MCP", "无状态协议", "OpenAI", "Secure-Tunnel", "Agent基础设施"],
+      "sources": [
+        "https://www.liuqi.dev/blog/mcp-2026-stateless-revolution",
+        "https://a2a-mcp.org/blog/mcp-2026-roadmap-zh"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Microsoft MAI 模型套件 v2 全品类发布",
+      "summary": "MAI-Image 2.5（新增图像编辑输入）、MAI-Voice 2（15种语言+情绪范围扩展至愤怒/困惑/尴尬等语气）、MAI-Transcribe 1.5（100+语言，FLEURS 3.9% WER 击败 Whisper）。",
+      "why": "微软在'去 OpenAI 化'上全面铺开——编码、图像、语音、转录全覆盖。如果你用 Azure OpenAI Service，关注这些 MAI 模型性能和定价。",
+      "action_fact": "【事实】v1 参考定价：Image $33/Mtoken（图像输出）、Voice $22/M字符、Transcribe $0.36/小时。v2 定价未公布，预计 Foundry GA 时发布。",
+      "action_judge": "【判断】MAI-Transcribe 的 3.9% WER 是行业顶尖水平。如果你有大量语音转文字需求，MAI-Transcribe 可能比 Whisper 更具性价比。",
+      "tags": ["Microsoft", "MAI", "多模态", "语音", "图像生成"],
+      "sources": [
+        "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/",
+        "https://www.studioglobal.ai/zh-cn/discover/answers/what-were-the-key-announcements-and-wall-6a1da6a779d2e38c59613829"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Windows Agent Framework",
+      "type": "Agent 框架",
+      "highlight": "MIT 开源、YAML 定义 Agent、跨平台部署（本地/W365/Azure Arc）、Ambient Agent 常驻后台",
+      "audience": "Windows 平台 Agent 开发者、.NET 开发者",
+      "action": "GitHub star + clone 阅读文档，尝试用 YAML 定义一个本地 Agent",
+      "url": "https://github.com/microsoft/agent-framework"
+    },
+    {
+      "name": "NVIDIA Agent Toolkit",
+      "type": "Agent 编排",
+      "highlight": "OpenShell 安全沙箱运行时 + NemoClaw 企业编排 + AI-Q Blueprints 预构建工作流，全部开源",
+      "audience": "企业 AI 架构师、Agent 平台搭建者",
+      "action": "研究 OpenShell 沙箱机制，对比 LangChain/OpenClaw 的差异",
+      "url": "https://www.explainx.ai/blog/nvidia-computex-2026-nemotron-3-ultra-complete-recap"
+    },
+    {
+      "name": "OpenAI Secure MCP Tunnel",
+      "type": "安全基础设施",
+      "highlight": "解决远程 MCP 通信安全，支持不受信任网络中使用 MCP，补齐生产级部署最后一公里",
+      "audience": "MCP Server 开发者、企业安全团队",
+      "action": "查看 OpenAI 官方文档，评估是否适配现有 MCP 部署",
+      "url": "https://www.liuqi.dev/blog/mcp-2026-stateless-revolution"
+    },
+    {
+      "name": "Nemotron 3 系列模型",
+      "type": "开源模型",
+      "highlight": "31.6B Nano（边缘）+ 120B Super（企业）+ 550B Ultra（战略推理），全系 1M 上下文，推理速度行业最快",
+      "audience": "开源模型开发者、企业私有化部署",
+      "action": "下载 Nano 版本本地测试，关注 Hugging Face 权重发布",
+      "url": "https://www.explainx.ai/blog/nvidia-computex-2026-nemotron-3-ultra-complete-recap"
+    },
+    {
+      "name": "Copilot Workspace Autopilot",
+      "type": "AI 编程工具",
+      "highlight": "定时后台自主修 Bug、多文件跨 repo 推理、集成 Jira/Datadog/ServiceNow Extensions",
+      "audience": "GitHub Copilot 订阅者、团队 Tech Lead",
+      "action": "升级 Copilot 到最新版，配置 Autopilot 规则尝试夜间自动修 Issue",
+      "url": "https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/"
+    },
+    {
+      "name": "DGX Station",
+      "type": "AI 硬件",
+      "highlight": "本地运行 1 万亿参数模型，775GB 统一内存，液冷散热，桌面形态，$45K-$85K",
+      "audience": "AI 研究机构、企业 AI 实验室",
+      "action": "关注 2026 春/夏正式发售日期和合作伙伴列表",
+      "url": "https://www.explainx.ai/blog/nvidia-computex-2026-nemotron-3-ultra-complete-recap"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "微软和OpenAI'离婚'了？Project Polaris彻底改变AI编程格局",
+      "hook": "'Copilot不再用GPT'——一句话就能引发话题争议",
+      "angle": "时间线对比：OpenAI $1310亿→微软全自研。分析为什么微软必须这么做（成本、战略自主、供应链安全）。给开发者的实操建议：8月迁移前该做什么？",
+      "materials": "MS Build 大会视频片段 · GitHub Copilot 截图 · HumanEval 基准对比图表 · 时间线动画",
+      "difficulty": "中"
+    },
+    {
+      "title": "Windows突然变成了AI操作系统？7个你明天就能用到的功能",
+      "hook": "'你的电脑会自己干活了'——极强画面感",
+      "angle": "从普通用户视角讲'Windows Agent'意味着什么——自动分邮件、写周报、监控API。实操演示 WAF YAML 配置 → 本地运行 Agent。",
+      "materials": "Windows Agent Runtime 录屏 · WAF YAML 代码对比 · Agent Store 界面截图 · 前后对比",
+      "difficulty": "中"
+    },
+    {
+      "title": "NVIDIA又要杀疯了：550B模型开源还快5倍，开发者捡到宝了",
+      "hook": "'比Qwen快5倍还开源'——数值冲击力强",
+      "angle": "NVIDIA全栈战略解读：芯片→模型→Agent平台。Nemotron 3 Ultra vs Qwen3.5 vs GPT-OSS 横向对比。判断：NVIDIA会成为AI时代的'微软+Intel'吗？",
+      "materials": "Computex 黄仁勋演讲片段 · 基准测试对比图表 · Nemotron 架构图 · Hugging Face 模型页面",
+      "difficulty": "中"
+    },
+    {
+      "title": "DeepSeek永久降价75%——AI API比矿泉水还便宜了",
+      "hook": "一杯奶茶=500万次API调用——价格对比极度直观",
+      "angle": "价格纵向对比：一年前 vs 今天。横向对比：DeepSeek vs OpenAI vs Anthropic 定价。实操：用 V4 Pro 搭建一个零成本 AI App。",
+      "materials": "价格对比表格/图表 · DeepSeek 定价页截图 · 实操代码录屏 · 成本计算动画",
+      "difficulty": "低"
+    },
+    {
+      "title": "AI终于能看懂物理世界了：NVIDIA Cosmos 3让机器人开眼了",
+      "hook": "'AI第一次理解重力、摩擦力'——科普爆点",
+      "angle": "从'AI只会看图说话'到'AI理解物理定律'的跃迁。Cosmos 3 工作原理通俗解读：先思考→再行动。演示：输入一张桌子照片→生成物理视频。",
+      "materials": "Cosmos 3 官方 Demo 视频 · 物理仿真对比 · 机器人训练仿真画面",
+      "difficulty": "高"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Microsoft Build '取消 Claude Code 许可'（部分标记）",
+      "reason": "5月中旬已有传闻，Build 大会确认细节但并非全新信息。新鲜度扣分，但内容价值仍高故纳入 P0。"
+    },
+    {
+      "item": "各类 '2026年 AI 编程工具横评' 文章（知乎/掘金/CSDN）",
+      "reason": "纯列表式对比文章，无原创信息，无链接证据。多为旧数据（4-5月）拼凑，属于噪音。"
+    },
+    {
+      "item": "'AI企业成本危机' 分析文章",
+      "reason": "基于5月Claude Code取消许可的二次解读，无新增事实。观点可参考但不作为信息来源。"
+    },
+    {
+      "item": "各类中国 AI 市场总结/趋势预测（百度/腾讯/头条）",
+      "reason": "宏观展望类内容，非具体新闻事件，不符合日报'具体新信息'定位。"
+    },
+    {
+      "item": "GitHub '2026 最火开源项目' 盘点（4月/5月版本）",
+      "reason": "时效性过期，非本周信息。"
+    },
+    {
+      "item": "Open Design 项目（nexu-io/open-design）",
+      "reason": "已在前几期日报中覆盖，项目近期无明显新版本或重大更新，标记为噪音避免重复。"
+    },
+    {
+      "item": "NVIDIA N1/N1X PC 芯片 '传闻'",
+      "reason": "来源不明确，未在 Jensen 主题演讲中正式发布。仅作为'可能的产品'提及，可信度不足。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Microsoft Build Day 2（6月3日）",
+      "reason": "更多AI相关 session 和 Workshop 将公布细节。重点关注 Azure Agent Mesh 落地时间、MAI v2 定价、Windows Agent Runtime 开发者体验。"
+    },
+    {
+      "item": "Computex 2026 持续进行（至6月5日）",
+      "reason": "AMD、Intel、Qualcomm 等厂商陆续发布 AI PC 相关产品。联想 N1X 笔记本可能正式亮相。"
+    },
+    {
+      "item": "Project Polaris 迁移路线图",
+      "reason": "8月全量替换影响所有 GitHub Copilot 用户。关注开发者社区的反馈和迁移指南发布。"
+    },
+    {
+      "item": "Anthropic 对 Claude Code 许可取消的回应",
+      "reason": "微软是 Anthropic 最大的企业客户之一。Anthropic 如何回应这一事件（降价？功能对抗？新定价策略？）值得关注。"
+    },
+    {
+      "item": "Apple WWDC 2026（6月8日）",
+      "reason": "Siri 2.0（独立App）+ Gemini 整合 + iOS 27。苹果在AI上的'补课'能否追上来是本周后续焦点。"
+    },
+    {
+      "item": "DeepSeek 降价后的市场反应",
+      "reason": "其他 API 提供商是否跟进降价？75% 降幅是否会触发新一轮价格战？"
+    }
+  ]
+}

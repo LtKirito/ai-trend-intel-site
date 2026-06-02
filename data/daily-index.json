@@ -1,4 +1,5 @@
 [
+  {"date": "2026-06-02", "label": "6 月 2 日 (周二)", "count": "3P0 + 6P1", "tags": "MS-Build · Project-Polaris · Windows-Agent-Platform · NVIDIA-Nemotron · Cosmos-3 · DeepSeek降价 · MCP-2026 · Copilot-Workspace", "summary": "Microsoft Build Day1：Polaris自研编码模型接棒Copilot、Windows重构为Agent OS（WAF MIT开源）、取消Claude Code许可。NVIDIA Computex：Nemotron 550B开源+快5倍、Cosmos 3全球首个Physical AI。DeepSeek永久降价75%"},
   {"date": "2026-06-01", "label": "6 月 1 日 (周日)", "count": "3P0 + 6P1", "tags": "NVIDIA-N1X · Microsoft-MAI · Claude-Opus4.8 · Codex-Pro定价 · WWDC-Siri2.0 · Gemini-3.5-Pro", "summary": "NVIDIA N1X ARM笔记本SoC炸场Computex、微软Build明日发布MAI自研编程模型、Claude Opus 4.8诚实度4倍提升、Codex Pro 2x容量到期"},
   {"date": "2026-05-31", "label": "5 月 31 日 (周日)", "count": "1P0 + 5P1", "tags": "NVIDIA-Polar · AutoClaw · Google-Maps · TIPSv2 · OpenAI-Apple", "summary": "NVIDIA Polar开源强化学习训练框架，智谱AutoClaw iOS上线，Google Maps接入Gemini，DeepMind TIPSv2开源，OpenAI与苹果分销权冲突浮出水面"},
   {"date": "2026-05-30", "label": "5 月 30 日 (周六)", "count": "2P0 + 4P1", "tags": "Anthropic · Opus-4.8 · Span-XFRA · SpaceX · 诚实机制", "summary": "Anthropic $9650亿估值发酵、Opus 4.8 诚实机制讨论、Span XFRA 后院数据中心、Claude Code 降价优化成本"},
