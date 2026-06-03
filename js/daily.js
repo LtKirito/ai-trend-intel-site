@@ -6,6 +6,7 @@ async function renderDaily() {
     return;
   }
   
+  populateDailyMonths();
   renderDailyPeriods();
   selectDay(state.currentDay);
 }
@@ -136,9 +137,25 @@ function renderDailyConclusions(conclusions) {
 }
 
 /* ---- Daily Month Filter ---- */
+function populateDailyMonths() {
+  const dailyMonthEl = document.getElementById('dailyMonth');
+  if (!dailyMonthEl || !state.dailyIndex) return;
+
+  const monthLabels = new Map();
+  state.dailyIndex.forEach(item => {
+    const month = (item.date || '').slice(0, 7);
+    if (!month || monthLabels.has(month)) return;
+    const [year, monthNum] = month.split('-');
+    monthLabels.set(month, `${year} 年 ${Number(monthNum)} 月`);
+  });
+
+  dailyMonthEl.innerHTML = Array.from(monthLabels, ([value, label]) =>
+    `<option value="${value}">${label}</option>`
+  ).join('');
+}
+
 const dailyMonthEl = document.getElementById('dailyMonth');
 if (dailyMonthEl) {
-  // Populate months from index
   dailyMonthEl.addEventListener('change', () => {
     renderDailyPeriods();
   });
