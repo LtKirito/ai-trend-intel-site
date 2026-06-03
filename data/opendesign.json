@@ -2,212 +2,213 @@
   "repo": {
     "name": "nexu-io/open-design",
     "description": "Local-first, open-source Claude Design alternative",
-    "stars": 56570,
-    "forks": 6391,
-    "open_issues": 318,
+    "stars": 57752,
+    "forks": 6519,
+    "open_issues": 329,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-06-01T04:34:12Z",
+    "updated": "2026-06-03T05:55:26Z",
     "latest_release": {
-      "version": "open-design-v0.8.0",
-      "date": "2026-05-22",
-      "title": "Open Design 0.8.0 — Plugin Engine + Headless + #DeFigma",
-      "summary": "305 PRs · 75 contributors · 7 天。插件引擎重建、Headless by default、149 设计系统、19 语言支持、Windows/macOS 自动更新。v0.8.0 发布第十天，Stars 已突破 56,500。"
+      "version": "open-design-v0.9.0",
+      "date": "2026-06-02",
+      "title": "Open Design 0.9.0",
+      "summary": "310 PRs · 98 contributors · 7 天。0.9.0 是 install-and-create release：Open Design AMR 内置到桌面端，首次使用从安装 CLI/API key 降为登录后选择模型；同时扩展 Aider、Trae CLI、Antigravity、DeepSeek Reasonix 等 agent adapter，强化插件生态、模型选择、评论工作流、Studio 工具、跨平台安装和 MCP 工作区能力。"
     }
   },
   "recent_prs": [
     {
-      "number": 3398,
-      "title": "fix(web): ensure manual edit canvas wrapper fills full height",
+      "number": 3538,
+      "title": "feat(landing-page): add /download page that auto-reflects the latest release",
       "state": "open",
-      "author": "daltonnyx",
-      "labels": ["size/XS", "risk/medium", "type/bugfix"],
-      "impact": "修复手动编辑模式下画布容器高度不足的问题，canvas wrapper 未 fill_container 导致内容区域被裁剪或底部留白。size/XS 表明修复范围极小，仅涉及布局属性调整。改善手动编辑（Manual Edit）模式的视觉体验。",
-      "url": "https://github.com/nexu-io/open-design/pull/3398"
-    },
-    {
-      "number": 3266,
-      "title": "Fix Studio share menu hierarchy",
-      "state": "open",
-      "author": "zoeforfun",
-      "labels": ["size/XL", "risk/medium", "type/feature"],
-      "impact": "重构 Studio 分享菜单层级：点击 Share 按钮后第一组显示「Copy share link」「Open share page」而非部署/下载操作，匹配用户分享意图。下方依次为 PUBLISH ONLINE（Vercel/Cloudflare Pages）、DOWNLOAD（PDF/PPTX/zip/HTML/Markdown）、SAVE（Save as template）。Copy link 提供显式成功/失败反馈。涉及 UI/API/i18n 三层变更，为默认行为改变。",
-      "url": "https://github.com/nexu-io/open-design/pull/3266"
-    },
-    {
-      "number": 3397,
-      "title": "feat(web): identifiable generation failure cause + contextual recovery",
-      "state": "open",
-      "author": "zoeforfun",
+      "author": "522700967-wq",
       "labels": ["size/L", "risk/medium", "type/feature"],
-      "impact": "为 AI 生成失败提供可辨识的失败原因（配额不足、认证过期、速率限制等），并给出上下文相关的恢复建议操作，而非仅展示原始 stderr。改善生成失败 UX，让用户能自行诊断并采取恢复行动，减少「不知道哪里出错了」的挫败感。size/L 涉及生成失败分类和恢复路径的双层实现。",
-      "url": "https://github.com/nexu-io/open-design/pull/3397"
+      "impact": "新增 /download 下载页并自动反映最新 release 信息，直接承接 0.9.0 发布后的安装转化需求。该 PR 将 landing 页面从静态宣传扩展为可跟随 GitHub Release 更新的下载入口，降低维护成本，但也要求 release metadata 解析稳定。",
+      "url": "https://github.com/nexu-io/open-design/pull/3538"
     },
     {
-      "number": 3347,
-      "title": "fix(web): queue preview comments while busy and pin deck markers",
-      "state": "open",
-      "author": "zoeforfun",
-      "labels": [],
-      "impact": "修复预览评论在高负载场景下的竞态问题：agent 运行繁忙时评论被丢弃而非排队，deck markers 在内容刷新后丢失固定位置。实现评论队列机制确保忙碌时评论不丢失，同时保持 deck 标记在内容更新后固定在正确位置。改善多用户协作场景和长时间运行时的评论可靠性。",
-      "url": "https://github.com/nexu-io/open-design/pull/3347"
-    },
-    {
-      "number": 3396,
-      "title": "Improve workspace model pickers",
-      "state": "open",
-      "author": "AmyShang-alt",
-      "labels": ["size/L", "risk/medium", "type/enhancement"],
-      "impact": "重构工作区模型选择器交互：改进模型列表的展示、搜索和切换体验。涉及 workspace 设置中的模型选择 UI，使用户在多种 CLI agent（Claude Code/Codex/OpenCode/Cursor 等）之间切换模型更加直观。size/L 表明对模型选择器组件的整体重构。",
-      "url": "https://github.com/nexu-io/open-design/pull/3396"
-    },
-    {
-      "number": 3345,
-      "title": "fix(web): keep multipage html artifact entry stable",
-      "state": "open",
-      "author": "RyanCheng77",
-      "labels": ["size/L", "risk/medium", "type/bugfix"],
-      "impact": "修复多页 HTML 制品的入口稳定性问题：当多页 HTML artifact 内容更新或页面切换时，入口锚点（entry anchor）可能漂移或丢失，导致用户回到错误的页面。修复确保内容刷新后保持当前页面的入口位置不变。对使用多页 HTML 导出（如幻灯片演示、多页报告）的用户影响显著。",
-      "url": "https://github.com/nexu-io/open-design/pull/3345"
-    },
-    {
-      "number": 3312,
-      "title": "fix(web): make draw scroll cross-origin safe",
+      "number": 3515,
+      "title": "fix: persist dismissed todo card state across tab switches",
       "state": "merged",
-      "author": "CtriXin",
-      "labels": ["size/M", "risk/medium", "type/bugfix"],
-      "impact": "合并入 main（2026-06-01）：修复 draw 画布在跨域 iframe 中滚动事件被浏览器安全策略阻止的问题。当预览嵌入第三方页面或不同源的 iframe 时，draw 组件的滚轮/触摸滚动可能被浏览器 CORS 策略静默阻止。修复确保跨域场景下的 draw 交互正常工作。size/M，今日合入。",
-      "url": "https://github.com/nexu-io/open-design/pull/3312"
-    },
-    {
-      "number": 2997,
-      "title": "fix: add confirmation dialog before deleting extraction history items",
-      "state": "open",
       "author": "xxiaoxiong",
       "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "为 Memory 提取历史删除操作添加确认对话框，防止误删。此前一键删除无任何确认或撤销机制。修复沿用 onClearExtractions 的 window.confirm 模式，新增 i18n key settings.memoryExtractionDeleteConfirm 覆盖全部 20 个语言文件。size/S 表明修改范围极小但 UX 改善显著。7 条评论，已活跃 6 天。",
-      "url": "https://github.com/nexu-io/open-design/pull/2997"
+      "impact": "已于 2026-06-03 合入，修复用户关闭 todo card 后切换 tab 又重新出现的问题。影响面集中在 Home/项目工作流中的待办卡片状态持久化，属于小范围 UX 稳定性修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/3515"
+    },
+    {
+      "number": 3550,
+      "title": "[codex] Fix landing download release metadata",
+      "state": "open",
+      "author": "Siri-Ray",
+      "labels": ["size/M", "risk/medium", "type/bugfix"],
+      "impact": "修复 landing 下载页的 release metadata，和 #3538 形成直接配套。说明 0.9.0 后下载页自动化仍存在元数据准确性风险，需关注 tag、asset、平台架构和下载链接映射是否一致。",
+      "url": "https://github.com/nexu-io/open-design/pull/3550"
+    },
+    {
+      "number": 3551,
+      "title": "Fix fabricated assistant turn replay in transcripts",
+      "state": "open",
+      "author": "YOMXXX",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "修复 transcript 回放中伪造 assistant turn 的问题，属于对对话记录可信度和回放一致性的关键修复。虽然 size/S，但影响到审计、复盘和协作语境中的事实完整性，需优先关注。",
+      "url": "https://github.com/nexu-io/open-design/pull/3551"
+    },
+    {
+      "number": 2712,
+      "title": "feat(web): Settings / General with Enter-to-send preference + Escape-to-stop",
+      "state": "open",
+      "author": "leessju",
+      "labels": ["size/L", "risk/medium", "type/feature"],
+      "impact": "在 Settings / General 中加入 Enter 发送偏好和 Escape 停止行为，增强聊天交互可配置性。该 PR 涉及输入行为、设置持久化和多场景 composer 交互，属于用户习惯层面的基础体验改动。",
+      "url": "https://github.com/nexu-io/open-design/pull/2712"
+    },
+    {
+      "number": 3498,
+      "title": "[codex] Hide placeholder assistant cost values",
+      "state": "merged",
+      "author": "Sid-Qin",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "已合入，隐藏 assistant cost 的占位值，避免用户误读成本统计。该修复说明 0.9.0 后 telemetry/cost 展示仍在收敛，短期重点是减少误导性指标。",
+      "url": "https://github.com/nexu-io/open-design/pull/3498"
+    },
+    {
+      "number": 3471,
+      "title": "[codex] Exclude manual sketches from turn output inference",
+      "state": "merged",
+      "author": "Sid-Qin",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "已合入，避免 manual sketches 被错误纳入 turn output inference。该修复改善 Studio/Sketch 与对话输出推断之间的边界，减少人工草图被误判为模型产物的风险。",
+      "url": "https://github.com/nexu-io/open-design/pull/3471"
+    },
+    {
+      "number": 3467,
+      "title": "[codex] Add inline color swatches for hex chat output",
+      "state": "merged",
+      "author": "Sid-Qin",
+      "labels": ["size/M", "risk/medium", "type/enhancement"],
+      "impact": "已合入，为聊天输出中的十六进制颜色增加 inline swatches。该增强提升设计场景下颜色沟通效率，尤其适合设计系统、样式审查和 AI 生成 UI 的快速校验。",
+      "url": "https://github.com/nexu-io/open-design/pull/3467"
     }
   ],
   "recent_issues": [
     {
-      "number": 982,
-      "title": "Improve agent failure UX: surface structured errors (quota, auth, rate limit) instead of raw stderr tails",
-      "author": "gabrielvaz",
-      "labels": ["enhancement", "help wanted"],
-      "comments": 12,
-      "summary": "当 agent 运行失败时，UI 仅展示原始 stderr 尾部，用户无法快速判断是配额耗尽、认证过期还是速率限制。建议对已知失败模式做结构化分类并展示可操作的恢复建议。12 条评论持续活跃，与今日新开 PR #3397（生成失败恢复）形成呼应，可能即将有实质性进展。",
-      "url": "https://github.com/nexu-io/open-design/issues/982"
+      "number": 3537,
+      "title": "Claude Sonnet via AMR is seriously hallucinating user instructions and acting on them.",
+      "author": "FunKyDunKnz",
+      "labels": ["bug", "priority:p0", "security"],
+      "comments": 3,
+      "summary": "AMR 路径下 Claude Sonnet 严重幻觉用户指令并执行，被标记为 bug、priority:p0 和 security。该问题直接冲击 0.9.0 主打的 AMR 零配置体验，是当前最高优先级风险。",
+      "url": "https://github.com/nexu-io/open-design/issues/3537"
     },
     {
-      "number": 3147,
-      "title": "feat(codex): expose GPT-5.5 Fast service tier in the model picker",
-      "author": "jaehanbyun",
-      "labels": ["feature", "needs-product-direction"],
-      "comments": 2,
-      "summary": "请求在 Codex CLI 的模型选择器中暴露 GPT-5.5 Fast 服务等级选项，让用户可以在速度和精度之间做权衡。标记 needs-product-direction 表明需要维护者确认此功能的方向和优先级，与 #3396（模型选择器重构）联动。",
-      "url": "https://github.com/nexu-io/open-design/issues/3147"
+      "number": 3540,
+      "title": "SaaS Landing Plugin not responding to click",
+      "author": "ZiqiXiao",
+      "labels": ["bug"],
+      "comments": 6,
+      "summary": "SaaS Landing Plugin 点击无响应，6 条评论显示问题已有一定复现和讨论。它暴露了 0.9.0 插件生态扩展后的交互可靠性问题，影响插件市场转化体验。",
+      "url": "https://github.com/nexu-io/open-design/issues/3540"
     },
     {
-      "number": 3381,
-      "title": "Switched to BYOK on Safari Browser and it would not allow a switch back to CLI",
-      "author": "wovokaGST",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 8,
-      "summary": "在 Safari 浏览器中切换到 BYOK（自带密钥）模式后，无法切回 CLI 模式，模型选择被锁定在 BYOK 路径。影响 macOS Safari 用户的模型选择自由，Good First Issue 标签表明修复方向明确。8 条评论说明社区关注度高，是今日热度最高的新 Bug 之一。",
-      "url": "https://github.com/nexu-io/open-design/issues/3381"
+      "number": 3416,
+      "title": "Follow-up: harden sandbox runtime boundaries after merged stack",
+      "author": "dredozubov",
+      "labels": ["question", "security"],
+      "comments": 10,
+      "summary": "围绕已合入 stack 后的 sandbox runtime 边界继续加固，标签包含 security，评论数达到 10。该 issue 与运行时隔离、文件/命令执行边界和 MCP 工作区能力扩展相关，是安全治理主线。",
+      "url": "https://github.com/nexu-io/open-design/issues/3416"
     },
     {
-      "number": 3390,
-      "title": "Adapter for antigravity CLI",
-      "author": "attinto",
-      "labels": ["enhancement", "needs-product-direction"],
-      "comments": 5,
-      "summary": "请求为 Antigravity CLI 添加适配器支持，进一步扩展 Open Design 的第三方 CLI 生态。Antigravity 是新兴的 AI 编程工具，此请求反映了社区对 OD 作为多 agent 运行时汇聚层的期待。5 条评论，needs-product-direction 表明需要讨论适配器接口规范。",
-      "url": "https://github.com/nexu-io/open-design/issues/3390"
-    },
-    {
-      "number": 3393,
-      "title": "Docker Desktop on macOS: web UI cannot call /api/* with OD_API_TOKEN unless host networking is used",
-      "author": "vladovdey",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 7,
-      "summary": "在 macOS Docker Desktop 中运行 Open Design 时，即使设置了 OD_API_TOKEN，web UI 也无法调用 /api/* 端点，除非使用 host 网络模式。根因可能是 Docker 默认的 bridge 网络模式下容器间通信受限。影响所有希望通过 Docker 部署 OD 的 macOS 用户，7 条评论快速上升。",
-      "url": "https://github.com/nexu-io/open-design/issues/3393"
-    },
-    {
-      "number": 498,
-      "title": "feat(web): enable mid-chat skill and design system switching via import menu",
-      "author": "encyc",
-      "labels": ["help wanted", "feature"],
-      "comments": 12,
-      "summary": "请求支持在对话进行中通过 import 菜单切换 skill 和设计系统，而非当前必须在对话开始前预设的方式。对需要动态调整 agent 能力的场景（如先用某个 skill 生成草稿、再切换到另一个 skill 精修）至关重要。12 条评论长期活跃，是社区呼声较高的功能需求。",
-      "url": "https://github.com/nexu-io/open-design/issues/498"
-    },
-    {
-      "number": 1027,
-      "title": "enhancement: Deploy to Railway/Vercel/Netlify buttons",
-      "author": "lefarcen",
-      "labels": ["enhancement", "good first issue"],
-      "comments": 8,
-      "summary": "在 Studio 分享菜单中增加一键部署到 Railway/Vercel/Netlify 的按钮，减少用户手动导出和上传的步骤。与 #3266（分享菜单重构）和 #1028（Azure 部署）配套，形成完整的部署生态矩阵。Good First Issue 适合社区贡献。",
-      "url": "https://github.com/nexu-io/open-design/issues/1027"
-    },
-    {
-      "number": 1028,
-      "title": "enhancement: Azure deployment support (App Service/ACI)",
-      "author": "lefarcen",
-      "labels": ["enhancement", "good first issue"],
-      "comments": 7,
-      "summary": "请求为 Open Design 制品添加 Azure 部署支持（App Service / ACI），补齐企业级云部署选项。与 #1027（Vercel/Netlify 部署按钮）形成平台覆盖矩阵，满足不同企业用户的云偏好。7 条评论，Good First Issue。",
-      "url": "https://github.com/nexu-io/open-design/issues/1028"
-    },
-    {
-      "number": 3380,
-      "title": "Claude Code adapter spawns a new session per message instead of resuming (token waste + lost edit state)",
+      "number": 3545,
+      "title": "Create fixed-task QA gate for run reliability optimizations",
       "author": "yinjialu",
-      "labels": ["kind/bug", "area/runtime"],
+      "labels": [],
       "comments": 1,
-      "summary": "Claude Code 适配器在多轮对话中每条消息都新建会话而非续接已有会话，导致 token 严重浪费且编辑状态（如打开的文件、工作目录上下文）丢失。对 Claude Code 用户的体验影响极大——每次对话都像从头开始。标记 area/runtime，是今日新开的运行时关键 Bug。",
-      "url": "https://github.com/nexu-io/open-design/issues/3380"
+      "summary": "为 run reliability 优化创建固定任务 QA gate，说明团队正在把稳定性优化从单点修复推进到可验证流程。该方向可与失败分类、重试策略和 telemetry 形成闭环。",
+      "url": "https://github.com/nexu-io/open-design/issues/3545"
     },
     {
-      "number": 41,
-      "title": "feat: Add deployment sharing with open-design watermark",
-      "author": "lefarcen",
-      "labels": ["type/feature", "stale"],
+      "number": 3542,
+      "title": "Complete Gemini stream-json event coverage",
+      "author": "alchemistklk",
+      "labels": ["enhancement"],
       "comments": 1,
-      "summary": "最早的功能请求之一：为部署分享添加 Open Design 水印标识，提升品牌可见性。标记 stale 表明长期未更新，但仍保留在 open 状态。1 条评论，优先级较低。",
-      "url": "https://github.com/nexu-io/open-design/issues/41"
+      "summary": "补齐 Gemini stream-json 事件覆盖，属于多模型运行时兼容性增强。它直接影响流式输出、状态追踪和错误恢复，是 0.9.0 多 agent/model bench 扩张后的必要补课。",
+      "url": "https://github.com/nexu-io/open-design/issues/3542"
+    },
+    {
+      "number": 3543,
+      "title": "Implement safe retry policy and retry telemetry for chat runs",
+      "author": "yinjialu",
+      "labels": ["enhancement"],
+      "comments": 1,
+      "summary": "为 chat runs 实现安全重试策略和 retry telemetry，承接失败分类和运行可靠性主线。重点在于避免盲目重试引入重复执行，同时收集足够数据定位失败桶。",
+      "url": "https://github.com/nexu-io/open-design/issues/3543"
+    },
+    {
+      "number": 3408,
+      "title": "Reliability push: classify run failures, correlate PostHog with Langfuse, and add safe retries",
+      "author": "yinjialu",
+      "labels": ["bug"],
+      "comments": 13,
+      "summary": "运行可靠性集中推进：分类 run failures，关联 PostHog 与 Langfuse，并增加安全重试。13 条评论显示这是当前稳定性治理的核心议题，与 #3543、#3544、#3545、#3546 构成连续工作包。",
+      "url": "https://github.com/nexu-io/open-design/issues/3408"
+    },
+    {
+      "number": 3544,
+      "title": "Monitor unknown and coarse failed-run buckets after PR1 classification",
+      "author": "yinjialu",
+      "labels": ["type/enhancement"],
+      "comments": 1,
+      "summary": "在 PR1 失败分类后监控 unknown/coarse failed-run buckets，说明团队已进入基于 telemetry 的后续收敛阶段。下一步重点是把粗粒度失败桶拆细并减少未知失败占比。",
+      "url": "https://github.com/nexu-io/open-design/issues/3544"
+    },
+    {
+      "number": 3547,
+      "title": "Pick and implement the first ROI-ranked latency or token optimization",
+      "author": "yinjialu",
+      "labels": ["feature"],
+      "comments": 1,
+      "summary": "选择并实现首个按 ROI 排序的延迟或 token 优化，说明优化重点从功能扩展转向成本和响应性能。该议题与 AMR、Codex、Claude Code 等多 agent 路径的使用成本直接相关。",
+      "url": "https://github.com/nexu-io/open-design/issues/3547"
+    },
+    {
+      "number": 3546,
+      "title": "Fix the top remaining failed-run bucket after PR1 and retry data",
+      "author": "yinjialu",
+      "labels": ["bug"],
+      "comments": 1,
+      "summary": "基于 PR1 和 retry 数据修复剩余最高频 failed-run bucket。该 issue 表明可靠性工作已具备数据闭环，接下来应观察 top bucket 是否明显下降。",
+      "url": "https://github.com/nexu-io/open-design/issues/3546"
     }
   ],
   "trends": {
-    "direction": "v0.8.0 发布第十天，Stars 突破 56,500（日增 +560），open issues 大幅降至 318（-33）。今日 #3312（draw scroll 跨域安全）合入 main，多个聚焦 Web UI 体验打磨的新 PR 涌现：生成失败恢复（#3397）、模型选择器重构（#3396）、分享菜单重构（#3266）、预览评论队列（#3347）、多页 HTML 入口稳定（#3345）。Issues 侧 4 个新问题值得关注：Safari BYOK 切换锁死（#3381，8评论）、Claude Code adapter 会话不续接（#3380）、Docker macOS API 阻断（#3393，7评论）、Antigravity CLI 适配器请求（#3390）。整体处于 v0.8.0 后的 Web UI 体验打磨期，同时第三方 CLI 生态（Antigravity）和部署矩阵（Railway/Azure）持续扩展。",
+    "direction": "0.9.0 发布后，Open Design 的主线从 v0.8.0 的插件引擎升级转向“安装即创建”：内置 AMR、扩展多 agent adapter、改善模型选择和下载入口。近期 PR/Issue 显示团队正同时推进 release 下载页、transcript 可信回放、聊天输入偏好和 run reliability 数据闭环。",
     "affected_modules": [
-      "web-studio-share-menu",
-      "web-manual-edit-canvas",
-      "web-generation-failure-recovery",
-      "web-model-picker",
-      "web-preview-comments",
-      "web-draw-cross-origin",
-      "web-multipage-html",
-      "daemon-claude-code-adapter",
-      "desktop-packaged-safari-byok"
+      "landing-download-page",
+      "release-metadata",
+      "amr-runtime",
+      "agent-adapters",
+      "chat-transcripts",
+      "chat-run-reliability",
+      "safe-retry-telemetry",
+      "sandbox-runtime-boundaries",
+      "plugin-marketplace",
+      "settings-general-composer"
     ],
     "risks": [
-      "Claude Code adapter 每轮新建会话（#3380）：token 浪费严重且编辑状态丢失，对 Claude Code 用户影响极大，需紧急修复",
-      "Safari BYOK 无法切回 CLI（#3381）：macOS Safari 用户切换 BYOK 后模型选择被锁定，8 条评论显示影响面不低",
-      "Docker macOS API 调用失败（#3393）：容器化部署场景受阻，仅 host 网络模式可用，7 条评论热度上升快",
-      "多个 XXL/XL size PR 同时活跃（#3266 XXL、#3397 L、#3396 L、#3345 L）：大量代码变更并行 review 增加合并冲突和回归风险"
+      "AMR 作为 0.9.0 核心卖点，但 #3537 暴露 Claude Sonnet via AMR 幻觉并执行用户指令的 P0/security 风险，可能影响用户对零配置路径的信任。",
+      "下载页自动跟随 release 的能力仍有元数据修复 PR（#3550），若 asset/tag/平台架构映射错误，会直接影响 0.9.0 安装转化。",
+      "run reliability 问题集中爆发（#3408、#3543、#3544、#3545、#3546），说明失败分类、重试策略和 telemetry 仍处在建设期，短期可能继续出现未知失败桶。",
+      "sandbox runtime boundary 加固（#3416）与 MCP/文件操作能力扩展并行推进，需要防止便利性提升带来执行边界回归。"
     ],
     "actions": [
-      "关注 #3380 Claude Code adapter 会话保持修复——对 Claude Code 用户是核心体验问题，token 浪费直接影响使用成本",
-      "跟踪 #3397 生成失败恢复方案合入——为生成失败提供可辨识原因和上下文恢复路径，呼应长期诉求 #982（12评论），是改善整体稳定性的关键 PR",
-      "观察 #3312 今天合入后的跨域 draw scroll 行为——确保修复不会引入新的跨域兼容性回归",
-      "关注 #3390 Antigravity CLI 适配器讨论——是 v0.8.0 「Everything is a plugin」理念下第三方 CLI 生态扩展的新信号"
+      "优先跟踪 #3537 的 AMR 安全修复进展，确认是否需要限制指令执行、增加系统提示隔离或回滚相关模型路径。",
+      "关注 #3538 与 #3550 的联动合入，验证 /download 页面是否能稳定展示 latest release、Windows/macOS/Linux asset 和 portable zip。",
+      "跟踪 #3408 系列可靠性议题，观察 safe retry policy、fixed-task QA gate、unknown bucket 监控是否形成可量化下降。",
+      "关注 #3551 transcript 回放修复，因为它影响对话审计、复盘和协作记录可信度。"
     ],
-    "next_week": "预计 #3397（生成失败恢复）和 #3266（分享菜单重构）本周内合入，前者解决长期痛点 #982，后者重塑 Studio 分享体验。#3396（模型选择器重构）和 #3345（多页 HTML 稳定性）可能在审核后于下周合入。Claude Code adapter 会话问题（#3380）和 Safari BYOK 切换（#3381）是两大紧急 Bug，社区响应速度将决定修复窗口。Antigravity CLI 适配器（#3390）代表了 v0.8.0 插件化引擎吸引第三方 CLI 接入的趋势——如果 API 规范稳定，预计会有更多 CLI 适配器请求出现。"
+    "next_week": "下周应重点观察 0.9.0 后的 AMR 稳定性与安全性是否快速收敛，尤其是 #3537 是否被修复或降级处理。若 #3538/#3550 合入，Open Design 的下载页会成为 release 转化入口；同时 #3408 系列可靠性任务可能开始产出首批失败桶下降数据，决定 0.9.0 后体验口碑是否稳住。"
   },
-  "cached_at": "2026-06-01T12:00:00+08:00",
-  "overview_summary": "v0.8.0 发布第十天。Stars 56,010→56,570（+560），Forks 6,337→6,391（+54），开放 Issues 351→318（-33）。今日 #3312（draw scroll 跨域安全）合入 main。开放 PR 重点：#3397（生成失败恢复，L/feature）为今日亮点——为 AI 生成失败提供可辨识原因+上下文恢复，呼应长期诉求 #982；#3266（分享菜单重构，XL/feature）重塑 Studio Share 层级；#3396（模型选择器重构，L/feature）改善 workspace 模型切换体验；#3347（预览评论队列）修复高负载下评论丢失。Issues 侧 4 个新问题：Safari BYOK 锁死（#3381，8评论）、Claude Code adapter 不续接会话（#3380，token 浪费+状态丢失）、Docker macOS API 阻断（#3393，7评论）、Antigravity CLI 适配器请求（#3390，第三方生态扩展信号）。整体处于 v0.8.0 后的 Web UI 体验打磨期，生成失败恢复和第三方 CLI 生态扩展为两大主线。"
+  "cached_at": "2026-06-03T13:42:43+08:00",
+  "overview_summary": "Open Design 已发布 0.9.0（2026-06-02），Stars 57,752，Forks 6,519，开放 Issues 329。0.9.0 主打 install-and-create：AMR 内置、零配置首次运行、多 agent bench 扩展、插件生态和 Studio/评论/自动化/MCP 能力增强。最新 PR 显示 release 下载入口、下载元数据修复、transcript 可信回放、聊天输入偏好和设计输出细节正在快速迭代；最新 Issues 则集中在 AMR 安全风险、插件点击失效、sandbox 边界、run reliability、safe retry telemetry 和 token/latency 优化。整体判断：项目进入 0.9.0 发布后的稳定性与转化入口打磨期，AMR 安全和运行可靠性是短期最大风险。"
 }
