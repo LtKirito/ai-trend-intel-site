@@ -1,0 +1,137 @@
+{
+  "date": "2026-06-03",
+  "title": "2026-06-03 AI信息差日报",
+  "coverage": "覆盖窗口：6/1 ~ 6/3（周末 + Build Day1 深度）",
+  "sources": "信息源：Microsoft Build 2026官方 / OpenAI官网 / Anthropic Release Notes / Computex 2026 / 即刻 / 知乎 / 腾讯科技",
+  "conclusions": [
+    "微软Build 2026全栈Agent化不只是口号。从7款MAI自研模型（含首款推理模型MAI-Thinking-1）、Scout常驻Agent、GitHub Copilot桌面版，到MXC系统级安全沙箱，微软拿出了从模型→产品→系统→硬件的完整Agent闭环。",
+    "OpenAI Codex从'程序员专属'走向'全员知识工作台'。6个角色专属插件（数据/创意/销售/产品/投资/投行）+ Sites建站 + Annotations批注，覆盖62个应用110项技能，周活破500万。",
+    "Agent安全治理变基础设施。MXC（系统级沙箱）+ ACS（开源行为规范标准）+ ASSERT（AI测试框架）三件套齐发，回答了'Agent进入企业核心数据后怎么管'这个最核心的问题。",
+    "Claude Code 2.1.160日更不辍。安全加固（防恶意shell）+ 后台会话改进 + CJK输入法修复，Anthropic的迭代速度依然惊人。"
+  ],
+  "summary": "微软Build Day1全栈Agent化：7个MAI自研模型+首款推理模型打平Sonnet 4.6、Scout常驻Agent+MXC安全三件套。OpenAI Codex发布6大角色插件+Site建站，从程序员工具走向全员知识工作台。",
+  "body": "微软Build 2026 Day1释放了Agent全栈落地的明确信号。从模型层（MAI-Thinking-1推理模型盲测打平Sonnet 4.6）、产品层（Scout常驻Agent+Copilot桌面版）、系统层（MXC沙箱+ACS安全规范+ASSERT测试框架）到硬件层（Surface RTX Spark+Project Solara），微软拿出了业界最完整的Agent闭环方案。与此同时，OpenAI Codex发布6个角色专属插件，将Codex从编程工具扩展为全员知识工作台。Agent安全治理三件套的发布标志着Agent从'能用'进入'受控可用'阶段。",
+  "judgement": "今天的两大主线：①微软从依靠OpenAI到自建全栈Agent能力的速度远超预期，MAI模型的竞争力和MXC系统级安全是真正的差异化；②OpenAI Codex的全员化是一次精准的'横向覆盖'反击，但能否在垂直深度上与微软的工具链整合抗衡，取决于插件生态的开放速度和第三方参与度。Agent安全治理从今天起不再是可选项，而是企业部署Agent的必答题。",
+  "tags": ["MS-Build", "MAI-Thinking", "OpenAI-Codex", "Agent安全", "Scout", "Copilot-Desktop", "Project-Solara", "Claude-Code"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "MAI-Thinking-1 + 7款自研模型",
+      "summary": "微软发布首款旗舰推理模型MAI-Thinking-1（35B活跃/128K上下文），盲测打平Sonnet 4.6；同时发布MAI-Code-1-Flash等共7款自研模型，全部零蒸馏从零训练。",
+      "why": "微软不再只是'套壳OpenAI'，已具备从零训练前沿模型能力。AI编程模型竞争从'OpenAI vs Anthropic'变成三方混战，微软通过垂直整合（模型+IDE+OS+云）形成独特优势。",
+      "action_fact": "MAI模型通过Azure Foundry、Open Router、Fireworks、Baseten分发，开发者可自行调整权重。尽快注册Azure Foundry预览权限测试MAI-Thinking-1。",
+      "action_judge": "如果你在用GitHub Copilot，关注8月Polaris切换后的编码体验变化；如果你在Azure生态，MAI-Thinking-1的成本优势值得量化评估。",
+      "tags": ["MAI", "推理模型", "微软自研", "AI编程"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01OUL00", "https://zhuanlan.zhihu.com/p/2045364131629372514"]
+    },
+    {
+      "rank": "P0",
+      "title": "OpenAI Codex 全员化",
+      "summary": "Codex发布6个角色专属插件（数据分析/创意/销售/产品/投资/投行），覆盖62个应用110项技能，支持Sites建站和Annotations批注。周活破500万。",
+      "why": "Codex从'AI编程Agent'正式转型为'全角色知识工作AI工作台'。Sites功能让非开发者也能创建交互式应用。这是OpenAI对微软Build的防御性反击。",
+      "action_fact": "Business/Enterprise用户可在Codex插件目录安装角色插件，Sites通过插件启用。个人用户先查看插件覆盖的应用是否包含你的工具栈。",
+      "action_judge": "如果你是数据分析师/产品经理/投资人，Codex角色插件可能比通用ChatGPT更实用。关注OpenAI的开放插件生态计划。",
+      "tags": ["OpenAI", "Codex", "插件", "Sites", "全员化"],
+      "sources": ["https://releasebot.io/updates/openai", "https://www.thestateofai.com/news/openai-codex-announcement-for-enterprises"]
+    },
+    {
+      "rank": "P0",
+      "title": "Agent安全三件套 (MXC+ACS+ASSERT)",
+      "summary": "微软发布Agent安全治理全栈方案：MXC系统级沙箱、ACS开源行为规范SDK、ASSERT AI评估测试框架。",
+      "why": "业界首个从OS层到规范层到测试层的Agent安全治理完整方案。Agent安全从'事后审计'进化为'事前约束'，这对企业AI部署是分水岭。",
+      "action_fact": "ACS以SDK发布，支持LangChain/OpenAI Agents SDK/Anthropic Agents SDK/AutoGen/CrewAI/MCP等插件。立即查看ACS的GitHub仓库。",
+      "action_judge": "如果你在做企业级Agent部署，MXC+ACS+ASSERT是目前最完整的安全方案。即使不用微软生态，ACS作为开源标准也值得跟进。",
+      "tags": ["Agent安全", "MXC", "ACS", "ASSERT", "治理"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01BUT00", "https://inews.hket.com/article/4140483"]
+    },
+    {
+      "rank": "P0",
+      "title": "Scout + GitHub Copilot 桌面版",
+      "summary": "Scout（基于OpenClaw的Teams常驻Agent）+ GitHub Copilot桌面应用（My Work/Agent Merge/Canvas）。",
+      "why": "Agent的交互界面从CLI扩展到桌面和协作工具。Scout拥抱OpenClaw开源框架标志着Agent时代的'Linux时刻'。",
+      "action_fact": "Scout通过Frontier计划提供（需Copilot订阅）。Copilot桌面版支持Win11/Mac/Linux，需Copilot订阅。",
+      "action_judge": "OpenClaw是开源的，可以先跑OpenClaw+接Teams API做原型，等Scout开放后无缝迁移。",
+      "tags": ["Scout", "OpenClaw", "Copilot", "桌面Agent", "Teams"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01BUT00"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI + AWS Bedrock GA",
+      "summary": "OpenAI前沿模型和Codex在Amazon Bedrock正式商用（含GovCloud），企业可在AWS现有体系内直接使用。",
+      "why": "消除企业采用OpenAI的最大障碍——合规和采购流程。同时OpenAI在主动降低对微软Azure的渠道依赖。",
+      "action_fact": "已在AWS上的企业可通过Bedrock控制台直接启用GPT-5.5等模型。",
+      "action_judge": "如果你的企业在AWS上且有合规约束，现在可以直接用GPT-5.5 without额外审批流程。",
+      "tags": ["OpenAI", "AWS", "Bedrock", "多云"],
+      "sources": ["https://releasebot.io/updates/openai"]
+    },
+    {
+      "rank": "P1",
+      "title": "Project Solara + Surface RTX Spark",
+      "summary": "微软发布Agent设备平台Project Solara（Android底层）+ Surface RTX Spark Dev Box（1 Petaflop/128GB统一内存）。",
+      "why": "Solara是微软首次为非Windows计算设备设计OS级平台。RTX Spark是目前最集成的本地大模型开发设备。",
+      "action_fact": "Solara为参考设计不直接销售。RTX Spark今年晚些时候美国上市。",
+      "action_judge": "Solara的Android底层值得关注其开发者生态可能性。RTX Spark适合需要本地跑120B参数以内模型的场景。",
+      "tags": ["Solara", "RTX-Spark", "硬件", "Agent设备"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01BUT00"]
+    },
+    {
+      "rank": "P1",
+      "title": "Microsoft IQ + Rayfin",
+      "summary": "Microsoft IQ是Agent的'共享数据大脑'（Work IQ+Foundry IQ+Fabric IQ+Web IQ）。Rayfin是开源Agent应用部署SDK。",
+      "why": "IQ解决了Agent信息孤岛问题，IQ+Rayfin+Fabric+OneLake构成微软Agent数据基础设施护城河。",
+      "action_fact": "Rayfin定位为Supabase/Neon竞争对手。Fabric IQ未来几个月正式发布。",
+      "action_judge": "Rayfin试图把'Agent建应用→数据入湖→反哺Agent决策'做成闭环，后端开发者值得关注。",
+      "tags": ["Microsoft-IQ", "Rayfin", "数据基础设施", "Fabric"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01OUL00", "https://inews.hket.com/article/4140483"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code 2.1.160",
+      "summary": "Claude Code最新版加强安全防护、改进后台会话管理、修复Windows/CJK多个问题。动态工作流触发词从workflow改名ultracode。",
+      "why": "安全加固说明Anthropic意识到Agent权限滥用风险。更新频率（平均每周2-3版）是其核心竞争优势。",
+      "action_fact": "`claude update` 升级。ultracode模式触发关键词已变更。",
+      "action_judge": "后台代理+Agent Merge是提升效率的关键功能，建议深度使用者研究。",
+      "tags": ["Claude-Code", "安全", "后台代理", "Anthropic"],
+      "sources": ["https://releasebot.io/updates/anthropic/claude-code", "https://code.claude.com/docs/en/changelog"]
+    },
+    {
+      "rank": "P1",
+      "title": "Majorana 2 量子芯片",
+      "summary": "微软发布第二代拓扑量子芯片，超导体从铝换铅，量子比特可靠性提升1000倍，寿命达20秒。预计2029年前商业量子计算机。",
+      "why": "量子比特寿命从微秒级跃迁到秒级是质变。AI Agent加速量子研发形成'AI造芯片→芯片跑AI'正循环。",
+      "action_fact": "Microsoft Discovery应用可免费下载（需GitHub Copilot账户）。",
+      "action_judge": "前沿研究者应关注Discovery平台——这是一个AI Agent协作科研的实验场。",
+      "tags": ["Majorana", "量子计算", "Microsoft-Discovery"],
+      "sources": ["https://news.qq.com/rain/a/20260603A01OUL00"]
+    }
+  ],
+  "tools": [
+    {"name":"MAI-Thinking-1","type":"推理模型","highlight":"35B活跃参数/128K上下文，盲测打平Sonnet 4.6","audience":"AI开发者、Azure用户","action":"注册Azure Foundry预览→通过Open Router调API→对比现有方案","url":"https://news.qq.com/rain/a/20260603A01OUL00"},
+    {"name":"Agent Control Specification","type":"安全SDK","highlight":"开源Agent行为规范标准，策略单文件跨框架执行","audience":"Agent开发者、安全团队","action":"搜索GitHub仓库→读SDK文档→写策略文件测试效果","url":"https://news.qq.com/rain/a/20260603A01BUT00"},
+    {"name":"Codex 角色插件","type":"AI工作台","highlight":"6大角色插件/62个应用/110项技能","audience":"分析师、产品经理、投资人","action":"Codex插件目录→安装角色插件→日常工作实测","url":"https://releasebot.io/updates/openai"},
+    {"name":"OpenClaw","type":"Agent框架","highlight":"Scout底层框架/开源/Agent时代Linux时刻","audience":"Agent开发者","action":"GitHub搜索openclaw→读README→本地部署测试","url":"https://news.qq.com/rain/a/20260603A01BUT00"},
+    {"name":"Rayfin","type":"开发SDK","highlight":"Agent应用部署到Fabric/数据自动入OneLake","audience":"后端开发者、数据工程师","action":"搜索GitHub仓库→看SDK文档→部署简单Agent应用","url":"https://news.qq.com/rain/a/20260603A01OUL00"}
+  ],
+  "video_topics": [
+    {"title":"微软7个MAI模型全解析：能替代GPT-4和Claude吗？","hook":"微软不再套壳OpenAI，自研推理模型打平Sonnet 4.6","angle":"对比评测：MAI-Thinking-1 vs Sonnet 4.6 vs GPT-5.5 在代码/分析/推理三个场景的实测","materials":"Azure Foundry界面录屏、三模型代码生成对比、评分雷达图","difficulty":"中"},
+    {"title":"Scout内测体验：微软在Teams里放了个'AI同事'","hook":"Agent不再是CLI工具，而是像人类同事一样在协作软件里工作","angle":"案例拆解：Scout如何处理邮件、安排会议、起草回复","materials":"OpenClaw开源框架演示 + Teams概念模拟、Agent工作流程图","difficulty":"中"},
+    {"title":"Agent安全三件套：企业为什么不敢用Agent？微软怎么解决","hook":"Agent安全问题终于有完整方案了——从OS层到测试层","angle":"趋势解读：MXC+ACS+ASSERT分别解决什么问题","materials":"架构图、安全层级动画、企业部署Agent的安全checklist","difficulty":"低"},
+    {"title":"Codex 6大角色插件上手：哪个对你的工作最有用？","hook":"Codex不只是写代码——数据分析师、产品经理、投资人都能用","angle":"工具测评：实测数据分析/投资研究/创意制作三个插件","materials":"Codex界面录屏、插件安装到使用的完整流程","difficulty":"中"},
+    {"title":"Project Solara：微软说未来设备应该跑Agent，而不是跑App","hook":"微软第一次做Android设备，目标是Agent终端而非手机","angle":"趋势解读：Agent原生设备对比现有PC/Smart speaker","materials":"Solara概念图解析、Android底层分析、可穿戴场景动画","difficulty":"低"}
+  ],
+  "noise_items": [
+    {"item":"DeepSeek V4.1 '6月发布'预告","reason":"旧闻重提。5月8日已宣布，至今无新细节，等待型信息不重复报道。"},
+    {"item":"GPT-5.6 '6月发布'传闻","reason":"无官方确认。仅第三方推测文章，可信度低，等待官方信号。"},
+    {"item":"AI Agent框架对比文章","reason":"纯列表文。5月21日发布，部分框架版本已过期，无一手测试数据。"},
+    {"item":"MCP Server横评/10款MCP神器","reason":"聚合内容。已有MCP Server整理列表，无新发布信息。"},
+    {"item":"AI视频生成工具2026全景对比","reason":"时效性不足。3-4月文章，不符合<48小时窗口。"},
+    {"item":"Open Design开源设计系统介绍","reason":"重复内容。4月已发布，本次无新版本或重大更新。"}
+  ],
+  "tracking_items": [
+    {"item":"Microsoft Build Day 2 完整发布","reason":"6月3日Build第二天，预计更多开发者工具和云服务细节。"},
+    {"item":"Computex Day 2/3 重磅发布","reason":"AMD CEO主题演讲、联发科AI PC芯片、更多AI PC设备。"},
+    {"item":"GPT-5.6 官方确认","reason":"如OpenAI有官方通告或博客，第一时间评估。"},
+    {"item":"DeepSeek V4.1 具体发布日期","reason":"如公布具体时间和技术细节，立即纳入日报。"},
+    {"item":"Claude Code 下一版本动态","reason":"Anthropic发布节奏极快，关注ultracode模式实际效果。"}
+  ]
+}
