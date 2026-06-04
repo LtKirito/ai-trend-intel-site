@@ -1,0 +1,148 @@
+{
+  "date": "2026-06-04",
+  "title": "2026-06-04 AI信息差日报",
+  "coverage": "覆盖窗口：6/3 ~ 6/4（Build Day2收尾 + 开源AI模型井喷日）",
+  "sources": "信息源：devFlokers / LLM-Stats / Microsoft Build官方 / Computex 2026 / GitHub Trending / 知乎 / 即刻 / 腾讯科技",
+  "conclusions": [
+    "今天是开源模型集中轰炸日。DeepSeek V4-Pro（MIT License）和MiniMax M3（Open Weights）两款前沿级开源模型同日发布，加上Kimi K2.6、GLM-5.1、Qwen3-Coder-Next，中国AI开源阵营正面冲击闭源霸主地位。",
+    "NVIDIA Cosmos 3 Super代表AI从'感知/生成'到'物理世界模拟'的范式跃迁。RoboArena和Physics-IQ双双第一，这意味着AI不再只是看图写话，而是能预测物理世界的行为后果。",
+    "Anthropic发布Claude Agent SDK（TypeScript/Python），将Claude Code的执行循环和能力直接产品化为SDK。同时Opus 4.8的动态工作流让一个会话内并行调度数百个子Agent。Agent开发正在从'框架探索阶段'进入'标准制定阶段'。",
+    "AutoGen v0.4的社区分裂（核心开发者另起炉灶做AG2）是一个警示信号：Agent框架正在经历'从实验到生产'的阵痛，API破坏性变更的代价远超预期。"
+  ],
+  "summary": "开源AI井喷日：DeepSeek V4-Pro（MIT）、MiniMax M3、Kimi K2.6、GLM-5.1、Qwen3-Coder-Next五款中国开源模型同日集中发布。NVIDIA Cosmos 3物理AI模型双榜登顶。Anthropic推出Claude Agent SDK + Opus 4.8动态工作流。Agent框架生态面临分裂（AutoGen → AG2）。",
+  "body": "6月4日是2026年开源AI领域迄今为止最密集的一天。DeepSeek V4-Pro以MIT License发布1.6T MoE模型（490亿活跃/100万tokens上下文），LiveCodeBench 93.5分直接对标闭源旗舰。MiniMax M3以Open Weights发布，SWE-Bench Pro 59%超越GPT-5.5和Gemini 3.1 Pro，加上多模态计算机操作能力，成为首款具备'视觉Agent'能力的开源模型。Kimi K2.6、GLM-5.1、Qwen3-Coder-Next同日发布，中国AI开源阵营正在形成一个比肩闭源巨头的完整能力矩阵。与此同时，Anthropic将Claude Code能力产品化为Agent SDK，NVIDIA Cosmos 3开启物理世界模拟时代，AutoGen社区的裂变则暴露了Agent框架标准化的路径之痛。",
+  "judgement": "今天的核心叙事是'开源AI的转折点'。DeepSeek V4-Pro用MIT License发布1.6T参数的顶级模型，这打破了'开源模型必然落后闭源2个版本'的惯性认知。MiniMax M3的多模态操作能力（直接控制计算机UI）让Agent开发不再依赖闭源API。但真正的分水岭可能是NVIDIA Cosmos 3——当AI开始精确模拟物理世界，影响的将不只是代码和文字，而是制造业、机器人、自动驾驶等万亿级的实体经济领域。对于开发者：现在是拥抱开源Agent框架的最佳窗口期；对于企业决策者：开源模型的成熟度已经达到可以评估替代闭源方案的临界点。",
+  "tags": ["DeepSeek-V4", "MiniMax-M3", "NVIDIA-Cosmos-3", "Claude-Agent-SDK", "开源井喷", "物理AI", "AutoGen-AG2", "Kimi-K2.6"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "DeepSeek V4-Pro/V4-Flash 开源（MIT License）",
+      "summary": "DeepSeek发布V4-Pro（1.6T MoE/490亿活跃/100万tokens上下文，LiveCodeBench 93.5）和V4-Flash（2840亿MoE/130亿活跃，SWE-Bench Verified 79%），使用MIT License完全开源。",
+      "why": "MIT License意味着企业可以自由商用、修改、再分发，无任何限制。LiveCodeBench 93.5分直逼GPT-5.5等闭源旗舰。这是开源AI史上最具商业友好性的顶级模型发布。",
+      "action_fact": "Hugging Face上可直接下载权重。立即在HuggingFace搜deepseek-ai/DeepSeek-V4-Pro，用MIT License评估企业部署可行性。",
+      "action_judge": "如果你在用Claude/GPT的API做代码相关任务，DeepSeek V4-Pro的MIT License + 低成本部署是改变游戏规则的选项。建议本周内完成基准对比测试。",
+      "tags": ["DeepSeek", "MIT-License", "V4-Pro", "开源", "MoE"],
+      "sources": ["https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro", "https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P0",
+      "title": "MiniMax M3 开源发布：首款'视觉Agent'级开源模型",
+      "summary": "MiniMax发布M3模型（Sparse Attention架构/100万tokens上下文），SWE-Bench Pro 59%超越GPT-5.5和Gemini 3.1 Pro，且具备多模态计算机操作能力（直接控制UI界面）。",
+      "why": "首个能从'看屏幕→理解界面→操作计算机'的开源模型。多模态Agent能力不再是Claude Computer Use的独家专利。SWE-Bench Pro超越GPT-5.5标志着开源编码能力的历史性突破。",
+      "action_fact": "Open Weights发布。从MiniMax官方或HuggingFace获取权重→部署→测试计算机操作API。",
+      "action_judge": "如果你在做RPA/UI自动化/Agent开发，MiniMax M3可能是替代闭源API的最优解。它的UI操作能力结合开源灵活性，非常适合垂直场景定制。",
+      "tags": ["MiniMax", "M3", "视觉Agent", "SWE-Bench", "计算机操作"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P0",
+      "title": "NVIDIA Cosmos 3 Super 物理AI基础模型",
+      "summary": "NVIDIA发布Cosmos 3 Super，采用Mixture-of-Transformers架构，RoboArena和Physics-IQ双榜第一，能够理解并模拟真实物理世界行为。",
+      "why": "这是AI从'像素生成'走向'世界模拟'的分水岭。物理AI不再只是生成逼真视频，而是真正理解重力、碰撞、运动规律。对机器人、自动驾驶、工业仿真等领域意义深远。",
+      "action_fact": "Cosmos 3完全开源，NVIDIA提供预训练权重。可在NVIDIA NGC或HuggingFace下载。",
+      "action_judge": "如果你在机器人/自动驾驶/工业AI领域，Cosmos 3是今年最重要的发布之一。建议立即评估其在你的仿真管线中的适用性。",
+      "tags": ["NVIDIA", "Cosmos-3", "物理AI", "世界模拟", "RoboArena"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Agent SDK 正式发布 + Opus 4.8 动态工作流",
+      "summary": "Anthropic发布Claude Agent SDK（TypeScript/Python），将Claude Code执行循环和MCP直接SDK化。Opus 4.8同时推出Dynamic Workflows，单会话内可并行调度数百子Agent。",
+      "why": "Claude Agent SDK标志着Agent开发从'开源框架拼装'进入'原厂SDK标准化'阶段。动态工作流让复杂任务的自动化上限大幅提升——一个prompt可以拆成数百个子任务并发执行。",
+      "action_fact": "SDK通过npm/pip安装。Dynamic Workflows在Claude Code中通过'ultracode'模式触发。Opus 4.8价格未变。",
+      "action_judge": "如果你已在使用Claude Code，Agent SDK让自定义Agent开发的门槛大幅降低。Dynamic Workflows适合批量代码审查、大规模重构、多文件分析等场景。",
+      "tags": ["Claude-Agent-SDK", "Opus-4.8", "Dynamic-Workflows", "Anthropic", "Agent"],
+      "sources": ["https://news.qq.com/rain/a/20260529A00YYH00", "https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Kimi K2.6 + GLM-5.1 同日开源",
+      "summary": "Moonshot AI发布Kimi K2.6（1T MoE/320亿活跃/SWE-Bench Pro 58.6%/Modified MIT）。智谱AI发布GLM-5.1（7440亿MoE/400亿活跃/Terminal-Bench 2.0 SOTA）。",
+      "why": "中国开源AI阵营呈现'集体冲锋'态势。Kimi K2.6在软件工程基准上对标GPT-5.5，GLM-5.1在终端操作上达到SOTA。Modified MIT许可需要注意商业使用限制。",
+      "action_fact": "Kimi K2.6从Moonshot官方获取，GLM-5.1从智谱/ModelScope下载。注意K2.6的Modified MIT许可限制（需确认商业使用条款）。",
+      "action_judge": "Kimi K2.6适合代码生成和软件工程任务，GLM-5.1适合终端自动化场景。两者互补且各有专长。",
+      "tags": ["Kimi-K2.6", "GLM-5.1", "Moonshot", "智谱", "开源"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Qwen3-Coder-Next + Qwen3.6-27B（阿里通义）",
+      "summary": "阿里通义发布两个新模型：Qwen3-Coder-Next（800亿MoE/30亿活跃，SWE-Bench Verified 71.3/Apache 2.0）和Qwen3.6-27B（270亿Dense，SWE-Bench Verified 77.2/Apache 2.0）。",
+      "why": "Apache 2.0许可 + 小巧规模 + 高代码能力，Qwen3-Coder-Next是开发者IDE内嵌部署的完美候选。Qwen3.6-27B以270亿参数DSense达到77.2% SWE-Bench，效率极高。",
+      "action_fact": "HuggingFace/ModelScope搜索Qwen3-Coder-Next和Qwen3.6-27B。Apache 2.0许可无商业限制。",
+      "action_judge": "如果你需要本地部署代码助手，Qwen3-Coder-Next（30亿活跃参数）是功耗和性能的甜点。Qwen3.6-27B适合消费级GPU部署。",
+      "tags": ["Qwen", "阿里通义", "Coder", "Apache-2.0", "开源"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Hermes Agent（Nous Research）：自我进化型Agent",
+      "summary": "Nous Research发布Hermes Agent，内置自我改进技能编译器 + 持久化记忆 + TUI/Discord/Slack集成，支持长时间运行的有状态任务。",
+      "why": "第一个把'Agent自我进化'作为核心设计理念的产品。技能编译器让Agent在运行中根据反馈自动优化行为，持久化记忆解决了长任务中的状态丢失问题。",
+      "action_fact": "GitHub搜索Nous Research Hermes Agent。TUI模式适合本地开发，Discord/Slack集成适合团队协作。",
+      "action_judge": "Hermes Agent的自改进机制代表了Agent产品的下一代方向——Agent不应只是执行工具，而应是自我优化的工具。建议深度体验其技能编译器。",
+      "tags": ["Hermes-Agent", "Nous-Research", "自我进化", "技能编译器"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "AutoGen v0.4 社区分裂 → AG2 分支",
+      "summary": "Microsoft AutoGen从v0.2升级到v0.4引发重大API破坏性变更，原核心开发者独立维护AG2分支（继续v0.2路线），社区出现两条并行路线。",
+      "why": "这是Agent框架'从实验阶段进入生产阶段'的标志性事件。破坏性API变更在生产环境的代价被严重低估，AG2的分裂意味着行业尚未形成Agent开发的稳定标准。",
+      "action_fact": "如果你在用AutoGen，立即检查现有代码的兼容性。AG2仓库已被核心开发者维护，社区版本趋势需持续关注。",
+      "action_judge": "对于新项目：建议先观望AutoGen v0.4和AG2的发展方向，或考虑迁移到LangGraph/Claude Agent SDK。不要在生产环境使用尚在剧烈变化的框架。",
+      "tags": ["AutoGen", "AG2", "框架分裂", "Agent标准", "API破坏"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P2",
+      "title": "arXiv对CS综述论文实施临时禁令",
+      "summary": "arXiv临时禁止所有计算机科学领域的综述论文（survey/review），对提交含虚假引用的论文作者处以一年处罚。部分期刊报告可疑论文增长42%。",
+      "why": "AI领域学术出版的诚信危机已达到需要平台级干预的程度。AI生成论文+虚假引用的泛滥正侵蚀学术信任基础。",
+      "action_fact": "如果你在写AI相关综述论文，检查你的引用是否真实。禁令为临时措施，持续时间未公布。",
+      "action_judge": "对学术研究者的警示：AI辅助写作的时代，引用验证比以往任何时候都重要。",
+      "tags": ["arXiv", "学术诚信", "综述禁令", "AI论文"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    },
+    {
+      "rank": "P2",
+      "title": "ZAYA1-8B（Zyphra）+ SubQ 1M-Preview",
+      "summary": "Zyphra发布ZAYA1-8B（8B MoE/7.6亿活跃，AMD Instinct训练，高数学密度）。SubQ 1M-Preview探索次二次方注意力架构突破Transformer O(N²)瓶颈。",
+      "why": "ZAYA1-8B展示了AMD硬件在AI训练中的可行性（打破NVIDIA垄断）。SubQ代表非Transformer架构的兴起，可能定义下一代模型的计算范式。",
+      "action_fact": "ZAYA1-8B Apache 2.0许可，从Zyphra获取。SubQ 1M-Preview论文预印本可查。",
+      "action_judge": "AMD训练栈的成熟是长期的产业利好。SubQ架构短期是学术探索，但值得跟踪。",
+      "tags": ["ZAYA", "Zyphra", "AMD", "SubQ", "非Transformer"],
+      "sources": ["https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"]
+    }
+  ],
+  "tools": [
+    {"name":"DeepSeek V4-Pro","type":"开源模型","highlight":"1.6T MoE/490亿活跃/MIT License/LiveCodeBench 93.5","audience":"AI开发者、企业部署","action":"HuggingFace下载→本地部署/云端推理→对比GPT-5.5成本","url":"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"},
+    {"name":"MiniMax M3","type":"开源视觉Agent","highlight":"100万tokens/SWE-Bench Pro 59%/多模态UI操作","audience":"Agent开发者、RPA工程师","action":"获取Open Weights→部署→测试计算机操作API","url":"https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"},
+    {"name":"Claude Agent SDK","type":"Agent开发SDK","highlight":"TypeScript/Python/Claude Code集成/MCP支持","audience":"Agent开发者","action":"npm/pip install→读docs→构建第一个Agent","url":"https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"},
+    {"name":"NVIDIA Cosmos 3","type":"物理AI模型","highlight":"物理世界模拟/RoboArena #1/Physics-IQ #1","audience":"机器人/自动驾驶工程师","action":"NGC或HuggingFace下载→接入仿真管线","url":"https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"},
+    {"name":"Qwen3-Coder-Next","type":"开源代码模型","highlight":"800亿MoE/30亿活跃/Apache 2.0/本地部署友好","audience":"个人开发者、小团队","action":"HuggingFace下载→ollama部署→IDE集成","url":"https://www.devflokers.com/blog/open-source-ai-roundup-june-2026"}
+  ],
+  "video_topics": [
+    {"title":"DeepSeek V4-Pro vs GPT-5.5 vs Claude Opus 4.8：开源真的追上了吗？","hook":"MIT License的开源模型能打闭源旗舰？六榜对比告诉你答案","angle":"对比评测：LiveCodeBench/SWE-Bench/Terminal-Bench三维度实测对比","materials":"三模型实测录屏、分数雷达图、成本对比表、HuggingFace界面","difficulty":"高"},
+    {"title":"MiniMax M3上手：它能替代你的鼠标键盘吗？","hook":"第一个能直接操作电脑界面的开源AI——实测它能不能帮你填表","angle":"实测：MiniMax M3操作网页/Excel/IDE的真实效果和失败案例","materials":"屏幕录制+模型操作日志对比、成功率统计","difficulty":"中"},
+    {"title":"NVIDIA Cosmos 3解读：AI开始理解物理世界意味着什么","hook":"AI不只是画画写写，它现在能模拟真实世界了","angle":"趋势解读：物理AI对机器人、自动驾驶、工业仿真的改变","materials":"Cosmos 3模拟演示动画、行业应用场景图、专家观点","difficulty":"低"},
+    {"title":"Claude Agent SDK 5分钟入门：把你的Claude Code做成Agent","hook":"一行npm install就能让Claude变成可编程Agent","angle":"教程：从安装到构建第一个自定义Agent的完整流程","materials":"终端录屏、代码示例、Agent工作流程图","difficulty":"低"},
+    {"title":"AutoGen叛变事件：Agent框架为什么总是裂开？","hook":"AutoGen核心开发者出走单干AG2，背后是框架标准化之争","angle":"行业分析：Agent框架的版本分裂史、选型建议、迁移策略","materials":"框架时间线图、社区分裂流向图、功能对比矩阵","difficulty":"低"}
+  ],
+  "noise_items": [
+    {"item":"GPT-5.6 '6月发布' 传闻（第三日）","reason":"持续3天无新信息。无官方确认，推测文章为主。等待OpenAI官方博客更新。"},
+    {"item":"DeepSeek V4.1 '6月发布' 预告（第四日）","reason":"5月8日宣布至今无更新。V4-Pro/V4-Flash已发布，V4.1定义不清晰。"},
+    {"item":"Microsoft Build Day2 旧闻回顾合集","reason":"Build已于6/3结束。聚合文无增量信息。等待官方完整发布博客。"},
+    {"item":"Computex 黄仁勋演讲回顾文","reason":"6/1内容，已在6/3日报覆盖。回顾文无新增信息。"},
+    {"item":"AI Agent框架Top10对比列表文","reason":"自媒体聚合。多数框架版本已过期，且AutoGen已分裂，列表文信息失准。"},
+    {"item":"Claude Opus 4.8性能评测合集","reason":"5/29发布，距今已5天。仅在出现新的独立评测时可重新纳入。"}
+  ],
+  "tracking_items": [
+    {"item":"Microsoft Build 2026 完整总结","reason":"Build刚结束（6/2-3），等待微软发布完整的Build总结博客和产品路线图。"},
+    {"item":"Computex 2026 Day 4-5 收尾","reason":"6/5是Computex最后一天，关注是否有压轴级发布。"},
+    {"item":"GPT-5.6 官方确认","reason":"如OpenAI有官方博客或推文确认发布日期，第一时间评估。"},
+    {"item":"AutoGen v0.4 vs AG2 路线图分化","reason":"AG2仓库的Roadmap发布后，评估迁移策略和社区趋势。"},
+    {"item":"Claude Agent SDK 开发者生态","reason":"观察第一波开发者反馈和第三方工具适配速度。"},
+    {"item":"DeepSeek V4-Pro 社区评测","reason":"MIT License+前沿性能，社区独立评测将很快出现。"}
+  ]
+}
