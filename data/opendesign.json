@@ -2,12 +2,12 @@
   "repo": {
     "name": "nexu-io/open-design",
     "description": "Local-first, open-source Claude Design alternative",
-    "stars": 57752,
-    "forks": 6519,
-    "open_issues": 329,
+    "stars": 58988,
+    "forks": 6641,
+    "open_issues": 326,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-06-03T05:55:26Z",
+    "updated": "2026-06-05T05:26:09Z",
     "latest_release": {
       "version": "open-design-v0.9.0",
       "date": "2026-06-02",
@@ -17,150 +17,133 @@
   },
   "recent_prs": [
     {
-      "number": 3538,
-      "title": "feat(landing-page): add /download page that auto-reflects the latest release",
+      "number": 3595,
+      "title": "release: Open Design 0.10.0 — the all-in-one Agentic design workspace, with a whole design team built in",
       "state": "open",
-      "author": "522700967-wq",
-      "labels": ["size/L", "risk/medium", "type/feature"],
-      "impact": "新增 /download 下载页并自动反映最新 release 信息，直接承接 0.9.0 发布后的安装转化需求。该 PR 将 landing 页面从静态宣传扩展为可跟随 GitHub Release 更新的下载入口，降低维护成本，但也要求 release metadata 解析稳定。",
-      "url": "https://github.com/nexu-io/open-design/pull/3538"
+      "author": "lefarcen",
+      "labels": ["size/S", "risk/high", "type/chore"],
+      "impact": "0.10.0 发布 PR，141 PRs · 50 contributors · 2 天。将 Open Design 定位升级为全栈 Agentic 设计工作空间——内置完整设计团队能力。风险标记为 high，说明这是一个重大里程碑版本，涉及范围极广。",
+      "url": "https://github.com/nexu-io/open-design/pull/3595"
     },
     {
-      "number": 3515,
-      "title": "fix: persist dismissed todo card state across tab switches",
-      "state": "merged",
-      "author": "xxiaoxiong",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "已于 2026-06-03 合入，修复用户关闭 todo card 后切换 tab 又重新出现的问题。影响面集中在 Home/项目工作流中的待办卡片状态持久化，属于小范围 UX 稳定性修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/3515"
+      "number": 3711,
+      "title": "fix(web): backport release-only fixes to main ahead of v0.10.0 re-cut (batch 1)",
+      "state": "open",
+      "author": "lefarcen",
+      "labels": ["size/L", "risk/high", "type/bugfix"],
+      "impact": "在重新切分 v0.10.0 release 分支前，将一批直接合入 release/v0.10.0 但未进入 main 的修复反向同步回 main。L 级规模 + high 风险，说明 release 流程存在代码漂移隐患，需关注合入冲突和回归。",
+      "url": "https://github.com/nexu-io/open-design/pull/3711"
     },
     {
-      "number": 3550,
-      "title": "[codex] Fix landing download release metadata",
+      "number": 3712,
+      "title": "feat(web): consistent tab hover tooltips",
+      "state": "open",
+      "author": "portseif",
+      "labels": ["size/XS", "risk/medium", "type/feature"],
+      "impact": "统一 workspace tab hover 时的 tooltip 行为。文件 tab 长名截断后缺少 tooltip 反馈，该 XS 级 feature 提升日常多 tab 操作的可发现性，属于细微但高频接触点的体验改进。",
+      "url": "https://github.com/nexu-io/open-design/pull/3712"
+    },
+    {
+      "number": 3710,
+      "title": "[codex] Fix image export toast offset",
       "state": "open",
       "author": "Siri-Ray",
-      "labels": ["size/M", "risk/medium", "type/bugfix"],
-      "impact": "修复 landing 下载页的 release metadata，和 #3538 形成直接配套。说明 0.9.0 后下载页自动化仍存在元数据准确性风险，需关注 tag、asset、平台架构和下载链接映射是否一致。",
-      "url": "https://github.com/nexu-io/open-design/pull/3550"
+      "labels": ["size/XS", "risk/medium", "type/bugfix"],
+      "impact": "修复桌面/Web 文件查看器中图片导出成功 toast 被顶部工具栏遮挡的问题。XS 级修复，但影响所有用户的导出确认反馈可见性。",
+      "url": "https://github.com/nexu-io/open-design/pull/3710"
     },
     {
-      "number": 3551,
-      "title": "Fix fabricated assistant turn replay in transcripts",
+      "number": 3709,
+      "title": "feat(landing-page): add html-video product page under /html-video/",
       "state": "open",
-      "author": "YOMXXX",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "修复 transcript 回放中伪造 assistant turn 的问题，属于对对话记录可信度和回放一致性的关键修复。虽然 size/S，但影响到审计、复盘和协作语境中的事实完整性，需优先关注。",
-      "url": "https://github.com/nexu-io/open-design/pull/3551"
+      "author": "522700967-wq",
+      "labels": ["size/XL", "risk/medium", "type/feature"],
+      "impact": "新增 html-video 产品落地页（/html-video/），这是 HTML Anything 的动效对偶产品——一个 HTML-to-video 元层：本地 coding agent 将 prompt/文章链接/网页转为动态视频。XL 级规模，预示 nexu-io 正在构建完整的 HTML 内容生成产品矩阵。",
+      "url": "https://github.com/nexu-io/open-design/pull/3709"
     },
     {
-      "number": 2712,
-      "title": "feat(web): Settings / General with Enter-to-send preference + Escape-to-stop",
+      "number": 3660,
+      "title": "feat: add screenshot-based visual validation to critique loop",
       "state": "open",
-      "author": "leessju",
-      "labels": ["size/L", "risk/medium", "type/feature"],
-      "impact": "在 Settings / General 中加入 Enter 发送偏好和 Escape 停止行为，增强聊天交互可配置性。该 PR 涉及输入行为、设置持久化和多场景 composer 交互，属于用户习惯层面的基础体验改动。",
-      "url": "https://github.com/nexu-io/open-design/pull/2712"
+      "author": "nettee",
+      "labels": ["size/XL", "risk/high", "type/feature"],
+      "impact": "为默认生成循环添加基于截图的视觉验证（Closes #1504）。此前 critique 仅基于代码文本，无法验证渲染效果是否达标。XL 级高风险的重大增强，直接影响 AI 生成质量闭环，也是 0.10.0 方向的关键支撑。",
+      "url": "https://github.com/nexu-io/open-design/pull/3660"
     },
     {
-      "number": 3498,
-      "title": "[codex] Hide placeholder assistant cost values",
+      "number": 3707,
+      "title": "[codex] Fix official plugin and skill catalog search",
       "state": "merged",
-      "author": "Sid-Qin",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "已合入，隐藏 assistant cost 的占位值，避免用户误读成本统计。该修复说明 0.9.0 后 telemetry/cost 展示仍在收敛，短期重点是减少误导性指标。",
-      "url": "https://github.com/nexu-io/open-design/pull/3498"
+      "author": "yinjialu",
+      "labels": ["size/L", "risk/medium", "type/bugfix"],
+      "impact": "已合入。飞书 row 22 报告官方插件/技能可用条目远多于 UI 展示数量且搜索不匹配。修复后用户能正确发现和搜索全部官方及本地化插件/技能，影响插件市场转化率和可发现性。",
+      "url": "https://github.com/nexu-io/open-design/pull/3707"
     },
     {
-      "number": 3471,
-      "title": "[codex] Exclude manual sketches from turn output inference",
-      "state": "merged",
-      "author": "Sid-Qin",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "已合入，避免 manual sketches 被错误纳入 turn output inference。该修复改善 Studio/Sketch 与对话输出推断之间的边界，减少人工草图被误判为模型产物的风险。",
-      "url": "https://github.com/nexu-io/open-design/pull/3471"
-    },
-    {
-      "number": 3467,
-      "title": "[codex] Add inline color swatches for hex chat output",
-      "state": "merged",
-      "author": "Sid-Qin",
-      "labels": ["size/M", "risk/medium", "type/enhancement"],
-      "impact": "已合入，为聊天输出中的十六进制颜色增加 inline swatches。该增强提升设计场景下颜色沟通效率，尤其适合设计系统、样式审查和 AI 生成 UI 的快速校验。",
-      "url": "https://github.com/nexu-io/open-design/pull/3467"
+      "number": 3400,
+      "title": "docs(readme): refresh contributors wall",
+      "state": "open",
+      "author": "open-design-bot[bot]",
+      "labels": ["size/M", "risk/low", "type/docs"],
+      "impact": "由定时 workflow 自动刷新 README 中的 contributors wall 缓存。低风险维护任务，反映项目贡献者持续增长。",
+      "url": "https://github.com/nexu-io/open-design/pull/3400"
     }
   ],
   "recent_issues": [
     {
-      "number": 3537,
-      "title": "Claude Sonnet via AMR is seriously hallucinating user instructions and acting on them.",
-      "author": "FunKyDunKnz",
-      "labels": ["bug", "priority:p0", "security"],
-      "comments": 3,
-      "summary": "AMR 路径下 Claude Sonnet 严重幻觉用户指令并执行，被标记为 bug、priority:p0 和 security。该问题直接冲击 0.9.0 主打的 AMR 零配置体验，是当前最高优先级风险。",
-      "url": "https://github.com/nexu-io/open-design/issues/3537"
-    },
-    {
-      "number": 3540,
-      "title": "SaaS Landing Plugin not responding to click",
-      "author": "ZiqiXiao",
-      "labels": ["bug"],
-      "comments": 6,
-      "summary": "SaaS Landing Plugin 点击无响应，6 条评论显示问题已有一定复现和讨论。它暴露了 0.9.0 插件生态扩展后的交互可靠性问题，影响插件市场转化体验。",
-      "url": "https://github.com/nexu-io/open-design/issues/3540"
-    },
-    {
-      "number": 3416,
-      "title": "Follow-up: harden sandbox runtime boundaries after merged stack",
-      "author": "dredozubov",
-      "labels": ["question", "security"],
-      "comments": 10,
-      "summary": "围绕已合入 stack 后的 sandbox runtime 边界继续加固，标签包含 security，评论数达到 10。该 issue 与运行时隔离、文件/命令执行边界和 MCP 工作区能力扩展相关，是安全治理主线。",
-      "url": "https://github.com/nexu-io/open-design/issues/3416"
-    },
-    {
-      "number": 3545,
-      "title": "Create fixed-task QA gate for run reliability optimizations",
-      "author": "yinjialu",
+      "number": 3705,
+      "title": "repo(git): reduce `.git` size — `github-metrics.svg` occupies ~658 MB in pack",
+      "author": "tbontb-iaq",
       "labels": [],
-      "comments": 1,
-      "summary": "为 run reliability 优化创建固定任务 QA gate，说明团队正在把稳定性优化从单点修复推进到可验证流程。该方向可与失败分类、重试策略和 telemetry 形成闭环。",
-      "url": "https://github.com/nexu-io/open-design/issues/3545"
+      "comments": 2,
+      "summary": "仓库 .git 膨胀问题暴露：github-metrics.svg 在 pack 中占用约 658 MB。该 issue 由 AI 辅助分析 repo 大小后提交，建议清理或排除大二进制文件。虽非功能性 bug，但长期拖慢 clone/fetch 性能。",
+      "url": "https://github.com/nexu-io/open-design/issues/3705"
     },
     {
-      "number": 3542,
-      "title": "Complete Gemini stream-json event coverage",
-      "author": "alchemistklk",
-      "labels": ["enhancement"],
-      "comments": 1,
-      "summary": "补齐 Gemini stream-json 事件覆盖，属于多模型运行时兼容性增强。它直接影响流式输出、状态追踪和错误恢复，是 0.9.0 多 agent/model bench 扩张后的必要补课。",
-      "url": "https://github.com/nexu-io/open-design/issues/3542"
+      "number": 3703,
+      "title": "fix(web): keep design system picker fullscreen above modal chrome",
+      "state": "closed",
+      "author": "liuzemei",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "comments": 3,
+      "summary": "已关闭。修复设计系统选择器全屏层叠在现有 app modal/lightbox 之下的问题。确保设计系统预览始终处于最上层不被其他弹窗遮挡。",
+      "url": "https://github.com/nexu-io/open-design/issues/3703"
     },
     {
-      "number": 3543,
-      "title": "Implement safe retry policy and retry telemetry for chat runs",
-      "author": "yinjialu",
-      "labels": ["enhancement"],
-      "comments": 1,
-      "summary": "为 chat runs 实现安全重试策略和 retry telemetry，承接失败分类和运行可靠性主线。重点在于避免盲目重试引入重复执行，同时收集足够数据定位失败桶。",
-      "url": "https://github.com/nexu-io/open-design/issues/3543"
-    },
-    {
-      "number": 3408,
-      "title": "Reliability push: classify run failures, correlate PostHog with Langfuse, and add safe retries",
-      "author": "yinjialu",
+      "number": 3702,
+      "title": "[Bug]: There is a problem with the export!",
+      "author": "Sdreamery",
       "labels": ["bug"],
-      "comments": 13,
-      "summary": "运行可靠性集中推进：分类 run failures，关联 PostHog 与 Langfuse，并增加安全重试。13 条评论显示这是当前稳定性治理的核心议题，与 #3543、#3544、#3545、#3546 构成连续工作包。",
-      "url": "https://github.com/nexu-io/open-design/issues/3408"
+      "comments": 2,
+      "summary": "导出功能报错报告。虽然描述不够详细（2条评论），但与 #3710 toast 偏移修复形成关联，说明导出路径仍有多处问题待收敛。",
+      "url": "https://github.com/nexu-io/open-design/issues/3702"
     },
     {
-      "number": 3544,
-      "title": "Monitor unknown and coarse failed-run buckets after PR1 classification",
-      "author": "yinjialu",
-      "labels": ["type/enhancement"],
+      "number": 3699,
+      "title": "Langfuse Phase 2.5: large-context trace diagnostics",
+      "author": "Siri-Ray",
+      "labels": ["enhancement", "type/enhancement", "area/runtime"],
       "comments": 1,
-      "summary": "在 PR1 失败分类后监控 unknown/coarse failed-run buckets，说明团队已进入基于 telemetry 的后续收敛阶段。下一步重点是把粗粒度失败桶拆细并减少未知失败占比。",
-      "url": "https://github.com/nexu-io/open-design/issues/3544"
+      "summary": "生产数据显示相当比例的 run_finished 事件 input_tokens > 1M。该 issue 延续 Langfuse 追踪系列（#3496→#3499→#3556→#3557），增加大上下文 trace 诊断能力，帮助识别 token 异常消耗根因。",
+      "url": "https://github.com/nexu-io/open-design/issues/3699"
+    },
+    {
+      "number": 3698,
+      "title": "feat: git-based project portability for cross-machine / team sharing",
+      "author": "cyjo9603",
+      "labels": ["enhancement", "needs-product-direction"],
+      "comments": 4,
+      "summary": "提出基于 Git 的项目可移植性方案，使项目的完整状态（不仅是原始文件）可在不同机器和团队成员间版本控制和共享。标记为 needs-product-direction，说明社区有强需求但产品方向尚未确定。",
+      "url": "https://github.com/nexu-io/open-design/issues/3698"
+    },
+    {
+      "number": 3696,
+      "title": "Design system preview",
+      "author": "syncness",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 8,
+      "summary": "在 Settings tab 中预览设计系统时，Settings tab header 出现在设计系统预览之前，导致遮挡。8 条评论表明有一定复现率，标记为 good first issue 适合新手贡献。",
+      "url": "https://github.com/nexu-io/open-design/issues/3696"
     },
     {
       "number": 3547,
@@ -168,7 +151,7 @@
       "author": "yinjialu",
       "labels": ["feature"],
       "comments": 1,
-      "summary": "选择并实现首个按 ROI 排序的延迟或 token 优化，说明优化重点从功能扩展转向成本和响应性能。该议题与 AMR、Codex、Claude Code 等多 agent 路径的使用成本直接相关。",
+      "summary": "选择并实现首个按 ROI 排序的延迟或 token 优化。说明团队正从功能扩展转向成本与响应性能优化，这与 AMR/Codex/Claude Code 等多 agent 路径的使用成本直接相关。",
       "url": "https://github.com/nexu-io/open-design/issues/3547"
     },
     {
@@ -177,38 +160,56 @@
       "author": "yinjialu",
       "labels": ["bug"],
       "comments": 1,
-      "summary": "基于 PR1 和 retry 数据修复剩余最高频 failed-run bucket。该 issue 表明可靠性工作已具备数据闭环，接下来应观察 top bucket 是否明显下降。",
+      "summary": "基于 PR1 失败分类和 retry 数据，修复剩余最高频 failed-run bucket。可靠性工作已具备数据驱动闭环，下一步应观察 top bucket 是否明显下降。",
       "url": "https://github.com/nexu-io/open-design/issues/3546"
+    },
+    {
+      "number": 3544,
+      "title": "Monitor unknown and coarse failed-run buckets after PR1 classification",
+      "author": "yinjialu",
+      "labels": ["type/enhancement"],
+      "comments": 1,
+      "summary": "PR1 失败分类后监控 unknown/coarse failed-run buckets。说明团队已进入基于 telemetry 的后续收敛阶段，重点是把粗粒度失败桶拆细并减少未知失败占比。",
+      "url": "https://github.com/nexu-io/open-design/issues/3544"
+    },
+    {
+      "number": 3537,
+      "title": "Claude Sonnet via AMR is seriously hallucinating user instructions and acting on them.",
+      "author": "FunKyDunKnz",
+      "labels": ["bug", "priority:p0", "security"],
+      "comments": 5,
+      "summary": "AMR 路径下 Claude Sonnet 严重幻觉用户指令并执行，标记为 bug、priority:p0 和 security。该问题直接冲击 0.9.0 主打的 AMR 零配置体验，是当前最高优先级风险。评论数增至 5（较上次+2），仍在活跃讨论中。",
+      "url": "https://github.com/nexu-io/open-design/issues/3537"
     }
   ],
   "trends": {
-    "direction": "0.9.0 发布后，Open Design 的主线从 v0.8.0 的插件引擎升级转向“安装即创建”：内置 AMR、扩展多 agent adapter、改善模型选择和下载入口。近期 PR/Issue 显示团队正同时推进 release 下载页、transcript 可信回放、聊天输入偏好和 run reliability 数据闭环。",
+    "direction": "0.10.0 即将发布（141 PRs · 50 contributors），主线从 0.9.0 的「install-and-create」升级为「all-in-one Agentic design workspace」。核心方向包括：截图驱动的视觉验证闭环（#3660）、HTML 视频产品矩阵扩展（#3709）、Git 项目可移植性（#3698）、以及大规模上下文 trace 诊断（#3699）。同时 run reliability 持续数据闭环推进，token/latency ROI 优化提上日程。",
     "affected_modules": [
-      "landing-download-page",
-      "release-metadata",
-      "amr-runtime",
-      "agent-adapters",
-      "chat-transcripts",
-      "chat-run-reliability",
-      "safe-retry-telemetry",
-      "sandbox-runtime-boundaries",
-      "plugin-marketplace",
-      "settings-general-composer"
+      "amr-runtime-security",
+      "critique-visual-validation",
+      "html-video-product",
+      "plugin-skill-catalog-search",
+      "project-portability-git",
+      "run-reliability-telemetry",
+      "large-context-trace-diagnostics",
+      "token-latency-optimization",
+      "release-flow-main-backport",
+      "export-toast-feedback"
     ],
     "risks": [
-      "AMR 作为 0.9.0 核心卖点，但 #3537 暴露 Claude Sonnet via AMR 幻觉并执行用户指令的 P0/security 风险，可能影响用户对零配置路径的信任。",
-      "下载页自动跟随 release 的能力仍有元数据修复 PR（#3550），若 asset/tag/平台架构映射错误，会直接影响 0.9.0 安装转化。",
-      "run reliability 问题集中爆发（#3408、#3543、#3544、#3545、#3546），说明失败分类、重试策略和 telemetry 仍处在建设期，短期可能继续出现未知失败桶。",
-      "sandbox runtime boundary 加固（#3416）与 MCP/文件操作能力扩展并行推进，需要防止便利性提升带来执行边界回归。"
+      "AMR P0/security issue (#3537) 仍未修复，评论数增至 5，若 0.10.0 发布前未解决将严重影响用户对 AMR 零配置路径的信任。",
+      "v0.10.0 re-cut 过程中 #3711 暴露 release 分支代码漂移（修复直接合入 release 但未同步到 main），合并冲突和回归风险较高。",
+      "仓库 .git 体积膨胀至 658MB+（#3705），若不及时治理将持续拖慢开发者 clone/fetch 体验。",
+      "export 路径仍有多处问题（#3702 + #3710），说明基础功能稳定性仍有盲区。"
     ],
     "actions": [
-      "优先跟踪 #3537 的 AMR 安全修复进展，确认是否需要限制指令执行、增加系统提示隔离或回滚相关模型路径。",
-      "关注 #3538 与 #3550 的联动合入，验证 /download 页面是否能稳定展示 latest release、Windows/macOS/Linux asset 和 portable zip。",
-      "跟踪 #3408 系列可靠性议题，观察 safe retry policy、fixed-task QA gate、unknown bucket 监控是否形成可量化下降。",
-      "关注 #3551 transcript 回放修复，因为它影响对话审计、复盘和协作记录可信度。"
+      "优先跟踪 #3537 AMR 安全修复进展，确认 0.10.0 发布前是否有缓解措施或临时降级方案。",
+      "关注 #3711 的 batch 1 反向同步结果，评估是否存在更多 release-only 修复遗漏；跟踪 #3595 的 0.10.0 发布时间线。",
+      "跟踪 #3660 截图视觉验证 PR 的 review 进度，这是 0.10.0 的核心差异化特性，决定 AI 生成质量的闭环完整性。",
+      "关注 #3698 Git 项目可移植性的产品方向决策，如果接受将成为跨机器协作的基础设施级改动。"
     ],
-    "next_week": "下周应重点观察 0.9.0 后的 AMR 稳定性与安全性是否快速收敛，尤其是 #3537 是否被修复或降级处理。若 #3538/#3550 合入，Open Design 的下载页会成为 release 转化入口；同时 #3408 系列可靠性任务可能开始产出首批失败桶下降数据，决定 0.9.0 后体验口碑是否稳住。"
+    "next_week": "下周重点关注 0.10.0 是否正式发布及其包含的特性范围。截图视觉验证（#3660）和 AMR 安全修复（#3537）是决定版本口碑的两大关键。此外，#3711 的反向同步完成后应观察 main 分支稳定性，run reliability 数据闭环预计继续产出失败桶下降数据。html-video 新产品的 landing page（#3709）合入后将揭示 nexu-io 的产品矩阵扩张策略。"
   },
-  "cached_at": "2026-06-03T13:42:43+08:00",
-  "overview_summary": "Open Design 已发布 0.9.0（2026-06-02），Stars 57,752，Forks 6,519，开放 Issues 329。0.9.0 主打 install-and-create：AMR 内置、零配置首次运行、多 agent bench 扩展、插件生态和 Studio/评论/自动化/MCP 能力增强。最新 PR 显示 release 下载入口、下载元数据修复、transcript 可信回放、聊天输入偏好和设计输出细节正在快速迭代；最新 Issues 则集中在 AMR 安全风险、插件点击失效、sandbox 边界、run reliability、safe retry telemetry 和 token/latency 优化。整体判断：项目进入 0.9.0 发布后的稳定性与转化入口打磨期，AMR 安全和运行可靠性是短期最大风险。"
+  "cached_at": "2026-06-05T13:26:09+08:00",
+  "overview_summary": "Open Design Stars 58,988（+1,236 vs 06-03），Forks 6,641（+122），开放 Issues 326（-3）。最新 release 仍为 v0.9.0（2026-06-02）。0.10.0 已在路上（141 PRs · 50 contributors），定位升级为全栈 Agentic 设计工作空间。核心新方向：截图视觉验证闭环（#3660）、html-video 新产品（#3709）、Git 项目可移植性（#3698）、Langfuse 大上下文诊断（#3699）。AMR P0 安全问题（#3537）仍未解决，release 分支存在代码漂移（#3711），run reliability 数据闭环持续推进。整体判断：项目正处于 0.9.0 → 0.10.0 的重大版本过渡期，功能扩展速度加快但同时面临安全和稳定性压力。"
 }
