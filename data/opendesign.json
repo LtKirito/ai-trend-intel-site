@@ -2,214 +2,215 @@
   "repo": {
     "name": "nexu-io/open-design",
     "description": "Local-first, open-source Claude Design alternative",
-    "stars": 58988,
-    "forks": 6641,
-    "open_issues": 326,
+    "stars": 59834,
+    "forks": 6736,
+    "open_issues": 330,
     "language": "TypeScript",
     "created": "2026-04-28",
-    "updated": "2026-06-05T05:26:09Z",
+    "updated": "2026-06-06T12:09:40Z",
     "latest_release": {
       "version": "open-design-v0.9.0",
       "date": "2026-06-02",
-      "title": "Open Design 0.9.0",
+      "title": "Open Design 0.9.0 — Design for everyone",
       "summary": "310 PRs · 98 contributors · 7 天。0.9.0 是 install-and-create release：Open Design AMR 内置到桌面端，首次使用从安装 CLI/API key 降为登录后选择模型；同时扩展 Aider、Trae CLI、Antigravity、DeepSeek Reasonix 等 agent adapter，强化插件生态、模型选择、评论工作流、Studio 工具、跨平台安装和 MCP 工作区能力。"
     }
   },
   "recent_prs": [
     {
-      "number": 3595,
-      "title": "release: Open Design 0.10.0 — the all-in-one Agentic design workspace, with a whole design team built in",
+      "number": 3784,
+      "title": "fix(install): add install.sh bootstrap and document working install path",
       "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/S", "risk/high", "type/chore"],
-      "impact": "0.10.0 发布 PR，141 PRs · 50 contributors · 2 天。将 Open Design 定位升级为全栈 Agentic 设计工作空间——内置完整设计团队能力。风险标记为 high，说明这是一个重大里程碑版本，涉及范围极广。",
-      "url": "https://github.com/nexu-io/open-design/pull/3595"
+      "author": "rschumann",
+      "labels": ["size/XL", "risk/high", "type/bugfix"],
+      "impact": "修复 README 一键安装链路断裂问题：此前 curl open-design.ai/install.sh 返回的是 SPA 的 index.html 而非安装脚本，curl -f 因 HTTP 200 不会报错，导致 pipe 进制行垃圾数据。该 XL/high 修复添加原生 install.sh bootstrap 并文档化正确安装路径，直接影响所有新用户的首次安装体验。",
+      "url": "https://github.com/nexu-io/open-design/pull/3784"
     },
     {
-      "number": 3711,
-      "title": "fix(web): backport release-only fixes to main ahead of v0.10.0 re-cut (batch 1)",
+      "number": 3791,
+      "title": "design-systems: backfill 2.0 package batch 09",
       "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/L", "risk/high", "type/bugfix"],
-      "impact": "在重新切分 v0.10.0 release 分支前，将一批直接合入 release/v0.10.0 但未进入 main 的修复反向同步回 main。L 级规模 + high 风险，说明 release 流程存在代码漂移隐患，需关注合入冲突和回归。",
-      "url": "https://github.com/nexu-io/open-design/pull/3711"
+      "author": "zoeforfun",
+      "labels": ["size/XXL", "risk/medium", "type/enhancement"],
+      "impact": "Design System 2.0 批量回填计划（#3776）第 9 批，覆盖 spacious 到 urdu 共 15 个内置设计系统。目标是将这些系统的遗留 fixture 文件升级为标准化的 2.0 package 格式，使 token 提取和组件清单与用户导入的设计系统对齐。",
+      "url": "https://github.com/nexu-io/open-design/pull/3791"
     },
     {
-      "number": 3712,
-      "title": "feat(web): consistent tab hover tooltips",
+      "number": 3790,
+      "title": "design-systems: backfill 2.0 package batch 08",
       "state": "open",
-      "author": "portseif",
-      "labels": ["size/XS", "risk/medium", "type/feature"],
-      "impact": "统一 workspace tab hover 时的 tooltip 行为。文件 tab 长名截断后缺少 tooltip 反馈，该 XS 级 feature 提升日常多 tab 操作的可发现性，属于细微但高频接触点的体验改进。",
-      "url": "https://github.com/nexu-io/open-design/pull/3712"
+      "author": "zoeforfun",
+      "labels": ["size/XXL", "risk/medium", "type/enhancement"],
+      "impact": "DS 2.0 批量回填第 8 批，覆盖 renault 到 spacex 共 15 个系统。与 batch 09/10 同日提交，展现 aggressive 的标准化推进节奏。",
+      "url": "https://github.com/nexu-io/open-design/pull/3790"
     },
     {
-      "number": 3710,
-      "title": "[codex] Fix image export toast offset",
+      "number": 3798,
+      "title": "fix(new-project): exclude draft design systems from selection list",
       "state": "open",
-      "author": "Siri-Ray",
+      "author": "xxiaoxiong",
       "labels": ["size/XS", "risk/medium", "type/bugfix"],
-      "impact": "修复桌面/Web 文件查看器中图片导出成功 toast 被顶部工具栏遮挡的问题。XS 级修复，但影响所有用户的导出确认反馈可见性。",
-      "url": "https://github.com/nexu-io/open-design/pull/3710"
+      "impact": "修复 New Project 模态框允许选择草稿/未发布设计系统的 bug（Closes #3792）。此前 UI 展示可选但后端拒绝创建，只返回 'Could not create project' 通用错误。该修复从列表源头过滤 draft 状态系统。",
+      "url": "https://github.com/nexu-io/open-design/pull/3798"
     },
     {
-      "number": 3709,
-      "title": "feat(landing-page): add html-video product page under /html-video/",
+      "number": 3591,
+      "title": "fix: preserve localized automation schedule summaries",
       "state": "open",
-      "author": "522700967-wq",
-      "labels": ["size/XL", "risk/medium", "type/feature"],
-      "impact": "新增 html-video 产品落地页（/html-video/），这是 HTML Anything 的动效对偶产品——一个 HTML-to-video 元层：本地 coding agent 将 prompt/文章链接/网页转为动态视频。XL 级规模，预示 nexu-io 正在构建完整的 HTML 内容生成产品矩阵。",
-      "url": "https://github.com/nexu-io/open-design/pull/3709"
-    },
-    {
-      "number": 3660,
-      "title": "feat: add screenshot-based visual validation to critique loop",
-      "state": "open",
-      "author": "nettee",
-      "labels": ["size/XL", "risk/high", "type/feature"],
-      "impact": "为默认生成循环添加基于截图的视觉验证（Closes #1504）。此前 critique 仅基于代码文本，无法验证渲染效果是否达标。XL 级高风险的重大增强，直接影响 AI 生成质量闭环，也是 0.10.0 方向的关键支撑。",
-      "url": "https://github.com/nexu-io/open-design/pull/3660"
-    },
-    {
-      "number": 3707,
-      "title": "[codex] Fix official plugin and skill catalog search",
-      "state": "merged",
-      "author": "yinjialu",
+      "author": "mturac",
       "labels": ["size/L", "risk/medium", "type/bugfix"],
-      "impact": "已合入。飞书 row 22 报告官方插件/技能可用条目远多于 UI 展示数量且搜索不匹配。修复后用户能正确发现和搜索全部官方及本地化插件/技能，影响插件市场转化率和可发现性。",
-      "url": "https://github.com/nexu-io/open-design/pull/3707"
+      "impact": "修复 Automation 页面已保存的 schedule summary 在切换语言后回退为英文硬编码字符串的问题。#3755 已覆盖页面级 i18n，此 PR 补齐 routine schedule 副本的本地化持久化。14 条评论说明 review 讨论深入，涉及 schedule 格式一致性和 i18n key 结构设计。",
+      "url": "https://github.com/nexu-io/open-design/pull/3591"
     },
     {
-      "number": 3400,
-      "title": "docs(readme): refresh contributors wall",
+      "number": 3796,
+      "title": "design-systems: backfill 2.0 package batch 10",
+      "state": "closed",
+      "author": "zoeforfun",
+      "labels": ["size/XXL", "risk/medium", "type/enhancement"],
+      "impact": "已关闭（合入或放弃）。DS 2.0 批量回填第 10 批，同日三批（08-10）的最后一批，已在今日完成关闭。",
+      "url": "https://github.com/nexu-io/open-design/pull/3796"
+    },
+    {
+      "number": 3799,
+      "title": "i18n: localize Automation page strings for zh-CN/zh-TW",
       "state": "open",
-      "author": "open-design-bot[bot]",
-      "labels": ["size/M", "risk/low", "type/docs"],
-      "impact": "由定时 workflow 自动刷新 README 中的 contributors wall 缓存。低风险维护任务，反映项目贡献者持续增长。",
-      "url": "https://github.com/nexu-io/open-design/pull/3400"
+      "author": "xxiaoxiong",
+      "labels": ["size/XXL", "risk/medium", "type/bugfix"],
+      "impact": "为 Automation 页面添加完整的中文（简体/繁体）本地化支持（Closes #2917）。补齐 zh-CN.ts / zh-TW.ts 中缺失的 routines.* 和 tasks.primitive.routines.* 翻译 key，将 TasksView 组件的标题、按钮、空状态、加载文案全部接入 i18n。终结了自 5 月 25 日悬而未决的 Automation 页面中文显示问题。",
+      "url": "https://github.com/nexu-io/open-design/pull/3799"
+    },
+    {
+      "number": 3797,
+      "title": "fix(web): handle draft design systems in New Project",
+      "state": "open",
+      "author": "thongntit",
+      "labels": ["size/M", "risk/medium", "type/bugfix"],
+      "impact": "从另一个角度解决 #3792：在 New Project 流程中优雅处理草稿设计系统被选中的情况，提供有意义的错误提示而非通用 'Could not create project'。与 #3798 形成互补（#3798 从源头拦截，#3797 做兜底提示），需关注两者是否有重复或冲突。",
+      "url": "https://github.com/nexu-io/open-design/pull/3797"
     }
   ],
   "recent_issues": [
     {
-      "number": 3705,
-      "title": "repo(git): reduce `.git` size — `github-metrics.svg` occupies ~658 MB in pack",
-      "author": "tbontb-iaq",
-      "labels": [],
-      "comments": 2,
-      "summary": "仓库 .git 膨胀问题暴露：github-metrics.svg 在 pack 中占用约 658 MB。该 issue 由 AI 辅助分析 repo 大小后提交，建议清理或排除大二进制文件。虽非功能性 bug，但长期拖慢 clone/fetch 性能。",
-      "url": "https://github.com/nexu-io/open-design/issues/3705"
-    },
-    {
-      "number": 3703,
-      "title": "fix(web): keep design system picker fullscreen above modal chrome",
-      "state": "closed",
-      "author": "liuzemei",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "comments": 3,
-      "summary": "已关闭。修复设计系统选择器全屏层叠在现有 app modal/lightbox 之下的问题。确保设计系统预览始终处于最上层不被其他弹窗遮挡。",
-      "url": "https://github.com/nexu-io/open-design/issues/3703"
-    },
-    {
-      "number": 3702,
-      "title": "[Bug]: There is a problem with the export!",
-      "author": "Sdreamery",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "导出功能报错报告。虽然描述不够详细（2条评论），但与 #3710 toast 偏移修复形成关联，说明导出路径仍有多处问题待收敛。",
-      "url": "https://github.com/nexu-io/open-design/issues/3702"
-    },
-    {
-      "number": 3699,
-      "title": "Langfuse Phase 2.5: large-context trace diagnostics",
-      "author": "Siri-Ray",
-      "labels": ["enhancement", "type/enhancement", "area/runtime"],
-      "comments": 1,
-      "summary": "生产数据显示相当比例的 run_finished 事件 input_tokens > 1M。该 issue 延续 Langfuse 追踪系列（#3496→#3499→#3556→#3557），增加大上下文 trace 诊断能力，帮助识别 token 异常消耗根因。",
-      "url": "https://github.com/nexu-io/open-design/issues/3699"
-    },
-    {
-      "number": 3698,
-      "title": "feat: git-based project portability for cross-machine / team sharing",
-      "author": "cyjo9603",
-      "labels": ["enhancement", "needs-product-direction"],
-      "comments": 4,
-      "summary": "提出基于 Git 的项目可移植性方案，使项目的完整状态（不仅是原始文件）可在不同机器和团队成员间版本控制和共享。标记为 needs-product-direction，说明社区有强需求但产品方向尚未确定。",
-      "url": "https://github.com/nexu-io/open-design/issues/3698"
-    },
-    {
-      "number": 3696,
-      "title": "Design system preview",
-      "author": "syncness",
+      "number": 2917,
+      "title": "Localize the Automation page when the system language is Chinese",
+      "author": "AmyShang-alt",
       "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 8,
-      "summary": "在 Settings tab 中预览设计系统时，Settings tab header 出现在设计系统预览之前，导致遮挡。8 条评论表明有一定复现率，标记为 good first issue 适合新手贡献。",
-      "url": "https://github.com/nexu-io/open-design/issues/3696"
+      "comments": 12,
+      "summary": "自 5 月 25 日悬而未决的 i18n 问题：系统语言设为中文时 Automation 页面仍全英文。今日 #3799 提交后有望关闭。12 条评论反映了社区对中文支持的强烈需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/2917"
     },
     {
-      "number": 3547,
-      "title": "Pick and implement the first ROI-ranked latency or token optimization",
-      "author": "yinjialu",
-      "labels": ["feature"],
-      "comments": 1,
-      "summary": "选择并实现首个按 ROI 排序的延迟或 token 优化。说明团队正从功能扩展转向成本与响应性能优化，这与 AMR/Codex/Claude Code 等多 agent 路径的使用成本直接相关。",
-      "url": "https://github.com/nexu-io/open-design/issues/3547"
-    },
-    {
-      "number": 3546,
-      "title": "Fix the top remaining failed-run bucket after PR1 and retry data",
-      "author": "yinjialu",
-      "labels": ["bug"],
-      "comments": 1,
-      "summary": "基于 PR1 失败分类和 retry 数据，修复剩余最高频 failed-run bucket。可靠性工作已具备数据驱动闭环，下一步应观察 top bucket 是否明显下降。",
-      "url": "https://github.com/nexu-io/open-design/issues/3546"
-    },
-    {
-      "number": 3544,
-      "title": "Monitor unknown and coarse failed-run buckets after PR1 classification",
-      "author": "yinjialu",
-      "labels": ["type/enhancement"],
-      "comments": 1,
-      "summary": "PR1 失败分类后监控 unknown/coarse failed-run buckets。说明团队已进入基于 telemetry 的后续收敛阶段，重点是把粗粒度失败桶拆细并减少未知失败占比。",
-      "url": "https://github.com/nexu-io/open-design/issues/3544"
-    },
-    {
-      "number": 3537,
-      "title": "Claude Sonnet via AMR is seriously hallucinating user instructions and acting on them.",
-      "author": "FunKyDunKnz",
-      "labels": ["bug", "priority:p0", "security"],
+      "number": 3792,
+      "title": "New Project modal lets users select unpublished design systems, then project creation fails with a generic error",
+      "author": "thongntit",
+      "labels": ["bug", "help wanted"],
       "comments": 5,
-      "summary": "AMR 路径下 Claude Sonnet 严重幻觉用户指令并执行，标记为 bug、priority:p0 和 security。该问题直接冲击 0.9.0 主打的 AMR 零配置体验，是当前最高优先级风险。评论数增至 5（较上次+2），仍在活跃讨论中。",
-      "url": "https://github.com/nexu-io/open-design/issues/3537"
+      "summary": "今日新开：New Project 模态框允许选择草稿状态的自定义设计系统，但创建时后端拒绝并返回通用错误。已激发双 PR 修复（#3797 兜底提示 + #3798 源头过滤），是今日最活跃的协作修复案例。",
+      "url": "https://github.com/nexu-io/open-design/issues/3792"
+    },
+    {
+      "number": 3558,
+      "title": "Improve skill settings layout to prevent text clipping and cramped actions",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 6,
+      "summary": "Skill 设置面板展开编辑时，卡片边框遮挡确认文本，操作按钮过于紧凑。标记为 good first issue 适合新手贡献，反映了 UI 布局细节打磨的持续需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/3558"
+    },
+    {
+      "number": 3554,
+      "title": "Execution mode card text is clipped and not fully visible",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 6,
+      "summary": "执行模式设置页中，所选 CLI/供应商卡片内的文本和徽章被裁剪不可见。good first issue，与 #3558 同为 UI polish 类问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/3554"
+    },
+    {
+      "number": 1751,
+      "title": "macOS 15: Open Design icon appears oversized in Launchpad and Dock",
+      "author": "Drswith",
+      "labels": ["bug", "help wanted", "priority:p2"],
+      "comments": 15,
+      "summary": "macOS 15 下应用图标在 Launchpad 和 Dock 中明显偏大。15 条评论（较上次 +4），标记为 P2，持续有用户复现报告，是 macOS 用户高频可见的感知问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/1751"
+    },
+    {
+      "number": 3780,
+      "title": "Design toolbox flyout can render under the canvas and overflow the viewport",
+      "author": "Lanzhou3",
+      "labels": ["bug", "help wanted"],
+      "comments": 3,
+      "summary": "今日新开：从 Composer 的 + 菜单打开 Design toolbox 浮层时，面板渲染在右侧画布下方且部分超出窗口边界，导致部分工具箱项无法访问。影响项目工作区内的设计操作体验。",
+      "url": "https://github.com/nexu-io/open-design/issues/3780"
+    },
+    {
+      "number": 3605,
+      "title": "Fix image export when artifact snapshot capture returns null",
+      "author": "AmyShang-alt",
+      "labels": ["bug"],
+      "comments": 6,
+      "summary": "Nightly 验证发现：图片导出模态框打开后立即报错，因为预览快照桥返回 null。与 #3702（export 报错）形成导出路径上的多处问题簇，暴露产物导出链路的可靠性盲区。",
+      "url": "https://github.com/nexu-io/open-design/issues/3605"
+    },
+    {
+      "number": 3189,
+      "title": "Deleting a referenced skill does not clear its selected state in the picker",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 4,
+      "summary": "删除输入中引用的 skill 后，skill picker 仍显示为选中状态。状态同步 bug，影响 skill 引用管理的直观性，标记为 good first issue。",
+      "url": "https://github.com/nexu-io/open-design/issues/3189"
+    },
+    {
+      "number": 1837,
+      "title": "Global Management & Upload for Markdown Design System Files",
+      "author": "Tilmirs",
+      "labels": ["enhancement"],
+      "comments": 5,
+      "summary": "功能请求：支持全局管理和直接上传 Markdown 设计系统文件，而不必每次在对话中手动发送 MD 内容。与 Design System 2.0 批量回填方向相关，反映了设计系统管理的产品化需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/1837"
+    },
+    {
+      "number": 211,
+      "title": "Add the option to upload a folder — not just single files",
+      "author": "mendelg",
+      "labels": ["enhancement", "good first issue", "help wanted"],
+      "comments": 26,
+      "summary": "长期功能请求（26 评论）：支持上传整个文件夹而非仅单文件。对于想分享完整代码库给 Open Design 的用户是刚需。是社区呼声最高的 enhancement 之一。",
+      "url": "https://github.com/nexu-io/open-design/issues/211"
     }
   ],
   "trends": {
-    "direction": "0.10.0 即将发布（141 PRs · 50 contributors），主线从 0.9.0 的「install-and-create」升级为「all-in-one Agentic design workspace」。核心方向包括：截图驱动的视觉验证闭环（#3660）、HTML 视频产品矩阵扩展（#3709）、Git 项目可移植性（#3698）、以及大规模上下文 trace 诊断（#3699）。同时 run reliability 持续数据闭环推进，token/latency ROI 优化提上日程。",
+    "direction": "6 月 6 日的主要活动围绕「安装体验修复 + Design System 2.0 回填冲刺 + 中文 i18n 闭环」三条主线。最突出的是 #3784 修复 README 一键安装链路断裂（curl install.sh 返回 HTML 而非脚本），这是直接影响新用户转化的关键修复。同时 zoeforfun 发起了 Design System 2.0 批量回填冲刺（同日 3 批 XXL PR），标准化 45 个内置设计系统的 package 格式。i18n 方面，#3799 为 Automation 页面补齐了完整的中文（简/繁）翻译，终结了自 5 月 25 日的 #2917。New Project 草稿设计系统拦截引发双 PR 协作修复（#3797 + #3798），是今日最活跃的协作案例。整体判断：v0.9.0 后第 4 天，团队正在集中处理安装漏斗、本地化和设计系统基础建设的「地基型」工作，0.10.0 发布时间线尚不明确。",
     "affected_modules": [
-      "amr-runtime-security",
-      "critique-visual-validation",
-      "html-video-product",
-      "plugin-skill-catalog-search",
-      "project-portability-git",
-      "run-reliability-telemetry",
-      "large-context-trace-diagnostics",
-      "token-latency-optimization",
-      "release-flow-main-backport",
-      "export-toast-feedback"
+      "install-experience-cli",
+      "design-system-2.0-packages",
+      "automation-page-i18n-zh",
+      "new-project-creation-flow",
+      "draft-design-system-management",
+      "skill-settings-layout",
+      "design-toolbox-flyout",
+      "image-export-snapshot",
+      "execution-mode-card-ui",
+      "skill-picker-state-sync",
+      "macos-icon-sizing",
+      "folder-upload-ux"
     ],
     "risks": [
-      "AMR P0/security issue (#3537) 仍未修复，评论数增至 5，若 0.10.0 发布前未解决将严重影响用户对 AMR 零配置路径的信任。",
-      "v0.10.0 re-cut 过程中 #3711 暴露 release 分支代码漂移（修复直接合入 release 但未同步到 main），合并冲突和回归风险较高。",
-      "仓库 .git 体积膨胀至 658MB+（#3705），若不及时治理将持续拖慢开发者 clone/fetch 体验。",
-      "export 路径仍有多处问题（#3702 + #3710），说明基础功能稳定性仍有盲区。"
+      "安装链路断裂（#3784）对首次用户体验构成高风险——README 一键安装命令实为 NOOP，新用户在安装阶段就可能流失。",
+      "Design System 2.0 同日 3 批 XXL 回填（#3790/#3791/#3796）并行推进，虽有 #3776 计划指导，但高并行度的批量文件变更仍存在 merge conflict 和 token 一致性风险。",
+      "同一 issue（#3792）引发两个 PR（#3797 前端兜底 + #3798 源头过滤），需确认两者逻辑不冲突且最终合并策略清晰。",
+      "导出路径问题仍然多发：#3605（快照 null）、#3702（通用导出报错）、#3710（toast 偏移），说明产物导出链路缺乏端到端可靠性验证。"
     ],
     "actions": [
-      "优先跟踪 #3537 AMR 安全修复进展，确认 0.10.0 发布前是否有缓解措施或临时降级方案。",
-      "关注 #3711 的 batch 1 反向同步结果，评估是否存在更多 release-only 修复遗漏；跟踪 #3595 的 0.10.0 发布时间线。",
-      "跟踪 #3660 截图视觉验证 PR 的 review 进度，这是 0.10.0 的核心差异化特性，决定 AI 生成质量的闭环完整性。",
-      "关注 #3698 Git 项目可移植性的产品方向决策，如果接受将成为跨机器协作的基础设施级改动。"
+      "重点跟踪 #3784 install.sh 修复的 review 和合入进度——这是当前最高优先级的首次用户体验修复，影响所有新安装用户。",
+      "关注 #3790/#3791 DS 2.0 回填的合并结果，特别是 batch 08-10 是否有 token/组件清单出现不一致。",
+      "确认 #3797 vs #3798 的最终合并决策，避免两个互补修复在同一个 bug 上产生重复或冲突的 UI 行为。",
+      "跟踪 #3799 i18n 合入后 Automation 页面在 zh-CN 下的实际表现，验证 #2917 是否真正关闭。"
     ],
-    "next_week": "下周重点关注 0.10.0 是否正式发布及其包含的特性范围。截图视觉验证（#3660）和 AMR 安全修复（#3537）是决定版本口碑的两大关键。此外，#3711 的反向同步完成后应观察 main 分支稳定性，run reliability 数据闭环预计继续产出失败桶下降数据。html-video 新产品的 landing page（#3709）合入后将揭示 nexu-io 的产品矩阵扩张策略。"
+    "next_week": "下周预计 0.10.0 发布窗口逐渐明朗——今日以安装修复、设计系统标准化和 i18n 补课为主的工作表明团队正在夯实发布前的「地基」。重点关注：install.sh 引导程序是否合并并上线至 open-design.ai CDN；AMR P0 安全问题（#3537）是否在 0.10.0 前获得缓解；DS 2.0 回填计划是否完成并伴随新的设计系统管理产品能力。此外，社区协作模式出现新信号：#3792 的「issue → 双 PR 讨论 → 择优合并」模式可能成为社区贡献的新范式。"
   },
-  "cached_at": "2026-06-05T13:26:09+08:00",
-  "overview_summary": "Open Design Stars 58,988（+1,236 vs 06-03），Forks 6,641（+122），开放 Issues 326（-3）。最新 release 仍为 v0.9.0（2026-06-02）。0.10.0 已在路上（141 PRs · 50 contributors），定位升级为全栈 Agentic 设计工作空间。核心新方向：截图视觉验证闭环（#3660）、html-video 新产品（#3709）、Git 项目可移植性（#3698）、Langfuse 大上下文诊断（#3699）。AMR P0 安全问题（#3537）仍未解决，release 分支存在代码漂移（#3711），run reliability 数据闭环持续推进。整体判断：项目正处于 0.9.0 → 0.10.0 的重大版本过渡期，功能扩展速度加快但同时面临安全和稳定性压力。"
+  "cached_at": "2026-06-06T20:00:00+08:00",
+  "overview_summary": "Open Design Stars 59,834（+846 vs 06-05），Forks 6,736（+95），开放 Issues 330（+4）。最新 release 仍为 v0.9.0（2026-06-02），发布第 4 天。本日核心动态：安装链路修复（#3784 修复 README install.sh 断裂）、Design System 2.0 批量回填冲刺（同日 3 批 XXL，标准化 45 个内置系统）、zh-CN/zh-TW i18n 闭环（#3799 补齐 Automation 中文，#2917 终结）。New Project 草稿设计系统问题引发活跃双 PR 协作。整体判断：v0.9.0 后进入地基加固期，安装漏斗、设计系统标准化和本地化是当前三大主线，0.10.0 发布时间线尚在酝酿。"
 }
