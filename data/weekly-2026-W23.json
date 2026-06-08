@@ -1,0 +1,99 @@
+{
+  "week": "2026-W23",
+  "title": "2026 W23 GitHub AI 星标周报",
+  "summary": "Agent技能生态全面爆发——ECC统领249个技能生态、Hermes自进化框架+WebUI打通全端、headroom压缩token降本增效，工具链从\"单点突破\"演进为\"生态协同\"。",
+  "count": "10 个项目",
+  "theme": "Agent技能生态 · 效率工具 · 多模态创作",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "headroom",
+      "category": "DevTools",
+      "stars": "17.0k",
+      "growth": "+14.3k",
+      "why": "LLM上下文token压缩达60-95%，内置MCP Server/代理/库三种模式",
+      "url": "https://github.com/chopratejas/headroom"
+    },
+    {
+      "rank": "02",
+      "name": "markitdown",
+      "category": "DevTools",
+      "stars": "147.4k",
+      "growth": "+13.4k",
+      "why": "微软开源文件转Markdown神器，PDF/Word/Excel全支持，LLM必备",
+      "url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "rank": "03",
+      "name": "hermes-agent",
+      "category": "Agent",
+      "stars": "186.0k",
+      "growth": "+11.4k",
+      "why": "自我进化的Agent框架，186k星霸榜，与用户共同成长",
+      "url": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "rank": "04",
+      "name": "ECC",
+      "category": "Agent",
+      "stars": "209.9k",
+      "growth": "+10.2k",
+      "why": "最大Agent技能仓库，249技能+63代理+79兼容层，210k星",
+      "url": "https://github.com/affaan-m/ECC"
+    },
+    {
+      "rank": "05",
+      "name": "MoneyPrinterTurbo",
+      "category": "Multimodal",
+      "stars": "81.2k",
+      "growth": "+8.0k",
+      "why": "AI一键生成高清短视频，81k星持续霸榜多模态赛道",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo"
+    },
+    {
+      "rank": "06",
+      "name": "taste-skill",
+      "category": "Agent",
+      "stars": "36.8k",
+      "growth": "+6.4k",
+      "why": "AI设计品味Skill，根治Agent生成丑陋UI的顽疾",
+      "url": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "rank": "07",
+      "name": "hermes-webui",
+      "category": "Agent",
+      "stars": "13.9k",
+      "growth": "+4.3k",
+      "why": "Hermes Agent最佳网页端体验，手机也能操控AI Agent",
+      "url": "https://github.com/nesquena/hermes-webui"
+    },
+    {
+      "rank": "08",
+      "name": "impeccable",
+      "category": "Agent",
+      "stars": "35.6k",
+      "growth": "+3.6k",
+      "why": "AI设计语言体系，让Agent Harness的设计输出质量飞跃",
+      "url": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "rank": "09",
+      "name": "open-notebook",
+      "category": "DevTools",
+      "stars": "27.3k",
+      "growth": "+3.0k",
+      "why": "开源NotebookLM替代方案，功能更灵活，支持自部署",
+      "url": "https://github.com/lfnovo/open-notebook"
+    },
+    {
+      "rank": "10",
+      "name": "supermemory",
+      "category": "Infra",
+      "stars": "26.0k",
+      "growth": "+2.9k",
+      "why": "AI时代记忆引擎API，极速可扩展，为Agent提供持久记忆",
+      "url": "https://github.com/supermemoryai/supermemory"
+    }
+  ]
+}
