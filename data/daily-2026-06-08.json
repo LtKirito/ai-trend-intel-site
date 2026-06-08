@@ -1,0 +1,181 @@
+{
+  "date": "2026-06-08",
+  "title": "2026-06-08 AI信息差日报",
+  "coverage": "覆盖窗口：6/7 ~ 6/8（周一，含周末）",
+  "sources": "信息源：Apple WWDC 2026 / Anthropic官方声明 / xAI Release Notes / 美团技术博客 / 虎嗅 / AITNT / BuildFastWithAI / OpenTools / GitHub Trending / 知乎",
+  "conclusions": [
+    "WWDC 2026今日开幕：苹果史上最大AI赌注——Siri彻底重建为AI聊天机器人（代号Campos），面向10亿设备。这是AI从工具到OS级基础设施的关键转折。",
+    "Anthropic罕见公开警告：Claude已编写公司80%以上代码，工程师效率提升8倍。联合创始人Jack Clark警告'AI只有油门没刹车'，呼吁建立可验证暂停机制。",
+    "AI编程终端三国杀成形：Grok Build全面开放、Claude Code v2.1.168、Codex功能扩散——xAI凭政府合同+社交平台+算力，加入这场最激烈的Agent战场。",
+    "DeepSeek V4展现极致性价比：普林斯顿用V4 Flash做形式化数学证明，PutnamBench 75.6%通过率，成本仅$294——比竞品低500倍。中国开源模型在推理深度上已具竞争力。",
+    "美团开源AI六连发：LongCat-Video-Avatar 1.5商业数字人、General 365推理基准、AudioDiT语音克隆、Flash-Prover定理证明——一家外卖公司的AI实验室正在系统性地输出。"
+  ],
+  "summary": "WWDC 2026今日开幕，苹果Siri重建为AI聊天机器人是最大事件。Anthropic官方发出AI自我进化失控警告，Claude已编写80%代码。AI编程终端战场三国杀：Grok Build vs Claude Code vs Codex。DeepSeek V4 Flash数学证明成本优势500倍。美团AI六连发开源。",
+  "body": "周一日报覆盖周末窗口（6/7-6/8）。WWDC 2026是本周最大AI事件：Siri代号Campos重建为ChatGPT式对话AI，iOS 27/macOS 27配套发布。Anthropic联合创始人Jack Clark公开呼吁建立AI行业'刹车踏板'——这是来自AI安全定位最强的头部实验室的罕见官方警告。xAI Grok Build在编程Agent战场全面开放。DeepSeek V4 Flash在形式化数学证明上实现500倍成本优势。美团技术团队一口气开源6个AI系统/模型，覆盖数字人、推理、语音、定理证明、多模态、具身AI。",
+  "judgement": "今日最值得关注的是两条主线：1）WWDC 2026标志着AI从独立产品走向OS级基础设施——10亿设备内置AI聊天机器人将从根本上改变AI入口格局；2）Anthropic'刹车踏板'警告不是学术讨论，是来自推动这一进程的人的真实数据披露——80%代码由AI编写、8倍效率提升、RSI临界点逼近。另外AI编程Agent进入多玩家竞争阶段，Grok Build的加入使市场更加拥挤，利好开发者（更多选择）也利好巨头（加速锁定生态）。中国开源模型在推理深度（DeepSeek数学）和工程输出（美团AI六连发）上持续给人惊喜。",
+  "tags": ["WWDC", "Apple Siri", "Anthropic安全", "RSI", "Grok Build", "DeepSeek V4", "美团LongCat", "VideoClaw", "NVIDIA Cosmos", "AI编程Agent"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "WWDC 2026开幕：Siri重建为AI聊天机器人",
+      "summary": "Apple今日WWDC主题演讲，预计发布iOS 27、macOS 27、重建版Siri（代号Campos）——从指令式助手升级为ChatGPT式对话AI。Siri首次以独立App形态出现，支持多轮对话、上下文理解、内容创作。Apple Intelligence新增AI照片编辑、AI生成壁纸、AI自动设计快捷指令。",
+      "why": "10亿iOS设备即将内置真正的AI聊天机器人。这意味着AI从一个'需要主动去用的工具'变成'系统自带的基础设施'。AI的入口权之争进入新阶段。",
+      "action_fact": "【事实】关注今日WWDC主题演讲（北京时间6/9凌晨1点），官方将公布Siri重建细节和iOS 27架构变化。",
+      "action_judge": "【判断】Apple选择在Siri层嵌入AI而非单独App，意味着AI将成为iOS的操作系统原语。这对Claude/GPT在移动端的获客是结构性压制。开发者应关注新的App Intents和AI扩展API。",
+      "tags": ["WWDC2026", "Apple", "Siri", "iOS27", "AI聊天"],
+      "sources": ["https://lifehacker.com/tech/wwdc-2026-live-blog", "https://www.geeky-gadgets.com/apple-wwdc-2026-ai-plans/", "https://blog.csdn.net/2301_78671323/article/details/161226418"]
+    },
+    {
+      "rank": "P0",
+      "title": "Anthropic'刹车踏板'警告：AI自我进化失控风险",
+      "summary": "Anthropic联合创始人Jack Clark公开警告：AI正在接近递归自我改进（RSI）的临界点。数据披露——Claude已编写公司80%以上生产代码，工程师季度代码产出是2024年的8倍。任务时长从数分钟扩展到最长12小时。Clark呼吁建立行业'刹车踏板'——可验证的暂停机制。",
+      "why": "这是来自AI安全定位最强的头部实验室的官方警告。不是来自学者或外部批评者，而是来自正在推动它的人。数据真实：8倍效率提升、80%代码由AI编写。",
+      "action_fact": "【事实】Anthropic提出的'刹车踏板'方案：非单方面放缓，而是在多方可验证的条件下协调减速。目前只是倡议，无法律效力。",
+      "action_judge": "【判断】这波警告可能推动2026下半年AI监管立法加速。如果你在AI企业工作或投资AI公司，关注RSI相关监管对模型部署和算力扩张的影响。短期内不影响Claude Code使用。",
+      "tags": ["Anthropic", "AI安全", "RSI", "自我进化", "监管"],
+      "sources": ["https://opentools.ai/news/anthropic-warns-ai-industry-has-no-brake-pedal", "https://finance.sina.com.cn/roll/2026-06-05/doc-iniaiqkv1789710.shtml", "https://www.chinaz.com/ainews/28692.shtml"]
+    },
+    {
+      "rank": "P1",
+      "title": "特朗普/桑德斯AI所有权趋同：两党罕见共识",
+      "summary": "特朗普表示美国政府可能持股OpenAI、Anthropic、xAI等AI巨头。桑德斯参议员提出《美国AI主权财富基金法案》，提议对前沿AI公司征50%一次性税（以股票支付）放入联邦基金。OpenAI CEO Sam Altman私下早已向白宫推销政府持股概念。",
+      "why": "美国两党在最分裂的时代，AI领域罕见趋同——都主张政府应该拥有AI公司的一部分。这意味着AI被视为国家战略资产，而非纯商业。",
+      "action_fact": "【事实】桑德斯法案已正式提出，Altman公开对50%门槛表示不支持但愿意就公众股权合作。",
+      "action_judge": "【判断】短期不影响日常开发，但中长期可能影响AI公司融资、估值和IPO节奏。OpenAI 9月IPO可能成为第一个'半国有化'的AI公司定价案例。",
+      "tags": ["AI政策", "政府所有权", "桑德斯", "特朗普", "AI主权"],
+      "sources": ["https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "DeepSeek V4 Flash数学证明：500倍成本优势",
+      "summary": "普林斯顿PLI团队发布Goedel-Architect智能体框架，基于DeepSeek-V4-Flash在Lean 4中做形式化定理证明。PutnamBench通过率75.6%，成本仅$294，比Hilbert系统低500倍。论文发布在arXiv。",
+      "why": "中国开源模型在数学推理的顶尖赛道上，不只是'可用'，而是'有竞争力'。500倍成本优势意味着更多学术团队可以用低成本做前沿研究。",
+      "action_fact": "【事实】Goedel-Architect已在arXiv开源（2606.06468），基于DeepSeek-V4-Flash + Lean 4，支持blueprint驱动的自动化证明。",
+      "action_judge": "【判断】适合数学/逻辑方向的学术研究者和AI Agent开发者借鉴其'blueprint+agent'架构设计思路。DeepSeek V4 Flash的低成本优势对自动化推理流水线有实际部署价值。",
+      "tags": ["DeepSeek", "数学证明", "Lean4", "Goedel-Architect", "形式化验证"],
+      "sources": ["https://arxiv.org/abs/2606.06468", "https://www.huxiu.com/article/4864984.html", "https://www.xinfinite.net/t/topic/20038"]
+    },
+    {
+      "rank": "P1",
+      "title": "美团AI六连发：LongCat全栈开源",
+      "summary": "美团技术团队在6/7集中发布6个AI系统/模型：LongCat-Video-Avatar 1.5（商业级数字人视频）、General 365（推理评估基准）、LongCat-AudioDiT（零样本TTS）、LongCat-Flash-Prover（定理证明）、LongCat-Next（物理世界多模态）、LARYBench（具身AI评估）。",
+      "why": "一家外卖公司正在系统性输出AI基础设施。六连发覆盖数字人、推理、语音、证明、多模态、具身AI——比大多数AI创业公司的发布密度还高。",
+      "action_fact": "【事实】所有6个项目均在GitHub开源（MIT许可），可直接使用。",
+      "action_judge": "【判断】Video-Avatar 1.5数字人视频生成最实用，可直接用于视频号内容生产。General 365基准可用来评估你用的模型真实推理能力——目前最强Gemini 3 Pro也仅62.8%。",
+      "tags": ["美团", "LongCat", "开源", "数字人", "推理评估", "TTS"],
+      "sources": ["https://aitoolly.com/ai-news/2026-06-07", "https://tech.meituan.com/", "https://github.com/meituan-longcat"]
+    },
+    {
+      "rank": "P1",
+      "title": "VideoClaw：哈工大+阿里开源AI导演框架",
+      "summary": "哈尔滨工业大学张民团队联合阿里开源全流程AI多智能体导演框架VideoClaw，可实现'一句话生成连贯长视频'。支持无限续写、人工插入修改、VLM质检。GitHub已获1.3K星。",
+      "why": "从文本/图片生成到长视频生成的跨越——而且支持人工介入编辑，不是黑箱产出。对视频号创作者是直接可用的工具。",
+      "action_fact": "【事实】VideoClaw已在GitHub开源，支持多智能体协作、可中断修改、VLM自动质检。",
+      "action_judge": "【判断】适合做视频号的创作者和AI产品经理关注。与美团LongCat数字人组合使用——数字人+AI导演=自动化视频工厂。",
+      "tags": ["VideoClaw", "AI视频", "开源", "多智能体", "视频生成"],
+      "sources": ["https://www.aitntnews.com/ainews/zh-CN"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Grok Build",
+      "type": "终端AI编程Agent",
+      "highlight": "ACP协议、并行子代理、worktree支持、无头模式。xAI从模型到终端工具的完整闭环。",
+      "audience": "AI/全栈开发者",
+      "action": "curl -fsSL https://x.ai/cli/install.sh | bash（需SuperGrok或X Premium Plus订阅）",
+      "url": "https://www.chinaz.com/ainews/28323.shtml"
+    },
+    {
+      "name": "Goedel-Architect",
+      "type": "AI数学证明Agent框架",
+      "highlight": "DeepSeek V4 Flash驱动，500倍成本优势，PutnamBench 75.6%",
+      "audience": "数学/逻辑研究者、AI Agent开发者",
+      "action": "读arXiv论文 → clone GitHub仓库 → 尝试运行demo",
+      "url": "https://arxiv.org/abs/2606.06468"
+    },
+    {
+      "name": "LongCat-Video-Avatar 1.5",
+      "type": "数字人视频生成",
+      "highlight": "商业级唇形同步、多人交互、长视频稳定，MIT开源",
+      "audience": "视频创作者、AI产品",
+      "action": "GitHub clone → 按README跑demo → 测试中文数字人效果",
+      "url": "https://github.com/meituan-longcat"
+    },
+    {
+      "name": "VideoClaw",
+      "type": "AI多智能体导演框架",
+      "highlight": "一句话生成长视频、可中断修改、VLM质检，1.3K星",
+      "audience": "视频创作者、AI工具链",
+      "action": "GitHub clone → 尝试输入一句话脚本看产出",
+      "url": "https://www.aitntnews.com/ainews/zh-CN"
+    },
+    {
+      "name": "LongCat-AudioDiT",
+      "type": "零样本TTS语音克隆",
+      "highlight": "波形潜在空间扩散、跳过中间表示，高保真语音复现",
+      "audience": "语音合成、数字人应用",
+      "action": "GitHub clone → 上传一段音频测试克隆效果",
+      "url": "https://github.com/meituan-longcat"
+    },
+    {
+      "name": "General 365（基准）",
+      "type": "LLM推理能力评估",
+      "highlight": "最强模型Gemini 3 Pro仅62.8%，绝大多数模型不及格",
+      "audience": "AI研究者、模型选型",
+      "action": "阅读美团技术博客了解评估方法 → 用你的模型跑分",
+      "url": "https://tech.meituan.com/"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "WWDC 2026：苹果AI全面宣战，Siri成聊天机器人",
+      "hook": "10亿iPhone用户明天起就能用AI聊天机器人，不需要下载ChatGPT",
+      "angle": "快讯解读：对比Siri 15年历史 vs 新Siri能力，展示iOS 27界面变化，解读苹果AI战略对普通用户的意义",
+      "materials": "WWDC演讲录屏、iOS 27截图、Siri新旧对比",
+      "difficulty": "低"
+    },
+    {
+      "title": "Anthropic内部数据泄露：AI已在编写公司80%代码",
+      "hook": "最安全的AI公司内部，AI已经接管了编码——工程师变成审稿人",
+      "angle": "深挖Anthropic'刹车踏板'警告背后的数据：8倍效率提升、80%代码由AI写、RSI风险解读。采访式叙事。",
+      "materials": "Anthropic博客截图、数据图表、Jack Clark采访片段",
+      "difficulty": "中"
+    },
+    {
+      "title": "DeepSeek V4做数学证明：成本比别人低500倍",
+      "hook": "中国开源模型在顶尖数学竞赛上打出了'白菜价'的奇迹",
+      "angle": "从PutnamBench结果讲起，解释什么是形式化证明，展示500倍成本优势的意义。对比Hilbert vs Goedel-Architect架构。",
+      "materials": "论文截图、成本对比表格、证明过程可视化",
+      "difficulty": "中"
+    },
+    {
+      "title": "美团做AI有多猛？一口气开源6个大模型",
+      "hook": "一家外卖公司，开源了比大多数AI创业公司还多的模型",
+      "angle": "逐个介绍6个模型的能力和用途，重点展示Video-Avatar 1.5数字人效果和General 365的评测结果。",
+      "materials": "数字人生成效果录屏、General 365评分表、GitHub Star曲线",
+      "difficulty": "低"
+    },
+    {
+      "title": "AI编程三国杀：Claude Code vs Grok Build vs Codex全面对比",
+      "hook": "三大终端Agent正面开战，你的下一行代码可能五秒钟就生成好了",
+      "angle": "分别演示三个工具安装和实际编码效果，对比SWE-bench评分、价格、生态。给观众推荐最适合自己的选择。",
+      "materials": "三个工具的实际编码录屏、对比表格、价格信息图",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {"item": "MiroFish群体智能引擎", "reason": "已在6/7日报覆盖（当时标记为噪音），今日无新进展。可信度低（个人项目，无充分验证），新颖性不足。"},
+    {"item": "Meta Instagram AI聊天机器人漏洞导致20K账户被黑", "reason": "属于网络安全事件，非AI工具/模型/技术进展主题。核心是安全漏洞而非AI信息差。"},
+    {"item": "Codex vs Claude Code功能趋同分析", "reason": "列举24项共享功能的对比文，属于旧新闻的重新包装。新颖性≤2（功能趋同已持续数月），无实质新信息。"},
+    {"item": "SpaceX IPO路演", "reason": "非AI主题，虽与AI融资氛围有关联但内容不属于AI信息差范畴。"},
+    {"item": "Alphabet资本寻求", "reason": "纯财经新闻，属于市场动态而非AI技术/工具进展。"}
+  ],
+  "tracking_items": [
+    {"item": "WWDC 2026全程跟进", "reason": "重点关注Siri重建的具体能力范围、iOS 27的AI API变化、AI照片编辑工具的实际效果。本周最大AI事件。"},
+    {"item": "Anthropic刹车警告后续", "reason": "看其他实验室或监管机构是否回应。特别关注OpenAI、Google、xAI的官方立场。"},
+    {"item": "Grok Build用户反馈", "reason": "全面开放后开发者社区的实际体验和对比评测。关注与Claude Code的SWE-bench对比。"},
+    {"item": "美国AI主权财富基金法案进展", "reason": "桑德斯提案的国会听证情况，以及特朗普政府的具体跟进动作。"},
+    {"item": "DeepSeek V4生态进展", "reason": "Goedel-Architect之后是否会有更多基于V4的学术/工程应用出现。"},
+    {"item": "OpenAI IPO动态", "reason": "关注IPO申报文件公开后的详细信息。"}
+  ]
+}
