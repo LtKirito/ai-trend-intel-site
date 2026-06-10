@@ -1,0 +1,174 @@
+{
+  "date": "2026-06-10",
+  "title": "2026-06-10 AI信息差日报",
+  "coverage": "覆盖窗口：6/9 ~ 6/10（48小时）",
+  "sources": "信息源：Anthropic官方 · IT之家 · 腾讯新闻 · 新浪科技 · TrueFoundry · Releasebot · 每日经济新闻 · Microsoft Power Platform Blog · Digital Applied",
+  "conclusions": [
+    "Anthropic发布Claude Fable 5，首个面向大众的Mythos级模型。SWE-Bench Pro 80.3%（领先GPT-5.5达22个百分点）、法律推理13.3%（Gemini为0%）、空间推理较Opus 4.8提升2.7倍。同一底层模型拆分为公开版(Fable)与受限版(Mythos)，创新\"安全护栏\"机制——敏感请求自动路由至Opus 4.8而非直接拒绝。",
+    "Claude Fable 5定价翻倍但提供2周免费窗口。$10/$50 per MTok（Opus 4.8的2倍），6月9-22日订阅用户免费使用。Anthropic正在验证\"质量溢价\"商业模型——<5%的请求触发安全回退，不影响日常使用体验。",
+    "阿里巴巴成立Token Foundry事业部，CEO吴泳铭直管。合并通义大模型事业部+未来生活实验室，国内AI巨头组织架构从事业部各自为战走向\"双轮驱动\"（Token Foundry商业化+AI未来研究院前沿探索）。",
+    "Claude Code v2.1.169发布，safe-mode排障利器+15项修复。新增`--safe-mode`一键屏蔽所有自定义内容（CLAUDE.md/插件/技能/Hooks/MCP），`/cd`命令支持切换工作目录不中断缓存，Windows性能回归修复。",
+    "Microsoft Dataverse MCP Server更新Agent工具形态。新增搜索、查询、记录操作、表变更和文件处理等Agent原生能力，企业级MCP生态从\"功能暴露\"走向\"语义适配\"。"
+  ],
+  "summary": "Anthropic发布Claude Fable 5/Mythos 5，SWE-Bench Pro 80.3%屠榜编程基准，首发Mythos级公开模型。同日Claude Code 2.1.169发布safe-mode排障+15修复。阿里巴巴成立Token Foundry事业部CEO直管，国内AI组织进入双轮驱动阶段。Microsoft Dataverse MCP Server升级Agent工具形态。",
+  "body": "Anthropic于6月9日深夜发布Claude Fable 5与Mythos 5，这是首个面向大众的Mythos级模型。Fable 5在SWE-Bench Pro上达到80.3%（领先GPT-5.5 22个百分点），FrontierCode Diamond 29.3%，法律推理13.3%（Gemini为0%），空间推理38.6%是Opus 4.8的2.7倍。定价$10/$50 per MTok（Opus 4.8的2倍），6月9-22日免费窗口。创新三重安全护栏：网络安全/生物化学/模型蒸馏分类器<5%触发率。同底层模型的Mythos 5仅限Glasswing合作伙伴。Claude Code v2.1.169新增safe-mode、/cd命令、disableBundledSkills，15项修复含Windows性能回归。阿里巴巴6月8日宣布合并通义大模型+未来生活实验室成立Token Foundry事业部，CEO吴泳铭直管，周靖人牵头AI未来研究院。Microsoft Dataverse MCP Server更新Agent工具形态，覆盖搜索/查询/记录操作/表变更/文件处理。",
+  "judgement": "今日核心信号是Anthropic的Mythos级模型首次面对大众——这不是一次普通的模型升级，而是AI能力从\"助手\"到\"自主执行者\"的质变。Fable 5在编程（长期自主运行、自我验证）、知识工作（金融/法律）、视觉理解（图表/PDF解析）三大领域实现了断层式领先。定价翻倍但在可接受范围内，免费窗口策略精准——给了开发者无成本验证\"质量溢价\"的时间。阿里Token Foundry的组织变革说明中国AI巨头也在从\"模型研发\"向\"平台化商业化\"加速转型。本周剩余时间重点追踪：Fable 5社区实测反馈、Anthropic IPO S-1公开时间、阿里Token Foundry首批产品发布。",
+  "tags": ["Claude-Fable-5", "Claude-Mythos-5", "Anthropic", "SWE-Bench", "Claude-Code", "安全护栏", "阿里巴巴", "Token-Foundry", "MCP-Server", "Dataverse"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Fable 5 & Mythos 5 — Anthropic首个大众Mythos级模型发布",
+      "summary": "Anthropic于6月9日发布Claude Fable 5与Mythos 5，共享同一底层架构。Fable 5面向大众开放，SWE-Bench Pro 80.3%屠榜，1M token上下文，5000万行代码1天完成。Mythos 5仅限Glasswing合作伙伴。创新三重安全护栏（网络安全/生物化学/模型蒸馏分类器），<5%触发率。",
+      "why": "AI编程能力断层式领先：SWE-Bench Pro领先GPT-5.5达22个百分点；法律推理13.3% vs Gemini 0%；空间推理38.6%是Opus 4.8的2.7倍。代表AI从\"助手\"到\"自主执行者\"的质变。Stripe案例：5000万行Ruby代码库1天完成迁移，人工需2个月+。",
+      "action_fact": "【事实】API model ID: claude-fable-5；6/9-22日Pro/Max/Team/Enterprise免费；定价$10/$50 per MTok；100万token上下文；6/23起需消耗用量积分。可用平台：Anthropic原生API、Amazon Bedrock、Google Vertex AI、Microsoft Foundry。Prompt Caching享输入90%折扣。30天数据保留策略（不用于训练）。",
+      "action_judge": "【判断】编程/知识工作场景立刻切换Fable 5；日常高频任务继续用Opus 4.8省钱；安全/生物领域工作无需切换（会被回退到Opus 4.8）；大型代码库迁移和长周期自主任务是Fable 5的杀手场景；注意基准表格中星号数据来自Mythos 5不可直接引用。",
+      "tags": ["新模型", "编程", "Agent", "安全"],
+      "sources": ["https://www.anthropic.com/claude/fable", "https://www.ithome.com/0/962/152.htm", "https://www.truefoundry.com/blog/claude-fable-5-api-benchmarks-pricing-how-to-use-it", "https://www.digitalapplied.com/blog/claude-fable-5-mythos-5-release-benchmarks-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.169 — safe-mode排障模式+15项修复",
+      "summary": "Claude Code v2.1.169于6月9日发布。新增--safe-mode启动标志（一键禁用CLAUDE.md/插件/技能/Hooks/MCP）、/cd命令切换工作目录不中断缓存、disableBundledSkills设置。15项Bug修复含Windows性能回归。",
+      "why": "safe-mode让调试CC配置问题不再痛苦；/cd命令跳过重新索引成本；Windows claude -p假死问题终于修复。Anthropic保持高频迭代节奏（平均2-3天一版），持续打磨AI编程可靠性。",
+      "action_fact": "【事实】claude --safe-mode启动纯净模式；/cd path切换工作目录；环境变量CLAUDE_CODE_SAFE_MODE和CLAUDE_CODE_DISABLE_BUNDLED_SKILLS。15项修复含Windows性能、macOS UI卡顿、企业MCP策略、WSL代理视图等。",
+      "action_judge": "【判断】遇插件冲突/启动问题优先用safe-mode排查；Windows用户务必升级修复性能回归；disableBundledSkills适合需要精简模型上下文的场景。",
+      "tags": ["工具更新", "Claude-Code", "排障"],
+      "sources": ["https://releasebot.io/updates/anthropic/claude-code"]
+    },
+    {
+      "rank": "P1",
+      "title": "阿里巴巴成立Token Foundry事业部 — CEO吴泳铭直管大模型商业化",
+      "summary": "6月8日，阿里巴巴宣布合并通义大模型事业部和未来生活实验室，成立Token Foundry事业部（CEO吴泳铭直管），同步成立AI未来研究院（首席科学家周靖人牵头）。形成\"双轮驱动\"格局：Token Foundry商业化+AI未来研究院前沿探索。",
+      "why": "中国AI巨头组织架构从\"事业部各自为战\"走向\"双轮驱动\"，CEO直管意味着大模型商业化被提到最高优先级。此举是对国内大模型竞争激化（DeepSeek/智谱/MiniMax等）的直接回应。",
+      "action_fact": "【事实】6月8日宣布；HappyHorse/HappyOyster团队并入Token Foundry；AI未来研究院由周靖人牵头。",
+      "action_judge": "【判断】关注通义系列产品线后续整合方向；Token Foundry事业部可能加速阿里大模型API商业化节奏；组织架构调整后2-4周内通常会有首批产品/开放平台动作。",
+      "tags": ["行业动态", "阿里巴巴", "通义", "组织变革"],
+      "sources": ["https://www.nbd.com.cn/articles/2026-06-08/4420298.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "Microsoft Dataverse MCP Server — Agent工具形态升级",
+      "summary": "6月8日Microsoft发布Dataverse MCP Server更新，新增搜索、查询、记录操作、表变更和文件处理等Agent原生能力，重新封装为Agent友好的工具形态。",
+      "why": "MCP生态从\"简单功能暴露\"走向\"语义适配\"——Dataverse将企业数据操作重新封装为Agent友好的工具形态，代表企业级MCP Server的设计范式升级。",
+      "action_fact": "【事实】6月8日发布；覆盖Search/Query/Record Actions/Table Changes/File Handling五大能力域。",
+      "action_judge": "【判断】Power Platform用户可探索Dataverse MCP集成Agent；企业MCP Server设计者可参考其\"工具形态\"设计模式——不是简单暴露底层API而是重新组织为Agent语义。",
+      "tags": ["MCP", "Agent工具", "Microsoft", "Dataverse"],
+      "sources": ["https://www.microsoft.com/en-us/power-platform/blog/2026/06/08/dataverse-mcp-server-understanding-the-new-tool-shape/"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Fable 5 API",
+      "type": "新模型API",
+      "highlight": "SWE-Bench 80.3%编程+1M上下文+多天自主运行",
+      "audience": "AI开发者、企业工程团队、Agent构建者",
+      "action": "API中模型ID设为claude-fable-5；大型代码迁移任务优先尝试；利用6/22前免费窗口测试",
+      "url": "https://www.anthropic.com/claude/fable"
+    },
+    {
+      "name": "Claude Code 2.1.169",
+      "type": "工具升级",
+      "highlight": "safe-mode排障、/cd切换目录、15项修复",
+      "audience": "Claude Code重度用户、Windows开发者",
+      "action": "升级到最新版；遇启动问题用--safe-mode排查；Windows用户必须更新",
+      "url": "https://releasebot.io/updates/anthropic/claude-code"
+    },
+    {
+      "name": "Dataverse MCP Server",
+      "type": "Agent工具",
+      "highlight": "企业数据操作→Agent原生工具形态重塑",
+      "audience": "Power Platform开发者、MCP Server设计者",
+      "action": "阅读Microsoft博客了解新工具形态；参考其设计模式构建企业MCP",
+      "url": "https://www.microsoft.com/en-us/power-platform/blog/2026/06/08/dataverse-mcp-server-understanding-the-new-tool-shape/"
+    },
+    {
+      "name": "FindUpApp",
+      "type": "新工具",
+      "highlight": "发现App Store/Google Play中被埋没的隐藏应用",
+      "audience": "产品经理、独立开发者、工具猎手",
+      "action": "访问findupapp.com浏览隐藏应用；免费提交自家应用",
+      "url": "https://findupapp.com"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Fable 5实测：SWE-Bench 80.3%到底意味着什么？",
+      "hook": "AI编程能力断层式碾压——领先GPT-5.5达22个百分点",
+      "angle": "工具测评：用实际任务对比Fable 5 vs GPT-5.5 vs Opus 4.8，从代码迁移到Bug修复到架构重构",
+      "materials": "API调用录屏/SWE-Bench榜单截图/代码diff对比",
+      "difficulty": "中"
+    },
+    {
+      "title": "Anthropic的\"安全护栏\"哲学：同一模型拆两半的妙招",
+      "hook": "AI越强越危险→Anthropic的解法是\"不拒绝、降级处理\"",
+      "angle": "趋势解读：从安全分类器三层设计到<5%触发率，讲清\"强AI+安全\"的工程实现",
+      "materials": "Fable 5安全机制架构图/分类器流程动画/对比传统拒绝模式",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code safe-mode：3分钟解决所有插件冲突",
+      "hook": "一键禁用所有自定义内容，CC排障从噩梦变秒级",
+      "angle": "教程：演示--safe-mode启动→逐项开启定位问题插件→对比常规模式和safe-mode启动速度",
+      "materials": "终端录屏/对比截图/环境变量设置演示",
+      "difficulty": "低"
+    },
+    {
+      "title": "阿里Token Foundry：CEO直管大模型，中国AI巨头的组织变革",
+      "hook": "阿里合并两大AI部门，CEO吴泳铭亲自挂帅",
+      "angle": "行业解读：对比百度/腾讯/字节的AI组织架构，分析\"双轮驱动\"模式对中国AI产业的影响",
+      "materials": "组织架构对比图/各厂商AI产品矩阵图/通义系列产品界面",
+      "difficulty": "中"
+    },
+    {
+      "title": "Fable 5定价翻倍值得吗？实测一天用下来烧多少钱",
+      "hook": "$50/M输出token意味着什么？实际编程一天花销揭秘",
+      "angle": "实操对比：用Fable 5和Opus 4.8分别完成同一个编程任务，对比Token消耗、花费、完成质量",
+      "materials": "API账单截图/Token计数/代码输出质量对比",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "WWDC 2026 Recap/懒人包类文章（多篇）",
+      "reason": "纯回顾：昨日(6/9)日报已深度覆盖WWDC，今日大量中文媒体重复发布\"一文看懂\"\"干货懒人包\"为二次加工，无新增信息"
+    },
+    {
+      "item": "AI编程工具对比文章（Cursor vs Windsurf vs Copilot vs Claude Code）",
+      "reason": "旧信息聚合：多篇对比文章基于5月数据，未包含Fable 5最新基准；纯列表式内容无原创测试数据"
+    },
+    {
+      "item": "SpaceX IPO后续报道",
+      "reason": "重复信息：SpaceX IPO自6/1起已多次覆盖，今日无新增实质性进展（无路演更新/定价区间变更）"
+    },
+    {
+      "item": "25+开源模型井喷周回顾",
+      "reason": "过期信息：6/9日报已覆盖6月初开源模型集中发布的深度分析，今日回顾文章无新增模型"
+    },
+    {
+      "item": "2026年AI视频生成工具排行榜",
+      "reason": "纯列表文：工具聚合列表无实测数据、无具体发布时间、无源链接验证"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Claude Fable 5 社区实测反馈",
+      "reason": "发布后24-72小时是开发者实测数据集中涌现期，需关注Hacker News/Reddit/Twitter上的真实体验报告、边界案例发现和潜在安全回退误触发情况"
+    },
+    {
+      "item": "Claude Code 2.1.169 后续迭代",
+      "reason": "Anthropic近两周保持高频更新节奏（平均2-3天一版），关注是否有针对Fable 5的深度集成功能"
+    },
+    {
+      "item": "阿里巴巴Token Foundry后续产品发布",
+      "reason": "组织架构调整后通常2-4周内会有首批产品/开放平台动作，关注通义系列API定价和功能更新"
+    },
+    {
+      "item": "Anthropic AI IPO进展",
+      "reason": "OpenAI 6/8提交机密IPO后，Anthropic IPO的S-1公开披露时间节点可能临近（两家在竞赛）"
+    },
+    {
+      "item": "Fable 5在中国大陆的可用性",
+      "reason": "Anthropic API在中国大陆的访问情况需要持续关注，特别是第三方平台(Bedrock/Azure)的部署进度"
+    }
+  ]
+}
