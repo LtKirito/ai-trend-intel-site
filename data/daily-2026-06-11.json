@@ -1,0 +1,177 @@
+{
+  "date": "2026-06-11",
+  "title": "2026-06-11 AI信息差日报",
+  "coverage": "覆盖窗口：6/10 ~ 6/11（24小时，必要处回溯48小时）",
+  "sources": "信息源：Claude Code Docs · Anthropic Help Center · Releasebot · OpenAI Codex Release 摘要 · Product Hunt · 掘金",
+  "conclusions": [
+    "Claude Code 2.1.172 是今天最实用的更新。Nested sub-agents 支持最多 5 层嵌套，长会话性能、后台 agent、模型 allowlist、Bedrock 区域识别、VSCode PowerShell 展示都被修了一轮，适合重度编码/多 agent 工作流立即升级。",
+    "Claude Code 的修复重点从“功能增加”转向“复杂团队场景可靠性”。预热 worker 读取错目录 settings、后台 session attach 失败、远程 memory store 找不到、企业模型限制未生效等问题，说明 AI 编程工具正在进入团队治理和多项目隔离阶段。",
+    "OpenAI Codex 0.139.0 / Codex app 26.608 值得关注，但今日只能作为 P1 待复核信号。Releasebot 摘要显示 code mode 独立 web search、嵌套 JS tool calls、MCP schema 支持增强，以及从 Claude Code/Cowork 迁移到 Codex 的流程；但 OpenAI changelog 页面访问受限，需明天复核官方页面。",
+    "Product Hunt 和中文社区今日噪音偏高。搜索结果主要是分类页、旧教程、列表文和二手经验贴，缺少官方源或可验证 changelog，不适合作为高优先级日报信号。",
+    "今日可做内容方向不是“又有新模型”，而是“AI 编程 Agent 如何稳定跑长任务”。Claude Code 的 nested sub-agents、长上下文卡死修复、后台 agent 隔离修复，比普通功能介绍更适合做实操教程。"
+  ],
+  "summary": "Claude Code 2.1.172 成为今日核心信号：5层 nested sub-agents、长会话性能优化、后台 agent/企业模型治理/远程 memory 修复，标志 AI 编程工具从功能堆叠进入团队可靠性阶段。OpenAI Codex 0.139.0 与 Codex app 26.608 显示联网搜索、MCP schema 和竞品迁移动作，但官方页面访问受限，暂列 P1 待复核。",
+  "body": "今日有效增量集中在 AI 编程工具链。Claude Code 2.1.172 于 6 月 10 日发布，sub-agents 支持最多 5 层嵌套，同时优化长对话性能、减少空闲 CPU、为 /plugin 增加 marketplace 搜索栏、批量加载 Claude in Chrome browser tools，并修复 1M context 无 usage credits 时会话卡死、多图片处理错误、后台 agent 状态滞后、预热 worker 读取其他目录 project settings、daemon auto-update 后 attach EAUTH、模型 allowlist 未覆盖 subagent override、Bedrock 模型 picker、远程 team memory stores、workflow validation 误报、Windows mouse tracking 与 VSCode PowerShell 展示等问题。OpenAI 侧 Releasebot 显示 Codex 0.139.0 在 code mode web search、嵌套 JavaScript tool calls、MCP schema oneOf/allOf 支持、codex doctor 环境信息、plugin marketplace JSON 与 sandbox 网络代理方面有更新；Codex app 26.608 显示新增从 Claude Code / Claude Cowork 迁移到 Codex 的流程并重做 plugins 页面。但 OpenAI 官方 changelog 抓取返回 Forbidden，GitHub release 抓取失败，需后续复核。Product Hunt 页面抓取只返回验证页，中文教程多为旧文或缺官方源，均降级处理。",
+  "judgement": "今天不适合再重复 Fable 5 或 WWDC，而应把注意力放在 AI 编程 Agent 的工程可靠性。Claude Code 2.1.172 的亮点不是单点功能，而是 nested sub-agents 与后台/远程/企业治理修复组合在一起，说明工具进入“长期任务系统”阶段：多 agent、长上下文、远程会话、项目配置隔离、模型权限和插件市场都会成为生产环境的关键变量。Codex 的信号值得盯紧，尤其是迁移 Claude Code 用户和增强 MCP schema 兼容性，但在官方源不可访问前不应过度放大。",
+  "tags": ["Claude-Code", "Nested-Agents", "Subagents", "Codex", "MCP", "AI-Coding-Agent", "Agent-Workflow", "企业治理", "长会话", "插件市场"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Code 2.1.172 — 5层 nested sub-agents 与长会话性能优化",
+      "summary": "Sub-agents 现在可以继续创建自己的 sub-agents，最多 5 层嵌套；同时优化长对话性能、空闲 CPU、插件搜索、Chrome 工具批量加载和 VSCode PowerShell 展示。",
+      "why": "这让 Claude Code 从“一个 agent 干活”进一步接近“agent team 分层执行”。大型代码库迁移、批量审查、多阶段研究可以拆得更深，长会话也更适合持续执行。",
+      "action_fact": "【事实】升级后可测试 nested sub-agents、/plugin marketplace 搜索栏、长对话性能和 Claude in Chrome 工具加载速度；2.1.172 同时修复 1M context 无 usage credits 卡死、多图片处理错误、agents view 状态滞后等问题。",
+      "action_judge": "【判断】适合把复杂任务拆为“主 agent -> 子任务 agent -> 专项 agent”，但建议先在独立 worktree 验证，避免并行 agent 修改同一文件造成冲突。",
+      "tags": ["Claude-Code", "Subagents", "Agent-Workflow", "性能优化"],
+      "sources": ["https://code.claude.com/docs/en/changelog", "https://releasebot.io/updates/anthropic/claude-code"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code 2.1.172 — 后台 agent 与企业治理可靠性修复",
+      "summary": "修复预热 worker 读取其他目录 project settings、availableModels 限制未覆盖 subagent override、远程 memory store 找不到、后台 session attach/EAUTH、Bedrock 模型 picker 等问题。",
+      "why": "这些是团队生产环境真实风险：多项目并行、远程 session、企业模型权限、MCP approvals/trust 和后台 agent 隔离，一旦出错会影响安全和可审计性。",
+      "action_fact": "【事实】团队使用 Bedrock、远程 session、background agents、managed model restrictions 时应尽快升级；重点验证 /status region 来源、availableModels 限制、远程 memory stores 与 project settings 隔离。",
+      "action_judge": "【判断】如果你做 Claude Code 自动化，应把“项目 settings 隔离”“模型 allowlist 是否生效”“后台 agent 是否继承正确 env”纳入验收清单。",
+      "tags": ["Claude-Code", "企业治理", "Background-Agent", "Bedrock", "安全"],
+      "sources": ["https://code.claude.com/docs/en/changelog"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Codex 0.139.0 — 联网搜索、嵌套工具调用与 MCP schema 增强（待复核）",
+      "summary": "Releasebot 摘要显示 Codex CLI 新增 code mode 独立 web search、嵌套 JavaScript tool calls、MCP tool schema 对 oneOf/allOf 支持增强，以及 codex doctor 环境信息增强。",
+      "why": "OpenAI 正在把 Codex 往“可联网、可嵌套工具调用、能接复杂 MCP schema”的 Agent CLI 方向推进，和 Claude Code 正面竞争。",
+      "action_fact": "【事实】当前来源为 Releasebot 摘要；GitHub release 抓取失败，需明日复核 openai/codex releases。若属实，MCP 工具作者应测试 oneOf/allOf schema 兼容性。",
+      "action_judge": "【判断】这个信号方向重要但证据链未满，不升 P0。重点不是版本号，而是 Codex 是否开始补齐 Agent CLI 的工具协议能力。",
+      "tags": ["OpenAI", "Codex", "MCP", "Web-Search", "待验证"],
+      "sources": ["https://releasebot.io/updates/openai", "https://github.com/openai/codex/releases?q=prerelease%3Afalse&expanded=true"]
+    },
+    {
+      "rank": "P1",
+      "title": "Codex app 26.608 — 从 Claude Code / Claude Cowork 迁移到 Codex 的流程（待复核）",
+      "summary": "Releasebot 摘要显示 Codex app 新增从 Claude Code 和 Claude Cowork 迁移到 Codex 的流程，并重做 plugins 页面，加入 tabs、marketplace/category filters、键盘导航和更清晰安装动作。",
+      "why": "“从竞品迁移”被做成产品流程，说明 OpenAI 开始把 AI 编程用户迁移当成增长入口，不只是做模型能力。",
+      "action_fact": "【事实】OpenAI developers changelog 抓取返回 Forbidden，需复核页面正文；若属实，应检查迁移范围是否包含配置、插件、MCP、历史会话和项目索引。",
+      "action_judge": "【判断】适合准备“Claude Code 项目如何迁移到 Codex”的对比教程，但在官方页面可访问前不要发布断言式内容。",
+      "tags": ["OpenAI", "Codex-App", "迁移", "插件市场", "待验证"],
+      "sources": ["https://releasebot.io/updates/openai", "https://developers.openai.com/codex/changelog/?type=codex-app"]
+    },
+    {
+      "rank": "P2",
+      "title": "Anthropic Claude Release Notes — Fable 5 与 Enterprise custom roles 是近期主线，Opus 4/4.1 移除不是今日新闻",
+      "summary": "Claude Help Center 近期记录主要是 6/9 Claude Fable 5 launch 与 6/2 Enterprise custom roles；Opus 4/4.1 移除实际发生在 2026-01-16。",
+      "why": "这是一个信息校准点：搜索结果容易把旧 deprecation 当新变动，必须按官方 release notes 日期核对，避免误报。",
+      "action_fact": "【事实】若迁移旧模型，参考官方“Adapting to new model personas after deprecations”；今日不重复报道 Fable 5，只保留为背景。",
+      "action_judge": "【判断】日报应把“新发布”和“搜索引擎翻出的旧记录”分开；否则会把旧模型下线误判成今日变化。",
+      "tags": ["Anthropic", "Claude", "Release-Notes", "信息校准"],
+      "sources": ["https://support.claude.com/en/articles/12138966-release-notes"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code 2.1.172",
+      "type": "AI 编程 Agent CLI",
+      "highlight": "5层 nested sub-agents、长会话性能优化、插件搜索、后台 agent 隔离修复",
+      "audience": "Claude Code 重度用户、团队自动化、代码库迁移场景",
+      "action": "升级后用一个“研究+改代码+测试”的长任务验证 sub-agent 分层，并观察 CPU/状态面板表现",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "OpenAI Codex CLI 0.139.0",
+      "type": "AI 编程 Agent CLI",
+      "highlight": "code mode web search、嵌套 JS tool calls、MCP schema 支持增强",
+      "audience": "Codex 用户、MCP 工具作者、AI coding 对比评测作者",
+      "action": "等待 GitHub release 可访问后复核；重点测 MCP oneOf/allOf schema 和联网搜索能力",
+      "url": "https://github.com/openai/codex/releases?q=prerelease%3Afalse&expanded=true"
+    },
+    {
+      "name": "Codex app 26.608",
+      "type": "AI 编程产品",
+      "highlight": "从 Claude Code / Claude Cowork 迁移流程、插件市场重做",
+      "audience": "正在比较 Claude Code 与 Codex 的开发者",
+      "action": "复核官方 changelog 后，准备迁移体验清单：项目索引、插件、MCP、权限、历史会话",
+      "url": "https://developers.openai.com/codex/changelog/?type=codex-app"
+    },
+    {
+      "name": "Claude Code Skills 中文教程",
+      "type": "教程线索",
+      "highlight": "覆盖 Skills、Multi-Agent、Hooks、MCP、CI review，但缺官方链接",
+      "audience": "想快速理解 Claude Code 玩法的新手",
+      "action": "只作为灵感，不直接引用结论；每个功能都回到官方 changelog 复核",
+      "url": "https://juejin.cn/post/7638459369086205979"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Code 5 层子代理：AI 编程终于能“组队干活”了？",
+      "hook": "一个主 agent 可以派子 agent，子 agent 还能继续派人",
+      "angle": "用一个大型代码库任务拆成研究、实现、测试、审查四层，展示 nested sub-agents 的好处和风险",
+      "materials": "终端录屏、任务树示意图、agent panel 状态变化",
+      "difficulty": "中"
+    },
+    {
+      "title": "为什么 Claude Code 这次修复比新功能更重要？",
+      "hook": "后台 agent 读错项目 settings 这种坑，比模型不聪明更危险",
+      "angle": "讲多项目、远程 session、企业模型限制、memory store 的真实风险，做“AI 编程团队治理清单”",
+      "materials": "changelog 截图、错误场景示意、验收 checklist",
+      "difficulty": "中"
+    },
+    {
+      "title": "Codex 正在挖 Claude Code 用户？迁移流程意味着什么",
+      "hook": "OpenAI 把从 Claude Code/Cowork 迁移做进 app",
+      "angle": "等官方页面复核后，对比 Claude Code 与 Codex 在插件、MCP、会话恢复、联网搜索上的差异",
+      "materials": "Codex changelog、插件页面、迁移步骤录屏",
+      "difficulty": "中"
+    },
+    {
+      "title": "AI 编程工具的下一战：不是写代码，是稳定跑长任务",
+      "hook": "长上下文、后台 agent、权限策略、插件市场，才是生产力分水岭",
+      "angle": "趋势解读：从补全代码到多 agent 任务系统，为什么工具可靠性比模型榜单更关键",
+      "materials": "Claude Code 2.1.172 更新表、Codex 0.139.0 摘要、对比图",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Product Hunt AI coding agents 分类页",
+      "reason": "页面抓取只返回验证/加载占位，且分类页不是具体 launch；不能当作今日新工具信号。"
+    },
+    {
+      "item": "中文“2026 AI Agent/Claude Code 全景盘点”类文章",
+      "reason": "多数发布时间为 3-5 月或缺少官方源链接，属于旧教程/列表文，不符合 24-48 小时窗口。"
+    },
+    {
+      "item": "掘金 Claude Code Skills 进阶教程",
+      "reason": "实操性尚可，但缺少官方 changelog 链接，夹带推广站，关键功能需复核；降级为待验证教程线索。"
+    },
+    {
+      "item": "Claude Opus 4/4.1 “近期移除”搜索结果",
+      "reason": "官方 release notes 显示移除发生在 2026-01-16，不是今日更新；避免误报。"
+    },
+    {
+      "item": "WWDC / Fable 5 二次回顾",
+      "reason": "6/9-6/10 日报已经覆盖，今日无新增实质变化，重复报道会稀释信息差。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "OpenAI Codex 0.139.0 官方 release 可访问性",
+      "reason": "确认 GitHub release / OpenAI changelog 页面是否恢复访问，复核 code mode web search、嵌套 tool calls、MCP schema 支持。"
+    },
+    {
+      "item": "Claude Code 2.1.172 社区实测",
+      "reason": "重点看 nested sub-agents 是否稳定、并行 agent 是否容易冲突、长会话 CPU 改善是否明显。"
+    },
+    {
+      "item": "Codex app 迁移流程",
+      "reason": "如果确有 Claude Code/Cowork 迁移入口，追踪它迁移哪些内容：配置、插件、MCP、历史会话还是项目索引。"
+    },
+    {
+      "item": "Fable 5 发布后第二波实测",
+      "reason": "不重复发布新闻，只跟踪真实大型代码库迁移、法律/金融推理和安全护栏误触发案例。"
+    },
+    {
+      "item": "MCP 工具 schema 兼容性",
+      "reason": "关注 Codex、Claude Code 对复杂 JSON schema 的处理能力，这会影响企业 MCP server 可用性。"
+    }
+  ]
+}
