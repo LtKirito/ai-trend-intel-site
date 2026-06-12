@@ -1,220 +1,202 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "description": "Local-first, open-source Claude Design alternative",
-    "stars": 63025,
-    "forks": 7033,
-    "open_issues": 414,
-    "language": "TypeScript",
-    "created": "2026-04-28",
-    "updated": "2026-06-11T03:59:52Z",
+    "stars": 63618,
+    "forks": 7093,
+    "open_issues": 399,
     "latest_release": {
-      "version": "open-design-v0.9.0",
-      "date": "2026-06-02",
-      "title": "Open Design 0.9.0 — Design for everyone",
-      "summary": "310 PRs · 98 contributors · 7 天。0.9.0 是 install-and-create release：Open Design AMR 内置到桌面端，首次使用从安装 CLI/API key 降为登录后选择模型；同时扩展 Aider、Trae CLI、Antigravity、DeepSeek Reasonix 等 agent adapter，强化插件生态、模型选择、评论工作流、Studio 工具、跨平台安装和 MCP 工作区能力。"
+      "version": "open-design-v0.10.0",
+      "date": "2026-06-11",
+      "name": "Open Design 0.10.0 — The all-in-one Agentic design workspace"
     }
   },
   "recent_prs": [
     {
-      "number": 4115,
-      "title": "release: Open Design 0.10.0 — the all-in-one Agentic design workspace, with a whole design team built in",
+      "number": 4198,
+      "title": "[codex] keep Claude tool-use usage non-terminal",
       "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/M", "risk/medium", "type/bugfix"],
-      "impact": "🔥 0.10.0 发布 PR（141 PRs · 50 contributors · 2 天）。核心变化：Lexical 编辑器驱动的全新设计工作区（@mention 原子 pills、交互式终端、拖拽评论附件、浏览器参考面板、对话 fork）、产品级 UI 动画、BYOK 全链路改造（字段验证、账户模型获取、配置追踪）、沙箱运行时基础、运行失败分类诊断、21 agent × 18 语言落地页。这是 Open Design 从安装即用到一站式设计工作区的质变级架构跃迁。",
-      "url": "https://github.com/nexu-io/open-design/pull/4115"
+      "author": "yinjialu",
+      "labels": ["size/S", "risk/high", "type/bugfix"],
+      "impact": "高 — Claude Agent 流式 tool_use 被误判为终止信号，影响 Agent 执行链路正确性",
+      "url": "https://github.com/nexu-io/open-design/pull/4198"
     },
     {
-      "number": 4119,
-      "title": "fix(web): gate the next-step card on having a previewable artifact",
-      "state": "closed",
-      "author": "lefarcen",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "已合入 v0.10.0 分支。修复 NEXT STEP 卡片在纯问答/摘要轮次后过早显示的 UX 问题——当没有可预览的产出物时隐藏'设计润色/准备交付'等行动卡片。反向推翻了 #4023 中'即使无可预览产出也展示工具箱'的决策，工具箱仍可通过 composer 的 + 菜单访问。",
-      "url": "https://github.com/nexu-io/open-design/pull/4119"
+      "number": 4196,
+      "title": "[codex] Expand UI E2E coverage and P0 CI signal",
+      "state": "merged",
+      "author": "AmyShang-alt",
+      "labels": ["size/XXL", "risk/high", "type/chore"],
+      "impact": "高 — P0 CI 信号覆盖扩展，已合入主分支，加固 v0.10.0 质量防线",
+      "url": "https://github.com/nexu-io/open-design/pull/4196"
     },
     {
-      "number": 4120,
-      "title": "[codex] Keep question forms editable after banner reopen",
-      "state": "closed",
+      "number": 4078,
+      "title": "AMR send preflight guidance",
+      "state": "open",
+      "author": "chaoxiaoche",
+      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — AMR 预检引导机制增强，直接改善 Agent 登录可靠性和错误诊断体验",
+      "url": "https://github.com/nexu-io/open-design/pull/4078"
+    },
+    {
+      "number": 4041,
+      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
+      "state": "open",
+      "author": "pixcore598-design",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "极高 — v0.11.0 核心功能信号，多 Agent 团队协作引擎，将彻底改变 OpenDesign 的使用范式",
+      "url": "https://github.com/nexu-io/open-design/pull/4041"
+    },
+    {
+      "number": 4158,
+      "title": "landing: skill-spec restyle, upstream parity, newsletter + nav updates",
+      "state": "open",
+      "author": "wangchenglong0001",
+      "labels": ["size/XXL", "risk/high", "type/enhancement", "needs-validation"],
+      "impact": "极高 — 落地页全面改版，21 agent × 18 语言 SEO 格局重塑，影响项目全球增长引擎",
+      "url": "https://github.com/nexu-io/open-design/pull/4158"
+    },
+    {
+      "number": 4140,
+      "title": "fix(web): keep deck navigation active in Mark mode",
+      "state": "open",
       "author": "Siri-Ray",
-      "labels": ["size/M", "risk/medium", "type/bugfix"],
-      "impact": "已合入 v0.10.0 分支。修复发现式问答表单的交互状态 bug：用户通过左侧聊天横幅重新打开当前未回答的表单后，右侧问题面板变为只读锁死状态。根因是 banner 路径错误地将所有手动请求标记为历史只读表单。现已区分当前未回答表单和历史已回答表单的行为。",
-      "url": "https://github.com/nexu-io/open-design/pull/4120"
+      "labels": ["size/M", "risk/medium", "type/bugfix", "validated"],
+      "impact": "中 — Deck 编辑模式导航 UX 修复，影响内容创作工作流连续性",
+      "url": "https://github.com/nexu-io/open-design/pull/4140"
     },
     {
-      "number": 4122,
-      "title": "ci: demote legacy ci gate",
+      "number": 4105,
+      "title": "feat(web,daemon): keep annotation position anchors when the screenshot is missing",
+      "state": "open",
+      "author": "fancyboi999",
+      "labels": ["size/L", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — 截图标注锚点持久化，Critique 工作流关键修复",
+      "url": "https://github.com/nexu-io/open-design/pull/4105"
+    },
+    {
+      "number": 3581,
+      "title": "fix(web): restore manual edit content editor",
       "state": "open",
       "author": "PerishCode",
-      "labels": ["size/XS", "risk/high", "type/chore"],
-      "impact": "CI 基础设施关键变更（risk/high）：将旧的 ci.yml 工作流降级为 ci-legacy 备用通道，让新的 ci-gate 堆栈独占 Validate workspace 状态上下文。消除两个竞争生产者发布同一必需检查的歧义，同时保留旧流程作为即时回退通道。如果 ci-gate 出现回归，可快速切换回旧流程。",
-      "url": "https://github.com/nexu-io/open-design/pull/4122"
-    },
-    {
-      "number": 4050,
-      "title": "feat(landing-page): agent design pages — all 21 supported agents",
-      "state": "open",
-      "author": "xne998808-ai",
-      "labels": ["size/XXL", "risk/medium", "type/feature"],
-      "impact": "XXL 级落地页扩展：为全部 21 个支持的 Coding Agent 生成长篇设计介绍页（Gemini CLI、GitHub Copilot CLI、Qwen Code、Grok CLI、Kimi CLI 等），每页包含操作指南、对比表、FAQ（JSON-LD）和编辑式 hero。覆盖全部 18 种语言，并修复了 zh-tw 繁体中文渲染。大幅提升 Google 搜索'XX design'关键词的 SEO 覆盖，预计带来显著的自然增长流量。",
-      "url": "https://github.com/nexu-io/open-design/pull/4050"
-    },
-    {
-      "number": 3591,
-      "title": "fix: preserve localized automation schedule summaries",
-      "state": "open",
-      "author": "mturac",
-      "labels": ["size/L", "risk/medium", "type/bugfix"],
-      "impact": "#2917 中文自动化页面的后续修复：已保存的自动化计划摘要行仍会回退到硬编码的英文日程措辞，而非使用本地化文案。新增共享的 routine schedule label helper 统一格式化小时/每日/工作日/每周计划摘要，添加 zh-CN 每日计划的回归测试覆盖。",
-      "url": "https://github.com/nexu-io/open-design/pull/3591"
-    },
-    {
-      "number": 2302,
-      "title": "feat(web): shift-click range selection on design files",
-      "state": "open",
-      "author": "neogenix",
-      "labels": ["size/XL", "risk/medium", "type/feature"],
-      "impact": "XL 级交互增强：设计文件表格支持 Shift-click 范围选择、Cmd/Ctrl-click 切换选择，配套键盘操作（Shift+Space）和 ARIA 无障碍支持（aria-multiselectable/aria-selected）。范围计算限定在当前可见页内防止跨页误操作。从 2026-05-19 开始迭代，10 轮 review 后接近合入。",
-      "url": "https://github.com/nexu-io/open-design/pull/2302"
-    },
-    {
-      "number": 2009,
-      "title": "Improve agent failure UX for daemon stderr exits",
-      "state": "open",
-      "author": "bulai0408",
-      "labels": ["size/XL", "risk/medium", "type/bugfix"],
-      "impact": "XL 级 agent 失败 UX 改善（draft）：当 agent CLI 非零退出且无 SSE error 时，不再展示截断的 stderr 尾部，而是为常见失败模式（配额/限流、认证缺失、prompt 过大、CLI 版本/flag 不匹配、缺失二进制、网络故障）生成简短可操作的分类消息。完整 stderr 保留在'Show details'折叠面板中。属于 v0.10.0 运行失败分类诊断能力的前置基础工作。",
-      "url": "https://github.com/nexu-io/open-design/pull/2009"
+      "labels": ["size/M", "risk/medium", "type/bugfix", "validated"],
+      "impact": "中 — 手动编辑器内容恢复，影响需要精细控制的用户群体",
+      "url": "https://github.com/nexu-io/open-design/pull/3581"
     }
   ],
   "recent_issues": [
     {
-      "number": 4126,
-      "title": "[Bug]: Output commenting may be broken in 0.9.0",
-      "author": "kokisanai",
-      "labels": [],
-      "comments": 0,
-      "summary": "今日新开：Discord #help 频道用户反馈 v0.9.0 中输出评论功能可能失效。尚待确认具体失败模式（评论按钮缺失/Mark 覆盖层不工作/评论未提交/未附加到输出/其他 UI 错误），需用户提供 OS、输出类型和截图复现。可能与 #3870 相关。",
-      "url": "https://github.com/nexu-io/open-design/issues/4126"
+      "number": 4197,
+      "title": "Claude stream-json usage with tool_use stop reason is treated as terminal",
+      "author": "yinjialu",
+      "labels": ["bug"],
+      "comments": 1,
+      "summary": "今日新开：Claude 流式 JSON 中 tool_use stop reason 被误判为终止信号，导致 Agent 任务提前中断",
+      "url": "https://github.com/nexu-io/open-design/issues/4197"
     },
     {
-      "number": 4125,
-      "title": "[Bug]: Claude Code startup reports exit 1 with completed-looking JSON stdout",
-      "author": "kokisanai",
-      "labels": [],
-      "comments": 0,
-      "summary": "今日新开：Discord 用户报告 Open Design 无法启动 Claude Code（exit 1），但 stdout 却包含看起来已完成的 Claude Code JSON 结果（terminal_reason: completed）。独立运行的 Claude Code 正常工作。Open Design 将已完成但非零退出的运行误判为'启动失败'，需要改进退出码与结构化输出的匹配逻辑。",
-      "url": "https://github.com/nexu-io/open-design/issues/4125"
+      "number": 4192,
+      "title": "Support ACP terminal-auth flows from chat",
+      "author": "AriaShishegaran",
+      "labels": ["enhancement"],
+      "comments": 2,
+      "summary": "今日新开：ACP 协议终端认证流程支持请求，扩展 Agent 适配器的安全认证能力",
+      "url": "https://github.com/nexu-io/open-design/issues/4192"
     },
     {
-      "number": 4124,
-      "title": "[Bug]: App UI renders italic text everywhere for a user",
-      "author": "kokisanai",
-      "labels": [],
-      "comments": 0,
-      "summary": "今日新开：Discord 用户反馈整个 App UI 以斜体字体渲染，与其看到的正常截图不一致。可能是 CSS 全局字体样式回归、平台字体回退问题或打包应用资源加载故障。需用户提供版本、OS 和截图确认根因。",
-      "url": "https://github.com/nexu-io/open-design/issues/4124"
+      "number": 4190,
+      "title": "Kimi Code CLI is not detected and ACP runs fail after official update",
+      "author": "AriaShishegaran",
+      "labels": ["bug"],
+      "comments": 2,
+      "summary": "今日新开：Kimi Code 官方更新后 CLI 无法被检测，ACP 运行全面失败，暴露 Agent 适配器脆弱性",
+      "url": "https://github.com/nexu-io/open-design/issues/4190"
+    },
+    {
+      "number": 4151,
+      "title": "[Bug]: 当打开「当前标签预览」的时候，previewer会遮住顶部的search tabs",
+      "author": "jzhishu",
+      "labels": ["bug"],
+      "comments": 3,
+      "summary": "UX 层叠遮挡 bug：标签页预览浮层遮盖顶部搜索/标签导航，影响多标签工作流",
+      "url": "https://github.com/nexu-io/open-design/issues/4151"
     },
     {
       "number": 4123,
       "title": "Hide non-functional Jump to latest action from dropdown popover",
       "author": "AmyShang-alt",
       "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 2,
-      "summary": "下拉弹出窗口中的'Jump to latest'操作点击后无任何响应，但该操作不应出现在当前上下文中。属于一个小但影响 UX 信任感的 bug，标记为 good first issue 适合新贡献者入门。",
+      "comments": 3,
+      "summary": "UI 清理：下拉菜单中无效的「Jump to latest」操作项需隐藏，标注 good first issue",
       "url": "https://github.com/nexu-io/open-design/issues/4123"
     },
     {
-      "number": 4118,
-      "title": "Dark mode in-tab preview close button needs better visibility and placement",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 4,
-      "summary": "暗色模式下 In this tab 预览的关闭按钮对比度过低、视觉上漂浮在页面内容而非预览容器上，与周围 chrome 控件不协调。4 条评论讨论了容器/背景/对比度/偏移量/悬停状态的修复方向，标记 good first issue。",
-      "url": "https://github.com/nexu-io/open-design/issues/4118"
+      "number": 3547,
+      "title": "Pick and implement the first ROI-ranked latency or token optimization",
+      "author": "yinjialu",
+      "labels": ["feature"],
+      "comments": 3,
+      "summary": "按投资回报率排名的首轮延迟/Token 优化任务，yinjialu 主导的性能工程路线",
+      "url": "https://github.com/nexu-io/open-design/issues/3547"
     },
     {
-      "number": 3759,
-      "title": "Please bring the linux app as well",
-      "author": "razu381",
-      "labels": ["enhancement", "needs-product-direction"],
+      "number": 3546,
+      "title": "Fix the top remaining failed-run bucket after PR1 and retry data",
+      "author": "yinjialu",
+      "labels": ["bug", "priority:p1"],
+      "comments": 3,
+      "summary": "P1 优先级：修复剩余最高频失败运行根因，属于可靠性工程的延续任务",
+      "url": "https://github.com/nexu-io/open-design/issues/3546"
+    },
+    {
+      "number": 3408,
+      "title": "Reliability push: classify run failures, correlate PostHog with Langfuse, and add safe retries",
+      "author": "yinjialu",
+      "labels": ["enhancement"],
+      "comments": 17,
+      "summary": "可靠性体系化建设：运行失败分类 + PostHog/Langfuse 可观测性关联 + 安全重试，17 条评论的高讨论度架构议题",
+      "url": "https://github.com/nexu-io/open-design/issues/3408"
+    },
+    {
+      "number": 1026,
+      "title": "enhancement: 腾讯云部署支持 (Tencent Cloud CVM/TKE)",
+      "author": "lefarcen",
+      "labels": ["enhancement"],
+      "comments": 9,
+      "summary": "中国社区长期呼声：腾讯云 CVM/TKE 官方部署支持，9 条评论持续关注，与国内用户生态直接相关",
+      "url": "https://github.com/nexu-io/open-design/issues/1026"
+    },
+    {
+      "number": 1072,
+      "title": "为什么不支持本地 baseurl？",
+      "author": "GarrickLin",
+      "labels": ["enhancement", "question", "stale"],
       "comments": 6,
-      "summary": "Linux 桌面应用呼声持续高涨（6 评论，needs-product-direction）。用户表示大多数开发者使用 Linux，希望尽早推出 Linux 原生 App。团队标记 needs-product-direction 说明需要产品层面决策，而非纯技术实现问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/3759"
-    },
-    {
-      "number": 4121,
-      "title": "[Bug]: Antigravity agent incorrectly reports 'needs to sign in' even though agy is authenticated and responding",
-      "author": "newton5555",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "Windows 用户详尽复现：agy CLI 已认证且命令行正常运行（-p 模式、stdin 模式均成功），但 Open Design 的 Antigravity adapter 持续报'需要登录'。用户捕获了 Open Design 实际发送的 stdin 内容并手动重放成功，确认问题是 Open Design 的认证检测逻辑误判而非 agy 本身的问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/4121"
-    },
-    {
-      "number": 4012,
-      "title": "[Bug]: 401 Unauthorized on all browser API calls when running via Docker Compose",
-      "author": "amrilsyaifa",
-      "labels": ["bug", "priority:p0"],
-      "comments": 5,
-      "summary": "P0 级阻塞 bug：Docker Compose 部署时浏览器所有 /api/* 请求返回 401 API_TOKEN_REQUIRED。根因是 Docker NAT 导致 daemon 看到的 TCP peer 地址（172.17.0.1）不被 isLoopbackPeerAddress 识别为回环地址。社区贡献者提供了 isLoopbackBrowserRequest 修复方案（检查 Host/Origin 头绕过 NAT），等待合入。已持续 2 天未解决。",
-      "url": "https://github.com/nexu-io/open-design/issues/4012"
-    },
-    {
-      "number": 4104,
-      "title": "[Bug]: Half finished artifacts produced when using Ollama Cloud BYOK",
-      "author": "aronheredi",
-      "labels": ["bug", "help wanted"],
-      "comments": 6,
-      "summary": "Linux 用户使用 Ollama Cloud BYOK 的 Minimax M3 和 Kimi K2.6 模型生成设计时返回半成品。同一环境下 GLM 5.1 正常工作，表明问题特定于某些 BYOK 模型的输出截断/流式处理逻辑。6 条评论，标记 help wanted。",
-      "url": "https://github.com/nexu-io/open-design/issues/4104"
-    },
-    {
-      "number": 4076,
-      "title": "Fullscreen Home layout under-fills the recent projects row",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "help wanted"],
-      "comments": 5,
-      "summary": "全屏模式下首页'最近项目'行未充分利用可用水平空间——宽屏上仅显示 6 张卡片而留下明显空白，目测可容纳 7 张。需调整响应式网格/卡片尺寸和列断点。虽是小问题但影响大屏用户体验的高感知度区域。",
-      "url": "https://github.com/nexu-io/open-design/issues/4076"
+      "summary": "中国用户长期需求：自定义 API baseurl 支持，标记 stale 但仍有关注度",
+      "url": "https://github.com/nexu-io/open-design/issues/1072"
     }
   ],
   "trends": {
-    "direction": "v0.10.0 发布是当前绝对主导信号（PR #4115，141 PRs · 50 contributors · 2 天）。项目从 0.9.0 的'安装即用'（内置 AMR 零配置）跃迁到 0.10.0 的'一站式 Agentic 设计工作区'——Lexical 编辑器驱动的全新设计工作区（211 文件，+36k 行代码）、产品级 UI 动画替代硬切换、BYOK 全链路改造（字段验证+账户模型获取+配置追踪）、沙箱运行时基础及运行失败分类诊断能力。这是 Open Design 迄今最大的一次架构跃迁：不再只是一个'生成器'，而是一个完整的设计团队替代方案。同时 21 agent × 18 语言落地页（#4050 XXL）将大幅提升 SEO 覆盖和自然增长。0.9.0 发布第 9 天，社区 bug 反馈仍在流入（输出评论失效 #4126、Claude Code exit 1 误判 #4125、UI 斜体渲染 #4124），但团队重心已转向 0.10.0 发布冲刺（#4119/#4120 快速合入 release 分支）。",
+    "direction": "v0.10.0（设计工作区大一统，211文件/+36k行）于6月11日发布后，团队立即转入 post-release 修复期。当前开发分三条主线：① Agent 兼容性紧急修补——Claude tool_use 终止判定(#4198)、Kimi Code CLI 官方更新后检测失效(#4190)、ACP 终端认证扩展(#4192)，反映 17 个 Agent 适配器的维护挑战；② v0.11.0 功能预研——多 Agent 团队协作模块(#4041, XXL)已递交 review，标志下一大版本核心方向；③ 运营基建加固——CI E2E 覆盖扩展(#4196 已合入)、落地页全球改版(#4158, 21 agent × 18 语言)。",
     "affected_modules": [
-      "design-workspace-lexical-composer",
-      "interactive-terminals",
-      "browser-reference-board",
-      "conversation-fork",
-      "byok-model-management",
-      "agent-runtimes-21-agents",
-      "landing-pages-agent-design",
-      "ci-gate-infrastructure",
-      "sandbox-runtime-foundation",
-      "run-failure-classification",
-      "comment-preview-ux",
-      "docker-deployment-auth",
-      "i18n-automations",
-      "product-wide-ui-animations",
-      "drag-drop-comment-attachments"
+      "Agent 适配层（Codex/Claude/Kimi Code/ACP）— 碎片化兼容修复",
+      "Web UI（Deck 导航/手动编辑/预览浮层/Critique 标注）",
+      "CI/E2E 测试体系 — P0 信号覆盖扩展",
+      "落地页/市场页面 — skill-spec 改版与全球化 SEO",
+      "多 Agent 协作引擎 — v0.11.0 核心功能预研"
     ],
     "risks": [
-      "v0.10.0 发布规模风险极高：141 PRs 在 2 天内合并，核心是 Lexical 编辑器重写（211 文件 +36k 行），与交互式终端、浏览器参考面板等全新子系统耦合。这种规模和速度下，回归 bug 和稳定性问题几乎不可避免，需要密切观察发布后 24-48h 的社区反馈。",
-      "CI 基础设施切换风险：#4122（risk/high）将旧的 ci.yml 降级为备用通道，新的 ci-gate 堆栈独占必需检查。虽然保留了回退路径，但如果 ci-gate 在 0.10.0 发布窗口期出现回归，可能导致发布管道阻塞。",
-      "Docker 部署 P0 阻断（#4012 持续 2 天）：Docker Compose 用户完全无法使用（所有 API 调用 401），而 0.10.0 的宣传亮点包括跨平台部署能力。这个问题不解决将严重打击容器部署场景的首次体验。",
-      "Agent 兼容性碎片化加剧：Antigravity 误报登录状态（#4121）、Claude Code exit 1 与有效 JSON 的误判（#4125）、Ollama Cloud BYOK 半成品输出（#4104），三个问题指向同一根本原因——21+ agent adapter 缺乏一致的错误分类和输出验证层。0.10.0 虽引入了运行失败分类诊断（#3397/#3412），但覆盖范围可能不足以解决所有 adapter 的边缘情况。"
+      "Agent 碎片化加剧：v0.10.0 发布后 3 个今日新 Agent 兼容 bug（Claude/Kimi/ACP），17 个适配器维护成本持续上升",
+      "可靠性技术债：运行失败分类体系(#3408, 17评论)和 P1 失败根因修复(#3546)持续积压，PostHog/Langfuse 可观测性链路未闭环",
+      "中国用户体验缺口：腾讯云部署(#1026, 9评论)和本地 baseurl(#1072)长期需求未解决，影响国内开发者采用率",
+      "v0.10.0 大版本工程质量：211 文件/+36k 行一次性合入，潜在回归风险在 post-release 窗口集中暴露"
     ],
     "actions": [
-      "🔥 最高优先级：跟踪 0.10.0 Release PR #4115 的合入和 nightly build 状态——发布后 24h 内的社区反馈将决定 0.10.0 的稳定性口碑。重点关注 Lexical 编辑器、交互式终端和浏览器参考面板的首次用户体验。",
-      "关注 CI gate cutover #4122 的合入和随后的主分支构建状态——如果 ci-gate 出现回归，回退到旧流程的响应速度将直接影响开发效率。",
-      "跟踪 Docker 401 P0 修复（#4012 已有完整的技术方案和代码修复建议，核心是 isLoopbackBrowserRequest 函数）——这是 0.10.0 容器部署能力的硬阻塞项。",
-      "观察 21 agent 落地页（#4050 XXL）上线后的 SEO 效果——这可能是 Open Design 自然增长的下一个爆发点，Google 搜索'XX design'的 21 个关键词将被 Open Design 覆盖。",
-      "监测 Antigravity 和 Claude Code adapter 的修复节奏——0.10.0 引入的失败分类诊断能力是否实际解决了这些边缘情况值得验证。"
+      "关注 #4041 多 Agent 协作模块 review 进展，评估 Agent 间通信协议设计对生态的影响",
+      "跟踪 #4190 Kimi Code 修复方案是否引入新的适配器架构模式，判断 Agent 适配层未来走向",
+      "留意 #4158 落地页改版上线后的 21 agent × 18 语言 SEO 效果数据",
+      "评估 v0.10.0 稳定后是否应推动 #1026 腾讯云部署方案被社区采纳"
     ],
-    "next_week": "v0.10.0 预计在未来 24-48h 内合入 main 并发布。发布后第一波社区反馈将集中在全新设计工作区的学习曲线和稳定性（Lexical 编辑器、交互式终端、浏览器参考面板三者协作体验）。预计初期会出现明显的 bug 潮——141 PRs 的规模决定了零回归几乎不可能。关键信号：如果 0.10.0 首周口碑正面（尤其是一站式工作区的工作流被认可），Stars 增长可能迎来又一次加速（类似 0.9.0 发布周的 +4k Stars）。反之，如果 Lexical 编辑器或交互式终端出现严重稳定性问题，可能导致部分用户回退到 0.9.0。Docker P0 修复（#4012）和 CI gate 切换（#4122）是否能在大发布窗口期平稳落地，将直接影响 0.10.0 的部署体验和开发效率。21 agent 落地页上线后，预计在 Google 搜索'agent-name design'场景产生显著的 SEO 流量增长，可能带来新一波社区关注。"
-  },
-  "cached_at": "2026-06-11T11:55:00+08:00",
-  "overview_summary": "Open Design Stars 63,025（+2,619 vs 06-07），Forks 7,033（+243），Open Issues 414（+82）。最新 release 仍为 v0.9.0（2026-06-02），发布第 9 天。🔥 本日最重磅信号：0.10.0 Release PR #4115（141 PRs · 50 contributors · 2 天）已提交，标志从'安装即用'到'一站式 Agentic 设计工作区'的质变级架构跃迁。核心变化包括 Lexical 编辑器驱动的新设计工作区、交互式终端、产品级 UI 动画、BYOK 全链路改造、沙箱运行时基础及运行失败分类诊断。v0.9.0 社区 bug 继续流入（输出评论失效 #4126、Claude Code exit 1 误判 #4125、UI 斜体渲染 #4124），同时 Docker P0 401 阻断（#4012 持续 2 天）和 Agent 兼容性碎片化（Antigravity #4121、Ollama BYOK #4104）仍需解决。21 agent × 18 语言落地页（#4050 XXL）即将上线，预期带来显著的 SEO 增长。整体判断：0.9.0→0.10.0 的过渡期进入最后冲刺，团队重心已从质量审视转向发布交付，但稳定性风险和 Agent 生态碎片化是需要持续关注的结构性问题。"
+    "next_week": "v0.10.0 发布第一周以 hotfix 和 Agent 兼容性补丁为主，预计 0.10.1 点版本快速跟进修复 Claude tool_use 判定(#4197/#4198)和 Kimi Code 检测(#4190)。多 Agent 协作 PR #4041 可能进入最终 review，作为 v0.11.0 核心功能信号。AMR 预检(#4078)和标注锚点(#4105)两特性有望合入，完善 Agent 可靠性体验。"
+  }
 }
