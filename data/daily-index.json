@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-12",
+    "label": "6 月 12 日 (周五)",
+    "count": "3P0 + 6P1",
+    "tags": "Xcode-27 · AI编程三引擎 · OpenAI-vs-Anthropic · DiffusionGemma · 多Agent安全 · AniShort · AgentTeams · Claude-API弃用",
+    "summary": "AI编程进入多引擎竞合阶段：Xcode 27首次同时集成Claude+Codex+Gemini，OpenAI推免费+一键迁移策反Claude用户，Anthropic额度翻倍反击。Google设$1000万多Agent安全基金，NVIDIA加速DiffusionGemma本地化。国内AniShort近亿融资创AI短剧纪录。Claude API弃用倒计时3天。"
+  },
+  {
     "date": "2026-06-11",
     "label": "6 月 11 日 (周四)",
     "count": "2P0 + 2P1",
