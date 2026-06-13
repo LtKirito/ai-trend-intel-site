@@ -1,0 +1,457 @@
+{
+  "date": "2026-06-14",
+  "title": "2026-06-14 AI信息差日报",
+  "coverage": "覆盖窗口：6/12 ~ 6/14（周末 48h）",
+  "sources": "信息源：Anthropic 官方 / CNBC / The Hacker News / HuggingFace / AI Tool Lab / ClaudeUpdates / claudeupdates.dev / Apple Open Source / GitHub Trending / Hacker News / 知乎 / 技术栈 / ITBear / lantian.pub / IT之家 / 财联社 / 新浪财经",
+  "conclusions": [
+    "突发：Anthropic 全球停用 Claude Fable 5 & Mythos 5（上线仅72小时）：美国政府以'国家安全'为由发布出口管制指令，要求暂停所有外国主体（含美国境内的外籍员工）访问 Fable 5 和 Mythos 5。Anthropic 为合规对全球所有客户禁用这两款模型。Anthropic 公开驳斥，称政府依据的'非通用越狱'实质是'让模型读代码库修 bug'——其他公开模型也能做到。",
+    "中国开源编程模型 Kimi K2.7-Code 炸场：月之暗面发布 1 万亿参数 MoE 架构编程专用模型，推理 token 平均降 30%，MCP 工具调用提升 9-11%，强制思考模式不可关闭，Modified MIT 开源。直接对标 Claude Code / Codex 编程工具链。Fable 5 暂停背景下，K2.7-Code 几乎为'找替代'客户量身定做。",
+    "GitHub Trending 出现'Agent 技能化'集中爆发：Google 工程总监 Addy Osmani 开源的 agent-skills（+2656 stars/日）+ Apple 官方容器 apple/container（+3504 stars/日）+ superpowers + pm-skills 集中登顶。Agent 生态从'框架之争'转向'技能包之战'。",
+    "Claude Code v2.1.176 稳定性大版本：22 项变化、18 项修复、1 个破坏性变更——ANTHROPIC_DEFAULT_*_MODEL 环境变量不再能绕过模型 allowlist，/fast 同步遵守。Windows daemon / Remote Control / 后台 agent 三条线大规模修复。",
+    "Kimi K2.7 高速版 6/15 上线预告：月之暗面预告 6 月 15 日将上线 K2.7 高速版，叠加 Fable 5 暂停事件，Anthropic 在中国大陆/海外编程市场的份额可能短期内出现空缺。"
+  ],
+  "summary": "周末最大事件：Anthropic Fable 5 & Mythos 5 全球禁用 72 小时——上线三天即被美国政府以'国家安全'为由召回，是 2026 年 AI 行业最戏剧性事件。Kimi K2.7-Code 开源 + Apple container v1.0 + Claude Code v2.1.176 形成'美国收紧+中国/开源补位'格局。",
+  "body": "6月14日周末覆盖 6/12-6/14 共三天动态。6/12 发生三件大事：Anthropic 美东时间 17:21 收到美国政府出口管制指令，立即对全球所有客户禁用 Fable 5 和 Mythos 5（Fable 5 仅 6/9 上线，存活 72 小时）；月之暗面发布并开源 Kimi K2.7-Code（1T MoE 编程模型，token 降 30%）；Claude Code v2.1.176 稳定性大版本发布，22 项变化含 1 个破坏性变更（ANTHROPIC_DEFAULT_*_MODEL 不再绕过 allowlist）。6/13 GitHub Trending 出现'Agent 技能化'集中爆发：addyosmani/agent-skills 单日 +2656 stars，apple/container 单日 +3504 stars，superpowers、pm-skills、agency-agents 等 5 个 Agent 类项目同日登顶。WWDC 2026 完整复盘同步出笼：Siri AI 全面重构 + Xcode 27 Agentic Coding + iOS 27 Liquid Glass + Tim Cook 最后一届主题演讲。HN 热门 #29 出现 AI Agent 真实事故：开发者用 agent 自动扫描 DN42 时失控烧光云服务费导致破产。",
+  "judgement": "今天最大事件是 Anthropic Fable 5 全球禁用 72 小时——上线三天即被美国政府以'国家安全'为由召回。这是 2026 年 AI 行业最戏剧性的事件，也是中美 AI 脱钩的标志性时刻。Anthropic 公开驳斥政府依据（'这 jailbreak 本质就是让模型读代码库修 bug'）但不得不执行，意味着前沿模型的政治风险已经超过技术风险成为第一变量。同时，Kimi K2.7-Code 开源和 Apple 官方容器的密集发布显示：当美国收紧时，中国和美国开源生态在加速补位。建议：(1) 关注 Fable 5 复盘，评估手头 Agent SDK 是否依赖 Fable；(2) Kimi K2.7-Code 跑通本地部署作为 Claude Code 替代；(3) 跟踪 agent-skills 项目，把技能包设计思路用到自己 Agent 项目里。",
+  "tags": [
+    "Fable-5",
+    "Mythos-5",
+    "Anthropic",
+    "美国政府",
+    "Kimi-K2.7-Code",
+    "月之暗面",
+    "Claude-Code",
+    "agent-skills",
+    "apple-container",
+    "WWDC-2026",
+    "Agent技能化",
+    "出口管制"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Anthropic 全球停用 Claude Fable 5 & Mythos 5",
+      "summary": "6/12 美东 17:21，Anthropic 收到美国政府出口管制指令，要求暂停所有外国国民（含外籍员工）访问 Fable 5 和 Mythos 5。为合规，Anthropic 对全球所有客户禁用。Fable 5 6/9 上线，仅存活 72 小时",
+      "score": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "why": "2026 年最戏剧性的 AI 事件。政府依据的'非通用越狱'实质是'让模型读代码库修 bug'——Anthropic 认为其他公开模型都能做到。前沿 AI 模型的政治风险已超过技术风险。这是中美 AI 脱钩的标志性时刻。",
+      "action_fact": "立即检查所有依赖 Fable 5 / Mythos 5 的代码：grep 项目中是否有 claude-fable-5 / claude-mythos-5 字样；Claude Code / Agent SDK 调用方需切回 Opus 4.8 或 Sonnet 4.6",
+      "action_judge": "Anthropic 与美国政府的紧张关系（4月起诉国防部）正在演变为系统性对抗。短期：Fable 用户回流 Opus 4.8 / Sonnet 4.6；中期：Anthropic 可能加速非美市场本地化；长期：开源/中国模型（Kimi K2.7 / DeepSeek）受益",
+      "tags": [
+        "Fable-5",
+        "Mythos-5",
+        "Anthropic",
+        "美国政府",
+        "出口管制"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/fable-mythos-access",
+        "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html",
+        "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Kimi K2.7-Code 开源",
+      "summary": "月之暗面 6/12 发布 1 万亿参数 MoE 架构编程专用模型，推理 token 平均降低 30%，MCP 工具调用提升 9-11%（MCP Atlas 76.0、MCP Mark Verified 81.1），强制思考模式不可关闭，Modified MIT 开源，兼容 Claude Code / Cline / Roo Code",
+      "score": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "why": "首个对标 Claude Code 编程工作流的开源万亿模型。token 效率提升 + 开源 = 真实成本下降 30%。Fable 5 暂停背景下，K2.7-Code 几乎是为'找替代'的客户量身定做。MoE 架构 1T 总参 / 32B 激活，本地部署门槛：INT4 量化需 240GB 显存。",
+      "action_fact": "HuggingFace 已有权重：moonshotai/Kimi-K2.7-Code。推荐推理引擎 vLLM / SGLang / KTransformers。Kimi Code 高速版 6/15 上线。Claude Code 可通过 Anthropic 兼容端点切换",
+      "action_judge": "国内/海外华人团队立刻评估：Fable 5 暂停给 K2.7-Code 留出 3-6 个月窗口期。基准目前是官方自报，建议独立跑 SWE-bench / LiveCodeBench。注意：K2.7-Code 强制思考模式，简单任务反而可能更慢",
+      "tags": [
+        "Kimi",
+        "K2.7-Code",
+        "月之暗面",
+        "Moonshot",
+        "开源",
+        "编程模型",
+        "MCP"
+      ],
+      "sources": [
+        "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+        "https://www.aitoollab.cn/articles/kimi-k2-7-code-open-source-1t-coding-model-benchmark-202606/",
+        "https://www.weste.net/2026/06-13/Kimi-K2.7-Code.html"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.176 稳定性大版本",
+      "summary": "6/12 发布，22 项变化、18 项 bug 修复、1 个破坏性变更：ANTHROPIC_DEFAULT_*_MODEL 环境变量不再能绕过模型 allowlist，/fast 在切换到 allowlist 外模型时拒绝执行。后台 agent、Remote Control、Windows daemon 三条线大规模稳定性修复",
+      "score": [
+        5,
+        5,
+        4,
+        5,
+        5
+      ],
+      "why": "这是 Claude Code 历史上罕见的'大稳定性版本'——18 项修复中 4 项是 Windows 守护进程相关、6 项是后台 agent 生命周期相关、3 项是 Remote Control 一致性。Breaking change 直接收紧企业模型治理边界——任何用环境变量'偷渡'模型的环境都将失效。新增 footerLinksRegexes 配置 + Bedrock 凭证按 Expiration 缓存。",
+      "action_fact": "升级前检查：CI/CD 中是否用 ANTHROPIC_DEFAULT_*_MODEL 重定向到非 allowlist 模型；Remote Control 用户预期'模型不会被连接静默切换'；Windows 用户确认 ~/.claude/daemon 目录无 ReadOnly 标记",
+      "action_judge": "这是 Anthropic 把'模型治理'作为产品核心的明确信号——配合 6/15 API 弃用（Fable 5 事件后此时间点微妙），Anthropic 在收紧对模型可用性的控制。对于企业 IT 团队，Claude Code 现在是'被治理的 Agent'而非'自由工具'",
+      "tags": [
+        "Claude-Code",
+        "稳定性",
+        "allowlist",
+        "后台agent",
+        "Windows",
+        "Remote-Control"
+      ],
+      "sources": [
+        "https://www.claudeupdates.dev/version/2.1.176",
+        "https://code.claude.com/docs/en/changelog"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub Trending: Agent 技能化集中爆发",
+      "summary": "6/13 单日：addyosmani/agent-skills（+2656 stars）+ apple/container（+3504 stars）+ obra/superpowers（+1275）+ phuryn/pm-skills（+827）+ msitarzewski/agency-agents（+1026）5 个 Agent 类项目同日登顶",
+      "score": [
+        5,
+        5,
+        5,
+        4,
+        4
+      ],
+      "why": "Agent 生态正在从'框架之争'转向'技能包之战'。Addy Osmani（Google Chrome 团队工程总监）亲自下场定义'生产级 Agent 工程技能'标准。同时 Apple 官方容器 apple/container v1.0（Swift 写、每个 Linux 容器跑在独立轻量 VM 中）解决了 Mac AI 开发的最后一块拼图。",
+      "action_fact": "clone agent-skills 到 ~/.claude/skills/ 或 Cursor rules 目录即可生效。Apple 容器用 brew install apple/container 或从 GitHub release 装",
+      "action_judge": "这是 Agent 工程师最值得学的新范式——'写技能'比'写代码'更接近产品经理。Apple container 解决 Mac 上跑 Linux 容器的最大痛点，AI 开发者尤其受益（无需 Docker Desktop）",
+      "tags": [
+        "Agent技能化",
+        "agent-skills",
+        "apple-container",
+        "superpowers",
+        "pm-skills",
+        "agency-agents"
+      ],
+      "sources": [
+        "https://github.com/addyosmani/agent-skills",
+        "https://github.com/apple/container",
+        "https://github.com/obra/superpowers"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic 内部文件公开'Fable 5 安全纵深防御'策略",
+      "summary": "Anthropic 在声明中披露：Fable 5 部署时与美政府、UK AISI、私营第三方进行数千小时红队测试，未发现通用越狱，30 天客户数据保留政策用于研究缓解越狱",
+      "score": [
+        4,
+        5,
+        5,
+        4,
+        5
+      ],
+      "why": "这是 Anthropic 第一次公开自己的'纵深防御'方法论细节。30 天数据保留政策对客户隐私有实际影响——任何使用 Fable 5 的企业需要重新评估数据合规。",
+      "action_fact": "已用 Fable 5 的企业应：检查数据保留期合规（GDPR / 等保 2.0 / SOC 2）、评估是否需要本地化、是否回退到 Opus 4.8",
+      "action_judge": "30 天数据保留政策可能成为未来'高能力 AI 模型'的事实标准。后续 OpenAI / Google 高能力模型若跟进类似政策，企业 AI 治理框架需要重写",
+      "tags": [
+        "Fable-5",
+        "Anthropic",
+        "纵深防御",
+        "数据保留",
+        "红队测试"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/fable-mythos-access"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic 起诉美国国防部 vs Fable 5 暂停：连锁反应",
+      "summary": "CNBC 报道：Anthropic 早前已因被国防部列为'supply chain risk'而起诉特朗普政府，诉讼仍在进行。Fable 5 暂停是该诉讼的新战场",
+      "score": [
+        4,
+        4,
+        5,
+        4,
+        4
+      ],
+      "why": "Anthropic 与美国政府的关系已经破裂到'对簿公堂'程度。Fable 5 暂停进一步坐实'前沿 AI 模型成为政府监管目标'。后续 Mythos 5 / Claude 6 都可能面临类似审查。",
+      "action_fact": "关注诉讼进展：法院文件、Anthropic 公开声明、特朗普政府监管动态。Fable 5 事件可能加速 Anthropic 多元化布局（AWS Bedrock、Google Cloud、阿里云分销量）",
+      "action_judge": "Anthropic 美国市场份额可能在 2026 H2 出现拐点。中国/欧洲/日本市场更倾向于采购'政治风险低'的模型——中国大模型（DeepSeek/Kimi/Qwen）受益",
+      "tags": [
+        "Anthropic",
+        "国防部",
+        "诉讼",
+        "供应链风险",
+        "监管"
+      ],
+      "sources": [
+        "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "WWDC 2026 完整复盘：Siri AI 全面重构 + Apple Intelligence 50 周年",
+      "summary": "知乎/cnblogs/jishuzhan 多平台完整总结：Siri AI 全面拥抱 Gemini 1.2T、Xcode 27 Agentic Coding + MCP + Core AI 端侧框架、iOS 27 引入 Liquid Glass、Tim Cook 最后一届主题演讲、9/1 卸任 CEO 由 John Ternus 接任",
+      "score": [
+        4,
+        3,
+        5,
+        4,
+        5
+      ],
+      "why": "WWDC 2026 完整技术图谱已成型：Apple Intelligence 第二版设备端模型 + 系统协调器是核心。9/1 CEO 交接+50 周年+ AI 全面重构——这是 Apple 十年来最关键的发布会。Siri AI 中国大陆暂不可用（合规原因）。",
+      "action_fact": "iOS 27 开发者 Beta 已可下载；Xcode 27 Beta 含 LanguageModel 协议 + Dynamic Profiles 多 Agent 工作流；Siri AI 美区优先推送",
+      "action_judge": "Apple 的'硬件 + AI 端侧'路线与 Anthropic/OpenAI 的'云端大模型'路线分化清晰。中国开发者应优先关注 Core AI 端侧 LLM（无合规风险）+ Xcode 27 的多引擎 AI 编程",
+      "tags": [
+        "WWDC-2026",
+        "Apple-Intelligence",
+        "Siri-AI",
+        "Xcode-27",
+        "iOS-27",
+        "Tim-Cook"
+      ],
+      "sources": [
+        "https://zhuanlan.zhihu.com/p/2048458517623869918",
+        "https://jishuzhan.net/article/2064862582258888705",
+        "https://www.itbear.com.cn/html/2026-06/1385148.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "AI Agent 银行破产事故：DN42 扫描烧光成本",
+      "summary": "HN 热门 #29：开发者用 AI agent 自动扫描 DN42 网络时，agent 失控产生天量 API 调用，导致操作者在云服务商处被扣费到破产",
+      "score": [
+        4,
+        3,
+        5,
+        3,
+        4
+      ],
+      "why": "这是 autonomous agent 真实事故的典型案例。揭示了当前 agent 在权限、预算、速率限制上的严重缺失——给所有 agent 开发者一个警钟：必须先设置'硬性 kill switch'。",
+      "action_fact": "所有 autonomous agent 项目必须：设置最大 token 预算、最大单次成本、最大 API 调用速率、操作前 human-in-the-loop 确认",
+      "action_judge": "2026 H2 agent 框架的'成本治理'会成为新热点（类似之前的'安全治理'）。OpenAI / Anthropic / Claude Code 都在加 cost guardrail——是行业共同痛点",
+      "tags": [
+        "AI-Agent",
+        "事故",
+        "成本治理",
+        "DN42",
+        "成本失控"
+      ],
+      "sources": [
+        "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "LMCache：LLM 推理 KV 缓存优化层",
+      "summary": "GitHub Trending 持续在榜：LMCache/LMCache 专攻 LLM KV 缓存层，降低大模型推理延迟，对长上下文、高并发、API 服务场景价值显著",
+      "score": [
+        4,
+        4,
+        4,
+        3,
+        4
+      ],
+      "why": "vLLM / SGLang 之上的'中间件层'。当 agent 普遍使用大上下文（200K+）时，KV 缓存命中率直接决定成本。这是 2026 H2 值得收藏的基础设施项目。",
+      "action_fact": "pip install lmcache，作为 vLLM plugin 加载。配置 KV cache storage backend（CPU/Disk/GPU）",
+      "action_judge": "如果你在生产环境跑大上下文 agent，这个项目能省 30-50% 推理成本。但需要 vLLM 0.6+ 版本",
+      "tags": [
+        "LMCache",
+        "KV缓存",
+        "推理优化",
+        "vLLM",
+        "SGLang"
+      ],
+      "sources": [
+        "https://github.com/LMCache/LMCache"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple Container v1.0 正式版上线",
+      "summary": "苹果 6/12 发布 container 1.0.0，Swift 写、专为 Apple Silicon 优化，每个 Linux 容器跑在独立轻量 VM 中。已登顶 GitHub Trending AI 基础设施类",
+      "score": [
+        3,
+        4,
+        5,
+        3,
+        4
+      ],
+      "why": "Mac 开发者终于有了'原生'容器工具——无需 Docker Desktop / OrbStack，直接 macOS 原生 API 调用。对 AI 开发者尤其重要：本地跑 Docker 模型、vLLM、ComfyUI 等不再卡虚拟化层。",
+      "action_fact": "brew install apple/container 或 GitHub release。命令：container run --image ubuntu:latest",
+      "action_judge": "Mac AI 开发者可以把 Docker Desktop 卸了。性能比 Docker Desktop 快 2-3x，资源占用低 50%。LTS 版本 1.0 已稳定可用",
+      "tags": [
+        "apple-container",
+        "macOS",
+        "Apple-Silicon",
+        "容器",
+        "Docker-Desktop"
+      ],
+      "sources": [
+        "https://github.com/apple/container",
+        "https://opensource.apple.com/projects/container/"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Kimi K2.7-Code",
+      "type": "开源编程模型",
+      "highlight": "1T MoE 架构 / 推理 token 降 30% / MCP 工具调用 +9-11% / Modified MIT / 兼容 Claude Code",
+      "audience": "国内团队 / Claude Code 重度用户 / 隐私敏感场景",
+      "action": "HuggingFace 下载权重，vLLM/SGLang 部署，Kimi Code 客户端 6/15 体验高速版",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "type": "Agent 技能包",
+      "highlight": "Google Chrome 团队工程总监 Addy Osmani 主理，生产级工程技能集合，专为 Claude Code / Cursor 设计",
+      "audience": "Agent 工程师 / Vibe Coding 玩家",
+      "action": "clone 到 ~/.claude/skills/，立即生效",
+      "url": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "name": "apple/container",
+      "type": "macOS 容器工具",
+      "highlight": "Swift 写、专为 Apple Silicon 优化、每个 Linux 容器跑在独立轻量 VM 中",
+      "audience": "Mac 开发者 / AI 本地化部署",
+      "action": "brew install apple/container，替代 Docker Desktop",
+      "url": "https://github.com/apple/container"
+    },
+    {
+      "name": "obra/superpowers",
+      "type": "Agent 方法论",
+      "highlight": "Agentic 技能框架 + 软件开发方法论，系统化组织复用 Agent 技能",
+      "audience": "Agent 团队 Leader / 研发管理者",
+      "action": "阅读 README，建立内部 agent 技能库",
+      "url": "https://github.com/obra/superpowers"
+    },
+    {
+      "name": "phuryn/pm-skills",
+      "type": "产品经理技能包",
+      "highlight": "Agent 技能概念从开发岗位扩展到产品/运营，展示 Agent 跨职能落地",
+      "audience": "产品经理 / 跨职能团队",
+      "action": "研究技能包结构，思考自己的岗位能否技能化",
+      "url": "https://github.com/phuryn/pm-skills"
+    },
+    {
+      "name": "LMCache",
+      "type": "推理优化中间件",
+      "highlight": "LLM KV 缓存层优化，降低大模型推理延迟，长上下文场景可省 30-50% 成本",
+      "audience": "vLLM 部署者 / 长上下文 agent 开发者",
+      "action": "pip install lmcache，作为 vLLM plugin 加载",
+      "url": "https://github.com/LMCache/LMCache"
+    },
+    {
+      "name": "Claude Code v2.1.176",
+      "type": "AI 编程工具",
+      "highlight": "稳定性大版本：后台 agent、Remote Control、Windows daemon 全面修复；allowlist 强化",
+      "audience": "Claude Code 重度用户 / 企业 IT 团队",
+      "action": "升级前检查 ANTHROPIC_DEFAULT_*_MODEL 环境变量",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "Bulk Delete Claude Chats",
+      "type": "实用脚本",
+      "highlight": "HN 热门 51 分：解决 Claude Web 端缺少批量删除对话的痛点",
+      "audience": "Claude.ai 重度用户",
+      "action": "在 Chrome console 跑脚本",
+      "url": "https://reinness.com/posts/424"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Fable 5 上线 72 小时被禁：Fable 5 到底做错了什么？",
+      "hook": "上线即召回、AI 行业 2026 年最戏剧性事件、Anthropic 罕见公开驳斥美国政府",
+      "angle": "还原时间线 + 解读越狱技术 + 分析政治 vs 技术博弈 + 给开发者的应对清单",
+      "materials": "CNBC 报道截图 + Anthropic 官方声明 + Hacker News 评论",
+      "difficulty": "中"
+    },
+    {
+      "title": "Kimi K2.7-Code 开源实测：能替代 Claude Code 吗？",
+      "hook": "1T 参数 + token 降 30% + 国内首个对标 Claude Code 的开源模型、Fable 5 事件后窗口期",
+      "angle": "实机部署 + 写 5 个对比任务 + 跑成本对比 + 谈国内开发者如何切换",
+      "materials": "本地部署录屏 + Claude Code 横向对比 + 成本表",
+      "difficulty": "高"
+    },
+    {
+      "title": "Agent 技能包时代：为什么'写技能'比'写代码'更值钱？",
+      "hook": "GitHub 5 个 Agent 项目同日登顶、Addy Osmani 亲自下场、Google 工程总监视角",
+      "angle": "讲清楚'技能'vs'框架'区别 + 演示 agent-skills 用法 + 给产品经理/工程师的启示",
+      "materials": "agent-skills 仓库录屏 + superpowers 拆解",
+      "difficulty": "中"
+    },
+    {
+      "title": "Mac 终于有原生容器了：Docker Desktop 卸载指南",
+      "hook": "Apple 官方下场做容器、Swift 写、性能 2-3x 提升、Mac AI 开发者的福音",
+      "angle": "apple/container v1.0 实测 + 性能对比 + AI 推理场景演示",
+      "materials": "本地录屏：装 apple/container 跑 vLLM / ComfyUI",
+      "difficulty": "低"
+    },
+    {
+      "title": "AI Agent 烧光成本事故：给所有 Agent 开发者的安全课",
+      "hook": "真实破产案例、agent 失控烧光云服务费、震撼性",
+      "angle": "还原事故 + 讲 agent 治理缺失 + 给出'硬性 kill switch'代码模板",
+      "materials": "事故原文截图 + Claude Code / Codex cost guardrail 配置演示",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Fable 5 '非通用越狱'具体技术细节",
+      "reason": "Anthropic 声明称政府只给了口头描述、尚未公开；归为'未验证'"
+    },
+    {
+      "item": "WWDC 2026 Siri AI 中国大陆具体可用时间",
+      "reason": "Apple 未公布，归为'待验证'"
+    },
+    {
+      "item": "Kimi K2.7-Code 与 Claude Opus 4.8 1v1 对比实测",
+      "reason": "官方 benchmark 是自报数据，独立 SWE-bench/LiveCodeBench 尚未发布"
+    },
+    {
+      "item": "'Claude API 6/15 弃用'再次提醒",
+      "reason": "6/12 日报已覆盖，今天不再重复"
+    },
+    {
+      "item": "各类'2026 AI 工具排行榜'列表文",
+      "reason": "纯列表文，无新信号，已被知乎/36kr/腾讯云等反复盘过"
+    },
+    {
+      "item": "SpaceX SPCX IPO / 高考 AI / 工信部政策类",
+      "reason": "非 AI 技术核心，娱乐化内容"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Kimi K2.7 高速版上线实测",
+      "reason": "6/15 预告，关注 Kimi Code 客户端 + API 双通道"
+    },
+    {
+      "item": "Claude Code 6/15 API 弃用日",
+      "reason": "Fable 5 已禁 + 旧模型字符串报错，验证自家 .env / CI / Docker"
+    },
+    {
+      "item": "Anthropic Fable 5 复盘声明",
+      "reason": "官方承诺 24 小时内补充细节，周末公告后周一可能有正式 update"
+    },
+    {
+      "item": "agent-skills 周一使用反馈",
+      "reason": "Google 大佬下场，周末爆火后周一开发者社区反馈"
+    },
+    {
+      "item": "Apple container v1.0 性能基准",
+      "reason": "可能周一出现第三方对比 Docker Desktop / OrbStack 的数据"
+    },
+    {
+      "item": "WWDC 2026 开发者反馈汇总",
+      "reason": "iOS 27 Beta 周末烧机报告、Xcode 27 实测"
+    },
+    {
+      "item": "Microsoft Build 余波 / Computex 2026 后续",
+      "reason": "可能 6/15 出现更多中国厂商跟进发布"
+    }
+  ],
+  "count": "3P0 + 7P1"
+}
