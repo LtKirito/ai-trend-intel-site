@@ -1,42 +1,24 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 63618,
-    "forks": 7093,
-    "open_issues": 399,
+    "stars": 64258,
+    "forks": 7174,
+    "open_issues": 387,
     "latest_release": {
-      "version": "open-design-v0.10.0",
-      "date": "2026-06-11",
-      "name": "Open Design 0.10.0 — The all-in-one Agentic design workspace"
+      "version": "open-design-v0.10.1",
+      "date": "2026-06-12",
+      "name": "Open Design 0.10.1 — stability & performance patch"
     }
   },
   "recent_prs": [
     {
-      "number": 4198,
-      "title": "[codex] keep Claude tool-use usage non-terminal",
+      "number": 4256,
+      "title": "refactor(web): standardize simple dialog shell structure",
       "state": "open",
-      "author": "yinjialu",
-      "labels": ["size/S", "risk/high", "type/bugfix"],
-      "impact": "高 — Claude Agent 流式 tool_use 被误判为终止信号，影响 Agent 执行链路正确性",
-      "url": "https://github.com/nexu-io/open-design/pull/4198"
-    },
-    {
-      "number": 4196,
-      "title": "[codex] Expand UI E2E coverage and P0 CI signal",
-      "state": "merged",
-      "author": "AmyShang-alt",
-      "labels": ["size/XXL", "risk/high", "type/chore"],
-      "impact": "高 — P0 CI 信号覆盖扩展，已合入主分支，加固 v0.10.0 质量防线",
-      "url": "https://github.com/nexu-io/open-design/pull/4196"
-    },
-    {
-      "number": 4078,
-      "title": "AMR send preflight guidance",
-      "state": "open",
-      "author": "chaoxiaoche",
-      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "高 — AMR 预检引导机制增强，直接改善 Agent 登录可靠性和错误诊断体验",
-      "url": "https://github.com/nexu-io/open-design/pull/4078"
+      "author": "mrcfps",
+      "labels": ["size/L", "risk/medium", "type/refactor", "needs-validation"],
+      "impact": "中 — 对话框组件结构统一为 simple dialog shell，属于 web 组件库基建的渐进式标准化，与 mrcfps 主导的 shared primitives 重构一脉相承",
+      "url": "https://github.com/nexu-io/open-design/pull/4256"
     },
     {
       "number": 4041,
@@ -44,159 +26,177 @@
       "state": "open",
       "author": "pixcore598-design",
       "labels": ["size/XXL", "risk/high", "type/feature"],
-      "impact": "极高 — v0.11.0 核心功能信号，多 Agent 团队协作引擎，将彻底改变 OpenDesign 的使用范式",
+      "impact": "极高 — v0.11.0 核心功能信号，多 Agent 团队协作引擎已递交 review fixes，标志 Open Design 从单体 Agent 工具向多 Agent 工作流平台的范式跃迁",
       "url": "https://github.com/nexu-io/open-design/pull/4041"
     },
     {
-      "number": 4158,
-      "title": "landing: skill-spec restyle, upstream parity, newsletter + nav updates",
+      "number": 4260,
+      "title": "Reflow brand extraction into an agent-driven, live flow",
       "state": "open",
-      "author": "wangchenglong0001",
-      "labels": ["size/XXL", "risk/high", "type/enhancement", "needs-validation"],
-      "impact": "极高 — 落地页全面改版，21 agent × 18 语言 SEO 格局重塑，影响项目全球增长引擎",
-      "url": "https://github.com/nexu-io/open-design/pull/4158"
+      "author": "pftom",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "高 — 品牌识别（品牌色/字体/logo）从静态配置转为 Agent 驱动的实时流式流程，将深度耦合 LLM 调用能力，是 v0.10 设计工作区智能化的重要扩展",
+      "url": "https://github.com/nexu-io/open-design/pull/4260"
     },
     {
-      "number": 4140,
-      "title": "fix(web): keep deck navigation active in Mark mode",
+      "number": 4145,
+      "title": "feat(plugins): unify all 56 official deck seeds with the Open Design product narrative",
       "state": "open",
-      "author": "Siri-Ray",
-      "labels": ["size/M", "risk/medium", "type/bugfix", "validated"],
-      "impact": "中 — Deck 编辑模式导航 UX 修复，影响内容创作工作流连续性",
-      "url": "https://github.com/nexu-io/open-design/pull/4140"
+      "author": "elihahah666",
+      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "高 — 56 个官方 deck 模板（plugins/deck seeds）统一对齐 Open Design 产品叙述，配合 21 agent × 18 语言落地页，强化产品全球化与品牌一致性",
+      "url": "https://github.com/nexu-io/open-design/pull/4145"
     },
     {
-      "number": 4105,
-      "title": "feat(web,daemon): keep annotation position anchors when the screenshot is missing",
-      "state": "open",
-      "author": "fancyboi999",
-      "labels": ["size/L", "risk/high", "type/feature", "needs-validation"],
-      "impact": "高 — 截图标注锚点持久化，Critique 工作流关键修复",
-      "url": "https://github.com/nexu-io/open-design/pull/4105"
+      "number": 3592,
+      "title": "fix: back off offline star fetch logging",
+      "state": "closed",
+      "author": "mturac",
+      "labels": ["size/M", "risk/high", "type/bugfix"],
+      "impact": "中 — 离线启动时 star fetch 退避日志策略优化，配合 v0.10.1 stability patch 减少桌面端日志噪声",
+      "url": "https://github.com/nexu-io/open-design/pull/3592"
     },
     {
-      "number": 3581,
-      "title": "fix(web): restore manual edit content editor",
-      "state": "open",
-      "author": "PerishCode",
-      "labels": ["size/M", "risk/medium", "type/bugfix", "validated"],
-      "impact": "中 — 手动编辑器内容恢复，影响需要精细控制的用户群体",
-      "url": "https://github.com/nexu-io/open-design/pull/3581"
+      "number": 4079,
+      "title": "fix(web): unify entry topbar tooltips",
+      "state": "closed",
+      "author": "jzhishu",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "低 — 顶部工具栏 tooltip 文案统一，UX 一致性小修",
+      "url": "https://github.com/nexu-io/open-design/pull/4079"
+    },
+    {
+      "number": 4224,
+      "title": "perf: cache OpenCode bootstrap loading",
+      "state": "closed",
+      "author": "VIVAAN-DHAWAN",
+      "labels": ["size/S", "risk/medium", "type/refactor"],
+      "impact": "中 — OpenCode bootstrap 加载缓存化，是 v0.10.1 stability & performance patch 性能优化主轴的代表性改动",
+      "url": "https://github.com/nexu-io/open-design/pull/4224"
+    },
+    {
+      "number": 4262,
+      "title": "fix(ci): flaky resume test cleanup",
+      "state": "closed",
+      "author": "mrcfps",
+      "labels": ["size/XS", "risk/high", "type/bugfix"],
+      "impact": "中 — 修复 resume test 偶发清理失败导致 CI 抖动，加固 P0 CI 信号稳定性",
+      "url": "https://github.com/nexu-io/open-design/pull/4262"
     }
   ],
   "recent_issues": [
     {
-      "number": 4197,
-      "title": "Claude stream-json usage with tool_use stop reason is treated as terminal",
-      "author": "yinjialu",
-      "labels": ["bug"],
-      "comments": 1,
-      "summary": "今日新开：Claude 流式 JSON 中 tool_use stop reason 被误判为终止信号，导致 Agent 任务提前中断",
-      "url": "https://github.com/nexu-io/open-design/issues/4197"
-    },
-    {
-      "number": 4192,
-      "title": "Support ACP terminal-auth flows from chat",
-      "author": "AriaShishegaran",
-      "labels": ["enhancement"],
-      "comments": 2,
-      "summary": "今日新开：ACP 协议终端认证流程支持请求，扩展 Agent 适配器的安全认证能力",
-      "url": "https://github.com/nexu-io/open-design/issues/4192"
-    },
-    {
-      "number": 4190,
-      "title": "Kimi Code CLI is not detected and ACP runs fail after official update",
-      "author": "AriaShishegaran",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "今日新开：Kimi Code 官方更新后 CLI 无法被检测，ACP 运行全面失败，暴露 Agent 适配器脆弱性",
-      "url": "https://github.com/nexu-io/open-design/issues/4190"
-    },
-    {
-      "number": 4151,
-      "title": "[Bug]: 当打开「当前标签预览」的时候，previewer会遮住顶部的search tabs",
-      "author": "jzhishu",
-      "labels": ["bug"],
-      "comments": 3,
-      "summary": "UX 层叠遮挡 bug：标签页预览浮层遮盖顶部搜索/标签导航，影响多标签工作流",
-      "url": "https://github.com/nexu-io/open-design/issues/4151"
-    },
-    {
-      "number": 4123,
-      "title": "Hide non-functional Jump to latest action from dropdown popover",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 3,
-      "summary": "UI 清理：下拉菜单中无效的「Jump to latest」操作项需隐藏，标注 good first issue",
-      "url": "https://github.com/nexu-io/open-design/issues/4123"
-    },
-    {
-      "number": 3547,
-      "title": "Pick and implement the first ROI-ranked latency or token optimization",
-      "author": "yinjialu",
-      "labels": ["feature"],
-      "comments": 3,
-      "summary": "按投资回报率排名的首轮延迟/Token 优化任务，yinjialu 主导的性能工程路线",
-      "url": "https://github.com/nexu-io/open-design/issues/3547"
-    },
-    {
-      "number": 3546,
-      "title": "Fix the top remaining failed-run bucket after PR1 and retry data",
-      "author": "yinjialu",
-      "labels": ["bug", "priority:p1"],
-      "comments": 3,
-      "summary": "P1 优先级：修复剩余最高频失败运行根因，属于可靠性工程的延续任务",
-      "url": "https://github.com/nexu-io/open-design/issues/3546"
-    },
-    {
-      "number": 3408,
-      "title": "Reliability push: classify run failures, correlate PostHog with Langfuse, and add safe retries",
-      "author": "yinjialu",
-      "labels": ["enhancement"],
-      "comments": 17,
-      "summary": "可靠性体系化建设：运行失败分类 + PostHog/Langfuse 可观测性关联 + 安全重试，17 条评论的高讨论度架构议题",
-      "url": "https://github.com/nexu-io/open-design/issues/3408"
-    },
-    {
-      "number": 1026,
-      "title": "enhancement: 腾讯云部署支持 (Tencent Cloud CVM/TKE)",
-      "author": "lefarcen",
-      "labels": ["enhancement"],
+      "number": 3586,
+      "title": "Offline launch: renderer fetch retry-storm exhausts file descriptors (EMFILE) and crashes the desktop app",
+      "author": "cardaba",
+      "labels": ["bug", "help wanted", "priority:p0"],
       "comments": 9,
-      "summary": "中国社区长期呼声：腾讯云 CVM/TKE 官方部署支持，9 条评论持续关注，与国内用户生态直接相关",
-      "url": "https://github.com/nexu-io/open-design/issues/1026"
+      "summary": "P0 阻断：离线启动时 renderer fetch 重试风暴耗尽文件描述符（EMFILE）导致桌面应用崩溃，9 条评论持续升温，与 v0.10.1 stability patch 的稳定性主题高度相关",
+      "url": "https://github.com/nexu-io/open-design/issues/3586"
     },
     {
-      "number": 1072,
-      "title": "为什么不支持本地 baseurl？",
-      "author": "GarrickLin",
-      "labels": ["enhancement", "question", "stale"],
+      "number": 3416,
+      "title": "Follow-up: harden sandbox runtime boundaries after merged stack",
+      "author": "dredozubov",
+      "labels": ["question", "security"],
+      "comments": 21,
+      "summary": "安全加固 follow-up：sandbox 运行时边界在合并堆栈后需要二次硬化，21 条评论的高讨论度架构议题，是 Agent 运行环境信任链的核心防线",
+      "url": "https://github.com/nexu-io/open-design/issues/3416"
+    },
+    {
+      "number": 3815,
+      "title": "Codex Browser plugin is enabled in Open Design runs but no matching iab backend is attached",
+      "author": "jaehanbyun",
+      "labels": ["bug", "help wanted", "priority:p1"],
+      "comments": 11,
+      "summary": "P1 体验断点：Codex Browser 插件在 Open Design 中默认启用但无 iab 后端实例化，导致运行时插件存在但能力缺失，11 条评论关注",
+      "url": "https://github.com/nexu-io/open-design/issues/3815"
+    },
+    {
+      "number": 1138,
+      "title": "codebuddy cli",
+      "author": "sihui1551",
+      "labels": ["feature"],
       "comments": 6,
-      "summary": "中国用户长期需求：自定义 API baseurl 支持，标记 stale 但仍有关注度",
-      "url": "https://github.com/nexu-io/open-design/issues/1072"
+      "summary": "特性请求：Codebuddy CLI 适配支持，社区长期呼声，6 条评论表明国内开发者对 Codebuddy Agent 集成的期待",
+      "url": "https://github.com/nexu-io/open-design/issues/1138"
+    },
+    {
+      "number": 4172,
+      "title": "refactor(web): remove obsolete raw control styling hooks",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 0,
+      "summary": "mrcfps 主导的 web 组件库重构系列：移除废弃的原始控件样式 hook，配合 shared primitives（#4256 #4170-#4171）渐进统一前端基础组件",
+      "url": "https://github.com/nexu-io/open-design/issues/4172"
+    },
+    {
+      "number": 4171,
+      "title": "refactor(web): migrate conventional editor controls to shared primitives",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 1,
+      "summary": "传统编辑器控件迁移至 shared primitives 体系，组件复用与一致性提升",
+      "url": "https://github.com/nexu-io/open-design/issues/4171"
+    },
+    {
+      "number": 4170,
+      "title": "refactor(components): add shared checkbox and radio primitives",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 0,
+      "summary": "共享 checkbox/radio 原子组件抽象，web 设计系统基础组件库扩展",
+      "url": "https://github.com/nexu-io/open-design/issues/4170"
+    },
+    {
+      "number": 4169,
+      "title": "refactor(components): add shared field, label, and hint primitives",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 1,
+      "summary": "共享 field/label/hint 表单原语组件，新组件库的又一积木",
+      "url": "https://github.com/nexu-io/open-design/issues/4169"
+    },
+    {
+      "number": 4168,
+      "title": "refactor(web): migrate plugin and design browser forms to shared primitives",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 1,
+      "summary": "插件与设计浏览器的表单迁移至 shared primitives，触及 plugin 中心化与设计资产管理核心模块",
+      "url": "https://github.com/nexu-io/open-design/issues/4168"
+    },
+    {
+      "number": 4167,
+      "title": "refactor(web): migrate MCP settings controls to shared primitives",
+      "author": "mrcfps",
+      "labels": ["type/refactor"],
+      "comments": 1,
+      "summary": "MCP 设置控件迁移至 shared primitives，是 MCP 集成界面的统一化收尾",
+      "url": "https://github.com/nexu-io/open-design/issues/4167"
     }
   ],
   "trends": {
-    "direction": "v0.10.0（设计工作区大一统，211文件/+36k行）于6月11日发布后，团队立即转入 post-release 修复期。当前开发分三条主线：① Agent 兼容性紧急修补——Claude tool_use 终止判定(#4198)、Kimi Code CLI 官方更新后检测失效(#4190)、ACP 终端认证扩展(#4192)，反映 17 个 Agent 适配器的维护挑战；② v0.11.0 功能预研——多 Agent 团队协作模块(#4041, XXL)已递交 review，标志下一大版本核心方向；③ 运营基建加固——CI E2E 覆盖扩展(#4196 已合入)、落地页全球改版(#4158, 21 agent × 18 语言)。",
+    "direction": "v0.10.1 'stability & performance patch'（6/12 发布）已确认团队重心从 v0.10.0 大版本发布转入性能与稳定性窗口。当前开发分四条主线：① web 设计系统原子化重构——mrcfps 一人独挑 6 项 shared primitives 重构（#4256/#4170-#4172/#4167-#4168）已成体系化推进，覆盖表单/插件/编辑器/MCP 设置等关键界面层；② v0.11.0 功能预研——多 Agent 团队协作 #4041（XXL）和品牌识别 agent-driven 流 #4260（XXL）持续打磨，构成下一大版本两大支柱；③ 性能优化——OpenCode bootstrap 缓存（#4224 已合）、离线启动 EMFILE 修复（#3586 P0）合力加固桌面应用；④ 内容生态——56 个 deck seeds 统一产品叙述（#4145 XXL）与 21 agent × 18 语言落地页改版协同推进全球化叙事。",
     "affected_modules": [
-      "Agent 适配层（Codex/Claude/Kimi Code/ACP）— 碎片化兼容修复",
-      "Web UI（Deck 导航/手动编辑/预览浮层/Critique 标注）",
-      "CI/E2E 测试体系 — P0 信号覆盖扩展",
-      "落地页/市场页面 — skill-spec 改版与全球化 SEO",
-      "多 Agent 协作引擎 — v0.11.0 核心功能预研"
+      "Web 设计系统（shared primitives / 组件库 / 表单原子化）— mrcfps 主导的体系化重构",
+      "Agent 协作层（多 Agent 团队 / 品牌识别 agent-driven 流）— v0.11.0 核心",
+      "桌面应用稳定性（EMFILE / OpenCode bootstrap 缓存 / 离线启动路径）",
+      "内容/插件生态（56 个 deck seeds / 21 agent × 18 语言落地页）",
+      "Sandbox 运行时边界 — 安全硬化 follow-up（#3416，21 评论）"
     ],
     "risks": [
-      "Agent 碎片化加剧：v0.10.0 发布后 3 个今日新 Agent 兼容 bug（Claude/Kimi/ACP），17 个适配器维护成本持续上升",
-      "可靠性技术债：运行失败分类体系(#3408, 17评论)和 P1 失败根因修复(#3546)持续积压，PostHog/Langfuse 可观测性链路未闭环",
-      "中国用户体验缺口：腾讯云部署(#1026, 9评论)和本地 baseurl(#1072)长期需求未解决，影响国内开发者采用率",
-      "v0.10.0 大版本工程质量：211 文件/+36k 行一次性合入，潜在回归风险在 post-release 窗口集中暴露"
+      "桌面应用稳定性：离线启动 EMFILE 文件描述符耗尽 P0 bug #3586 持续 9 评论，桌面端首次启动体验直接受影响",
+      "Sandbox 信任链：#3416 合并堆栈后 sandbox 边界硬化未闭环，21 评论高关注度，与多 Agent 协作 v0.11.0 的运行时隔离直接耦合",
+      "Agent 适配器碎片化延续：P1 #3815 Codex Browser 插件 iab 后端缺失说明 17+ 适配器的接口契约持续存在断层",
+      "前端重构技术债累积：mrcfps 一人主导 6 项 primitives 重构虽方向正确，但单点维护风险显著，组件库能否沉淀为团队共享资产是后续观察重点"
     ],
     "actions": [
-      "关注 #4041 多 Agent 协作模块 review 进展，评估 Agent 间通信协议设计对生态的影响",
-      "跟踪 #4190 Kimi Code 修复方案是否引入新的适配器架构模式，判断 Agent 适配层未来走向",
-      "留意 #4158 落地页改版上线后的 21 agent × 18 语言 SEO 效果数据",
-      "评估 v0.10.0 稳定后是否应推动 #1026 腾讯云部署方案被社区采纳"
+      "关注 #4041 多 Agent 团队协作 PR review fixes 合入节奏，评估 Agent 间通信协议（编排/上下文共享/状态同步）的设计取舍",
+      "跟踪 #4260 品牌识别 agent-driven 流的 LLM 依赖路径，评估对 token 成本和响应延迟的影响",
+      "关注 #3586 P0 离线启动 EMFILE 修复进展，判断是否需要回滚或加 hotfix 到 v0.10.1",
+      "评估 mrcfps 主导的 shared primitives 重构对开发效率的实际增益，识别其他需要原子化的重复 UI 模式"
     ],
-    "next_week": "v0.10.0 发布第一周以 hotfix 和 Agent 兼容性补丁为主，预计 0.10.1 点版本快速跟进修复 Claude tool_use 判定(#4197/#4198)和 Kimi Code 检测(#4190)。多 Agent 协作 PR #4041 可能进入最终 review，作为 v0.11.0 核心功能信号。AMR 预检(#4078)和标注锚点(#4105)两特性有望合入，完善 Agent 可靠性体验。"
+    "next_week": "v0.10.1 stability patch 落地后，预计 0.10.2/0.10.3 将集中吸收 P0 离线启动 EMFILE 修复（#3586）和 Codex Browser iab 补齐（#3815）两个高优先级 hotfix。mrcfps 主导的 shared primitives 重构将持续推进至更深的页面级迁移。多 Agent 协作 #4041 与品牌识别 agent-driven #4260 两条 XXL 主线有望在 7 月初进入 v0.11.0 候选合入窗口。落地页改版 #4158（21×18 SEO）的实际效果数据可能在 1-2 周后开始回流。"
   }
 }
