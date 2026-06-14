@@ -1,0 +1,124 @@
+{
+  "date": "2026-06-13",
+  "title": "2026-06-13 AI信息差日报",
+  "coverage": "覆盖窗口：6/12 ~ 6/13（补档）",
+  "sources": "信息源：HuggingFace / AI Tool Lab / Weste / GitHub Trending / Apple Open Source / ClaudeUpdates / Hacker News / lantian.pub / 知乎 / 技术栈 / ITBear / Product Hunt",
+  "count": "2P0 + 5P1",
+  "conclusions": [
+    "Kimi K2.7-Code 是 6/13 最值得单独记录的模型信号：1T MoE 编程模型、推理 token 平均降 30%、MCP 工具调用提升 9-11%、Modified MIT 开源，明确对标 Claude Code / Codex 工作流。",
+    "GitHub Trending 在 6/13 出现 Agent 技能化集中爆发：agent-skills、superpowers、pm-skills、agency-agents 同日走高，Agent 生态从框架之争转向技能包之战。",
+    "Apple container v1.0 给 Mac AI 开发补上原生容器底座：Swift 实现、Apple Silicon 优化、每个 Linux 容器跑在独立轻量 VM 中，适合替代 Docker Desktop 做本地 AI 环境。",
+    "Claude Code v2.1.176 不是普通小版本，而是稳定性和治理版本：Windows daemon、Remote Control、后台 agent 大量修复，同时收紧模型 allowlist 绕过路径。",
+    "HN 的 AI Agent 成本失控事故提醒：Agent 项目必须把预算上限、速率限制、kill switch 当作一等功能，而不是上线后的补丁。"
+  ],
+  "summary": "6/13 的主线不是单点大新闻，而是 Agent 工程化栈成型：上层有 Kimi K2.7-Code 补位编程模型，中层有 agent-skills / superpowers 这种技能包，下层有 Apple container / LMCache 这种本地与推理基础设施。",
+  "body": "6/13 是周末信息发酵日。Kimi K2.7-Code 的开源消息开始被开发者社区讨论，其核心价值不只是 1T 参数，而是 token 成本下降、MCP 工具调用增强、Claude Code / Cline / Roo Code 兼容这些工程化细节。GitHub Trending 同日出现多个 Agent 技能包项目：addyosmani/agent-skills、obra/superpowers、phuryn/pm-skills、agency-agents，说明 Agent 的竞争焦点正在从框架 API 转向可复用的岗位技能和工程方法。Apple container v1.0 也在同一窗口获得大量关注，代表 Mac 本地 AI 开发环境正在摆脱 Docker Desktop 依赖。Claude Code v2.1.176 则提供了另一条信号：Agent 工具进入稳定性、治理和企业可控阶段。",
+  "judgement": "6/13 更像是 Agent 工程化拐点，而不是模型发布日。Kimi K2.7-Code 解决模型供给，agent-skills 解决工作流复用，Apple container 解决本地运行环境，Claude Code v2.1.176 解决稳定性和治理。建议把这一天作为'Agent 技能化'观察点：以后做 Agent，不只是接模型和工具，而是沉淀岗位技能包、预算护栏和可迁移运行环境。",
+  "tags": ["Kimi-K2.7-Code", "Agent技能化", "agent-skills", "apple-container", "Claude-Code", "LMCache", "成本治理", "GitHub-Trending", "MCP"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Kimi K2.7-Code 开源",
+      "summary": "月之暗面发布 1T MoE 架构编程专用模型，推理 token 平均降低 30%，MCP 工具调用提升 9-11%，Modified MIT 开源，兼容 Claude Code / Cline / Roo Code。",
+      "score": [5, 5, 5, 5, 5],
+      "why": "这是少数明确对标 AI 编程 Agent 工作流的开源大模型。它的关键不是参数规模，而是 token 成本、工具调用和现有编程 Agent 生态兼容性。",
+      "action_fact": "HuggingFace 权重为 moonshotai/Kimi-K2.7-Code，可用 vLLM / SGLang / KTransformers 评估；注意强制思考模式可能让简单任务变慢。",
+      "action_judge": "适合作为 Claude Code / Codex 的备选模型进入评估池。先跑真实仓库 bugfix、MCP 工具调用和长上下文重构任务，不要只看官方 benchmark。",
+      "tags": ["Kimi", "K2.7-Code", "Moonshot", "开源", "编程模型", "MCP"],
+      "sources": ["https://huggingface.co/moonshotai/Kimi-K2.7-Code", "https://www.aitoollab.cn/articles/kimi-k2-7-code-open-source-1t-coding-model-benchmark-202606/", "https://www.weste.net/2026/06-13/Kimi-K2.7-Code.html"]
+    },
+    {
+      "rank": "P0",
+      "title": "GitHub Trending 出现 Agent 技能化集中爆发",
+      "summary": "6/13 单日，addyosmani/agent-skills、obra/superpowers、phuryn/pm-skills、agency-agents 等 Agent 技能与方法论项目集中走高。",
+      "score": [5, 5, 5, 4, 4],
+      "why": "Agent 生态从框架 API 转向技能包和工作方法。技能包更接近可复用的岗位 SOP，能直接影响团队如何使用 Claude Code / Cursor / Codex。",
+      "action_fact": "可把 agent-skills 克隆到 Claude/Cursor 技能目录，先挑代码审查、性能优化、测试生成类技能试用。",
+      "action_judge": "后续做 Agent 产品时，技能包会比单纯工具接入更有壁垒。建议为自己的高频工作沉淀 skills，而不是只写 prompt 模板。",
+      "tags": ["Agent技能化", "agent-skills", "superpowers", "pm-skills", "GitHub-Trending"],
+      "sources": ["https://github.com/addyosmani/agent-skills", "https://github.com/obra/superpowers", "https://github.com/phuryn/pm-skills"]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple container v1.0 补齐 Mac 本地 AI 开发底座",
+      "summary": "Apple 发布 container 1.0.0，Swift 实现、Apple Silicon 优化、每个 Linux 容器运行在独立轻量 VM 中。",
+      "score": [4, 5, 5, 4, 4],
+      "why": "Mac 上跑 AI 本地服务、vLLM、ComfyUI、数据库和隔离测试环境，长期依赖 Docker Desktop / OrbStack。Apple 官方下场意味着 macOS 原生容器会成为 AI 开发基础设施变量。",
+      "action_fact": "可通过 GitHub release 或 brew 安装，先用轻量镜像验证命令兼容性，再迁移 vLLM / ComfyUI / 数据库容器。",
+      "action_judge": "短期不建议一刀切替换 Docker Desktop，但适合做 AI 本地开发环境的替代评估。",
+      "tags": ["apple-container", "macOS", "Apple-Silicon", "容器", "本地AI"],
+      "sources": ["https://github.com/apple/container", "https://opensource.apple.com/projects/container/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.176 收紧模型治理并修复 Agent 稳定性",
+      "summary": "22 项变化、18 项修复、1 个 breaking change：ANTHROPIC_DEFAULT_*_MODEL 不再能绕过 allowlist；Windows daemon、Remote Control、后台 agent 生命周期大量修复。",
+      "score": [4, 5, 4, 4, 5],
+      "why": "这说明 AI 编程工具已进入企业治理阶段：不仅要能写代码，还要可控、稳定、可审计。allowlist 收紧会影响依赖环境变量切模型的团队。",
+      "action_fact": "升级前检查 CI/CD、Docker、.env 中的 ANTHROPIC_DEFAULT_*_MODEL；Windows 用户关注 daemon 目录权限和后台 agent 状态。",
+      "action_judge": "Claude Code 正从个人效率工具变成企业 Agent 平台，治理能力的重要性会上升。",
+      "tags": ["Claude-Code", "allowlist", "后台agent", "Windows", "Remote-Control", "企业治理"],
+      "sources": ["https://www.claudeupdates.dev/version/2.1.176", "https://code.claude.com/docs/en/changelog"]
+    },
+    {
+      "rank": "P1",
+      "title": "AI Agent 成本失控事故提醒预算护栏必须前置",
+      "summary": "Hacker News 热门案例：开发者用 AI Agent 自动扫描 DN42 网络时，Agent 失控产生大量 API 调用，最终造成严重云服务账单事故。",
+      "score": [4, 4, 5, 4, 4],
+      "why": "这是 autonomous agent 的真实事故样本。Agent 的风险不只在安全越权，也在成本失控、循环调用、无上限工具执行。",
+      "action_fact": "所有 Agent 项目都应设置最大 token 预算、最大单次成本、最大 API 调用速率、任务超时、kill switch 和人工确认点。",
+      "action_judge": "成本治理会成为 2026 H2 Agent 框架的新卖点。没有预算护栏的 Agent 不适合进入生产环境。",
+      "tags": ["AI-Agent", "成本治理", "DN42", "kill-switch", "事故复盘"],
+      "sources": ["https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"]
+    },
+    {
+      "rank": "P1",
+      "title": "LMCache 成为长上下文 Agent 推理优化关注点",
+      "summary": "LMCache 专攻 LLM KV 缓存层，面向长上下文、高并发和 API 服务场景降低推理延迟和成本。",
+      "score": [4, 4, 4, 3, 4],
+      "why": "Agent 越来越依赖长上下文，KV 缓存命中率直接决定服务成本。LMCache 这种中间件会成为 vLLM / SGLang 生态的重要补充。",
+      "action_fact": "在 vLLM 场景中评估 lmcache plugin，重点看长上下文重复调用和多轮 Agent 任务的缓存命中。",
+      "action_judge": "如果团队在跑生产级长上下文 Agent，缓存层优化比继续换大模型更可能直接降成本。",
+      "tags": ["LMCache", "KV缓存", "vLLM", "SGLang", "推理优化"],
+      "sources": ["https://github.com/LMCache/LMCache"]
+    },
+    {
+      "rank": "P1",
+      "title": "WWDC 2026 技术复盘开始形成完整图谱",
+      "summary": "开发者社区开始整理 Siri AI、Xcode 27 Agentic Coding、Core AI 端侧框架、iOS 27 Liquid Glass 等 WWDC 2026 关键点。",
+      "score": [3, 4, 5, 4, 4],
+      "why": "WWDC 新闻从发布会信息进入开发者可执行清单阶段。对中国开发者而言，Core AI 端侧能力和 Xcode 27 多引擎 AI 编程比 Siri AI 更直接。",
+      "action_fact": "下载 Xcode 27 Beta，重点验证 LanguageModel 协议、Dynamic Profiles、多 Agent 工作流和 Core AI 端侧调用。",
+      "action_judge": "Apple 的 AI 路线核心仍是端侧和生态入口，不会完全走 OpenAI/Anthropic 的云端大模型路线。",
+      "tags": ["WWDC-2026", "Xcode-27", "Core-AI", "Siri-AI", "Apple-Intelligence"],
+      "sources": ["https://zhuanlan.zhihu.com/p/2048458517623869918", "https://jishuzhan.net/article/2064862582258888705", "https://www.itbear.com.cn/html/2026-06/1385148.html"]
+    }
+  ],
+  "tools": [
+    {"name": "Kimi K2.7-Code", "type": "开源编程模型", "highlight": "1T MoE / token 降 30% / MCP 工具调用增强 / Modified MIT", "audience": "Claude Code 替代评估者 / 国内团队 / 隐私敏感团队", "action": "用真实仓库任务跑 SWE-bench 风格评估，不只看官方 benchmark", "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"},
+    {"name": "agent-skills", "type": "Agent 技能包", "highlight": "Google 工程总监 Addy Osmani 主理的生产级 Agent 工程技能集合", "audience": "Agent 工程师 / Vibe Coding 用户", "action": "克隆后挑 2-3 个技能接入 Claude Code 或 Cursor 试用", "url": "https://github.com/addyosmani/agent-skills"},
+    {"name": "apple/container", "type": "macOS 容器工具", "highlight": "Swift 实现、Apple Silicon 优化、轻量 VM 隔离", "audience": "Mac AI 开发者", "action": "用本地 AI 服务镜像做 Docker Desktop 替代评估", "url": "https://github.com/apple/container"},
+    {"name": "LMCache", "type": "推理优化中间件", "highlight": "KV 缓存优化，面向长上下文 Agent 降低延迟和成本", "audience": "vLLM / SGLang 部署者", "action": "在长上下文多轮任务中测试缓存命中率", "url": "https://github.com/LMCache/LMCache"},
+    {"name": "superpowers", "type": "Agent 方法论", "highlight": "把 Agentic 技能和软件工程方法组织成可复用体系", "audience": "研发负责人 / Agent 团队", "action": "参考其结构建立内部技能库", "url": "https://github.com/obra/superpowers"}
+  ],
+  "video_topics": [
+    {"title": "Kimi K2.7-Code：国产开源编程模型能不能替代 Claude Code？", "hook": "1T MoE + token 降 30% + MCP 工具调用增强", "angle": "用真实代码仓库做 3 个任务对比：bugfix、重构、MCP 工具调用", "materials": "HuggingFace 页面、终端部署录屏、Claude Code 对比结果", "difficulty": "高"},
+    {"title": "Agent 技能包时代来了：为什么写 skill 比写 prompt 更重要？", "hook": "GitHub 多个 Agent 技能项目同日爆发", "angle": "解释技能包、框架、prompt 模板的区别，并演示 agent-skills", "materials": "GitHub Trending、agent-skills README、Claude Code 技能目录", "difficulty": "中"},
+    {"title": "Mac 开发者可以卸载 Docker Desktop 了吗？Apple container v1.0 实测", "hook": "Apple 官方容器工具，Swift 写，Apple Silicon 优化", "angle": "安装、跑镜像、跑 AI 服务、对比 Docker Desktop", "materials": "终端录屏、资源占用截图、容器启动速度", "difficulty": "低"},
+    {"title": "AI Agent 烧光账单事故：上线前必须加的 6 个护栏", "hook": "真实 Agent 成本失控案例", "angle": "复盘事故，并给出预算、速率、超时、kill switch 模板", "materials": "HN 案例原文、示例配置、成本上限代码", "difficulty": "低"}
+  ],
+  "noise_items": [
+    {"item": "Kimi K2.7-Code 直接宣称全面超过 Claude Opus", "reason": "缺少独立第三方实测，官方 benchmark 不能直接等同真实工程表现"},
+    {"item": "Apple container 立刻完全替代 Docker Desktop", "reason": "1.0 刚发布，生态兼容和 GUI/插件体验仍需验证"},
+    {"item": "各类 AI 工具排行榜汇总", "reason": "列表文多、信号弱，不符合信息差日报标准"},
+    {"item": "WWDC 2026 的娱乐化 CEO 交接解读", "reason": "与 AI 工具和开发者可执行动作弱相关"},
+    {"item": "Agent 成本事故夸张标题党", "reason": "保留工程教训，过滤恐吓式传播"}
+  ],
+  "tracking_items": [
+    {"item": "Kimi K2.7-Code 独立 benchmark", "reason": "需要 SWE-bench / LiveCodeBench / 真实仓库任务验证"},
+    {"item": "agent-skills 社区采用速度", "reason": "观察是否形成 Claude Code / Cursor 技能事实标准"},
+    {"item": "Apple container 与 Docker Desktop / OrbStack 对比", "reason": "决定 Mac AI 本地开发环境是否迁移"},
+    {"item": "Claude Code allowlist 变更对企业环境影响", "reason": "可能导致 CI/CD、Docker 和 .env 中的模型配置失效"},
+    {"item": "Agent 成本治理组件", "reason": "预算护栏可能成为下半年 Agent 框架标配"}
+  ]
+}

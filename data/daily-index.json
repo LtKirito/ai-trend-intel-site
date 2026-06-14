@@ -7,6 +7,13 @@
     "summary": "周末最大事件：Anthropic Fable 5 & Mythos 5 全球禁用 72 小时——上线三天即被美国政府以'国家安全'为由召回，是 2026 年 AI 行业最戏剧性事件。Kimi K2.7-Code 开源 + Apple container v1.0 + Claude Code v2.1.176 形成'美国收紧+中国/开源补位'格局。"
   },
   {
+    "date": "2026-06-13",
+    "label": "6 月 13 日 (周六)",
+    "count": "2P0 + 5P1",
+    "tags": "Kimi-K2.7-Code · Agent技能化 · agent-skills · apple-container · Claude-Code · LMCache · 成本治理 · MCP",
+    "summary": "6/13 的主线是 Agent 工程化栈成型：Kimi K2.7-Code 补位编程模型，agent-skills/superpowers 推动技能包化，Apple container 补齐 Mac 本地 AI 容器底座，Claude Code v2.1.176 强化稳定性和模型治理。"
+  },
+  {
     "date": "2026-06-12",
     "label": "6 月 12 日 (周五)",
     "count": "3P0 + 6P1",
