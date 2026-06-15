@@ -1,0 +1,99 @@
+{
+  "week": "2026-W24",
+  "title": "2026 W24 GitHub AI 星标周报",
+  "summary": "Agent技能生态从\"单点突破\"进化为\"多域市场\"——信息研究、产品管理、安全审计等垂直技能包集体爆发，Agent互联网触达能力成为新基建，NVIDIA入场标志技能安全治理正式升温。",
+  "count": "10 个项目",
+  "theme": "技能市场 · 安全治理 · 互联网触达",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "last30days-skill",
+      "category": "Agent",
+      "stars": "41.9k",
+      "growth": "+12.6k",
+      "why": "跨Reddit/X/YouTube/HN全网研究+综合摘要，Agent信息研究标配",
+      "url": "https://github.com/mvanhorn/last30days-skill"
+    },
+    {
+      "rank": "02",
+      "name": "headroom",
+      "category": "DevTools",
+      "stars": "27.4k",
+      "growth": "+10.4k",
+      "why": "LLM上下文压缩60-95%，MCP/代理/库三模式降本增效",
+      "url": "https://github.com/chopratejas/headroom"
+    },
+    {
+      "rank": "03",
+      "name": "agent-skills",
+      "category": "Agent",
+      "stars": "59.4k",
+      "growth": "+9.3k",
+      "why": "Addy Osmani出品，生产级AI编码Agent工程技能库，59k星",
+      "url": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "rank": "04",
+      "name": "taste-skill",
+      "category": "Agent",
+      "stars": "43.6k",
+      "growth": "+8.1k",
+      "why": "赋予AI设计品味，根治Agent生成千篇一律UI的顽疾",
+      "url": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "rank": "05",
+      "name": "markitdown",
+      "category": "DevTools",
+      "stars": "153.3k",
+      "growth": "+6.6k",
+      "why": "微软文件转Markdown神器，PDF/Office全支持，153k星",
+      "url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "rank": "06",
+      "name": "pm-skills",
+      "category": "Agent",
+      "stars": "18.0k",
+      "growth": "+5.4k",
+      "why": "PM技能市场100+skills，从发现到增长全链路产品管理",
+      "url": "https://github.com/phuryn/pm-skills"
+    },
+    {
+      "rank": "07",
+      "name": "Agent-Reach",
+      "category": "Agent",
+      "stars": "28.6k",
+      "growth": "+5.2k",
+      "why": "Agent互联网之眼，读搜Twitter/Reddit/B站小红书，零API费",
+      "url": "https://github.com/Panniantong/Agent-Reach"
+    },
+    {
+      "rank": "08",
+      "name": "supervision",
+      "category": "Multimodal",
+      "stars": "44.2k",
+      "growth": "+4.0k",
+      "why": "计算机视觉可复用工具箱，检测/追踪/标注一条龙",
+      "url": "https://github.com/roboflow/supervision"
+    },
+    {
+      "rank": "09",
+      "name": "open-notebook",
+      "category": "DevTools",
+      "stars": "30.5k",
+      "growth": "+3.6k",
+      "why": "开源NotebookLM替代，更灵活+支持自部署，30k星",
+      "url": "https://github.com/lfnovo/open-notebook"
+    },
+    {
+      "rank": "10",
+      "name": "SkillSpector",
+      "category": "Agent",
+      "stars": "5.2k",
+      "growth": "+2.8k",
+      "why": "NVIDIA出品AI技能安全扫描器，检测漏洞与恶意模式",
+      "url": "https://github.com/NVIDIA/SkillSpector"
+    }
+  ]
+}
