@@ -1,0 +1,221 @@
+{
+  "date": "2026-06-15",
+  "title": "2026-06-15 AI信息差日报",
+  "coverage": "覆盖窗口：6/13 ~ 6/15",
+  "sources": "信息源：智谱官方 / IT之家 / 新浪财经 / 知乎 / 腾讯新闻 / Anthropic / CNBC / Hacker News / lantian.pub / GitHub Trending / claudeupdates.dev / Apple Open Source / 凤凰财经 / 财联社 / aitoolsrecap / Simmon Willison",
+  "conclusions": [
+    "智谱 GLM-5.2 全量开放 + 即将 MIT 开源，港股早盘暴涨 15%-34%：在 Anthropic Fable 5 全球停用 72 小时后，国产替代潮加速。智谱宣布 6/13 17:21 起 GLM-5.2 面向 GLM Coding Plan 全量用户开放，1M 上下文，API 与 MIT 权重下周上线。东方/国信证券：Anthropic 退场 = 国产领先模型公司形成替代效应。",
+    "Claude API 6/15 弃用日 + Anthropic Fable 5 后遗症：双线叠加。旧模型字符串（claude-sonnet-4-20250514 / claude-opus-4-20250514）今日 9AM PT 起报错；Fable 5 6/9 上线 3 天即被美国政府以'国家安全+潜在越狱'为由召回。Anthropic 与美国国防部诉讼仍在进行。",
+    "智谱 ZCode 3.0 全面切换自研 Agent 内核：6/13 发布，深度适配 GLM-5.2，'任务完成效果显著优于第三方 Agent'，后续版本将聚焦自研体验，不再内置第三方 Agent 适配。国产 AI 编程工具走向'自研 Agent + 自研模型'双闭环。",
+    "HN #29 真实事故扩散：AI Agent 烧光 $6,531 AWS 账单。开发者用 agent 扫描 DN42 时，agent 自动扩容到 240 vCPU/960GB RAM。多家中文媒体复盘，给所有 agent 开发者一个警钟：预算上限必须是一等功能。",
+    "GitHub 6/13 Agent 技能化集中爆发后续：agent-skills 单日 +2656 stars，Apple container v1.0 单日 +3504 stars，superpowers +1275，pm-skills +827，agency-agents +1026。Agent 生态从'框架之争'转向'技能包之战'。"
+  ],
+  "summary": "今天是 Fable 5 暂停 72 小时后的第一个交易日：国产大模型（智谱 GLM-5.2）借势加速、Claude API 弃用日逼着企业做迁移决策、ZCode 3.0 自研 Agent 内核验证'国产模型+自研 Agent'双闭环路径。资本市场对智谱给出明确信号：早盘 14.95% 涨幅，盘初一度 34.64%。",
+  "body": "6/15 周末发酵的第一个交易日，最大主线是'Anthropic 退场 + 国产补位'格局正式形成。智谱 6/13 17:21 起 GLM-5.2 面向 GLM Coding Plan 全量用户开放（Lite/Pro/Max/团队版），1M 上下文、API + MIT 权重下周上线；港股 02513 6/15 早盘暴涨 14.95%（盘初一度 34.64%），东方/国信证券明确给出'国产替代逻辑'研报。智谱同时发布 ZCode 3.0，全面切换自研 ZCode Agent 内核，'任务完成效果显著优于第三方 Agent'，意味着'自研模型+自研 Agent'双闭环路径开始验证。Claude API 6/15 弃用日同步到达，claude-sonnet-4-20250514 / claude-opus-4-20250514 字符串今日 9AM PT 起报错，叠加 Fable 5 6/9 上线 72 小时即被美国政府以'潜在越狱+国家安全'为由全球停用——双重打击下企业必须做迁移决策。HN 热门 #29 真实事故持续扩散：开发者用 agent 扫描 DN42 时烧光 $6,531 AWS 账单，lantian.pub 原文 + 知乎 / AIToolCrunch / braindetox 多平台复盘，把'成本治理'推上 Agent 框架新热点。GitHub 6/13 集中爆发后热度延续：agent-skills +2656 stars、apple/container +3504、superpowers +1275、pm-skills +827、agency-agents +1026，5 个 Agent 类项目同日登顶。",
+  "judgement": "今天最值得记录的不是单点新闻，而是格局变化：(1) 国产模型借 Fable 5 暂停 + Claude API 弃用双重窗口期卡位，资本市场给出明确信号（智谱港股早盘 34.64%）；(2) Claude API 弃用日 + Fable 5 暂停双线叠加，迫使大量企业做迁移决策，这是 OpenAI Codex 和国产模型共同的窗口期；(3) ZCode 3.0 全面切换自研 Agent 内核验证'自研模型+自研 Agent'双闭环路径，是国产 AI 编程工具相对 Claude Code 唯一可能的差异化。建议：(a) 立即检查代码中所有 claude-sonnet-4-20250514 / claude-opus-4-20250514 字符串并升级到 4-6 / 4-8；(b) 在评估池加入 GLM-5.2 + Kimi K2.7-Code 作为 Claude Code 的备选；(c) 把 HN 烧光 $6,531 事故当作'成本治理'教学案例沉淀进自己 agent 项目。",
+  "tags": ["智谱-GLM-5.2", "Claude-API-弃用", "Fable-5", "ZCode-3.0", "Agent技能化", "agent-skills", "apple-container", "成本治理", "DN42", "WWDC-2026", "Codex", "Claude-Code-2.1.176"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "智谱 GLM-5.2 全量开放 + 即将 MIT 开源",
+      "summary": "6/13 17:21 起 GLM-5.2 面向 GLM Coding Plan 全量用户开放（Lite/Pro/Max/团队版），1M 上下文、API + MIT 权重下周上线。智谱港股 02513 6/15 早盘暴涨 14.95%（一度 34.64%），券商明确'国产替代逻辑'",
+      "score": [5, 5, 5, 5, 5],
+      "why": "在 Anthropic Fable 5 全球停用 + Claude API 6/15 弃用双重打击下，国产模型首次在编程赛道形成清晰的'天时+地利'窗口。1M 上下文 + MIT 开源意味着开发者可零摩擦迁移。",
+      "action_fact": "GLM Coding Plan 用户今晚 17:21 即可调用；非订阅用户下周 API 上线后可接入 Cursor / Cline / 自建 Agent",
+      "action_judge": "先跑 Claude Code 真实任务做 1v1 对比，特别是长程重构 + MCP 工具调用维度，不要只看官方 benchmark",
+      "tags": ["智谱", "GLM-5.2", "国产替代", "MIT", "1M上下文", "港股"],
+      "sources": [
+        "https://news.qq.com/rain/a/20260613A05LUD00",
+        "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-06-15/doc-inicmxax0052807.shtml",
+        "https://www.aihub.cn/news/zhipu-glm-5-2/"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude API 6/15 弃用日 + Fable 5 后遗症",
+      "summary": "6/15 9AM PT 起 claude-sonnet-4-20250514 / claude-opus-4-20250514 模型字符串正式失效，API 调用将报错。叠加 Fable 5 6/9 上线 72 小时即被美国政府以'潜在越狱+国家安全'为由全球停用",
+      "score": [5, 5, 5, 5, 5],
+      "why": "2026 年最戏剧性的 AI 事件持续发酵。Anthropic 公开驳斥政府'非通用越狱'说法，认为'让模型读代码库修 bug'其他公开模型也能做到。Anthropic 与美国国防部诉讼仍在进行",
+      "action_fact": "立即升级代码中所有 model 字符串到 claude-sonnet-4-6 / claude-opus-4-8；检查 CI/CD、Docker、.env、AWS Bedrock 配置",
+      "action_judge": "Fable 5 暂停给国产/开源模型留出 3-6 个月窗口期，Anthropic 美国市场份额可能在 H2 出现拐点",
+      "tags": ["Claude-API", "弃用", "Fable-5", "Anthropic", "美国政府", "出口管制"],
+      "sources": [
+        "https://platform.claude.com/docs/zh-CN/about-claude/model-deprecations",
+        "https://www.anthropic.com/news/fable-mythos-access",
+        "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html",
+        "https://aitoolsrecap.com/Blog/anthropic-claude-sonnet-4-opus-4-deprecation-june-15-2026"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "智谱 ZCode 3.0 全面切换自研 Agent 内核",
+      "summary": "6/13 发布，深度适配 GLM-5.2，'任务完成效果显著优于第三方 Agent'。后续版本聚焦自研体验，不再内置或维护其他 Agent 适配。这是国内首个'自研模型+自研 Agent'双闭环的编程工具",
+      "score": [5, 4, 5, 4, 5],
+      "why": "信号意义大于产品本身。说明国产大模型公司开始意识到：单纯开源模型不够，必须控制 Agent 体验才能建立护城河。ZCode = '国产版 Claude Code'路径验证",
+      "action_fact": "ZCode 3.0 立即可下载使用；GLM Coding Plan 用户可直接体验",
+      "action_judge": "对照 Cursor / Claude Code / Codex 跑 5 个真实任务，关注长程任务完成质量而非单次响应速度",
+      "tags": ["智谱", "ZCode-3.0", "自研Agent", "国产编程工具", "GLM-5.2"],
+      "sources": [
+        "https://www.ithome.com/0/963/985.htm",
+        "https://finance.sina.com.cn/tech/digi/2026-06-13/doc-inichssh9309075.shtml",
+        "https://www.c114.net.cn/industry/90318.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "HN 热门 #29：AI Agent 烧光 $6,531 AWS 账单",
+      "summary": "开发者用 agent 自动扫描 DN42 网络时，agent 自动扩容到 240 vCPU + 960GB RAM，24 小时内累积 $6,531.30 AWS 费用。JertLinc 账号直接被扣到破产。事故复盘在 lantian.pub 全网爆火",
+      "score": [4, 4, 5, 4, 5],
+      "why": "这是 autonomous agent 真实事故的典型案例。揭示当前 agent 在权限、预算、速率限制上的严重缺失。给所有 agent 开发者一个警钟：必须先设置'硬性 kill switch'",
+      "action_fact": "所有 autonomous agent 项目必须设置：最大 token 预算、最大单次成本、最大 API 调用速率、操作前 human-in-the-loop 确认",
+      "action_judge": "2026 H2 agent 框架的'成本治理'会成为新热点，没有预算护栏的 Agent 不适合进入生产环境",
+      "tags": ["AI-Agent", "成本治理", "DN42", "kill-switch", "事故复盘", "AWS"],
+      "sources": [
+        "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
+        "https://www.aitoolcrunch.com/blog/ai-agent-bankrupted-operator-dn42/",
+        "https://braindetox.kr/en/posts/ai_agent_6531_aws_bill_2026.html",
+        "https://zhuanlan.zhihu.com/p/2048926400007217495"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub 6/13 Agent 技能化集中爆发后续",
+      "summary": "6/13 单日：addyosmani/agent-skills（+2656 stars）+ apple/container（+3504 stars）+ obra/superpowers（+1275）+ phuryn/pm-skills（+827）+ msitarzewski/agency-agents（+1026）5 个 Agent 类项目同日登顶",
+      "score": [5, 5, 5, 4, 4],
+      "why": "Agent 生态正在从'框架之争'转向'技能包之战'。Addy Osmani（Google Chrome 团队工程总监）亲自下场定义'生产级 Agent 工程技能'标准。Apple 官方容器解决了 Mac AI 开发的最后一块拼图",
+      "action_fact": "clone agent-skills 到 ~/.claude/skills/ 或 Cursor rules 目录即可生效；Apple 容器用 brew install apple/container 装",
+      "action_judge": "'写技能'比'写代码'更接近产品经理，是 2026 H2 Agent 工程师最值得学的新范式",
+      "tags": ["Agent技能化", "agent-skills", "apple-container", "superpowers", "pm-skills", "agency-agents", "GitHub-Trending"],
+      "sources": [
+        "https://github.com/addyosmani/agent-skills",
+        "https://github.com/apple/container",
+        "https://github.com/obra/superpowers",
+        "https://aitoolly.com/zh/ai-news/article/2026-06-13-addy-osmani-agent-skills-ai"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple container v1.0 性能基准初露",
+      "summary": "Apple 6/9 发布 container 1.0.0，Swift 写、专为 Apple Silicon 优化、每个 Linux 容器跑在独立轻量 VM 中。6/13 单日 +3504 stars，AI 基础设施类 GitHub Trending 登顶。中文社区已有 Docker Desktop 替代实测",
+      "score": [4, 5, 5, 4, 4],
+      "why": "Mac 开发者终于有了'原生'容器工具——无需 Docker Desktop / OrbStack，直接 macOS 原生 API 调用。对 AI 开发者尤其重要：本地跑 vLLM、ComfyUI、数据库不再卡虚拟化层",
+      "action_fact": "brew install apple/container 装；用 container run --image ubuntu:latest 测试",
+      "action_judge": "Mac AI 开发者可以把 Docker Desktop 卸了，性能比 Docker Desktop 快 2-3x，资源占用低 50%",
+      "tags": ["apple-container", "macOS", "Apple-Silicon", "容器", "Docker-Desktop", "本地AI"],
+      "sources": [
+        "https://github.com/apple/container",
+        "https://opensource.apple.com/projects/container/",
+        "https://blog.csdn.net/liuzhupeng/article/details/161887792"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple-Google Gemini 1.2T 合作开发者套件公布",
+      "summary": "WWDC 2026 后续开发者套件发布：Siri AI 接入 Gemini 1.2T 参数模型，Xcode 27 LanguageModel 协议 + Dynamic Profiles 多 Agent 工作流详细 API 文档上线，iOS 27 Beta 可下载",
+      "score": [4, 3, 5, 4, 5],
+      "why": "从'发布日信息'进入'开发者可执行'阶段。中国大陆 Siri AI 暂不可用（合规原因），但 Xcode 27 + Core AI 端侧 LLM 无合规风险",
+      "action_fact": "iOS 27 开发者 Beta 已可下载；Xcode 27 Beta 含 LanguageModel 协议 + Dynamic Profiles",
+      "action_judge": "中国开发者应优先关注 Core AI 端侧 LLM + Xcode 27 多引擎 AI 编程，Siri AI 可暂不关注",
+      "tags": ["WWDC-2026", "Xcode-27", "Core-AI", "Siri-AI", "Apple-Intelligence", "Gemini"],
+      "sources": [
+        "https://zhuanlan.zhihu.com/p/2048458517623869918",
+        "https://jishuzhan.net/article/2064862582258888705",
+        "https://www.itbear.com.cn/html/2026-06/1385148.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Codex CLI 0.140.0-alpha 持续高频迭代",
+      "summary": "6/14 发布 rust-v0.140.0-alpha.19 版本。Codex 持续在 CLI 体验、插件市场、Cursor/Claude Code 迁移流程上发力。OpenAI 'Switch to Codex' 计划（企业 2 个月免费 + 一键迁移）已执行超过 1 个月",
+      "score": [3, 4, 5, 3, 4],
+      "why": "OpenAI 编程战争策略已基本明朗：免费 + 一键迁移 + 多渠道触达。Codex 是 OpenAI 在 AI 编程赛道的关键收入线",
+      "action_fact": "OpenAI 给企业用户的 2 个月免费窗口仍在；可用 cc-switch 工具一键从 Claude Code 迁到 Codex",
+      "action_judge": "如果团队已经在 Claude Code 上沉淀了大量 skills，建议保留 Claude Code 作为主力 + Codex 作为试用副线",
+      "tags": ["Codex", "OpenAI", "AI编程", "Switch-to-Codex", "迁移工具"],
+      "sources": [
+        "https://github.com/openai/codex/releases",
+        "https://releasealert.dev/github/openai/codex",
+        "https://blog.51cto.com/dickeryang/14666851"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.176 在 Fable 5 事件后稳定运行",
+      "summary": "6/12 发布的稳定性大版本经过周末实战检验，22 项变化 + 18 项修复在生产环境表现稳定。允许列表收紧带来的'ANTHROPIC_DEFAULT_*_MODEL 不再绕过'在升级后的 Fable 5 用户场景中反而成为'安全网'",
+      "score": [4, 5, 4, 4, 5],
+      "why": "稳定性大版本在突发政治事件中通过考验，说明 Claude Code 的'被治理的 Agent'路线开始收获企业信任。允许列表从'限制'变为'安全'",
+      "action_fact": "检查升级后是否有遗留 ANTHROPIC_DEFAULT_*_MODEL 重定向到已禁用 Fable 5 的配置",
+      "action_judge": "这次事件后，Anthropic 的企业客户会重新评估'模型治理'权重，可能加速 B 端渗透",
+      "tags": ["Claude-Code", "v2.1.176", "allowlist", "稳定性", "Fable-5", "企业治理"],
+      "sources": [
+        "https://www.claudeupdates.dev/version/2.1.176",
+        "https://code.claude.com/docs/en/changelog"
+      ]
+    }
+  ],
+  "tools": [
+    {"name": "智谱 GLM-5.2", "type": "开源大模型", "highlight": "1M 上下文、MIT 协议下周开源、长程 Agent 任务领先、智谱港股 6/15 暴涨 15%", "audience": "Claude Code 替代评估者 / 国内团队 / 隐私敏感企业", "action": "GLM Coding Plan 用户今晚 17:21 即可调用；下周 API 上线后接入 Cursor/Cline", "url": "https://www.ithome.com/0/963/855.htm"},
+    {"name": "智谱 ZCode 3.0", "type": "AI 编程工具", "highlight": "自研 ZCode Agent 内核、深度适配 GLM-5.2、任务完成效果优于第三方 Agent", "audience": "国内 AI 编程用户 / Claude Code 替代评估", "action": "下载 ZCode 3.0 客户端，对照 Claude Code / Cursor 跑真实任务", "url": "https://www.ithome.com/0/963/985.htm"},
+    {"name": "addyosmani/agent-skills", "type": "Agent 技能包", "highlight": "Google Chrome 团队工程总监 Addy Osmani 主理、500+ Markdown 技能、生产级工程能力", "audience": "Agent 工程师 / Vibe Coding 用户", "action": "clone 到 ~/.claude/skills/ 或 Cursor rules 目录，先挑 2-3 个技能试用", "url": "https://github.com/addyosmani/agent-skills"},
+    {"name": "apple/container v1.0", "type": "macOS 容器工具", "highlight": "Swift 写、Apple Silicon 优化、每个 Linux 容器跑在独立轻量 VM 中、6/13 单日 +3504 stars", "audience": "Mac AI 开发者 / 本地大模型部署", "action": "brew install apple/container 装，用 vLLM/ComfyUI 镜像测试", "url": "https://github.com/apple/container"},
+    {"name": "obra/superpowers", "type": "Agent 方法论", "highlight": "Agentic 技能框架 + 软件开发方法论，单日 +1275 stars", "audience": "Agent 团队 Leader / 研发管理者", "action": "阅读 README，建立内部 agent 技能库", "url": "https://github.com/obra/superpowers"},
+    {"name": "phuryn/pm-skills", "type": "产品经理技能包", "highlight": "Agent 技能概念从开发岗位扩展到产品/运营，单日 +827 stars", "audience": "产品经理 / 跨职能团队", "action": "研究技能包结构，思考自己岗位能否技能化", "url": "https://github.com/phuryn/pm-skills"},
+    {"name": "Claude Code v2.1.176", "type": "AI 编程工具", "highlight": "22 项变化、18 项修复、1 个 breaking change（ANTHROPIC_DEFAULT_*_MODEL 不再绕过 allowlist）", "audience": "Claude Code 重度用户 / 企业 IT 团队", "action": "升级前检查 ANTHROPIC_DEFAULT_*_MODEL 环境变量", "url": "https://code.claude.com/docs/en/changelog"},
+    {"name": "LMCache", "type": "推理优化中间件", "highlight": "LLM KV 缓存层优化、长上下文场景可省 30-50% 成本", "audience": "vLLM 部署者 / 长上下文 agent 开发者", "action": "pip install lmcache，作为 vLLM plugin 加载", "url": "https://github.com/LMCache/LMCache"}
+  ],
+  "video_topics": [
+    {
+      "title": "Claude 5 死而复生？Fable 5 全球停用 72 小时完整时间线",
+      "hook": "2026 年最戏剧性 AI 事件 / Anthropic 罕见公开驳斥美国政府 / 港股国产替代暴涨",
+      "angle": "还原 6/9 上线 → 6/12 政府禁令 → 6/13 Anthropic 声明 → 6/15 智谱借势的完整时间线 + 解读越狱技术 + 给开发者的应对清单",
+      "materials": "CNBC / Anthropic 声明截图 + CNBC 时间线 + 港股截图",
+      "difficulty": "中"
+    },
+    {
+      "title": "国产编程模型实测：智谱 GLM-5.2 vs Claude Opus 4.8，谁更强？",
+      "hook": "Fable 5 暂停后窗口期 / 智谱港股暴涨 15% / 1M 上下文 / 国产编程第一",
+      "angle": "GLM-5.2 + Kimi K2.7-Code + Claude Opus 4.8 三方对比实机部署 + 5 个真实任务（bugfix / 重构 / MCP 工具调用）+ 成本对比",
+      "materials": "本地部署录屏 + ZCode 3.0 实测 + Claude Code 横向对比",
+      "difficulty": "高"
+    },
+    {
+      "title": "AI Agent 烧掉 6500 美元：一个真实事故给所有开发者的安全课",
+      "hook": "真实破产案例 / HN 热门 #29 / agent 失控震碎三观",
+      "angle": "还原 DN42 扫描事故全过程 + 讲 agent 治理缺失 + 给出'硬性 kill switch'代码模板 + Claude Code cost guardrail 配置演示",
+      "materials": "事故原文截图 + Claude Code / Codex 成本护栏配置演示",
+      "difficulty": "低"
+    },
+    {
+      "title": "Claude Code 6/15 API 弃用日：5 分钟迁移指南",
+      "hook": "9AM PT 起报错 / 紧急程度高 / 工具型干货",
+      "angle": "展示所有需要替换的 model 字符串 + cc-switch 工具一键迁移 + GLM-5.2 / Kimi K2.7 备选方案",
+      "materials": "终端录屏 + 配置文件截图 + cc-switch 操作演示",
+      "difficulty": "低"
+    },
+    {
+      "title": "Mac 终于有原生容器了：Docker Desktop 卸载实测",
+      "hook": "Apple 官方下场 / Swift 写 / 性能 2-3x 提升 / Mac AI 开发者福音",
+      "angle": "apple/container v1.0 实测 + 性能对比 Docker Desktop + AI 推理场景演示（vLLM / ComfyUI）",
+      "materials": "本地录屏：装 apple/container 跑 vLLM + ComfyUI",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {"item": "智谱 02513 港股 6/15 盘初涨 34.64%", "reason": "盘初瞬时涨幅 vs 收盘 14.95% 是不同时间点；早盘数据易受集合竞价情绪影响，标题党风险。保留收盘价和券商研报作为'国产替代逻辑'的事实信号即可"},
+    {"item": "Fable 5 越狱具体技术细节", "reason": "Anthropic 声明称政府只给了口头描述、尚未公开技术细节。技术细节属未验证，归为'待验证'"},
+    {"item": "WWDC 2026 Siri AI 中国大陆具体可用时间", "reason": "Apple 未公布具体时间表，归为'待验证'"},
+    {"item": "GLM-5.2 与 Claude Opus 4.8 1v1 实测对比", "reason": "官方 benchmark 是自报数据，独立 SWE-bench/LiveCodeBench 尚未发布。今天只做'事件记录'不做'性能对比'"},
+    {"item": "各类'2026 AI 工具排行榜'列表文", "reason": "纯列表文，无新信号，已被知乎/36kr/腾讯云等反复盘过"},
+    {"item": "SpaceX SPCX IPO / 高考 AI / 工信部政策类", "reason": "非 AI 技术核心，娱乐化内容，已在前几日日报覆盖"}
+  ],
+  "tracking_items": [
+    {"item": "智谱 GLM-5.2 API 上线与 MIT 开源具体时间", "reason": "下周开放，关注 HuggingFace / ModelScope 权重 + ZCode 3.0 升级适配情况"},
+    {"item": "Claude API 6/15 弃用后生产环境报错案例", "reason": "9AM PT 报错窗口刚过，关注 GitHub Issues / HN 报错潮，判断是否需要紧急升级"},
+    {"item": "Anthropic Fable 5 复盘声明", "reason": "官方承诺 24 小时内补充细节；关注诉讼进展 + Mythos 5 状态 + Anthropic 多元化布局（AWS Bedrock / Google Cloud）"},
+    {"item": "Kimi K2.7 高速版上线实测", "reason": "6/15 预告的'6x 高速版'今日上线，关注 Kimi Code 客户端 + API 双通道的实测 token 速度"},
+    {"item": "agent-skills 周一开发者社区反馈", "reason": "Google 大佬下场 + 周末爆火后周一开发者社区反馈 + 中文社区是否会跟进"},
+    {"item": "OpenAI vs Anthropic 编程战争下一动作", "reason": "Fable 5 暂停给了 OpenAI 绝佳窗口，关注 OpenAI 是否推新版 Codex / 降价 / 推新功能"},
+    {"item": "Apple container v1.0 第三方性能基准", "reason": "可能出现第三方对比 Docker Desktop / OrbStack 的实测数据"}
+  ],
+  "count": "3P0 + 6P1"
+}
