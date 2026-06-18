@@ -1,0 +1,294 @@
+{
+  "date": "2026-06-18",
+  "title": "2026-06-18 AI信息差日报",
+  "coverage": "覆盖窗口：6/16 ~ 6/18",
+  "sources": "信息源：Z.ai / HuggingFace / GitHub / Claudeupdates.dev / CNBC / 新浪 / Startup Fortune / Mobile World Live / Vercel / Product Hunt / Firecrawl / 百家号 / SegmentFault / AIHub / 腾讯新闻",
+  "conclusions": [
+    "GLM-5.2 正式 MIT 开源是今天最大的信号：744B 参数 MoE 架构、1M token 上下文、FrontierSWE 74.4% 仅落后 Opus 4.8 一个百分点，开源编程模型第一次真实进入顶级闭源模型竞争区间。",
+    "Claude Code 三天三更（v2.1.178→179→181）引入 Tool(param:value) 权限规则和 /config 语法，关键修复了网络驱动器 0 字节文件和 15 秒启动阻塞——如果你在用 Claude Code 做 agentic coding，今天应该升级。",
+    "G7 峰会首次给 AI 公司 CEO 正式席位，Anthropic 仍因 Fable 5/Mythos 5 出口管制与美方僵持，'自愿承诺'可能成为全球 AI 治理的事实基线。",
+    "法国用 Mistral 给全部公职人员配 AI 助手 + 用 ChapsVision 替换 Palantir 情报系统，€6.55 亿投资标志着欧洲主权 AI 从口号进入执行阶段。",
+    "Vercel Drop 把前端部署简化到'拖拽即上线'，Firecrawl Prometheus 把网页数据提取做成 Agent——开发者工具继续在'消除摩擦'方向迭代。"
+  ],
+  "summary": "6/18 的核心信息差是'开源编程模型摸到天花板 + AI 编程工具权限治理升级 + 欧洲主权 AI 落地'。GLM-5.2 MIT 开源让所有按 token 付费的团队有了议价筹码，Claude Code 三连更把权限管理推到参数级，G7 和法国的行动说明 AI 已经从技术议题变成地缘政治议题。",
+  "body": "今天最大的信号是 GLM-5.2 正式 MIT 开源。智谱在 6/17 把 744B 总参/约 40B 激活的 MoE 模型权重发布到 HuggingFace 和 ModelScope，支持 1M token 上下文和 128K 最大输出。在 FrontierSWE 基准上得分 74.4%，仅落后 Opus 4.8 一个百分点（75.1%），同时超越 GPT-5.5（72.6%）。SWE-bench Pro 62.1 分开源第一。关键架构创新是 IndexShare：每 4 个稀疏注意力层共享一个轻量级索引器，把 1M 上下文下每个 token 的 FLOPs 降到约 1/3。RL 训练中发现的'链式作弊'行为和 anti-hack 模块（规则过滤 + LLM 裁判）也值得学习。Z.ai 提供了 /api/anthropic 兼容 endpoint，让 Claude Code 只换一段环境变量就能切换到 GLM-5.2。第二条主线是 Claude Code 三天三更：v2.1.178（6/16）引入 Tool(param:value) 权限规则——可以在参数级别控制 Agent 能调用什么模型子代理、能操作什么文件；v2.1.179（6/17）修复流式断连和 WSL2 滚动回归；v2.1.181（6/18）39 项变更，新增 /config 语法、Bun 1.4、API 自动重试，修复了网络驱动器 0 字节文件和 15 秒启动阻塞两个严重 Bug。第三条线是地缘政治：G7 峰会首次给 AI 公司 CEO 正式席位，Anthropic Fable 5/Mythos 5 出口管制僵局仍在，法国用 Mistral + ChapsVision 替换 Palantir 给欧洲主权 AI 树立标杆。工具层面，Vercel Drop 把部署简化到拖拽，Firecrawl Prometheus 把网页数据提取做成 Agent，AIEC 2026 北京大会讨论 Agent 从试点走向规模化的三场硬仗。",
+  "judgement": "个人判断：今天最该做的一件事是把 GLM-5.2 接入 Claude Code 跑一次真实 repo 的 agentic coding 任务，用你自己的 eval 而不是 benchmark 做决策。Z.ai 的 /api/anthropic endpoint 让切换成本降到一段环境变量。但不要急着自托管——744B MoE 的 2-bit 量化也要 256GB 内存，大多数团队用托管 Coding Plan 更划算。另外，Claude Code v2.1.181 的 Tool(param:value) 权限规则是一个信号：AI 编程工具的竞争维度正在从'谁写代码快'变成'谁管得住 Agent'，你团队的选型标准应该跟着变。",
+  "tags": [
+    "GLM-5.2",
+    "MIT开源",
+    "智谱",
+    "1M上下文",
+    "Coding",
+    "Claude-Code",
+    "Tool权限规则",
+    "G7",
+    "Anthropic",
+    "出口管制",
+    "法国主权AI",
+    "Mistral",
+    "Vercel-Drop",
+    "Firecrawl",
+    "Agent工程化"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "GLM-5.2 正式 MIT 开源：744B MoE、1M 上下文、编程能力逼近 Opus 4.8",
+      "summary": "智谱 6/17 正式开源 GLM-5.2：744B 总参/约 40B 激活（MoE）、1M token 上下文、128K 最大输出，MIT License 发布到 HuggingFace 和 ModelScope。FrontierSWE 74.4%（仅落后 Opus 4.8 1%），SWE-bench Pro 62.1 开源第一，超越 GPT-5.5（58.6）。",
+      "score": [5, 5, 5, 5, 5],
+      "why": "开源编程模型第一次在长程 coding 任务上真实进入顶级闭源模型竞争区间。'MIT 权重 + 前沿 coding 能力 + 可自托管'这个组合给所有按 token 付费的团队提供了议价筹码。IndexShare 架构把 1M 上下文计算量降到 1/3，解决了长上下文成本爆炸问题。RL 训练中的 anti-hack 模块（规则过滤 + LLM 裁判）也值得学习。",
+      "action_fact": "注册 Z.ai Coding Plan，生成 API key，配置 Claude Code 的 ANTHROPIC_BASE_URL 指向 https://api.z.ai/api/anthropic 即可切换。Lite 约 $10/月、Pro 约 $30/月。也可从 HuggingFace 下载 MIT 权重用 vLLM/SGLang 自托管。",
+      "action_judge": "先用托管版跑你自己 repo 的 eval，再决定要不要自托管。切换成本只有一段环境变量，但 1M 上下文首 token 延迟 30-90 秒，需设 API_TIMEOUT_MS=3000000。",
+      "tags": ["GLM-5.2", "智谱", "MIT开源", "1M上下文", "Coding", "MoE"],
+      "sources": [
+        "https://z.ai/blog/glm-5.2",
+        "https://huggingface.co/zai-org/GLM-5.2",
+        "https://github.com/zai-org/GLM-5",
+        "https://www.aihub.cn/news/glm-5-2-open-source/",
+        "https://news.qq.com/rain/a/20260617A01JXQ00",
+        "https://segmentfault.com/a/1190000047869891"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.178→179→181 三天三更：Tool 权限规则 + /config 语法 + 关键修复",
+      "summary": "v2.1.178（6/16）新增 Tool(param:value) 权限规则语法和嵌套 .claude/ 目录；v2.1.179（6/17）修复流式断连和 WSL2 滚动；v2.1.181（6/18，今日）39 项变更，新增 /config 语法、Bun 1.4、API 自动重试，修复网络驱动器 0 字节文件和 15 秒启动阻塞。",
+      "score": [4, 5, 5, 3, 5],
+      "why": "Tool(param:value) 权限规则是 AI 编程工具从'能写代码'到'管得住 Agent'的关键一步——你可以在参数级别控制 Agent 能调用什么模型的子代理、能操作什么文件。0 字节文件和启动阻塞是影响 Windows/网络驱动器用户的严重 Bug，今天必须升级。",
+      "action_fact": "运行 claude update 升级到 v2.1.181。检查你的 .claude/settings.json 是否需要加 Tool 权限规则。如果用网络驱动器或 iCloud/Dropbox 同步代码，立即升级修复 0 字节文件问题。",
+      "action_judge": "把 AI 编程选型标准从'谁代码写得好'改成'谁的权限和审计粒度最细'。Claude Code 的 Tool(param:value) 是目前参数级权限最细的实现。",
+      "tags": ["Claude-Code", "权限规则", "Tool-permission", "config", "Bug修复"],
+      "sources": [
+        "https://www.claudeupdates.dev/",
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+        "https://www.gradually.ai/en/changelogs/claude-code/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "G7 峰会首次给 AI 公司 CEO 正式席位，'自愿承诺'或成全球基线",
+      "summary": "6/17 G7 峰会（法国 Évian）邀请 OpenAI Sam Altman、Anthropic Dario Amodei、Google DeepMind Demis Hassabis 等 AI 领袖正式参会。讨论前沿 AI 风险、基础设施和主权。预计达成'自愿承诺'包（青年安全、网络和生物前沿风险）。",
+      "score": [4, 2, 5, 4, 5],
+      "why": "科技企业 CEO 获得峰会正式席位标志着'权力所在'的转变。Anthropic 仍因 Fable 5/Mythos 5 出口管制与美方僵持，美国'愿意切断 G7 盟友的 AI 能力'改变了所有人的假设。自愿承诺可能在约束性规则之前成为事实上的全球基线。",
+      "action_fact": "关注 G7 会后公报中的 AI 自愿承诺具体条款，评估是否影响你的合规要求。Anthropic 出口管制影响仍在，如果你的团队有外籍成员使用 Fable 5/Mythos 5，需确认合规状态。",
+      "action_judge": "前沿实验室想在任何约束性规则之前塑造讨论。'自愿承诺'看起来软，但可能成为未来监管的事实起点。对开发者而言，这意味着安全审计和合规文档会越来越重要。",
+      "tags": ["G7", "AI治理", "Anthropic", "出口管制", "地缘政治"],
+      "sources": [
+        "https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html",
+        "https://k.sina.cn/article_7857201856_1d45362c001906yjim.html",
+        "https://finance.sina.com.cn/stock/usstock/c/2026-06-17/doc-inictaev6087882.shtml"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "法国主权 AI 落地：Mistral 给 570 万公职人员配 AI 助手 + ChapsVision 替换 Palantir",
+      "summary": "6/16 法国总理宣布：用 Mistral AI 给全部公职人员（约 570 万人）配备主权 AI 助手；DGSI（国内情报局）用 ChapsVision ArgonOS 替换 Palantir Gotham（约 €4000 万合同）；投资 €6.55 亿建设主权 AI 基础设施。",
+      "score": [4, 3, 5, 4, 5],
+      "why": "这是欧洲主权 AI 从口号到执行的分水岭。Mistral 年收入已达 $4 亿 run rate，目标年底 $10 亿——它不再只是'欧洲替代品'，而是国家级供应商。情报系统替换 Palantir 说明法国认为本地软件已经能处理最敏感的国家安全数据。",
+      "action_fact": "如果你做欧洲市场，需评估'主权 AI'合规要求对技术选型的影响。Mistral 的 API 和开源模型是 Claude/OpenAI 的欧洲替代选项。",
+      "action_judge": "主权 AI 不是反美情绪，而是对'美国可能随时切断能力'的风险对冲。Anthropic 出口管制事件验证了这个担忧的合理性。对开发者而言，多模型/多供应商策略的价值从'省钱'变成了'保命'。",
+      "tags": ["法国", "Mistral", "Palantir", "ChapsVision", "主权AI"],
+      "sources": [
+        "https://startupfortune.com/france-drops-palantir-for-a-local-rival-and-hands-every-civil-servant-a-mistral-ai-assistant/",
+        "https://www.mobileworldlive.com/ai-cloud/france-ends-palantir-ai-deal-in-sovereign-push/",
+        "https://myhostnews.com/france-invests-655-million-euros-in-a-sovereign-ai-for-its-civil-servants/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Vercel Drop：拖拽即部署，无需 Git/CLI",
+      "summary": "Vercel 推出 Drop：将文件、文件夹或 .zip 拖入浏览器即可部署上线，无需 Git、CLI 或本地配置。支持静态站点和框架项目（自动检测构建）。Product Hunt 422 票登顶。",
+      "score": [4, 5, 5, 3, 4],
+      "why": "把部署门槛降到'拖拽'级别，对快速原型验证、教学演示和静态站点发布极有价值。不是替代 CI/CD，而是消灭'从代码到 URL'之间最摩擦的一步。",
+      "action_fact": "访问 vercel.com/drop，拖入你的 dist/build 文件夹即可。适合演示 Demo、Landing Page 和原型验证。不适合需要环境变量或后端的复杂项目。",
+      "action_judge": "对 AI 应用前端演示特别有用——用 GLM-5.2/Claude Code 生成前端后直接拖拽上线，整个'想法到上线'闭环可以控制在 10 分钟内。",
+      "tags": ["Vercel", "部署", "零配置", "前端"],
+      "sources": [
+        "https://vercel.com/changelog/vercel-drop",
+        "https://vercel.com/docs/drop"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Firecrawl Prometheus：前置部署式网页数据 Agent",
+      "summary": "Firecrawl 在 Product Hunt 推出 Prometheus：一个'前置部署 Agent'（Forward Deployed Agent），能理解复杂网页结构并提取结构化数据，解决传统爬虫无法处理的动态内容问题。234 票。",
+      "score": [4, 4, 4, 3, 4],
+      "why": "网页数据提取是 AI 应用获取真实世界数据的瓶颈。Prometheus 把'理解网页 → 提取数据 → 返回结构化结果'做成 Agent 化的工作流，比传统爬虫更适合处理动态渲染、反爬和复杂布局。",
+      "action_fact": "访问 firecrawl.dev 注册（免费 500 credits），用 Prometheus 提取一个动态渲染网站的数据。也支持 MCP Server 集成到 Claude Code/Cursor。",
+      "action_judge": "如果你的 Agent 需要实时网页数据，Prometheus 比'curl + 解析 HTML'可靠得多。配合 Firecrawl MCP Server 可以直接在 Claude Code 里调用。",
+      "tags": ["Firecrawl", "Prometheus", "Agent", "网页数据", "数据提取"],
+      "sources": [
+        "https://github.com/duanyytop/agents-radar/issues/1629",
+        "https://www.mcpworld.com/en/detail/6bcbf873409f987dfc378aa57771fd22"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "美国收紧 AI 外籍人才监管：从 Anthropic 扩大到全行业隐忧",
+      "summary": "6/17 报道：美国商务部长 Lutnick 警告 Anthropic，若向'外籍人员'（包括公司自身外籍员工）开放最新大模型权限，须先申请出口许可。OpenAI 已对此表达深切忧虑。这意味着出口管制从'产品出口'延伸到'人才使用'。",
+      "score": [4, 2, 4, 4, 5],
+      "why": "如果管制从 Anthropic 扩展到全行业，所有依赖外籍 AI 人才的美国公司都将受影响。对非美国开发者/公司而言，依赖美国 AI 模型的风险进一步上升。",
+      "action_fact": "如果你在美国公司使用前沿 AI 模型且有外籍同事，关注出口管制是否扩展到你的团队。非美国团队应评估多供应商策略（如 GLM-5.2、Mistral、DeepSeek）。",
+      "action_judge": "这是'主权 AI'需求的另一面——不只是欧洲在推，美国自己也在收紧出口。对开发者来说，'模型不可替代'的假设需要重新评估。",
+      "tags": ["出口管制", "AI人才", "Anthropic", "监管"],
+      "sources": [
+        "http://finance.sina.com.cn/stock/usstock/c/2026-06-17/doc-inicthnv2785575.shtml",
+        "https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "AIEC 2026 北京 AI+生态大会：Agent 从试点走向规模化的三场硬仗",
+      "summary": "6/16 清华大学全球产业研究院主办的 AIEC 2026 在北京开幕。核心议题：Agent 要从试点走向规模化需打赢三场硬仗——技术（长任务可靠性）、治理（人+Agent 团队）、组织（超级个体）。",
+      "score": [3, 3, 4, 3, 5],
+      "why": "这是中国学术界和产业界对 Agent 规模化落地的系统化讨论。三场硬仗框架对评估团队 AI 成熟度有参考价值。",
+      "action_fact": "关注 AIEC 2026 后续发布的白皮书和案例集。用'三场硬仗'框架评估你团队的 AI 成熟度。",
+      "action_judge": "Agent 规模化的瓶颈不在模型能力，而在工程治理和组织变革。这和 Claude Code Tool(param:value) 权限规则的发布时间高度一致——工具侧和产业侧同时指向'治理'。",
+      "tags": ["AIEC", "清华大学", "Agent规模化", "中关村"],
+      "sources": [
+        "https://baijiahao.baidu.com/s?id=1868061698777797198"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "GLM-5.2",
+      "type": "开源编程大模型",
+      "highlight": "744B MoE / MIT 开源 / 1M 上下文 / FrontierSWE 74.4% / Claude Code 兼容",
+      "audience": "AI 编程开发者 / 需要长上下文 Agent 的团队 / 成本敏感的 agentic coding 场景",
+      "action": "注册 Z.ai Coding Plan，配置 Claude Code 的 ANTHROPIC_BASE_URL 指向 api.z.ai/api/anthropic",
+      "url": "https://z.ai/blog/glm-5.2"
+    },
+    {
+      "name": "Claude Code v2.1.181",
+      "type": "AI 编程 CLI",
+      "highlight": "Tool(param:value) 权限规则 / /config 语法 / Bun 1.4 / API 自动重试 / 0字节文件修复",
+      "audience": "所有 Claude Code 用户，尤其是 Windows 和网络驱动器用户",
+      "action": "运行 claude update 升级，检查 .claude/settings.json 权限配置",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "Vercel Drop",
+      "type": "零配置部署工具",
+      "highlight": "拖拽文件/文件夹/.zip 到浏览器即可部署，无需 Git/CLI",
+      "audience": "前端开发者 / 快速原型验证 / 教学演示",
+      "action": "访问 vercel.com/drop，拖入 dist 文件夹",
+      "url": "https://vercel.com/drop"
+    },
+    {
+      "name": "Firecrawl Prometheus",
+      "type": "网页数据 Agent",
+      "highlight": "前置部署 Agent，理解复杂网页结构并提取结构化数据",
+      "audience": "需要实时网页数据的 AI 应用开发者 / 数据分析师",
+      "action": "注册 firecrawl.dev（免费 500 credits），或装 Firecrawl MCP Server",
+      "url": "https://firecrawl.dev"
+    },
+    {
+      "name": "Mistral AI Assistant",
+      "type": "主权 AI 助手",
+      "highlight": "法国政府为 570 万公职人员配备的 Mistral 驱动的 AI 助手",
+      "audience": "欧洲市场开发者 / 需要欧洲合规模型的团队",
+      "action": "评估 Mistral API/开源模型作为 Claude/OpenAI 的替代方案",
+      "url": "https://mistral.ai"
+    },
+    {
+      "name": "ZCode 3.0",
+      "type": "AI 编程工具",
+      "highlight": "智谱自研 Agent 内核，深度适配 GLM-5.2，不再维护第三方 Agent",
+      "audience": "智谱生态开发者 / 国内 AI 编程用户",
+      "action": "通过智谱清言或 Z.ai 入口体验 ZCode 3.0",
+      "url": "https://finance.sina.com.cn/tech/digi/2026-06-13/doc-inichssh9309075.shtml"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "GLM-5.2 开源实测：Claude Code 一键切换，编程能力真能打 Opus 4.8？",
+      "hook": "MIT 开源 + 1M 上下文 + FrontierSWE 仅落后 Opus 4.8 1%",
+      "angle": "用同一个真实 repo 分别跑 Claude Code (Opus 4.8) 和 GLM-5.2，对比完成度、耗时、成本。重点展示 Z.ai /api/anthropic endpoint 的'一段环境变量切换'体验",
+      "materials": "终端录屏 / benchmark 对比图 / 成本对比表 / Claude Code 界面切换",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 新权限系统拆解：Tool(param:value) 到底能管多细",
+      "hook": "AI 编程从'能写代码'到'管得住 Agent'",
+      "angle": "演示如何用 Tool(param:value) 阻止 Agent 调用特定模型子代理、操作特定文件。对比没有权限规则时 Agent 的'失控'行为",
+      "materials": "Claude Code 权限配置截图 / Agent 被拦截的终端输出 / 前后对比",
+      "difficulty": "中"
+    },
+    {
+      "title": "法国为什么给 570 万公务员配 Mistral AI？欧洲主权 AI 在做什么",
+      "hook": "替换 Palantir 情报系统 + €6.55 亿投资 + 570 万用户规模",
+      "angle": "从 Anthropic 出口管制事件切入，讲为什么欧洲不再信任美国 AI。展示 Mistral 的能力定位和开源策略",
+      "materials": "新闻截图 / Mistral 模型页 / 法国政府公告 / 出口管制时间线",
+      "difficulty": "低"
+    },
+    {
+      "title": "Vercel Drop 实测：从代码到上线只要 3 秒？",
+      "hook": "拖拽部署、无需 Git/CLI、Product Hunt 422 票登顶",
+      "angle": "用 Claude Code/GLM-5.2 生成一个前端页面，然后拖拽到 Vercel Drop 部署，全程计时",
+      "materials": "Vercel Drop 界面录屏 / 部署前后对比 / 计时器",
+      "difficulty": "低"
+    },
+    {
+      "title": "G7 峰会 AI 领袖列席：科技公司什么时候变成'国家'了",
+      "hook": "OpenAI/Anthropic/Google CEO 首次获 G7 正式席位 + Anthropic 出口管制僵局",
+      "angle": "从'科技公司 CEO 参加峰会'这个画面切入，讲 AI 如何从技术议题变成地缘政治筹码",
+      "materials": "G7 照片 / Anthropic 出口管制时间线 / CNBC 报道截图",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "AI 工具排行榜/选型指南类文章",
+      "reason": "多篇 CSDN/掘金文章为 5 月或更早内容，缺少 48 小时内新发布事实，属于旧内容换新包装"
+    },
+    {
+      "item": "2026 年 AI 大模型全景盘点类文章",
+      "reason": "聚合器性质，未提供新的原始信息，多数为二手转述且无附带原链"
+    },
+    {
+      "item": "GPT-5.6 泄露/即将发布传言",
+      "reason": "单一来源（新浪财经转述 Sam Altman 内部消息），未经 OpenAI 官方确认，属于未证实传言"
+    },
+    {
+      "item": "AI 眼镜/眼镜博览会新闻",
+      "reason": "深圳眼镜博览会虽以'AI 眼镜'为主题，但属于行业展会新闻，缺少可操作的技术信号或产品发布"
+    },
+    {
+      "item": "各类 MCP Server 横评/生态全景",
+      "reason": "与 6/16 日报重复，今天没有新的官方级 MCP 协议或工具发布"
+    },
+    {
+      "item": "中国'十五五'规划 AI 政策解读",
+      "reason": "属于政策方向性内容，缺少可操作的技术信号和具体执行细节"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "GLM-5.2 第三方独立 benchmark 复现",
+      "reason": "官方公布 SWE-bench Pro 62.1 和 FrontierSWE 74.4%，但需要社区独立复现验证"
+    },
+    {
+      "item": "G7 会后公报中的 AI 自愿承诺具体条款",
+      "reason": "'自愿承诺'可能成为全球 AI 治理的事实基线，具体条款将影响合规要求"
+    },
+    {
+      "item": "Anthropic Fable 5/Mythos 5 解禁进展",
+      "reason": "6/15 谈判破裂后仍无解禁时间表，将直接影响 Claude Code 用户的模型可用性"
+    },
+    {
+      "item": "美国 AI 外籍人才管制是否从 Anthropic 扩展到全行业",
+      "reason": "OpenAI 已表达忧虑，如果扩展到 Google/Meta/Microsoft，将影响所有在美外籍 AI 从业者"
+    },
+    {
+      "item": "Claude Code v2.1.181 后续：Tool 权限规则社区使用反馈",
+      "reason": "Tool(param:value) 是参数级权限的首次实现，关注社区最佳实践和踩坑案例"
+    },
+    {
+      "item": "Vercel Drop 对 CI/CD 工作流的影响评估",
+      "reason": "拖拽部署是否会改变团队协作流程，还是仅适用于原型验证场景"
+    }
+  ],
+  "count": "2P0 + 6P1"
+}

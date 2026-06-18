@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-18",
+    "label": "6 月 18 日 (周四)",
+    "count": "2P0 + 6P1",
+    "tags": "GLM-5.2 · MIT开源 · 1M上下文 · Claude-Code · Tool权限规则 · G7 · Anthropic · 出口管制 · 法国主权AI · Mistral · Vercel-Drop · Firecrawl · Agent工程化",
+    "summary": "GLM-5.2 正式 MIT 开源（744B MoE、1M 上下文、FrontierSWE 仅落后 Opus 4.8 1%），开源编程模型第一次进入顶级闭源模型竞争区间。Claude Code 三天三更引入 Tool(param:value) 参数级权限规则。G7 峰会首次给 AI CEO 正式席位，法国用 Mistral 替换 Palantir 并给 570 万公务员配 AI 助手。"
+  },
+  {
     "date": "2026-06-16",
     "label": "6 月 16 日 (周二)",
     "count": "1P0 + 3P1",
