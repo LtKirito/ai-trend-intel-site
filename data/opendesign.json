@@ -1,24 +1,24 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 64258,
-    "forks": 7174,
-    "open_issues": 387,
+    "stars": 66850,
+    "forks": 7500,
+    "open_issues": 404,
     "latest_release": {
-      "version": "open-design-v0.10.1",
-      "date": "2026-06-12",
-      "name": "Open Design 0.10.1 — stability & performance patch"
+      "version": "open-design-v0.11.0",
+      "date": "2026-06-17",
+      "name": "Open Design 0.11.0 — The Bazaar"
     }
   },
   "recent_prs": [
     {
-      "number": 4256,
-      "title": "refactor(web): standardize simple dialog shell structure",
+      "number": 4455,
+      "title": "[codex] implement AMR Cloud Recovery",
       "state": "open",
-      "author": "mrcfps",
-      "labels": ["size/L", "risk/medium", "type/refactor", "needs-validation"],
-      "impact": "中 — 对话框组件结构统一为 simple dialog shell，属于 web 组件库基建的渐进式标准化，与 mrcfps 主导的 shared primitives 重构一脉相承",
-      "url": "https://github.com/nexu-io/open-design/pull/4256"
+      "author": "alchemistklk",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "极高 — AMR 余额不足/恢复状态从泛化的 failed-run 升级为结构化恢复覆盖层，Web 端和 CLI（od run info/watch/recover）双通道暴露恢复操作，自动充值可有限次重试、手动充值等待用户继续，是 AMR 云服务商业化闭环的关键一环",
+      "url": "https://github.com/nexu-io/open-design/pull/4455"
     },
     {
       "number": 4041,
@@ -26,177 +26,182 @@
       "state": "open",
       "author": "pixcore598-design",
       "labels": ["size/XXL", "risk/high", "type/feature"],
-      "impact": "极高 — v0.11.0 核心功能信号，多 Agent 团队协作引擎已递交 review fixes，标志 Open Design 从单体 Agent 工具向多 Agent 工作流平台的范式跃迁",
+      "impact": "极高 — v0.11.0 最大未合入功能：5 种多 Agent 协作模式（parallel/serial/genetic/inheritance/hybrid），YAML 驱动团队定义 + DAG 拓扑排序 + pub-sub 通信总线 + 遗传算法引擎 + SQLite 执行历史。仍未进入 v0.11.0，持续 review 中",
       "url": "https://github.com/nexu-io/open-design/pull/4041"
     },
     {
+      "number": 4431,
+      "title": "[codex] Add run lifecycle tracing",
+      "state": "open",
+      "author": "PerishCode",
+      "labels": ["size/XL", "risk/high", "type/feature"],
+      "impact": "高 — 为 run analytics 增加生命周期追踪字段和 artifact/stdin 时序修复，是可观测性基建，维护者据此分类失败和时序分析",
+      "url": "https://github.com/nexu-io/open-design/pull/4431"
+    },
+    {
+      "number": 3693,
+      "title": "fix(pi): raise detection timeouts and harden Windows npm prefix resolution",
+      "state": "open",
+      "author": "alucero270",
+      "labels": ["size/S", "risk/high", "type/bugfix"],
+      "impact": "中 — Windows 上 Pi agent 因 Defender 并行扫描导致检测超时（11-15s）而回退到静态模型列表，修复后 Windows 用户可见真实 CLI 模型 + Live 徽章",
+      "url": "https://github.com/nexu-io/open-design/pull/3693"
+    },
+    {
       "number": 4260,
-      "title": "Reflow brand extraction into an agent-driven, live flow",
+      "title": "Agent-driven brand extraction + two-loop memory overhaul",
       "state": "open",
       "author": "pftom",
-      "labels": ["size/XXL", "risk/high", "type/feature"],
-      "impact": "高 — 品牌识别（品牌色/字体/logo）从静态配置转为 Agent 驱动的实时流式流程，将深度耦合 LLM 调用能力，是 v0.10 设计工作区智能化的重要扩展",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "极高 — 两条主线交织：① 品牌识别从静态预取重构为 Agent 驱动的实时浏览器内提取（可手动过 anti-bot/登录墙），品牌包沉淀为可复用 design system；② 记忆系统从扁平存储重构为 PRE/POST 双循环——PRE loop 用用户画像+事实扩展简短请求，POST loop 将 rule 记忆变为可编程执行的 scorecard 门禁。是 Agent 架构的范式级变化",
       "url": "https://github.com/nexu-io/open-design/pull/4260"
     },
     {
-      "number": 4145,
-      "title": "feat(plugins): unify all 56 official deck seeds with the Open Design product narrative",
+      "number": 4484,
+      "title": "feat(landing): add \"What is vibe design\" blog post (18-locale, author byline, download CTA)",
       "state": "open",
-      "author": "elihahah666",
+      "author": "xne998808-ai",
       "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
-      "impact": "高 — 56 个官方 deck 模板（plugins/deck seeds）统一对齐 Open Design 产品叙述，配合 21 agent × 18 语言落地页，强化产品全球化与品牌一致性",
-      "url": "https://github.com/nexu-io/open-design/pull/4145"
+      "impact": "中 — 抢占 'vibe design' 关键词集群（Karpathy vibe coding → Google Stitch 主流化），18 语言本地化 + 作者署名 + 下载 CTA，同时新增 blog 作者注册表和 CTA 类型覆盖两个向后兼容基建",
+      "url": "https://github.com/nexu-io/open-design/pull/4484"
     },
     {
-      "number": 3592,
-      "title": "fix: back off offline star fetch logging",
-      "state": "closed",
-      "author": "mturac",
-      "labels": ["size/M", "risk/high", "type/bugfix"],
-      "impact": "中 — 离线启动时 star fetch 退避日志策略优化，配合 v0.10.1 stability patch 减少桌面端日志噪声",
-      "url": "https://github.com/nexu-io/open-design/pull/3592"
+      "number": 4486,
+      "title": "[codex] Fix brand extraction incomplete states",
+      "state": "merged",
+      "author": "PerishCode",
+      "labels": ["size/L", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "中 — 修复 #4260 品牌提取流程中的不完整状态处理，使 daemon 和 web 两侧的提取/预取/设计系统 UI/项目清理行为更一致",
+      "url": "https://github.com/nexu-io/open-design/pull/4486"
     },
     {
-      "number": 4079,
-      "title": "fix(web): unify entry topbar tooltips",
-      "state": "closed",
-      "author": "jzhishu",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "低 — 顶部工具栏 tooltip 文案统一，UX 一致性小修",
-      "url": "https://github.com/nexu-io/open-design/pull/4079"
-    },
-    {
-      "number": 4224,
-      "title": "perf: cache OpenCode bootstrap loading",
-      "state": "closed",
-      "author": "VIVAAN-DHAWAN",
-      "labels": ["size/S", "risk/medium", "type/refactor"],
-      "impact": "中 — OpenCode bootstrap 加载缓存化，是 v0.10.1 stability & performance patch 性能优化主轴的代表性改动",
-      "url": "https://github.com/nexu-io/open-design/pull/4224"
-    },
-    {
-      "number": 4262,
-      "title": "fix(ci): flaky resume test cleanup",
-      "state": "closed",
-      "author": "mrcfps",
-      "labels": ["size/XS", "risk/high", "type/bugfix"],
-      "impact": "中 — 修复 resume test 偶发清理失败导致 CI 抖动，加固 P0 CI 信号稳定性",
-      "url": "https://github.com/nexu-io/open-design/pull/4262"
+      "number": 4472,
+      "title": "docs: add Sealos deployment option",
+      "state": "open",
+      "author": "yangchuansheng",
+      "labels": ["size/XS", "risk/low", "type/docs"],
+      "impact": "低 — 在 Docker 部署段后新增 Sealos 一键部署选项文档，覆盖所有本地化 README，含持久化存储和访问控制说明",
+      "url": "https://github.com/nexu-io/open-design/pull/4472"
     }
   ],
   "recent_issues": [
     {
-      "number": 3586,
-      "title": "Offline launch: renderer fetch retry-storm exhausts file descriptors (EMFILE) and crashes the desktop app",
-      "author": "cardaba",
-      "labels": ["bug", "help wanted", "priority:p0"],
-      "comments": 9,
-      "summary": "P0 阻断：离线启动时 renderer fetch 重试风暴耗尽文件描述符（EMFILE）导致桌面应用崩溃，9 条评论持续升温，与 v0.10.1 stability patch 的稳定性主题高度相关",
-      "url": "https://github.com/nexu-io/open-design/issues/3586"
+      "number": 4489,
+      "title": "[Bug]: installs from source and from install.sh are dysfunctional",
+      "author": "3p3r",
+      "labels": ["bug"],
+      "comments": 12,
+      "summary": "P0 级阻断：install.sh 重定向至首页不再是脚本 + 源码安装（git clone + pnpm）后点击任何 design system 或发送 prompt 时整个应用崩溃报 'daemon is unreachable' + CORS 403。v0.11.0 发布后 1 天内爆发，直接影响所有新用户首次安装路径",
+      "url": "https://github.com/nexu-io/open-design/issues/4489"
     },
     {
-      "number": 3416,
-      "title": "Follow-up: harden sandbox runtime boundaries after merged stack",
-      "author": "dredozubov",
-      "labels": ["question", "security"],
-      "comments": 21,
-      "summary": "安全加固 follow-up：sandbox 运行时边界在合并堆栈后需要二次硬化，21 条评论的高讨论度架构议题，是 Agent 运行环境信任链的核心防线",
-      "url": "https://github.com/nexu-io/open-design/issues/3416"
+      "number": 2045,
+      "title": "HTML artifacts should tag meaningful inspectable elements with data-od-id",
+      "author": "fuyizheng3120",
+      "labels": ["help wanted", "feature"],
+      "comments": 13,
+      "summary": "提议在官方 artifact/system prompt 中加入 data-od-id 标注指令，让生成的 HTML 默认可检查（headings/sections/buttons/cards 等携带稳定 id），减少 Inspect/Picker 的 fallback 行为",
+      "url": "https://github.com/nexu-io/open-design/issues/2045"
     },
     {
-      "number": 3815,
-      "title": "Codex Browser plugin is enabled in Open Design runs but no matching iab backend is attached",
-      "author": "jaehanbyun",
+      "number": 4401,
+      "title": "Improve Discord support bot routing and stale version guardrails",
+      "author": "kokisanai",
+      "labels": ["bug"],
+      "comments": 7,
+      "summary": "Discord 支持机器人近期误分类用户意图并包含过时版本措辞（如 'checked local Open Design app (0.9.0)'），损害社区支持信任流，提议加入意图分类步骤和 stale-version 短语黑名单",
+      "url": "https://github.com/nexu-io/open-design/issues/4401"
+    },
+    {
+      "number": 2438,
+      "title": "bug: Windows source startup fails when tools-dev spawns pnpm without pnpm on PATH",
+      "author": "Hejk",
       "labels": ["bug", "help wanted", "priority:p1"],
-      "comments": 11,
-      "summary": "P1 体验断点：Codex Browser 插件在 Open Design 中默认启用但无 iab 后端实例化，导致运行时插件存在但能力缺失，11 条评论关注",
-      "url": "https://github.com/nexu-io/open-design/issues/3815"
+      "comments": 13,
+      "summary": "P1 长期未闭环：Windows PowerShell 上 Corepack 自身可用但子进程（tools-dev spawn）期望裸 pnpm 命令在 PATH 上，导致启动链断裂。13 条评论持续升温",
+      "url": "https://github.com/nexu-io/open-design/issues/2438"
     },
     {
-      "number": 1138,
-      "title": "codebuddy cli",
-      "author": "sihui1551",
-      "labels": ["feature"],
+      "number": 4359,
+      "title": "Proposal: always-on Design Signature strip on the preview surface (UI for #4358)",
+      "author": "Nagendhra-web",
+      "labels": ["type/feature", "needs-product-direction", "exempt-from-stale"],
+      "comments": 5,
+      "summary": "提案：在预览面上方增加常驻 Design Signature 条（稳定指纹 + 0-100 vitality 评分 + 版本 diff 摘要），让用户一眼看到设计的身份和变更，复用 #4358 已合入的纯函数引擎",
+      "url": "https://github.com/nexu-io/open-design/issues/4359"
+    },
+    {
+      "number": 4441,
+      "title": "Nightly can crash or exit on launch when stale sidecars or IPC sockets remain",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "risk/high", "priority:p1"],
+      "comments": 2,
+      "summary": "P1 启动鲁棒性：v0.11.0-nightly.2 安装后因残留的旧版 sidecar 进程/IPC socket 导致新进程 EADDRINUSE 启动直接退出，macOS 叠加 AppTranslocation/quarantine 导致 better_sqlite3 原生模块 page-in 失败",
+      "url": "https://github.com/nexu-io/open-design/issues/4441"
+    },
+    {
+      "number": 1075,
+      "title": "enhancement UI/UX pro max 6 skills from claude folder",
+      "author": "pmasadali20776-ui",
+      "labels": ["enhancement", "stale"],
       "comments": 6,
-      "summary": "特性请求：Codebuddy CLI 适配支持，社区长期呼声，6 条评论表明国内开发者对 Codebuddy Agent 集成的期待",
-      "url": "https://github.com/nexu-io/open-design/issues/1138"
+      "summary": "社区贡献者提议集成 UI/UX pro max 技能包以增强 AI 设计的 UI-UX 质量，已标记 stale",
+      "url": "https://github.com/nexu-io/open-design/issues/1075"
     },
     {
-      "number": 4172,
-      "title": "refactor(web): remove obsolete raw control styling hooks",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 0,
-      "summary": "mrcfps 主导的 web 组件库重构系列：移除废弃的原始控件样式 hook，配合 shared primitives（#4256 #4170-#4171）渐进统一前端基础组件",
-      "url": "https://github.com/nexu-io/open-design/issues/4172"
+      "number": 4435,
+      "title": "design-system-package-audit: skill_missing_reuse_sections warning text contradicts the regex (agents loop forever)",
+      "author": "AntoineVergne",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 5,
+      "summary": "审计工具的警告文案与实际正则不一致（'What is inside' vs 'What's inside'、'design-system highlights' vs 'Design system highlights'），导致 AI agent 按提示修改后仍不通过，循环 23 分钟",
+      "url": "https://github.com/nexu-io/open-design/issues/4435"
     },
     {
-      "number": 4171,
-      "title": "refactor(web): migrate conventional editor controls to shared primitives",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 1,
-      "summary": "传统编辑器控件迁移至 shared primitives 体系，组件复用与一致性提升",
-      "url": "https://github.com/nexu-io/open-design/issues/4171"
+      "number": 3848,
+      "title": "Move conversation count next to the conversations header",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "good first issue", "help wanted", "priority:p3"],
+      "comments": 14,
+      "summary": "P3 UI 优化：对话面板的计数器居中浮动，视觉上与标题脱节，提议移到标题旁 'CONVERSATIONS (6)' 格式",
+      "url": "https://github.com/nexu-io/open-design/issues/3848"
     },
     {
-      "number": 4170,
-      "title": "refactor(components): add shared checkbox and radio primitives",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 0,
-      "summary": "共享 checkbox/radio 原子组件抽象，web 设计系统基础组件库扩展",
-      "url": "https://github.com/nexu-io/open-design/issues/4170"
-    },
-    {
-      "number": 4169,
-      "title": "refactor(components): add shared field, label, and hint primitives",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 1,
-      "summary": "共享 field/label/hint 表单原语组件，新组件库的又一积木",
-      "url": "https://github.com/nexu-io/open-design/issues/4169"
-    },
-    {
-      "number": 4168,
-      "title": "refactor(web): migrate plugin and design browser forms to shared primitives",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 1,
-      "summary": "插件与设计浏览器的表单迁移至 shared primitives，触及 plugin 中心化与设计资产管理核心模块",
-      "url": "https://github.com/nexu-io/open-design/issues/4168"
-    },
-    {
-      "number": 4167,
-      "title": "refactor(web): migrate MCP settings controls to shared primitives",
-      "author": "mrcfps",
-      "labels": ["type/refactor"],
-      "comments": 1,
-      "summary": "MCP 设置控件迁移至 shared primitives，是 MCP 集成界面的统一化收尾",
-      "url": "https://github.com/nexu-io/open-design/issues/4167"
+      "number": 4467,
+      "title": "Improve macOS update flow so payload updates are the default",
+      "author": "TheAngryPit",
+      "labels": ["enhancement"],
+      "comments": 6,
+      "summary": "macOS 更新流程仍退化为 DMG 手动拖拽安装，提案将 payload 更新设为默认行为（'安装并重启' 而非 '打开安装器'），DMG 仅作手动回退，并增加高级设置选项",
+      "url": "https://github.com/nexu-io/open-design/issues/4467"
     }
   ],
   "trends": {
-    "direction": "v0.10.1 'stability & performance patch'（6/12 发布）已确认团队重心从 v0.10.0 大版本发布转入性能与稳定性窗口。当前开发分四条主线：① web 设计系统原子化重构——mrcfps 一人独挑 6 项 shared primitives 重构（#4256/#4170-#4172/#4167-#4168）已成体系化推进，覆盖表单/插件/编辑器/MCP 设置等关键界面层；② v0.11.0 功能预研——多 Agent 团队协作 #4041（XXL）和品牌识别 agent-driven 流 #4260（XXL）持续打磨，构成下一大版本两大支柱；③ 性能优化——OpenCode bootstrap 缓存（#4224 已合）、离线启动 EMFILE 修复（#3586 P0）合力加固桌面应用；④ 内容生态——56 个 deck seeds 统一产品叙述（#4145 XXL）与 21 agent × 18 语言落地页改版协同推进全球化叙事。",
+    "direction": "v0.11.0 'The Bazaar' 已于 6/17 正式发布（137 PRs / 57 contributors / 4 days），团队重心从 v0.10.x 稳定性窗口跃迁至大版本发布后的生态扩展与社区吸收期。v0.11.0 核心交付四条主线：① 多 Agent 适配器扩展——Amp + Codebuddy Code 全新适配器 + Kimi 修复 + Codex 订阅媒体 + Antigravity + Copilot 扩容；② 插件画廊体验升级——56 官方 deck + 23 社区 slide kit + 实时预览片段播放；③ Web 存在感补齐——21 agent 落地页 + 信任页 + 博客重构 + 全站 SEO；④ 最大稳定性修复批次——窗口自愈 + run 不再 hang + FD 泄漏修复 + 预览不再抢占重载。发版后立即进入 hotfix 吸收窗口，三大安装/启动阻断已爆发。",
     "affected_modules": [
-      "Web 设计系统（shared primitives / 组件库 / 表单原子化）— mrcfps 主导的体系化重构",
-      "Agent 协作层（多 Agent 团队 / 品牌识别 agent-driven 流）— v0.11.0 核心",
-      "桌面应用稳定性（EMFILE / OpenCode bootstrap 缓存 / 离线启动路径）",
-      "内容/插件生态（56 个 deck seeds / 21 agent × 18 语言落地页）",
-      "Sandbox 运行时边界 — 安全硬化 follow-up（#3416，21 评论）"
+      "AMR 云服务层（Cloud Recovery #4455 / 余额恢复 / 登录代理回退）— 新晋 XXL，扩展商业化闭环",
+      "品牌识别 + 记忆系统（#4260 agent-driven brand extraction + two-loop PRE/POST memory）— 架构级变化",
+      "多 Agent 协作引擎（#4041 仍未合入 v0.11.0，持续 review）— 社区最大期待功能",
+      "安装与启动路径（install.sh #4489 / source build / Nightly sidecar IPC #4441 / Windows pnpm PATH #2438）",
+      "桌面应用更新器（macOS payload update #4467 / 窗口自愈 #4179 / idle polling 修复）",
+      "插件审计工具链（design-system-package-audit 正则/文案不一致 #4435）",
+      "运行可观测性（run lifecycle tracing #4431 / analytics 事件契约）"
     ],
     "risks": [
-      "桌面应用稳定性：离线启动 EMFILE 文件描述符耗尽 P0 bug #3586 持续 9 评论，桌面端首次启动体验直接受影响",
-      "Sandbox 信任链：#3416 合并堆栈后 sandbox 边界硬化未闭环，21 评论高关注度，与多 Agent 协作 v0.11.0 的运行时隔离直接耦合",
-      "Agent 适配器碎片化延续：P1 #3815 Codex Browser 插件 iab 后端缺失说明 17+ 适配器的接口契约持续存在断层",
-      "前端重构技术债累积：mrcfps 一人主导 6 项 primitives 重构虽方向正确，但单点维护风险显著，组件库能否沉淀为团队共享资产是后续观察重点"
+      "安装入口全面损坏：#4489 install.sh 重定向至首页不再是脚本 + 源码安装 CORS/403/daemon unreachable，12 评论、发布后 1 天内爆发，是新用户入口级阻断",
+      "Nightly 升级崩溃：#4441 P1 stale sidecar/IPC socket 残留导致 v0.11.0-nightly.2 启动直接退出，macOS 叠加 AppTranslocation/quarantine 导致 better_sqlite3 原生模块 page-in 失败",
+      "Windows pnpm PATH 持续断裂：#2438 P1 Corepack 下子进程仍期望裸 pnpm，13 评论长期未闭环",
+      "多 Agent 协作 #4041 未进入 v0.11.0：作为最大社区期待功能持续 open，可能影响社区信心",
+      "macOS 更新体验倒退：#4467 更新流程仍退化为 DMG 手动拖拽安装而非 app-owned payload update",
+      "v0.11.0 发布后 open_issues 从 387→404（+17），stars 4 天 +2,592，社区涌入可能加速 issue 增长"
     ],
     "actions": [
-      "关注 #4041 多 Agent 团队协作 PR review fixes 合入节奏，评估 Agent 间通信协议（编排/上下文共享/状态同步）的设计取舍",
-      "跟踪 #4260 品牌识别 agent-driven 流的 LLM 依赖路径，评估对 token 成本和响应延迟的影响",
-      "关注 #3586 P0 离线启动 EMFILE 修复进展，判断是否需要回滚或加 hotfix 到 v0.10.1",
-      "评估 mrcfps 主导的 shared primitives 重构对开发效率的实际增益，识别其他需要原子化的重复 UI 模式"
+      "紧急关注 #4489 install.sh 修复进展——v0.11.0 发布后最高优先级 hotfix，直接影响所有新用户首次安装路径",
+      "跟踪 #4441 Nightly 启动崩溃修复，评估是否需要回滚或发布 v0.11.1 hotfix",
+      "评估 #4455 AMR Cloud Recovery 对 AMR 云服务商业化的影响——恢复机制完善可能降低余额耗尽时的用户流失",
+      "关注 #4260 品牌识别 + two-loop memory 的架构设计——PRE/POST 双循环将 memory 从被动存储变为主动 shaping + enforcement，是 Agent 架构范式级变化",
+      "监测 v0.11.0 发布后 stars 增长曲线（4 天 +2,592 vs 前期日均 ~320），评估是否触发社区破圈效应"
     ],
-    "next_week": "v0.10.1 stability patch 落地后，预计 0.10.2/0.10.3 将集中吸收 P0 离线启动 EMFILE 修复（#3586）和 Codex Browser iab 补齐（#3815）两个高优先级 hotfix。mrcfps 主导的 shared primitives 重构将持续推进至更深的页面级迁移。多 Agent 协作 #4041 与品牌识别 agent-driven #4260 两条 XXL 主线有望在 7 月初进入 v0.11.0 候选合入窗口。落地页改版 #4158（21×18 SEO）的实际效果数据可能在 1-2 周后开始回流。"
+    "next_week": "v0.11.0 发布后首个周将集中处理三大安装/启动 hotfix（#4489 install.sh / #4441 Nightly crash / #2438 Windows pnpm），预计 v0.11.1 patch 可能在一周内发布。品牌识别 #4260 和多 Agent 协作 #4041 两条 XXL 主线有望在 hotfix 窗口后进入合入评估。AMR Cloud Recovery #4455 作为新晋 XXL PR 将扩展 AMR 云服务恢复能力。Web 内容侧 #4484 'What is vibe design' 博客和 Sealos 部署文档 #4472 将持续补充产品 Web 存在感。如果 stars 增长持续（当前 66,850），社区贡献者涌入可能加速 issue/PR 数量增长，团队需做好 triage 扩容准备。"
   }
 }
