@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-06-21",
+    "label": "6 月 21 日 (周日)",
+    "count": "0P0 + 6P1",
+    "tags": "周末观察 · Coding-Agent · MCP · Product-Hunt · Claude-Code · OSSInsight · Agent工具箱 · Vibe-Coding · 浏览器自动化 · 视频选题",
+    "summary": "6/21 是周末观察日，没有可靠的新模型级 P0。有效信息差是：Coding Agent 与 MCP 工具链继续集中升温，Product Hunt 的 AI 工具更偏场景化，适合做“工具箱整理”和“实测选题”而不是硬说新发布。"
+  },
+  {
+    "date": "2026-06-20",
+    "label": "6 月 20 日 (周六)",
+    "count": "1P0 + 5P1",
+    "tags": "Claude-Code-2.1.185 · Stream-Stall · opencode · Codex · Claude-Code · Goose · OSSInsight · Coding-Agent · Product-Hunt · Browse.sh · Swytchcode",
+    "summary": "6/20 没有模型级爆点，主线是 AI 编程工具的稳定性和开源热度：Claude Code v2.1.185 调整 API 等待提示，OSSInsight 显示 opencode、Codex、Claude Code、goose 成为最近 28 天 Coding Agent 增长核心。"
+  },
+  {
+    "date": "2026-06-19",
+    "label": "6 月 19 日 (周五)",
+    "count": "2P0 + 5P1",
+    "tags": "Claude-Code-2.1.183 · Auto-Mode · 安全护栏 · Vercel-Eve · Vercel-Connect · Agent基建 · Subagent · MCP · Windows-Terminal · 配置治理",
+    "summary": "6/19 的主线是 AI 编程进入“安全护栏优先”阶段：Claude Code v2.1.183 在 auto mode 下阻止危险 git/infra 命令，Vercel Eve/Connect 则把 Agent 框架、沙箱、审批和外部服务安全访问做成平台能力。"
+  },
+  {
     "date": "2026-06-18",
     "label": "6 月 18 日 (周四)",
     "count": "2P0 + 6P1",

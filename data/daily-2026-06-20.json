@@ -1,0 +1,216 @@
+{
+  "date": "2026-06-20",
+  "title": "2026-06-20 AI信息差日报",
+  "coverage": "覆盖窗口：6/19 ~ 6/20",
+  "sources": "信息源：code.claude.com / hunted.space / ossinsight.io / www.claudeupdates.dev",
+  "conclusions": [
+    "Claude Code v2.1.185 是小版本，但改动指向长任务体验：stream-stall 提示从“无响应”改为“等待 API 响应”，触发时间从 10 秒延长到 20 秒。",
+    "OSSInsight 近 28 天 AI 开源趋势显示，opencode（+411 stars）、openai/codex（+291）、anthropics/claude-code（+256）、block/goose（+168）集中增长，Coding Agent 仍是开发者关注核心。",
+    "Product Hunt 六月 AI 榜里 Browse.sh、Claude Code Artifacts、Swytchcode CLI 等工具说明：浏览器自动化、Claude Code UI/Artifacts 化、CLI 编程助手仍有内容价值。",
+    "今天适合做“工具选型与实测”，不适合夸大成新模型革命。"
+  ],
+  "summary": "6/20 没有模型级爆点，主线是 AI 编程工具的稳定性和开源热度：Claude Code v2.1.185 调整 API 等待提示，OSSInsight 显示 opencode、Codex、Claude Code、goose 成为最近 28 天 Coding Agent 增长核心。",
+  "body": "Claude Code v2.1.185 是小版本，但改动指向长任务体验：stream-stall 提示从“无响应”改为“等待 API 响应”，触发时间从 10 秒延长到 20 秒。 OSSInsight 近 28 天 AI 开源趋势显示，opencode（+411 stars）、openai/codex（+291）、anthropics/claude-code（+256）、block/goose（+168）集中增长，Coding Agent 仍是开发者关注核心。 Product Hunt 六月 AI 榜里 Browse.sh、Claude Code Artifacts、Swytchcode CLI 等工具说明：浏览器自动化、Claude Code UI/Artifacts 化、CLI 编程助手仍有内容价值。 今天适合做“工具选型与实测”，不适合夸大成新模型革命。 6/20 没有模型级爆点，主线是 AI 编程工具的稳定性和开源热度：Claude Code v2.1.185 调整 API 等待提示，OSSInsight 显示 opencode、Codex、Claude Code、goose 成为最近 28 天 Coding Agent 增长核心。",
+  "judgement": "个人判断：6/20 是周末弱新闻日，应该把重点放在“哪些工具值得跟进”而不是硬凑 P0。Claude Code v2.1.185 的文案和触发时间改动看似小，但它是在修长任务等待时的信任问题；OSSInsight 的增长榜则证明 Coding Agent 的竞争已经从单一产品进入多工具并行阶段。",
+  "tags": [
+    "Claude-Code-2.1.185",
+    "Stream-Stall",
+    "opencode",
+    "Codex",
+    "Claude-Code",
+    "Goose",
+    "OSSInsight",
+    "Coding-Agent",
+    "Product-Hunt",
+    "Browse.sh",
+    "Swytchcode"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Coding Agent 开源增长集中：opencode、Codex、Claude Code、goose 成为近 28 天 Top Movers",
+      "summary": "OSSInsight AI 趋势页显示，近 28 天 Top Movers 中 anomalyco/opencode +411 stars、openai/codex +291、anthropics/claude-code +256、block/goose +168，均属于 Coding Agents。",
+      "why": "这说明开发者注意力正集中在“能接管真实编码流程的 Agent”，不是传统聊天 UI。多个工具同时增长，意味着市场还没有收敛，适合做横评和工作流试验。",
+      "action_fact": "挑 opencode、Codex、Claude Code、goose 各跑同一个小任务：读取项目、改一处 bug、跑测试、提交 diff；记录上下文能力、权限控制、速度、失败模式。",
+      "action_judge": "不要只押一个工具。未来半年更可能是多 Agent 工具按任务分工：Claude Code 管复杂 repo，opencode/Goose 管开源和本地流程，Codex 管 OpenAI 生态。",
+      "tags": [
+        "Coding-Agent",
+        "opencode",
+        "Codex",
+        "Claude-Code",
+        "Goose"
+      ],
+      "sources": [
+        "https://ossinsight.io/trending/ai"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.185：长等待提示从“无响应”改成“等待 API 响应”",
+      "summary": "6/20 v2.1.185 只有一个更新：stream-stall hint 文案从 “No response from API · Retrying in …” 改为 “Waiting for API response · will retry in …”，触发时间从 10 秒延长到 20 秒。",
+      "why": "对长上下文和高延迟模型来说，提示文案会直接影响用户是否误判为故障。延长到 20 秒更符合 GLM-5.2 1M 上下文、远程模型等慢首 token 场景。",
+      "action_fact": "升级到 v2.1.185；跑一次长上下文任务观察等待提示；如果你的自动化日志依赖旧提示字符串，需要更新匹配规则。",
+      "action_judge": "小版本但方向正确：Agent 长任务体验里，“别让用户以为挂了”就是可靠性的一部分。",
+      "tags": [
+        "Claude-Code",
+        "Stream-Stall",
+        "长任务体验"
+      ],
+      "sources": [
+        "https://www.claudeupdates.dev/version/2.1.185",
+        "https://code.claude.com/docs/en/changelog"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OSSInsight Top 50：MCP servers、Context7、GitHub MCP、Playwright MCP 保持高位",
+      "summary": "OSSInsight Top 50 AI Repositories 中，modelcontextprotocol/servers 约 60,563 stars；upstash/context7 +81；github/github-mcp-server 约 19,996 stars；microsoft/playwright-mcp 约 18,906 stars。",
+      "why": "MCP 已从概念进入“常用工具层”：代码仓库、文档上下文、浏览器自动化都在争夺 Agent 的工具入口。",
+      "action_fact": "为自己的 Claude Code/Cursor 工具箱保留三类 MCP：代码仓库（GitHub）、文档上下文（Context7）、浏览器自动化（Playwright）。",
+      "action_judge": "MCP 的关键不是装得多，而是把最常用的三类外部能力接稳。",
+      "tags": [
+        "MCP",
+        "Context7",
+        "GitHub-MCP",
+        "Playwright-MCP"
+      ],
+      "sources": [
+        "https://ossinsight.io/trending/ai"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt 六月 AI 榜：Browse.sh 指向“浏览器即 Agent 工具层”",
+      "summary": "Hunted.space Product Hunt 六月 AI 榜显示 Browse.sh 位列前排 AI 产品。它代表一类浏览器/网页自动化工具，适合给 Agent 提供可操作的 Web 环境。",
+      "why": "网页是 Agent 获取和执行任务的重要界面。浏览器自动化工具如果足够稳定，就能补上纯 API 不覆盖的场景。",
+      "action_fact": "把 Browse.sh 与 Playwright MCP、Firecrawl Prometheus 做对比：一个偏浏览器操作，一个偏自动化控制，一个偏结构化数据提取。",
+      "action_judge": "浏览器工具会成为 Agent 的“手”，但要特别关注权限、验证码、登录态和数据安全。",
+      "tags": [
+        "Browse.sh",
+        "Browser-Agent",
+        "Product-Hunt"
+      ],
+      "sources": [
+        "https://hunted.space/top-products/2026/June/artificial-intelligence"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code Artifacts：Claude Code 工作流开始向可视化/产物化包装",
+      "summary": "Product Hunt 六月 AI 榜出现 Claude Code Artifacts/Claude redesigned 类产品，说明社区在尝试把 Claude Code 终端产物转成更可视化、可分享的形态。",
+      "why": "AI 编程不只输出 diff，还会输出报告、图表、网页、演示材料。Artifacts 化能让非工程用户理解 Agent 做了什么。",
+      "action_fact": "观察这类工具是否支持导出 HTML、任务记录和代码 diff；可作为视频号展示素材。",
+      "action_judge": "终端 Agent 想进入团队协作，必须把过程和产物可视化，否则只适合个人开发者。",
+      "tags": [
+        "Claude-Code-Artifacts",
+        "可视化产物",
+        "Product-Hunt"
+      ],
+      "sources": [
+        "https://hunted.space/top-products/2026/June/artificial-intelligence"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Swytchcode CLI：Product Hunt 上的 CLI 编程助手信号",
+      "summary": "Swytchcode CLI 出现在 Product Hunt 六月 AI 榜，属于 CLI 编程助手方向。",
+      "why": "CLI 编程助手仍是高频新产品方向，但需要和 Claude Code、Codex、opencode 做实测对比，不能只看榜单。",
+      "action_fact": "如果产品可用，拿同一 repo 跑“解释代码 + 修改小 bug + 生成测试”三步评测。",
+      "action_judge": "新 CLI 工具若没有权限治理、上下文、测试集成，很难与头部工具拉开差距。",
+      "tags": [
+        "Swytchcode",
+        "CLI",
+        "Coding-Agent"
+      ],
+      "sources": [
+        "https://hunted.space/top-products/2026/June/artificial-intelligence"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "opencode",
+      "type": "开源 Coding Agent",
+      "highlight": "OSSInsight 近 28 天 +411 stars，Top Mover",
+      "audience": "想尝试 Claude Code 替代/补充工具的开发者",
+      "action": "用同一任务与 Claude Code、Codex、Goose 对比",
+      "url": "https://ossinsight.io/analyze/anomalyco/opencode"
+    },
+    {
+      "name": "OpenAI Codex",
+      "type": "Coding Agent",
+      "highlight": "OSSInsight 近 28 天 +291 stars，OpenAI 生态编程工具",
+      "audience": "OpenAI API/ChatGPT 生态用户",
+      "action": "测试 repo 级修改、联网搜索和 MCP 支持",
+      "url": "https://ossinsight.io/analyze/openai/codex"
+    },
+    {
+      "name": "Claude Code v2.1.185",
+      "type": "AI 编程 CLI",
+      "highlight": "优化长等待提示和重试体验",
+      "audience": "长上下文、慢模型、远程 API 用户",
+      "action": "升级后验证长任务等待提示",
+      "url": "https://www.claudeupdates.dev/version/2.1.185"
+    },
+    {
+      "name": "Browse.sh",
+      "type": "浏览器自动化/Agent 工具",
+      "highlight": "Product Hunt 六月 AI 榜靠前，代表浏览器工具层方向",
+      "audience": "需要网页操作和自动化采集的 Agent 开发者",
+      "action": "与 Playwright MCP/Firecrawl 做小任务对比",
+      "url": "https://hunted.space/top-products/2026/June/artificial-intelligence"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "四大 Coding Agent 横评：opencode、Codex、Claude Code、Goose 谁更适合真实项目？",
+      "hook": "GitHub 趋势显示它们同时增长",
+      "angle": "同一 repo、同一 bug、同一测试，记录完成度和失败模式。",
+      "materials": "OSSInsight 数据、四个终端录屏、对比表",
+      "difficulty": "高"
+    },
+    {
+      "title": "Claude Code v2.1.185 为什么只改一句提示也值得说？",
+      "hook": "长任务里“看起来卡住”就是信任杀手",
+      "angle": "用慢模型/长上下文任务演示等待提示和重试体验。",
+      "materials": "v2.1.185 changelog、长上下文任务录屏",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP 工具箱最小三件套：GitHub、Context7、Playwright",
+      "hook": "不要乱装 MCP，先装最常用三类",
+      "angle": "从 OSSInsight Top 50 里选三类 MCP，讲每类解决什么问题。",
+      "materials": "OSSInsight 截图、MCP 配置示例、任务演示",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Product Hunt 六月总榜纯排名",
+      "reason": "榜单本身不能证明产品价值，只作为线索，必须回到产品功能验证。"
+    },
+    {
+      "item": "旧 AI 工具盘点文章",
+      "reason": "发布时间较早或无原链，不能作为 6/20 日报主信号。"
+    },
+    {
+      "item": "未证实模型发布传言",
+      "reason": "缺少官方博客、GitHub、论文或多方验证。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "opencode 是否持续增长并形成稳定 release 节奏",
+      "reason": "决定它是短期热度还是可长期替代的 Coding Agent。"
+    },
+    {
+      "item": "Claude Code 长上下文慢响应体验",
+      "reason": "GLM-5.2 等 1M 上下文模型会放大等待体验问题。"
+    },
+    {
+      "item": "MCP Server Top 50 中哪些真正适合日常开发",
+      "reason": "需要从榜单筛成可用工具箱。"
+    }
+  ],
+  "count": "1P0 + 5P1"
+}
