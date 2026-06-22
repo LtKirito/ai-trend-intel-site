@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-22",
+    "label": "6 月 22 日 (周一)",
+    "count": "0P0 + 5P1",
+    "tags": "Claude-Code · Claude-Code-Review · Agent治理 · Auto-Mode · Subagent · Product-Hunt · MCP · Databox-MCP · AI成本治理 · Reviewability · 嵌入式AI工具",
+    "summary": "6/22 没有可靠模型级 P0；主线是 AI 编程工具进入工程治理阶段：Claude Code 修安全和稳定性，Claude Code Review 将多 Agent 用于 PR 审查，AI 工具开始嵌入已有工作表面。"
+  },
+  {
     "date": "2026-06-21",
     "label": "6 月 21 日 (周日)",
     "count": "0P0 + 6P1",

@@ -1,0 +1,233 @@
+{
+  "date": "2026-06-22",
+  "title": "2026-06-22 AI信息差日报",
+  "coverage": "覆盖窗口：6/20 ~ 6/22（周一放宽 48 小时，覆盖周末动态）",
+  "sources": "信息源：Anthropic Claude Code Changelog / Releasebot / Claude Code 官方页 / Product Hunt / Hacker News / ScriptByAI / MorphLLM",
+  "conclusions": [
+    "今天没有可靠的新模型级 P0。真正值得看的是 AI 编程工具从“能跑 Agent”进入“管得住 Agent”：Claude Code 继续补安全与稳定性，Claude Code Review 把多 Agent 用到 PR 审查，Product Hunt 的 AI 工具开始嵌入会议、业务数据、输入法和硬件入口。",
+    "Claude Code 最新 v2.1.183/185 不是功能爆炸，而是安全护栏、WebSearch/subagent、background task、TUI 和 API 等待提示的工程化修补。",
+    "Product Hunt 上 Claude Code Review 以“多 Agent 审 PR”作为本周 Anthropic 生态核心发布，说明 AI 生成代码后的瓶颈正在转向 Reviewability。",
+    "Databox MCP、Dune Keypad、Mina Meeting Assistant、Typeahead 等产品共同指向一个趋势：AI 工具不再单独开 App，而是嵌入已有工作表面。",
+    "本周最适合做内容的不是“又一个模型发布”，而是“AI Agent 成本、权限、审查和工具发现”这四件工程治理问题。"
+  ],
+  "summary": "6/22 没有可靠模型级 P0；主线是 AI 编程工具进入工程治理阶段：Claude Code 修安全和稳定性，Claude Code Review 将多 Agent 用于 PR 审查，AI 工具开始嵌入已有工作表面。",
+  "body": "今天的信息密度不高，不能硬凑模型发布。第一条主线是 Claude Code v2.1.183/185 的安全与稳定性修补：v2.1.183 强化 auto mode 安全，未明确要求丢弃本地工作时阻止 git reset --hard、git checkout -- .、git clean -fd、git stash drop 等危险命令；也阻止非本会话 agent 创建的提交被 git commit --amend，并要求 terraform/pulumi/cdk destroy 必须明确指定 stack。它还修复了 subagent 中 WebSearch 空结果、teammate tmux pane 启动、teammate background tasks 被杀、scheduled/webhook 被误当键盘输入、Windows Terminal 在 nested-subagent 高负载下 TUI 损坏等问题。v2.1.185 则把 API 流停滞提示从 10 秒延后到 20 秒，并把文案改成 Waiting for API response · will retry in ...。第二条主线是 Claude Code Review 在 Product Hunt 本周出现：它把多 Agent 用于每个 PR 的审查，主打发现 bug、安全问题和隐藏逻辑缺陷，并通过验证降低误报。这说明 AI 生成代码后的真正瓶颈正在转向审查、验证和回滚。第三条主线来自 Product Hunt AI 软件分类：Databox MCP、Dune Keypad、Mina Meeting Assistant、Typeahead 等产品共同说明 AI 工具正在从独立 App 转向嵌入业务数据、会议、文本输入、硬件快捷入口等已有工作表面。第四条弱信号来自 Hacker News 对 Claude Code 企业级成本的讨论：具体预算说法不能当事实，但它反映团队采用 Agent 后的成本治理焦虑。",
+  "judgement": "个人判断：今天最值得做的不是追模型，而是建立一套 Agent 工程治理模板：权限规则、危险命令黑名单、PR 审查 checklist、AI 成本看板、第三方技能/MCP 安装审计。对个人用户，Claude Code 的 v2.1.183/185 更新值得升级；对团队用户，Claude Code Review 的方向值得跟进，但别只看宣传，关键是它能否把 AI 代码审查变成低误报、可解释、可追踪的流程。",
+  "tags": [
+    "Claude-Code",
+    "Claude-Code-Review",
+    "Agent治理",
+    "Auto-Mode",
+    "Subagent",
+    "WebSearch",
+    "Background-Tasks",
+    "Product-Hunt",
+    "MCP",
+    "Databox-MCP",
+    "AI成本治理",
+    "Reviewability",
+    "嵌入式AI工具"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.183/185 安全与稳定性更新",
+      "summary": "v2.1.183 强化 auto mode 安全，阻止危险 git/infra 命令，修复 subagent WebSearch、tmux teammate、background task、Windows Terminal TUI 等问题；v2.1.185 延后 API 流停滞提示并优化重试文案。",
+      "score": [4, 5, 5, 4, 4],
+      "why": "这些不是炫技功能，而是让多 Agent 长任务不乱删文件、不误批准动作、不丢后台任务的基础设施。AI 编程竞争正在转向工程可靠性和权限治理。",
+      "action_fact": "升级 Claude Code；检查 auto mode 权限；在团队模板里加入危险 git/infra 操作禁止规则；重点测试 subagent WebSearch 和 background task 是否稳定。",
+      "action_judge": "如果你已经把 Claude Code 用在真实项目上，这类小版本比新 UI 更重要。它们直接决定 Agent 能不能安全跑长任务。",
+      "tags": ["Claude-Code", "Auto-Mode", "Subagent", "WebSearch", "安全护栏"],
+      "sources": [
+        "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md",
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://code.claude.com/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code Review：多 Agent PR 审查上 Product Hunt",
+      "summary": "Anthropic 在 Product Hunt 本周推出 Claude Code Review，定位为多 Agent 审查每个 PR，发现 bug、安全问题和隐藏逻辑缺陷，并降低误报。",
+      "score": [4, 4, 4, 5, 4],
+      "why": "AI 生成代码越多，Review 成为交付瓶颈。“生成代码”会逐渐商品化，“审查和验证 AI 代码”会成为更高价值环节。",
+      "action_fact": "把一个 AI 生成的 PR 用人工 checklist 重审一遍：安全、边界条件、数据迁移、权限、回滚。再对照 Claude Code Review 的多 Agent 叙事，做团队代码审查模板。",
+      "action_judge": "短期不要迷信自动审查，先把它当作第二审查层。真正价值在于降低漏报，而不是替代人类 owner。",
+      "tags": ["Claude-Code-Review", "Product-Hunt", "PR审查", "Multi-Agent", "Reviewability"],
+      "sources": [
+        "https://www.producthunt.com/posts/cowork"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code 生态资源目录更新，Skills/Plugins/MCP/观测工具开始组合成工具箱",
+      "summary": "ScriptByAI 更新 Claude Code Resource List，汇总官方 Skills、Plugins、SDK、MCP、GUI、Usage/Observability 和替代 CLI Agent。",
+      "score": [3, 5, 4, 4, 4],
+      "why": "资源目录本身不是一手发布，但能反映 Claude Code 生态正在从单工具变成插件、技能、MCP、观测和成本管理的组合栈。未来团队采用 Agent，不是装一个 CLI，而是维护一套可审计工具箱。",
+      "action_fact": "按官方资源、Skills、MCP、Usage/Observability、安全审查五类整理自己的 Claude Code 工具箱，避免盲装第三方插件。",
+      "action_judge": "越是强大的 Agent 生态，越需要安装审计和最小权限；工具箱不是越多越好，而是越可控越好。",
+      "tags": ["Claude-Code", "Skills", "Plugins", "MCP", "Observability"],
+      "sources": [
+        "https://www.scriptbyai.com/claude-code-resource-list",
+        "https://github.com/anthropics/skills"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "AI 工具嵌入已有工作表面：Databox MCP / Dune Keypad / Mina / Typeahead",
+      "summary": "Product Hunt AI 分类页显示，本周多个 AI 产品不再要求用户打开新 App，而是嵌入业务数据、会议、键盘旁硬件、文本输入等已有场景。",
+      "score": [4, 4, 4, 4, 4],
+      "why": "Databox MCP 把业务数据接入 Claude，Dune Keypad 以硬件入口集成 Claude，Mina 进入视频会议，Typeahead 进入 Mac 自动补全。AI 产品的胜负越来越取决于分发位置，而不是模型参数。",
+      "action_fact": "做产品设计时少问“我要做一个 AI App 吗”，多问“用户原本在哪个界面卡住，我能不能把 AI 嵌进去”。",
+      "action_judge": "嵌入式 AI 会比独立 AI App 更容易留存，因为它减少了切换成本。尤其适合企业数据、会议和写作场景。",
+      "tags": ["Product-Hunt", "Databox-MCP", "Dune-Keypad", "Mina", "Typeahead", "嵌入式AI"],
+      "sources": [
+        "https://www.producthunt.com/categories/ai-software"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Hacker News 讨论 Claude Code 企业级成本，Agent ROI 进入公开争论",
+      "summary": "HN 围绕“Uber 四个月烧完 2026 Claude Code 预算”的讨论聚焦高额 token 成本是否能转化为足够产出。",
+      "score": [3, 4, 3, 4, 4],
+      "why": "讨论不是官方财务数据，不能当作事实结论，但反映企业采用 Coding Agent 后的成本焦虑。Agent ROI 的核心不是 token 单价，而是任务是否被拆得可验证、可复用、可审计。",
+      "action_fact": "给团队建立 AI 成本看板：按项目、技能、subagent、MCP、缓存命中和长上下文分别统计，不要只看总账单。",
+      "action_judge": "没有成本归因的 Agent 试点很容易变成黑箱烧钱；先做可观测性，再扩大使用面。",
+      "tags": ["Hacker-News", "AI成本", "Claude-Code", "ROI", "Usage-Attribution"],
+      "sources": [
+        "https://news.ycombinator.com/item?id=47976415"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code Review",
+      "type": "AI Code Review / Multi-agent",
+      "highlight": "多 Agent 并行审查 PR，主打 bug、安全和隐藏逻辑缺陷",
+      "audience": "AI 生成代码较多的工程团队",
+      "action": "选一个近期 AI PR，按其叙事做人工多维审查对照",
+      "url": "https://www.producthunt.com/posts/cowork"
+    },
+    {
+      "name": "Claude Code v2.1.183+",
+      "type": "Agentic Coding CLI",
+      "highlight": "auto mode 安全护栏、subagent/WebSearch/background task 修复",
+      "audience": "Claude Code 高频用户、Windows/多 Agent 用户",
+      "action": "升级并测试危险命令拦截和 subagent WebSearch",
+      "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md"
+    },
+    {
+      "name": "Claude Code Resource List",
+      "type": "资源目录",
+      "highlight": "把 Skills、Plugins、MCP、SDK、GUI、观测工具分组整理",
+      "audience": "想搭建 Claude Code 工具箱的人",
+      "action": "只从官方资源和高可信项目开始，不直接全量安装",
+      "url": "https://www.scriptbyai.com/claude-code-resource-list"
+    },
+    {
+      "name": "Databox MCP",
+      "type": "MCP / Business data",
+      "highlight": "把业务指标数据接入 Claude",
+      "audience": "运营、BI、管理者、数据分析团队",
+      "action": "梳理一个业务指标问答场景，验证 MCP 接入价值",
+      "url": "https://www.producthunt.com/categories/ai-software"
+    },
+    {
+      "name": "Dune Keypad",
+      "type": "AI Hardware / Workflow",
+      "highlight": "键盘旁硬件入口集成 Claude",
+      "audience": "重度快捷操作用户、内容创作者",
+      "action": "先不买硬件，先设计 5 个固定 AI 快捷工作流",
+      "url": "https://www.producthunt.com/categories/ai-software"
+    },
+    {
+      "name": "Typeahead",
+      "type": "Mac Autocomplete",
+      "highlight": "把 AI 自动补全嵌入系统输入场景",
+      "audience": "写作、客服、销售、日常办公用户",
+      "action": "测试常用应用里的延迟、隐私和中文输入兼容性",
+      "url": "https://www.producthunt.com/categories/ai-software"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "AI 写代码已经不稀奇，真正值钱的是 AI 审代码",
+      "hook": "Claude Code Review 用多 Agent 审 PR",
+      "angle": "先展示 AI 生成 PR 的常见隐藏 bug，再讲为什么 reviewability 成为新瓶颈",
+      "materials": "一个小 PR、人工 checklist、Product Hunt 页面",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 这次小更新，为什么比新功能更重要？",
+      "hook": "阻止危险 git/infra 命令、防止误批准动作",
+      "angle": "用“Agent 误删代码/误 destroy stack”的风险故事切入，讲 auto mode 安全护栏",
+      "materials": "changelog 截图、危险命令示例、团队权限模板",
+      "difficulty": "中"
+    },
+    {
+      "title": "AI 工具正在消失：不再打开 App，而是嵌进你的键盘、会议和数据面板",
+      "hook": "Product Hunt 多个 AI 产品嵌入已有工作流",
+      "angle": "对比“单独 AI App”与“嵌入式 AI”，解释分发位置比模型更重要",
+      "materials": "Databox MCP、Dune Keypad、Mina、Typeahead 页面截图",
+      "difficulty": "低"
+    },
+    {
+      "title": "公司用 Coding Agent，最先爆的可能不是效率，而是账单",
+      "hook": "HN 企业级 Claude Code 成本讨论",
+      "angle": "用 HN 争议做引子，给出 AI 成本看板的 5 个字段",
+      "materials": "HN 讨论截图、模拟成本表、Claude usage 分类",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "LLM Stats “AI Updates Today / LLM News Today”",
+      "reason": "页面需要验证且正文只显示 Loading/Newsletter，无法拿到可验证事件。"
+    },
+    {
+      "item": "Mean CEO “New AI Model Releases June 2026”",
+      "reason": "创业媒体聚合文，提到 GPT-5.5 等但缺少一手官方源，作为模型发布依据不足。"
+    },
+    {
+      "item": "awesome-ai-agents-2026 多个 GitHub 列表",
+      "reason": "资源清单型内容，信息量大但新颖性低，不能当作今日事件。"
+    },
+    {
+      "item": "旧版 MCP Tool Search 文章",
+      "reason": "文章发布时间早于本日报窗口，作为背景可参考，但不是今日更新。"
+    },
+    {
+      "item": "Claude Fable 5 / Mythos 5 月度回顾",
+      "reason": "此前日报已覆盖多次，今日没有新的官方变化，继续重复会污染信息差。"
+    },
+    {
+      "item": "HN 成本讨论中的具体企业预算说法",
+      "reason": "单一社区讨论且标题化严重，不把数字当作事实，只保留“成本治理焦虑”这个弱信号。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Claude Code 2.1.185 后续",
+      "reason": "看是否继续围绕 auto mode、subagent、task notifications 和 WebSearch 修补。"
+    },
+    {
+      "item": "Claude Code Review 官方文档",
+      "reason": "Product Hunt 已出现，需追 Anthropic 是否发布更完整的 Team/Enterprise 说明。"
+    },
+    {
+      "item": "Agent 成本治理工具",
+      "reason": "重点看 usage attribution、per-skill/per-MCP 成本、缓存命中和预算上限功能。"
+    },
+    {
+      "item": "MCP 商业数据入口",
+      "reason": "Databox MCP 代表业务数据接入 Claude 的方向，适合做实操验证。"
+    },
+    {
+      "item": "OpenDesign / Claude Design",
+      "reason": "继续等 Claude Design 新案例或品牌一致性工作流，不硬凑旧消息。"
+    },
+    {
+      "item": "GitHub / Product Hunt 新工具",
+      "reason": "过滤 awesome list，优先找能实测、可复现、有明确 changelog 的项目。"
+    }
+  ]
+}
