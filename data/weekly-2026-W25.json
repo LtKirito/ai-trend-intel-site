@@ -1,0 +1,99 @@
+{
+  "week": "2026-W25",
+  "title": "2026 W25 GitHub AI 星标周报",
+  "summary": "Agent工程化从技能生态继续下沉到上下文基础设施：Token压缩、代码记忆MCP、Agent互联网触达、安全扫描和多模态视频工作流成为本周最强增长主线。",
+  "count": "10 个项目",
+  "theme": "上下文压缩 · 代码记忆 · Agent安全 · 视频工作流",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "headroom",
+      "category": "DevTools",
+      "stars": "44.0k",
+      "growth": "+16.5k",
+      "why": "LLM输入压缩60-95%，MCP/代理/库三模式继续霸榜",
+      "url": "https://github.com/chopratejas/headroom"
+    },
+    {
+      "rank": "02",
+      "name": "skills",
+      "category": "Agent",
+      "stars": "139.6k",
+      "growth": "+8.6k",
+      "why": "Matt Pocock公开真实工程Claude技能，Skills-as-Code继续扩散",
+      "url": "https://github.com/mattpocock/skills"
+    },
+    {
+      "rank": "03",
+      "name": "Agent-Reach",
+      "category": "Agent",
+      "stars": "36.8k",
+      "growth": "+8.1k",
+      "why": "让Agent免API读搜多平台内容，补齐互联网感知入口",
+      "url": "https://github.com/Panniantong/Agent-Reach"
+    },
+    {
+      "rank": "04",
+      "name": "deer-flow",
+      "category": "Agent",
+      "stars": "72.5k",
+      "growth": "+5.5k",
+      "why": "字节长任务SuperAgent，沙箱/记忆/子Agent组合成生产级harness",
+      "url": "https://github.com/bytedance/deer-flow"
+    },
+    {
+      "rank": "05",
+      "name": "codebase-memory-mcp",
+      "category": "Infra",
+      "stars": "10.2k",
+      "growth": "+5.4k",
+      "why": "代码库秒级索引为知识图谱，MCP查询声称省99% token",
+      "url": "https://github.com/DeusData/codebase-memory-mcp"
+    },
+    {
+      "rank": "06",
+      "name": "agent-skills",
+      "category": "Agent",
+      "stars": "64.7k",
+      "growth": "+5.3k",
+      "why": "Addy Osmani生产级编码Agent技能库，继续定义工程实践",
+      "url": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "rank": "07",
+      "name": "palmier-pro",
+      "category": "Multimodal",
+      "stars": "4.9k",
+      "growth": "+4.9k",
+      "why": "为AI而生的macOS视频编辑器，MCP接入剪辑时间线",
+      "url": "https://github.com/palmier-io/palmier-pro"
+    },
+    {
+      "rank": "08",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "category": "Agent",
+      "stars": "17.6k",
+      "growth": "+4.6k",
+      "why": "754个网络安全Agent技能，映射MITRE/NIST等5套框架",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+    },
+    {
+      "rank": "09",
+      "name": "SkillSpector",
+      "category": "Agent",
+      "stars": "9.0k",
+      "growth": "+3.8k",
+      "why": "NVIDIA技能安全扫描器，Agent技能生态安全治理升温",
+      "url": "https://github.com/NVIDIA/SkillSpector"
+    },
+    {
+      "rank": "10",
+      "name": "timesfm",
+      "category": "Infra",
+      "stars": "24.8k",
+      "growth": "+3.7k",
+      "why": "Google时间序列基础模型回到周榜，预测模型工程化热度上升",
+      "url": "https://github.com/google-research/timesfm"
+    }
+  ]
+}
