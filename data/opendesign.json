@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 68711,
-    "forks": 7730,
-    "open_issues": 394,
+    "stars": 69355,
+    "forks": 7823,
+    "open_issues": 409,
     "latest_release": {
       "version": "open-design-v0.11.0",
       "date": "2026-06-17",
@@ -12,58 +12,58 @@
   },
   "recent_prs": [
     {
-      "number": 4533,
-      "title": "fix: resume interrupted complex page generations",
+      "number": 4659,
+      "title": "refactor(daemon): split server helper modules",
       "state": "open",
-      "author": "nettee",
-      "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "高 — 将可见流式输出视为可恢复边界，使中断的文本密集型生成可以续传而非从头重启；同时从当前对话播种新项目会话，使项目级设计上下文延续。修复 #4137，由 Looper 自动化 agent 提交",
-      "url": "https://github.com/nexu-io/open-design/pull/4533"
+      "author": "mrcfps",
+      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
+      "impact": "极高 — 今日新增 XXL 重构：daemon 服务器端 helper 模块拆分，涉及 daemon 内部架构级变化。与 #4632 auth 修复、#4633 Codex 品牌提取修复同期并行，daemon 层正经历 v0.11.0 后最大幅度的结构性调整，对所有 agent 适配器有链式影响",
+      "url": "https://github.com/nexu-io/open-design/pull/4659"
+    },
+    {
+      "number": 4656,
+      "title": "feat(web): unify task-failure error card across all failure states",
+      "state": "open",
+      "author": "michaeltaxman911-hue",
+      "labels": ["size/XL", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "高 — 今日新增：将任务失败错误卡片在所有失败状态下统一呈现。与 #982（结构化错误分类）和 #2009（daemon stderr 退出 UX）形成 agent 失败 UX 三线汇聚——agent 失败时的信息呈现正被系统性地重塑，从 raw stderr 尾部转向结构化、可读的诊断界面",
+      "url": "https://github.com/nexu-io/open-design/pull/4656"
+    },
+    {
+      "number": 4630,
+      "title": "fix(web): keep the pinned Home tab opaque on hover so crowded tabs don't bleed through (#4446)",
+      "state": "merged",
+      "author": "AriaZhao-coder",
+      "labels": ["size/S", "risk/medium", "type/bugfix", "validated"],
+      "impact": "低 — 已合入：修复 pinned Home tab 在 hover 时透明导致下方标签文字穿透的 UI bug（#4446），小改动但直接影响多标签页使用场景的视觉清晰度",
+      "url": "https://github.com/nexu-io/open-design/pull/4630"
+    },
+    {
+      "number": 4633,
+      "title": "[codex] Fix onboarding brand extraction flow",
+      "state": "open",
+      "author": "PerishCode",
+      "labels": ["size/M", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "高 — Codex 作为核心 agent 适配器，其 onboarding 品牌提取流程修复直接影响新用户首次体验; high risk 标记提示变更涉及品牌提取核心逻辑",
+      "url": "https://github.com/nexu-io/open-design/pull/4633"
+    },
+    {
+      "number": 4632,
+      "title": "fix(daemon): stop local CLI auth probes misclassifying valid API-key and profile-based auth",
+      "state": "open",
+      "author": "thatditsyboy",
+      "labels": ["size/L", "risk/high", "type/bugfix", "validated"],
+      "impact": "高 — daemon 层 auth 误报修复：本地 CLI auth 探针错误地将有效的 API-key 和 profile-based auth 判定为无效，直接影响多 agent 共存时的认证链路可靠性。validated 标记表示已有确认复现路径",
+      "url": "https://github.com/nexu-io/open-design/pull/4632"
     },
     {
       "number": 4041,
       "title": "feat: add multi-agent team collaboration module (review fixes applied)",
       "state": "open",
       "author": "pixcore598-design",
-      "labels": ["size/XXL", "risk/medium", "type/feature"],
-      "impact": "极高 — v0.11.0 后仍未合入的最大社区功能：5 种多 Agent 协作模式（parallel/serial/genetic/inheritance/hybrid），YAML 驱动团队定义 + DAG 拓扑排序 + pub-sub 通信总线 + 遗传算法引擎 + SQLite 执行历史。已修复 review 阻断项（module path / agentId / json type），持续 review 中，requested_reviewer 已分配 free666799",
+      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "极高 — v0.11.0 后仍未合入的最大社区功能：5 种多 Agent 协作模式（parallel/serial/genetic/inheritance/hybrid），YAML 驱动团队定义 + DAG 拓扑排序 + pub-sub 通信总线 + 遗传算法引擎 + SQLite 执行历史。持续 review 已超过 2 周，community 最大期待",
       "url": "https://github.com/nexu-io/open-design/pull/4041"
-    },
-    {
-      "number": 4504,
-      "title": "docs(spec): stability & performance — current state + fix/optimization plan",
-      "state": "merged",
-      "author": "lefarcen",
-      "labels": ["size/M", "risk/medium", "type/docs"],
-      "impact": "高 — 系统性诊断产品最痛的 ~10s 首 token 延迟（AMR p50 10.4s / claude_code 8.2s，每条消息重复冷启动）。三阶段计划：Phase 1 子插桩 spawn_to_first_token → cli_ready/session_init/model_first_token；Phase 2 PostHog A/B；Phase 3 session resume 修复。为 #3380/#3408 可靠性推进提供数据基座",
-      "url": "https://github.com/nexu-io/open-design/pull/4504"
-    },
-    {
-      "number": 4250,
-      "title": "feat(daemon): add OD_ALLOWED_INTERNAL_HOSTS allowlist for internal provider endpoints",
-      "state": "open",
-      "author": "maxmilian",
-      "labels": ["size/L", "risk/high", "type/feature", "needs-validation"],
-      "impact": "高 — 恢复 v0.8.0 SSRF 加固后误伤的企业 BYOK 场景：内网 LiteLLM/Ollama（10.x / 192.168.x）被硬阻断。新增 daemon 环境变量 allowlist，默认严格 deny 不变，攻击者可控 asset-download guard 不受 allowlist 影响。三层 red-first 测试覆盖",
-      "url": "https://github.com/nexu-io/open-design/pull/4250"
-    },
-    {
-      "number": 4603,
-      "title": "ci: move lightweight workspace checks to hosted runners",
-      "state": "open",
-      "author": "PerishCode",
-      "labels": ["size/S", "risk/high", "type/chore", "skip-validation"],
-      "impact": "中 — CI 成本实验：将轻量 workspace 单测和 web workspace 测试从 Blacksmith 迁移到 GitHub-hosted Ubuntu runner，视觉 Playwright 仍留 Blacksmith。同时修复 visual report comment 创建时 'Resource not accessible by integration' 的 fallback 行为",
-      "url": "https://github.com/nexu-io/open-design/pull/4603"
-    },
-    {
-      "number": 3952,
-      "title": "fix(daemon): report Deliver-to-editor launch failures instead of swallowing them",
-      "state": "open",
-      "author": "maxmilian",
-      "labels": ["size/S", "risk/high", "type/bugfix"],
-      "impact": "中 — 修复 #3871：Deliver to VS Code 点击后无反应无报错的静默失败。daemon 的 /api/projects/:id/open-in 路由在 spawn error 事件触发前同步返回 {ok:true}，导致 OS 拒绝启动被误报为成功。macOS/Linux 修复，Windows 因 shell:true 限制为后续跟进",
-      "url": "https://github.com/nexu-io/open-design/pull/3952"
     },
     {
       "number": 3509,
@@ -71,139 +71,135 @@
       "state": "open",
       "author": "SugarFatFree",
       "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "极高 — 55 条评论的社区高热 PR：新增 tools-pack webui build 产出无 Electron 的终端启动发行版，支持 headless Linux/容器/CLI 嵌入场景。open-design start|stop|status 启动器 + 可配置 port/host/token + en/zh-CN 本地化。补齐 Open Design 在服务器部署和 Agent 嵌入场景的最后一块拼图",
+      "impact": "极高 — 55 条评论的社区高热 PR：新增无 Electron 的终端启动发行版，支持 headless Linux/容器/CLI 嵌入场景。open-design start|stop|status 启动器 + 可配置 port/host/token。是补齐 Open Design 在服务器部署和 Agent 嵌入场景的关键拼图，Linux 社区呼声极高（#4368 + #3759 持续积压）",
       "url": "https://github.com/nexu-io/open-design/pull/3509"
     },
     {
-      "number": 4524,
-      "title": "[codex] Clean deprecated launcher payloads on updater startup",
+      "number": 2009,
+      "title": "Improve agent failure UX for daemon stderr exits",
       "state": "open",
-      "author": "PerishCode",
-      "labels": ["size/XXL", "risk/high", "type/bugfix", "skip-validation"],
-      "impact": "中 — 修复 Windows beta 覆盖安装后旧 launcher payload 目录残留问题：updater 冷启动时消费 launcher cleanup contract，清理被 superseded 的版本目录。本地 E2E 验证 beta.2→beta.3 全链路通过，附带发现 NSIS payload 7z 超时（300s 限制 vs 实际 79s）的构建性能问题",
-      "url": "https://github.com/nexu-io/open-design/pull/4524"
+      "author": "bulai0408",
+      "labels": ["size/XL", "risk/medium", "type/bugfix"],
+      "impact": "高 — 长期 open 的 agent 失败 UX 改进（XL），与 #982 结构化错误分类和 #4656 统一错误卡形成三线汇聚——daemon stderr 退出场景的错误呈现将得到改善。5/18 创建至今，社区耐心等待",
+      "url": "https://github.com/nexu-io/open-design/pull/2009"
     }
   ],
   "recent_issues": [
     {
-      "number": 3508,
-      "title": "Cross-platform \"WebUI\" packaging type (terminal-launched, no-Electron)",
-      "author": "SugarFatFree",
-      "labels": ["enhancement", "needs-product-direction"],
-      "comments": 5,
-      "summary": "社区需求：headless Linux 服务器/容器/CLI 嵌入场景下无可用打包形态，提案新增无 Electron 的 WebUI 打包类型（daemon+web 双进程 + 终端启动器 + 可配置端口/token）。已有对应 PR #3509（55 评论），等待产品方向确认是否纳入主打包矩阵",
-      "url": "https://github.com/nexu-io/open-design/issues/3508"
+      "number": 982,
+      "title": "Improve agent failure UX: surface structured errors (quota, auth, rate limit) instead of raw stderr tails",
+      "author": "gabrielvaz",
+      "labels": ["enhancement", "help wanted"],
+      "comments": 18,
+      "summary": "最受关注的 UX issue（18 评论）：agent 失败时显示原始 stderr 尾部（最后 400 字节）对非开发者毫无意义。提案解析分类常见失败模式（配额/认证/速率限制）并结构化呈现，完整 stderr 放入可折叠面板。与 #2009 PR 和 #4656 错误卡统一形成 agent 失败 UX 三线汇聚",
+      "url": "https://github.com/nexu-io/open-design/issues/982"
     },
     {
-      "number": 3605,
-      "title": "Fix image export when artifact snapshot capture returns null",
+      "number": 4489,
+      "title": "[Bug]: installs from source and from install.sh are dysfunctional",
+      "author": "3p3r",
+      "labels": ["bug"],
+      "comments": 14,
+      "summary": "安装体验核心 bug（14 评论）：install.sh 重定向到首页而非 shell 脚本，git clone + pnpm 源码安装后 daemon unreachable + CORS/403 错误。影响 Linux 和 Windows。v0.11.0 发布后持续 open，严重影响新用户 onboarding 第一印象",
+      "url": "https://github.com/nexu-io/open-design/issues/4489"
+    },
+    {
+      "number": 1241,
+      "title": "feat: add artifact version history and current revision model",
+      "author": "nettee",
+      "labels": ["type/feature", "stale"],
+      "comments": 15,
+      "summary": "功能请求（15 评论，stale）：为设计 artifact 引入版本历史，解决多次迭代后 admin-overview.html / admin-overview-2.html / admin-overview-3.html 文件散落问题。artifact 应作为一等设计对象具有当前版本和历史修订记录。stale 标记但仍有 15 评论热度",
+      "url": "https://github.com/nexu-io/open-design/issues/1241"
+    },
+    {
+      "number": 4400,
+      "title": "Codex Desktop can accumulate Open Design MCP helper processes after repeated session initialization",
+      "author": "100yenadmin",
+      "labels": ["bug", "help wanted"],
+      "comments": 11,
+      "summary": "Codex Desktop 集成 bug：重复会话初始化导致 MCP helper 进程泄漏（本地快照 count=12, rss ~61MB），最长存活超 7 小时。主要是 Codex 生命周期缺陷，但创建了 Open Design 集成层面的失败模式",
+      "url": "https://github.com/nexu-io/open-design/issues/4400"
+    },
+    {
+      "number": 4623,
+      "title": "[Bug]: Open Design image generation fails with local Codex media provider (ENOENT: no such file or directory)",
+      "author": "andywojturski-lab",
+      "labels": ["bug", "help wanted"],
+      "comments": 11,
+      "summary": "v0.11.0 + Codex CLI 0.141.0 下图片生成失败（11 评论）：异步任务接受后 job 文件夹从未创建，无图片输出。HTML/CSS 生成正常但图片生成路径 100% 失败，macOS arm64。help wanted，等待更多环境复现信息",
+      "url": "https://github.com/nexu-io/open-design/issues/4623"
+    },
+    {
+      "number": 4648,
+      "title": "[Bug]: Windows + WSL MCP setup can resolve `od` to the wrong binary and leaves daemon startup path ambiguous",
+      "author": "SPRIME01",
+      "labels": ["bug", "good first issue", "help wanted"],
+      "comments": 6,
+      "summary": "Windows+WSL 双环境下的路径歧义新 bug（6 评论）：`od` 被解析为 Linux octal-dump 而非 Open Design CLI，`od.exe` 指向 Windows coreutils。需手动创建 WSL-native 包装脚本。good first issue，适合社区贡献",
+      "url": "https://github.com/nexu-io/open-design/issues/4648"
+    },
+    {
+      "number": 4607,
+      "title": "Active daemon run reload can lose artifact persistence after reattach",
       "author": "AmyShang-alt",
       "labels": ["bug", "priority:p1"],
-      "comments": 8,
-      "summary": "P1：从渲染的设计 artifact 导出图片时，预览快照桥接返回 null 导致导出模态立即显示捕获失败。Nightly 本地验证（06-03）发现，影响所有图片导出路径",
-      "url": "https://github.com/nexu-io/open-design/issues/3605"
-    },
-    {
-      "number": 4602,
-      "title": "[Bug]: Wallet balance can fail to hydrate and surface ACP error -32600",
-      "author": "kokisanai",
-      "labels": ["bug"],
-      "comments": 1,
-      "summary": "Discord 中文区多用户报告：钱包有余额但 Open Design 表现为免费账户无法读取余额，请求失败 ACP error -32600: failed to evaluate wallet balance。计费/运行时层面的 hydration 故障，引发用户充值焦虑",
-      "url": "https://github.com/nexu-io/open-design/issues/4602"
-    },
-    {
-      "number": 3408,
-      "title": "Reliability push: classify run failures, correlate PostHog with Langfuse, and add safe retries",
-      "author": "yinjialu",
-      "labels": ["enhancement"],
-      "comments": 30,
-      "summary": "可靠性推进核心 issue（30 评论）：目标将 chat run 失败率从 ~14.75% 降至 <=8%。窗口 05-12~05-30 共 ~179k run_finished 事件，失败跨引擎系统性分布（claude ~14.8% / codex ~14.3% / gemini ~16.8%）。#4504 TTFT spec 已作为该 issue 的首批产出合入",
-      "url": "https://github.com/nexu-io/open-design/issues/3408"
-    },
-    {
-      "number": 4598,
-      "title": "[Bug]: Windows, not reading workspace files",
-      "author": "gyaaniguy",
-      "labels": ["bug", "help wanted"],
-      "comments": 5,
-      "summary": "Windows 上 Open Design 无法读取工作区文件和 claude design zip，疑似与自定义 provider（OpenCode Go）交互有关。新项目用 'claude design zip' 时同样可见，Windows 文件读取路径回归",
-      "url": "https://github.com/nexu-io/open-design/issues/4598"
-    },
-    {
-      "number": 2589,
-      "title": "Kimi CLI 1.44.0 json-rpc id 3: Internal error",
-      "author": "firefly1991",
-      "labels": ["bug", "duplicate", "priority:p1", "stale"],
-      "comments": 3,
-      "summary": "P1 长期未闭环（stale）：Windows 10 上 v0.7.0/v0.8.0 使用 Kimi CLI 1.44.0 报 json-rpc 内部错误。标记为 duplicate 但仍持续被社区复现",
-      "url": "https://github.com/nexu-io/open-design/issues/2589"
-    },
-    {
-      "number": 1611,
-      "title": "Error when using Gemini model",
-      "author": "kutzki",
-      "labels": ["bug", "priority:p1", "stale"],
-      "comments": 18,
-      "summary": "P1 stale（18 评论）：Windows 上使用 Gemini 模型报错。v0.11.0 已更新 Gemini BYOK 模型列表（移除已关闭 2.0、添加 3.x），但此 issue 可能仍需验证是否已解决",
-      "url": "https://github.com/nexu-io/open-design/issues/1611"
-    },
-    {
-      "number": 4539,
-      "title": "Warp host tool shows \"not detected on $PATH\" on Windows/Linux",
-      "author": "cbeaulieu-gt",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 9,
-      "summary": "Windows/Linux 上 Warp 终端在项目 Hand-off 菜单中始终显示不可用（'not detected on $PATH'），因为 catalogue 条目仅 macOS 可用但未做平台门禁。good first issue，适合社区贡献",
-      "url": "https://github.com/nexu-io/open-design/issues/4539"
-    },
-    {
-      "number": 2175,
-      "title": "Plugin Phase 2C: add od run logs --since",
-      "author": "bulai0408",
-      "labels": ["type/feature"],
       "comments": 6,
-      "summary": "功能请求：实现 od run logs <runId> [--since <RFC3339>] [--json] 以支持 headless agent 在 run 结束后获取缓冲的历史日志事件，补充现有实时 od run watch SSE 路径",
-      "url": "https://github.com/nexu-io/open-design/issues/2175"
+      "summary": "P1 bug：活跃 daemon run 期间页面重载后 reattach 成功但 artifact 持久化丢失。破坏 generate → reload/recover → inspect/refine 闭环。是 #2973 reload/reattach 问题的具体变体",
+      "url": "https://github.com/nexu-io/open-design/issues/4607"
     },
     {
-      "number": 4410,
-      "title": "AMR: normalize Vela's kimi_k2_7_code id to kimi-k2.7-code",
-      "author": "h2m6jcm94s-eng",
-      "labels": ["bug", "good first issue", "help wanted"],
+      "number": 3759,
+      "title": "Please bring the linux app as well",
+      "author": "razu381",
+      "labels": ["enhancement", "needs-product-direction"],
+      "comments": 7,
+      "summary": "Linux 支持呼声（7 评论，needs-product-direction）：社区持续请求 Linux 原生应用，愿意贡献 PR。与 #4368（No Linux app image）同类型积压，需产品方向确认是否纳入主打包矩阵",
+      "url": "https://github.com/nexu-io/open-design/issues/3759"
+    },
+    {
+      "number": 4650,
+      "title": "Preview Reload button is a no-op on srcDoc render path (deck / inspect / comment / tweaks)",
+      "author": "cbeaulieu-gt",
+      "labels": ["bug"],
       "comments": 5,
-      "summary": "Vela AMR 代理的 Kimi K2.7 Code 模型 ID（kimi_k2_7_code）缺少到规范 ID（kimi-k2.7-code）的归一化规则，导致该模型在 Open Design 中无法被正确识别。good first issue",
-      "url": "https://github.com/nexu-io/open-design/issues/4410"
+      "summary": "今日新增 bug：预览 Reload 按钮在 srcDoc 渲染路径（deck/inspect/comment/tweaks）下完全无效。根因为 reloadKey 未纳入 srcDoc useMemo 依赖数组 + 异步源重取前 iframe remount 竞态。当前 workaround 是关闭并重新打开预览窗口",
+      "url": "https://github.com/nexu-io/open-design/issues/4650"
+    },
+    {
+      "number": 4368,
+      "title": "[Bug]: NO Linux app image",
+      "author": "Abdulee",
+      "labels": ["bug"],
+      "comments": 4,
+      "summary": "Linux AppImage 缺失（4 评论）：README 声称有 Linux 二进制/AppImage，但 release 中实际不存在。v0.10 起报告，与 #3759 Linux 请求形成持续积压组合",
+      "url": "https://github.com/nexu-io/open-design/issues/4368"
     }
   ],
   "trends": {
-    "direction": "v0.11.0 'The Bazaar' 发布后第 5 天，团队重心从 hotfix 吸收窗口转向性能优化与可靠性系统化诊断。#4504 TTFT profiling spec 于 06-22 合入，标志着 ~10s 首 token 延迟问题进入三阶段系统性修复轨道（可观测性插桩 → A/B 实验 → session resume 修复）。社区贡献持续高活跃，#3509 WebUI 无 Electron 打包（55 评论）和 #4260 品牌识别+双循环记忆仍在大规模 review。open_issues 从 404→394（-10），hotfix 效果开始显现。",
+    "direction": "v0.11.0 'The Bazaar' 发布后第 6 天，hotfix 吸收窗口尚未闭合——open_issues 从 394 反弹至 409（+15），但合入节奏在提速（#4630 Home tab bug 今日已合入）。今日特征为 daemon 架构重构突发：#4659（XXL server 模块拆分）和 #4632（L auth 误报修复）同日进入 review，配合 #4633 Codex 品牌提取修复，daemon 层经历 v0.11.0 后最大幅度的结构性调整。agent 失败 UX 出现三线汇聚信号：#982（结构化错误分类）+ #2009（daemon stderr 退出 UX）+ #4656（统一错误卡），该领域正被系统性重塑。社区侧 Windows+WSL 路径歧义（#4648）和预览 Reload 失效（#4650）为新增 UX 摩擦点。stars 增速回落至日均 ~322（vs 上周 ~465），趋于稳态但仍高于 v0.10.x 基准 ~320/天。",
     "affected_modules": [
-      "运行性能与可观测性（#4504 TTFT spec / #3408 可靠性推进 14.75%→8% / spawn_to_first_token 子插桩）— v0.11.0 后最高优先级",
-      "WebUI 无 Electron 打包（#3509 XXL PR 55 评论 / #3508 产品方向确认）— 补齐 headless/容器/Agent 嵌入部署场景",
-      "桌面更新器生命周期（#4524 launcher payload 清理 / Windows beta 覆盖安装残留）",
-      "SSRF 安全与企业 BYOK（#4250 OD_ALLOWED_INTERNAL_HOSTS allowlist / 内网 LiteLLM/Ollama 解锁）",
-      "品牌识别 + 双循环记忆系统（#4260 仍持续 review / PRE-POST loop / agent-driven brand extraction）",
-      "多 Agent 协作引擎（#4041 仍持续 review / 5 模式 / DAG + 遗传算法）",
-      "编辑器交付路径（#3952 Deliver-to-editor 静默失败修复 / macOS-Linux / Windows 待跟进）",
-      "生成中断恢复（#4533 流式输出续传 / 项目会话播种）",
-      "CI 基建成本优化（#4603 Blacksmith → GitHub-hosted runner 迁移实验）"
+      "daemon（#4659 服务器模块拆分 XXL +#4632 auth 修复 L +#4633 Codex 品牌提取 M — v0.11.0 后最大结构性调整）",
+      "web（#4656 任务失败错误卡统一 XL +#4630 Home tab hover 已合入 +#4650 预览 Reload srcDoc 修复）",
+      "agent（#982 结构化错误 + #2009 daemon stderr 退出 UX + #4656 错误卡 — 失败 UX 三线汇聚重塑）",
+      "platform（#4648 Windows+WSL 路径歧义 / #4489 install.sh 破损 / #4368+#3759 Linux 支持缺口）",
+      "tools-pack（#3509 WebUI 无 Electron 打包 XXL — headless 部署拼图）",
+      "codex（#4633 品牌提取修复 / #4400 MCP helper 进程泄漏 / #4623 图片生成失败）"
     ],
     "risks": [
-      "TTFT ~10s 延迟系统性存在：AMR p50 10.4s / claude_code 8.2s，且 claude_code 每条消息重复冷启动（turn 1=8.2s, turn 2+=9.3s），严重影响持续交互体验",
-      "钱包余额读取失败 #4602：ACP error -32600 failed to evaluate wallet balance，Discord 中文区多用户报告，可能影响 AMR 计费信任链",
-      "运行失败率 14.75%（#3408）：~179k run_finished 事件中跨引擎系统性失败，gemini 最差 ~16.8%",
-      "Windows workspace 文件读取失败 #4598：自定义 provider 下工作区文件不可读，Windows 回归",
-      "多 Agent #4041 和品牌识别 #4260 两个 XXL PR 持续 open：作为社区最大期待功能长期未合入可能影响信心",
-      "v0.11.0 发布后无 patch 版本：stars 4 天 +1,861（日均 ~465，较发布首周 ~648 趋缓但仍高位），open_issues 394 未现显著下降拐点"
+      "daemon 同时推进 XXL 架构重构（#4659）和多个高风险 bugfix（#4632, #4633），变更密度极大，回归风险高度集中",
+      "open_issues 从 394 反弹至 409（+15）——v0.11.0 hotfix 窗口期修复速度可能追不上新增速度",
+      "安装体验持续恶化：#4489 install.sh 仍 broken（14 评论），新增 #4648 Windows+WSL 路径歧义阻断新用户 onboarding",
+      "Linux 支持缺口扩大：#4368+#3759 持续积压，#3509 WebUI 打包未合入，社区 Linux 呼声与交付能力之间的 gap 未缩小",
+      "agent 失败 UX 是当前社区最高热度痛点——#982（18 评论）+ #2009 + #4656 三线汇聚意味着预期被抬升，若交付延迟可能引发社区 frustration"
     ],
     "actions": [
-      "关注 #4504 TTFT spec Phase 1 可观测性插桩落地——sub-instrument spawn_to_first_token 为后续 session resume 修复提供数据基座",
-      "跟踪 #4602 钱包余额 hydration bug——ACP -32600 可能影响 AMR 计费信任链，需评估影响范围和紧急程度",
-      "评估 #3509 WebUI 打包对 headless/容器/Agent 嵌入部署场景的战略价值——55 评论社区热度极高，可能成为 v0.12 核心交付",
-      "关注 #4250 OD_ALLOWED_INTERNAL_HOSTS 从 draft 转 ready——企业 BYOK SSRF allowlist 解锁内网模型网关",
-      "监测 open_issues 394 的下降趋势是否持续——v0.11.0 发布后 hotfix 效果开始显现（404→394），若加速可能预示 v0.11.1 patch 接近"
+      "重点关注 #4659 daemon 拆分——若合入将改变 daemon 内部架构，需评估对自定义 agent 适配器的影响",
+      "跟踪 #4632 auth 修复——validated 标记表示已有确认复现路径，评估本地多 agent 场景是否复现误报",
+      "关注 agent 失败 UX 三线汇聚（#982+#2009+#4656）的进展——若能系统性落地，将显著改善日常使用的错误诊断体验",
+      "验证 #4650 预览 Reload 失效是否影响本地工作流——当前 workaround 是关闭重开预览窗口",
+      "监测 open_issues 409 是否在下半周重新回落——若继续上升可能预示 v0.11.1 hotfix 迫近"
     ],
-    "next_week": "预计 #4504 TTFT Phase 1 可观测性插桩可能在本周落地，为 #3380 session resume 修复提供诊断数据。#4250 OD_ALLOWED_INTERNAL_HOSTS 可能从 draft 转 ready 进入合入评估。#3509 WebUI 打包（55 评论高热）可能进入产品方向确认阶段。#4602 钱包余额 bug 和 #4598 Windows 文件读取 bug 可能驱动 v0.11.1 hotfix 发布。多 Agent #4041 和品牌识别 #4260 两个 XXL 主线预计仍将持续 review。stars 增长从日均 648 降至 ~465，趋于稳态但仍远超 v0.10.x 时期的 ~320/天，若持续可能预示社区破圈效应巩固。"
+    "next_week": "预计 #4659 daemon 拆分和 #4632 auth 修复将进入集中 review 和合并窗口；#4656 错误卡统一大概率下周合入，与 #982 结构化错误设计形成 UX 层面协同；#4633 Codex 品牌提取修复可能快速合入（M 规模 + PerishCode 主维护者）；#3509 WebUI 打包可能因 Linux 需求声量（#4368+#3759）增大而加速推进；若 open_issues 409 增速不降，v0.11.1 版本号可能在下周触发。"
   }
 }
