@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-24",
+    "label": "6 月 24 日 (周三)",
+    "count": "0P0 + 6P1",
+    "tags": "Claude-Code · MCP · Agent治理 · Background-Agent · Sandbox-Credentials · Plugins · Skills · Open-Design · Claude-Design · Local-first · Product-Hunt · AI-Agents · Figma-Agent · Data-Agent · Agentjacking",
+    "summary": "6/24 没有可靠模型级 P0；今天的信息差是 Agent 工具进入工程治理和工作表面接管阶段：Claude Code 修 MCP/插件/后台 agent/凭据隔离，Open Design 把设计流程本地化，Product Hunt AI Agents 继续场景化。"
+  },
+  {
     "date": "2026-06-23",
     "label": "6 月 23 日 (周二)",
     "count": "3P0 + 7P1",

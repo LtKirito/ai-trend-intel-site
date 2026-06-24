@@ -1,0 +1,299 @@
+{
+  "date": "2026-06-24",
+  "title": "2026-06-24 AI信息差日报",
+  "coverage": "覆盖窗口：6/23 ~ 6/24",
+  "sources": "信息源：Anthropic Claude Code Docs / Anthropic Claude Code GitHub CHANGELOG / Releasebot / Open Design 官网 / Open Design GitHub / Product Hunt AI Agents / Product Hunt June 2026 Leaderboard / Hacker News 搜索 / 中文技术社区搜索",
+  "conclusions": [
+    "今天没有可靠的新模型级 P0，不硬凑爆点；核心信号集中在 Agent 工程治理、本地优先设计工作流和场景化 AI Agent 产品。",
+    "Claude Code 2.1.186/2.1.187 连续强化 MCP CLI 登录、插件/Skills 视图、bash 自动响应、后台 agent 权限与状态处理、sandbox credential 隔离，说明 AI 编程工具正在从“能写代码”转向“可治理、可审计、可多人协作”。",
+    "Open Design 以本地优先、21 个 coding agents、129 套 design systems、217+ plugins 的方式，把 Claude Design 类能力拆成可自托管的工程化设计工作流，是 AI 设计工具从云端产品转为本地 agent 编排的强信号。",
+    "Product Hunt 最近 AI Agents 集中在公司上下文、电脑控制、数据分析、Figma、Slack/Teams 员工等场景，AI Agent 的卖点正在从“会聊天”变为“接管具体工作表面”。",
+    "模型发布类与 AI 开源模型盘点类内容今天大多是回顾、聚合或低可信重复，不适合作为日报主线。"
+  ],
+  "summary": "6/24 没有可靠模型级 P0；今天的信息差是 Agent 工具进入工程治理和工作表面接管阶段：Claude Code 修 MCP/插件/后台 agent/凭据隔离，Open Design 把设计流程本地化，Product Hunt AI Agents 继续场景化。",
+  "body": "今天高质量信号主要来自三个方向：第一，Claude Code 2.1.186/2.1.187 对 MCP CLI 认证、插件与 Skills 可视化、bash 命令响应、后台 agent 权限与状态、sandbox credentials 做连续增强，这不是炫技功能，而是让团队放心把 coding agent 放进真实工程流程的治理层。第二，Open Design 官网与 GitHub 显示其定位为本地优先、开源、agent-native 的 Claude Design 替代方案，支持 21 个 coding agents、129 套 design systems、217+ plugins，从 idea 到 prototype/web/slides/video 都落在本机文件与沙盒预览中。第三，Product Hunt AI Agents 月度列表显示新品集中在 Conduit、Rosply、readywhen、Basedash、Upsolve AI、Buddy Figma Agent、Adapt、Taste Lab 等工作表面工具，趋势是上下文采集、电脑控制、数据 agent、Figma 设计、设计 DNA 提取。",
+  "judgement": "今天不适合写“某某模型震撼发布”，更适合写“Agent 工具为什么越来越像企业软件”。Claude Code 的小版本更新价值不在单点功能，而在 MCP、permission、background agent、sandbox credential 等治理细节的组合；Open Design 的价值不在又一个设计生成器，而在把 Claude Design 的闭源云端体验拆成本地文件、设计系统、插件和 coding agent 编排；Product Hunt 的信号则证明用户愿意为“AI 进入已有工作流”付费，而不是再装一个孤立聊天框。",
+  "tags": [
+    "Claude-Code",
+    "MCP",
+    "Agent治理",
+    "Background-Agent",
+    "Sandbox-Credentials",
+    "Plugins",
+    "Skills",
+    "Open-Design",
+    "Claude-Design",
+    "Local-first",
+    "AI-Agents",
+    "Product-Hunt",
+    "Figma-Agent",
+    "Data-Agent",
+    "Context-Agent"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "Claude Code 2.1.186/2.1.187：MCP CLI 登录、插件视图、后台 agent 和凭据隔离连续增强",
+      "summary": "Claude Code 新增 claude mcp login/logout、/plugin Installed 的 Skills section、/workflows 状态过滤、! bash commands 自动响应，并在 2.1.187 增加 sandbox.credentials、组织模型限制、Remote MCP idle timeout、后台 agent 状态与 worktree 泄漏修复。",
+      "why": "这说明 Claude Code 的竞争点已从“会写代码”转向“能进入真实团队工程环境”。MCP 认证、插件治理、后台 agent 权限、凭据隔离、组织模型限制，都是企业落地时最容易出事故的细节。",
+      "action_fact": "【事实】升级到 2.1.187 后，检查 settings.json 中 sandbox.credentials、respondToBashCommands、组织模型限制和 MCP server 登录状态；通过 claude mcp login <name> 可直接做 MCP CLI 认证。",
+      "action_judge": "【判断】如果你在团队里推广 Claude Code，今天最值得做的不是试新 prompt，而是把 MCP 登录、权限弹窗、后台 agent、sandbox credential 策略写进团队规范。",
+      "tags": [
+        "Claude-Code",
+        "MCP",
+        "Agent治理",
+        "Sandbox",
+        "Plugin",
+        "Background-Agent"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md?plain=1",
+        "https://releasebot.io/updates/anthropic/claude-code"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Open Design：本地优先的开源 Claude Design 替代方案",
+      "summary": "Open Design 官网称其为 open-source、local、agent-native 的设计平台和 Figma 替代方案，桌面优先，支持 21 个 coding agents、129 套 design systems、217+ plugins，流程覆盖 brief、template、visual direction、artifact、memory、video。",
+      "why": "Claude Design 证明 LLM 能做真实设计，但闭源、付费、云端、绑定 Anthropic。Open Design 把同类体验落回本地文件、设计系统、插件和 coding agent 编排，适合团队自托管与工程协作。",
+      "action_fact": "【事实】可用 Claude Code、Codex、Cursor、Gemini、OpenCode、Qwen 等本地 agent 接入 Open Design，生成 prototype、live artifact、slides、image、HyperFrames、video。",
+      "action_judge": "【判断】如果你在做 AI 设计工作流，Open Design 比单纯文生图更值得研究，因为它把设计资产、偏好记忆、代码文件、沙盒预览接成一个可迭代流程。",
+      "tags": [
+        "Open-Design",
+        "Claude-Design",
+        "Local-first",
+        "Agentic-Design",
+        "Figma",
+        "Design-System"
+      ],
+      "sources": [
+        "https://open-design.ai/",
+        "https://open-design.ai/zh/",
+        "https://github.com/nexu-io/open-design"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt AI Agents：新品转向公司上下文、电脑控制、数据和设计工作表面",
+      "summary": "Product Hunt AI Agents 页面显示本月新品包括 Conduit、Rosply、readywhen、Agent 37 Cloud、Basedash AI data analyst、Upsolve AI、viktor.com、Buddy Figma Agent、Adapt、Taste Lab 等。",
+      "why": "这些产品不再只卖“AI聊天”，而是嵌入具体工作表面：工具列表瘦身、电脑自主控制、承诺跟进、每个客户一个 agent、数据分析、可信数据 agent、Slack/Teams 员工、Figma 导入、公司大脑、网站设计 DNA。",
+      "action_fact": "【事实】可从 Product Hunt AI Agents recent launches 直接筛选工具：设计类优先看 Buddy Figma Agent 和 Taste Lab；数据类看 Basedash/Upsolve；组织上下文类看 Adapt/readywhen/viktor。",
+      "action_judge": "【判断】做视频号选题时，不要泛讲 Agent，要挑一个工作表面实测：Figma、BI、会议跟进、浏览器/电脑控制，这样画面和价值都更具体。",
+      "tags": [
+        "Product-Hunt",
+        "AI-Agents",
+        "Figma-Agent",
+        "Data-Agent",
+        "Context-Agent",
+        "Workflow"
+      ],
+      "sources": [
+        "https://www.producthunt.com/categories/ai-agents?order=recent_launches&page=1",
+        "https://www.producthunt.com/leaderboard/monthly/2026/6"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code 的 sandbox.credentials 是 Agent 安全治理的细粒度信号",
+      "summary": "Claude Code 2.1.187 新增 sandbox.credentials，可阻止 sandboxed commands 读取 credential files 和 secret environment variables。",
+      "why": "Coding Agent 最大风险不是写错代码，而是在自动执行命令时碰到凭据、环境变量、密钥文件。把凭据访问变成显式 sandbox 策略，是 Agent 工程安全从口号走向默认防线的信号。",
+      "action_fact": "【事实】在涉及仓库、CI、云服务、MCP 的项目中，应检查 secret environment variables 和 credential files 是否可能被 agent 命令读取。",
+      "action_judge": "【判断】这条更新值得单独跟踪，因为它和前几天的 auto mode 危险 git 命令阻断、background permission prompts 一起，构成 Claude Code 的企业安全护栏路线。",
+      "tags": [
+        "Claude-Code",
+        "Sandbox",
+        "Credentials",
+        "Agent-Security",
+        "DevSecOps"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md?plain=1"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Buddy Figma Agent / Taste Lab：AI 设计工具开始围绕 Figma 与设计 DNA 做入口",
+      "summary": "Product Hunt AI Agents 本月列表中，Buddy Figma Agent 主打免费 Figma agent 和导入任何内容到 Figma，Taste Lab 主打提取任意网站的 design DNA。",
+      "why": "AI 设计工具如果不能接入已有设计资产，很难留在工作流里。Figma agent 和 design DNA 提取说明设计类 AI 正在从“生成一张图”转向“理解并复用现有设计系统”。",
+      "action_fact": "【事实】可用 Buddy Figma Agent 做导入/整理，用 Taste Lab 提取竞品网站视觉 DNA，再把结果作为 Open Design 或 Claude Code 生成页面的约束。",
+      "action_judge": "【判断】这类工具适合做组合工作流：Taste Lab 采集参考风格 → Open Design/Claude Code 生成落地页 → Figma Agent 回流设计资产。",
+      "tags": [
+        "Figma",
+        "Design-DNA",
+        "AI-Design",
+        "Product-Hunt",
+        "Open-Design"
+      ],
+      "sources": [
+        "https://www.producthunt.com/categories/ai-agents?order=recent_launches&page=1"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Agentjacking 仍是 Agent 安全背景噪声，但能解释 Claude Code 安全更新方向",
+      "summary": "The Hacker News 6/12 报道 Agentjacking：攻击者可通过伪造 Sentry 错误等方式诱导 AI coding agents 在开发者机器上执行恶意代码。",
+      "why": "虽然不是今天的新发布，但它解释了为什么 Claude Code 最近连续加强 sandbox、permission prompts、auto mode、background agent 权限归因和 MCP 超时。Agent 安全的核心不是模型懂不懂安全，而是工具链能不能限制行动边界。",
+      "action_fact": "【事实】团队应把错误追踪、Issue、PR 评论、外部网页内容视为不可信输入，不让 coding agent 无审查执行其中的命令。",
+      "action_judge": "【判断】这条不作为今日头条，但适合放进明日/本周追踪：Agent 安全事件会持续推动 coding agent 产品形态变化。",
+      "tags": [
+        "Agentjacking",
+        "Agent-Security",
+        "Claude-Code",
+        "Sentry",
+        "Prompt-Injection"
+      ],
+      "sources": [
+        "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code 2.1.187",
+      "type": "AI 编程 Agent / CLI",
+      "highlight": "sandbox.credentials、Remote MCP idle timeout、后台 agent working 卡死修复、组织模型限制、插件清理提示",
+      "audience": "Claude Code 高频用户、团队工程负责人",
+      "action": "升级后检查 MCP 登录、sandbox.credentials、respondToBashCommands、后台 agent 权限弹窗",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "Open Design",
+      "type": "本地优先 AI 设计平台",
+      "highlight": "21 个 coding agents、129 套 design systems、217+ plugins，支持 prototype/web/slides/video",
+      "audience": "前端、产品设计、AI 设计工作流搭建者",
+      "action": "打开官网/GitHub，选一个 landing page 或 slides 模板，用 Claude Code/Codex 驱动生成",
+      "url": "https://open-design.ai/"
+    },
+    {
+      "name": "Conduit",
+      "type": "Agent 工具治理",
+      "highlight": "Fix the tool-list bloat slowing your AI agent",
+      "audience": "维护大量 tools/MCP 的 Agent 开发者",
+      "action": "从 Product Hunt 进入产品页，评估是否能整理现有工具列表",
+      "url": "https://www.producthunt.com/products/conduit-12"
+    },
+    {
+      "name": "Rosply",
+      "type": "电脑控制 Agent",
+      "highlight": "AI agent that controls your computer autonomously",
+      "audience": "需要桌面自动化、无 API 操作流程的人",
+      "action": "用低风险任务试跑，例如整理网页资料或填表，不要直接给敏感权限",
+      "url": "https://www.producthunt.com/products/rosply"
+    },
+    {
+      "name": "Basedash AI data analyst",
+      "type": "AI 数据分析 / BI",
+      "highlight": "AI-native Business Intelligence Platform",
+      "audience": "运营、数据分析、业务团队",
+      "action": "连接一份非敏感业务表，测试自然语言查询和图表生成",
+      "url": "https://www.producthunt.com/products/basedash"
+    },
+    {
+      "name": "Buddy Figma Agent",
+      "type": "Figma Agent",
+      "highlight": "Free Figma agent + Import anything to Figma",
+      "audience": "设计师、前端、产品经理",
+      "action": "试用网页/截图/素材导入 Figma，再和 Open Design 输出对比",
+      "url": "https://www.producthunt.com/products/buddy-free-figma-agent"
+    },
+    {
+      "name": "Taste Lab",
+      "type": "设计 DNA 提取工具",
+      "highlight": "Extract any website's design DNA",
+      "audience": "做竞品视觉分析、落地页设计的人",
+      "action": "输入竞品网站，提取色彩/字体/布局特征，用作 AI 页面生成约束",
+      "url": "https://www.producthunt.com/products/taste-lab"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Code 小版本为什么重要：MCP 登录、后台 Agent、凭据隔离一次讲清",
+      "hook": "没有新模型，但这才是团队敢用 Agent 写代码的关键",
+      "angle": "从 2.1.186/187 的功能点切入：MCP CLI 登录、插件 Skills 视图、bash 自动响应、background permission、sandbox.credentials，解释 Agent 工程治理",
+      "materials": "Claude Code changelog 截图、settings.json 示例、MCP login 命令演示、权限弹窗流程图",
+      "difficulty": "中"
+    },
+    {
+      "title": "Open Design 实测：开源版 Claude Design 能不能做真实落地页？",
+      "hook": "不用云端 Claude Design，本机 Claude Code/Codex 也能跑完整设计流程",
+      "angle": "用一个产品 landing page 任务演示 brief→visual direction→artifact→sandbox preview→导出，重点看设计系统和文件可控性",
+      "materials": "Open Design 官网/GitHub、模板页面、生成前后对比、Figma/代码文件",
+      "difficulty": "中"
+    },
+    {
+      "title": "AI Agent 不是聊天框了：Product Hunt 这些新品都在接管工作表面",
+      "hook": "电脑、Figma、BI、Slack、公司大脑，Agent 正在进入每个工作入口",
+      "angle": "选 Conduit/Rosply/Basedash/Buddy Figma Agent/Adapt 做横向拆解：每个工具接管哪个工作表面，解决什么具体问题",
+      "materials": "Product Hunt 页面截图、工具官网截图、表格对比",
+      "difficulty": "低"
+    },
+    {
+      "title": "Agentjacking 是什么？为什么你的 Coding Agent 不能随便读错误日志",
+      "hook": "一个伪造 Sentry 错误，可能诱导 AI 在你电脑上跑恶意命令",
+      "angle": "用安全科普方式解释不可信输入→Agent 工具调用→本地执行的链路，再回到 Claude Code 的 sandbox/permission 更新",
+      "materials": "The Hacker News 报道、Sentry 错误示意、Claude Code sandbox 设置示例",
+      "difficulty": "中"
+    },
+    {
+      "title": "设计 DNA 工作流：Taste Lab + Open Design + Figma Agent 怎么组合",
+      "hook": "不是抄竞品，而是把视觉规律变成 AI 可执行约束",
+      "angle": "演示从竞品网站提取 design DNA，再用 Open Design 生成页面，最后用 Figma Agent 回流到设计资产",
+      "materials": "竞品网站截图、Taste Lab 结果、Open Design 输出、Figma 导入界面",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "2026 年 6 月 AI 开源模型大爆发/模型发布汇总类文章",
+      "reason": "多为 6 月初旧事件回顾或聚合列表，不是 24 小时内新发布；新颖性<=2"
+    },
+    {
+      "item": "GPT-5.6、Gemini 3.5、Claude Mythos 等单源夸张标题",
+      "reason": "缺少官方源或多方验证，容易混入传言；可信度<=2"
+    },
+    {
+      "item": "Claude Code 中文全攻略/入门教程",
+      "reason": "教程有用但不是新发布，且多数内容为基础安装配置；新颖性<=2"
+    },
+    {
+      "item": "GitHub awesome-ai-agents-2026 清单",
+      "reason": "纯清单型仓库，适合做资料库，不适合作为今日信息差结论"
+    },
+    {
+      "item": "MCP 2026 无状态协议旧文",
+      "reason": "5 月底内容，已在此前日报覆盖，不重复写"
+    },
+    {
+      "item": "Agent 平台全景图/AI 工具排行榜",
+      "reason": "营销/SEO 盘点倾向明显，缺少明确新增事实"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Claude Code 后续是否继续强化 sandbox.credentials 与 MCP 权限策略",
+      "reason": "这会决定 coding agent 能否进入团队默认开发流程"
+    },
+    {
+      "item": "Open Design 0.10.x 后续版本与插件生态",
+      "reason": "若保持高频更新，可能成为 AI 设计工作流的开源底座"
+    },
+    {
+      "item": "Product Hunt AI Agents 中 Figma/BI/电脑控制类产品的真实留存",
+      "reason": "判断 Agent 产品是否真的从 demo 走向日常工作入口"
+    },
+    {
+      "item": "Agentjacking 与 coding agent 安全事件后续",
+      "reason": "安全事件会反向推动 Claude Code/Cursor/Codex 的权限模型变化"
+    },
+    {
+      "item": "Conduit 类工具列表治理产品",
+      "reason": "MCP/tool-list bloat 正在成为 Agent 实用化瓶颈"
+    },
+    {
+      "item": "OpenAI/Google/Meta 官方博客是否有本周后续模型或工具发布",
+      "reason": "今日未发现可靠模型级新发布，需明日继续扫官方源"
+    }
+  ]
+}
