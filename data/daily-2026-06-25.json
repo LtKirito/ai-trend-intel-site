@@ -1,0 +1,192 @@
+{
+  "date": "2026-06-25",
+  "title": "2026-06-25 AI信息差日报",
+  "coverage": "覆盖窗口：6/23 ~ 6/25",
+  "sources": "信息源：Anthropic CHANGELOG / 火山引擎官方 / Figma Blog / CNBC / TechCrunch / Bloomberg / 腾讯新闻 / IT之家 / Releasebot / Aidailypost / Toolify / BuildFastWithAI",
+  "conclusions": [
+    "字节跳动全面发力多模态Agent——火山引擎FORCE大会一口气发布豆包2.1 Pro（Coding打平Opus 4.7）、Seedance 2.5（直出30秒视频）、Seedream 5.0 Pro、Seed-Audio 1.0，日token量破180万亿，MaaS市场份额49.5%，综合成本比Claude低80%。这是国产大模型最完整的多模态矩阵亮相。",
+    "Figma跨越"设计-代码"鸿沟——Config 2026推出Code Layers（画布上写代码）、Figma Motion（AI动效）、Shaders、Generative Plugins、Weave工具。设计工具正在成为开发入口，设计师可以直接产出可运行代码。",
+    "Anthropic把AI冷战升级到新战场——正式致信美国参议院，指控阿里巴巴在4/22-6/5期间使用2.5万个虚假账号进行了2880万次蒸馏攻击，并通报白宫。这是继2月指控DeepSeek/月之暗面/MiniMax后首次点名阿里。",
+    "Claude Code v2.1.191新增/rewind命令——支持/clear后恢复对话，sandbox.credentials阻挡敏感凭证泄露，CPU使用率降低37%。同时Google人才继续流向Anthropic（Jonas Adler/Alexander Pritzel加入Claude团队）。",
+    "硬件层在洗牌——高通Dragonfly进军AI数据中心（Meta成为客户）、美光业绩超预期（HBM需求推动）、AI芯片板块单日市值+4000亿美元。AI从软件军备竞赛蔓延到硬件底层。"
+  ],
+  "summary": "6/25 无单一爆炸性新闻，但多线高质量信号密集：字节完整多模态矩阵亮相 + Figma跨界设计-开发 + Anthropic-阿里蒸馏争端升级。国产大模型首次在Coding+Agent+多模态三线全面对标国际第一梯队。",
+  "body": "字节跳动火山引擎FORCE大会成为今日最大信号源：豆包2.1 Pro在Coding打平Opus 4.7、Agent/VLM全面领先，成本低80%；Seedance 2.5直出30秒原生视频7月上线。Figma Config 2026推出Code Layers，设计工具变开发入口。Anthropic正式致信美国参议院指控阿里巴巴蒸馏攻击（2880万次/2.5万假账号）。Claude Code v2.1.191新增/rewind+凭证隔离+CPU降37%。Google AI人才继续流失至Anthropic。Mistral OCR 4发布企业级文档AI。高通Dragonfly进军AI数据中心，Meta成为客户。",
+  "judgement": "个人判断（非事实）：① 豆包2.1 Pro的Coding评分打平Opus 4.7有商业营销成分，实际工程体验待验证。② Anthropic-阿里巴巴蒸馏争端可能是美国新一轮对华AI制裁的前奏信号。③ Google人才外流+Gemini延期构成'创新者困境'典型案例，但不要低估Google的底层算力和数据优势。",
+  "tags": ["字节跳动", "豆包2.1Pro", "Seedance-2.5", "Figma-Config-2026", "Code-Layers", "Anthropic", "阿里巴巴", "蒸馏攻击", "Claude-Code", "v2.1.191", "Google人才流失", "Mistral-OCR-4", "高通-Dragonfly", "多模态Agent", "AI冷战"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "字节跳动豆包2.1 Pro + Seedance 2.5",
+      "summary": "火山引擎FORCE大会发布豆包2.1 Pro（Coding打平Opus 4.7、Agent/VLM全面领先，成本低80%）、Seedance 2.5（30秒原生视频直出、50个全模态素材联合生成）、Seedream 5.0 Pro、Seed-Audio 1.0。日token量破180万亿，MaaS市场份额49.5%。",
+      "why": "第一个在Coding+Agent+多模态三线全面对标国际第一梯队的国产模型矩阵。综合成本比Claude低80%，日token量180万亿+49.5% MaaS份额说明商业化落地已成熟。",
+      "action_fact": "【事实】火山引擎API已开放，Pro 6元/百万输入Token，Turbo减半。接入方式：火山方舟 + AgentKit/HiAgent 3.0 + 方舟CLI工具。Seedance 2.5预计7月正式上线。",
+      "action_judge": "【判断】如果现有Claude Code成本高企，可尝试豆包2.1 Pro替代长任务Agent驱动。Seedance 2.5 7月上线后建议对比Runway/Sora做视频号实测。Seedream 5.0 Pro的分层设计能力对设计工作流有价值。",
+      "tags": ["New Model", "Agent", "多模态", "国产大模型"],
+      "sources": ["https://news.qq.com/rain/a/20260623A04V2P00", "https://news.qq.com/rain/a/20260623A02RQB00", "https://www.chinaz.com/ainews/29085.shtml", "https://finance.sina.com.cn/roll/2026-06-23/doc-iniekeez8869039.shtml"]
+    },
+    {
+      "rank": "P0",
+      "title": "Figma Config 2026 — Code Layers + AI动效",
+      "summary": "Figma发布6大核心更新：Code Layers（画布直接写代码、克隆仓库）、Figma Motion（AI动效）、Shaders、Generative Plugins、Weave工具。设计-开发边界被AI抹平。",
+      "why": "设计工具的'最后一公里'正在消失。Figma不再只是设计工具，它是开发者入口。Code Layers让设计师可直接产出可运行代码。",
+      "action_fact": "【事实】Code Layers已上线Figma，支持在Design画布编辑代码、clone仓库。Motion、Shaders、Generative Plugins可直接使用。Weave工具需企业版。",
+      "action_judge": "【判断】适合做'Figma Code Layers实测'视频内容——从设计稿直接生成前端页面。设计团队可以考虑用Code Layers缩短设计→开发交接流程。",
+      "tags": ["Design Pattern", "Figma", "Code Layers", "AI动效"],
+      "sources": ["https://www.figma.com/blog/config-2026-recap/", "https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/", "https://www.aiposthub.com/figma-config-2026-code-layers-motion-ai-features/"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.191 — /rewind + 凭证隔离",
+      "summary": "新增/rewind命令（/clear后恢复对话）、sandbox.credentials设置（阻止沙盒读取凭证）、组织级模型限制、CPU使用率降低37%、远程MCP 5分钟超时修复、CJK粘贴乱码修复。",
+      "why": "这是Claude Code治理能力的质变：凭证隔离意味着可以在CI/CD中安全运行沙盒Agent。org model restrictions让企业IT可以锁定允许的模型列表。",
+      "action_fact": "【事实】升级自动推送。sandbox.credentials默认关闭，团队环境建议开启。enforceAvailableModels锁模型白名单。v2.1.186还新增claude mcp login/logout CLI命令。",
+      "action_judge": "【判断】建议开启sandbox.credentials防止密钥泄露；团队使用场景配置组织模型限制。/rewind功能可大幅降低/clear误操作的代价。",
+      "tags": ["Agent Workflow", "Claude Code", "安全", "凭证隔离"],
+      "sources": ["https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md", "https://releasebot.io/updates/anthropic/claude-code"]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic正式指控阿里巴巴蒸馏Claude",
+      "summary": "Anthropic 6/10向美国参议院致信，指控阿里巴巴在4/22-6/5期间使用~25,000个虚假账号进行2880万次蒸馏攻击，并通报白宫。阿里巴巴未回应。",
+      "why": "中美AI技术博弈从模型能力竞赛升级为法律+数据层面的对抗。蒸馏攻击的规模和目标（阿里云）暗示AI冷战正在规则化，可能触发新一轮出口管制。",
+      "action_fact": "【事实】CNBC 6/24报道，Bloomberg首发。Anthropic呼吁'政府-行业联合行动'以维持美国AI领导地位。",
+      "action_judge": "【判断】此事可能导致美国进一步收紧AI技术出口管制或制裁。阿里系AI产品海外合规风险上升。关注后续听证会和美国政府回应。",
+      "tags": ["Industry", "AI冷战", "蒸馏攻击", "合规"],
+      "sources": ["https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html", "https://techgolly.com/news/alibaba-illicit-ai-model-extraction-accusations-cause-shares-to-drop-as-anthropic-warns-white-house", "https://creati.ai/ai-news/2026-06-25/anthropic-accuses-alibaba-illicitly-extracting-claude-ai-model-capabilities/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Mistral OCR 4 — 企业级文档AI",
+      "summary": "Mistral AI发布OCR 4，支持170种语言，输出结构化文本+bounding boxes+置信度+引用信息，支持自托管部署，专为RAG和搜索场景优化。",
+      "why": "OCR不只是'多认几个字'，它是RAG管道的入口。结构化输出+自托管意味着企业可以在私有环境中处理敏感文档。",
+      "action_fact": "【事实】Mistral官方6/23-24发布，支持API和自托管。返回带有bounding boxes和block分类的结构化JSON。",
+      "action_judge": "【判断】有内部文档RAG需求的企业可直接评估替代Azure/LayoutLM。自托管版本对数据合规要求高的金融/医疗场景特别有价值。",
+      "tags": ["New Model", "OCR", "RAG", "文档AI"],
+      "sources": ["https://mistral.ai/news/ocr-4/", "https://venturebeat.com/data/mistral-launches-ocr-4-turning-document-extraction-into-a-full-enterprise-ai-play", "https://www.ic.work/article/mistral-releases-ocr-4-for-enterprise-rag-document-pipelines"]
+    },
+    {
+      "rank": "P1",
+      "title": "Google AI人才持续流失至Anthropic",
+      "summary": "继Noam Shazeer跳槽OpenAI、John Jumper（诺奖得主）加入Anthropic之后，Jonas Adler和Alexander Pritzel也确认加入Claude团队。Alphabet股价已累计下跌超7%。",
+      "why": "Google一个月内连失至少4位核心AI人物，Gemini 3.5 Pro延期+人才外流构成双重压力信号。Anthropic在顶尖人才争夺中持续领先。",
+      "action_fact": "【事实】Bloomberg/TechCrunch 6/24报道。Gemini 3.5 Pro推迟至7月发布。",
+      "action_judge": "【判断】关注Google是否会在7月放出Gemini 3.5 Pro作为反击。人才流向可作为'哪家实验室更有长期竞争力'的先行指标。",
+      "tags": ["Industry", "Google", "Anthropic", "人才战争"],
+      "sources": ["https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic", "https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Doubao Seed 2.1 Pro",
+      "type": "LLM API",
+      "highlight": "Coding/Agent/VLM三线领先，成本比Claude低80%，日token 180万亿",
+      "audience": "国内AI开发者、企业Agent项目",
+      "action": "注册火山引擎 → 开通方舟大模型 → API Key调用",
+      "url": "https://www.volcengine.com/product/ark"
+    },
+    {
+      "name": "Seedance 2.5",
+      "type": "视频生成",
+      "highlight": "30秒原生视频直出、50个全模态素材联合生成、局部编辑",
+      "audience": "视频创作者、AI视频号博主",
+      "action": "等待7月正式上线后申请体验",
+      "url": "https://www.volcengine.com/"
+    },
+    {
+      "name": "Figma Code Layers",
+      "type": "设计工具",
+      "highlight": "设计画布直接写代码、克隆仓库、AI动效/Shader",
+      "audience": "设计师+前端开发者",
+      "action": "更新Figma → 在Design画布新建Code Layer",
+      "url": "https://www.figma.com/blog/config-2026-recap/"
+    },
+    {
+      "name": "Mistral OCR 4",
+      "type": "文档AI",
+      "highlight": "170语言、结构化输出+bounding boxes、自托管、RAG优化",
+      "audience": "有文档处理需求的企业、RAG开发者",
+      "action": "Mistral API试用 → 评估自托管方案",
+      "url": "https://mistral.ai/news/ocr-4/"
+    },
+    {
+      "name": "Claude Code v2.1.191",
+      "type": "Agent工具",
+      "highlight": "/rewind恢复对话、sandbox.credentials凭证隔离、CPU-37%",
+      "audience": "所有Claude Code用户",
+      "action": "自动升级 → 配置sandbox.credentials",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+      "name": "Qwen3.5 9B MTP",
+      "type": "本地模型",
+      "highlight": "多token预测加速、本地编程模型标杆、GGUF量化版已出",
+      "audience": "本地LLM玩家、隐私敏感开发者",
+      "action": "Ollama pull → 或从Unsloth下载GGUF",
+      "url": "https://blog.csdn.net/DK_Allen/article/details/161851518"
+    },
+    {
+      "name": "高通Dragonfly + AI300",
+      "type": "AI硬件",
+      "highlight": "C1000 CPU+AI300推理加速器、Meta成为客户、2027-2028商用",
+      "audience": "关注AI基础设施者",
+      "action": "关注高通后续技术细节发布",
+      "url": "https://www.ithome.com/0/968/257.htm"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "豆包2.1 Pro实测：国产大模型能不能替掉Claude写代码？",
+      "hook": ""比Claude Opus 4.7便宜80%，中文编程体验更好"，国产替代话题天然有流量",
+      "angle": "对比测评：同一编程任务分别在豆包2.1 Pro、Claude Opus 4.7、GPT-5.5上跑，对比代码质量和速度",
+      "materials": "火山引擎API调用录屏 + Claude Code对比截屏 + 基准测试数据图表",
+      "difficulty": "中"
+    },
+    {
+      "title": "Figma Config 2026：设计师现在能直接在画布里写代码了",
+      "hook": ""设计工具变开发工具"，设计师和前端开发都关心的爆点",
+      "angle": "功能拆解：逐项演示Code Layers、Figma Motion、Shaders，展示从设计稿到可运行页面的完整流程",
+      "materials": "Figma界面录屏 + 设计-代码对比展示 + 最终页面效果",
+      "difficulty": "低"
+    },
+    {
+      "title": "Anthropic vs 阿里巴巴：AI冷战最狠的一刀",
+      "hook": ""2880万次蒸馏攻击、2.5万个虚假账号、通报白宫"，AI大国博弈的谍战既视感",
+      "angle": "事件梳理：从2月DeepSeek/MiniMax指控 → 6月阿里指控，讲解蒸馏攻击是什么、为什么重要、对行业的影响",
+      "materials": "CNBC/Bloomberg报道截图 + 时间线图表 + Anthropic官方博客引用",
+      "difficulty": "低"
+    },
+    {
+      "title": "Seedance 2.5 vs Runway vs Sora：30秒原生视频谁更强？",
+      "hook": "AI视频生成'三国杀'，国产模型首次直出30秒",
+      "angle": "横向对比：同一prompt在Seedance 2.5（7月上线后）、Runway Gen-4、Sora上跑，对比连贯性/画质/时长",
+      "materials": "三平台视频输出对比 + 逐帧分析 + 时间线标注",
+      "difficulty": "高"
+    },
+    {
+      "title": "Google AI核心团队快被挖空了：一个月连失4位大牛",
+      "hook": ""诺贝尔奖得主都跑了"，人才流动背后的AI行业权力洗牌",
+      "angle": "人物履历深度 + 趋势解读：Shazeer→OpenAI, Jumper→Anthropic, Adler/Pritzel→Anthropic",
+      "materials": "LinkedIn个人主页截图 + 人物关系图 + Alphabet股价走势",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {"item": "PS6搭载AI帧生成+本地AI模型", "reason": "单源IT之家引用'传闻'，目标2027年发布。属于远期未验证硬件传闻，不纳入日报。"},
+    {"item": "OpenAI 'GPT-5.5 Instant' 更新报道", "reason": "IT之家转载，但OpenAI从未正式发布名为'GPT-5.5'的模型。疑似虚假信息或标题党，不纳入。"},
+    {"item": "Gemini 3.5 Pro泄露对比数据", "reason": "单一来源'泄露'，声称推理能力落后Fable 5/GPT-5.6。未经Google官方确认，标记为待验证传言。"},
+    {"item": "'AI取代工程师岗位'标题党文章", "reason": "SignalFire数据实际显示工程师占比从46%升至55%，AI反而增加工程师需求。标题与数据结论相反。"},
+    {"item": "Faraday Future转型机器人", "reason": "新能源车企跨界机器人无实质技术展示。'卖出15辆车后想卖机器人'本身就是段子，无操作价值。"},
+    {"item": "《自然》质疑微软量子计算突破", "reason": "量子计算领域争议，非AI核心议题。已在前日报覆盖过同类内容，不重复。"},
+    {"item": "各类AI工具排行榜/6月回顾文章", "reason": "纯列表文无一手信息，无链接无证据。属于内容农场产出，不纳入。"},
+    {"item": "SPAC/AI芯片市值/股价瞬时波动数字", "reason": "美光+高通业绩超预期报告保留事实信息，但AI芯片板块+4000亿的瞬时数字不作为日报重点。"}
+  ],
+  "tracking_items": [
+    {"item": "Gemini 3.5 Pro 发布进展", "reason": "原定6月发布已推迟至7月，关注具体日期和token消耗优化方案。"},
+    {"item": "阿里对Anthropic蒸馏指控的官方回应", "reason": "截至日报发布阿里巴巴未回应CNBC置评请求。关注后续声明和可能的美国进一步行动。"},
+    {"item": "Seedance 2.5 正式上线日期与API", "reason": "火山引擎表示7月正式上线。关注上线后的实际表现和定价。"},
+    {"item": "Claude Code v2.1.192+ 后续版本", "reason": "2.1.191发布节奏快，/rewind功能刚上，关注后续版本是否有更多会话管理/团队协作功能。"},
+    {"item": "高通Dragonfly AI芯片技术细节", "reason": "Meta成为首批客户是重要信号，关注后续技术白皮书和更多客户公布。"},
+    {"item": "Mirendil ($200M) 和 Trase ($107M) 后续产品发布", "reason": "两笔大额AI Agent领域融资均来自前Anthropic/DeepMind员工创办的公司，关注其产品形态。"}
+  ]
+}
