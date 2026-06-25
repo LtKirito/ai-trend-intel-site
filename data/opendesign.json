@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 70155,
-    "forks": 7919,
-    "open_issues": 417,
+    "stars": 70742,
+    "forks": 7989,
+    "open_issues": 430,
     "latest_release": {
       "version": "open-design-v0.11.0",
       "date": "2026-06-17",
@@ -12,40 +12,58 @@
   },
   "recent_prs": [
     {
+      "number": 4754,
+      "title": "fix: multiple subprocess calls accept user-controlled arguments in tools/dev/src/index.ts",
+      "state": "open",
+      "author": "orbisai0security",
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "中 — 今日新增 (06-25)：修复 tools/dev/src/index.ts 中 CRITICAL 等级安全漏洞 V-001，subprocess 调用接受未校验的用户输入，可注入 shell 元字符执行任意命令。multi_agent_ai 扫描器确认可利用，mergeable_state=clean，预计快速合入",
+      "url": "https://github.com/nexu-io/open-design/pull/4754"
+    },
+    {
+      "number": 4691,
+      "title": "feat(brands): turn any brand into a reusable design system",
+      "state": "open",
+      "author": "pftom",
+      "labels": ["size/XXL", "risk/high", "type/feature", "validated"],
+      "impact": "极高 — 06-25 提交：品牌→设计系统端到端能力。新增 OD Library 内容寻址注册中心、clipper 抓取、URL/.fig 离线文件导入、150 个预置品牌设计系统、PDF/PPTX/可编辑 PPTX 导出（UI + `od export` 命令）。validated 标签 + 28 评论，是 v0.12.0 候选旗舰功能",
+      "url": "https://github.com/nexu-io/open-design/pull/4691"
+    },
+    {
+      "number": 4684,
+      "title": "feat(web): reposition AMR as Open Design's cloud subscription",
+      "state": "open",
+      "author": "michaeltaxman911-hue",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "极高 — 产品战略级重组：AMR (Agentic Model Router) 从独立产品改为 Open Design 自身的云订阅/服务，对标 Cursor/Claude/GPT 订阅。已登录用户显示套餐（plan）+ 余额（balance），并新增升级入口。涉及 54 文件/+1949/-589 行，mergeable_state=unstable 需重点 review",
+      "url": "https://github.com/nexu-io/open-design/pull/4684"
+    },
+    {
+      "number": 4745,
+      "title": "[codex] Expand onboarding and automation E2E coverage",
+      "state": "open",
+      "author": "AmyShang-alt",
+      "labels": ["size/XL", "risk/medium", "type/chore"],
+      "impact": "中 — 06-25 提交（draft 状态）：扩展 onboarding E2E 覆盖范围，新增 Local CLI/BYOK/AMR/newsletter/brand extraction 路径及设计系统 E2E、Automations 页面 E2E。+934/-103 行的测试基建改进，mergeable_state=clean，预计合入无障碍",
+      "url": "https://github.com/nexu-io/open-design/pull/4745"
+    },
+    {
       "number": 4675,
       "title": "[codex] show AMR wallet balance in Open Design",
-      "state": "open",
+      "state": "merged",
       "author": "alchemistklk",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "极高 — AMR 商业化续篇：在 Open Design 内直接展示 AMR 钱包余额，与此前 #4455 AMR Cloud Recovery 形成商业化闭环。XXL 规模提示涉及 daemon + web 双层联动，新增认证/余额查询/展示全链路",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "极高 — 06-24 04:06 已合入！AMR 商业化闭环关键拼图：在 Open Design 中直接展示 AMR 钱包余额，与 #4455 AMR Cloud Recovery 共同完成商业化路径落地。v0.12.0 用户将首次看到余额显示",
       "url": "https://github.com/nexu-io/open-design/pull/4675"
     },
     {
-      "number": 4656,
-      "title": "feat(web): unify task-failure error card across all failure states",
-      "state": "merged",
-      "author": "michaeltaxman911-hue",
-      "labels": ["size/XL", "risk/medium", "type/feature", "validated", "backport release/v0.12.0"],
-      "impact": "极高 — 06-23 合入！agent 失败 UX 三线汇聚的首条落地：将所有任务失败状态（quota/auth/rate-limit/stderr）统一为结构化错误卡，取代 raw stderr 尾部。validated + backport v0.12.0 双标签，确认质量并纳入下一版本",
-      "url": "https://github.com/nexu-io/open-design/pull/4656"
-    },
-    {
-      "number": 4633,
-      "title": "[codex] Fix onboarding brand extraction flow",
-      "state": "merged",
-      "author": "PerishCode",
-      "labels": ["size/M", "risk/high", "type/bugfix", "validated"],
-      "impact": "中 — 06-23 合入！Codex 核心适配器的 onboarding 品牌提取流程修复，直接影响新用户首次体验。M 规模 + validated 确认修复有效，是 v0.11.0 后首批合入的 agent 适配器 bugfix",
-      "url": "https://github.com/nexu-io/open-design/pull/4633"
-    },
-    {
-      "number": 4659,
-      "title": "refactor(daemon): split server helper modules",
+      "number": 4604,
+      "title": "feat(export): programmatic screenshot-based PPTX/PDF export",
       "state": "open",
-      "author": "mrcfps",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
-      "impact": "极高 — 转为 draft 状态暂缓：daemon 服务器端 helper 模块 XXL 拆分。06-22 提交为 open，06-24 查询显示转为 draft，暗示合入窗口推迟或正在进行重大修改。一旦恢复 open 并合入，将改变 daemon 内部架构",
-      "url": "https://github.com/nexu-io/open-design/pull/4659"
+      "author": "lefarcen",
+      "labels": ["size/XL", "risk/high", "type/feature", "validated"],
+      "impact": "高 — 评论增至 32（vs 上次 30），热度持续：基于截图的可编程 PPTX/PDF 导出，将 Open Design 输出能力扩展为程序化批量生成。validated 标签确认，工具链自动化方向关键拼图，预期 v0.12.0 周期内合入",
+      "url": "https://github.com/nexu-io/open-design/pull/4604"
     },
     {
       "number": 4701,
@@ -53,45 +71,54 @@
       "state": "open",
       "author": "michaeltaxman911-hue",
       "labels": ["size/S", "risk/medium", "type/bugfix", "validated", "backport release/v0.12.0"],
-      "impact": "中 — 新增：简化运行错误源诊断，与 #4656（已合入的错误卡统一）形成配套——前者统一呈现，后者简化诊断定位。validated + backport v0.12.0，预期快速合入",
+      "impact": "中 — backport v0.12.0 标签：简化运行错误源诊断，与 #4656（已合入的错误卡统一）形成配套。validated + backport v0.12.0 双标签，预期快速合入并进入下一版本",
       "url": "https://github.com/nexu-io/open-design/pull/4701"
     },
     {
-      "number": 4041,
-      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
+      "number": 4659,
+      "title": "refactor(daemon): split server helper modules",
       "state": "open",
-      "author": "pixcore598-design",
-      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
-      "impact": "极高 — v0.11.0 后仍未合入的最大社区功能：5 种多 Agent 协作模式，YAML 驶动团队定义 + DAG 拓扑 + pub-sub 通信总线 + 遗传算法引擎 + SQLite 执行历史。持续 review 已超 2 周",
-      "url": "https://github.com/nexu-io/open-design/pull/4041"
-    },
-    {
-      "number": 3509,
-      "title": "feat(tools-pack): cross-platform WebUI (no-Electron) packaging type",
-      "state": "open",
-      "author": "SugarFatFree",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "极高 — 评论增至 67（vs 上次 55），社区热度持续升温：新增无 Electron 的终端启动发行版，支持 headless Linux/容器/CLI 嵌入场景。mergeable_state=clean，技术就绪但等待最终 review",
-      "url": "https://github.com/nexu-io/open-design/pull/3509"
-    },
-    {
-      "number": 4604,
-      "title": "feat(export): programmatic screenshot-based PPTX/PDF export",
-      "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "高 — 新增重要功能：基于截图的可编程 PPTX/PDF 导出，将 Open Design 的输出能力从手动导出扩展为程序化批量生成。30 评论高热，是工具链自动化方向的关键拼图",
-      "url": "https://github.com/nexu-io/open-design/pull/4604"
+      "author": "mrcfps",
+      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
+      "impact": "高 — 仍为 draft 状态（vs 06-24 同一状态），daemon server helper 模块拆分暂未推进。一旦恢复 open 并合入，将成为 v0.11.0 后最大架构级 daemon 变更。当前 5 评论无更新",
+      "url": "https://github.com/nexu-io/open-design/pull/4659"
     }
   ],
   "recent_issues": [
+    {
+      "number": 4753,
+      "title": "桌面端能否增加一个新版本检查和自动更新功能",
+      "author": "fczllc",
+      "labels": ["enhancement"],
+      "comments": 2,
+      "summary": "06-25 中文功能请求：桌面端增加新版本检查和自动更新功能，希望将「关于」入口移至左侧菜单栏-帮助，并支持后台检测+自动升级。中国用户社区反映更新体验差，反映对桌面端 v0.12.0+ 自动更新能力的诉求",
+      "url": "https://github.com/nexu-io/open-design/issues/4753"
+    },
+    {
+      "number": 4121,
+      "title": "[Bug]: Antigravity agent incorrectly reports \"needs to sign in\" even though agy is authenticated and responding",
+      "author": "newton5555",
+      "labels": ["bug"],
+      "comments": 17,
+      "summary": "Antigravity (agy) agent 适配器误报登录态（17 评论）：用户已通过 `agy` CLI 认证且能正常响应，但 Open Design 仍显示「Antigravity needs to sign in」。详细复现显示 agy 在 stdin 模式可正常返回响应，仅 Open Design 调用路径异常。Windows 平台多发，#3536 关联问题",
+      "url": "https://github.com/nexu-io/open-design/issues/4121"
+    },
+    {
+      "number": 4708,
+      "title": "[Bug]: Safety/crash telemetry bypasses the opt-out toggle",
+      "author": "Philmod",
+      "labels": ["bug"],
+      "comments": 5,
+      "summary": "隐私信任严重风险（5 评论，已指派 YOMXXX）：Settings → Privacy 关闭「Share usage data」后，apps/web/src/analytics/error-tracking.ts 和 apps/daemon/src/analytics.ts 仍通过直接 `fetch()` 调用 PostHog `/i/v0/e/`，绕过 posthog.opt_out_capturing()。直接违反 PRIVACY.md 承诺（关闭遥测后不收集任何数据），v0.11.1 复现。local-first 定位产品核心品牌承诺受损",
+      "url": "https://github.com/nexu-io/open-design/issues/4708"
+    },
     {
       "number": 4638,
       "title": "[Bug]: The app for Macos crashed",
       "author": "KanoCifer",
       "labels": ["bug", "help wanted"],
-      "comments": 25,
-      "summary": "macOS crash 高热 issue（25 评论）：应用在 macOS 上崩溃，具体原因待确认。社区反馈量大，是当前平台稳定性最突出的痛点之一",
+      "comments": 35,
+      "summary": "macOS 27 Beta1 + Mac mini M4 平台崩溃（评论增至 35 vs 06-24 的 25）：v0.11.0 启动即崩溃，console 无相关日志。help wanted 持续求复现路径，macOS Apple Silicon 平台稳定性痛点持续堆叠",
       "url": "https://github.com/nexu-io/open-design/issues/4638"
     },
     {
@@ -100,7 +127,7 @@
       "author": "mikipmax",
       "labels": ["bug", "priority:p1"],
       "comments": 19,
-      "summary": "P1 紧急 bug（19 评论）：Agy agent 适配器完全无法工作，影响使用该 agent 的所有用户。P1 标记但尚未闭环",
+      "summary": "P1 紧急 bug（19 评论）：Agy/Antigravity agent 1.0.4 适配器在 Windows 上完全无法工作，连接本地 CLI 时报「Antigravity needs to sign in」或「exit 0」。已用 Google AI Pro 订阅登录 agy 但 OD 端仍报未登录。优先级 P1 长期未闭环",
       "url": "https://github.com/nexu-io/open-design/issues/3536"
     },
     {
@@ -108,45 +135,27 @@
       "title": "Improve agent failure UX: surface structured errors (quota, auth, rate limit) instead of raw stderr tails",
       "author": "gabrielvaz",
       "labels": ["enhancement", "help wanted"],
-      "comments": 18,
-      "summary": "agent 失败 UX 核心 issue（18 评论）：#4656 已合入统一错误卡，但本 issue 的结构化错误分类（quota/auth/rate-limit）完整方案仍有部分待落地。与 #2009 和 #4701 形成互补",
+      "comments": 19,
+      "summary": "agent 失败 UX 核心 issue（19 评论，06-23 最新更新）：#4656 已合入统一错误卡，但本 issue 详细定义的结构化错误分类（quota/auth/rate-limit/binary_not_found/cli_version_mismatch 等 6 类）+ 完整 stderr 不截断 + retryDelayMs 倒计时按钮仍未落地。daemon 端有 HTTP 错误分类（server.ts:3987），但 agent CLI 退出未应用相同能力",
       "url": "https://github.com/nexu-io/open-design/issues/982"
     },
     {
-      "number": 4373,
-      "title": "[Bug]: BYOK on Ollama.com model mismatch errors",
-      "author": "Grumpster-Dev",
-      "labels": ["bug", "help wanted"],
-      "comments": 11,
-      "summary": "BYOK 集成 bug（11 评论）：使用 Ollama.com 模型时出现 mismatch 错误，影响自定义模型网关场景。help wanted 等待更多复现信息",
-      "url": "https://github.com/nexu-io/open-design/issues/4373"
+      "number": 3509,
+      "title": "feat(tools-pack): cross-platform WebUI (no-Electron) packaging type",
+      "author": "SugarFatFree",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "comments": 69,
+      "summary": "WebUI 打包进度更新：评论增至 69（vs 06-24 的 67，vs 06-23 的 55），社区热度持续升温。新增无 Electron 的终端启动发行版，支持 headless Linux/容器/CLI 嵌入场景。mergeable_state=clean，技术就绪但仍等待最终 review。Linux 支持缺口（#4368+#3759）持续积压",
+      "url": "https://github.com/nexu-io/open-design/issues/3509"
     },
     {
-      "number": 4708,
-      "title": "[Bug]: Safety/crash telemetry bypasses the opt-out toggle",
-      "author": "Philmod",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "隐私风险新增 bug：安全/崩溃遥测数据绕过了用户的 opt-out 设置，即使关闭遥测开关仍然发送数据。对 local-first 定位的产品而言是严重的信任问题",
-      "url": "https://github.com/nexu-io/open-design/issues/4708"
-    },
-    {
-      "number": 4641,
-      "title": "Invite link to discord doesn't work",
-      "author": "tajchert",
-      "labels": ["bug", "good first issue", "help wanted", "docs"],
-      "comments": 8,
-      "summary": "社区入口断裂（8 评论）：Discord 邀请链接失效，新用户无法加入官方社区。good first issue 适合快速修复",
-      "url": "https://github.com/nexu-io/open-design/issues/4641"
-    },
-    {
-      "number": 4441,
-      "title": "Nightly can crash or exit on launch when stale sidecars or IPC sockets remain",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "help wanted", "risk/high", "priority:p1"],
-      "comments": 5,
-      "summary": "P1 高风险 bug（5 评论）：Nightly 版本启动时因残留的 sidecar 或 IPC socket 导致崩溃/退出。stale 进程清理机制缺失",
-      "url": "https://github.com/nexu-io/open-design/issues/4441"
+      "number": 4041,
+      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
+      "author": "pixcore598-design",
+      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
+      "comments": 41,
+      "summary": "多 Agent 团队协作模块（41 评论，review 持续 >2 周）：5 种多 Agent 协作模式 + YAML 驶动团队定义 + DAG 拓扑 + pub-sub 通信总线 + 遗传算法引擎 + SQLite 执行历史。06-24 12:49 仍有 reviewer 反馈但未推进，v0.12.0 关键功能候选",
+      "url": "https://github.com/nexu-io/open-design/issues/4041"
     },
     {
       "number": 4690,
@@ -154,7 +163,7 @@
       "author": "AmyShang-alt",
       "labels": ["bug", "help wanted", "risk/medium", "type/bugfix"],
       "comments": 3,
-      "summary": "规则引擎一致性 bug：规则提案被标记为已记录，但实际未写入持久化 rule memory。造成用户误以为规则已生效",
+      "summary": "规则引擎一致性 bug：规则提案在 UI 中显示为「已记录」状态，但实际未写入持久化 rule memory entry。造成用户误以为规则已生效，实际未存储，导致跨 session 行为不一致",
       "url": "https://github.com/nexu-io/open-design/issues/4690"
     },
     {
@@ -163,43 +172,35 @@
       "author": "linger000",
       "labels": ["enhancement", "needs-product-direction"],
       "comments": 2,
-      "summary": "企业级功能请求：SSO 单点登录 + 多用户资源隔离 + 权限控制。needs-product-direction 标记表示尚未获得官方方向确认，但反映企业用户核心需求",
+      "summary": "企业级功能请求：SSO 单点登录 + 多用户资源隔离 + 权限控制。needs-product-direction 标记表示官方方向尚未明确。#4684 AMR 订阅化推进后，企业级多用户需求可能加速进入 v0.12.0 路线图",
       "url": "https://github.com/nexu-io/open-design/issues/4718"
-    },
-    {
-      "number": 3189,
-      "title": "Deleting a referenced skill does not clear its selected state in the picker",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted", "priority:p3"],
-      "comments": 14,
-      "summary": "技能管理 bug（14 评论，P3）：删除已被引用的 skill 后，picker 中仍显示为已选中状态。good first issue 适合社区贡献",
-      "url": "https://github.com/nexu-io/open-design/issues/3189"
     }
   ],
   "trends": {
-    "direction": "v0.11.0 'The Bazaar' 发布第 7 天，合入节奏明显提速：#4656 错误卡统一和 #4633 Codex 品牌提取同日合入（06-23），#4659 daemon 拆分转为 draft 暂缓。新增 `backport release/v0.12.0` 标签首次出现于 #4656/#4701/#4721 三条 PR，暗示 v0.12.0 分支已创建但尚未正式发布。商业化路线延续——#4675 AMR wallet balance（XXL）继续推进 AMR 闭环。工具链自动化方向新添 #4604 可编程 PPTX/PDF 导出（XL）。stars 日均约 800（vs 上周 ~322），出现短期反弹。",
+    "direction": "v0.11.0 'The Bazaar' 发布第 8 天，进入 v0.12.0 功能预热期：#4675 AMR wallet balance（06-24）合入完成 AMR 商业化首段闭环；#4684 AMR 重新定位为 Open Design 云订阅（XXL，unstable）战略级重组推进；#4691 品牌→设计系统（XXL, validated, 28 评论）作为 v0.12.0 旗舰候选登场。今日新增 #4754 CRITICAL 安全漏洞修复 + #4745 E2E 覆盖扩展（XL chore），代码质量与安全并重。`backport release/v0.12.0` 标签仍生效于 #4701。Stars 达 70,742（+587 vs 06-24 的 70,155），增速回落至日均 ~587（v0.11.0 发布期 ~648，稳态期 ~320-465）。open_issues 升至 430（+13 vs 06-24 的 417），创历史新高——#4638 macOS crash 评论 35、#4708 隐私遥测绕过、#982 agent 失败 UX、#3509 WebUI 打包（69 评论）、#4041 多 Agent（41 评论）五大长期 open 持续堆叠。",
     "affected_modules": [
-      "web（#4656 错误卡统一已合入 +#4701 error diagnostics 补充 +#4721 启动 splash — backport v0.12.0 三线并行）",
-      "daemon（#4659 拆分转 draft 暂缓 +#4553 connection-test error 新增 S +#4656 merged 错误卡 daemon 层配合）",
-      "codex（#4675 AMR wallet XXL 新增 +#4633 品牌提取已合入 — 适配器层从 bugfix 转向商业化）",
-      "export（#4604 可编程 PPTX/PDF 导出 XL — 工具链自动化方向新拼图）",
-      "platform（#4638 macOS crash 25 评论高热 +#4708 遥测绕过 opt-out 隐私风险 + #3536 Agy P1 不工作）",
-      "deploy（#3388 Netlify/Render/Railway XXL — 部署多元化扩展）"
+      "商业化（#4684 AMR 重新定位 XXL unstable + #4675 AMR wallet 已合入 — 订阅化路径由 wallet 显示→套餐/余额展示→升级入口逐步成型）",
+      "brands（#4691 品牌→设计系统 XXL validated 28 评论 — OD Library 内容寻址注册中心 + clipper 抓取 + 150 预置品牌 + PDF/PPTX 导出闭环）",
+      "web（#4701 error diagnostics backport v0.12.0 + #4754 CRITICAL 安全修复 + #4656 错误卡已合入配套）",
+      "export（#4604 可编程 PPTX/PDF 导出 XL validated 32 评论 — 工具链自动化方向关键拼图）",
+      "daemon（#4659 拆分仍 draft 暂缓 + #3375 防循环 guard 已 06-21 合入 — 架构重构窗口仍延后）",
+      "platform（#4638 macOS 27 Beta 崩溃 35 评论 + #4708 隐私遥测绕过 5 评论 + #3536 Agy P1 19 评论 — Apple Silicon/Windows/隐私信任三线压力）",
+      "agents（#4121+#3536 Antigravity 认证态误报 36 评论合计 + #982 结构化错误分类 19 评论 — agent 适配器故障模式继续堆叠）"
     ],
     "risks": [
-      "backport v0.12.0 标签首次出现但 v0.11.0 后续 hotfix 仍未发布——v0.12.0 与 v0.11.x hotfix 的并行节奏可能造成维护分裂",
-      "#4708 遥测绕过 opt-out toggle 是严重的隐私信任风险——local-first 定位的产品如果暗中发送数据，将直接动摇核心品牌承诺",
-      "#4638 macOS crash 25 评论 + #3536 Agy P1 19 评论——平台稳定性痛点正在堆叠，open_issues 417 继续上升",
-      "#4659 daemon 拆分转为 draft 暂缓——原定 v0.11.0 后最大架构重构推迟，意味着 daemon 层结构性改善窗口延后",
-      "#3509 WebUI 打包评论增至 67 但仍未合入——Linux 支持缺口（#4368+#3759）持续积压，社区耐心消耗"
+      "#4708 隐私遥测绕过 opt-out 是最严重品牌信任风险：apps/web+daemon 端直接 fetch() PostHog 绕过 opt_out_capturing()，违反 PRIVACY.md 承诺。local-first 核心定位若被默认配置为「关不掉」，将直接动摇 v0.12.0 的隐私差异化卖点",
+      "open_issues 升至 430 历史新高：#4638 macOS crash（35 评论）+ #3536 Agy P1（19 评论）+ #3509 WebUI（69 评论）+ #4041 多 Agent（41 评论）+ #982 错误 UX（19 评论）五大长期 open 共 183 评论堆积，修复速度跟不上新增",
+      "#4684 AMR 重新定位 PR 涉及 54 文件/+1949/-589 行且 mergeable_state=unstable：商业化战略级 PR 一次性变更过大，CI 状态不通过将延迟 v0.12.0 整体节奏",
+      "#3509 WebUI 打包评论 69 但仍未合入：Linux/容器/Agent 嵌入场景缺口（#4368+#3759）持续，headless 部署诉求累计",
+      "#4041 多 Agent 协作 review >2 周仍 open（41 评论）：核心功能 review 周期长，存在 v0.12.0 时间窗口被压缩风险"
     ],
     "actions": [
-      "跟踪 backport v0.12.0 分支动向——#4656/#4701/#4721 已标注，需确认 v0.12.0 是否进入正式开发周期",
-      "关注 #4708 遥测隐私 bug——此问题触及 local-first 核心承诺，需优先确认影响范围和修复时间",
-      "监测 #4659 daemon 拆分从 draft 恢复 open 的时机——一旦恢复将是 daemon 层最大架构变更",
-      "验证 #4656 错误卡合入后的实际 UX 改善——与 #982 结构化错误分类的完整落地范围对比",
-      "关注 #4675 AMR wallet 的 AMR 商业化节奏——XXL 规模意味着将深度影响 daemon+web 双层"
+      "高优跟踪 #4708 隐私遥测 opt-out 修复——已指派 YOMXXX，需确认 apps/web+daemon 双层 fix 与 PRIVACY.md 一致性，警惕 v0.12.0 隐私差异化叙事",
+      "观察 #4684 AMR 重新定位 PR 的 CI 修复——mergeable_state=unstable 需重点关注，建议关注 06-25~06-26 的 next round review",
+      "持续关注 #4691 brands XXL 的 review 状态——validated 标签已就位，28 评论显示社区参与度，作为 v0.12.0 旗舰候选需重点跟踪",
+      "监测 #4638 macOS crash 复现路径——35 评论仍未提供可复现的具体步骤，macOS 27 Beta1 + M4 平台兼容性需 maintainer 主动验证",
+      "验证 #4675 AMR wallet 合入后 v0.12.0 用户端是否正确显示——为 #4684 升级入口的前置条件"
     ],
-    "next_week": "预计 #4701 error diagnostics（S + validated + backport v0.12.0）将快速合入；#4659 daemon 拆分可能从 draft 恢复 open 进入集中 review；v0.12.0 分支动向将成为焦点——是否先发 v0.11.1 hotfix 还是直接推进 v0.12.0 将决定近两周节奏；#4708 遥测隐私问题若被确认将迫使紧急 hotfix；#3509 WebUI 打包评论热度持续攀升可能加速 review 但合并仍需时间。"
+    "next_week": "预计 #4754 CRITICAL 安全修复（mergeable_state=clean）将在 1-2 天内快速合入；#4701 error diagnostics 携带 backport v0.12.0 标签持续推进；#4684 AMR 重新定位 PR 的 CI 修复后将进入 v0.12.0 主分支候选；#4691 brands XXL 进入 v0.12.0 旗舰候选评估窗口；#4708 隐私遥测 opt-out 修复预计本周内 hotfix；#4659 daemon 拆分仍可能维持 draft 状态；v0.12.0 路线图轮廓将逐步清晰——重点关注：商业化（AMR 订阅化）+ 品牌（brands XXL）+ 平台稳定性（macOS/Windows 修复）三大主线。"
   }
 }
