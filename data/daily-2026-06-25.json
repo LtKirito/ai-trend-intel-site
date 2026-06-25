@@ -5,7 +5,7 @@
   "sources": "信息源：Anthropic CHANGELOG / 火山引擎官方 / Figma Blog / CNBC / TechCrunch / Bloomberg / 腾讯新闻 / IT之家 / Releasebot / Aidailypost / Toolify / BuildFastWithAI",
   "conclusions": [
     "字节跳动全面发力多模态Agent——火山引擎FORCE大会一口气发布豆包2.1 Pro（Coding打平Opus 4.7）、Seedance 2.5（直出30秒视频）、Seedream 5.0 Pro、Seed-Audio 1.0，日token量破180万亿，MaaS市场份额49.5%，综合成本比Claude低80%。这是国产大模型最完整的多模态矩阵亮相。",
-    "Figma跨越"设计-代码"鸿沟——Config 2026推出Code Layers（画布上写代码）、Figma Motion（AI动效）、Shaders、Generative Plugins、Weave工具。设计工具正在成为开发入口，设计师可以直接产出可运行代码。",
+    "Figma跨越「设计-代码」鸿沟——Config 2026推出Code Layers（画布上写代码）、Figma Motion（AI动效）、Shaders、Generative Plugins、Weave工具。设计工具正在成为开发入口，设计师可以直接产出可运行代码。",
     "Anthropic把AI冷战升级到新战场——正式致信美国参议院，指控阿里巴巴在4/22-6/5期间使用2.5万个虚假账号进行了2880万次蒸馏攻击，并通报白宫。这是继2月指控DeepSeek/月之暗面/MiniMax后首次点名阿里。",
     "Claude Code v2.1.191新增/rewind命令——支持/clear后恢复对话，sandbox.credentials阻挡敏感凭证泄露，CPU使用率降低37%。同时Google人才继续流向Anthropic（Jonas Adler/Alexander Pritzel加入Claude团队）。",
     "硬件层在洗牌——高通Dragonfly进军AI数据中心（Meta成为客户）、美光业绩超预期（HBM需求推动）、AI芯片板块单日市值+4000亿美元。AI从软件军备竞赛蔓延到硬件底层。"
@@ -137,21 +137,21 @@
   "video_topics": [
     {
       "title": "豆包2.1 Pro实测：国产大模型能不能替掉Claude写代码？",
-      "hook": ""比Claude Opus 4.7便宜80%，中文编程体验更好"，国产替代话题天然有流量",
+      "hook": "「比Claude Opus 4.7便宜80%，中文编程体验更好」，国产替代话题天然有流量",
       "angle": "对比测评：同一编程任务分别在豆包2.1 Pro、Claude Opus 4.7、GPT-5.5上跑，对比代码质量和速度",
       "materials": "火山引擎API调用录屏 + Claude Code对比截屏 + 基准测试数据图表",
       "difficulty": "中"
     },
     {
       "title": "Figma Config 2026：设计师现在能直接在画布里写代码了",
-      "hook": ""设计工具变开发工具"，设计师和前端开发都关心的爆点",
+      "hook": "「设计工具变开发工具」，设计师和前端开发都关心的爆点",
       "angle": "功能拆解：逐项演示Code Layers、Figma Motion、Shaders，展示从设计稿到可运行页面的完整流程",
       "materials": "Figma界面录屏 + 设计-代码对比展示 + 最终页面效果",
       "difficulty": "低"
     },
     {
       "title": "Anthropic vs 阿里巴巴：AI冷战最狠的一刀",
-      "hook": ""2880万次蒸馏攻击、2.5万个虚假账号、通报白宫"，AI大国博弈的谍战既视感",
+      "hook": "「2880万次蒸馏攻击、2.5万个虚假账号、通报白宫」，AI大国博弈的谍战既视感",
       "angle": "事件梳理：从2月DeepSeek/MiniMax指控 → 6月阿里指控，讲解蒸馏攻击是什么、为什么重要、对行业的影响",
       "materials": "CNBC/Bloomberg报道截图 + 时间线图表 + Anthropic官方博客引用",
       "difficulty": "低"
@@ -165,7 +165,7 @@
     },
     {
       "title": "Google AI核心团队快被挖空了：一个月连失4位大牛",
-      "hook": ""诺贝尔奖得主都跑了"，人才流动背后的AI行业权力洗牌",
+      "hook": "「诺贝尔奖得主都跑了」，人才流动背后的AI行业权力洗牌",
       "angle": "人物履历深度 + 趋势解读：Shazeer→OpenAI, Jumper→Anthropic, Adler/Pritzel→Anthropic",
       "materials": "LinkedIn个人主页截图 + 人物关系图 + Alphabet股价走势",
       "difficulty": "低"
