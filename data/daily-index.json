@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-26",
+    "label": "6 月 26 日 (周五)",
+    "count": "4P0 + 3P1 + 1P2",
+    "tags": "OpenAI-Jalapeño · 自研芯片 · Broadcom · Anthropic · Claude-Tag · Slack-AI同事 · Gemini-3.5-Flash · Computer-Use · Claude-Code · v2.1.193 · autoMode · claude-plugins-official · DeerFlow-2.0 · LongCat-VitaBench-2.0 · gstack · 去英伟达化",
+    "summary": "6/26 三大头条：OpenAI Jalapeño 自研芯片亮相（AI 造芯片闭环）+ Anthropic Claude Tag（Slack AI 同事，65% Anthropic 内部代码由其生成）+ Google Gemini 3.5 Flash 原生 Computer Use。Claude Code v2.1.193 强化 Auto-mode 护栏，Anthropic 同步发布官方插件目录。开源侧字节 DeerFlow 2.0 与美团 VitaBench 2.0 形成'框架+基准'组合。"
+  },
+  {
     "date": "2026-06-25",
     "label": "6 月 25 日 (周四)",
     "count": "3P0 + 3P1",

@@ -1,0 +1,248 @@
+{
+  "date": "2026-06-26",
+  "title": "2026-06-26 AI信息差日报",
+  "coverage": "覆盖窗口：6/24 ~ 6/26",
+  "sources": "信息源：Anthropic 官方 / OpenAI 官方 / VentureBeat / TechCrunch / 腾讯新闻 / IT之家 / GitHub / Product Hunt / 威易网 / 虎嗅 / 知乎",
+  "conclusions": [
+    "OpenAI 自研芯片 Jalapeño 正式亮相——与博通联手、9 个月从设计到流片（行业记录）、TSMC 3nm + systolic array + HBM3E/4、每瓦性能对标英伟达 Blackwell 与谷歌 TPU。OpenAI 同时手握 NVIDIA（千亿美元协议）、AMD（6GW）、Cerebras（750MW）、自研 Jalapeño 四条线，AI 算力去英伟达化格局正式形成。",
+    "Anthropic 推出 Claude Tag——常驻 Slack 频道的'AI 同事'取代旧版 Claude in Slack，支持 @Claude 触发、主动模式（Ambient）、多人共享记忆、跨数天自主推进任务。Anthropic 内部已有 65% 产品代码由 Claude Tag 生成，标志着 AI 助手从'工具'演变为'团队成员'。",
+    "Google DeepMind 把 Computer Use 变成 Gemini 3.5 Flash 的内置工具——浏览器/移动/桌面原生代理能力进入 public preview，配合 Enterprise 长周期任务场景，是 Google 对 OpenAI Operator / Anthropic Computer Use 的正面回应。",
+    "Claude Code v2.1.193 + claude-plugins-official 目录发布——新增 autoMode.classifyAllShell（所有 Shell 命令进自动模式分类器）、MCP 认证启动提示、OpenTelemetry 响应文本事件、后台 shell 自动回收；Anthropic 官方插件目录首次官方化生态。",
+    "字节 DeerFlow 2.0 + 美团 LongCat VitaBench 2.0 同日开源——DeerFlow 是字节内部打磨 3 年的 SuperAgent 框架（GitHub 28K Star），美团 VitaBench 2.0 评估大模型在长期动态用户互动中的个性化与主动性。开源 Agent 框架的'工作流范式'逐步成型。"
+  ],
+  "summary": "6/26 三大头条：OpenAI Jalapeño 自研芯片亮相（AI 造芯片闭环形成）+ Anthropic Claude Tag（Slack AI 同事，65% Anthropic 内部代码由其生成）+ Google Gemini 3.5 Flash 原生 Computer Use。Claude Code v2.1.193 强化 Auto-mode 护栏，Anthropic 同步发布官方插件目录。开源侧字节 DeerFlow 2.0 与美团 VitaBench 2.0 形成'框架+基准'组合。",
+  "body": "OpenAI 与博通联合发布首款自研 AI 推理芯片 Jalapeño，9 个月从设计到流片刷新行业记录，TSMC 3nm + systolic array + HBM3E/4，每瓦性能对标 Blackwell/TPU，年底部署 GW 级数据中心。Anthropic 推出 Claude Tag，Slack 中常驻的 AI 同事，65% Anthropic 内部代码由其生成，beta 向 Enterprise/Team 客户开放。Google DeepMind 把 Computer Use 变成 Gemini 3.5 Flash 内置工具，public preview。Claude Code 推出 v2.1.193（autoMode.classifyAllShell + OpenTelemetry 响应文本），同期 Anthropic 发布 claude-plugins-official 官方插件目录。字节开源 DeerFlow 2.0 SuperAgent 框架（28K Star），美团开源 VitaBench 2.0 长期动态智能体评测基准（Gemini 3 Pro 62.8%）。",
+  "judgement": "个人判断（非事实）：① Jalapeño 9 个月流片的核心是 OpenAI 用自家 AI 加速设计流程——这意味着 AI 在物理世界的影响不再局限于'使用层'，已开始改造'制造层'。② Claude Tag 是 Anthropic 把 Claude Code 推向企业协作场景的旗舰产品，本质是'Agent 持久化 + 团队记忆'的范式跳跃；但 token 消耗与权限审计将是企业落地的关键阻力。③ Google 把 Computer Use 塞进 Gemini 3.5 Flash 模型的'内置'做法比 OpenAI 独立 Operator 更易集成，预示 2026 H2 Agent 竞争从'独立产品'转向'模型内置能力'。",
+  "tags": ["OpenAI-Jalapeño", "自研芯片", "Broadcom", "Anthropic", "Claude-Tag", "Slack-AI同事", "Gemini-3.5-Flash", "Computer-Use", "Claude-Code", "v2.1.193", "autoMode", "claude-plugins-official", "DeerFlow-2.0", "LongCat-VitaBench-2.0", "gstack", "去英伟达化"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "OpenAI Jalapeño 自研 AI 推理芯片",
+      "summary": "OpenAI + Broadcom 联合发布首款自研推理 ASIC，9 个月流片刷新行业记录（业界通常 2-3 年），TSMC 3nm + systolic array + HBM3E/4，每瓦性能对标英伟达 Blackwell 与谷歌 TPU，2026 年底初步部署。",
+      "why": "OpenAI 成为继 Google/Amazon/Meta/Microsoft 之后第五家拥有自研 AI 芯片的巨头。'AI 造芯片、芯片跑 AI'自增强循环正式成熟。Broadcom 提供 Tomahawk 交换芯片，Celestica 负责板卡集成，GPT-5.3-Codex-Spark 已在实验室运行。",
+      "action_fact": "【事实】Jalapeño 已在实验室运行 GPT-5.3-Codex-Spark。2026 年底初步部署 GW 级数据中心，与微软合作。Broadcom 提供 Tomahawk 交换芯片，Celestica 负责板卡集成，Arm 设计配套 CPU。",
+      "action_judge": "【判断】关注 OpenAI 是否同步下调 API 价格以体现成本优势。AI 芯片格局由英伟达'一家独大'变为'多极并行'（OpenAI/NVIDIA/AMD/Cerebras 四线并行），长期利好推理应用层。",
+      "tags": ["New Model", "AI芯片", "推理", "去英伟达化"],
+      "sources": [
+        "https://www.weste.net/2026/06-25/OpenAI-Jalapeno.html",
+        "https://news.qq.com/rain/a/20260624A0B0Q000",
+        "https://venturebeat.com/infrastructure/openai-unveils-first-custom-ai-inference-chip-jalapeno-with-broadcom-and-its-development-was-sped-up-with-openais-own-models"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Anthropic Claude Tag（Slack AI 同事）",
+      "summary": "Anthropic 6/24 推出 Claude Tag：常驻 Slack 频道的'AI 同事'，支持 @Claude 触发、Ambient 主动模式、多人共享记忆、跨数天异步任务；Anthropic 内部 65% 产品代码由 Claude Tag 生成。",
+      "why": "从'按需调用'到'持久协作'是 AI 助手的范式跳跃。Claude Tag 是 Anthropic 将 Claude Code 能力延伸到企业协作场景的旗舰产品，挑战 Microsoft Copilot / Google Workspace Duet / Slack AI 竞争格局。",
+      "action_fact": "【事实】beta 已向 Claude Enterprise/Team 客户开放。管理员配 Slack workspace、工具集、token 消费上限（组织+频道双层）。30 天迁移期替换旧 Claude in Slack。运行在 Opus 4.8 上。",
+      "action_judge": "【判断】国内企业可关注'常驻 AI 同事'模式在企业微信/飞书/钉钉上的类似实现。个人用户需警惕 token 账单激增风险（异步数天任务对 token 消耗极大，类比 OpenAI Operator 早期问题）。",
+      "tags": ["Agent Workflow", "企业协作", "Slack", "AI同事"],
+      "sources": [
+        "https://www.anthropic.com/news/introducing-claude-tag",
+        "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+        "https://venturebeat.com/technology/anthropic-launches-claude-tag-replacing-its-slack-app-with-a-persistent-ai-teammate-that-learns-monitors-and-works-autonomously"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Gemini 3.5 Flash 原生 Computer Use 能力",
+      "summary": "Google DeepMind 将 Computer Use 能力作为 Gemini 3.5 Flash 的内置工具，浏览器/移动/桌面原生代理进入 public preview，针对 Enterprise 长周期任务设计。",
+      "why": "Computer Use 之前是 OpenAI Operator / Anthropic 的差异化能力，Google 以'模型内置'而非'独立 Agent 产品'的方式正面竞争。3.5 Flash 的成本结构适合高频交互场景，标志 Google Agent 战略全面提速。",
+      "action_fact": "【事实】通过 Gemini API 启用 Computer Use 工具，Enterprise long-horizon 任务可结合 BigQuery/Workspace 工具链。",
+      "action_judge": "【判断】对国内企业更有意义的是学习'内置 Computer Use'的产品形态——比独立 Agent 应用更易规模化集成。可做'Gemini vs OpenAI Operator'对比视频选题。",
+      "tags": ["New Model", "Computer Use", "Agent", "Gemini"],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/changelog",
+        "https://www.huxiu.com/ainews/13478.html",
+        "https://letsdatascience.com/news/google-adds-native-computer-use-to-gemini-35-flash-d1e90373"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.193 + claude-plugins-official",
+      "summary": "Claude Code 推出 v2.1.193（autoMode.classifyAllShell 所有 Shell 进分类器、MCP 启动认证提示、OpenTelemetry 响应文本事件、后台 shell 自动回收）；同期 Anthropic 官方发布 claude-plugins-official 插件目录统一生态。",
+      "why": "autoMode.classifyAllShell 把自动模式从'特定模式'升级为'全命令路由'，标志着 Auto-mode 已走向成熟稳定。官方插件目录是 Anthropic 把'插件安全信任'从社区升级为厂商背书的关键步骤。",
+      "action_fact": "【事实】升级自动推送。打开 autoMode.classifyAllShell 可强化企业环境命令治理；通过 OTEL_LOG_ASSISTANT_RESPONSES=1 开启响应遥测；CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1 可禁用后台 shell 自动回收。",
+      "action_judge": "【判断】v2.1.193 是 v2.1.191（/rewind + sandbox.credentials）之后的又一轮安全护栏强化，企业 IT 应在 1-2 周内评估升级。claude-plugins-official 的发布意味着 Anthropic 生态从'野蛮生长'进入'官方认证'阶段，类似 npm 官方包。",
+      "tags": ["Agent Workflow", "Claude Code", "安全", "官方插件目录"],
+      "sources": [
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+        "https://github.com/anthropics/claude-plugins-official",
+        "https://releasebot.io/updates/anthropic/claude-code"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "字节 DeerFlow 2.0 长周期 SuperAgent 框架",
+      "summary": "字节跳动开源 DeerFlow 2.0（GitHub 28K Star）：sub-agents + 沙箱 + 长期记忆 + 技能扩展，可完成数分钟到数小时的复杂研究/编程/创意任务；继 LangChain / AutoGen 后又一个工程化 Agent 框架。",
+      "why": "DeerFlow 是字节内部打磨 3 年的产物，定位 SuperAgent Harness（深度研究 + 高效工作流），与 LangChain/LlamaIndex 的'工具调用层'不同，更侧重'长周期任务编排'。",
+      "action_fact": "【事实】GitHub 仓库 bytedance/deer-flow 即可获取。设计为 Open Deep Research + Agent 框架，支持沙箱执行。",
+      "action_judge": "【判断】Claude Code 用户可关注 DeerFlow 与 Anthropic Agent SDK 的'长任务'思路差异；适合做'DeerFlow 2.0 vs LangGraph 实测'视频选题。",
+      "tags": ["AI Tool", "SuperAgent", "字节开源", "Agent框架"],
+      "sources": [
+        "https://gitee.com/ByteDance/deer-flow",
+        "https://aitoolly.com/zh/ai-news/article/2026-06-25-bytedance-releases-deerflow-20-an-open-source-long-cycle-superagent-framework-for-complex-research-a",
+        "https://zhuanlan.zhihu.com/p/2019713726064898703"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "美团 LongCat VitaBench 2.0 长期动态智能体评测基准",
+      "summary": "美团 LongCat 6/25 开源 VitaBench 2.0：真实生活场景下大模型智能体长期、动态、个性化与主动性的评测基准，26 个主流模型测试结果 Gemini 3 Pro 仅 62.8%。",
+      "why": "VitaBench 2.0 解决了'智能体评测只看单轮准确率'的盲区，把'长期记忆+主动推断'能力纳入标准化评估。基准结果对模型选型有直接参考价值。",
+      "action_fact": "【事实】开源仓库 meituan-longcat/VitaBench 包含完整评估脚本与场景设计。",
+      "action_judge": "【判断】做'AI Agent 长期记忆实测'内容时可作为对照基准；关注美团后续是否将 VitaBench 与 LongCat-Next 多模态模型打包推广。",
+      "tags": ["AI Tool", "评测基准", "智能体", "美团"],
+      "sources": [
+        "https://www.msn.cn/zh-cn/news/other/%E7%BE%8E%E5%9B%A2longcat%E5%BC%80%E6%BA%90vitabench-20/ar-AA26wQa0?ocid=BingNewsSerp"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "gstack — Garry Tan 发布的 Claude Code 多角色 AI 编排",
+      "summary": "YC CEO Garry Tan 开源 garrytan/gstack：23 个深度定制工具，把 Claude Code 变成虚拟工程团队（CEO/Designer/Eng Manager/Release Manager/Doc Engineer/QA），覆盖 Think-Plan-Build-Review-Test-Ship-Reflect 全流程。",
+      "why": "gstack 是 Claude Code 生态中第一个'完整软件工厂'级别的 Skill Pack。其'一人 AI 团队'模式正在 YC 生态扩散，适合做'个人开发者如何用 AI 团队 + Claude Code 完成产品'视频内容。",
+      "action_fact": "【事实】GitHub garrytan/gstack 即可获取。10+ 角色工作流模板，开箱即用。",
+      "action_judge": "【判断】个人开发者 MVP 阶段可考虑 gstack + Claude Code 组合。gstack 也预示 Anthropic 内部 Agent Teams（CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1）的最佳实践方向。",
+      "tags": ["AI Tool", "Claude Code", "Skill Pack", "YC生态"],
+      "sources": [
+        "https://github.com/garrytan/gstack",
+        "https://gstacks.org/",
+        "https://www.begincode.net/article/art_fdb7c769d9ab"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "OpenMontage / Palmier Pro 视频生产工具",
+      "summary": "OpenMontage：开源基于 Agent 的视频生产系统，12 条流水线 + 52 个工具 + 500+ 智能体技能；Palmier Pro：macOS 生态 AI 原生视频编辑工具。",
+      "why": "Agent 工具形态从'代码生成'延伸到'视频生产'，OpenMontage 的'流水线 + 工具 + 技能'分层设计值得研究。",
+      "action_fact": "【事实】OpenMontage 已在 GitHub 开源，Palmier Pro 仅 macOS。",
+      "action_judge": "【判断】视频号创作者可关注 OpenMontage 流水线设计思路；Palmier Pro 仅 macOS 限制了其受众。",
+      "tags": ["AI Tool", "视频生产", "Agent工具"],
+      "sources": [
+        "https://aitoolly.com/ai-news/2026-06-25"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "OpenAI Jalapeño",
+      "type": "AI 芯片（推理 ASIC）",
+      "highlight": "TSMC 3nm、9 个月流片、对标 Blackwell/TPU、年底部署",
+      "audience": "关注 AI 基础设施者、推理应用开发者",
+      "action": "关注 OpenAI 2026 Q4 部署公告 + API 价格变化",
+      "url": "https://venturebeat.com/infrastructure/openai-unveils-first-custom-ai-inference-chip-jalapeno-with-broadcom-and-its-development-was-sped-up-with-openais-own-models"
+    },
+    {
+      "name": "Claude Tag",
+      "type": "Slack AI 同事（企业 Agent）",
+      "highlight": "Ambient 主动模式 + 多人共享记忆 + 跨数天异步任务 + 65% Anthropic 内部代码由其生成",
+      "audience": "Claude Enterprise/Team 用户、企业 IT 部门",
+      "action": "Enterprise/Team 客户在 admin settings 启用，30 天迁移期替换旧 Claude in Slack",
+      "url": "https://www.anthropic.com/news/introducing-claude-tag"
+    },
+    {
+      "name": "Gemini 3.5 Flash Computer Use",
+      "type": "Agent 内置能力",
+      "highlight": "Computer Use 内置到模型层、Public Preview、Enterprise 长周期任务",
+      "audience": "AI Agent 开发者、需要桌面/浏览器自动化的企业",
+      "action": "Gemini API 启用 Computer Use 工具，结合 BigQuery/Workspace",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "name": "Claude Code v2.1.193",
+      "type": "Agent CLI 工具",
+      "highlight": "autoMode.classifyAllShell 全命令路由分类器 + OpenTelemetry 响应文本 + 后台 shell 自动回收",
+      "audience": "Claude Code 企业用户、DevOps 团队",
+      "action": "升级 v2.1.193，配置 autoMode.classifyAllShell，启用 OTEL_LOG_ASSISTANT_RESPONSES=1",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+    },
+    {
+      "name": "claude-plugins-official",
+      "type": "插件目录（生态）",
+      "highlight": "Anthropic 官方审核的 Claude Code 插件目录，质量和安全背书",
+      "audience": "Claude Code 用户、企业 IT 治理",
+      "action": "访问 github.com/anthropics/claude-plugins-official 浏览，安装信任插件",
+      "url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    {
+      "name": "DeerFlow 2.0",
+      "type": "开源 SuperAgent 框架",
+      "highlight": "sub-agents + 沙箱 + 长期记忆 + 技能扩展，28K Star，支持数分钟到数小时任务",
+      "audience": "Python/TypeScript 开发者、研究/编程长任务需求者",
+      "action": "git clone https://gitee.com/ByteDance/deer-flow，按文档启动沙箱",
+      "url": "https://gitee.com/ByteDance/deer-flow"
+    },
+    {
+      "name": "美团 LongCat VitaBench 2.0",
+      "type": "智能体评测基准",
+      "highlight": "真实生活场景长期动态评测、26 个主流模型横评、Gemini 3 Pro 62.8%",
+      "audience": "AI 评测者、模型选型决策者",
+      "action": "关注 meituan-longcat/VitaBench GitHub 仓库，下载评估脚本",
+      "url": "https://www.msn.cn/zh-cn/news/other/%E7%BE%8E%E5%9B%A2longcat%E5%BC%80%E6%BA%90vitabench-20/ar-AA26wQa0?ocid=BingNewsSerp"
+    },
+    {
+      "name": "gstack",
+      "type": "Claude Code 技能包",
+      "highlight": "23 个深度定制工具 + 10+ 角色（CEO/Designer/Eng Manager/QA）",
+      "audience": "个人开发者 / 创业团队 / 想'一人 AI 团队'者",
+      "action": "git clone garrytan/gstack，在 Claude Code 项目中加载",
+      "url": "https://github.com/garrytan/gstack"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "OpenAI 用 AI 9 个月造出第一颗芯片，对标英伟达",
+      "hook": "'AI 造芯片、芯片跑 AI'自增强循环、'9 个月刷新行业 2-3 年记录'、AI 巨头集体去英伟达化",
+      "angle": "故事化叙事：OpenAI 为何要做芯片 → 9 个月流片怎么做到的 → Jalapeño 规格解读 → 对比 Blackwell/TPU → AI 芯片多极格局",
+      "materials": "OpenAI 公告截图 + Jalapeño 架构图 + NVIDIA/AMD/Cerebras 协议时间线 + 9 个月 vs 2-3 年对比表",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Tag 体验：Slack 里来了个 AI 同事",
+      "hook": "'AI 不再是工具而是同事'、'65% Anthropic 代码由它写'、Ambient 主动模式（持续观察频道）",
+      "angle": "实操演示：申请 Claude Tag beta → 配 Slack workspace → @Claude 触发任务 → 展示主动跟进 + 跨数天异步任务 + 多人共享记忆",
+      "materials": "Slack 界面录屏 + Claude Tag 操作演示 + Anthropic 内部 65% 数据图表",
+      "difficulty": "中"
+    },
+    {
+      "title": "Gemini 3.5 Flash 把'Computer Use'塞进模型了",
+      "hook": "'Google 反击 OpenAI Operator'、'Computer Use 不再是独立 Agent 产品'、Enterprise 长周期任务",
+      "angle": "对比演示：Gemini 3.5 Flash + Computer Use vs OpenAI Operator 在浏览器自动化场景的速度/成本/准确率",
+      "materials": "Gemini API + Computer Use 工具录屏 + 对比表 + 成本计算",
+      "difficulty": "高"
+    },
+    {
+      "title": "Claude Code v2.1.193：所有 Shell 命令都进自动模式分类器了",
+      "hook": "'企业 IT 关心的安全护栏升级'、'autoMode 真正成熟'、'OpenTelemetry 响应文本追踪'",
+      "angle": "教程向：升级 v2.1.193 → 打开 autoMode.classifyAllShell → 配置 OTEL 日志 → 演示'自动拦截危险命令'过程",
+      "materials": "Claude Code 实操录屏 + CHANGELOG 重点标注 + 企业 IT 治理场景",
+      "difficulty": "低"
+    },
+    {
+      "title": "用 gstack + Claude Code 一个人做一个产品",
+      "hook": "'YC CEO 都在用的 AI 团队方案'、'23 个专家角色替代 23 个员工'、适合个人创业者",
+      "angle": "实操演示：克隆 gstack → 启动 Think-Plan-Build-Review-Test-Ship-Reflect 全流程 → 用 CEO/Eng Manager/QA 角色完成一个 MVP",
+      "materials": "Claude Code 录屏 + gstack 角色面板 + MVP 构建过程",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {"item": "GPT-5.6 系列下周登场传闻", "reason": "6/19 起 IT之家/testingcatalog 多次转述，未见 OpenAI 官方公告；推测为 Anthropic Fable 5 发布后的'对冲性噪音'，不纳入。"},
+    {"item": "AI 编程工具横评类文章（Cursor/Windsurf/Copilot 对比）", "reason": "6 月以来大量内容农场式横评，缺乏一手测试数据；多为不同时间点的二手拼凑。"},
+    {"item": "OpenAI IPO 估值 $8520 亿新闻", "reason": "6/12 已有同类旧闻，今日未见新进展；属于跨日重复，标记跟踪。"},
+    {"item": "Claude 5 单源停用/重新发布标题党", "reason": "多为营销稿，无官方源支撑；与 v2.1.193 真实版本无关。"},
+    {"item": "AI 工具排行榜 / 月度回顾文章", "reason": "纯列表文、无链接无证据，6 月底扎堆出现；属于内容农场产出，不纳入。"},
+    {"item": "芯片股价瞬时波动 / SPAC 数字", "reason": "Jalapeño 发布后 Broadcom/NVIDIA 短期股价波动不作为日报重点，跟踪长期产业链变化。"},
+    {"item": "'AI 取代工程师岗位'标题党", "reason": "与 SignalFire 等数据反向，工程师占比实际在上升；纯标题党。"}
+  ],
+  "tracking_items": [
+    {"item": "OpenAI Jalapeño 后续动作", "reason": "关注 OpenAI 是否同步下调 GPT-5/Codex API 价格以反映芯片成本优势，以及 Microsoft/Broadcom/Celestica 详细合作细节。"},
+    {"item": "Claude Tag 实战反馈", "reason": "关注 Slack 社区、TechCrunch 评论区的实际使用体验，token 消耗数据以及 Ambient 主动模式的'惊吓度'。"},
+    {"item": "Claude Code v2.1.194+", "reason": "v2.1.193 紧接 v2.1.191（/rewind + sandbox.credentials），关注 Auto-mode 是否进一步成熟，是否有'团队治理'新功能。"},
+    {"item": "claude-plugins-official 目录扩张", "reason": "Anthropic 官方插件目录刚发布 3 天，关注首批收录的插件和'官方审核'门槛细节。"},
+    {"item": "Gemini 3.5 Flash Computer Use 公开评测", "reason": "目前 public preview，关注实际任务完成率与 Operator 的对比数据。"},
+    {"item": "字节 DeerFlow 2.0 生态", "reason": "已有 28K Star，关注字节是否推出与 LangChain/LlamaIndex 的差异化打法，以及与豆包模型的整合。"},
+    {"item": "美团 LongCat 系列后续", "reason": "6/24 LongCat-Next + 6/25 VitaBench 2.0，连环开源；关注美团 6/26+ 是否有更多 LongCat 模型发布。"}
+  ]
+}
