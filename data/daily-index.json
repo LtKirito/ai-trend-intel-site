@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-27",
+    "label": "6 月 27 日 (周六)",
+    "count": "1P0 + 4P1 + 1P2",
+    "tags": "Claude-Code · v2.1.195 · Hook-Matcher · MCP · TRL-v1.7.0 · chunked-nll · GMPO · Open-Design · Product-Hunt · AI-Agents · easy-vibe · MCP教程",
+    "summary": "6/27 是弱新闻日，唯一 P0 是 Claude Code v2.1.195 对 hook 精确匹配、语音听写和多语言自动提交的修复；P1 信号集中在 Hugging Face TRL v1.7.0 训练显存优化、Open Design 本地 Agent-native 设计工作流、Product Hunt AI Agents 场景化产品趋势和中文 MCP 教程。"
+  },
+  {
     "date": "2026-06-26",
     "label": "6 月 26 日 (周五)",
     "count": "4P0 + 3P1 + 1P2",
