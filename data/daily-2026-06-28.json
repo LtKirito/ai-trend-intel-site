@@ -1,0 +1,148 @@
+{
+  "date": "2026-06-28",
+  "title": "2026-06-28 AI信息差日报",
+  "coverage": "覆盖窗口：6/26 ~ 6/28（周末观察日）",
+  "sources": "信息源：OpenAI 官方 / Semafor 独家 / CNBC / TechCrunch / Anthropic Claude Code Docs / Google Labs DESIGN.md / Hugging Face / 36氪 / 腾讯新闻 / IT之家 / 搜狐 / 元神简报",
+  "conclusions": [
+    "今天是周末观察日，没有可靠的新模型级 P0。6/26 的两条主线（GPT-5.6 受白宫限制 + Mythos 5 被解封）在中文媒体周末持续发酵，正在从'新闻'沉淀为'格局判断'——美国前沿模型发布权已不在实验室手中。",
+    "GPT-5.6（Sol / Terra / Luna）的真正信号是'半价 + 受限'。Sol 定价 $5/$30 约为 Anthropic Fable 5 一半，编码能力据称略优于 Mythos 5（仅用 1/3 输出 token），但仅向白宫审批的'可信伙伴'开放预览；OpenAI 公开表态'这种流程不应成为长期默认'——实验室与政府的张力首次公开化。",
+    "Mythos 5 出口管制解除 = 美式'可控扩散'。商务部长 Lutnick 致信 Anthropic 解除管制，100+ 美国机构和外籍员工可访问；Fable 5 走向解封但时间表不明；欧洲盟友对'何时能拿到模型'一无所知——AI 监管已从国内议题变成跨大西洋议题。",
+    "国产 Mythos 替代已公开竞逐。360 周鸿祎 6/24 ISC.AI 大会发布'倚天屠龙'——漏洞挖掘智能体'图龙锋'+ 自动化防御系统'仪天阵'，并发起'磐石之盾'信创协作计划（统信/麒麟/海光/飞腾/壁仞首批加入）。这是 Mythos 限速后国内第一个明确对标的安全能力声明。",
+    "Claude Code 6/27 以后进入'功能冻结'期。v2.1.195 是当前最新版本（6/26 发布），本周末 6/27-6/28 无新版本——Anthropic 把节令性代码冻结（code freeze）前置到 6 月底，是企业级工具在 H1 收尾的典型节奏。下一波可能在 7 月初。"
+  ],
+  "summary": "6/28 周末观察日：没有可靠的新模型级 P0，6/26 的两条主线（GPT-5.6 受白宫限制 + Mythos 5 解封）正在从新闻沉淀为格局判断；Google Labs DESIGN.md 6/27 引发中文工程圈关注；360 ISC.AI 大会'倚天屠龙'对标 Mythos；Claude Code 进入 H1 收尾'代码冻结'期。",
+  "body": "6/26 OpenAI 发布 GPT-5.6 系列（Sol/Terra/Luna），Sol 旗舰定价 $5/$30 约为 Fable 5 一半，编码打平 Mythos 5 但仅用 1/3 输出 token；7 月将上线 Cerebras 达 750 tokens/s；应白宫要求仅向'可信伙伴'开放预览，OpenAI 公开表态'不应成为长期默认'。同日商务部长 Lutnick 致信 Anthropic 解除 Mythos 5 出口管制，100+ 美国机构可访问，Fable 5 走向解封但时间表不明。Google Labs DESIGN.md（GitHub google-labs-code/design.md）6/27 由中文工程圈密集报道：YAML Token + 自然语言 Prose 双层结构，让 Coding Agent 持久理解视觉设计系统。360 周鸿祎 6/24 ISC.AI 大会发布'图龙锋'+'仪天阵'，声称对标 Mythos + Glasswing 联盟，发起'磐石之盾'信创协作计划。Claude Code v2.1.195 仍是当前最新版本，6/27-6/28 无新版本发布，进入 H1 收尾'代码冻结'期。",
+  "judgement": "个人判断（非事实）：① GPT-5.6 + Mythos 5 同日'一收一放'是美国前沿模型监管框架成型的关键节点——白宫而非实验室成为模型走向市场的最终裁决者。② Fable 5 6/9 上线 + 6/12 封锁 + 6/26 Mythos 5 解封 = 72 小时上线 + 两周封锁 + 一个月再开禁，这是 AI 模型'国家级管控'的标准剧本。③ 360 国产 Mythos 替代是 AI 安全'双轨制'的成型信号——美方用出口管制保护自己，中方用信创联盟保护自己；安全类 AI 工具的国产化窗口期已开启。④ 6/28 起 Claude Code 连续两天无新版本，符合企业级工具 H1 收尾节奏，下一波预计 7 月初；本期是治理窗口期。⑤ Google DESIGN.md 与 Open Design v0.12.0 思路一致——2026 H2 设计-开发协作流程正在被'Agent 维护设计系统'重写。",
+  "tags": ["GPT-5.6", "Sol", "Mythos-5", "Fable-5", "白宫审查", "出口管制", "360", "倚天屠龙", "磐石之盾", "DESIGN.md", "Google-Labs", "Claude-Code", "v2.1.195", "H1收尾", "代码冻结", "周末观察"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "GPT-5.6 受白宫限制（可信伙伴预览）",
+      "summary": "6/26 OpenAI 发布 Sol/Terra/Luna 三款模型，Sol 定价 $5/$30 约为 Fable 5 一半，编码打平 Mythos 5 但仅 1/3 token；应白宫要求仅向'可信伙伴'开放，OpenAI 公开表态'不应成为长期默认'。",
+      "why": "美国前沿模型首次以'国家审查'形式进入公开发布。Sol 7 月将上线 Cerebras 达 750 tokens/s；70 万 A100 等效 GPU 小时做自动化红队；prompt caching 支持显式断点 + 30 分钟最小生命周期。",
+      "action_fact": "【事实】盯紧 7 月 Cerebras 集成 + Terra/Luna 后续开放节奏；OpenAI 已表态将与政府'共同制定可复用的未来发布流程'。",
+      "action_judge": "【判断】这是'AI 监管国家化'开端，比 Fable 5 封禁更结构性；企业部署策略需要把'模型可访问性'作为新风险维度。",
+      "tags": ["New Model", "OpenAI", "GPT-5.6", "Sol", "白宫审查", "可信伙伴"],
+      "sources": [
+        "https://openai.com/index/previewing-gpt-5-6-sol/",
+        "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+        "https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview",
+        "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Mythos 5 解封 + Fable 5 走向解封",
+      "summary": "6/26 商务部长 Lutnick 致信 Anthropic Tom Brown，解除 Mythos 5 出口管制，100+ 美国机构 + 外籍员工可访问；两周前因'与中国关联伙伴走得太近'被禁。Fable 5 解封时间表未明，欧洲盟友'一无所知'。",
+      "why": "模型发布权从'实验室'转移到'政府'已成既成事实。Semafor 独家、CNBC、Insurance Journal 多源验证；信中措辞显示双方'几乎每天密集谈判'。",
+      "action_fact": "【事实】6/9 Fable 5 上线、6/12 被禁、6/26 Mythos 5 解封——72 小时上线 + 两周封锁 + 一个月再开禁，这是 AI 模型'国家级管控'的标准剧本。",
+      "action_judge": "【判断】欧洲厂商应准备'跨大西洋双轨'采购策略；Fable 5 解封时间表决定 7-8 月大模型 API 价格战方向。",
+      "tags": ["New Model", "Anthropic", "Mythos-5", "Fable-5", "出口管制", "Lutnick"],
+      "sources": [
+        "https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html",
+        "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
+        "https://www.theguardian.com/technology/2026/jun/26/openai-ai-model-release-trump-us-sam-altman-gpt-anthropic-mythos",
+        "https://yuanshenjian.cn/ai/briefings/2026-06-27"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Labs DESIGN.md 设计系统格式规范",
+      "summary": "GitHub 仓库 google-labs-code/design.md 4/21 创建，6/27 由中文工程圈密集报道。YAML Token 层 + 自然语言 Prose 层双层结构，让 Coding Agent 持久、结构化地理解视觉设计系统。",
+      "why": "设计系统从'人维护'变成'Agent 维护'的关键格式。Open Design v0.12.0 的'Brand-backed Design System'和它思路一致，但 DESIGN.md 是 Google 官方推动的开放规范。",
+      "action_fact": "【事实】在设计 token 目录旁放一份 DESIGN.md 描述视觉系统，下一代 Agent 即可在不读 Figma 的情况下还原风格。",
+      "action_judge": "【判断】结合 6/24 Open Design 1.0.12 的 v0.12.0 大版本（Brand-backed Design System）和 DESIGN.md，2026 H2 设计-开发协作流程正在被重写。",
+      "tags": ["Design Pattern", "Google Labs", "DESIGN.md", "设计系统", "Coding Agent"],
+      "sources": [
+        "https://github.com/google-labs-code/design.md",
+        "https://cloud.tencent.com/developer/article/2699049",
+        "https://txtmix.com/posts/tech/design-md-visual-identity-coding-agents-guide/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "360'倚天屠龙'国产 Mythos 替代",
+      "summary": "6/24 ISC.AI 2026 大会，周鸿祎发布漏洞挖掘智能体'图龙锋'和自动化防御系统'仪天阵'，声称在某些维度超过 Anthropic Mythos；发起'磐石之盾'信创协作计划，统信/麒麟/海光/飞腾/壁仞等首批加入。",
+      "why": "Mythos 限速 + 出口管制后，国产替代的第一个明确声明。Mythos 与 Glasswing 联盟是美方保护关键基础设施的范式，360 在做中国版。",
+      "action_fact": "【事实】'图龙锋'对标 Mythos 的漏洞发现能力，'仪天阵'对标 Glasswing 联盟防御能力；'磐石之盾'首批成员含统信/麒麟/海光/飞腾/壁仞等国产芯片 OS 厂商。",
+      "action_judge": "【判断】这是 AI 安全'双轨制'成型信号——美方用出口管制保护自己，中方用信创联盟保护自己。安全类 AI 工具的国产化窗口期已开启。",
+      "tags": ["AI Tool", "360", "ISC.AI", "图龙锋", "仪天阵", "磐石之盾", "国产替代"],
+      "sources": [
+        "https://www.ithome.com/0/968/197.htm",
+        "https://www.sohu.com/a/1041094166_514126",
+        "https://finance.sina.com.cn/wm/2026-06-24/doc-iniepeiu6202197.shtml",
+        "https://www.cbinews.com/net/iz93a4"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Code v2.1.195（周末无新版本）",
+      "summary": "6/26 发布的 v2.1.195 仍是当前最新版本，6/27-6/28 无新版本发布。hook 精确匹配、语音听写修复、CJK 粘贴、fullscreen 鼠标控制开关等修复继续生效。",
+      "why": "Anthropic 在 6 月底对 Claude Code 进入'功能冻结'——这与企业级工具的 H1 收尾节奏一致，工程师需要预期下一波更新在 7 月初。",
+      "action_fact": "【事实】如果你还在 v2.1.193 之前，升级 v2.1.195 是当前推荐；项目级 .claude/settings 与外部插件设置要按 v2.1.195 的精确匹配规则重写。",
+      "action_judge": "【判断】H1 收尾期适合做整体治理——hook 规则清理、MCP server 命名规范化、Auto-mode 边界评估。",
+      "tags": ["Agent Workflow", "Claude Code", "v2.1.195", "H1收尾", "代码冻结"],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Open Design v0.12.0 后续小修复",
+      "summary": "6/27 仓库显示 PR 列表已完全轮换为 v0.12.0 后小修：#4414 Kimi 模型 ID 归一化、#4017 deck 页数交接、#4628 Recent Projects 数量、#4358 artifact Design Signature/Diff、#4543 updater 安装模式偏好。",
+      "why": "v0.12.0 大版本已稳定，本周末转入'小修'阶段；新爆发问题 #4831 Docker BYOK 授权失败、#4814 OpenCode Windows 频繁中断、#4796 Kimi Windows argv 限制持续未修复。",
+      "action_fact": "【事实】v0.12.0 在生产环境使用前，关注 #4831 / #4814 / #4796 这三个 issue；Kimi Windows 用户建议等待 #4796 修复。",
+      "action_judge": "【判断】本地 Agent-native 设计工具从'功能战'转入'稳定性战'——这是用户敢用的关键阶段。",
+      "tags": ["AI Tool", "Open Design", "v0.12.0", "本地优先", "稳定性"],
+      "sources": [
+        "https://github.com/didil/open-design",
+        "https://open-design.ai/"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Hugging Face TRL v1.7.0（6/25 发布延续）",
+      "summary": "SFT 默认 loss_type 改为 chunked_nll，平均降低约 30% 峰值显存；新增 GMPO trainer、continuous batching、AsyncGRPO 与 vLLM 0.22+ 权重同步。6/28 无新 TRL 版本。",
+      "why": "训练栈显存优化对中小团队微调是直接成本节省；30% 峰值下降意味着同样硬件可以训练更大模型或更大 batch。",
+      "action_fact": "【事实】在现有 SFT 脚本上对比 chunked_nll 与原 loss 的显存峰值；优先用小样本验证收敛曲线。",
+      "action_judge": "【判断】这是 6/27 内容的延续，本周内仍是 P1，但 6/28 没有新信号，因此降级为 P2 跟进。",
+      "tags": ["Tutorial", "训练栈", "Hugging Face", "TRL", "SFT"],
+      "sources": [
+        "https://releases.sh/hugging-face/releases"
+      ]
+    }
+  ],
+  "tools": [
+    {"name":"GPT-5.6 Sol/Terra/Luna","type":"前沿大模型","highlight":"Sol 编码打平 Mythos 5 但仅 1/3 token；Terra 日常平衡；Luna 极致速度；7 月 Cerebras 集成 750 tokens/s","audience":"前沿研究、企业 PoC","action":"申请可信伙伴预览；研究 Sol Ultra 多智能体模式","url":"https://openai.com/index/previewing-gpt-5-6-sol/"},
+    {"name":"Claude Mythos 5","type":"前沿大模型","highlight":"出口管制已解除，可向 100+ 美国机构发布；Fable 5 走向解封","audience":"美国企业、合规团队","action":"关注附件 A 名单与外籍员工访问政策","url":"https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html"},
+    {"name":"Google Labs DESIGN.md","type":"设计系统格式","highlight":"YAML Token + 自然语言 Prose 双层结构，Coding Agent 持久理解视觉系统","audience":"设计师 / 独立开发者 / 设计 token 维护者","action":"在 design-token 仓库添加 DESIGN.md 描述视觉系统","url":"https://github.com/google-labs-code/design.md"},
+    {"name":"360 图龙锋 / 仪天阵","type":"AI 安全工具","highlight":"对标 Mythos 漏洞发现 + Glasswing 联盟；磐石之盾信创联盟首批成员含统信/麒麟/海光/飞腾/壁仞","audience":"信创企业、关基设施单位","action":"关注磐石之盾首批成员后续工具开放","url":"https://www.ithome.com/0/968/197.htm"},
+    {"name":"Claude Code v2.1.195","type":"Agent CLI","highlight":"hook 精确匹配、语音听写修复、CJK 粘贴、fullscreen 鼠标控制","audience":"Claude Code 重度用户","action":"升级到 v2.1.195；H1 收尾期做整体 hook 规则治理","url":"https://code.claude.com/docs/en/changelog"},
+    {"name":"TRL v1.7.0","type":"训练/后训练框架","highlight":"chunked_nll 降显存 30%，新增 GMPO trainer","audience":"模型微调、低显存训练用户","action":"用小样本对比 SFT 显存峰值","url":"https://releases.sh/hugging-face/releases"},
+    {"name":"Open Design v0.12.0","type":"本地 Agent-native 设计","highlight":"品牌捕获即设计系统、错误诊断具名化、PDF/PPTX 导出","audience":"产品经理、设计师、独立开发者","action":"关注 #4831/#4814/#4796 三个新 issue","url":"https://github.com/didil/open-design"}
+  ],
+  "video_topics": [
+    {"title":"GPT-5.6 和 Mythos 5 同一天：一收一放，谁在决定 AI 模型发布？","hook":"白宫首次直接审查 AI 模型发布；OpenAI 公开表达不满","angle":"从'72 小时上线到两周封锁'的故事线，讲'国家级 AI 管控'成型","materials":"OpenAI 官方页 + Semafor 独家截图 + OpenAI 公开声明","difficulty":"中"},
+    {"title":"Sol 7 月跑出 750 tokens/s：GPT-5.6 旗舰如何半价打 Mythos？","hook":"半价 + 1/3 token + Cerebras 集成","angle":"价格 / 性能 / 部署三轴对比 Mythos 5；用 Cerebras 7 月上线作为'工程化亮点'","materials":"价格表 + Terminal-Bench 2.1 分数 + Cerebras 集成新闻图","difficulty":"中"},
+    {"title":"360'倚天屠龙'对标 Mythos：国产 AI 安全已公开竞逐","hook":"周鸿祎首个明确对标 Mythos 的国产声明；磐石之盾信创联盟","angle":"从 Mythos 被限 → 360 公开声明 → 磐石之盾信创联盟，AI 安全双轨制","materials":"ISC.AI 现场图 + 磐石之盾首批成员名单","difficulty":"中"},
+    {"title":"Google DESIGN.md：让 Coding Agent 真正'读懂'你的设计系统","hook":"设计系统从'人维护'变'Agent 维护'的关键格式","angle":"DESIGN.md 双层结构 + 与 Open Design v0.12.0 的对比 + 实操 10 分钟配置","materials":"GitHub 仓库录屏 + 一个真实设计 token 转换示例","difficulty":"低"},
+    {"title":"Claude Code 6 月底'代码冻结'：H1 收尾期该做什么治理？","hook":"v2.1.195 之后连续两天无新版本；企业治理窗口","angle":"从 6 月一周三更到 6/28 无新版本，讲'功能冻结'机制 + 企业该做的 5 件事","materials":"Changelog 时间线 + 一个项目的 hook 规则清理演示","difficulty":"低"}
+  ],
+  "noise_items": [
+    {"item":"6/28 Product Hunt 当日榜单尚未开放（页面提示'come back in 0 days'）","reason":"自动化/官方页可能未刷新，不强行外推。"},
+    {"item":"'GPT-5.6 登顶 Terminal-Bench 拉下 Mythos 5' 营销标题","reason":"来自 Sohu/新智元等聚合源，Terminal-Bench 2.1 分数来自 OpenAI 自报，未见独立第三方验证。"},
+    {"item":"'Mythos 5 全面解封、Fable 5 已恢复'","reason":"仅 Mythos 5 解除出口管制，Fable 5 解除时间表仍未定；不要混为一谈。"},
+    {"item":"'360 图龙锋已超过 Mythos'","reason":"周鸿祎本人在 ISC.AI 大会演讲原话是'在某些维度上实现了超越'，未公开 benchmark 数据；需要后续独立验证。"},
+    {"item":"Claude Code v2.1.196+ 传闻","reason":"CHANGELOG.md 截至 6/28 无此版本，Releasebot 也无对应抓取；属于预期版本但尚未发布。"},
+    {"item":"6/27 中文 AI 早报列表文（标题'全网最全'、'一文吃透'等）","reason":"无新事实增量，主要复述 6/26 GPT-5.6 旧内容；保留为信息源但不作为日报头条。"}
+  ],
+  "tracking_items": [
+    {"item":"GPT-5.6 公开可用性","reason":"盯紧 7 月 Cerebras 集成 + Terra/Luna 是否进入通用 API；OpenAI 后续是否发表'政府访问流程'框架细则。"},
+    {"item":"Fable 5 解封时间表","reason":"商务部长 Lutnick 信中对 Fable 5 保持沉默，6/29-7/1 是否有明确解封信号。"},
+    {"item":"360 磐石之盾后续","reason":"首批信创成员后续工具开放节奏、是否对外提供 API、benchmark 数据公开。"},
+    {"item":"Claude Code 7 月初版本","reason":"6/28 起无新版本，预计 7/1-7/3 会有 v2.1.196 或 197；本期 H1 收尾治理建议提前完成。"},
+    {"item":"DESIGN.md 工程化进展","reason":"是否有 Anthropic/OpenAI/Microsoft 官方表态或集成；Open Design v0.13.0 路线图。"},
+    {"item":"7 月 Fable 5 vs GPT-5.6 定价战","reason":"Mythos 5 解封后，Fable 5 解封前的窗口期是 OpenAI 抢占客户的黄金期。"}
+  ]
+}
