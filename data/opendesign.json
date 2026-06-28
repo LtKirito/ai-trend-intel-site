@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 71802,
-    "forks": 8111,
-    "open_issues": 454,
+    "stars": 72068,
+    "forks": 8156,
+    "open_issues": 456,
     "latest_release": {
       "version": "open-design-v0.12.0",
       "date": "2026-06-26",
@@ -12,194 +12,195 @@
   },
   "recent_prs": [
     {
-      "number": 4414,
-      "title": "fix(amr): normalize kimi-k2.7-code Vela model id",
+      "number": 4853,
+      "title": "feat(landing-page): add 5 design-agent alternative comparison pages (Stitch, Genspark, Figma Make, Qoder, Trae)",
       "state": "open",
-      "author": "AyushSharma718",
+      "author": "xne998808-ai",
+      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "高 — 06-28 新增 XXL：官网 SEO 内容营销战略深化，新增 5 个竞品对比页面对标 Stitch/Genspark/Figma Make/Qoder/Trae，是 v0.12.0 后落地页/获客战略的最大手笔",
+      "url": "https://github.com/nexu-io/open-design/pull/4853"
+    },
+    {
+      "number": 4747,
+      "title": "fix(daemon): set REASONIX_HOME for Reasonix agent to find user config",
+      "state": "open",
+      "author": "want2knoww",
       "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "中 — 修复 Vela 中 kimi_k2_7_code 模型 ID 未归一化问题，确保与现有 K2.6 规则一致。AMR 模型映射层小修但标记 high risk",
-      "url": "https://github.com/nexu-io/open-design/pull/4414"
+      "impact": "中 — 修复 Reasonix agent 找不到用户配置问题（关联 #4741 deepseek-flash 未配置 17 评论）。daemon 层小修但 high risk，Reasonix 适配器主线推进",
+      "url": "https://github.com/nexu-io/open-design/pull/4747"
     },
     {
-      "number": 4297,
-      "title": "feat(i18n): add Thai maintainers translation",
+      "number": 4759,
+      "title": "test(e2e): expand onboarding, AMR, automation, and home coverage",
       "state": "open",
-      "author": "tanangular",
-      "labels": ["size/XXL", "risk/low", "type/docs"],
-      "impact": "低 — 泰语核心文档集补全（README/Quickstart/Contributing 之后的 Maintainers）。国际化文档建设，无 runtime 风险",
-      "url": "https://github.com/nexu-io/open-design/pull/4297"
+      "author": "AmyShang-alt",
+      "labels": ["size/XL", "risk/medium", "type/chore", "skip-validation"],
+      "impact": "中 — E2E 覆盖扩展到 onboarding / AMR / automation / home，承接 #4745 重启。v0.12.0 后回归测试基建投入",
+      "url": "https://github.com/nexu-io/open-design/pull/4759"
     },
     {
-      "number": 4017,
-      "title": "Fix deck preset page count handoff",
+      "number": 4807,
+      "title": "feat(landing-page): upgrade 5 tutorials to long-form guides + real app screenshots (batch 1)",
       "state": "open",
-      "author": "TheAngryPit",
-      "labels": ["size/L", "risk/medium", "type/bugfix", "needs-validation"],
-      "impact": "高 — 修复 Home 页 deck preset 页数在 Quick Brief 交接时丢失的问题（#3906），影响 Simple Deck 生成约束准确性",
-      "url": "https://github.com/nexu-io/open-design/pull/4017"
+      "author": "xne998808-ai",
+      "labels": ["size/L", "risk/medium", "type/feature", "skip-validation", "tutorials"],
+      "impact": "中 — 5 篇教程升级为长文指南 + 真实应用截图，落地页/SEO 内容营销战略第二弹（与 #4853 同作者同窗口提交）",
+      "url": "https://github.com/nexu-io/open-design/pull/4807"
     },
     {
-      "number": 4628,
-      "title": "fix(web): show seven recent projects on wide home layouts",
-      "state": "open",
-      "author": "jzhishu",
-      "labels": ["size/M", "risk/medium", "type/bugfix", "needs-validation"],
-      "impact": "低 — 宽屏 Home Recent Projects 行显示数量从 6 调整为 7（#4076），UI 微调。承接 #4110 重新 rebase",
-      "url": "https://github.com/nexu-io/open-design/pull/4628"
-    },
-    {
-      "number": 4358,
-      "title": "add Design Signature and Diff for artifacts",
-      "state": "open",
-      "author": "Nagendhra-web",
-      "labels": ["size/XL", "risk/high", "type/feature"],
-      "impact": "高 — 为 artifact 增加设计签名与结构化 Diff，解决 HTML 文本 diff 噪音问题。artifact 版本对比与可解释性基础设施",
-      "url": "https://github.com/nexu-io/open-design/pull/4358"
-    },
-    {
-      "number": 3367,
-      "title": "fix(web): stage skill chip and forward meta.skillIds when picking from @-popover",
-      "state": "open",
-      "author": "estelledc",
-      "labels": ["size/M", "risk/medium", "type/bugfix", "skip-validation"],
-      "impact": "中 — 修复从 @-mention popover 选择 skill 时未调用 setStagedSkills 导致 StagedSkills 不渲染的问题",
-      "url": "https://github.com/nexu-io/open-design/pull/3367"
-    },
-    {
-      "number": 4543,
-      "title": "feat(updater): add update install mode preference (#4467)",
-      "state": "open",
-      "author": "cbeaulieu-gt",
-      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "高 — 在 #4471 payload 自动安装能力基础上，新增用户可见的更新安装模式偏好，完善桌面端更新器 UX",
-      "url": "https://github.com/nexu-io/open-design/pull/4543"
-    },
-    {
-      "number": 4399,
-      "title": "[codex] Fix buffered run event checkpoints",
-      "state": "open",
-      "author": "tianpeng-dev",
+      "number": 2330,
+      "title": "fix(web): confirm before deleting saved template in New Project",
+      "state": "closed",
+      "author": "EthanGuo-coder",
       "labels": [],
-      "impact": "中 — 修复 Codex 运行事件缓冲 checkpoint 推进过早导致持久化 assistant 消息从 artifact 中间截断的问题",
-      "url": "https://github.com/nexu-io/open-design/pull/4399"
+      "impact": "中 — 关闭但未合并，New Project 删除模板时增加确认步骤（间接解决 #2975 抽取历史删除无确认的同类 UX 风险）",
+      "url": "https://github.com/nexu-io/open-design/pull/2330"
+    },
+    {
+      "number": 4832,
+      "title": "docs(readme): refresh contributors wall",
+      "state": "open",
+      "author": "open-design-bot[bot]",
+      "labels": [],
+      "impact": "低 — 由 open-design-bot 自动更新 contributors 列表（v0.12.0 发布后 30 contributors 入墙），文档/品牌资产维护",
+      "url": "https://github.com/nexu-io/open-design/pull/4832"
+    },
+    {
+      "number": 4371,
+      "title": "fix(web): hide the jump-to-latest button while the conv-history dropdown is open",
+      "state": "merged",
+      "author": "portseif",
+      "labels": ["size/XS", "risk/medium", "type/bugfix", "validated"],
+      "impact": "低 — 06-17 合入（06-28 复检被搜出）：conv-history 下拉打开时隐藏 jump-to-latest 按钮避免 UI 冲突，web UI 打磨小修",
+      "url": "https://github.com/nexu-io/open-design/pull/4371"
+    },
+    {
+      "number": 3251,
+      "title": "docs(i18n): fix zh-TW README parity drift from English",
+      "state": "merged",
+      "author": "laihenyi",
+      "labels": ["size/XS", "risk/low", "type/docs"],
+      "impact": "低 — 05-29 合入（06-28 复检被搜出）：修复繁体中文 README 与英文版的同步漂移，i18n 文档质量维护",
+      "url": "https://github.com/nexu-io/open-design/pull/3251"
     }
   ],
   "recent_issues": [
     {
-      "number": 3565,
-      "title": "Home deck page-count selector is saved but not enforced in generation prompt",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "help wanted", "priority:p2"],
-      "comments": 11,
-      "summary": "P2（11 评论）：Home Simple Deck 页数选择器保存到 metadata 但未在生成 prompt 中生效，用户自由文本可覆盖。关联 #4017 修复方向",
-      "url": "https://github.com/nexu-io/open-design/issues/3565"
-    },
-    {
-      "number": 4708,
-      "title": "[Bug]: Safety/crash telemetry bypasses the opt-out toggle",
-      "author": "Philmod",
-      "labels": ["bug"],
-      "comments": 6,
-      "summary": "严重隐私问题（6 评论）：关闭遥测后 PostHog crash/safety beacon 仍通过直接 fetch 发送，与 PRIVACY.md 承诺冲突。已指派 YOMXXX",
-      "url": "https://github.com/nexu-io/open-design/issues/4708"
-    },
-    {
-      "number": 4831,
-      "title": "[Bug]: Docker not work",
-      "author": "nightlyworker",
-      "labels": ["bug"],
-      "comments": 4,
-      "summary": "06-27 新增：Docker 部署报 Authorization: Bearer <OD_API_TOKEN> required，.env 已配置仍无法通过 BYOK onboarding。Linux 部署体验新爆点",
-      "url": "https://github.com/nexu-io/open-design/issues/4831"
-    },
-    {
-      "number": 4814,
-      "title": "[Bug]: Using it with OpenCode, it often unexpectedly stops.",
-      "author": "Chivenh",
-      "labels": ["bug"],
-      "comments": 7,
-      "summary": "06-26 新增：OpenCode 适配器在 Windows 上频繁意外中断（7 评论）。v0.12.0 虽改善 OpenCode 二进制检测，但运行时稳定性仍有问题",
-      "url": "https://github.com/nexu-io/open-design/issues/4814"
-    },
-    {
-      "number": 4796,
-      "title": "[Bug]: Kimi CLI adapter on Windows uses argv instead of stdin, causing AGENT_PROMPT_TOO_LARGE for any real prompt",
-      "author": "ensteinoff",
+      "number": 4741,
+      "title": "[Bug]: Reasonix session/new fails: model \"deepseek-flash\" is not configured",
+      "author": "want2knoww",
       "labels": ["bug", "help wanted"],
-      "comments": 9,
-      "summary": "关键问题（9 评论）：Windows Kimi CLI 仍用 argv 传参，任意真实 prompt 触发 AGENT_PROMPT_TOO_LARGE。help wanted 仍未指派修复者",
-      "url": "https://github.com/nexu-io/open-design/issues/4796"
+      "comments": 17,
+      "summary": "高热（17 评论）：Reasonix agent 启动 new session 报 deepseek-flash 模型未配置。help wanted，已有 #4747 修复分支 review 中，适配器层基础配置问题",
+      "url": "https://github.com/nexu-io/open-design/issues/4741"
+    },
+    {
+      "number": 4852,
+      "title": "[Bug]: Windows v0.12.0 packaged app: od command is missing, so MCP server cannot be started from the copied guide",
+      "author": "luxi78",
+      "labels": ["bug", "help wanted"],
+      "comments": 3,
+      "summary": "06-28 新增：v0.12.0 Windows 打包版缺失 od 命令导致按官方文档复制后无法启动 MCP server。Windows 桌面端 v0.12.0 安装/启动新爆点",
+      "url": "https://github.com/nexu-io/open-design/issues/4852"
+    },
+    {
+      "number": 4641,
+      "title": "Invite link to discord doesn't work",
+      "author": "tajchert",
+      "labels": ["bug", "good first issue", "help wanted", "docs"],
+      "comments": 10,
+      "summary": "10 评论：Discord 社区邀请链接失效。good first issue 标签但 help wanted 仍未指派，社区获客触点破损",
+      "url": "https://github.com/nexu-io/open-design/issues/4641"
     },
     {
       "number": 2975,
       "title": "Deleting an extraction history item does not require confirmation",
       "author": "AmyShang-alt",
-      "labels": ["bug", "priority:p1", "stale"],
+      "labels": ["bug", "priority:p1"],
       "comments": 4,
-      "summary": "P1 + stale（4 评论）：抽取历史删除无确认步骤，存在用户数据误删风险。长期未推进",
+      "summary": "P1 长期（4 评论，2026-05-26 至今）：抽取历史删除无确认步骤，用户数据误删风险。今日 #2330 关闭了同类问题（New Project 模板删除），形成 PR-Issue 关联",
       "url": "https://github.com/nexu-io/open-design/issues/2975"
     },
     {
-      "number": 3145,
-      "title": "Annotation: For product managers to mark detailed requirements",
-      "author": "feliciaZH",
-      "labels": ["enhancement", "needs-product-direction", "stale"],
-      "comments": 2,
-      "summary": "功能请求（2 评论）：PM 可在原型上添加富文本标注（类似 Figma Comments），needs-product-direction 长期 stale",
-      "url": "https://github.com/nexu-io/open-design/issues/3145"
+      "number": 2117,
+      "title": "Import DESIGN.md for custom design systems",
+      "author": "mecxist",
+      "labels": ["enhancement", "stale"],
+      "comments": 5,
+      "summary": "stale 增强（5 评论）：导入自定义 DESIGN.md 作为 design system。v0.12.0 已将 DESIGN.md 列为品牌捕获入口之一，issue 描述与新功能重合度高，待重新激活",
+      "url": "https://github.com/nexu-io/open-design/issues/2117"
     },
     {
-      "number": 3079,
-      "title": "Add a bot to automatically generate the translated documentation",
-      "author": "RoverKai",
+      "number": 1987,
+      "title": "New Project flow redesign",
+      "author": "mecxist",
       "labels": ["enhancement", "needs-product-direction", "stale"],
-      "comments": 4,
-      "summary": "功能请求（4 评论）：README 中英文版本存在差异，建议用 GitHub Actions bot 自动翻译文档。needs-product-direction",
-      "url": "https://github.com/nexu-io/open-design/issues/3079"
+      "comments": 9,
+      "summary": "stale 增强（9 评论）：New Project 流程重设计，needs-product-direction。v0.12.0 品牌捕获 + build 闭环上线后，Onboarding 体验已变，issue 描述需对齐新流程",
+      "url": "https://github.com/nexu-io/open-design/issues/1987"
     },
     {
-      "number": 4368,
-      "title": "[Bug]: NO Linux app image",
-      "author": "Abdulee",
-      "labels": ["bug"],
-      "comments": 7,
-      "summary": "Linux 桌面端缺口（7 评论）：README 声明 Linux 支持但 Release 无 AppImage。06-27 仍有新讨论，影响 Linux 用户获客",
-      "url": "https://github.com/nexu-io/open-design/issues/4368"
+      "number": 1905,
+      "title": "app cant use codex cli",
+      "author": "WrinSEA",
+      "labels": ["bug", "priority:p0", "stale"],
+      "comments": 12,
+      "summary": "P0 + stale（12 评论，2026-05-16 至今）：app 无法调用 codex CLI。最高优先级标签但 stale 状态，与 #4633 Codex 品牌提取修复/AMR 商业化方向相关",
+      "url": "https://github.com/nexu-io/open-design/issues/1905"
     },
     {
       "number": 4828,
       "title": "Perplexity Ai design system is not linked properly on the website",
       "author": "imontaine",
       "labels": ["bug", "help wanted"],
-      "comments": 6,
-      "summary": "06-26 新增：官网 /plugins/systems/ 中 Perplexity 设计系统卡片点击后循环跳转回列表页，无详情页。官网内容数据问题",
+      "comments": 7,
+      "summary": "06-26 新增：官网 /plugins/systems/ 中 Perplexity 设计系统卡片点击后循环跳转回列表页，无详情页。官网内容数据问题，与 #4853 落地页内容建设相关",
       "url": "https://github.com/nexu-io/open-design/issues/4828"
+    },
+    {
+      "number": 4373,
+      "title": "[Bug]: BYOK on Ollama.com model mismatch errors",
+      "author": "Grumpster-Dev",
+      "labels": ["bug", "help wanted"],
+      "comments": 13,
+      "summary": "高热（13 评论）：BYOK 模式下 Ollama.com 模型不匹配错误。help wanted 仍未指派，自托管用户模型配置痛点",
+      "url": "https://github.com/nexu-io/open-design/issues/4373"
+    },
+    {
+      "number": 706,
+      "title": "DeepSeek TUI adapter: add stdin fallback for large prompts (argv > 30KB)",
+      "author": "FaFo-0",
+      "labels": ["help wanted", "feature"],
+      "comments": 8,
+      "summary": "8 评论长期：DeepSeek TUI 适配器需要 stdin fallback 应对 >30KB argv 限制。help wanted，与 #4796 Kimi Windows argv 问题同根——CLI 适配器大 prompt 处理",
+      "url": "https://github.com/nexu-io/open-design/issues/706"
     }
   ],
   "trends": {
-    "direction": "v0.12.0 'Brand-backed Design System' 于 06-26 正式发布（103 PRs / 30 contributors / 6 天），标志项目从'为你设计'转向'用你的品牌设计系统做设计'。核心交付：品牌 URL / DESIGN.md / 离线 .fig / 浏览器 clipper 统一汇入 OD Library + 150 预置品牌设计系统 + PDF/PPTX 一键导出；错误诊断从 execution_failed 黑盒改为具名原因 + 自动退避重试；桌面启动、登录握手、PDF 导出、OpenCode/Codex 适配均有大量打磨。 Stars 达 71,802（+427 vs 06-26），forks 8,111（+60），open_issues 升至 454（+12）——新版本发布后 issue 涌入速度仍快于修复。PR 列表较昨日完全轮换，今日活跃 PR 以 v0.12.0 后小修和 polish 为主（Kimi 模型 ID、deck 页数交接、Recent Projects 数量、artifact diff、updater 偏好等）。",
+    "direction": "v0.12.0 'Brand-backed Design System' 发布后第 2 天（2026-06-26 → 06-28），项目进入 '落地页/SEO 内容营销 + Windows 桌面端 v0.12.0 安装阻断 + Reasonix 新适配器' 三线并行期。Stars 72,068（+266 vs 06-27 71,802，日均回升至稳态上沿），forks 8,156（+45），open_issues 456（+2 增速首次明显回落）。PR 列表完全轮换为 v0.12.0 后第二波：#4853 design-agent 5 竞品对比页（XXL）+ #4807 教程长文指南 batch 1（L）同作者同窗口构成 v0.12.0 后最大内容营销手笔；#4747 Reasonix 适配器修复（关联 #4741 17 评论）+ #4759 E2E 覆盖扩展（XL）显示回归测试基建投入。Issue 端：#4852 Windows v0.12.0 od 命令缺失 06-28 新增（与昨日 #4831 Docker BYOK 形成 v0.12.0 安装/启动新阻断连续爆发）；#4741 Reasonix 模型配置（17 评论）+ #4373 BYOK Ollama（13 评论）+ #706 DeepSeek argv 限制（8 评论）三大 CLI 适配器问题持续堆叠。",
     "affected_modules": [
-      "Brand / Design System（v0.12.0 旗舰：品牌捕获 → design system → build → export 闭环，OD Library + 150 seeded brands）",
-      "Daemon / Agents（错误诊断具名化 + 自动退避重试；Codex/OpenCode/Kimi 适配器持续修复）",
-      "Desktop / Updater（启动 splash 进度、登录 handshake、更新安装模式偏好 #4543）",
-      "Web UI / Home（deck 页数交接 #4017、Recent Projects 数量 #4628、skill chip staging #3367）",
-      "Artifact / Editor（Design Signature & Diff #4358，提升版本可比性与可解释性）",
-      "Landing / Docs（官网 SEO、博客、18 语言本地化、自动翻译 bot 需求）"
+      "Landing / SEO（v0.12.0 后第二大主题：#4853 5 竞品对比页 XXL + #4807 长文教程 L + #4828 官网数据修复）",
+      "Windows Desktop / Updater（v0.12.0 新阻断：#4852 od 命令缺失，与 #4831 Docker BYOK / #4796 Kimi argv 形成连续爆点）",
+      "Agent Adapters / Reasonix（#4747 修复 + #4741 17 评论，daemon 层 Reasonix 适配器主线推进）",
+      "E2E / QA Infra（#4759 覆盖扩展 XL，承接 #4745 重启，回归测试基建）",
+      "Brand / Design System（#2117 DESIGN.md 导入 stale 但 v0.12.0 已实现，issue 与新功能存在重合）",
+      "BYOK / Self-host（#4373 Ollama 13 评论 + #4831 Docker BYOK 4 评论，自托管用户体验痛点）"
     ],
     "risks": [
-      "v0.12.0 发布后 issue 激增：open_issues 454（+12），#4831 Docker BYOK 授权失败、#4814 OpenCode Windows 中断、#4796 Kimi Windows argv 限制——新版本在 Windows/Linux 部署/适配器场景出现多个回归",
-      "#4708 遥测 opt-out 绕过：隐私合规与品牌信任风险，已指派 YOMXXX 但仍需修复落地",
-      "#4638 macOS 崩溃 38 评论仍无复现路径，Apple Silicon 基础稳定性持续拖累用户信任",
-      "#3837 skill install P1（18 评论）、#2975 删除无确认（P1+stale）、#4368 Linux AppImage 缺失——平台基础体验长期积压",
-      "昨日旗舰 PR（#4691/#4684/#4754）未出现在今日最近更新 Top 8 中，v0.12.0 后核心大 PR 是否继续推进需观察"
+      "Windows v0.12.0 连续阻断：#4852 od 命令缺失（06-28 新增）+ #4831 Docker BYOK（06-27）+ #4814 OpenCode Windows 中断 + #4796 Kimi Windows argv 限制——v0.12.0 在 Windows/自托管场景集中爆发安装/启动/运行新问题",
+      "CLI 适配器大 prompt 三连击：#4741 Reasonix 17 评论 + #4373 BYOK Ollama 13 评论 + #706 DeepSeek argv 8 评论——多个 agent 适配器在自托管/本地模型场景存在模型配置或大 prompt 处理基础问题",
+      "#4708 遥测 opt-out 绕过仍待修复落地：隐私合规与品牌信任风险持续累积，v0.12.0 大量用户涌入放大风险",
+      "#4638 macOS 崩溃 + #1905 Codex CLI P0 stale + #4368 Linux AppImage 缺失——平台稳定性与多 CLI 兼容性仍是 v0.12.0 后的关键拖累",
+      "Landing/SEO 战略投入激增（#4853 + #4807 同作者同窗口）但内容/数据基建（#4828 Perplexity 链接、#3079 自动翻译 bot、#4641 Discord 邀请）跟不上，官网运营存在断点"
     ],
     "actions": [
-      "高优跟踪 #4796 Kimi Windows 适配与 #4814 OpenCode Windows 中断——影响 v0.12.0 多 Agent 战略在 Windows 的交付",
-      "关注 #4831 Docker BYOK 授权失败——新版本 self-host 用户新增阻塞点",
-      "推动 #4708 遥测绕过修复落地——隐私合规不可拖延",
-      "观察 #4017 deck 页数交接修复 review 进度——关联 #3565 长期 P2 issue",
-      "下周初检查 #4691 brands XXL / #4684 AMR 订阅化 / #4754 安全修复是否恢复活跃"
+      "高优跟踪 #4852 Windows v0.12.0 od 命令缺失——与 #4831 Docker BYOK 合并归类为 v0.12.0 自托管/Windows 安装阻断集群",
+      "推动 #4747 Reasonix 修复合入并监控 #4741 后续——Reasonix 适配器是 v0.12.0 后多 Agent 战略新增长点",
+      "关注 #4853 5 竞品对比页 review 进度——与 #4807 长文教程共同构成 v0.12.0 后内容营销战略最大手笔",
+      "回归测试基建 #4759 XL 关注——E2E 覆盖是 v0.12.0 后稳定性提升的关键杠杆",
+      "建议重新激活 #2117 DESIGN.md 导入 stale issue——v0.12.0 已实现 DESIGN.md 入口，issue 描述与新功能重合度极高",
+      "延续昨日行动：推动 #4708 遥测绕过修复落地 + 观察 #4017 deck 页数交接 review"
     ],
-    "next_week": "v0.12.0 发布后首周是关键观察窗口：安装成功率、Docker/BYOK 配置、Windows 多 Agent 适配器稳定性将决定新版本口碑。#4708 遥测绕过、#4796 Kimi argv、#4814 OpenCode 中断预计会快速得到修复或指派。关注 open_issues 是否从 454 回落，以及 #4017/#4628/#4543 等 polish PR 是否进入合并流程。品牌设计系统方向（#4691/#4260/#4777）在 v0.12.0 发布后是否继续扩展也是下周重点。"
+    "next_week": "v0.12.0 发布后第 2 周是关键内容营销/SEO 战略落地窗口：#4853 5 竞品对比页（XXL）+ #4807 长文教程 batch 1 是否进入合并/上线将决定 v0.12.0 社区破圈力度。Windows v0.12.0 安装/启动新阻断（#4852 + #4831 + #4814 + #4796）若集中修复将快速缓解用户体验痛点，#4708 遥测 opt-out 隐私合规风险也需尽快落地。CLI 适配器主线（Reasonix #4747/#4741 + Ollama #4373 + DeepSeek #706）需在 v0.12.x hotfix 中系统性解决。下周观察 open_issues 是否从 456 回落至 450 以下，以及 content/SEO PR（#4853/#4807）能否进入 review 流程。"
   }
 }
