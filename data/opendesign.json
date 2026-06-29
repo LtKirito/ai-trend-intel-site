@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 72068,
-    "forks": 8156,
-    "open_issues": 456,
+    "stars": 72517,
+    "forks": 8217,
+    "open_issues": 449,
     "latest_release": {
       "version": "open-design-v0.12.0",
       "date": "2026-06-26",
@@ -12,22 +12,58 @@
   },
   "recent_prs": [
     {
-      "number": 4853,
-      "title": "feat(landing-page): add 5 design-agent alternative comparison pages (Stitch, Genspark, Figma Make, Qoder, Trae)",
+      "number": 4876,
+      "title": "[codex] Route BYOK API providers through OpenCode",
       "state": "open",
-      "author": "xne998808-ai",
-      "labels": ["size/XXL", "risk/medium", "type/feature", "needs-validation"],
-      "impact": "高 — 06-28 新增 XXL：官网 SEO 内容营销战略深化，新增 5 个竞品对比页面对标 Stitch/Genspark/Figma Make/Qoder/Trae，是 v0.12.0 后落地页/获客战略的最大手笔",
-      "url": "https://github.com/nexu-io/open-design/pull/4853"
+      "author": "PerishCode",
+      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — 06-29 新增 XL：BYOK API 提供商走 OpenCode 路由统一执行路径。承接 #3362 Anthropic messages endpoint 修复，BYOK 体验主线大改",
+      "url": "https://github.com/nexu-io/open-design/pull/4876"
     },
     {
-      "number": 4747,
-      "title": "fix(daemon): set REASONIX_HOME for Reasonix agent to find user config",
+      "number": 3362,
+      "title": "fix: support Anthropic messages endpoint URLs",
       "state": "open",
-      "author": "want2knoww",
-      "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "中 — 修复 Reasonix agent 找不到用户配置问题（关联 #4741 deepseek-flash 未配置 17 评论）。daemon 层小修但 high risk，Reasonix 适配器主线推进",
-      "url": "https://github.com/nexu-io/open-design/pull/4747"
+      "author": "mturac",
+      "labels": ["size/L", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "高 — 05-30 创建、06-29 复活：Anthropic BYOK 支持完整 messages 端点 URL（修复 #2517）。同窗口触发 #4877/#4878 两个 P1 issue 进入 BYOK 体验回归高峰",
+      "url": "https://github.com/nexu-io/open-design/pull/3362"
+    },
+    {
+      "number": 4771,
+      "title": "[codex] restore AMR wallet balance follow-ups",
+      "state": "open",
+      "author": "alchemistklk",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — 06-25 创建、06-29 复活：AMR 钱包余额后续 PR 同步到 main，承接 #4660 Cloud Recovery 配合。AMR 商业化主线第二段",
+      "url": "https://github.com/nexu-io/open-design/pull/4771"
+    },
+    {
+      "number": 4660,
+      "title": "[codex] implement AMR Cloud Recovery",
+      "state": "open",
+      "author": "alchemistklk",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — 06-23 创建、06-29 复活：AMR 云恢复（替代已关闭的 #4455），余额不足时给出清晰恢复 UI + CLI + 自动/手动充值流程。AMR 商业化闭环关键拼图",
+      "url": "https://github.com/nexu-io/open-design/pull/4660"
+    },
+    {
+      "number": 4874,
+      "title": "Add Postgres and Gateway API deployment support",
+      "state": "open",
+      "author": "andreab67",
+      "labels": ["size/XL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "高 — 06-29 新增 XL：daemon 容器化/多副本部署支持共享状态（Postgres + Gateway API），打破 daemon 与本地 better-sqlite3 硬绑定。企业/自托管部署关键基建",
+      "url": "https://github.com/nexu-io/open-design/pull/4874"
+    },
+    {
+      "number": 4780,
+      "title": "feat(hub): add Hub design system and studio skills",
+      "state": "closed",
+      "author": "ecalefi",
+      "labels": ["size/XL", "risk/medium", "type/feature", "skip-validation"],
+      "impact": "中 — 06-25 创建、06-29 关闭：Hub 设计系统 + 三个 studio skills。社区设计系统生态扩展（v0.12.0 后 OD Library 战略延伸）",
+      "url": "https://github.com/nexu-io/open-design/pull/4780"
     },
     {
       "number": 4759,
@@ -35,172 +71,141 @@
       "state": "open",
       "author": "AmyShang-alt",
       "labels": ["size/XL", "risk/medium", "type/chore", "skip-validation"],
-      "impact": "中 — E2E 覆盖扩展到 onboarding / AMR / automation / home，承接 #4745 重启。v0.12.0 后回归测试基建投入",
+      "impact": "中 — 06-25 创建、06-29 复活：E2E 覆盖扩展到 onboarding / AMR / automation / home（AMR Cloud、Local CLI、BYOK setup、运行时 gating 等高优场景）。v0.12.0 后回归测试基建持续推进",
       "url": "https://github.com/nexu-io/open-design/pull/4759"
     },
     {
-      "number": 4807,
-      "title": "feat(landing-page): upgrade 5 tutorials to long-form guides + real app screenshots (batch 1)",
+      "number": 4865,
+      "title": "fix(web): use daemon MCP install info in agent guide",
       "state": "open",
-      "author": "xne998808-ai",
-      "labels": ["size/L", "risk/medium", "type/feature", "skip-validation", "tutorials"],
-      "impact": "中 — 5 篇教程升级为长文指南 + 真实应用截图，落地页/SEO 内容营销战略第二弹（与 #4853 同作者同窗口提交）",
-      "url": "https://github.com/nexu-io/open-design/pull/4807"
-    },
-    {
-      "number": 2330,
-      "title": "fix(web): confirm before deleting saved template in New Project",
-      "state": "closed",
-      "author": "EthanGuo-coder",
-      "labels": [],
-      "impact": "中 — 关闭但未合并，New Project 删除模板时增加确认步骤（间接解决 #2975 抽取历史删除无确认的同类 UX 风险）",
-      "url": "https://github.com/nexu-io/open-design/pull/2330"
-    },
-    {
-      "number": 4832,
-      "title": "docs(readme): refresh contributors wall",
-      "state": "open",
-      "author": "open-design-bot[bot]",
-      "labels": [],
-      "impact": "低 — 由 open-design-bot 自动更新 contributors 列表（v0.12.0 发布后 30 contributors 入墙），文档/品牌资产维护",
-      "url": "https://github.com/nexu-io/open-design/pull/4832"
-    },
-    {
-      "number": 4371,
-      "title": "fix(web): hide the jump-to-latest button while the conv-history dropdown is open",
-      "state": "merged",
-      "author": "portseif",
-      "labels": ["size/XS", "risk/medium", "type/bugfix", "validated"],
-      "impact": "低 — 06-17 合入（06-28 复检被搜出）：conv-history 下拉打开时隐藏 jump-to-latest 按钮避免 UI 冲突，web UI 打磨小修",
-      "url": "https://github.com/nexu-io/open-design/pull/4371"
-    },
-    {
-      "number": 3251,
-      "title": "docs(i18n): fix zh-TW README parity drift from English",
-      "state": "merged",
-      "author": "laihenyi",
-      "labels": ["size/XS", "risk/low", "type/docs"],
-      "impact": "低 — 05-29 合入（06-28 复检被搜出）：修复繁体中文 README 与英文版的同步漂移，i18n 文档质量维护",
-      "url": "https://github.com/nexu-io/open-design/pull/3251"
+      "author": "YOMXXX",
+      "labels": ["size/M", "risk/medium", "type/bugfix", "needs-validation"],
+      "impact": "中 — 06-28 创建、06-29 复活：直接修复 #4852 Windows v0.12.0 od 命令缺失——Use Everywhere 复制指南从 daemon MCP 安装信息读取真实命令路径而非硬编码 'od'。Windows v0.12.0 安装阻断第一条修复已落地",
+      "url": "https://github.com/nexu-io/open-design/pull/4865"
     }
   ],
   "recent_issues": [
+    {
+      "number": 4121,
+      "title": "[Bug]: Antigravity agent incorrectly reports \"needs to sign in\" even though agy is authenticated and responding",
+      "author": "newton5555",
+      "labels": ["bug"],
+      "comments": 23,
+      "summary": "高热持续（17→23 评论）：Antigravity agent 始终报 needs to sign in 但 CLI 实际已登录。CLI 凭据/keyring 过期或失效检测逻辑误报，长期 agent 适配器认证层痛点",
+      "url": "https://github.com/nexu-io/open-design/issues/4121"
+    },
+    {
+      "number": 4877,
+      "title": "BYOK Anthropic setup shows Base URL error after successful connection",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "priority:p1", "ux"],
+      "comments": 3,
+      "summary": "06-29 新增 P1：在 #3362 Electron QA 中发现，BYOK Anthropic 设置同时显示 Base URL 无效 + 连接成功两个矛盾状态。BYOK 体验回归高峰，验证状态机冲突",
+      "url": "https://github.com/nexu-io/open-design/issues/4877"
+    },
+    {
+      "number": 4878,
+      "title": "BYOK full Messages endpoint mode can retain stale incompatible model options",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "priority:p1", "ux"],
+      "comments": 1,
+      "summary": "06-29 新增 P1：BYOK Anthropic full messages 端点模式下 model picker 保留过期/不兼容模型选项，触发 connection test 失败。与 #3362 配套，模型列表缓存陈旧",
+      "url": "https://github.com/nexu-io/open-design/issues/4878"
+    },
+    {
+      "number": 4879,
+      "title": "Hide the Home run button after navigating into project details",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "good first issue", "help wanted", "ux"],
+      "comments": 2,
+      "summary": "06-29 新增：Home 页 run 按钮进入项目详情后未自动隐藏跟随视图，UX 细节。good first issue，社区可参与",
+      "url": "https://github.com/nexu-io/open-design/issues/4879"
+    },
     {
       "number": 4741,
       "title": "[Bug]: Reasonix session/new fails: model \"deepseek-flash\" is not configured",
       "author": "want2knoww",
       "labels": ["bug", "help wanted"],
-      "comments": 17,
-      "summary": "高热（17 评论）：Reasonix agent 启动 new session 报 deepseek-flash 模型未配置。help wanted，已有 #4747 修复分支 review 中，适配器层基础配置问题",
+      "comments": 18,
+      "summary": "高热持续（17→18 评论）：Reasonix 适配器 deepseek-flash 模型未配置。#4747 修复仍 open，CLI 适配器层基础配置问题持续堆叠",
       "url": "https://github.com/nexu-io/open-design/issues/4741"
-    },
-    {
-      "number": 4852,
-      "title": "[Bug]: Windows v0.12.0 packaged app: od command is missing, so MCP server cannot be started from the copied guide",
-      "author": "luxi78",
-      "labels": ["bug", "help wanted"],
-      "comments": 3,
-      "summary": "06-28 新增：v0.12.0 Windows 打包版缺失 od 命令导致按官方文档复制后无法启动 MCP server。Windows 桌面端 v0.12.0 安装/启动新爆点",
-      "url": "https://github.com/nexu-io/open-design/issues/4852"
-    },
-    {
-      "number": 4641,
-      "title": "Invite link to discord doesn't work",
-      "author": "tajchert",
-      "labels": ["bug", "good first issue", "help wanted", "docs"],
-      "comments": 10,
-      "summary": "10 评论：Discord 社区邀请链接失效。good first issue 标签但 help wanted 仍未指派，社区获客触点破损",
-      "url": "https://github.com/nexu-io/open-design/issues/4641"
-    },
-    {
-      "number": 2975,
-      "title": "Deleting an extraction history item does not require confirmation",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "priority:p1"],
-      "comments": 4,
-      "summary": "P1 长期（4 评论，2026-05-26 至今）：抽取历史删除无确认步骤，用户数据误删风险。今日 #2330 关闭了同类问题（New Project 模板删除），形成 PR-Issue 关联",
-      "url": "https://github.com/nexu-io/open-design/issues/2975"
     },
     {
       "number": 2117,
       "title": "Import DESIGN.md for custom design systems",
       "author": "mecxist",
-      "labels": ["enhancement", "stale"],
-      "comments": 5,
-      "summary": "stale 增强（5 评论）：导入自定义 DESIGN.md 作为 design system。v0.12.0 已将 DESIGN.md 列为品牌捕获入口之一，issue 描述与新功能重合度高，待重新激活",
+      "labels": ["enhancement"],
+      "comments": 6,
+      "summary": "06-29 复活（评论 5→6，stale 标签消失）：导入自定义 DESIGN.md 作为 design system 入口。v0.12.0 已实现 DESIGN.md 品牌捕获，issue 与新功能高度重合，stale 状态被取消",
       "url": "https://github.com/nexu-io/open-design/issues/2117"
     },
     {
-      "number": 1987,
-      "title": "New Project flow redesign",
-      "author": "mecxist",
+      "number": 3330,
+      "title": "Can we add Azure AI - Media Provider by using OAuth. currently only XAI has that",
+      "author": "Bad-Fish666",
       "labels": ["enhancement", "needs-product-direction", "stale"],
+      "comments": 3,
+      "summary": "06-29 复活：Azure AI 媒体提供方 OAuth 支持。stale 但仍 open，needs-product-direction——多 provider OAuth 战略待定",
+      "url": "https://github.com/nexu-io/open-design/issues/3330"
+    },
+    {
+      "number": 3322,
+      "title": "Proposal: reference-based image remix and localized mask edits",
+      "author": "CtriXin",
+      "labels": ["stale"],
+      "comments": 2,
+      "summary": "06-29 复活：基于参考图的 remix + 局部 mask 编辑提案。stale 状态，生成式图片工作流扩展需求",
+      "url": "https://github.com/nexu-io/open-design/issues/3322"
+    },
+    {
+      "number": 4826,
+      "title": "[Bug]: 智谱GLM-5.2高峰时段无法正常使用。",
+      "author": "nlj626",
+      "labels": ["bug"],
       "comments": 9,
-      "summary": "stale 增强（9 评论）：New Project 流程重设计，needs-product-direction。v0.12.0 品牌捕获 + build 闭环上线后，Onboarding 体验已变，issue 描述需对齐新流程",
-      "url": "https://github.com/nexu-io/open-design/issues/1987"
+      "summary": "中文 issue（9 评论）：智谱 GLM-5.2 高峰时段不可用，建议支持 zcode CLI。与 #4692 zcode feature request 同根——CLI 适配器中文用户痛点",
+      "url": "https://github.com/nexu-io/open-design/issues/4826"
     },
     {
-      "number": 1905,
-      "title": "app cant use codex cli",
-      "author": "WrinSEA",
-      "labels": ["bug", "priority:p0", "stale"],
-      "comments": 12,
-      "summary": "P0 + stale（12 评论，2026-05-16 至今）：app 无法调用 codex CLI。最高优先级标签但 stale 状态，与 #4633 Codex 品牌提取修复/AMR 商业化方向相关",
-      "url": "https://github.com/nexu-io/open-design/issues/1905"
-    },
-    {
-      "number": 4828,
-      "title": "Perplexity Ai design system is not linked properly on the website",
-      "author": "imontaine",
-      "labels": ["bug", "help wanted"],
-      "comments": 7,
-      "summary": "06-26 新增：官网 /plugins/systems/ 中 Perplexity 设计系统卡片点击后循环跳转回列表页，无详情页。官网内容数据问题，与 #4853 落地页内容建设相关",
-      "url": "https://github.com/nexu-io/open-design/issues/4828"
-    },
-    {
-      "number": 4373,
-      "title": "[Bug]: BYOK on Ollama.com model mismatch errors",
-      "author": "Grumpster-Dev",
-      "labels": ["bug", "help wanted"],
-      "comments": 13,
-      "summary": "高热（13 评论）：BYOK 模式下 Ollama.com 模型不匹配错误。help wanted 仍未指派，自托管用户模型配置痛点",
-      "url": "https://github.com/nexu-io/open-design/issues/4373"
-    },
-    {
-      "number": 706,
-      "title": "DeepSeek TUI adapter: add stdin fallback for large prompts (argv > 30KB)",
-      "author": "FaFo-0",
-      "labels": ["help wanted", "feature"],
-      "comments": 8,
-      "summary": "8 评论长期：DeepSeek TUI 适配器需要 stdin fallback 应对 >30KB argv 限制。help wanted，与 #4796 Kimi Windows argv 问题同根——CLI 适配器大 prompt 处理",
-      "url": "https://github.com/nexu-io/open-design/issues/706"
+      "number": 4692,
+      "title": "Feature request: Add support for zcode (Zhipu AI CLI)",
+      "author": "lefarcen",
+      "labels": ["enhancement", "help wanted"],
+      "comments": 11,
+      "summary": "高热（11 评论）：请求支持智谱 zcode CLI 适配器。help wanted，与 #4826 中文用户高峰期不可用问题直接关联",
+      "url": "https://github.com/nexu-io/open-design/issues/4692"
     }
   ],
   "trends": {
-    "direction": "v0.12.0 'Brand-backed Design System' 发布后第 2 天（2026-06-26 → 06-28），项目进入 '落地页/SEO 内容营销 + Windows 桌面端 v0.12.0 安装阻断 + Reasonix 新适配器' 三线并行期。Stars 72,068（+266 vs 06-27 71,802，日均回升至稳态上沿），forks 8,156（+45），open_issues 456（+2 增速首次明显回落）。PR 列表完全轮换为 v0.12.0 后第二波：#4853 design-agent 5 竞品对比页（XXL）+ #4807 教程长文指南 batch 1（L）同作者同窗口构成 v0.12.0 后最大内容营销手笔；#4747 Reasonix 适配器修复（关联 #4741 17 评论）+ #4759 E2E 覆盖扩展（XL）显示回归测试基建投入。Issue 端：#4852 Windows v0.12.0 od 命令缺失 06-28 新增（与昨日 #4831 Docker BYOK 形成 v0.12.0 安装/启动新阻断连续爆发）；#4741 Reasonix 模型配置（17 评论）+ #4373 BYOK Ollama（13 评论）+ #706 DeepSeek argv 限制（8 评论）三大 CLI 适配器问题持续堆叠。",
+    "direction": "v0.12.0 'Brand-backed Design System' 发布后第 3 天（2026-06-26 → 06-29），项目进入 'BYOK Anthropic 体验回归高峰 + AMR 商业化收尾 + 企业/自托管部署基建 + Windows v0.12.0 修复落地' 四线并行期。Stars 72,517（+449 vs 06-28 72,068，日均回升）、Forks 8,217（+61）、open_issues 449（-7 vs 456，净下降首次——hotfix/关闭沉淀生效）。PR 列表以 v0.12.0 后第二/第三波收敛性小修 + 战略级扩展为主：#4876 BYOK OpenCode 路由（XL，06-29 新增）+ #3362 Anthropic messages 端点复活（L，BYOK 体验修复主线）+ #4771/#4660 AMR 商业化双 XXL 复活（钱包 + Cloud Recovery）+ #4874 Postgres/Gateway 部署（XL，06-29 新增，企业/自托管基建突破）+ #4865 直接修复 #4852 Windows v0.12.0 od 命令缺失。Issue 端：#4877/#4878 两个 P1 + 06-29 新增（BYOK Anthropic 体验回归高峰，由 #3362 Electron QA 触发）；#2117 DESIGN.md stale 标签消失（v0.12.0 已实现品牌捕获后用户重新激活需求）；#4692 zcode CLI + #4826 智谱中文用户高峰问题联动（11+9 评论堆叠）；#4121 Antigravity 认证误报 23 评论（长期高热）。",
     "affected_modules": [
-      "Landing / SEO（v0.12.0 后第二大主题：#4853 5 竞品对比页 XXL + #4807 长文教程 L + #4828 官网数据修复）",
-      "Windows Desktop / Updater（v0.12.0 新阻断：#4852 od 命令缺失，与 #4831 Docker BYOK / #4796 Kimi argv 形成连续爆点）",
-      "Agent Adapters / Reasonix（#4747 修复 + #4741 17 评论，daemon 层 Reasonix 适配器主线推进）",
-      "E2E / QA Infra（#4759 覆盖扩展 XL，承接 #4745 重启，回归测试基建）",
-      "Brand / Design System（#2117 DESIGN.md 导入 stale 但 v0.12.0 已实现，issue 与新功能存在重合）",
-      "BYOK / Self-host（#4373 Ollama 13 评论 + #4831 Docker BYOK 4 评论，自托管用户体验痛点）"
+      "BYOK / Anthropic Configuration（#4876 路由统一 + #3362 端点修复 + #4877/#4878 两个 P1，BYOK 体验在 v0.12.0 后集中回归）",
+      "AMR 商业化（#4771 钱包余额 + #4660 Cloud Recovery 双 XXL 复活，AMR 商业化主线收尾）",
+      "企业/自托管部署基建（#4874 Postgres + Gateway API，daemon 容器化/多副本部署突破）",
+      "Windows Desktop / MCP（#4865 修复 #4852，od 命令缺失通过 daemon MCP install info 解决，Windows v0.12.0 第一条 hotfix 落地）",
+      "Agent Adapters / Reasonix（#4747 修复 + #4741 18 评论持续高热，CLI 适配器基础问题未解决）",
+      "中文 Agent CLI 集成（#4692 zcode 11 评论 + #4826 GLM 高峰 9 评论，智谱 CLI 适配需求集中）",
+      "E2E / QA Infra（#4759 覆盖扩展 XL 持续，回归测试基建）",
+      "Brand / Design System（#2117 DESIGN.md stale 复活，v0.12.0 后重新激活）"
     ],
     "risks": [
-      "Windows v0.12.0 连续阻断：#4852 od 命令缺失（06-28 新增）+ #4831 Docker BYOK（06-27）+ #4814 OpenCode Windows 中断 + #4796 Kimi Windows argv 限制——v0.12.0 在 Windows/自托管场景集中爆发安装/启动/运行新问题",
-      "CLI 适配器大 prompt 三连击：#4741 Reasonix 17 评论 + #4373 BYOK Ollama 13 评论 + #706 DeepSeek argv 8 评论——多个 agent 适配器在自托管/本地模型场景存在模型配置或大 prompt 处理基础问题",
-      "#4708 遥测 opt-out 绕过仍待修复落地：隐私合规与品牌信任风险持续累积，v0.12.0 大量用户涌入放大风险",
-      "#4638 macOS 崩溃 + #1905 Codex CLI P0 stale + #4368 Linux AppImage 缺失——平台稳定性与多 CLI 兼容性仍是 v0.12.0 后的关键拖累",
-      "Landing/SEO 战略投入激增（#4853 + #4807 同作者同窗口）但内容/数据基建（#4828 Perplexity 链接、#3079 自动翻译 bot、#4641 Discord 邀请）跟不上，官网运营存在断点"
+      "BYOK Anthropic 体验集中回归：#4877 Base URL 矛盾 + #4878 stale 模型选项同时 P1 标签，由 #3362 Electron QA 触发，BYOK 体验在 v0.12.0 大量新用户涌入后问题集中暴露",
+      "AMR 商业化双 XXL 复活但未合入：#4771 + #4660 持续 review 状态，AMR Cloud Recovery + 钱包余额形成商业化闭环的关键 PR 仍在 main 之外，回归用户付费体验受阻",
+      "Antigravity 认证误报持续（#4121 23 评论）：CLI 凭据/keyring 过期检测逻辑长期未修，多 Agent 适配器认证层是反复出现的高热痛点",
+      "CLI 适配器大 prompt 三连击持续：#4741 Reasonix 18 + #4373 BYOK Ollama 13 + #706 DeepSeek argv 8 + #4692 zcode 11 + #4826 GLM 9——多个 agent 适配器在自托管/中文用户/CLI 大 prompt 场景存在基础问题",
+      "#4708 遥测 opt-out 绕过仍未修复落地：v0.12.0 大量新用户涌入放大隐私合规与品牌信任风险",
+      "Windows v0.12.0 仍有未解决阻断：#4865 修复 #4852 但 #4831 Docker BYOK + #4814 OpenCode Windows + #4796 Kimi argv 仍未关闭"
     ],
     "actions": [
-      "高优跟踪 #4852 Windows v0.12.0 od 命令缺失——与 #4831 Docker BYOK 合并归类为 v0.12.0 自托管/Windows 安装阻断集群",
-      "推动 #4747 Reasonix 修复合入并监控 #4741 后续——Reasonix 适配器是 v0.12.0 后多 Agent 战略新增长点",
-      "关注 #4853 5 竞品对比页 review 进度——与 #4807 长文教程共同构成 v0.12.0 后内容营销战略最大手笔",
-      "回归测试基建 #4759 XL 关注——E2E 覆盖是 v0.12.0 后稳定性提升的关键杠杆",
-      "建议重新激活 #2117 DESIGN.md 导入 stale issue——v0.12.0 已实现 DESIGN.md 入口，issue 描述与新功能重合度极高",
-      "延续昨日行动：推动 #4708 遥测绕过修复落地 + 观察 #4017 deck 页数交接 review"
+      "高优跟踪 #4877/#4878 BYOK Anthropic P1——#3362 复活后 BYOK 体验进入回归高峰，需推动 Electron QA 全量复测",
+      "推进 #4876 BYOK OpenCode 路由 XL review + 关注 #3362 合入节奏——BYOK 体验修复主线联动",
+      "推动 #4771 + #4660 AMR 商业化双 XXL 合入——AMR 商业化闭环进入关键窗口",
+      "关注 #4874 Postgres/Gateway 部署 XL review——企业/自托管部署基建突破是 v0.12.0 后长期生态扩展的关键",
+      "验证 #4865 对 #4852 Windows v0.12.0 od 修复是否覆盖其他 MCP 复制场景——Windows v0.12.0 第一条 hotfix 已落地",
+      "建议推进 #4692 zcode CLI 适配器 + 解决 #4826 智谱 GLM 高峰问题——中文 Agent CLI 战略需求",
+      "延续行动：推动 #4708 遥测 opt-out 修复落地 + 关注 #4017 deck 页数交接 review",
+      "建议重开 #2117 DESIGN.md 优先级讨论——v0.12.0 已实现品牌捕获，issue 描述与新功能高度重合"
     ],
-    "next_week": "v0.12.0 发布后第 2 周是关键内容营销/SEO 战略落地窗口：#4853 5 竞品对比页（XXL）+ #4807 长文教程 batch 1 是否进入合并/上线将决定 v0.12.0 社区破圈力度。Windows v0.12.0 安装/启动新阻断（#4852 + #4831 + #4814 + #4796）若集中修复将快速缓解用户体验痛点，#4708 遥测 opt-out 隐私合规风险也需尽快落地。CLI 适配器主线（Reasonix #4747/#4741 + Ollama #4373 + DeepSeek #706）需在 v0.12.x hotfix 中系统性解决。下周观察 open_issues 是否从 456 回落至 450 以下，以及 content/SEO PR（#4853/#4807）能否进入 review 流程。"
+    "next_week": "v0.12.0 发布后第 3-4 天是关键修复/回归/商业化推进窗口：BYOK Anthropic 体验回归（#4877/#4878 P1 + #4876/#3362 修复主线）若集中落地将快速缓解 v0.12.0 后最大体验摩擦；AMR 商业化（#4771 + #4660）若进入合入将完成 v0.12.0 后的商业化闭环；#4874 Postgres/Gateway 部署若 review 通过将打开企业/自托管生态；#4865 修复 #4852 后 Windows v0.12.0 其他阻断（#4831/#4814/#4796）需系统性修复；中文 CLI 适配（#4692 zcode + #4826 GLM）需作为本地化战略重点。下周观察 open_issues 是否从 449 进一步回落至 440 以下，AMR 商业化 PR 是否进入合并，BYOK 体验 P1 是否集中关闭。"
   }
 }
