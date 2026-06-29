@@ -1,0 +1,99 @@
+{
+  "week": "2026-W26",
+  "title": "2026 W26 GitHub AI 星标周报",
+  "summary": "Agent 从'能执行'走向'会决策'：编码决策框架、多模态视频生产、代码记忆与上下文压缩本周领涨。",
+  "count": "10 个项目",
+  "theme": "Agent决策 · 多模态视频 · 上下文记忆",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "ponytail",
+      "category": "Agent",
+      "stars": "61.6k",
+      "growth": "+18.9k",
+      "why": "让AI编码Agent像最懒的资深工程师思考，决策框架爆发",
+      "url": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "rank": "02",
+      "name": "OpenMontage",
+      "category": "Multimodal",
+      "stars": "25.1k",
+      "growth": "+18.1k",
+      "why": "开源agentic视频生产系统，500+技能将代码助手变工作室",
+      "url": "https://github.com/calesthio/OpenMontage"
+    },
+    {
+      "rank": "03",
+      "name": "headroom",
+      "category": "DevTools",
+      "stars": "52.5k",
+      "growth": "+10.9k",
+      "why": "LLM输入压缩60-95%，MCP/代理/库三模式继续霸榜",
+      "url": "https://github.com/chopratejas/headroom"
+    },
+    {
+      "rank": "04",
+      "name": "codebase-memory-mcp",
+      "category": "Infra",
+      "stars": "17.2k",
+      "growth": "+8.1k",
+      "why": "代码库秒级索引为知识图谱，MCP查询声称省99% token",
+      "url": "https://github.com/DeusData/codebase-memory-mcp"
+    },
+    {
+      "rank": "05",
+      "name": "Unlimited-OCR",
+      "category": "Multimodal",
+      "stars": "11k",
+      "growth": "+7.6k",
+      "why": "百度开源长文档OCR模型，一次解析多页PDF与图片",
+      "url": "https://github.com/baidu/Unlimited-OCR"
+    },
+    {
+      "rank": "06",
+      "name": "Agent-Reach",
+      "category": "Agent",
+      "stars": "43.3k",
+      "growth": "+7.6k",
+      "why": "让Agent免API读搜多平台内容，补齐互联网感知入口",
+      "url": "https://github.com/Panniantong/Agent-Reach"
+    },
+    {
+      "rank": "07",
+      "name": "palmier-pro",
+      "category": "Multimodal",
+      "stars": "9.2k",
+      "growth": "+6.1k",
+      "why": "为AI而生的macOS视频编辑器，MCP接入剪辑时间线",
+      "url": "https://github.com/palmier-io/palmier-pro"
+    },
+    {
+      "rank": "08",
+      "name": "cognee",
+      "category": "Infra",
+      "stars": "24.8k",
+      "growth": "+5.5k",
+      "why": "开源AI记忆平台，自托管知识图谱实现跨会话长期记忆",
+      "url": "https://github.com/topoteretes/cognee"
+    },
+    {
+      "rank": "09",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "category": "Agent",
+      "stars": "22.1k",
+      "growth": "+5.1k",
+      "why": "817个网络安全Agent技能，映射MITRE/NIST等框架",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+    },
+    {
+      "rank": "10",
+      "name": "design.md",
+      "category": "Agent",
+      "stars": "22.2k",
+      "growth": "+5.0k",
+      "why": "Google设计系统规范，让编码Agent持久化理解视觉标识",
+      "url": "https://github.com/google-labs-code/design.md"
+    }
+  ]
+}
