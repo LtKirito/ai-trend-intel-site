@@ -1,0 +1,154 @@
+{
+  "date": "2026-06-29",
+  "title": "2026-06-29 AI信息差日报",
+  "coverage": "覆盖窗口：6/27 ~ 6/29（周一，含周末48h）",
+  "sources": "信息源：Anthropic官方 / AIToolsRecap / TechCrunch / CNBC / 财新 / Bloomberg / SegmentFault / Product Hunt / GitHub Trending / 新浪科技",
+  "conclusions": [
+    "Anthropic明天（6/30）举办'AI for Science'活动——诺奖得主John Jumper预计首次公开亮相。VirBench研究证明'好模型+好工具>贵模型裸跑'，Bristol Myers Squibb已在R&D+制造全链部署Claude。这是Anthropic从'AI编程'正式拓展到'AI科学'的战略信号。",
+    "Opus 4.7 Fast Mode 7/24弃用+Opus 4.8 Fast降价83%。Opus 4.7 Fast（$30/$150/MTok）→Opus 4.8 Fast（$10/$50/MTok），任何还在用Opus 4.7 Fast的API调用者必须26天内迁移。",
+    "GPT-5.6+Mythos 5双双受限进入第三天：TechCrunch editorial定调'不再是OpenAI vs Anthropic'——两个最大实验室面对同一个结构性问题：没有正式框架的ad-hoc政府逐案审批。",
+    "GitHub6月飙星榜确认AI Agent技能生态成独立赛道。markitdown +34k Star、taste-skill +27k、Agent-Reach +24k、codebase-memory-mcp +16k、Anthropic-Cybersecurity-Skills +11k集中爆发。",
+    "Apple Vision Pro VP Paul Meade转投OpenAI硬件部门。继收购Jony Ive的io公司后，OpenAI正从纯软件公司转向AI硬件+消费设备公司。"
+  ],
+  "summary": "Anthropic明天办AI for Science活动+John Jumper首次亮相；Opus 4.7 Fast 7/24弃用+4.8降价83%；GPT-5.6/Mythos 5受限第3天TechCrunch定调'同一问题'；GitHub Agent Skill生态爆发；Apple VP转投OpenAI硬件",
+  "body": "6/29是周末到周一的过渡日，三条主线交汇：(1) Anthropic从AI编程正式进入AI科学——John Jumper+VirBench+制药客户；(2) 前沿模型发布权彻底制度化——GPT-5.6和Mythos 5同在政府逐案审批下；(3) Agent工具链从MCP扩展到Skill生态——GitHub飙星榜'-skill'后缀项目集体爆发",
+  "judgement": "今日格局判断：AI行业从'谁能写代码'转向'谁能让AI做科学'（Anthropic Science定位）+ '谁的模型能被允许发布'（政府审批制度化）+ '谁的工具链更丰富'（Skill生态独立赛道）",
+  "tags": ["Anthropic", "AI-for-Science", "John-Jumper", "VirBench", "Opus-4.7-Fast", "弃用", "Opus-4.8", "降价83%", "GPT-5.6", "受限", "Mythos-5", "TechCrunch", "政府审批", "markitdown", "taste-skill", "Agent-Reach", "codebase-memory-mcp", "Cybersecurity-Skills", "Paul-Meade", "OpenAI硬件", "Tokenmaxxing", "效率优先", "AgentX", "Skybridge", "MCP"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Anthropic AI for Science 6/30 + John Jumper首次公开亮相",
+      "summary": "6/30 10am PST Anthropic直播AI for Science：VirBench研究（gget virus从16.9%→92.8%）、Bristol Myers Squibb客户展示、John Jumper预计首次以Anthropic身份发言",
+      "why": "Anthropic从AI编程正式进入AI科学基础设施。VirBench核心发现'确定性数据工具+中等模型>顶级模型裸跑'是Agent在科学领域的实用论据",
+      "action_fact": "【事实】明天10am PST直播anthropic.com/events；Bristol Myers Squibb已在R&D+制造全链部署Claude",
+      "action_judge": "【判断】如果John Jumper发布Anthropic生物学Agent产品或平台，标志着AI for Science从学术讨论进入产品阶段",
+      "tags": ["Anthropic", "AI-for-Science", "John-Jumper", "VirBench", "制药"],
+      "sources": ["https://www.anthropic.com/events/the-briefing-ai-for-science-virtual-event", "https://aitoolsrecap.com/Blog/ai-news-june-28-2026"]
+    },
+    {
+      "rank": "P0",
+      "title": "GPT-5.6+Mythos 5双受限：TechCrunch定调'不再是OpenAI vs Anthropic'",
+      "summary": "TechCrunch 6/28 editorial：两个最大实验室面对同一个结构性问题——没有正式框架的ad-hoc政府逐案审批。Mythos 5限速16+天无通用开放日期，GPT-5.6仅限可信伙伴第二天",
+      "why": "AI模型发布权从实验室转移给政府已成既成事实。没有正式pre-release review框架，每个前沿模型都面临同样informally veto",
+      "action_fact": "【事实】Mythos 5部分恢复仅限美国关键基础设施运营商；GPT-5.6逐案审批；Fable 5仍受限",
+      "action_judge": "【判断】企业部署策略必须把'模型可访问性'作为新风险维度；7月中GPT-5.6通用可用性是关键观察点",
+      "tags": ["GPT-5.6", "Mythos-5", "政府审批", "出口管制", "前沿模型"],
+      "sources": ["https://aitoolsrecap.com/Blog/ai-news-june-28-2026", "https://techcrunch.com/2026/06/28/its-no-longer-openai-vs-anthropic/"]
+    },
+    {
+      "rank": "P0",
+      "title": "Opus 4.7 Fast Mode 7/24弃用+Opus 4.8 Fast降价83%",
+      "summary": "Anthropic 6/25弃用Opus 4.7 Fast Mode，7/24起所有claude-opus-4-7+speed:fast请求将报错。迁移到Opus 4.8 Fast，定价$30/$150→$10/$50/MTok（降价67-83%）",
+      "why": "Anthropic模型阵容整合：Opus 4.8全面替代4.7，性能+降价双管齐下。任何生产系统只剩26天",
+      "action_fact": "【事实】审计所有API调用中的model字符串，把claude-opus-4-7+speed:fast改为claude-opus-4-8+speed:fast",
+      "action_judge": "【判断】Opus 4.8 Fast降价到$10/$50意味着正式进入与GPT-5.6 Terra直接价格竞争区间",
+      "tags": ["Opus-4.7", "Opus-4.8", "Fast-Mode", "弃用", "降价", "API迁移"],
+      "sources": ["https://platform.claude.com/docs/en/build-with-claude/fast-mode", "https://chatforest.com/builders-log/anthropic-opus-4-7-fast-mode-deprecated-july-24-migrate-opus-4-8-builder-guide/"]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub6月飙星榜：Agent技能生态成独立赛道",
+      "summary": "markitdown +34k Star、taste-skill +27k、Agent-Reach +24k、OpenMontage +22k、last30days-skill +21k、codebase-memory-mcp +16k、Anthropic-Cybersecurity-Skills +11k。'-skill'后缀项目集体爆发",
+      "why": "可插拔Agent能力模块成为独立品类：审美判断、话题研究、网络安全、全网信息获取。MCP生态同步扩张",
+      "action_fact": "【事实】-skill项目兼容Claude Code/Cursor/OpenClaw等20+编程助手，安装即用；markitdown已成LLM预处理层事实标配",
+      "action_judge": "【判断】2026 H2 AI Agent开发范式将是'底座模型+可插拔skill+MCP工具链'",
+      "tags": ["markitdown", "taste-skill", "Agent-Reach", "codebase-memory-mcp", "Cybersecurity-Skills", "GitHub"],
+      "sources": ["https://segmentfault.com/a/1190000047937096"]
+    },
+    {
+      "rank": "P1",
+      "title": "Apple Vision Pro VP Paul Meade转投OpenAI硬件部门",
+      "summary": "Apple视觉产品VP Paul Meade下周离职加入OpenAI io硬件部门，领导AI硬件设备研发。在Apple15年负责Vision Pro+智能眼镜硬件工程7年",
+      "why": "继收购Jony Ive的io公司后，OpenAI第二次重大硬件人才动作。从纯软件公司转向AI硬件+消费设备公司",
+      "action_fact": "【事实】OpenAI 2026 H2硬件布局=io(Jony Ive设计)+Paul Meade(硬件工程)",
+      "action_judge": "【判断】OpenAI硬件路线可能是AI眼镜或穿戴设备——Vision Pro经验和io设计能力指向AI可穿戴方向",
+      "tags": ["Paul-Meade", "OpenAI", "硬件", "Vision-Pro", "io", "AI穿戴"],
+      "sources": ["https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/", "https://finance.sina.com.cn/roll/2026-06-27/doc-inievzuq4592842.shtml"]
+    },
+    {
+      "rank": "P1",
+      "title": "CNBC：从Tokenmaxxing到效率优先，企业AI开支转向",
+      "summary": "CNBC 6/26报道企业从无限堆token追性能转向效率优先。Lindy CEO把100%流量从Claude切到DeepSeek，成本跌到地面",
+      "why": "OpenAI和Anthropic面临增长放缓压力；开源模型在特定场景已足够好",
+      "action_fact": "【事实】Lindy迁移案例证明DeepSeek在非前沿推理场景可用；企业应在每个场景做A/B价格/性能测试",
+      "action_judge": "【判断】tokenmaxxing→efficiency转型意味着Anthropic/OpenAI增长天花板可能更近；开源模型H2加速抢占中端市场",
+      "tags": ["Tokenmaxxing", "效率优先", "DeepSeek", "企业AI", "开支"],
+      "sources": ["https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt 6月榜：AgentX/Skybridge/BrowserAct/Tencent EdgeOne Makers",
+      "summary": "AgentX(Agent评测)、Skybridge(MCP App React框架)、BrowserAct(浏览器自动化Agent)、Tencent EdgeOne Makers(分钟级Agent部署)、Framer 3.0(Canvas Agent+Branching)",
+      "why": "AI产品从辅助工具进入Agent工作表面接管。Agent评测→框架→部署→设计全栈化",
+      "action_fact": "【事实】Skybridge是第一个MCP App全栈React框架",
+      "action_judge": "【判断】Agent评测→框架→部署→设计全栈化正在发生",
+      "tags": ["Product-Hunt", "AgentX", "Skybridge", "MCP", "BrowserAct", "EdgeOne"],
+      "sources": ["https://www.producthunt.com/leaderboard/monthly/2026/6"]
+    },
+    {
+      "rank": "P1",
+      "title": "Goldman Sachs：AI每月抹去11,000美国Jobs",
+      "summary": "Goldman Sachs 6月AI就业追踪：净抹去约11,000美国岗位/月，Gen Z承担不成比例冲击。毕业生失业率5.6%(2019年3.6%)",
+      "why": "目前最硬量化证据。35%入门级岗位要求3年+经验，45%公司在招聘早期用自动拒绝系统",
+      "action_fact": "【事实】应届生应优先选择'AI+人判断'岗位而非纯知识处理岗位",
+      "action_judge": "【判断】Reid Hoffman反驳称多数入门级萎缩是global turbulence而非AI——但Goldman Sachs月度净数据是最难忽略的量化事实",
+      "tags": ["Goldman-Sachs", "AI就业", "Gen-Z", "入门级岗位"],
+      "sources": ["https://aitoolsrecap.com/Blog/ai-news-june-28-2026"]
+    },
+    {
+      "rank": "P2",
+      "title": "Adrafinil — macOS AI Agent防休眠工具",
+      "summary": "macOS菜单栏应用：只在Claude Code/Codex/Cursor等AI Agent执行时阻止Mac休眠，合盖也能保持运行",
+      "why": "解决AI Agent长任务被Mac休眠打断的实际痛点",
+      "action_fact": "【事实】安装后自动检测Agent进程，无需手动开关；支持合盖保持运行",
+      "action_judge": "【判断】小工具但解决真实痛点——Mac跑AI Agent长任务用户今天就能装",
+      "tags": ["Adrafinil", "macOS", "AI-Agent", "防休眠"],
+      "sources": ["https://github.com/kageroumado/adrafinil"]
+    },
+    {
+      "rank": "P2",
+      "title": "SK Hynix $29.4B Nasdaq ADR 7/10上市",
+      "summary": "全球最大AI内存厂商SK Hynix宣布$29.4B Nasdaq ADR上市，7/10预期交易。资金用于HBM4+AI芯片产能",
+      "why": "AI基础设施赛道最大单笔股权融资，需求信号将影响Anthropic IPO和SpaceX IPO后市场情绪",
+      "action_fact": "【事实】7/10关键日期——关注首日认购倍数和定价区间",
+      "action_judge": "【判断】需求强劲验证AI基础设施投资信心；弱则可能拖累Anthropic和SpaceX估值",
+      "tags": ["SK-Hynix", "IPO", "ADR", "AI基础设施", "HBM4"],
+      "sources": ["https://startupfortune.com/sk-hynix-is-betting-29-billion-that-the-ai-memory-boom-is-nowhere-near-over/"]
+    }
+  ],
+  "tools": [
+    {"name":"Anthropic AI for Science (6/30)","type":"战略活动","highlight":"John Jumper首次公开亮相+VirBench工具增强论据+制药客户展示","audience":"制药/生物计算/AI科学研究者","action":"明天10am PST直播anthropic.com/events","url":"https://www.anthropic.com/events/the-briefing-ai-for-science-virtual-event"},
+    {"name":"Opus 4.8 Fast Mode","type":"API模型","highlight":"$10/$50/MTok（比4.7降价67-83%），性能全面提升","audience":"API调用者/Claude Code企业用户","action":"26天内迁移claude-opus-4-7到claude-opus-4-8","url":"https://platform.claude.com/docs/en/build-with-claude/fast-mode"},
+    {"name":"markitdown (微软)","type":"文档转换","highlight":"161k Star，PDF/Word/PPT/Excel/音视频一键转Markdown","audience":"LLM应用开发者","action":"pip install markitdown","url":"https://github.com/microsoft/markitdown"},
+    {"name":"taste-skill","type":"Agent Skill","highlight":"52.6k Star，赋予AI审美品味判断","audience":"设计/内容生成从业者","action":"安装到Claude Code/Cursor skill目录","url":"https://github.com/Leonxlnx/taste-skill"},
+    {"name":"Agent-Reach","type":"Agent Skill","highlight":"44.5k Star，零API费读取17平台","audience":"内容运营/市场研究","action":"npm install agent-reach","url":"https://github.com/Panniantong/Agent-Reach"},
+    {"name":"codebase-memory-mcp","type":"MCP Server","highlight":"19.7k Star，C+tree-sitter代码库知识图谱158语言亚毫秒查询","audience":"AI编程重度用户","action":"MCP配置安装","url":"https://github.com/DeusData/codebase-memory-mcp"},
+    {"name":"Anthropic-Cybersecurity-Skills","type":"Agent Skill","highlight":"22.7k Star，817网络安全技能映射MITRE ATT&CK","audience":"安全从业者/红队","action":"下载skill目录加载到Claude Code","url":"https://github.com/mukul975/Anthropic-Cybersecurity-Skills"},
+    {"name":"Skybridge","type":"MCP App框架","highlight":"全栈React框架开发MCP应用","audience":"MCP开发者","action":"npm install搭建MCP App","url":"https://www.producthunt.com/products/skybridge"},
+    {"name":"Adrafinil","type":"macOS工具","highlight":"AI Agent执行时阻止Mac休眠","audience":"Mac+AI Agent用户","action":"brew install或GitHub下载","url":"https://github.com/kageroumado/adrafinil"}
+  ],
+  "video_topics": [
+    {"title":"诺奖得主加入Anthropic：AlphaFold创造者明天首次公开亮相","hook":"John Jumper从DeepMind跳槽Anthropic后首次公开露面","angle":"从AlphaFold诺奖级成就→VirBench工具增强论据→制药客户落地，讲AI科学从论文到产品","materials":"Anthropic直播截图+VirBench数据对比+AlphaFold时间线","difficulty":"中"},
+    {"title":"Opus 4.8 Fast降价83%：Anthropic正面硬刚GPT-5.6 Terra","hook":"$30/$150→$10/$50，降价幅度史上最大","angle":"Opus 4.8 Fast vs GPT-5.6 Terra vs DeepSeek价格/性能三轴对比；7/24弃用deadline催促迁移","materials":"定价对比表+API迁移代码+benchmark分数","difficulty":"低"},
+    {"title":"GitHub'-skill'爆发：AI Agent的能力模块时代来了","hook":"taste-skill+27k、last30days-skill+21k、Cybersecurity-Skills+11k","angle":"从选模型到选skill组合的范式转移；实操3分钟安装taste-skill到Claude Code","materials":"GitHub飙星榜截图+skill安装演示+审美输出对比","difficulty":"低"},
+    {"title":"从Tokenmaxxing到效率优先：企业AI开支拐点来了吗？","hook":"Lindy CEO把100%流量切到DeepSeek成本跌到地面","angle":"从无限堆token到ROI优先的转折+开源模型在什么场景够用","materials":"CNBC报道截图+DeepSeek vs Claude价格+Lindy案例","difficulty":"中"},
+    {"title":"OpenAI挖走Vision Pro核心人物：AI硬件战争加速","hook":"Apple VP+Jony Ive io公司=OpenAI硬件双核","angle":"纯软件到硬件+消费设备转型；AI眼镜可能是下一个战场","materials":"Bloomberg截图+Vision Pro设备图+io收购时间线","difficulty":"中"}
+  ],
+  "noise_items": [
+    {"item":"Reid Hoffman说xAI完全失败、Cursor已过巅峰","reason":"Hoffman是Anthropic投资人，有财务利益偏见；xAI创始人流失是事实但'完全失败'判断过于绝对"},
+    {"item":"AI每月抹去16,000美国Jobs标题","reason":"Goldman Sachs4月峰值16,000，6月已降到11,000；标题用峰值数字是误导"},
+    {"item":"美团LongCat系列6篇打包为6/28新闻","reason":"AIToolly把4/2~6/18旧博客打包报道，无新事实增量"},
+    {"item":"2026 AI编程工具横评/对比/排行榜类文章","reason":"纯列表文无新数据新发布，复述已知信息"},
+    {"item":"OpenAI vs Anthropic staged release分析文章","reason":"有价值但属评论观点而非事实更新，核心事实已由TechCrunch editorial覆盖"},
+    {"item":"GPT-5.6登顶Terminal-Bench营销标题（续）","reason":"分数来自OpenAI自报，未见独立第三方验证"}
+  ],
+  "tracking_items": [
+    {"item":"Anthropic AI for Science 6/30活动具体内容","reason":"John Jumper是否发布Anthropic生物学Agent产品/平台；VirBench工具是否开源"},
+    {"item":"Opus 4.7 Fast迁移deadline 7/24","reason":"所有API调用者必须迁移到4.8 Fast；关注Claude Code和SDK是否自动更新默认模型"},
+    {"item":"GPT-5.6通用可用性","reason":"Altman说couple of weeks，7月中是关键窗口"},
+    {"item":"Fable 5解封时间表","reason":"Lutnick信中对Fable 5保持沉默，7月是否有明确信号"},
+    {"item":"Claude Code 7月初版本","reason":"v2.1.195后连续3天无新版本，预计7/1-7/3有v2.1.196+"},
+    {"item":"SK Hynix 7/10上市","reason":"$29.4B AI基础设施最大单笔融资，首日需求信号将影响Anthropic IPO估值"},
+    {"item":"Agent Skill生态标准化","reason":"taste-skill等是否形成统一skill format规范；MCP+skill组合范式是否被官方采纳"}
+  ]
+}
