@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 73467,
-    "forks": 8348,
-    "open_issues": 498,
+    "stars": 73862,
+    "forks": 8405,
+    "open_issues": 489,
     "latest_release": {
       "version": "open-design-v0.12.0",
       "date": "2026-06-26",
@@ -12,132 +12,150 @@
   },
   "recent_prs": [
     {
-      "number": 4985,
-      "title": "feat(landing-page): AI landing page generator + Figma-to-code tool pages (keep-11 i18n)",
-      "state": "open",
-      "author": "xne998808-ai",
-      "labels": ["needs-review"],
-      "impact": "Landing page SEO工具页批量建设第2期——AI落地页生成器+Figma转代码工具页，延续#4961 batch 1的SEO内容营销战略，捕获高意图搜索流量",
-      "url": "https://github.com/nexu-io/open-design/pull/4985"
-    },
-    {
-      "number": 4984,
-      "title": "[codex] Polish AMR settings card",
-      "state": "open",
-      "author": "alchemistklk",
-      "labels": ["needs-review"],
-      "impact": "修复AMR设置卡UI回归——plan badge与余额行布局错乱问题，替代此前已关闭的#4979（含backport release/v0.13.0标签）",
-      "url": "https://github.com/nexu-io/open-design/pull/4984"
-    },
-    {
-      "number": 4983,
-      "title": "[codex] Pick PR #4952 to main",
-      "state": "open",
-      "author": "PerishCode",
-      "labels": ["needs-review"],
-      "impact": "将#4952从release/v0.13.0分支cherry-pick回main，跨分支合入协调，反映v0.13.0分支已活跃",
-      "url": "https://github.com/nexu-io/open-design/pull/4983"
-    },
-    {
-      "number": 4982,
-      "title": "ci: block direct PRs into release branches except release automation",
-      "state": "merged",
-      "author": "lefarcen",
-      "labels": ["size/S", "risk/high", "type/chore"],
-      "impact": "CI门控已合入——禁止直接向release/vX.Y.Z分支提PR，必须走main+backport流程。v0.13.0治理基建就绪（此前#4979/#4952/#4757等违规PR推动此规则）",
-      "url": "https://github.com/nexu-io/open-design/pull/4982"
-    },
-    {
-      "number": 4981,
+      "number": 5030,
       "title": "fix(demo): polish workspace onboarding + invite-acceptance surfaces",
       "state": "open",
-      "author": "chaoxiaoche",
-      "labels": ["size/XXL", "risk/medium", "type/bugfix", "needs-validation"],
-      "impact": "workspace注册+邀请流程视觉/copy打磨（堆叠在#4789 demo基线上），XXL规模，影响新用户onboarding第一印象",
-      "url": "https://github.com/nexu-io/open-design/pull/4981"
+      "author": "xiaoche-hub",
+      "labels": [],
+      "impact": "workspace onboarding+invite流程视觉打磨（与昨日#4981同主题不同作者），新用户首次体验优化续篇",
+      "url": "https://github.com/nexu-io/open-design/pull/5030"
     },
     {
-      "number": 4968,
-      "title": "Add chat-motion-overlay skill",
+      "number": 5028,
+      "title": "[codex] Add website clone entry",
       "state": "open",
-      "author": "Allenyan07",
-      "labels": ["size/XL", "risk/high", "type/feature"],
-      "impact": "新增chat-motion-overlay技能——生成动画聊天场景（气泡覆盖层/透明MOV导出/iPhone框架/Remotion模板），面向抖音/产品演示/短视频内容制作",
-      "url": "https://github.com/nexu-io/open-design/pull/4968"
+      "author": "elifive555555",
+      "labels": ["size/XXL", "risk/high", "type/feature"],
+      "impact": "网站克隆功能新增（XXL, draft状态）——可能为landing page工具链扩展，AI落地页生态纵深拓展",
+      "url": "https://github.com/nexu-io/open-design/pull/5028"
     },
     {
-      "number": 4951,
-      "title": "fix(web): onboarding cloud sign-in error handling + affordance/overflow polish",
+      "number": 5027,
+      "title": "fix(daemon): reject path-traversal ids in readPromptTemplate",
       "state": "open",
-      "author": "chaoxiaoche",
-      "labels": ["size/S", "risk/medium", "type/bugfix", "needs-validation"],
-      "impact": "修复onboarding云登录失败时显示原始daemon错误字符串（工程术语泄漏给用户），配套UI能力提示和溢出修复",
-      "url": "https://github.com/nexu-io/open-design/pull/4951"
+      "author": "EthanGuo-coder",
+      "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "daemon安全漏洞修复——readPromptTemplate拒绝路径穿越ID（path-traversal），XS体积但风险标记high，安全优先级极高",
+      "url": "https://github.com/nexu-io/open-design/pull/5027"
     },
     {
-      "number": 4862,
-      "title": "feat(workspace): add plan mode and Excalidraw sketch flows",
-      "state": "open",
-      "author": "pftom",
+      "number": 4390,
+      "title": "[codex] converge release workflows and stable dry-runs",
+      "state": "merged",
+      "author": "PerishCode",
       "labels": ["size/XXL", "risk/high", "type/feature", "validated"],
-      "impact": "核心功能：Plan模式+Excalidraw草图编辑器+文件交接恢复——workspace三大能力补齐，已获validated，v0.13.0旗舰候选",
-      "url": "https://github.com/nexu-io/open-design/pull/4862"
+      "impact": "Release工作流收敛+稳定dry-run基建（XXL），CI/CD发布管道标准化改造，已合入——v0.13.0 release bot自动化基础",
+      "url": "https://github.com/nexu-io/open-design/pull/4390"
+    },
+    {
+      "number": 5002,
+      "title": "[backport release/v0.13.0] [codex] Keep AMR settings card actions inline",
+      "state": "merged",
+      "author": "open-design-release-bot[bot]",
+      "labels": ["size/S", "risk/medium", "type/bugfix", "validated"],
+      "impact": "AMR设置卡inline actions自动backport到v0.13.0分支——release bot自动化合入，v0.13.0分支补丁持续积累",
+      "url": "https://github.com/nexu-io/open-design/pull/5002"
+    },
+    {
+      "number": 4757,
+      "title": "[codex] Backport #4691 to release/v0.12.0",
+      "state": "merged",
+      "author": "PerishCode",
+      "labels": ["size/XXL", "risk/high", "type/feature", "validated"],
+      "impact": "brands功能(#4691) backport到v0.12.0分支——品牌→设计系统核心特性补齐，v0.12.0发布后功能增强",
+      "url": "https://github.com/nexu-io/open-design/pull/4757"
+    },
+    {
+      "number": 4818,
+      "title": "[backport release/v0.12.0] [codex] Prune curated official example plugins",
+      "state": "merged",
+      "author": "open-design-release-bot[bot]",
+      "labels": ["size/XXL", "risk/high", "type/chore"],
+      "impact": "官方示例插件清理自动backport到v0.12.0——release bot合入，v0.12.0插件库瘦身整理",
+      "url": "https://github.com/nexu-io/open-design/pull/4818"
+    },
+    {
+      "number": 4730,
+      "title": "[codex] keep AMR wallet balance stable during refresh",
+      "state": "merged",
+      "author": "alchemistklk",
+      "labels": [],
+      "impact": "AMR钱包余额刷新时稳定性修复——防止hydration失败导致的余额显示抖动（对应#4602 bug）",
+      "url": "https://github.com/nexu-io/open-design/pull/4730"
     }
   ],
   "recent_issues": [
     {
-      "number": 4974,
-      "title": "[Bug]: 标记功能页面状态回退——修改后切回原始状态",
-      "author": "HD-L",
+      "number": 5029,
+      "title": "[Bug]: [BYOK Bug] OpenAI-compatible provider fails with NVIDIA free endpoints (Env conflict & 400 DEGRADED)",
+      "author": "sethtamLA",
+      "labels": ["bug", "help wanted"],
+      "comments": 3,
+      "summary": "BYOK OpenAI兼容provider在NVIDIA免费端点失败——环境变量冲突+400 DEGRADED响应，07-02新增",
+      "url": "https://github.com/nexu-io/open-design/issues/5029"
+    },
+    {
+      "number": 5007,
+      "title": "[Bug]: 由设计中的页面跳转到其他页面后，composer处提示的正在编辑页面没有改变，右上角注释、编辑等工具无法使用",
+      "author": "flmthink",
       "labels": ["bug"],
-      "comments": 1,
-      "summary": "macOS v0.12.0上使用标记功能让agent修改内容后，页面状态回退到修改前的原始状态，附视频复现",
-      "url": "https://github.com/nexu-io/open-design/issues/4974"
+      "comments": 4,
+      "summary": "页面跳转后composer提示不更新+右上角注释/编辑工具失效，中文用户上报，4评论",
+      "url": "https://github.com/nexu-io/open-design/issues/5007"
+    },
+    {
+      "number": 4999,
+      "title": "[Bug]: Connection error with opencode when selecting a local model",
+      "author": "iakinfiev",
+      "labels": ["bug"],
+      "comments": 8,
+      "summary": "opencode选择本地模型时连接错误——BYOK适配器兼容性问题延续，8评论",
+      "url": "https://github.com/nexu-io/open-design/issues/4999"
     },
     {
       "number": 4910,
       "title": "[Bug]: Open Design's Output Quality Greatly Degraded",
       "author": "kutzki",
       "labels": ["bug"],
-      "comments": 9,
-      "summary": "自v0.6起输出质量显著下降，最新版仍存在——界面更好但生成质量退化，评论从6条增长至9条持续发酵",
+      "comments": 10,
+      "summary": "输出质量显著下降（自v0.6起退化），评论从9升至10持续发酵，涉及声誉风险",
       "url": "https://github.com/nexu-io/open-design/issues/4910"
     },
     {
-      "number": 4690,
-      "title": "Rule proposal can appear recorded without a persisted rule memory entry",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "help wanted", "risk/medium", "type/bugfix"],
-      "comments": 7,
-      "summary": "规则提案UI显示已记录但Memory Store中无持久化条目，Chat与Memory状态不一致，评论升至7条",
-      "url": "https://github.com/nexu-io/open-design/issues/4690"
-    },
-    {
-      "number": 4623,
-      "title": "[Bug]: Codex image generation fails with local Codex media provider",
-      "author": "andywojturski-lab",
+      "number": 4796,
+      "title": "[Bug]: Kimi CLI adapter on Windows uses argv instead of stdin, causing AGENT_PROMPT_TOO_LARGE",
+      "author": "ensteinoff",
       "labels": ["bug", "help wanted"],
-      "comments": 14,
-      "summary": "macOS v0.11.0上本地Codex媒体提供商图像生成持续失败（HTML/CSS正常），Codex CLI 0.141.0，14条评论高热",
-      "url": "https://github.com/nexu-io/open-design/issues/4623"
+      "comments": 17,
+      "summary": "Kimi CLI适配器在Windows上使用argv替代stdin导致AGENT_PROMPT_TOO_LARGE——17评论高热，Windows CLI兼容性核心痛点",
+      "url": "https://github.com/nexu-io/open-design/issues/4796"
     },
     {
-      "number": 4972,
-      "title": "[Tutorial]: YouTube视频提交（内容未填写）",
-      "author": "stareventstirupati-sys",
-      "labels": ["tutorials"],
-      "comments": 2,
-      "summary": "社区教程提交模板但内容空白，可能为测试或误操作",
-      "url": "https://github.com/nexu-io/open-design/issues/4972"
+      "number": 4829,
+      "title": "Feature request: add support for the Letta-Code harness",
+      "author": "mruderman",
+      "labels": ["help wanted", "feature", "needs-product-direction"],
+      "comments": 15,
+      "summary": "Letta-Code harness适配器请求——Agent CLI生态扩展需求，15评论，等待产品方向决策",
+      "url": "https://github.com/nexu-io/open-design/issues/4829"
     },
     {
-      "number": 3868,
-      "title": "Generated HTML can appear in logs while the preview remains blank",
-      "author": "kokisanai",
-      "labels": ["bug", "priority:p1"],
-      "comments": 3,
-      "summary": "HTML代码已在日志中但预览区域白屏——Discord中文区上报，标记P1但3评论后无进展",
-      "url": "https://github.com/nexu-io/open-design/issues/3868"
+      "number": 4940,
+      "title": "Make published GHCR image (ghcr.io/nexu-io/od) public for self-hosting / Dokploy",
+      "author": "abhishukla610",
+      "labels": ["bug"],
+      "comments": 4,
+      "summary": "要求公开GHCR容器镜像用于自托管/Dokploy部署——自托管/容器化部署需求延续",
+      "url": "https://github.com/nexu-io/open-design/issues/4940"
+    },
+    {
+      "number": 1027,
+      "title": "enhancement: Deploy to Railway/Vercel/Netlify buttons",
+      "author": "lefarcen",
+      "labels": ["enhancement"],
+      "comments": 6,
+      "summary": "一键部署到Railway/Vercel/Netlify按钮需求——自托管部署体验简化，6评论长期open",
+      "url": "https://github.com/nexu-io/open-design/issues/1027"
     },
     {
       "number": 3353,
@@ -145,61 +163,43 @@
       "author": "ricsy",
       "labels": ["bug", "stale"],
       "comments": 3,
-      "summary": "桌面版MCP/CLI缺少import token，外部自动化管道无法调用daemon接口修改工作目录，3条评论后stale",
+      "summary": "桌面版MCP/CLI缺少import token，外部自动化管道无法调用daemon接口修改工作目录，3评论stale",
       "url": "https://github.com/nexu-io/open-design/issues/3353"
     },
     {
-      "number": 3322,
-      "title": "Proposal: reference-based image remix and localized mask edits",
-      "author": "CtriXin",
-      "labels": ["enhancement"],
-      "comments": 2,
-      "summary": "参考图像风格迁移+局部遮罩编辑提案，降低非设计师用户图像生成门槛，2条评论后沉寂",
-      "url": "https://github.com/nexu-io/open-design/issues/3322"
-    },
-    {
-      "number": 2855,
-      "title": "Desktop app: Edit mode cannot modify selected text (v0.8)",
-      "author": "leilei926524-tech",
-      "labels": ["bug", "stale"],
-      "comments": 4,
-      "summary": "v0.8时期老问题——桌面端Edit模式无法编辑已选中文本，4条评论stale，实际已在新版本修复",
-      "url": "https://github.com/nexu-io/open-design/issues/2855"
-    },
-    {
-      "number": 2854,
-      "title": "Desktop app: Edit mode cannot modify selected text (duplicate, v0.8)",
+      "number": 3403,
+      "title": "Windows Gemini output can be incomplete",
       "author": "leilei926524-tech",
       "labels": ["bug", "stale"],
       "comments": 2,
-      "summary": "#2855的重复提交，v0.8时期Edit模式文本编辑问题，2条评论stale",
-      "url": "https://github.com/nexu-io/open-design/issues/2854"
+      "summary": "Windows平台Gemini输出不完整——stale状态2评论，Windows平台兼容性遗留问题",
+      "url": "https://github.com/nexu-io/open-design/issues/3403"
     }
   ],
   "trends": {
-    "direction": "进入v0.13.0分支预热期——backport release/v0.13.0标签首次出现（#4979），release branch CI门控已合入（#4982），AMR设置卡跨分支协调（#4983 cherry-pick #4952→main）。Landing page SEO工具页批量建设第2期、workspace体验打磨同步推进。社区贡献向视频内容制作场景延伸（chat-motion-overlay技能）。v0.12.0发布第5天仍无hotfix。",
+    "direction": "v0.13.0 分支自动化 pipeline 已运转——release bot 连续产出 backport PR (#5002→v0.13.0, #4818→v0.12.0)，CI/CD converge (#4390 XXL merged) 标准化发布流程。同时出现安全修复信号 (#5027 path-traversal XS/high) 和 landing page 生态纵深拓展 (#5028 website clone XXL)。open_issues 首次下降 498→489 (-9)，修复速度开始赶上新增。",
     "affected_modules": [
-      "Landing Page / SEO（AI落地页+Figma转代码工具页batch 2）",
-      "CI/CD（release分支直接PR封锁规则）",
-      "Codex适配器（AMR设置卡打磨/跨分支pick）",
-      "Workspace（onboarding+invite流程打磨/Plan模式+Excalidraw）",
-      "技能生态（chat-motion-overlay新技能）",
-      "Web UI（onboarding云登录错误处理/插件remix动作说明）"
+      "CI/CD & Release Automation（release bot backport + converge workflows）",
+      "Daemon Security（path-traversal 漏洞修复）",
+      "BYOK / Agent CLI 适配器（NVIDIA endpoint 冲突 + opencode 连接错误 + Kimi Windows argv）",
+      "Workspace Onboarding（注册+邀请流程打磨续篇 #5030）",
+      "AMR 商业化（设置卡 inline actions + 钱包余额稳定性）",
+      "Landing Page / SEO 生态（website clone 入口 #5028）"
     ],
     "risks": [
-      "open_issues 单日暴增 28（470→498），为 v0.12.0 以来最大单日跳升，问题修复速度远跟不上新增速度",
-      "#4910 输出质量投诉 6→9 评论持续发酵——自 v0.6 起退化，涉及声誉风险",
-      "v0.13.0 预热期 feature 堆积：landing page batch 2 + workspace onboarding XXL + skills 同时推进，审查压力加剧",
-      "release branch 管理失控：出现跨分支 PR 冲突（#4979→#4984）和 cherry-pick 协调需求（#4983），虽已通过 CI 门控（#4982）但治理效果待验证",
-      "多个 v0.8 时期 stale issue（#2854/#2855）仍出现在搜索排序中，issue 管理有效性存疑"
+      "path-traversal 安全漏洞被发现 (#5027)——daemon readPromptTemplate 可被路径穿越攻击，XS 体积但 high risk 标记，需尽快合入",
+      "BYOK 适配器兼容性问题持续蔓延：#5029 NVIDIA 端点冲突 + #4999 opencode 连接错误，多 provider 同时出问题",
+      "#4910 输出质量投诉 9→10 评论继续增长——自 v0.6 起退化，涉及产品核心声誉风险，v0.12.0 无 hotfix 难以缓解",
+      "Kimi CLI Windows 适配器 (#4796) 17 评论高热仍未解决——argv 替代 stdin 是 Windows CLI 核心架构限制",
+      "v0.12.0 发布第 6 天仍无 hotfix/new release——问题积压但 open_issues 首次下降可能是修复加速信号"
     ],
     "actions": [
-      "追踪 v0.13.0 分支何时正式创建——backport 标签 + release CI 门控并行推进信号明确",
-      "密切监控 #4910 输出质量回归线程——评论增速加快，若确认需快速 hotfix",
-      "关注 workspace onboarding/invite 优化（#4981 XXL）合入进度——影响所有新用户首次体验",
-      "验证 #4982 CI 门控落地效果——release branch 治理是 v0.13.0 规模化发布的关键前提",
-      "观察 Plan 模式+Excalidraw（#4862 validated）是否装入 v0.13.0——workspace 旗舰特性候选"
+      "密切监控 #5027 path-traversal 安全修复合入时间——高危漏洞应优先 merge",
+      "追踪 release bot 自动化 pipeline 运转情况——#5002/#4818 连续合入表明 v0.13.0 分支已活跃产出",
+      "关注 BYOK 适配器兼容性集群 (#5029 + #4999)——多 provider 同时出问题暗示 BYOK 路由层可能有共性缺陷",
+      "验证 open_issues 下降趋势是否持续——498→489 是 v0.12.0 后首次，需观察是否为修复加速还是统计波动",
+      "观察 website clone (#5028 XXL draft) 进入 review 的节奏——landing page 生态纵深可能成为 v0.13.0 新卖点"
     ],
-    "next_week": "v0.13.0 分支正式创建概率较高（backport 标签+release branch CI门控并行推进）；关键看点是 Plan模式+Excalidraw（#4862）和 WebUI打包（#3509）是否装入 v0.13.0；输出质量回归（#4910）和 AMR 打磨（#4984）应在此之前完成合入；若审查队列周末集中清空，#4862+#4981+#4968 等特性囤积可能导致 v0.13.0 合并窗口扩大"
+    "next_week": "v0.13.0 release bot pipeline 已常态化运转，预计 backport PR 数量持续增长；path-traversal 安全修复 (#5027) 应在 1-2 天内合入；BYOK 多 provider 兼容性集群需产品层统筹回应；website clone (#5028) 和 workspace onboarding (#5030) 进入 review 后将决定 v0.13.0 功能清单最终形态；open_issues 下降趋势需至少 2-3 天确认——若持续下降则 v0.12.0 hotfix 修复效率确有改善"
   }
 }
