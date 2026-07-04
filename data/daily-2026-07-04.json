@@ -1,0 +1,214 @@
+{
+  "date": "2026-07-04",
+  "title": "2026-07-04 AI信息差日报",
+  "coverage": "覆盖窗口：7/1 ~ 7/4 (72h)",
+  "sources": "信息源：Anthropic官方 / GitHub Trending / VentureBeat / Reddit r/ClaudeAI / IT之家 / 腾讯新闻 / 雷锋网 / 机器之心 / StartupCorners / Claude Code Changelog / WinBuzzer / CybersecurityNews",
+  "conclusions": [
+    "Anthropic 7/1 三弹连发 — 模型、政策、科研全线推进。Sonnet 5 把 Agent 能力以中端定价批量交付，Fable 5/Mythos 5 出口管制同一天解除，Claude Science 同步登场。这是 IPO 前夕的集中弹药释放。",
+    "Claude Code 中国用户检测代码曝光，信任危机比封号更严重。Reddit 逆向工程发现自 v2.1.91（4月）起 Claude Code 内置时区+关键词检测，持续回传近3个月。Anthropic 回应将删除，但'为什么要放'才是真正问题。",
+    "ZCode 发布 — 智谱用 GLM-5.2 打出一张'主权 AI 编程'牌。免费 IDE + MIT 开源模型 + 华为芯片训练 + 微信/飞书远程控制，精准卡位 Fable 5 禁运后的市场真空。这不是又一个 Cursor，这是一个新的竞争维度。",
+    "GitHub Agent Skills 生态出现平台级信号。Microsoft、Google、NVIDIA、Vercel 同一周推 skills 仓库，Agent Skills 从 Anthropic 一家的事变成行业标准竞速赛。",
+    "7月国产大模型正面交锋即将打响。Kimi K3（2.5万亿参数）确认7月发布，DeepSeek V4 正式版7月中旬上线+峰谷定价，GLM-5.2 已在 OpenRouter 超越 Anthropic 多款模型。"
+  ],
+  "summary": "7/1-7/4 Anthropic 三弹连发（Sonnet 5 + Fable/Mythos 解禁 + Claude Science）+ Claude Code 中国检测代码曝光 + ZCode 国产 Agent IDE 发布。Anthropic IPO 前夕战略展示与信任危机并存，中国 AI 编程工具在禁运后加速补位，Agent Skills 从单厂商规范走向多厂商标准竞速。",
+  "body": "本日报覆盖 7/1-7/4 三天，6 条 P0 + 4 条 P1 + 0 条 P2。核心信号：Anthropic 在同一窗口释放模型升级（Sonnet 5 性能逼近 Opus 4.8）、政策突破（Fable 5/Mythos 5 18天出口管制解除）、行业垂直化（Claude Science 科研工作台）。同时 Claude Code 中国用户检测代码被逆向曝光形成信任危机。ZCode 以免费+主权可控切入 AI IDE 市场，GLM-5.2 在 OpenRouter 使用量已超 Anthropic 多款模型。GitHub Agent Skills 生态出现 Microsoft/Google/NVIDIA/Vercel 同时入场信号。7 月国产大模型 Kimi K3 和 DeepSeek V4 即将正面交锋。",
+  "judgement": "这一周（7/1-7/4）属于 2026 年 AI 叙事密度最高的窗口之一。6/30-7/1 的 Anthropic 三弹连发不是孤立事件 — 这是 IPO 前夕的战略展示。同时，Claude Code 中国检测代码曝光 + 出口管制解除 + ZCode 发布构成了一个完整叙事弧：美国 AI 公司对中国用户的信任正在被工具化，而国产替代正在以'主权可控'作为反击叙事。这不是地缘政治新闻，这是每一个 AI 开发者选工具时必须面对的现实。",
+  "tags": ["Claude-Sonnet-5", "Fable-5解禁", "Mythos-5解禁", "Claude-Science", "Claude-Code", "中国用户检测", "信任危机", "ZCode", "GLM-5.2", "智谱", "Agent-Skills", "Kimi-K3", "DeepSeek-V4", "出口管制", "Anthropic-IPO"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Sonnet 5 发布",
+      "summary": "Anthropic 发布'最强 Agent Sonnet'，性能逼近 Opus 4.8，1M 上下文，$2/$10 per MTok 促销至 8/31，即日起为 Claude Code 默认模型。",
+      "why": "中端价格买到接近旗舰的 Agent 能力，这是'便宜好用'的质变节点。Claude Code 用户今天已经在用。",
+      "action_fact": "更新 Claude Code 至 v2.1.197+ 即默认使用；API 调用指定 claude-sonnet-5；促销期到 8/31，之后 $3/$15。",
+      "action_judge": "如果你的日常开发任务不需要 Opus 级别的深度推理，直接用 Sonnet 5 替换可以有效降低 50%+ 成本，Agent 能力反而不降反升。",
+      "tags": ["New-Model", "Agent", "Sonnet-5", "Claude-Code", "Anthropic"],
+      "sources": ["https://www.anthropic.com/news/claude-sonnet-5", "https://www.ithome.com/0/970/809.htm"]
+    },
+    {
+      "rank": "P0",
+      "title": "Fable 5 / Mythos 5 出口管制解除",
+      "summary": "美国商务部解除对 Claude Fable 5 和 Mythos 5 的 18 天出口管制。Fable 5 全面恢复访问，Mythos 5 仅限核准伙伴+美国审查。",
+      "why": "AI 模型的'开关'已经从技术问题变成政治工具。18 天禁运成为先例，企业和开发者的工具选择必须新增'主权风险'维度。",
+      "action_fact": "Fable 5 用户即日起恢复访问；Mythos 5 仍受限。已迁移到替代模型的团队需要评估是否切换回来。",
+      "action_judge": "'禁运随时可能再来'的预期已经建立。建议团队保持至少一个备选模型的热切换方案，不要把所有工作流绑死在一个模型上。",
+      "tags": ["Policy", "Model", "Fable-5", "Mythos-5", "出口管制", "Anthropic"],
+      "sources": ["https://news.qq.com/rain/a/20260701A01Z2Q00", "https://winbuzzer.com/2026/07/01/us-lifts-anthropic-fable-5-and-mythos-5-export-controls-xcxwbn/"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code 暗藏中国用户检测代码",
+      "summary": "Reddit 用户逆向工程发现 Claude Code v2.1.91 起内置中国时区/关键词检测，持续回传近3个月。Anthropic 回应将在更新中移除。",
+      "why": "这是 AI 工具信任史上最严重的隐私事件之一。不是 API 封号，是客户端内置监控代码。",
+      "action_fact": "GitHub 安全研究员 Adnane Khan 发布了 v2.1.193-196 的完整逆向分析。Anthropic 确认并将移除。",
+      "action_judge": "如果日常工作涉及敏感代码或客户数据，建议立即审计 Claude Code 客户端版本，并评估迁移到 ZCode/Cursor/Codex 等替代方案的必要性。这件事的信任损害不是删代码能修复的。",
+      "tags": ["Security", "Trust", "Claude-Code", "中国用户", "逆向工程", "隐私"],
+      "sources": ["https://www.ithome.com/0/971/118.htm", "https://news.qq.com/rain/a/20260701A03JHU00", "https://www.leiphone.com/category/ai/rzmbSvqty7wRNC3N.html"]
+    },
+    {
+      "rank": "P0",
+      "title": "ZCode — 智谱免费 AI 编程工具发布",
+      "summary": "Z.ai 发布基于 GLM-5.2 的免费 Agent IDE，支持微信/飞书/Telegram 远程控制、BYOK 多模型、MIT 开源权重可自托管。",
+      "why": "Fable 5 禁运创造了市场真空，ZCode 用'免费+主权可控+全平台控制'精准填补。GLM-5.2 在 OpenRouter 使用量已超 Anthropic 多款模型。",
+      "action_fact": "免费下载 macOS/Windows/Linux；Coding Plan Lite $16.20/月；7/31 前 1.5x 配额加成。GLM-5.2 744B MoE MIT 开源，华为芯片训练。",
+      "action_judge": "强烈建议中国开发者立刻上手体验。不一定要切换主力工具，但作为'禁运备用方案'和'成本优化选项'必须纳入工具箱。微信远程控制 Agent 的场景想象力很大。",
+      "tags": ["Tool", "Agent", "IDE", "ZCode", "GLM-5.2", "智谱", "开源", "免费"],
+      "sources": ["https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding", "https://zcode.z.ai/cn", "https://www.163.com/dy/article/L0SPTEKO05568W0A.html"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.196→201 密集更新",
+      "summary": "5 天内 6 个版本：Sonnet 5 默认模型、子代理后台运行、Manual 默认权限、后台代理自动 PR、/dataviz 技能、堆叠 skill 调用。",
+      "why": "这轮更新的核心主题是'让 Agent 可靠地在后台工作'。子代理后台运行+自动 PR 意味着 Claude Code 从'交互式助手'变成'异步开发者'。",
+      "action_fact": "更新到最新版体验子代理后台运行；/config 调整权限模式；后台代理任务完成后自动 commit+PR。Changelog 覆盖 v2.1.196（组织默认模型、后台会话修复）至 v2.1.201（Sonnet 5 会话优化）。",
+      "action_judge": "v2.1.198 的子代理默认后台+自动PR 是关键转折。建议设置一个简单的后台 Agent 任务（如定期 code review）测试稳定性。",
+      "tags": ["Agent-Workflow", "Tool", "Claude-Code", "子代理", "后台运行", "自动PR"],
+      "sources": ["https://code.claude.com/docs/en/changelog", "https://www.claudeupdates.dev/version/2.1.198"]
+    },
+    {
+      "rank": "P0",
+      "title": "GitHub Agent Skills 生态平台级信号",
+      "summary": "Microsoft/skills、Google/agents-cli、NVIDIA/skills、Vercel/skills 同一周在 GitHub Trending 出现，Agent Skills 从 Anthropic 主导变成多厂商标准竞速。",
+      "why": "Agent Skills 不再只是 Anthropic 的规范提案，Microsoft/Google/NVIDIA/Vercel 同时入场标志着'Agent 技能化'进入行业标准化阶段。",
+      "action_fact": "GitHub 可搜索各厂商 skills 仓库；agentskills/agentskills 是规范文档仓库（+86 stars）。同时 strix（AI渗透测试+2137）、OmniRoute（231+供应商网关+837）、browser-use 等在 Trending。",
+      "action_judge": "如果你在做 Agent 开发或工具链，现在是把你的工具封装为 Agent Skills 格式的最佳窗口 — 先入场的 skills 会成为生态默认选项。",
+      "tags": ["Design-Pattern", "Ecosystem", "Agent-Skills", "Microsoft", "Google", "NVIDIA", "Vercel", "标准化"],
+      "sources": ["https://startupcorners.com/digest/devtools-digest-2026-07-03", "https://github.com/agentskills/agentskills"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Science 科研工作台发布",
+      "summary": "Anthropic 推出面向科学家的 AI 工作台，集成 60+ 数据库/技能/MCP，支持蛋白质结构 3D 渲染、基因组浏览器、计算集群管理。Beta 上线。",
+      "why": "这是 Anthropic 从'通用 AI'走向'垂直行业 AI 平台'的第一大步。不是新模型，但比新模型更体现商业化战略。",
+      "action_fact": "Pro/Max/Team/Enterprise 用户可用；macOS/Linux；实验室团队计划享折扣；$30K 资助 7/15 截止申请。Modal 提供 $2000 计算额度。",
+      "action_judge": "普通开发者暂时用不上，但如果你在生物/化学/医学领域，这是目前最强的 AI 科研助手。非科研人员可关注其'Agent 编排+审核 Agent'架构作为参考。",
+      "tags": ["Tool", "Science", "Claude-Science", "科研", "Anthropic", "垂直行业"],
+      "sources": ["https://www.anthropic.com/news/claude-science-ai-workbench", "https://finance.sina.com.cn/tech/roll/2026-07-01/doc-inifhmie3179147.shtml"]
+    },
+    {
+      "rank": "P1",
+      "title": "Kimi K3 确认 7 月发布 + DeepSeek V4 正式版 7 月中旬",
+      "summary": "Kimi K3 员工确认 7 月发布（2.5 万亿参数），DeepSeek V4 正式版 7 月中旬上线并引入峰谷定价（高峰价格翻倍）。",
+      "why": "中国大模型 7 月迎来正面交锋月。K3 参数规模 + DS V4 峰谷定价，对开发者的模型选择和成本规划有直接影响。",
+      "action_fact": "K3 具体日期未定；DS V4 正式版同步推出百万 token 上下文+峰谷定价。",
+      "action_judge": "如果你在用 DS V4 预览版，注意正式版的高峰时段价格翻倍会显著影响成本。建议提前评估用量模式。K3 关注其编程能力是否能对标 GLM-5.2。",
+      "tags": ["New-Model", "China", "Kimi-K3", "DeepSeek-V4", "大模型", "7月发布"],
+      "sources": ["https://finance.sina.com.cn/tech/roll/2026-07-01/doc-inifihnu3004697.shtml", "https://www.jzl.com/industry-news/deepseek-v4"]
+    },
+    {
+      "rank": "P1",
+      "title": "GLM-5.2 OpenRouter 使用量超越 Anthropic 多款模型",
+      "summary": "GLM-5.2 在 OpenRouter 平台的使用排行榜上已超越 Anthropic 多款模型，硅谷投资人和技术高管纷纷点赞其实际能力。$1.40/$4.40 vs $5/$25 的价格差正在变成市场份额差。",
+      "why": "这是开源+低价路线对闭源+高价路线的市场验证。",
+      "action_fact": "OpenRouter 可查实时排名；Z.ai API 直接可用。GLM-5.2 744B MoE MIT 开源，Code Arena 全球第二。",
+      "action_judge": "如果你的应用对模型选择没有强绑定，建议把 GLM-5.2 加入 A/B 测试。在编程和 Agent 场景下性价比优势非常明显。",
+      "tags": ["Market", "Model", "GLM-5.2", "OpenRouter", "智谱", "性价比"],
+      "sources": ["https://industry.cfi.cn/p20260702000756.html", "https://github.com/zai-org/GLM-5"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "ZCode",
+      "type": "AI IDE",
+      "highlight": "GLM-5.2 官方适配，Agent-first 架构，微信/飞书远程控制，BYOK 多模型，MIT 权重可自托管",
+      "audience": "所有中国 AI 开发者，尤其是受 Claude Code 禁运/封号影响的用户",
+      "action": "下载桌面端 → 用 BigModel/Z.ai 账号登录 → 绑定 GLM-5.2 → 试跑一个多步骤编程任务",
+      "url": "https://zcode.z.ai/cn"
+    },
+    {
+      "name": "Claude Sonnet 5",
+      "type": "模型",
+      "highlight": "Agent 能力逼近 Opus 4.8，1M 上下文，促销 $2/$10 至 8/31，安全评分优于 Sonnet 4.6",
+      "audience": "所有 Claude Code/API 用户",
+      "action": "更新 Claude Code → 配置 claude-sonnet-5 → 对比与 Opus 4.8 的任务完成质量",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      "name": "Claude Science",
+      "type": "科研平台",
+      "highlight": "60+ 科学数据库，3D 蛋白质结构渲染，基因组浏览器，Modal GPU 按需扩展，审核 Agent 自动查错",
+      "audience": "生物/化学/医学研究人员",
+      "action": "申请 Beta → 配置 SSH/HPC → 试跑一个已有的分析 pipeline → 用审核 Agent 验证结果",
+      "url": "https://claude.com/science"
+    },
+    {
+      "name": "strix",
+      "type": "安全工具",
+      "highlight": "开源 AI 渗透测试工具，自动发现并修复应用漏洞，GitHub 7/3 日增 2137 stars",
+      "audience": "安全工程师、DevSecOps",
+      "action": "git clone → 配置目标 → 运行扫描 → 验证 AI 发现的漏洞和修复建议",
+      "url": "https://github.com/usestrix/strix"
+    },
+    {
+      "name": "OmniRoute",
+      "type": "AI 网关",
+      "highlight": "免费统一 231+ AI 提供商 API 网关，token 压缩+智能 fallback，日增 837 stars",
+      "audience": "多模型应用开发者",
+      "action": "配置 API keys → 设置 fallback 策略 → 测试跨提供商的 token 压缩效率",
+      "url": "https://github.com/diegosouzapw/OmniRoute"
+    },
+    {
+      "name": "facebook/astryx",
+      "type": "设计系统",
+      "highlight": "Meta 开源、Agent-ready、可定制的设计系统，日增 1108 stars",
+      "audience": "前端开发者、AI 产品设计师",
+      "action": "npm install → 集成到项目 → 用 AI Agent 基于 astryx 生成组件",
+      "url": "https://github.com/facebook/astryx"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Code 偷看你信息？逆向工程师实锤全过程",
+      "hook": "强隐私焦虑 + 悬疑叙事 + 有 GitHub 逆向代码可展示",
+      "angle": "从 Reddit 爆料到 GitHub 逆向分析再到 Anthropic 回应的时间线。科普时区检测/关键词匹配的技术原理，讨论'AI 工具信任'话题。评论区天然高互动。",
+      "materials": "Reddit 原帖截图 / GitHub 逆向代码片段 / Claude Code 版本对比 / Anthropic 回应截图",
+      "difficulty": "中"
+    },
+    {
+      "title": "ZCode 实测：国产免费 IDE 能不能取代 Claude Code？",
+      "hook": "Fable 5 禁运后'替代方案'天然流量 + 微信远程控制 AI 新奇感",
+      "angle": "实操对比：同一个编程任务分别在 ZCode (GLM-5.2)、Claude Code (Sonnet 5)、Cursor 上完成。展示微信远程控制 Agent 的实况。结尾对比成本。",
+      "materials": "三个工具屏幕录制对比 / 微信控制 Agent 实况录制 / 价格计算可视化",
+      "difficulty": "中"
+    },
+    {
+      "title": "Sonnet 5 有多强？同任务对比 Opus 4.8，结果出乎意料",
+      "hook": "'便宜模型打平旗舰'天然有传播力",
+      "angle": "选取 3 个有代表性的开发任务（debug/review/写新功能），Sonnet 5 vs Opus 4.8 盲测对比。分析 Agent 能力、成本、速度三维度。",
+      "materials": "Claude Code 录屏 / 任务完成时间对比表 / token 成本对比",
+      "difficulty": "低"
+    },
+    {
+      "title": "AI 模型被政府'关开关'是什么体验？Fable 5 18天禁运全回顾",
+      "hook": "强烈的话题性和'不可抗力'恐惧感",
+      "angle": "时间线叙事：6/9 发布 → 6/12 禁运 → 6/30 解除。穿插受影响开发者的真实案例、企业的应急方案。引出'主权 AI'概念讨论。",
+      "materials": "时间线信息图 / 禁运新闻截图 / Anthropic 公告 / 开发者社区反应截图",
+      "difficulty": "低"
+    },
+    {
+      "title": "Agent Skills 是什么？为什么微软谷歌英伟达都在抢？",
+      "hook": "'行业标准竞赛'有知识增量，对开发者有实操价值",
+      "angle": "先解释 Agent Skills 是什么（文件夹+SKILL.md），展示 Anthropic → Microsoft → Google → NVIDIA → Vercel 的竞速时间线。手把手教观众写一个 Skill 并让 Claude Code 加载。",
+      "materials": "Skill 文件结构截图 / Claude Code 加载 Skill 演示 / 各家 skills 仓库对比",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {"item": "GPT-5.6 系列旧闻重提", "reason": "6/26-27 已充分覆盖，7 月搜索结果中仍大量出现但均为旧内容复述，非新进展。"},
+    {"item": "AI 编程工具年度榜单/横评文章", "reason": "典型列表文，无新信息，纯 SEO 内容，不符合'信息差'定位。"},
+    {"item": "OpenAI Jalapeño 芯片旧闻", "reason": "6/24 已报道，7 月中文搜索结果以回顾和解读为主，无新动态。"},
+    {"item": "AI 开源项目合集（知乎/CSDN/掘金）", "reason": "盘点性质内容，无一手信息，时效性差。"},
+    {"item": "awesome-ai-agents-2026 等 Awesome List", "reason": "典藏列表而非新闻，P2 以下不占用日报空间。"},
+    {"item": "'Claude Code 偷查'标题党的夸大叙事", "reason": "部分中文自媒体使用'监视代码''间谍行为'等煽动性标题，与 Reddit 原始报告的技术准确性有差距。"},
+    {"item": "OpenAI IPO 推迟至 2027 旧闻", "reason": "6/26 已覆盖，无新信息。"}
+  ],
+  "tracking_items": [
+    {"item": "Anthropic 是否正式发布移除检测代码的 Claude Code 更新", "reason": "承诺'将在明日更新中删除'，需要验证是否兑现以及是否有其他隐藏机制。"},
+    {"item": "Claude Science 用户反馈和评测", "reason": "Beta 刚上线，第一批科研用户的实际体验和问题反馈值得关注。"},
+    {"item": "Sonnet 5 社区实际使用报告", "reason": "关注 Hacker News、Reddit 和中文社区的长期任务评测，特别是与 Opus 4.8 的真实差距。"},
+    {"item": "ZCode 用户增长和安全审计", "reason": "关注首周下载量、社区反馈、以及安全研究人员对其凭证处理的审计报告。"},
+    {"item": "Agent Skills 标准化进展", "reason": "跟踪 agentskills 规范更新、微软/Google 的 skills 仓库变动、以及是否有更多厂商加入。"},
+    {"item": "Kimi K3 和 DeepSeek V4 正式版发布日期", "reason": "两个国产重磅模型的具体发布日期将是 7 月最重要的 AI 新闻之一。"},
+    {"item": "Fable 5 恢复后的社区反应", "reason": "多少用户选择回来？多少已经迁移并决定不回头？这决定了'禁运后遗症'的持续时间。"}
+  ]
+}
