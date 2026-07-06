@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 74740,
-    "forks": 8524,
-    "open_issues": 505,
+    "stars": 75253,
+    "forks": 8609,
+    "open_issues": 521,
     "latest_release": {
       "version": "open-design-v0.13.0",
       "date": "2026-07-02",
@@ -12,196 +12,194 @@
   },
   "recent_prs": [
     {
-      "number": 5146,
-      "title": "fix(daemon): drop shell:true from host-tool launch (Windows command injection)",
+      "number": 5178,
+      "title": "Website Clone: first-party Home entry, fidelity, real-clone example cards + tracking",
       "state": "open",
-      "author": "EthanGuo-coder",
-      "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "v0.13.0 后紧急安全修复：移除 daemon host-tool 的 shell:true 以阻断 Windows 命令注入，风险标记 high，需快速合入。",
-      "url": "https://github.com/nexu-io/open-design/pull/5146"
+      "author": "open-design-crew[bot]",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "战略级新功能：Website Clone 入口落地，含首页真实克隆示例卡片与追踪，由 bot 自动化提交，预示 v0.14.0 旗舰方向。",
+      "url": "https://github.com/nexu-io/open-design/pull/5178"
     },
     {
-      "number": 5145,
-      "title": "fix(daemon): filter transient ACP status events at persistence time (#4618)",
-      "state": "open",
-      "author": "xxiaoxiong",
-      "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "在持久化层过滤 ACP 瞬态状态事件，解决 #4618 中用户可见的空 tool_call/tool_call_update 行问题。",
-      "url": "https://github.com/nexu-io/open-design/pull/5145"
-    },
-    {
-      "number": 5144,
-      "title": "fix(web): sort model selector options alphabetically by label (#5052)",
-      "state": "open",
-      "author": "xxiaoxiong",
-      "labels": ["size/S", "risk/medium", "type/bugfix", "needs-validation"],
-      "impact": "按标签字母顺序排序模型选择器，修复 #5052 中选项顺序混乱、用户难以快速定位模型的体验问题。",
-      "url": "https://github.com/nexu-io/open-design/pull/5144"
-    },
-    {
-      "number": 5143,
-      "title": "fix(daemon): use dynamic model guidance in media dispatch hint (#5117)",
-      "state": "open",
-      "author": "xxiaoxiong",
-      "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "media dispatch hint 改用动态模型引导，修复 #5117 配置了 OpenAI 图片 provider 仍回退请求 Fal 的问题。",
-      "url": "https://github.com/nexu-io/open-design/pull/5143"
-    },
-    {
-      "number": 5055,
-      "title": "fix: sort model selector options alphabetically",
-      "state": "open",
-      "author": "i-win-again",
+      "number": 5185,
+      "title": "feat(landing-page): rewrite title/meta for high-impression low-CTR pages",
+      "state": "merged",
+      "author": "xne998808-ai",
       "labels": [],
-      "impact": "社区重复提出的模型选择器排序修复，与 #5144 同主题，需关注去重与合并策略。",
-      "url": "https://github.com/nexu-io/open-design/pull/5055"
+      "impact": "landing 页面 SEO 标题/meta 重写，优化低 CTR 页面曝光率，已合入，内容营销战略持续。",
+      "url": "https://github.com/nexu-io/open-design/pull/5185"
     },
     {
-      "number": 5132,
-      "title": "refactor(daemon): server.ts decomposition slice 2 — media/SSE/shell concern modules",
-      "state": "open",
-      "author": "leonaburime-ucla",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
-      "impact": "daemon server.ts 分解第二阶段，拆分 media/SSE/shell 三大关注点，属于架构级重构，与 #5087 RFC 配套。",
-      "url": "https://github.com/nexu-io/open-design/pull/5132"
-    },
-    {
-      "number": 5135,
-      "title": "refactor(daemon): capability-barrel the mcp domain",
-      "state": "open",
-      "author": "leonaburime-ucla",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
-      "impact": "MCP 域能力桶化重构，减少 daemon 内部交叉耦合，与 server.ts 分解共同推进模块化治理。",
-      "url": "https://github.com/nexu-io/open-design/pull/5135"
-    },
-    {
-      "number": 5141,
-      "title": "feat(landing): add careers page under Company footer",
+      "number": 5181,
+      "title": "fix(landing): correct the homepage design-systems count to 150",
       "state": "open",
       "author": "xne998808-ai",
-      "labels": ["size/L", "risk/medium", "type/feature"],
-      "impact": "landing 站点新增招聘页面，延续 6 月以来内容营销/SEO 战略，同时暗示团队扩张。",
-      "url": "https://github.com/nexu-io/open-design/pull/5141"
+      "labels": ["size/S", "risk/medium", "type/bugfix"],
+      "impact": "首页设计系统数量显示从错误值修正为 150，与 v0.12.0 品牌捕获功能匹配。",
+      "url": "https://github.com/nexu-io/open-design/pull/5181"
+    },
+    {
+      "number": 5200,
+      "title": "refactor(daemon): split acp.ts + pi-rpc.ts into an agent-protocol/ capability-barrel",
+      "state": "open",
+      "author": "leonaburime-ucla",
+      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
+      "impact": "daemon ACP/PI-RPC 模块拆桶重构，与 #5132 server.ts 分解和 #5199 langfuse 拆桶三线并行，daemon 模块化治理持续推进。",
+      "url": "https://github.com/nexu-io/open-design/pull/5200"
+    },
+    {
+      "number": 5199,
+      "title": "refactor(daemon): split langfuse-trace.ts god-file into a capability-barrel module",
+      "state": "open",
+      "author": "leonaburime-ucla",
+      "labels": ["size/XXL", "risk/high", "type/refactor", "skip-validation"],
+      "impact": "langfuse-trace.ts 可观测性模块拆桶，减少 daemon god-file 耦合，与 #5200/#5132 共同推进架构模块化。",
+      "url": "https://github.com/nexu-io/open-design/pull/5199"
+    },
+    {
+      "number": 5085,
+      "title": "fix: add Kiro to agentLabels.ts (AGENT_LABELS + AGENT_ALIASES)",
+      "state": "open",
+      "author": "xxiaoxiong",
+      "labels": ["size/XS", "risk/medium", "type/bugfix", "skip-validation"],
+      "impact": "新增 Kiro agent 标签适配，BYOK 适配器生态持续扩展，支持更多第三方 CLI agent。",
+      "url": "https://github.com/nexu-io/open-design/pull/5085"
+    },
+    {
+      "number": 4041,
+      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
+      "state": "open",
+      "author": "pixcore598-design",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-product-review"],
+      "impact": "多 Agent 团队协作模块，长期 open（>2 周），需产品 review，是 Agent 生态纵深的关键拼图。",
+      "url": "https://github.com/nexu-io/open-design/pull/4041"
+    },
+    {
+      "number": 3509,
+      "title": "feat(tools-pack): cross-platform WebUI (no-Electron) packaging type",
+      "state": "open",
+      "author": "SugarFatFree",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "WebUI 无 Electron 打包类型，补齐 headless Linux/容器/Agent 嵌入部署，长期 open（>30 天），合入后将解锁全新部署场景。",
+      "url": "https://github.com/nexu-io/open-design/pull/3509"
     }
   ],
   "recent_issues": [
     {
-      "number": 4509,
-      "title": "MCP server settings command block renders with selection-like highlights",
-      "author": "NightGlowww",
-      "labels": ["bug"],
-      "comments": 10,
-      "summary": "MCP 设置页命令块渲染异常，带选择高亮样式，影响用户复制命令，10 评论。",
-      "url": "https://github.com/nexu-io/open-design/issues/4509"
-    },
-    {
-      "number": 4618,
-      "title": "Hide or humanize empty tool_call status rows in assistant process",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted", "priority:p3"],
-      "comments": 14,
-      "summary": "助手进程面板暴露内部空 tool_call 状态行，14 评论，对应 #5145 持久化过滤修复。",
-      "url": "https://github.com/nexu-io/open-design/issues/4618"
-    },
-    {
-      "number": 5052,
-      "title": "Sort model selector options alphabetically",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted", "ux"],
-      "comments": 8,
-      "summary": "模型选择器下拉选项未按字母排序，8 评论，对应 #5144/#5055 两条修复 PR。",
-      "url": "https://github.com/nexu-io/open-design/issues/5052"
-    },
-    {
-      "number": 5117,
-      "title": "Media generation fallback asks for Fal despite configured OpenAI image provider",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "priority:p1"],
-      "comments": 4,
-      "summary": "已配置 OpenAI 图片 provider 时，媒体生成仍回退请求 Fal，P1 优先级，对应 #5143 修复。",
-      "url": "https://github.com/nexu-io/open-design/issues/5117"
-    },
-    {
-      "number": 2197,
-      "title": "Windows packaged app: Codex CLI connection test always times out even though Codex works manually",
-      "author": "duyedoudou",
-      "labels": ["bug", "priority:p1", "looper:worker-ready", "stale"],
+      "number": 2456,
+      "title": "od project handoff leaks BYOK API key via argv — add --api-key-file and ANTHROPIC_API_KEY env var paths",
+      "author": "bankielewicz",
+      "labels": ["bug", "priority:p0"],
       "comments": 9,
-      "summary": "Windows 打包版 Codex CLI 连接测试超时，手动运行正常，stale 9 评论，Windows 端核心痛点。",
-      "url": "https://github.com/nexu-io/open-design/issues/2197"
+      "summary": "P0 安全漏洞：BYOK API key 通过 argv 泄露，进程列表可见，严重威胁用户隐私和信任，9 评论，建议改用文件/环境变量传递。",
+      "url": "https://github.com/nexu-io/open-design/issues/2456"
     },
     {
-      "number": 5087,
-      "title": "RFC: split the daemon's largest files into smaller, self-contained modules (staged, with design-systems as a proven example)",
+      "number": 5120,
+      "title": "[Bug]: On macos, the od command conflicts with internal commands, making it unusable",
+      "author": "BWrong",
+      "labels": ["bug"],
+      "comments": 8,
+      "summary": "macOS 上 od 命令与系统内置 od（octal dump）冲突，导致 CLI 不可用，8 评论，直接影响 macOS 用户使用体验。",
+      "url": "https://github.com/nexu-io/open-design/issues/5120"
+    },
+    {
+      "number": 5201,
+      "title": "Proposal: decompose large apps/web component files into vertical slices (ports in-slice, transport in providers/, DTOs in contracts)",
       "author": "leonaburime-ucla",
       "labels": ["question"],
+      "comments": 1,
+      "summary": "apps/web 大组件文件垂直切片分解提案，与 daemon 重构形成前后端模块化同步，1 评论，架构治理新方向。",
+      "url": "https://github.com/nexu-io/open-design/issues/5201"
+    },
+    {
+      "number": 2973,
+      "title": "Generated artifact completion can clear conversation context needed for follow-up prompts",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "priority:p1"],
       "comments": 7,
-      "summary": "daemon 大文件模块化 RFC，以 design-systems 为样例，7 评论，对应 #5132/#5135/#5133 重构。",
-      "url": "https://github.com/nexu-io/open-design/issues/5087"
+      "summary": "artifact 生成完成后清空对话上下文，导致后续 prompt 无法引用前文，P1 优先级，7 评论，影响工作流连贯性。",
+      "url": "https://github.com/nexu-io/open-design/issues/2973"
     },
     {
-      "number": 3542,
-      "title": "Complete Gemini stream-json event coverage",
-      "author": "alchemistklk",
-      "labels": ["enhancement", "stale"],
-      "comments": 2,
-      "summary": "Gemini stream-json 事件覆盖补齐，stale 2 评论，长期遗留的适配器完整性问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/3542"
+      "number": 1890,
+      "title": "README skills/design-systems counts drift (31→131, 72→149) — policy question",
+      "author": "leessju",
+      "labels": ["question", "docs"],
+      "comments": 11,
+      "summary": "README 中技能/设计系统数量漂移（31→131, 72→149），文档与实际不一致，11 评论，需建立同步策略。",
+      "url": "https://github.com/nexu-io/open-design/issues/1890"
     },
     {
-      "number": 1185,
-      "title": "feat: 文件区域",
-      "author": "XL-WDM",
+      "number": 1637,
+      "title": "Creative Memory System for Open Design using Taste Memory and Iteration Learning",
+      "author": "itsmeved24",
       "labels": ["feature", "stale"],
+      "comments": 53,
+      "summary": "创意记忆系统提案（品味记忆+迭代学习），53 评论高热社区讨论，stale 但反映用户对 Agent 持久记忆的强烈需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/1637"
+    },
+    {
+      "number": 517,
+      "title": "Local CLI connectors are not working as expected",
+      "author": "gsriraj",
+      "labels": ["bug", "priority:p1", "stale"],
+      "comments": 8,
+      "summary": "本地 CLI 连接器工作异常，P1 stale 8 评论，BYOK 适配器可靠性长期痛点。",
+      "url": "https://github.com/nexu-io/open-design/issues/517"
+    },
+    {
+      "number": 2161,
+      "title": "agent exited with code 1",
+      "author": "llermaly",
+      "labels": ["bug", "priority:p1", "stale"],
+      "comments": 6,
+      "summary": "Agent 进程以 code 1 退出，P1 stale 6 评论，缺乏错误诊断，与 v0.13.0 错误卡修复相关。",
+      "url": "https://github.com/nexu-io/open-design/issues/2161"
+    },
+    {
+      "number": 3718,
+      "title": "Design Files tab has no awareness of git worktrees — files in sibling worktrees / other branches are invisible and unswitchable",
+      "author": "DoisKoh",
+      "labels": ["enhancement", "stale"],
+      "comments": 3,
+      "summary": "设计文件 Tab 不感知 git worktree，stale 3 评论，企业级多分支协作场景的缺失功能。",
+      "url": "https://github.com/nexu-io/open-design/issues/3718"
+    },
+    {
+      "number": 2887,
+      "title": "Stable 0.8.0 still opens assistant chat file links in a new window",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "priority:p0", "stale"],
       "comments": 7,
-      "summary": "中文用户请求文件区域资源管理器样式与搜索/拖拽功能，stale 7 评论。",
-      "url": "https://github.com/nexu-io/open-design/issues/1185"
-    },
-    {
-      "number": 1175,
-      "title": "Is the tool usable at all?",
-      "author": "alex-denisov",
-      "labels": ["question", "stale"],
-      "comments": 14,
-      "summary": "安装可用性质疑，涉及 Intel Mac/Docker/pnpm 安装痛点，14 评论，反映新用户上手门槛。",
-      "url": "https://github.com/nexu-io/open-design/issues/1175"
-    },
-    {
-      "number": 4922,
-      "title": "[Bug]: Application Not opening",
-      "author": "noushweb",
-      "labels": ["bug"],
-      "comments": 15,
-      "summary": "MacBook Air M4 应用无法打开，15 评论，v0.12.0+ 安装阻断问题，直接影响 v0.13.0 获取用户。",
-      "url": "https://github.com/nexu-io/open-design/issues/4922"
+      "summary": "聊天文件链接在新窗口打开而非内嵌，P0 stale 7 评论，影响工作区连贯导航体验。",
+      "url": "https://github.com/nexu-io/open-design/issues/2887"
     }
   ],
   "trends": {
-    "direction": "v0.13.0「Stay in Flow」已于 7/2 正式发布，发布后首波 PR 集中在 daemon 安全/稳定性修复（命令注入、ACP 状态过滤）和模型选择器/media 路由一致性修复，同时 daemon 架构重构（server.ts 分解、MCP/library 域桶化）与 landing 页面（招聘页、导航调整）同步推进。",
+    "direction": "v0.13.0「Stay in Flow」发布第 4 天，开发重心转向 daemon 模块化架构重构三线并行推进（ACP/PI-RPC 拆桶 #5200 + langfuse-trace.ts 拆桶 #5199 + server.ts 分解 #5132）和 Website Clone 战略级新功能（#5178 bot 自动化），landing 页面 SEO/内容小步迭代（#5181/#5185），Kiro 新 agent 适配（#5085）显示 BYOK 生态持续扩展。",
     "affected_modules": [
-      "daemon/host-tool shell 启动（Windows 命令注入）",
-      "daemon/ACP 状态持久化",
-      "web/模型选择器排序",
-      "daemon/media dispatch 路由",
-      "landing/website 招聘页与导航",
-      "daemon 架构模块化（server.ts 分解 + capability-barrel）",
-      "MCP 设置 UI",
-      "OpenDesign Cloud / BYOK"
+      "daemon/ACP + PI-RPC 模块化（agent-protocol 拆桶）",
+      "daemon/langfuse-trace.ts 可观测性模块拆桶",
+      "daemon/server.ts 分解（media/SSE/shell 关注点）",
+      "Website Clone 入口与示例卡片",
+      "landing/SEO 标题重写与设计系统数量修正",
+      "agent labels 适配器生态（Kiro 新增）",
+      "BYOK 安全（API key argv 泄露）",
+      "macOS CLI 命名冲突"
     ],
     "risks": [
-      "v0.13.0 发布仅 2 天，daemon 连续出现命令注入（#5146）和 ACP 状态泄漏（#5145/#4618）类安全/隐私修复，需关注是否为版本 regression",
-      "模型选择器排序（#5055 vs #5144）和媒体路由回退（#5117 vs #5143）存在重复/竞争 PR，可能合并冲突",
-      "MacBook Air M4 应用无法打开（#4922，15 评论）影响 v0.13.0 安装获取用户",
-      "Windows 打包 Codex 连接超时（#2197 stale）与命令注入修复说明 Windows 端仍是高脆弱区域",
-      "open_issues 489→505 回升，v0.13.0 新问题 influx 开始显现"
+      "P0 安全漏洞 #2456（BYOK API key 通过 argv 泄露至进程列表可见）仍未修复，严重威胁用户隐私和信任，是当前最高优先级风险",
+      "daemon 架构重构三条 XXL PR 并行推进（#5200/#5199/#5132），回归风险叠加，任何一条引入 bug 都可能影响 v0.13.0 稳定性",
+      "open_issues 505→521（+16），v0.13.0 后问题 influx 持续加速，修复速度远低于新增速度",
+      "macOS od 命令与系统内置命令冲突（#5120）直接影响终端用户 CLI 可用性"
     ],
     "actions": [
-      "监控 #5146 命令注入修复是否快速合入并发布 hotfix",
-      "观察 #5144/#5055 模型选择器排序 PR 的去重与合并策略",
-      "验证 #5143 对 #5117 media 回退问题的修复路径",
-      "关注 daemon 重构 PR（#5132/#5135/#5133）的 review 进度与回归风险",
-      "追踪 #4922 Mac 安装阻断问题的复现与修复"
+      "关注 P0 #2456 BYOK API key 泄露的安全修复进展，这是当前最高优先级风险",
+      "观察 daemon 重构三线推进的合并节奏和回归测试覆盖",
+      "监控 open_issues 是否开始回落，否则 v0.13.0 稳定性窗口堪忧",
+      "留意 #5178 Website Clone 战略功能的 review 进度，预示 v0.14.0 方向"
     ],
-    "next_week": "v0.13.0 发布后首个完整周，预期 hotfix 节奏加快；daemon 安全修复和架构重构若并行推进，需警惕回归；landing 页面招聘页/导航调整暗示团队扩张；open_issues 是否持续上升将反映 v0.13.0 稳定性。"
+    "next_week": "v0.13.0 发布后第 2 周，预期 daemon 重构 PR 将陆续合入但可能引发 regression；P0 API key 泄露需尽快修复或发布 hotfix；Website Clone 功能进入 review，预示 v0.14.0 战略方向；open_issues 趋势是判断 v0.13.0 稳定性窗口的关键指标。"
   }
 }
