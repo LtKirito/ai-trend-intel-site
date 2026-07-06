@@ -1,0 +1,99 @@
+{
+  "week": "2026-W27",
+  "title": "2026 W27 GitHub AI 星标周报",
+  "summary": "AI Agent 进入精细化工程时代：代码精简、记忆增强、垂直场景全面开花。",
+  "count": "10 个项目",
+  "theme": "代码精简 · 记忆增强 · 垂直Agent",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "ponytail",
+      "category": "Agent",
+      "stars": "73.8k",
+      "growth": "+13.9k",
+      "why": "让AI编码Agent像最懒的资深工程师思考，专治过度工程",
+      "url": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "rank": "02",
+      "name": "codebase-memory-mcp",
+      "category": "Infra",
+      "stars": "26.1k",
+      "growth": "+10.7k",
+      "why": "代码库秒级索引为持久知识图谱，MCP查询省99% token",
+      "url": "https://github.com/DeusData/codebase-memory-mcp"
+    },
+    {
+      "rank": "03",
+      "name": "strix",
+      "category": "Agent",
+      "stars": "36.9k",
+      "growth": "+9.7k",
+      "why": "开源AI渗透测试代理，自动发现漏洞并生成可操作建议",
+      "url": "https://github.com/usestrix/strix"
+    },
+    {
+      "rank": "04",
+      "name": "OpenMontage",
+      "category": "Multimodal",
+      "stars": "33k",
+      "growth": "+9.6k",
+      "why": "首个开源agentic视频生产系统，500+技能将代码助手变工作室",
+      "url": "https://github.com/calesthio/OpenMontage"
+    },
+    {
+      "rank": "05",
+      "name": "Agent-Reach",
+      "category": "Agent",
+      "stars": "50.5k",
+      "growth": "+8.3k",
+      "why": "让Agent免API费用读搜多平台内容，补齐互联网感知入口",
+      "url": "https://github.com/Panniantong/Agent-Reach"
+    },
+    {
+      "rank": "06",
+      "name": "ai-berkshire",
+      "category": "Agent",
+      "stars": "9.6k",
+      "growth": "+6.6k",
+      "why": "基于Claude Code的多Agent价值投资研究框架，四大师方法论",
+      "url": "https://github.com/xbtlin/ai-berkshire"
+    },
+    {
+      "rank": "07",
+      "name": "taste-skill",
+      "category": "Agent",
+      "stars": "56.3k",
+      "growth": "+4.9k",
+      "why": "给AI注入好品味，阻止生成无聊平庸的通用内容",
+      "url": "https://github.com/Leonxlnx/taste-skill"
+    },
+    {
+      "rank": "08",
+      "name": "headroom",
+      "category": "DevTools",
+      "stars": "56.5k",
+      "growth": "+4.6k",
+      "why": "LLM上下文压缩60-95%，MCP/代理/库三模式继续霸榜",
+      "url": "https://github.com/chopratejas/headroom"
+    },
+    {
+      "rank": "09",
+      "name": "Vibe-Trading",
+      "category": "Agent",
+      "stars": "17.8k",
+      "growth": "+4.3k",
+      "why": "个人交易Agent，将AI能力下沉到金融投资领域",
+      "url": "https://github.com/HKUDS/Vibe-Trading"
+    },
+    {
+      "rank": "10",
+      "name": "ai-website-cloner-template",
+      "category": "DevTools",
+      "stars": "25.5k",
+      "growth": "+4.3k",
+      "why": "一键克隆任意网站，AI编码代理工作流模板",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template"
+    }
+  ]
+}
