@@ -12,6 +12,33 @@
   },
   "recent_prs": [
     {
+      "number": 5203,
+      "title": "fix(claude-stream): surface an error when a result frame reports is_error",
+      "state": "open",
+      "author": "tomsen-ai",
+      "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "claude-stream 在 result frame 报告 is_error 时向上暴露错误而非静默吞掉，修复流式输出错误可见性，新贡献者 tomsen-ai 首次提交，v0.13.0 bugfix 系列。",
+      "url": "https://github.com/nexu-io/open-design/pull/5203"
+    },
+    {
+      "number": 5202,
+      "title": "fix(daemon): target the stalled child in watchdog forced-shutdown escalation",
+      "state": "open",
+      "author": "tomsen-ai",
+      "labels": ["size/M", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "daemon watchdog 在强制关闭升级时目标 stalled 子进程而非整个进程组，修复 daemon 进程管理可靠性，新贡献者 tomsen-ai 提交。",
+      "url": "https://github.com/nexu-io/open-design/pull/5202"
+    },
+    {
+      "number": 3509,
+      "title": "feat(tools-pack): cross-platform WebUI (no-Electron) packaging type",
+      "state": "open",
+      "author": "SugarFatFree",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "WebUI 无 Electron 打包类型，补齐 headless Linux/容器/Agent 嵌入部署，长期 open（>30 天），合入后将解锁全新部署场景。",
+      "url": "https://github.com/nexu-io/open-design/pull/3509"
+    },
+    {
       "number": 5178,
       "title": "Website Clone: first-party Home entry, fidelity, real-clone example cards + tracking",
       "state": "open",
@@ -19,15 +46,6 @@
       "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
       "impact": "战略级新功能：Website Clone 入口落地，含首页真实克隆示例卡片与追踪，由 bot 自动化提交，预示 v0.14.0 旗舰方向。",
       "url": "https://github.com/nexu-io/open-design/pull/5178"
-    },
-    {
-      "number": 5185,
-      "title": "feat(landing-page): rewrite title/meta for high-impression low-CTR pages",
-      "state": "merged",
-      "author": "xne998808-ai",
-      "labels": [],
-      "impact": "landing 页面 SEO 标题/meta 重写，优化低 CTR 页面曝光率，已合入，内容营销战略持续。",
-      "url": "https://github.com/nexu-io/open-design/pull/5185"
     },
     {
       "number": 5181,
@@ -39,6 +57,15 @@
       "url": "https://github.com/nexu-io/open-design/pull/5181"
     },
     {
+      "number": 5185,
+      "title": "feat(landing-page): rewrite title/meta for high-impression low-CTR pages",
+      "state": "merged",
+      "author": "xne998808-ai",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "landing 页面 SEO 标题/meta 重写，优化低 CTR 页面曝光率，已合入，内容营销战略持续。",
+      "url": "https://github.com/nexu-io/open-design/pull/5185"
+    },
+    {
       "number": 5200,
       "title": "refactor(daemon): split acp.ts + pi-rpc.ts into an agent-protocol/ capability-barrel",
       "state": "open",
@@ -48,15 +75,6 @@
       "url": "https://github.com/nexu-io/open-design/pull/5200"
     },
     {
-      "number": 5199,
-      "title": "refactor(daemon): split langfuse-trace.ts god-file into a capability-barrel module",
-      "state": "open",
-      "author": "leonaburime-ucla",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "skip-validation"],
-      "impact": "langfuse-trace.ts 可观测性模块拆桶，减少 daemon god-file 耦合，与 #5200/#5132 共同推进架构模块化。",
-      "url": "https://github.com/nexu-io/open-design/pull/5199"
-    },
-    {
       "number": 5085,
       "title": "fix: add Kiro to agentLabels.ts (AGENT_LABELS + AGENT_ALIASES)",
       "state": "open",
@@ -64,24 +82,6 @@
       "labels": ["size/XS", "risk/medium", "type/bugfix", "skip-validation"],
       "impact": "新增 Kiro agent 标签适配，BYOK 适配器生态持续扩展，支持更多第三方 CLI agent。",
       "url": "https://github.com/nexu-io/open-design/pull/5085"
-    },
-    {
-      "number": 4041,
-      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
-      "state": "open",
-      "author": "pixcore598-design",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-product-review"],
-      "impact": "多 Agent 团队协作模块，长期 open（>2 周），需产品 review，是 Agent 生态纵深的关键拼图。",
-      "url": "https://github.com/nexu-io/open-design/pull/4041"
-    },
-    {
-      "number": 3509,
-      "title": "feat(tools-pack): cross-platform WebUI (no-Electron) packaging type",
-      "state": "open",
-      "author": "SugarFatFree",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "WebUI 无 Electron 打包类型，补齐 headless Linux/容器/Agent 嵌入部署，长期 open（>30 天），合入后将解锁全新部署场景。",
-      "url": "https://github.com/nexu-io/open-design/pull/3509"
     }
   ],
   "recent_issues": [
@@ -109,7 +109,7 @@
       "author": "leonaburime-ucla",
       "labels": ["question"],
       "comments": 1,
-      "summary": "apps/web 大组件文件垂直切片分解提案，与 daemon 重构形成前后端模块化同步，1 评论，架构治理新方向。",
+      "summary": "apps/web 大组件文件垂直切片分解提案（SettingsDialog ~8500 行 / FileViewer ~12800 行），与 daemon 重构形成前后端模块化同步，1 评论，架构治理新方向。",
       "url": "https://github.com/nexu-io/open-design/issues/5201"
     },
     {
@@ -177,8 +177,10 @@
     }
   ],
   "trends": {
-    "direction": "v0.13.0「Stay in Flow」发布第 4 天，开发重心转向 daemon 模块化架构重构三线并行推进（ACP/PI-RPC 拆桶 #5200 + langfuse-trace.ts 拆桶 #5199 + server.ts 分解 #5132）和 Website Clone 战略级新功能（#5178 bot 自动化），landing 页面 SEO/内容小步迭代（#5181/#5185），Kiro 新 agent 适配（#5085）显示 BYOK 生态持续扩展。",
+    "direction": "v0.13.0「Stay in Flow」发布第 4 天，daemon bugfix 两条新增（#5202 watchdog 强制关闭升级目标 stalled 子进程 + #5203 claude-stream 错误帧暴露），来自新贡献者 tomsen-ai；daemon 架构重构三线继续推进（#5200 ACP/PI-RPC 拆桶 + #5199 langfuse 拆桶 + #5132 server.ts 分解），landing SEO/内容迭代（#5185 merged + #5181 open），Website Clone 战略功能 #5178 等待 review。",
     "affected_modules": [
+      "daemon/watchdog 强制关闭升级逻辑（stalled child 定向终止）",
+      "claude-stream 错误帧（is_error result frame）暴露",
       "daemon/ACP + PI-RPC 模块化（agent-protocol 拆桶）",
       "daemon/langfuse-trace.ts 可观测性模块拆桶",
       "daemon/server.ts 分解（media/SSE/shell 关注点）",
@@ -191,15 +193,15 @@
     "risks": [
       "P0 安全漏洞 #2456（BYOK API key 通过 argv 泄露至进程列表可见）仍未修复，严重威胁用户隐私和信任，是当前最高优先级风险",
       "daemon 架构重构三条 XXL PR 并行推进（#5200/#5199/#5132），回归风险叠加，任何一条引入 bug 都可能影响 v0.13.0 稳定性",
-      "open_issues 505→521（+16），v0.13.0 后问题 influx 持续加速，修复速度远低于新增速度",
+      "open_issues 521 维持高位（vs 07-04 505，+16），v0.13.0 后问题 influx 持续加速，修复速度远低于新增速度",
       "macOS od 命令与系统内置命令冲突（#5120）直接影响终端用户 CLI 可用性"
     ],
     "actions": [
-      "关注 P0 #2456 BYOK API key 泄露的安全修复进展，这是当前最高优先级风险",
-      "观察 daemon 重构三线推进的合并节奏和回归测试覆盖",
-      "监控 open_issues 是否开始回落，否则 v0.13.0 稳定性窗口堪忧",
+      "关注 #5202/#5203 两个 daemon bugfix 的 review 进度，这是 v0.13.0 后的首批针对性修复",
+      "持续追踪 P0 #2456 BYOK API key 泄露的安全修复进展，这是当前最高优先级风险",
+      "观察 daemon 重构三线推进（#5200/#5199/#5132）的合并节奏和回归测试覆盖",
       "留意 #5178 Website Clone 战略功能的 review 进度，预示 v0.14.0 方向"
     ],
-    "next_week": "v0.13.0 发布后第 2 周，预期 daemon 重构 PR 将陆续合入但可能引发 regression；P0 API key 泄露需尽快修复或发布 hotfix；Website Clone 功能进入 review，预示 v0.14.0 战略方向；open_issues 趋势是判断 v0.13.0 稳定性窗口的关键指标。"
+    "next_week": "v0.13.0 发布后第 2 周，daemon bugfix (#5202/#5203) 将优先合入；架构重构 PR 需更多 review 周期；P0 API key 泄露仍待修复或发布 hotfix；Website Clone 功能进入 review 预示 v0.14.0 战略方向；open_issues 521+ 是判断 v0.13.0 稳定性窗口的关键指标。"
   }
 }
