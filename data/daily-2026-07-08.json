@@ -1,0 +1,213 @@
+{
+  "date": "2026-07-08",
+  "title": "2026-07-08 AI信息差日报",
+  "coverage": "覆盖窗口：7/5 ~ 7/8",
+  "sources": "信息源：Anthropic官方 / Claude Code Changelog / claudeupdates.dev / DeepSeek官方 / GitHub / 腾讯新闻 / 新浪财经 / 蚂蚁集团 / 快手 / 界面新闻 / Product Hunt",
+  "conclusions": [
+    "Claude Code 7月第一周三更连发 v2.1.200-203，主题不是新功能而是'稳定'与'可控'：默认权限改为 Manual、后台 agent 崩溃/交接/内存全面修复、动态工作流规模可配置。",
+    "Deep Code 出现：DeepSeek 生态终于有了为自家模型量身定做的开源编程 Agent，支持 Skills、MCP、VS Code 插件、细粒度权限。",
+    "DeepSeek V4 正式版 7月15日上线 + 行业首创峰谷定价，高峰时段 API 价格翻倍，标志中国大模型从补贴价格战转向算力效率定价。",
+    "中国超级 App 全面 AI 化：支付宝'阿宝'公测 72 项办事技能，企业微信'大员'接入 DeepSeek，百度文心一言升级深度阅读+图表生成。",
+    "可灵 AI 完成近 30 亿美元融资，估值 180 亿美元，创全球视频大模型公司最大单轮融资，预计 12 个月内启动港股 IPO。"
+  ],
+  "summary": "7月第一周 AI 从发布走向落地：Anthropic 密集修复 Claude Code 后台 agent 稳定性，DeepSeek 推出原生开源编程 Agent Deep Code 和 V4 峰谷定价，中国超级 App（支付宝、企业微信、百度）将 AI Agent 推入主入口，可灵 AI 以 180 亿美元估值完成视频生成赛道最大融资。",
+  "body": "本日报覆盖 7/5-7/8，4 条 P0 + 3 条 P1 + 2 条 P2。核心信号：Claude Code v2.1.200-203 在权限、后台 agent 稳定性、动态工作流上集中补课；Deep Code 为 DeepSeek-V4 提供原生编程 Agent 入口；DeepSeek V4 正式版 7/15 上线并引入行业首创峰谷定价；支付宝'阿宝'、企业微信'大员'、百度文心一言代表中国超级 App AI 化进入主入口阶段；可灵 AI 30 亿美元融资刷新视频大模型赛道纪录。与 7/1-4 的 Anthropic 高密度发布相比，本周更贴近普通人可落地的 AI 应用场景。",
+  "judgement": "7月第一周是'AI 从发布走向落地'的切换周。Anthropic 没有发新模型，而是连续修 Claude Code 的后台 agent 和权限系统，说明 Sonnet 5 之后真正的瓶颈是工程可靠性。中国侧呈现模型层（DeepSeek V4 峰谷定价）、工具层（Deep Code）、应用层（支付宝阿宝、企业微信大员）三条线并行。可灵融资是视频生成赛道独立资本化的信号。这周信息差更分散，但更贴近'明天就能用'的落地场景。",
+  "tags": ["Claude-Code", "v2.1.200", "v2.1.203", "Deep-Code", "DeepSeek", "DeepSeek-V4", "峰谷定价", "支付宝", "阿宝", "企业微信", "大员", "百度", "文心一言", "可灵AI", "WAIC-2026", "Agent", "GitHub-Copilot", "Fable-5"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.200-203 密集更新",
+      "summary": "7月3-7日连续4个版本：默认权限模式改为 Manual、AskUserQuestion 不再自动继续、后台 agent daemon/崩溃/交接/内存全面修复、动态工作流规模可控、Sonnet 5 会话 harness 优化。",
+      "why": "这是 Sonnet 5 上线后的'可靠性补课'。当模型能力足够强，Agent 的瓶颈就转向工程稳定性——后台任务不丢、崩溃后能恢复、权限不越界。",
+      "action_fact": "更新到最新版（v2.1.203）体验后台 agent 长任务；在 `/config` 里调整 Dynamic workflow size；注意默认权限已变 Manual，批处理脚本需要重新确认授权。",
+      "action_judge": "建议立刻升级并跑一个 overnight 后台任务（如重构/测试）来验证稳定性。这周的修复说明后台 agent 已经从 demo 走向可用。",
+      "tags": ["Agent-Workflow", "Tool", "Claude-Code", "后台Agent", "权限控制", "Sonnet-5"],
+      "sources": ["https://code.claude.com/docs/en/changelog", "https://www.claudeupdates.dev/version/2.1.200", "https://www.claudeupdates.dev/version/2.1.203"]
+    },
+    {
+      "rank": "P0",
+      "title": "Deep Code — DeepSeek 专用开源编程 Agent",
+      "summary": "专为 deepseek-v4 模型优化的终端 AI 编程助手，支持深度思考、推理强度控制、Agent Skills、MCP、VS Code 插件、细粒度权限控制。GitHub 1500+ stars，MIT 协议。",
+      "why": "DeepSeek 模型强，但工具链一直是短板。Deep Code 为 DeepSeek 量身定做 harness，让 V4 在代码任务上的稳定性/工具调用能力更接近 Claude Code。",
+      "action_fact": "npm install -g @vegamo/deepcode-cli 后配置 ~/.deepcode/settings.json 接入 DeepSeek API；支持 ./.deepcode/skills/ 和 ./.agents/skills/ 双路径加载 skill；内置免费 web search 和自定义搜索脚本。",
+      "action_judge": "如果你因为 Claude Code 限制或成本在寻找替代，Deep Code 是目前最值得试的 DeepSeek 原生方案。建议先用它跑一个日常重构任务做对比。",
+      "tags": ["Tool", "Agent", "Deep-Code", "DeepSeek", "DeepSeek-V4", "MCP", "Skills", "开源"],
+      "sources": ["https://github.com/lessweb/deepcode-cli", "https://finance.sina.com.cn/wm/2026-07-06/doc-inifvzha8568745.shtml"]
+    },
+    {
+      "rank": "P0",
+      "title": "DeepSeek V4 正式版 7/15 上线 + 峰谷定价",
+      "summary": "DeepSeek V4 正式版 7月15日全量上线，同步推出 V4 Pro / V4 Flash 商用 API，并引入行业首创'峰谷定价'——高峰时段（9-12点、14-18点）价格翻倍，非高峰维持原价。",
+      "why": "这是中国大模型从'补贴价格战'到'算力效率定价'的拐点。用价格杠杆把'刷榜调用'和'真实业务负载'分开，对行业长期健康比单纯降价更重要。",
+      "action_fact": "7月15日生效；V4 Pro 非高峰输入命中缓存 ¥0.025/未命中 ¥3/输出 ¥6（每百万 token），高峰全部翻倍；V4 Flash 非高峰输入命中缓存 ¥0.02/未命中 ¥1/输出 ¥2，高峰翻倍。",
+      "action_judge": "如果你用 DeepSeek API，立刻把批处理/低优先级任务挪到非高峰；监控7月15日后的账单波动。这是中国模型成本管理的必修一课。",
+      "tags": ["New-Model", "Pricing", "DeepSeek", "DeepSeek-V4", "峰谷定价", "中国"],
+      "sources": ["https://www.oschina.net/news/470031", "https://www.stcn.com/article/detail/3988380.html", "https://baijiahao.baidu.com/s?id=1870016566454908420"]
+    },
+    {
+      "rank": "P0",
+      "title": "支付宝'阿宝'AI 原生版开放公测",
+      "summary": "蚂蚁集团 7月2日宣布 AI 原生版支付宝'阿宝'向全国用户开放公测，无需邀请码。首批推出 72 项智能办事技能，覆盖政务、出行、购物、账单等生活场景。",
+      "why": "这是超级 App 从'功能堆叠'到'对话式服务中枢'的结构性跃迁。阿宝不是支付宝里的一个 AI 助手，而是独立 AI 原生应用，与原版支付宝并行。",
+      "action_fact": "iOS/Android 用户可在应用商店或支付宝 App 内搜索'阿宝'或'蚂蚁阿宝'体验；原版与 AI 版可自由切换；首批 72 项技能覆盖查公积金、转账、买票订酒店等。",
+      "action_judge": "如果你关注 AI 产品化，阿宝是观察'超级 App Agent 化'的最佳案例。建议体验 3-5 个复杂指令（如'周末带小孩去上海迪士尼，买票订酒店'），看意图理解和多步调用是否稳定。",
+      "tags": ["AI-Tool", "Super-Agent", "支付宝", "阿宝", "蚂蚁集团", "中国"],
+      "sources": ["https://news.qq.com/rain/a/20260703A0CXTY00", "https://tech.caijing.com.cn/20260702/5168541.shtml"]
+    },
+    {
+      "rank": "P1",
+      "title": "可灵 AI 完成近 30 亿美元融资，估值 180 亿美元",
+      "summary": "快手 7月2日公告，旗下可灵 AI 完成总额上限 30 亿美元外部增资，投后估值 180 亿美元，创下全球视频大模型公司最大单轮融资纪录。预计 12 个月内启动港股 IPO。",
+      "why": "视频生成赛道进入独立资本化阶段。可灵从快手内部业务单元拆分为独立主体，意味着它要与 Runway、Sora、Pika 等独立公司正面竞争。",
+      "action_fact": "本轮由 CPE 源峰、国方创投、BlueFive、腾讯、中关村科学城基金等联合领投；资金全部用于模型迭代、商业化、全球化团队搭建；快手 2026 Q1 可灵单季营收超 6.5 亿元。",
+      "action_judge": "视频生成创业公司的估值逻辑正在从'模型能力'转向'营收+IPO 确定性'。如果你是视频创作者，可灵的 API 价格和模型迭代速度值得持续跟踪。",
+      "tags": ["Funding", "Video", "可灵AI", "快手", "IPO", "中国"],
+      "sources": ["https://news.qq.com/rain/a/20260702A04ZPQ00", "https://finance.sina.com.cn/wm/2026-07-03/doc-inifpqkw3591894.shtml"]
+    },
+    {
+      "rank": "P1",
+      "title": "企业微信'大员'AI 智能体接入 DeepSeek",
+      "summary": "腾讯 7月2日宣布在企业微信中推出 AI 智能体'大员'，基于 DeepSeek 最新大模型构建。用户在企业微信任何界面左滑即可唤起，自动识别当前页面并理解请求。",
+      "why": "腾讯首次在核心企业协作产品中接入第三方大模型，也是 DeepSeek 在头部互联网巨头 B 端场景中的关键落地。企业 Agent 的入口从独立 App 变成工作流中的'滑一下'。",
+      "action_fact": "企业微信用户可通过左滑唤起'大员'；可基于企业微信内的群聊、文档、会议、邮件、日程等工作数据理解上下文；目前为内测/逐步开放。",
+      "action_judge": "如果你是企业微信用户或企业 IT 负责人，'大员'是观察'企业知识助手如何与工作流深度结合'的样本。比独立 Agent 更难做，但粘性也更强。",
+      "tags": ["Agent", "Enterprise", "企业微信", "大员", "腾讯", "DeepSeek", "中国"],
+      "sources": ["https://news.qq.com/rain/a/20260702A08GL300", "https://aiproducthub.cn/newsflash/tencent-wecom-ai-agent-dayuan-deepseek/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Fable 5 全面接入 GitHub Copilot",
+      "summary": "GitHub 7月1日/2日宣布，Anthropic Claude Fable 5 现已在 GitHub Copilot 中重新启用并全面上线。开发者可通过 VS Code 或 GitHub Copilot 应用直接调用。",
+      "why": "Fable 5 的'解禁'不是简单恢复，而是绑定了全球最大的开发者分发渠道。GitHub Copilot 成为 Anthropic 前沿模型触达企业开发者的核心入口。",
+      "action_fact": "在 VS Code / GitHub Copilot 中选择 Fable 5 模型即可使用；定位为'长周期自主编程'，适合复杂多步骤代码任务。",
+      "action_judge": "如果你在用 GitHub Copilot，可以拿 Fable 5 与之前的 GPT-4o/Copilot 默认模型做对比，重点看跨文件、多步骤任务的完成质量。但'禁运可能再来'的风险仍建议保留备选方案。",
+      "tags": ["Model", "Distribution", "Claude-Fable-5", "GitHub-Copilot", "Anthropic"],
+      "sources": ["https://news.qq.com/rain/a/20260702A01S5O00"]
+    },
+    {
+      "rank": "P2",
+      "title": "百度文心一言 App 升级'深度阅读+图表生成'",
+      "summary": "7月1日百度文心一言 App 新增'深度阅读'和'图表生成'能力。用户上传百页以上 PDF/报告，可提取核心论点并生成结构化脑图；同时支持自然语言指令生成可视化表格与柱状图。",
+      "why": "百度正在用'长文档处理+可视化输出'巩固 C 端 AI 办公助手入口。这是大模型从'聊天'到'生产力工具'的常规升级，但产品形态清晰。",
+      "action_fact": "更新文心一言 App 后可使用；适合行业报告、论文、合同等长文档快速摘要和图表化。",
+      "action_judge": "如果你需要快速处理中文长文档并生成图表，可以试用。但与 Claude/GPT 的同类能力相比，核心差异在于中文文档解析和排版理解的稳定性。",
+      "tags": ["Product", "C端", "百度", "文心一言", "深度阅读", "图表生成", "中国"],
+      "sources": ["https://finance.sina.com.cn/jjxw/2026-07-05/doc-inifuhww8881811.shtml"]
+    },
+    {
+      "rank": "P2",
+      "title": "WAIC 2026 预览：300+ 产品全球首发",
+      "summary": "2026 世界人工智能大会（WAIC）将于 7月17-20 日在上海举办。7月7日新闻发布会透露，展览面积首次突破 10 万平方米，1100 余家企业参展，300 余款产品将全球首发，智算和具身两大赛道各汇聚超 200 家企业。",
+      "why": "WAIC 是中国 AI 产业的年度风向标。300+ 全球首发意味着下周将出现大量可报道的新产品/模型/机器人，是今年下半年国产 AI 发布密度最高的窗口。",
+      "action_fact": "大会以'智能伙伴，共创未来'为主题，分世博、张江、西岸三地四馆；智算和具身智能是两大核心赛道。",
+      "action_judge": "如果你是 AI 从业者或投资者，建议提前锁定 WAIC 的议程和企业名单，重点关注首发产品而不是会后总结。",
+      "tags": ["Event", "China", "WAIC-2026", "人工智能大会", "具身智能", "智算"],
+      "sources": ["https://www.jiemian.com/article/14715426.html", "https://news.qq.com/rain/a/20260707A04Y0D00"]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Deep Code",
+      "type": "AI 编程 Agent",
+      "highlight": "DeepSeek-V4 原生优化、Agent Skills、MCP、VS Code 插件、细粒度权限、免费 web search",
+      "audience": "DeepSeek 用户、寻找 Claude Code 替代品的开发者",
+      "action": "npm 安装 → 配置 DeepSeek API key → 跑一个日常重构任务 → 对比与 Claude Code 的完成质量",
+      "url": "https://github.com/lessweb/deepcode-cli"
+    },
+    {
+      "name": "Claude Code v2.1.203",
+      "type": "AI 编程工具",
+      "highlight": "后台 agent 稳定性大改、动态工作流规模、默认 Manual 权限、Sonnet 5 深度集成",
+      "audience": "Claude Code 用户、需要长任务后台运行的开发者",
+      "action": "更新到最新版 → 在 /config 开启后台 agent → 设置一个 overnight 任务（如测试/重构）观察稳定性",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "支付宝'阿宝'",
+      "type": "AI 原生超级 App",
+      "highlight": "72 项办事技能、自然语言完成生活服务全流程、与原版支付宝并行",
+      "audience": "普通用户、AI 产品研究者",
+      "action": "应用商店/支付宝内搜索'阿宝' → 体验 3-5 个复杂指令 → 观察多步服务调用成功率",
+      "url": "https://news.qq.com/rain/a/20260703A0CXTY00"
+    },
+    {
+      "name": "可灵 AI",
+      "type": "视频生成模型",
+      "highlight": "180 亿美元估值、30 亿美元融资、独立运营、预计 12 个月内港股 IPO",
+      "audience": "视频创作者、内容从业者、投资者",
+      "action": "注册可灵 AI 账号 → 对比其最新视频生成效果与 Runway/Sora → 关注 API 价格变化",
+      "url": "https://news.qq.com/rain/a/20260702A04ZPQ00"
+    },
+    {
+      "name": "企业微信'大员'",
+      "type": "企业 AI 智能体",
+      "highlight": "DeepSeek 驱动、左滑唤起、基于企业微信工作数据理解上下文",
+      "audience": "企业微信用户、企业 IT/数字化负责人",
+      "action": "确认所在企业是否已开通内测 → 试用日常办公场景（如查文档、写会议纪要）→ 评估数据安全策略",
+      "url": "https://news.qq.com/rain/a/20260702A08GL300"
+    },
+    {
+      "name": "Glaze by Raycast",
+      "type": "Mac App 生成",
+      "highlight": "通过与 AI 聊天创建 Mac 应用，Product Hunt 7月榜第 4 名",
+      "audience": "Mac 用户、想做小工具的非程序员",
+      "action": "下载 Raycast → 找到 Glaze → 用自然语言描述一个想做的 Mac 小工具 → 导出测试",
+      "url": "https://www.producthunt.com/products/glaze-4"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Deep Code 实测：DeepSeek 终于有了自己的 Claude Code",
+      "hook": "国产开源 + Claude Code 用不了双重流量",
+      "angle": "从安装配置到跑一个真实编程任务，对比 Deep Code + DeepSeek V4 与 Claude Code + Sonnet 5 的完成质量、速度和成本。重点展示 Skills 和 MCP 配置。",
+      "materials": "Deep Code 安装录屏 / 配置文件截图 / 同一任务双工具对比 / 成本计算表",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 后台 Agent 能过夜的秘密：v2.1.200-203 实测",
+      "hook": "AI 编程工具从聊天到异步工作的转折",
+      "angle": "解释 Manual 默认权限、动态工作流规模、后台 daemon 修复。实测：设置一个 overnight 重构任务，第二天早上验收结果。",
+      "materials": "Claude Code 版本更新截图 / /config 设置录屏 / overnight 任务前后对比 / 错误日志（如果有）",
+      "difficulty": "中"
+    },
+    {
+      "title": "DeepSeek 峰谷定价怎么省钱？API 账单对半砍攻略",
+      "hook": "省钱 + 效率，开发者刚需",
+      "angle": "解读 DeepSeek V4 峰谷定价机制，给出具体省钱策略：把批处理任务放到非高峰、用 Flash 替代 Pro、用缓存命中降低输入成本。",
+      "materials": "DeepSeek 官方定价表 / 模拟账单对比 / 脚本调度时间设置 / 成本节省计算",
+      "difficulty": "低"
+    },
+    {
+      "title": "支付宝'阿宝'72 项技能实测：一句话能办多大事？",
+      "hook": "超级 App 重做 + 普通人生活场景",
+      "angle": "选取 3-5 个复杂生活指令（如查公积金、转账、订票、订酒店、找优惠），全程录屏展示阿宝的理解和执行过程。分析成功/失败案例。",
+      "materials": "支付宝阿宝操作录屏 / 72 项技能清单截图 / 指令执行结果对比 / 失败案例截图",
+      "difficulty": "低"
+    },
+    {
+      "title": "可灵 AI 融资 30 亿美元：视频生成赛道要独立 IPO 了",
+      "hook": "全球最大视频模型融资纪录",
+      "angle": "从快手分拆、融资结构、估值逻辑讲到与 Runway/Sora/Pika 的竞争格局。分析中国视频生成公司的资本化路径。",
+      "materials": "快手公告截图 / 融资结构图 / 可灵/Runway/Sora 对比表 / 视频生成效果对比",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {"item": "GPT-5.6 系列旧闻持续刷屏", "reason": "6/26-27 已充分覆盖，7月中文搜索结果多为旧内容复述或营销标题，非新进展。"},
+    {"item": "'Claude Code 中国用户检测'情绪化标题", "reason": "部分自媒体使用'监视代码''间谍行为'等煽动性表述，与原始逆向分析的技术准确性有差距。Anthropic 已承诺移除，后续需关注是否真正删除，但不应重复作为 P0 消费。"},
+    {"item": "AI 编程工具横评/排行榜列表文", "reason": "典型 SEO 内容，无新信息、无来源、无实测，不符合'信息差'定位。"},
+    {"item": "WAIC 2026 预热稿件", "reason": "7月7日发布会信息本身有价值，但大量'AI 大会前瞻'文章属于会议公关稿，缺少具体首发产品信息，需等到 7/17-20 实际发布后再评估。"},
+    {"item": "OpenAI Jalapeño 芯片旧闻", "reason": "6/24 已报道，7月中文网络以回顾和股价联想为主，无新动态。"},
+    {"item": "'AI 取代工程师'标题党", "reason": "周期性出现的焦虑类内容，无具体数据或新研究支撑，不采信。"}
+  ],
+  "tracking_items": [
+    {"item": "Claude Code v2.1.204+ 生产稳定性", "reason": "验证 v2.1.200-203 的后台 agent 修复在实际长任务中是否真正稳定，重点关注 daemon 崩溃恢复和 sleep/wake 后的会话状态。"},
+    {"item": "DeepSeek V4 正式版 7/15 上线", "reason": "确认正式版模型能力、定价表、峰谷定价机制是否如约生效，以及高峰时段的实际延迟和可用性。"},
+    {"item": "Kimi K3 具体发布日期", "reason": "此前已确认 7 月发布，但具体日期未定，是国产大模型竞争的关键变量。"},
+    {"item": "Deep Code 社区反馈", "reason": "关注 GitHub issues、Hacker News、中文社区对 Deep Code + DeepSeek V4 实际编码能力的评测，特别是与 Claude Code 的对比。"},
+    {"item": "支付宝阿宝真实使用数据", "reason": "公测后用户反馈、72 项技能完成率、复杂多步指令的稳定性是判断'超级 App Agent 化'是否成立的关键。"},
+    {"item": "WAIC 2026 首发产品", "reason": "7/17-20 大会期间将密集的国产 AI 产品/模型/机器人发布，需从中筛选真正的新信息。"},
+    {"item": "Claude Code 中国检测代码移除验证", "reason": "Anthropic 此前承诺在 7/2 更新中移除，需确认最新版本二进制中是否已无相关检测逻辑。"}
+  ]
+}
