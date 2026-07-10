@@ -1,0 +1,163 @@
+{
+  "date": "2026-07-10",
+  "title": "2026-07-10 AI信息差日报",
+  "coverage": "覆盖窗口：7/8 ~ 7/10",
+  "sources": "信息源：OpenAI Newsroom / OpenAI GPT-5.6 官方页 / OpenAI GPT-Live 官方页 / Anthropic Newsroom / Claude Code Changelog / Product Hunt / Releasebot / OpenPencil Docs / Dokie AI / Open Design / GitHub",
+  "conclusions": [
+    "OpenAI 在 7月9日正式把 GPT-5.6 系列推向产品化：Sol/Terra/Luna 三档模型、ChatGPT Work、Microsoft 365 Copilot、Codex/桌面端一起更新，核心不只是新模型，而是工作流入口重组。",
+    "GPT-Live 是比 GPT-5.6 更适合普通用户感知的更新：全双工语音、边听边说、可后台委托 GPT-5.5/后续前沿模型处理复杂任务，语音交互开始从问答变成实时协作入口。",
+    "Claude Code v2.1.205 没有抢标题的新功能，但修的是生产级 Agent 的真实痛点：transcript 防篡改、后台 agent 状态、/doctor 检查、Windows junction 删除风险、MCP 名称保留和 JSON schema 可靠性。",
+    "Product Hunt 7月9日榜单显示 Agent 工具正在分层：一类做 Agent 构建栈，一类做 LLM 调用交易台，一类做 Vibe App 安全，一类把 Claude Code/Codex 接进设计和网站发布流程。",
+    "MCP 正在从开发者工具外溢到可交付物层：Dokie AI 把 Codex/Claude Code 的工作上下文转成 PPT，OpenPencil/Open Design 把设计稿和 artifact 变成 Agent 可读写的本地对象。"
+  ],
+  "summary": "7月10日的核心信息差是 OpenAI 把 GPT-5.6 从模型发布变成工作入口发布：ChatGPT Work、Microsoft 365 Copilot、Codex 桌面端和 GPT-Live 同时重构用户入口；与此同时 Claude Code v2.1.205 继续补生产级 Agent 的安全和可靠性短板，Product Hunt 与 MCP 生态显示 Agent 工具开始围绕交付物、设计、语音和安全分层。",
+  "body": "本日报覆盖 7/8-7/10，4 条 P0 + 5 条 P1 + 2 条 P2。事实更新集中在 OpenAI：GPT-5.6 Sol/Terra/Luna 三档模型公开，Sol 定价 $5/$30 per MTok，支持 Programmatic Tool Calling、multi-agent beta、max/ultra effort，并进入 ChatGPT、Codex、OpenAI API、ChatGPT Work；Microsoft 365 Copilot 将 GPT-5.6 作为 Word、Excel、PowerPoint、Chat、Cowork 的 preferred model；ChatGPT Work 将 Codex 能力扩展到跨应用、跨文件、可持续数小时的任务代理；GPT-Live 通过 full-duplex 架构改造 ChatGPT Voice。Anthropic 侧无新模型，但 Claude Code 2.1.205 继续修 Agent 可靠性和安全边界。生态侧，Product Hunt 的 Timbal AI、Auriko、Perfai Security、Framer AI Agents、Aura、Coasty 等表明 Agent 工具进入垂直工作表面。",
+  "judgement": "今天不是单点模型能力竞赛，而是入口竞争。OpenAI 正在把 GPT-5.6 变成 ChatGPT Work、Microsoft 365 Copilot、Codex 桌面端和语音入口的统一底座；这比单独发一个模型更重要。Anthropic 的信息差在相反方向：它没有发布大模型，而是继续修 Claude Code 在后台任务、PR 链接、Windows 安全删除、MCP 导入和 JSON schema 上的工程问题。对个人开发者来说，今天最该试的是 GPT-Live 和 Claude Code 2.1.205；对企业/内容团队来说，最该跟踪的是 ChatGPT Work 是否能真正替代部分汇报、分析和交付物制作流程。",
+  "tags": ["OpenAI", "GPT-5.6", "GPT-Live", "ChatGPT-Work", "Microsoft-365-Copilot", "Codex", "Claude-Code", "v2.1.205", "MCP", "Product-Hunt", "Framer-AI-Agents", "Agent-Workflow", "Voice-AI", "Vibe-Coding", "AI-Design"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "OpenAI GPT-5.6 系列正式发布：Sol/Terra/Luna 三档模型",
+      "summary": "OpenAI 7月9日发布 GPT-5.6 系列，包含旗舰 Sol、平衡型 Terra、低成本 Luna；Sol 输入/输出价格为 $5/$30 per MTok，支持 Programmatic Tool Calling、Responses API multi-agent beta、max/ultra effort，并逐步进入 ChatGPT、Codex、OpenAI API 和 ChatGPT Work。",
+      "why": "这不是单一模型升级，而是 OpenAI 把模型、工具调用、多 Agent 和产品入口打包成新的工作底座。Sol/Terra/Luna 的三档结构直接对标不同成本/质量场景，也让开发者能更细地做模型路由。",
+      "action_fact": "在 ChatGPT/Codex/API 中测试 Sol、Terra、Luna 的同一任务表现；API 侧优先验证 Programmatic Tool Calling 和 multi-agent beta；成本敏感任务先用 Luna/Terra，高价值代码或复杂分析再上 Sol/max/ultra。",
+      "action_judge": "建议把 GPT-5.6 当作一套工作流能力而不是单模型看待。对开发者最值得试的是 Programmatic Tool Calling，对内容/办公用户最值得试的是它在 slides、sheets、docs 中的格式遵循能力。",
+      "tags": ["New-Model", "OpenAI", "GPT-5.6", "API", "Multi-Agent", "Coding"],
+      "sources": ["https://openai.com/index/gpt-5-6/", "https://openai.com/news/product-releases/"]
+    },
+    {
+      "rank": "P0",
+      "title": "ChatGPT Work 发布：Codex 能力扩展到跨应用工作代理",
+      "summary": "OpenAI 7月9日发布 ChatGPT Work，定位为能跨 apps/files 执行任务、持续数小时、产出 sheets/slides/docs/sites 的工作代理；Codex app 合并进新版 ChatGPT desktop app，桌面端开始支持本地文件、内置浏览器、Computer Use、多仓库项目和 PR review 侧边栏。",
+      "why": "这是 OpenAI 从聊天产品转向工作代理入口的关键一步。ChatGPT Work 把 Codex 的长任务执行模型从程序员扩展到销售、财务、市场、运营等非代码工作。",
+      "action_fact": "Pro/Enterprise/Edu 可优先试用 Web/Mobile 版，Plus/Business 未来几天开放；下载新版 ChatGPT desktop，测试一个真实办公任务：月度预算差异分析、销售会议材料、市场活动 brief 或内部 dashboard。",
+      "action_judge": "如果它能稳定连接 Slack/Teams/Drive/SharePoint/CRM 并产出可交付材料，企业 AI 的竞争重点会从聊天窗口转向可审计的长任务代理。建议关注权限、审批和 Compliance API 是否足够可控。",
+      "tags": ["Agent-Workflow", "ChatGPT-Work", "Codex", "Desktop-Agent", "Enterprise-AI"],
+      "sources": ["https://openai.com/index/chatgpt-for-your-most-ambitious-work/", "https://openai.com/index/gpt-5-6/"]
+    },
+    {
+      "rank": "P0",
+      "title": "GPT-Live 全双工语音上线 ChatGPT Voice",
+      "summary": "OpenAI 7月8日发布 GPT-Live，采用 full-duplex 架构，可边听边说、自然插话、等待用户思考，并在复杂问题上后台委托 GPT-5.5/后续前沿模型处理；GPT-Live-1 面向 Go/Plus/Pro，GPT-Live-1 mini 面向 Free，API 即将开放。",
+      "why": "语音 AI 的关键不是更会念答案，而是能否像人一样实时协作。GPT-Live 把语音交互从 turn-based 问答推进到 continuous interaction，并为长任务语音 Agent 打基础。",
+      "action_fact": "在 ChatGPT iOS/Android/Web 中打开 Voice 测试：打断、停顿、让它保持安静、要求实时翻译、让它边聊天边搜索；开发者可登记 GPT-Live API 通知。",
+      "action_judge": "普通用户最容易感知的不是 GPT-5.6 benchmark，而是 GPT-Live 的自然度。适合立刻做一期语音实测视频：同一对话对比旧 Advanced Voice 和 GPT-Live。",
+      "tags": ["Voice-AI", "GPT-Live", "ChatGPT", "Full-Duplex", "Agent-Interaction"],
+      "sources": ["https://openai.com/index/introducing-gpt-live/", "https://www.producthunt.com/leaderboard/daily/2026/7/9"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.205：生产级 Agent 安全和可靠性补丁",
+      "summary": "Claude Code 2.1.205 新增 auto mode 阻止篡改 session transcript 的规则，修复 invalid JSON schema 静默输出非结构化结果、Windows worktree 内 NTFS junction/symlink 导致误删外部文件、后台 agent 状态显示、PR 链接、MCP 导入卡死，并把 /doctor 升级为完整 setup checkup。",
+      "why": "这些不是炫技功能，而是生产 Agent 真正会踩的坑：日志可信、结构化输出可信、Windows 文件删除边界可信、后台 agent 状态可信、MCP 导入可信。",
+      "action_fact": "立即升级 Claude Code 到 2.1.205；运行 /doctor 或 /checkup；如果在 Windows 使用 worktree、junction 或目录 symlink，优先验证删除操作；依赖 --json-schema 的自动化要重新跑一次结构化输出测试。",
+      "action_judge": "Claude Code 现在的价值不只是模型强，而是工程护栏持续变厚。对长期自动化任务来说，2.1.205 比上周 2.1.200-203 更值得作为稳定基线。",
+      "tags": ["Claude-Code", "Agent-Workflow", "Security", "Windows", "MCP", "JSON-Schema"],
+      "sources": ["https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md", "https://releasebot.io/updates/anthropic/claude-code"]
+    },
+    {
+      "rank": "P1",
+      "title": "GPT-5.6 成为 Microsoft 365 Copilot preferred model",
+      "summary": "OpenAI 7月9日宣布 GPT-5.6 将成为 Microsoft 365 Copilot 在 Word、Excel、PowerPoint、Chat、Cowork 中的新 preferred model，Microsoft 还会通过 OpenAI API 原生接入 GPT-5.6。",
+      "why": "这说明 GPT-5.6 的第一大分发场不是独立 ChatGPT，而是 Microsoft 365 的日常办公工作流。模型能力会直接进入文档、表格、PPT 和团队协作。",
+      "action_fact": "Microsoft 365 用户关注 Copilot 更新后在 Word/Excel/PowerPoint 的输出质量变化；重点测试长文档改写、复杂表格分析、从草稿生成 PPT 三个场景。",
+      "action_judge": "如果 GPT-5.6 在 Excel/PowerPoint 内稳定，办公 AI 的竞争会从“能不能回答”转向“能不能产出可直接发给老板/客户的文件”。",
+      "tags": ["Microsoft", "Copilot", "GPT-5.6", "Enterprise-AI", "Office"],
+      "sources": ["https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/", "https://openai.com/index/gpt-5-6/"]
+    },
+    {
+      "rank": "P1",
+      "title": "Framer AI Agents：把 Claude Code/Codex 接进网站设计发布流程",
+      "summary": "Product Hunt 7月9日显示 Framer AI Agents 发布，支持在 canvas 上用 Agents 设计、写作、分析和组织网站，并连接 Claude Code 或 Codex；同时推出 Branching 和 Framer Community。",
+      "why": "这是 AI 设计工具从“生成页面”走向“网站生产工作流”的信号。Framer 把 Agent 放在 canvas 里，等于把 coding agent 接到设计/发布工具的主路径。",
+      "action_fact": "Framer 用户可测试一个落地页：让 Agent 改文案、改结构、生成组件，再用 Branching 保留多个方案；开发者重点看 Claude Code/Codex 接入是否能读写实际项目上下文。",
+      "action_judge": "AI 设计工具下一阶段不是单纯 prompt 出图，而是把 Agent 接进已有编辑器。Framer、Open Design、OpenPencil 是同一趋势的不同路线。",
+      "tags": ["Design-Pattern", "Framer", "Claude-Code", "Codex", "AI-Design"],
+      "sources": ["https://www.producthunt.com/leaderboard/daily/2026/7/9"]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt Agent 工具分层：Timbal、Auriko、Perfai、Aura、Coasty",
+      "summary": "7月9日 Product Hunt 前列出现多类 Agent 工具：Timbal AI 做 agents/workflows/apps 一体栈，Auriko 做 LLM calls 交易台，Perfai Security 用 1-prompt 查修 Vibe Apps 漏洞，Aura 用 Git+Intent 控制 coding agents，Coasty 让 Computer-Use-Agent 操作 legacy software。",
+      "why": "这不是单个爆款，而是生态分工出现：构建栈、调用路由/成本、安全、代码代理编排、电脑使用代理，各自开始形成产品。",
+      "action_fact": "按需求选试：要搭 Agent 工作流看 Timbal，要管理模型调用看 Auriko，要查 vibe coded app 安全看 Perfai，要控制 coding agents 看 Aura，要跑旧软件自动化看 Coasty。",
+      "action_judge": "Agent 工具已经过了“万能助手”叙事，开始按工作流节点卖能力。视频号可做一期“今天 Product Hunt 上 5 类 Agent 产品说明了什么”。",
+      "tags": ["Tool", "Product-Hunt", "Agent-Stack", "Vibe-Coding", "Security"],
+      "sources": ["https://www.producthunt.com/leaderboard/daily/2026/7/9"]
+    },
+    {
+      "rank": "P1",
+      "title": "Dokie AI 支持 MCP：从 Codex/Claude Code 直接生成商务 PPT",
+      "summary": "Dokie AI 7月8日宣布支持 MCP，用户可从 Codex 和 Claude Code 工作流中调用 Dokie，把研究、计划、开发上下文和项目资料转成结构化 presentation drafts。",
+      "why": "MCP 的价值正在从“让 Agent 调工具”扩展到“把 Agent 工作上下文转成可交付物”。PPT 是咨询、项目汇报、销售和管理场景的刚需出口。",
+      "action_fact": "如果使用 Codex/Claude Code 做研究或方案，可测试把当前项目上下文交给 Dokie 生成汇报 deck；重点检查结构、图表、引用和 PPTX 导出质量。",
+      "action_judge": "这类工具适合做企业工作流闭环：研究/开发在 Agent 里完成，汇报材料直接生成。真正差异点会在模板、视觉质量和事实保真。",
+      "tags": ["MCP", "PPT", "Dokie-AI", "Claude-Code", "Codex", "Workflow"],
+      "sources": ["https://www.einpresswire.com/article/925127608/dokie-ai-announces-mcp-support-enabling-presentation-generation-from-codex-and-claude-code", "https://dokie.ai/"]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenPencil MCP：设计文件开始成为 Agent 可读写对象",
+      "summary": "OpenPencil 文档显示其 MCP server 可让 Claude Code、Cursor、Windsurf 等 AI coding tools 通过 running app 读取和修改设计，支持 stdio 和 HTTP 两种 transport，并提供 open_file、get_page_tree、create_shape、render、save_file 等设计操作。",
+      "why": "这说明 MCP 正在深入设计软件内部，而不是只做 API 包装。Agent 能直接读写设计树、创建形状、保存文件，设计稿会变成类似代码仓库的可操作对象。",
+      "action_fact": "安装 @open-pencil/mcp，打开 OpenPencil desktop app 和设计文档，用 Claude Code/Cursor 连接 MCP 后尝试读取 page tree、创建 hero section、保存 .fig 文件。",
+      "action_judge": "OpenPencil 更偏底层设计文件控制，Open Design 更偏完整 artifact 工作台。两者都值得跟踪，因为它们会决定 Agent-native design 是否能真正替代 Figma 插件式自动化。",
+      "tags": ["MCP", "OpenPencil", "Design-Tool", "Claude-Code", "Agent-Native-Design"],
+      "sources": ["https://openpencil.dev/programmable/mcp-server", "https://github.com/open-pencil/open-pencil"]
+    },
+    {
+      "rank": "P2",
+      "title": "Anthropic 7月9日转向治理与透明度叙事",
+      "summary": "Anthropic 7月9日发布多条非模型更新：邀请公众提出 AI hardest questions、推出 Claude usage reflection、任命 Ben Bernanke 加入 Long-Term Benefit Trust，并发布 UST 使用 Claude 做 physical AI 的案例。",
+      "why": "Anthropic 今天没有大模型发布，但在品牌层面强化“透明度、长期治理、企业案例”。这与 OpenAI 同日强产品发布形成对照。",
+      "action_fact": "关注 Claude usage reflection 是否能帮助用户审计自己的使用模式；企业侧可阅读 UST physical AI 案例看 Claude 在工业/物理 AI 中的定位。",
+      "action_judge": "这类更新短期不如 GPT-5.6 有操作价值，但能看出 Anthropic 在 Sonnet/Fable 后把叙事转回安全、治理和企业可信度。",
+      "tags": ["Anthropic", "Governance", "Claude", "Physical-AI", "Transparency"],
+      "sources": ["https://www.anthropic.com/news", "https://www.anthropic.com/news/hard-questions", "https://www.anthropic.com/news/reflect-with-claude", "https://www.anthropic.com/news/ust-claude"]
+    },
+    {
+      "rank": "P2",
+      "title": "Open Design 中文站与 GitHub 信息继续更新，但今日不是新发布",
+      "summary": "Open Design 中文站继续强调本地优先、Apache-2.0、BYOK、21+ coding agents、设计系统和 artifact 文件化；GitHub/站点展示的 stars、skills/design systems 数字存在页面间差异。",
+      "why": "Open Design 仍是 Agent-native design 的重要观察对象，但今天搜索结果主要是既有定位与站点内容，不应包装成新发布。",
+      "action_fact": "如果要实操，优先从官方 GitHub 和 open-design.ai 进入，验证本地 daemon、DESIGN.md、Skill、HTML/PDF/PPTX/MP4 导出链路。",
+      "action_judge": "Open Design 适合继续跟踪，但日报中只作为设计 Agent 趋势佐证，不抢 GPT-5.6/GPT-Live/Claude Code 的主线位置。",
+      "tags": ["Open-Design", "AI-Design", "Local-First", "BYOK", "Noise-Adjusted"],
+      "sources": ["https://open-design.ai/zh", "https://github.com/nexu-io/open-design"]
+    }
+  ],
+  "tools": [
+    {"name":"GPT-5.6 Sol/Terra/Luna","type":"模型/API","highlight":"Sol 旗舰、Terra 平衡、Luna 低成本；支持 Programmatic Tool Calling、multi-agent beta、max/ultra effort","audience":"开发者、自动化工程师、内容/办公重度用户","action":"用同一任务对比 Sol/Terra/Luna；API 侧测试 Programmatic Tool Calling；成本敏感任务用 Luna/Terra，复杂交付上 Sol","url":"https://openai.com/index/gpt-5-6/"},
+    {"name":"ChatGPT Work","type":"工作代理","highlight":"跨 apps/files 长任务执行，可产出 sheets/slides/docs/sites，Codex 桌面端并入 ChatGPT desktop","audience":"企业用户、运营/销售/财务/市场团队、非代码自动化用户","action":"下载新版 ChatGPT desktop；选一个真实工作流测试，如月度预算差异分析或销售会议材料生成","url":"https://openai.com/index/chatgpt-for-your-most-ambitious-work/"},
+    {"name":"GPT-Live","type":"全双工语音模型","highlight":"边听边说、自然插话、后台委托前沿模型、ChatGPT Voice 默认升级","audience":"普通用户、语言学习者、语音 Agent 开发者、内容创作者","action":"打开 ChatGPT Voice 测试打断、停顿、实时翻译、边聊天边搜索；关注 API 开放通知","url":"https://openai.com/index/introducing-gpt-live/"},
+    {"name":"Claude Code v2.1.205","type":"AI 编程 Agent","highlight":"transcript 防篡改、/doctor 检查、Windows worktree 安全、MCP 导入容错、JSON schema 修复、后台 agent 状态改进","audience":"Claude Code 用户、需要长任务自动化的开发者、Windows 用户","action":"升级到 2.1.205；运行 /doctor；重跑依赖 --json-schema 的自动化；检查 Windows worktree/symlink 场景","url":"https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md"},
+    {"name":"Framer AI Agents","type":"AI 网站设计/发布工具","highlight":"在 canvas 上用 Agent 设计、写作、分析、组织网站，并连接 Claude Code/Codex；支持 Branching","audience":"设计师、独立开发者、低代码网站团队","action":"在 Framer 中让 Agent 生成/改造一个 landing page；用 Branching 保留方案；测试 Claude Code/Codex 接入","url":"https://www.producthunt.com/leaderboard/daily/2026/7/9"},
+    {"name":"Dokie AI MCP","type":"AI PPT 生成/MCP 工具","highlight":"从 Codex/Claude Code 工作上下文直接生成 business-ready slides","audience":"咨询、项目经理、销售、技术汇报场景用户","action":"把一份研究/项目上下文交给 Dokie 生成汇报 deck，检查结构、引用、图表和 PPTX 导出质量","url":"https://www.einpresswire.com/article/925127608/dokie-ai-announces-mcp-support-enabling-presentation-generation-from-codex-and-claude-code"},
+    {"name":"OpenPencil MCP","type":"设计文件 MCP Server","highlight":"让 Claude Code/Cursor/Windsurf 读取和修改设计树，支持 stdio/HTTP transport","audience":"前端工程师、设计工程师、Agent-native design 研究者","action":"安装 @open-pencil/mcp，打开桌面端，尝试读取 page tree、创建 shape、render JSX、保存 .fig","url":"https://openpencil.dev/programmable/mcp-server"}
+  ],
+  "video_topics": [
+    {"title":"GPT-5.6 不只是新模型：OpenAI 正在重做办公入口","hook":"同一天更新模型、ChatGPT Work、Microsoft 365 Copilot、Codex 桌面端","angle":"用一张图讲清 GPT-5.6 Sol/Terra/Luna、ChatGPT Work、Microsoft 365 Copilot、Codex 的关系，再实测生成 PPT/Excel/代码任务。","materials":"OpenAI GPT-5.6 页面截图 / ChatGPT Work 页面 / Microsoft 365 Copilot 页面 / 同一任务三模型对比录屏","difficulty":"中"},
+    {"title":"GPT-Live 实测：ChatGPT 终于能像真人一样边听边说？","hook":"全双工语音 + 可打断 + 后台搜索推理","angle":"对比旧 Advanced Voice 和 GPT-Live：打断、停顿、背景噪音、实时翻译、边说边搜索五个场景。","materials":"手机录屏 / 对话脚本 / 旧版与新版响应延迟对比 / 语音卡片展示","difficulty":"低"},
+    {"title":"Claude Code 2.1.205 为什么重要：它修的是 Agent 真正会翻车的地方","hook":"不是新功能，是生产环境保命补丁","angle":"用 Windows junction 误删、JSON schema 静默失败、transcript 防篡改、后台 agent 状态这四个例子解释为什么工程护栏比炫技功能更重要。","materials":"Claude Code changelog 截图 / /doctor 运行录屏 / JSON schema 测试 / Windows 文件结构示意","difficulty":"中"},
+    {"title":"Product Hunt 一天冒出 5 类 Agent 工具，说明 AI 创业变了","hook":"Agent 构建栈、LLM 交易台、Vibe App 安全、Coding Agent IDE、Computer Use Agent 同日上榜","angle":"用 Timbal、Auriko、Perfai、Aura、Coasty 拆解 Agent 工具生态如何从万能助手分化成具体工作流节点。","materials":"Product Hunt 榜单截图 / 五类工具对比表 / 每类一个使用场景 / 适合谁用","difficulty":"低"},
+    {"title":"MCP 不只连数据库：它开始生成 PPT、改设计稿了","hook":"Dokie AI + OpenPencil + Open Design 代表 MCP 外溢到交付物层","angle":"演示/讲解 Agent 如何从研究上下文生成 PPT、读取设计树、修改 artifact，说明 MCP 的下一阶段是可交付物自动化。","materials":"Dokie 新闻稿 / OpenPencil MCP 文档 / Open Design 页面 / 工作流流程图","difficulty":"中"}
+  ],
+  "noise_items": [
+    {"item":"LLM Stats / AI News Loading 页面","reason":"页面只返回 loading/订阅/验证码类内容，没有可核验的新模型信息，不能作为日报来源。"},
+    {"item":"AI Release Tracker 的 Muse Spark 1.1 by Meta","reason":"只有聚合器单源条目，未在 Meta 官方博客/新闻源中交叉验证，重大模型发布不能只凭 tracker 采信。"},
+    {"item":"AI Product Hunter 页面","reason":"该站明确已于 2025-03-31 停止更新，结果过期且混杂低质量产品，不纳入 2026 日报。"},
+    {"item":"Claude Fast/第三方 Claude Code changelog 汇总","reason":"页面自称只覆盖到 2026 年 5 月附近，不如 Anthropic GitHub Changelog/Releasebot 可靠。"},
+    {"item":"51CTO 企业 AI Agent 部署教程","reason":"偏泛化教程，未显示 48 小时内新事实；可作为背景学习，不作为今日信息差。"},
+    {"item":"Open Design 星标/Skill 数字页面间差异","reason":"GitHub 页面、中文站、fan-site 展示数值不一致，需以官方 GitHub 实时数据为准；今日不把数字本身包装成新闻。"},
+    {"item":"Product Hunt 中非 AI/非工具条目","reason":"如钱包、任务管理、SEO WhatsApp 等与 AI 趋势弱相关，保留为产品生态背景，不进入高优先级。"}
+  ],
+  "tracking_items": [
+    {"item":"GPT-5.6 实际 API 可用性与成本","reason":"需要验证 Sol/Terra/Luna 在真实代码、表格、PPT、长上下文任务中的质量差距，以及 Programmatic Tool Calling 是否降低 token 和往返。"},
+    {"item":"ChatGPT Work 插件权限与企业治理","reason":"跨 Slack/Teams/Drive/SharePoint/CRM 的工作代理必须验证权限、审批、审计和 Compliance API，否则企业落地风险很高。"},
+    {"item":"GPT-Live API 开放时间","reason":"语音 Agent 开发者最关心 API，当前只说 soon，需要跟踪 API 定价、延迟、并发和可用地区。"},
+    {"item":"Claude Code v2.1.205 之后是否还有 Windows/worktree 修复","reason":"Windows junction/symlink 删除风险属于高严重度工程问题，需观察后续版本是否继续补丁或给迁移建议。"},
+    {"item":"Framer AI Agents 与 Open Design/OpenPencil 的路线差异","reason":"一条是商业 SaaS canvas 内 Agent，一条是本地开源 artifact/design tree 控制，可能决定 AI 设计工具未来形态。"},
+    {"item":"Dokie AI MCP 的实际 PPT 质量","reason":"新闻稿价值明确，但需实测模板、图表、引用保真和 PPTX 导出质量，避免沦为营销发布。"},
+    {"item":"WAIC 2026 7/17-20 首发产品","reason":"下周中国 AI 产品/模型/具身智能发布密度会很高，需要从实际首发中筛选 P0。"}
+  ]
+}
