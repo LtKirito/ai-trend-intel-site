@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 76047,
-    "forks": 8673,
-    "open_issues": 541,
+    "stars": 76885,
+    "forks": 8775,
+    "open_issues": 527,
     "latest_release": {
       "version": "open-design-v0.14.0",
       "date": "2026-07-08",
@@ -12,197 +12,267 @@
   },
   "recent_prs": [
     {
-      "number": 5138,
-      "title": "refactor(daemon): capability-barrel the project domain",
+      "number": 5407,
+      "title": "Use model metadata in picker badges",
       "state": "open",
-      "author": "leonaburime-ucla",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "needs-validation"],
-      "impact": "daemon 项目域 capability-barrel 架构重构，延续 daemon 模块化治理线（platform/download/sidecar/sidecar-proto/host 逐步拆分），与 #5165 leaf package 重构提案形成前后端同步。",
-      "url": "https://github.com/nexu-io/open-design/pull/5138"
-    },
-    {
-      "number": 5284,
-      "title": "Team collaboration (6/6): web — team workspace surfaces",
-      "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/XXL", "risk/medium", "type/feature"],
-      "impact": "团队协作系列终章——团队工作空间界面：团队资源合集（设计系统/插件/技能 share-to-team）、工作区切换器、社区模板画廊、导航侧栏、云端登录入口，v0.15.0 旗舰候选。",
-      "url": "https://github.com/nexu-io/open-design/pull/5284"
-    },
-    {
-      "number": 5283,
-      "title": "Team collaboration (5/6): web — in-project collaboration",
-      "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/XL", "risk/medium", "type/feature"],
-      "impact": "项目内实时协作客户端——在线状态心跳、同步状态轮询、评论漂移锚点解析与回写、项目视图协作连线，是团队功能前端核心交互层。",
-      "url": "https://github.com/nexu-io/open-design/pull/5283"
-    },
-    {
-      "number": 5281,
-      "title": "Team collaboration (3/6): daemon — resource sharing + copy-guard",
-      "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/XL", "risk/high", "type/feature"],
-      "impact": "daemon 层资源分享引擎——按种类参数化的 share 服务与路由、插件复制/技能编辑的 copy 红线守卫、协作/项目同步状态 PI-RPC 端点，是团队功能的 daemon 基础设施。",
-      "url": "https://github.com/nexu-io/open-design/pull/5281"
-    },
-    {
-      "number": 5277,
-      "title": "Team collaboration (1/6): contract DTOs",
-      "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/M", "risk/medium", "type/feature"],
-      "impact": "团队协作基础合约层——在线状态+同步协作 DTO、项目同步状态与事件、团队资源状态与 copy 红线守卫类型、评论锚点状态、团队身份 DTO，daemon/web/CLI 三端共享类型定义。",
-      "url": "https://github.com/nexu-io/open-design/pull/5277"
-    },
-    {
-      "number": 4041,
-      "title": "feat: add multi-agent team collaboration module (review fixes applied)",
-      "state": "open",
-      "author": "pixcore598-design",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-product-review"],
-      "impact": "多 Agent 团队协作模块——设计师/写手/开发者/审查者多角色协同，长期 open 近一个月，社区高关注，与 lefarcen 6-part 系列形成团队功能双线推进。",
-      "url": "https://github.com/nexu-io/open-design/pull/4041"
-    },
-    {
-      "number": 5276,
-      "title": "Add Aimeter Design System plugin",
-      "state": "open",
-      "author": "fatherplus",
+      "author": "mrcfps",
       "labels": [],
-      "impact": "社区贡献 Aimeter 设计系统插件（v0.1.0, AI优化版），设计系统插件生态继续扩展，来源 https://aimeter.xk-devops.com/。",
-      "url": "https://github.com/nexu-io/open-design/pull/5276"
+      "impact": "模型选择器开始使用模型元数据展示 badge，说明 BYOK/多模型体验正在从可用性修复转向可理解性与选择效率优化。",
+      "url": "https://github.com/nexu-io/open-design/pull/5407"
     },
     {
-      "number": 5282,
-      "title": "Team collaboration (4/6): web i18n keys",
+      "number": 3301,
+      "title": "feat(web): add display.dev deploy option",
+      "state": "open",
+      "author": "carlrannaberg",
+      "labels": [
+        "size/XXL",
+        "risk/high",
+        "type/feature",
+        "needs-validation",
+        "needs-design-review"
+      ],
+      "impact": "HTML 预览新增 display.dev 一键部署选项，继续扩展 Share/Deploy 出口，降低原型公开分享门槛。",
+      "url": "https://github.com/nexu-io/open-design/pull/3301"
+    },
+    {
+      "number": 5344,
+      "title": "fix byok-opencode: route non-OpenAI openai-protocol hosts to @ai-sdk/openai-compatible",
+      "state": "merged",
+      "author": "JackChen-me",
+      "labels": [
+        "size/S",
+        "risk/high",
+        "type/bugfix",
+        "validated"
+      ],
+      "impact": "BYOK OpenCode 路由兼容性修复已合入，非 OpenAI 的 OpenAI-protocol 主机将走 openai-compatible 适配器，直接缓解自定义模型端点失败。",
+      "url": "https://github.com/nexu-io/open-design/pull/5344"
+    },
+    {
+      "number": 5395,
+      "title": "Team collaboration: read-only shared projects, cross-daemon comment + file sync, demo-aligned UI",
       "state": "open",
       "author": "lefarcen",
-      "labels": ["size/M", "risk/low", "type/feature"],
-      "impact": "团队协作国际化翻译键——share-to-team、只读通知、工作区切换器、云端登录提示等 UI 文案的类型字典与 11 语言地区覆盖，团队功能日用体验基础。",
-      "url": "https://github.com/nexu-io/open-design/pull/5282"
+      "labels": [
+        "size/XXL",
+        "risk/high",
+        "type/feature"
+      ],
+      "impact": "团队协作 PR 升级为只读共享项目、跨 daemon 评论与文件同步、demo 对齐 UI，是 v0.15.0 协作旗舰功能的核心集成点。",
+      "url": "https://github.com/nexu-io/open-design/pull/5395"
+    },
+    {
+      "number": 5341,
+      "title": "fix(daemon): reset turnCompletedCleanly on same-run retry teardown",
+      "state": "merged",
+      "author": "tomsen02",
+      "labels": [
+        "size/M",
+        "risk/high",
+        "type/bugfix",
+        "validated"
+      ],
+      "impact": "daemon 同一 run 重试清理时重置 turnCompletedCleanly，修复重试后状态残留导致的完成态误判，属于运行生命周期稳定性修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5341"
+    },
+    {
+      "number": 5306,
+      "title": "fix(daemon): backfill Windows CLI cache env",
+      "state": "merged",
+      "author": "YOMXXX",
+      "labels": [
+        "size/M",
+        "risk/high",
+        "type/bugfix",
+        "validated"
+      ],
+      "impact": "Windows CLI cache 环境变量回填已合入，继续修复 Windows 上 agent/CLI 启动与缓存路径传递的系统性问题。",
+      "url": "https://github.com/nexu-io/open-design/pull/5306"
+    },
+    {
+      "number": 5343,
+      "title": "Add updater release notes recovery flow",
+      "state": "open",
+      "author": "PerishCode",
+      "labels": [
+        "size/XXL",
+        "risk/high",
+        "type/enhancement",
+        "needs-validation"
+      ],
+      "impact": "更新器新增 release notes 恢复流程，目标是在更新说明拉取失败或缺失时保留用户可理解的恢复路径，降低发布体验断裂。",
+      "url": "https://github.com/nexu-io/open-design/pull/5343"
+    },
+    {
+      "number": 5321,
+      "title": "feat(chat): surface daemon failure_detail to sharpen run-error guidance",
+      "state": "merged",
+      "author": "open-design-crew[bot]",
+      "labels": [],
+      "impact": "daemon 的 failure_detail 已透传到聊天错误卡片，运行失败提示从原始错误向结构化、可行动指引推进。",
+      "url": "https://github.com/nexu-io/open-design/pull/5321"
     }
   ],
   "recent_issues": [
     {
-      "number": 5162,
-      "title": "[Bug]: memory-llm hardcoded to gpt-4o-mini, breaks silently for non-OpenAI BYOK providers",
-      "author": "wellfitness",
-      "labels": ["bug"],
-      "comments": 13,
-      "summary": "memory-llm 子系统硬编码 gpt-4o-mini，使用非 OpenAI BYOK 提供商（MiniMax/OpenRouter/Groq/Ollama 等）时每次跨轮记忆调用静默失败 400，Agent 无记忆运行且无 UI 错误提示，仅 daemon 日志可见。13 评论高热，是当前最高优先级 BYOK 体验 bug。",
-      "url": "https://github.com/nexu-io/open-design/issues/5162"
-    },
-    {
-      "number": 5165,
-      "title": "Refactor: split large single-file index.ts barrels in leaf packages (platform/download/sidecar/sidecar-proto/host) — export-surface-stable",
-      "author": "leonaburime-ucla",
-      "labels": ["question"],
-      "comments": 17,
-      "summary": "leaf packages（platform ~1111行/download ~1051行/sidecar-proto ~933行/sidecar ~800行）单文件 index.ts 分解提案——保持导出表面完全不变的纯文件拆分重构，platform 作为试点 PR，17 评论高关注。",
-      "url": "https://github.com/nexu-io/open-design/issues/5165"
-    },
-    {
-      "number": 5274,
-      "title": "[Bug]: Open Design fails to start Trae CLI on Windows although Trae CLI works standalone",
-      "author": "learnxin",
-      "labels": ["bug", "help wanted"],
-      "comments": 9,
-      "summary": "Windows 上 Trae CLI 独立终端正常运行，但 Open Design 启动时报 'failed to get cache directory'，疑似未正确传递 APPDATA/LOCALAPPDATA/USERPROFILE 等 Windows 环境变量，9 评论。",
-      "url": "https://github.com/nexu-io/open-design/issues/5274"
-    },
-    {
-      "number": 3458,
-      "title": "Feature request: allow specifying a custom project working directory (instead of hardcoded .od/projects/<id>/)",
-      "author": "kuangdongksk",
-      "labels": ["enhancement", "needs-product-direction", "stale"],
-      "comments": 10,
-      "summary": "自定义项目工作目录功能请求——当前硬编码 .od/projects/<id>/ 导致生成文件需手动复制到实际项目路径，10 评论，stale 但用户需求强烈，与 team collaboration 工作区切换方向重合。",
-      "url": "https://github.com/nexu-io/open-design/issues/3458"
-    },
-    {
-      "number": 3101,
-      "title": "Feature: Automate container image publishing to GHCR for releases and 'main' merges",
-      "author": "shaarron",
-      "labels": ["enhancement", "needs-product-direction", "stale"],
-      "comments": 9,
-      "summary": "GHCR 容器镜像自动化发布提案——每次 main 合并构建 edge 标签、每次 release 构建版本标签，替代手动 Docker Hub 脚本，9 评论，企业自托管部署关键基建需求。",
-      "url": "https://github.com/nexu-io/open-design/issues/3101"
-    },
-    {
-      "number": 5208,
-      "title": "[Bug]: After making the PPT, when exporting to PDF or PPT, only the first page has content, and the rest are blank.",
-      "author": "dengqikuang",
-      "labels": ["bug"],
-      "comments": 7,
-      "summary": "PPT 生成后导出 PDF/PPT 仅首页有内容、其余页空白——v0.13.0 核心导出功能受损，macOS Apple Silicon 触发，7 评论，直接影响 PPT/PDF 导出交付质量。",
-      "url": "https://github.com/nexu-io/open-design/issues/5208"
-    },
-    {
-      "number": 5079,
-      "title": "[Bug]: Kiro CLI missing from the Settings → 'MCP server' client dropdown",
-      "author": "gmarchand",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 9,
-      "summary": "Kiro CLI 在 Settings→MCP server 客户端下拉中缺失——运行时和 i18n 均已支持 Kiro，但 UI 下拉列表未包含，影响 Kiro 用户接入 MCP server 的一键配置体验，good first issue。",
-      "url": "https://github.com/nexu-io/open-design/issues/5079"
-    },
-    {
-      "number": 5244,
-      "title": "Show Open Design login entry in project details agent menu",
+      "number": 5352,
+      "title": "Auto-open generated HTML files after Plan mode completion",
       "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted", "ux"],
-      "comments": 4,
-      "summary": "项目详情页 agent 菜单缺少 Open Design 登录入口——Home 页有此入口但项目详情页没有，未登录用户在该页面形成死胡同，UX 一致性问题，4 评论。",
-      "url": "https://github.com/nexu-io/open-design/issues/5244"
+      "labels": [
+        "bug",
+        "good first issue",
+        "help wanted",
+        "ux"
+      ],
+      "comments": 5,
+      "summary": "Plan mode 生成 HTML 后不会自动打开文件，打断设计生成后的查看闭环，是高频 UX 摩擦点。",
+      "url": "https://github.com/nexu-io/open-design/issues/5352"
     },
     {
-      "number": 4804,
-      "title": "[Bug]: 绑定traecli内置模型失败",
-      "author": "YangrDong",
-      "labels": ["bug"],
+      "number": 5370,
+      "title": "Show the full prompt text in the composer input",
+      "author": "open-design-crew[bot]",
+      "labels": [
+        "bug",
+        "good first issue",
+        "ux"
+      ],
       "comments": 3,
-      "summary": "中文用户反馈：Windows 上 Trae CLI 绑定失败，报 'failed to get cache directory'，v0.11.0 起持续存在，与 #5274 同根——Windows 环境变量传递问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/4804"
+      "summary": "Composer 输入框无法完整展示长 prompt，影响用户确认和编辑复杂设计需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/5370"
     },
     {
-      "number": 5229,
-      "title": "[Bug]: Claude code and Codex not launching",
-      "author": "kaustabhws",
-      "labels": ["bug"],
-      "comments": 30,
-      "summary": "Windows v0.13.0 上 Claude Code (v2.1.201) 和 Codex CLI (v0.80.0) 均不启动——本地 CLI 已安装但 Open Design 无法识别/启动，30 评论高热，直接影响 v0.13.0 Windows 用户获取和续用。",
-      "url": "https://github.com/nexu-io/open-design/issues/5229"
+      "number": 5319,
+      "title": "Bug: internally generated html-preview.png captures viewer shell instead of slide canvas",
+      "author": "orangecatcat",
+      "labels": [
+        "bug"
+      ],
+      "comments": 6,
+      "summary": "html-preview.png 可能捕获预览器外壳而非 16:9 画布，导致 Mark/Draw 坐标与 agent 视觉上下文错位。",
+      "url": "https://github.com/nexu-io/open-design/issues/5319"
+    },
+    {
+      "number": 5172,
+      "title": "[Bug]: Switching tabs aborts active AI streaming output in the previous tab",
+      "author": "KuitoInoguchi",
+      "labels": [
+        "bug"
+      ],
+      "comments": 15,
+      "summary": "切换 tab 会中止上一 tab 的 AI 流式输出，说明生成流仍与前端组件生命周期耦合过深。",
+      "url": "https://github.com/nexu-io/open-design/issues/5172"
+    },
+    {
+      "number": 3870,
+      "title": "Mark mode comment capture can show an unexplained popup",
+      "author": "kokisanai",
+      "labels": [
+        "bug",
+        "priority:p2",
+        "stale"
+      ],
+      "comments": 2,
+      "summary": "Mark mode 评论捕获会出现无法解释的弹窗，虽为 stale/P2，但与当前 html-preview 截图和标注上下文问题形成同一类交互可信度风险。",
+      "url": "https://github.com/nexu-io/open-design/issues/3870"
+    },
+    {
+      "number": 3850,
+      "title": "[Bug]: Tweaks Panel re-targets on mouse move — cannot interact with input fields",
+      "author": "chanxiusun",
+      "labels": [
+        "bug",
+        "priority:p1",
+        "stale"
+      ],
+      "comments": 3,
+      "summary": "Inspect/Tweaks 面板在鼠标移动时重新定位目标，导致输入框无法交互，是编辑微调链路上的 P1 级历史痛点。",
+      "url": "https://github.com/nexu-io/open-design/issues/3850"
+    },
+    {
+      "number": 3664,
+      "title": "Image export capture fails in Export as image dialog",
+      "author": "yinjialu",
+      "labels": [
+        "bug",
+        "priority:p1",
+        "stale"
+      ],
+      "comments": 6,
+      "summary": "Export as image 对话框图片捕获失败，和 #5319 一起说明 capture/export 管线仍是设计产物交付的薄弱点。",
+      "url": "https://github.com/nexu-io/open-design/issues/3664"
+    },
+    {
+      "number": 3366,
+      "title": "Skill chip never mounts after @-mention pick — meta.skillIds always empty",
+      "author": "estelledc",
+      "labels": [
+        "bug",
+        "priority:p1",
+        "stale"
+      ],
+      "comments": 2,
+      "summary": "@-mention 选择 Skill 后不会挂载 chip，meta.skillIds 仍为空，影响工具化工作流的 per-turn 调用可靠性。",
+      "url": "https://github.com/nexu-io/open-design/issues/3366"
+    },
+    {
+      "number": 3335,
+      "title": "[0.8.0] sayyada",
+      "author": "ololu",
+      "labels": [
+        "bug",
+        "priority:p2",
+        "preview/v0.8.0",
+        "stale"
+      ],
+      "comments": 3,
+      "summary": "v0.8.0 预览期遗留插件/全应用问题再次被更新，信号价值较低，但显示 stale backlog 仍会污染最新问题列表。",
+      "url": "https://github.com/nexu-io/open-design/issues/3335"
+    },
+    {
+      "number": 3146,
+      "title": "Daemon-spawned claude runs complete the API call but never exit; 600s watchdog kills them",
+      "author": "dambailey-ai",
+      "labels": [
+        "bug",
+        "priority:p0",
+        "stale"
+      ],
+      "comments": 5,
+      "summary": "daemon 拉起的 Claude 子进程完成 API 调用后不退出，最终被 600s watchdog 杀死，是 P0 级运行生命周期风险。",
+      "url": "https://github.com/nexu-io/open-design/issues/3146"
     }
   ],
   "trends": {
-    "direction": "v0.14.0「Inspiration Time Machine」今日正式发布（125 PRs / 36 contributors / 5天），核心交付 Plan模式+Excalidraw草图、HTML版本历史与恢复、设计系统SDK素材化、云端模型成本透明化、BYOK扩展、运行稳定性提升。同日，Team Collaboration 6-part 系列（#5277 + #5281-#5284）密集提交，覆盖合约DTO/daemon资源分享+copy-guard/web i18n/项目内实时协作/团队工作空间界面，是v0.15.0团队功能旗舰候选的基础设施铺路。",
+    "direction": "v0.14.0 发布后两天，主线从大版本功能交付转入稳定性与体验闭环：BYOK/OpenCode 路由修复已合入，daemon 重试状态、Windows CLI cache、failure_detail 错误提示等运行可靠性修复连续合入。与此同时，团队协作 #5395 继续放大，说明 v0.15.0 的协作能力仍是下一阶段旗舰方向。",
     "affected_modules": [
-      "Plan模式 + Excalidraw草图流程（v0.14.0 全新核心功能）",
-      "HTML文件版本历史与迭代恢复",
-      "Team Collaboration全套（contract DTOs / daemon资源分享+copy-guard / web i18n / 项目内协作 / 团队工作空间）",
-      "daemon capability-barrel项目域重构（#5138 XXL）",
-      "leaf packages单文件index.ts分解（#5165 提案，platform/download/sidecar/sidecar-proto/host）",
-      "BYOK生态（memory-llm硬编码gpt-4o-mini修复 / BYOK提供商通过OpenCode路由）",
-      "设计系统插件（Glass Design System UI Kit / Design System Source Context / Aimeter社区插件）",
-      "云端模型成本分级与透明化",
-      "CLI适配器（Trae CLI Windows启动失败 / Kiro CLI MCP下拉缺失 / Claude Code+Codex Windows不启动）",
-      "PPT/PDF导出功能（#5208仅首页有内容）"
+      "模型选择器与 BYOK/OpenAI-compatible 路由",
+      "HTML 预览、截图与自动打开链路",
+      "Plan mode 产物查看闭环",
+      "Composer 输入框与长 prompt 展示",
+      "团队协作：共享项目、跨 daemon 评论与文件同步",
+      "daemon 重试状态、failure_detail 与运行生命周期",
+      "Windows CLI cache 环境变量",
+      "AI streaming 生命周期与 tab 切换",
+      "Mark/Inspect/Tweaks 交互",
+      "图片导出与 capture 管线",
+      "Skill chip 与 per-turn metadata"
     ],
     "risks": [
-      "v0.14.0 大版本今日刚发布，open_issues 541（+20 vs 07-06 521），发布后 issue influx 期正式开启，稳定性窗口判断关键",
-      "Team Collaboration 6-part 系列同日4条PR密集提交（#5281-#5284），XXL/XL规模累积 review 负担极大，可能阻塞合入节奏",
-      "memory-llm 硬编码 gpt-4o-mini（#5162，13评论）影响所有非 OpenAI BYOK 用户，静默失败无 UI 警告，是当前最高优先级 BYOK 体验缺陷",
-      "Claude Code + Codex CLI 在 Windows v0.13.0 不启动（#5229，30评论高热），直接影响新用户获取和存量用户续用",
-      "PPT/PDF 导出仅首页有内容（#5208），v0.13.0 交付的核心导出功能已受损，影响生产级使用场景"
+      "open_issues 回升至 527，较上一轮缓存 504 反弹，说明 v0.14.0 后问题流入仍未完全收敛。",
+      "#5319、#3664 等预览/截图/导出问题会影响视觉上下文准确性，直接降低设计编辑与交付可信度。",
+      "#5172 和 #3146 指向运行生命周期治理不足：前端 tab 切换会中止流式输出，daemon 子进程也可能长时间不退出。",
+      "团队协作 #5395 为 XXL/high risk，若与稳定性修复并行推进，review 和回归测试压力会继续上升。",
+      "BYOK/OpenCode 虽已有 #5344 修复，但多模型端点兼容性仍可能在模型选择器、路由和错误提示之间产生新回归。"
     ],
     "actions": [
-      "密切关注 v0.14.0 发布后 24-48 小时的 issue influx 模式，重点追踪 Plan 模式/HTML 版本历史的 bug 反馈",
-      "追踪 Team Collaboration 6-part 系列的 review 和合入进度——这是 v0.15.0 旗舰功能候选，合入节奏将影响版本发布窗口",
-      "关注 #5162 memory-llm BYOK 硬编码修复进展和 #5229 Claude Code/Codex Windows 启动修复，两者是 v0.14.0 hotfix 最可能候选",
-      "留意 #5208 PPT 导出 bug 是否有 quick fix，直接影响 v0.13.0 核心交付质量评估和用户对导出功能的信心"
+      "优先跟踪 #5344 合入后的 BYOK/OpenCode 用户反馈，确认非 OpenAI OpenAI-protocol 主机是否恢复可用。",
+      "关注 #5407 模型元数据 badge 是否继续推进，它能改善多模型选择时的认知成本。",
+      "持续观察 #5352、#5370、#5319 三类 UX/预览问题是否进入 v0.14.x hotfix。",
+      "跟踪 #5395 的 review、拆分和回归测试状态，判断团队协作是否会成为 v0.15.0 主干。",
+      "对 #5172、#3146 这类生命周期问题保持 P0/P1 级追踪，避免长任务生成稳定性继续恶化。"
     ],
-    "next_week": "v0.14.0「Inspiration Time Machine」发布后首周，Plan 模式+HTML 版本历史将成为社区热议焦点；Team Collaboration 6-part 系列预计陆续合入，标志团队功能正式进入 v0.15.0 预热窗口；memory-llm BYOK 硬编码修复和 Windows CLI 启动问题是 v0.14.0 hotfix 最可能方向；open_issues 541+ 能否在首周回落是判断大版本发布质量的核心指标。"
+    "next_week": "下周最值得看三条线：一是 v0.14.x 是否围绕 BYOK/OpenCode、HTML preview、Plan mode 产物查看推出 hotfix；二是团队协作 #5395 是否拆分或合入，决定 v0.15.0 节奏；三是 open_issues 能否重新压回 500 附近，否则 v0.14.0 的稳定性债务会继续拖慢功能迭代。"
   }
 }
