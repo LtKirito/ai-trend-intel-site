@@ -1,0 +1,99 @@
+{
+  "week": "2026-W28",
+  "title": "2026 W28 GitHub AI 星标周报",
+  "summary": "AI Agent 从云端走进终端和办公室：本地隐私会议、Office自动化、终端多路复用成为本周增长主线。",
+  "count": "10 个项目",
+  "theme": "Agent 终端化 · 办公自动化 · 隐私优先",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "meetily",
+      "category": "DevTools",
+      "stars": "23.5k",
+      "growth": "+8.6k",
+      "why": "本地隐私会议助手，实时转录摘要零上云",
+      "url": "https://github.com/Zackriya-Solutions/meetily"
+    },
+    {
+      "rank": "02",
+      "name": "system_prompts_leaks",
+      "category": "DevTools",
+      "stars": "56.7k",
+      "growth": "+7.7k",
+      "why": "各大AI平台系统提示词泄露合集",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks"
+    },
+    {
+      "rank": "03",
+      "name": "OfficeCLI",
+      "category": "Agent",
+      "stars": "15.4k",
+      "growth": "+6.5k",
+      "why": "专为AI agent设计的Office套件CLI工具",
+      "url": "https://github.com/iOfficeAI/OfficeCLI"
+    },
+    {
+      "rank": "04",
+      "name": "strix",
+      "category": "Agent",
+      "stars": "40.8k",
+      "growth": "+5.0k",
+      "why": "开源AI渗透测试代理，自动发现修复漏洞",
+      "url": "https://github.com/usestrix/strix"
+    },
+    {
+      "rank": "05",
+      "name": "caveman",
+      "category": "Agent",
+      "stars": "88.5k",
+      "growth": "+4.7k",
+      "why": "Claude Code技能，极简表达省65% token",
+      "url": "https://github.com/JuliusBrussee/caveman"
+    },
+    {
+      "rank": "06",
+      "name": "claude-video",
+      "category": "Agent",
+      "stars": "7.8k",
+      "growth": "+4.4k",
+      "why": "让Claude能看视频、提取帧、转录理解",
+      "url": "https://github.com/bradautomates/claude-video"
+    },
+    {
+      "rank": "07",
+      "name": "OmniRoute",
+      "category": "Infra",
+      "stars": "16.2k",
+      "growth": "+4.4k",
+      "why": "免费AI网关，231+供应商统一入口",
+      "url": "https://github.com/diegosouzapw/OmniRoute"
+    },
+    {
+      "rank": "08",
+      "name": "orca",
+      "category": "Agent",
+      "stars": "16.8k",
+      "growth": "+4.4k",
+      "why": "并行agent舰队开发环境，多代理协作编程",
+      "url": "https://github.com/stablyai/orca"
+    },
+    {
+      "rank": "09",
+      "name": "herdr",
+      "category": "Agent",
+      "stars": "15.8k",
+      "growth": "+4.3k",
+      "why": "终端中的agent多路复用器",
+      "url": "https://github.com/ogulcancelik/herdr"
+    },
+    {
+      "rank": "10",
+      "name": "codex-plugin-cc",
+      "category": "Agent",
+      "stars": "28.0k",
+      "growth": "+4.0k",
+      "why": "在Claude Code中调用Codex审查代码",
+      "url": "https://github.com/openai/codex-plugin-cc"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "date": "2026-07-13",
+  "title": "2026-07-13 AI信息差日报",
+  "coverage": "覆盖窗口：7/11 ~ 7/13",
+  "sources": "信息源：Anthropic Claude Code Changelog / Claude Code Desktop / Claude Code 桌面版内置浏览器 / xAI Grok 4.5 / Meta Muse Spark 1.1 / GitHub Trending / Hacker News / Product Hunt / 即刻 2.5 lab / WAIC 2026 / 中文技术社区",
+  "conclusions": [
+    "Claude Code v2.1.207 是周末最大信号：企业云（Bedrock/Vertex/Foundry）默认开启 Auto Mode 且默认模型跳到 Opus 4.8，策略从'需申请'翻转为'需关闭'——这是 Anthropic 对 OpenAI GPT-5.6/ChatGPT Work 的正面回应。",
+    "GPT-5.6 首批真实用户反馈从周末 Reddit/HN 流出：Sol 完成同样任务比 Fable 5 省 60% token 且错误更少，但 Fable 5 在数学推理和深度分析上仍有优势。'模型路由'比'选最强模型'更务实。",
+    "Grok 4.5 × Cursor 联合训练的细节在周末被拆解：Cursor 的真实开发者交互数据（接受/拒绝/迭代模式）被用于补充训练，使 Grok 4.5 的 token 效率比 Opus 4.8 高 4.2 倍。这是'工具数据反哺模型训练'的首个公开案例。",
+    "Meta Muse Spark 1.1 以 $1.25/$4.25 的定价成为美国实验室最便宜的近前沿模型，但刻意选择在'工具使用/Agent 评估'上赢，在编码上输——说明 Meta 在找差异化定位而非硬刚编程。",
+    "GitHub Trending 7/11-12 显示 'Agent 技能化'已成明确赛道：mattpocock/skills、OfficeCLI、agent-skills、superpowers 等技能库持续霸榜，说明开发者正在从'用 Agent'转向'教 Agent 怎么工作'。"
+  ],
+  "summary": "7/11-7/13 周末+周一窗口硬新闻密度较低，但 7/10 发布的内容在周末持续发酵。Claude Code v2.1.207 企业云策略翻转（Auto Mode 默认开启）是最大信号；GPT-5.6 用户实测、Grok 4.5 训练细节、Meta Muse Spark 定价分析、GitHub Skills 生态和 HN 隐写标记讨论构成周末的主要信息差。WAIC 2026 本周开幕值得提前锁定。",
+  "body": "本日报覆盖 7/11-7/13 周末+周一窗口。2 条 P0 + 5 条 P1 + 2 条 P2。周末硬新闻少，但发酵深度高。Claude Code v2.1.207（7/10-11）把企业云 Auto Mode 从 opt-in 翻转为 opt-out，默认模型改为 Opus 4.8，同时修复终端冻结、插件 shell 注入等 24 项问题；桌面版（7/11）新增内置浏览器面板。GPT-5.6 Sol 首批真实用户反馈（7/11-12 Reddit）显示 token 效率比 Fable 5 高 60% 但数学推理仍落后。Grok 4.5 × Cursor 联合训练（7/11-12 深度分析）揭示"工具数据反哺模型"的新路径。Meta Muse Spark 1.1（7/11-12 定价分析）以 $1.25/$4.25 定位 Agent 任务差异化。GitHub Trending 7/11-12 显示 Skills 生态爆发。HN 隐写标记讨论（7/10-12）持续发酵。即刻 2.5 lab（7/11）强调利润优先。WAIC 2026（7/13）本周开幕预告。",
+  "judgement": "今天的信息差不是新模型发布，而是 7/10 发布内容的周末发酵和深度解读。最值得关注的是三个方向：1）企业级 Agent 的权限策略（Claude Code 默认 auto mode vs ChatGPT Work 的跨应用代理）；2）模型训练数据的来源创新（Grok 4.5 用 Cursor 交互数据而非 GitHub 成品代码）；3）Agent 技能化生态（Skills 从单厂商工具走向多厂商标准）。对个人开发者，今天最该试的是 Claude Code 2.1.207 的桌面浏览器和 Skills 库；对企业用户，最该评估的是 auto mode 默认开启后的安全治理。",
+  "tags": ["Claude-Code", "v2.1.207", "Auto-Mode", "Opus-4.8", "GPT-5.6", "Grok-4.5", "Cursor", "Meta-Muse-Spark", "Skills", "Agent-Workflow", "HN", "Trust", "WAIC-2026"],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.207：企业云 Auto Mode 默认开启，策略从 opt-in 翻转为 opt-out",
+      "summary": "Claude Code v2.1.207（7/10-11）把企业云（Bedrock/Vertex/Foundry）的 Auto Mode 从需要 CLAUDE_CODE_ENABLE_AUTO_MODE=1 环境变量开启，改为默认开启（可通过 disableAutoMode 关闭）；同时默认模型从 Sonnet 5 改为 Opus 4.8。修复终端冻结、插件 shell 注入、Windows 凭证挂死、Remote Control 状态丢失等 24 项问题。",
+      "why": "这是 Anthropic 对企业市场的策略性大调整。在 OpenAI 推 ChatGPT Work 的同一周，把无人值守编码 Agent 变成云平台的默认配置，意味着企业无需额外审批即可运行自动编码 Agent。但这也把安全决策从'是否开启'变成了'是否关闭'——对未做好准备的团队有风险。",
+      "action_fact": "【事实】Bedrock/Vertex/Foundry 用户立即升级 Claude Code 到 2.1.207；检查当前 auto mode 状态，如果团队未明确审批过，设置 disableAutoMode；运行 /doctor 或 /checkup；Windows 用户验证凭证超时 60 秒 guard 是否生效。",
+      "action_judge": "【判断】建议先在小范围试点验证 auto mode 的实际行为，再决定是否全量开启。Opus 4.8 作为默认模型会显著提高 API 成本，需要确认预算和模型路由策略。",
+      "tags": ["Claude-Code", "Agent-Workflow", "Security", "Enterprise", "Auto-Mode", "Opus-4.8"],
+      "sources": ["https://releases.sh/source/claude-code", "https://chatforest.com/builders-log/claude-code-v2-1-206-mcp-timeout-fix-doctor-background-agents-july-2026-builder-guide", "https://dev.classmethod.jp/en/articles/20260710-cc-updates-v2-1-206/", "https://www.claudeupdates.dev/version/2.1.207"]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code 桌面版内置浏览器：Agent 自主浏览的新入口",
+      "summary": "Anthropic 7/11 宣布桌面版 Claude Code 新增内置浏览器面板（Browser pane），可读取、点击并与网站交互，使用独立浏览器配置文件与用户个人浏览器隔离，不共享登录状态和历史记录。",
+      "why": "这是 Claude Code 从'纯编码工具'向'通用工作代理'扩展的关键一步。内置浏览器意味着 Agent 可以自主查看文档、设计稿、测试网页，而不依赖外部浏览器或截图式自动化。独立配置文件解决了安全隔离问题。",
+      "action_fact": "【事实】在桌面版 Claude Code 中启用 Browser pane，测试查看文档、点击元素、验证网页行为；与 Chrome 扩展方式对比，评估哪种更适合你的工作流。注意当前版本只支持不需要身份登录的网站。",
+      "action_judge": "【判断】内置浏览器+独立配置是'Agent 自主浏览'的正确方向，比截图式自动化更可靠。但复杂认证场景仍需 Chrome 扩展，两者互补而非替代。",
+      "tags": ["Claude-Code", "Desktop", "Browser", "Agent-Workflow", "Security"],
+      "sources": ["https://so.html5.qq.com/page/real/search_news?docid=70000021_5176a51802316152"]
+    },
+    {
+      "rank": "P1",
+      "title": "GPT-5.6 用户实测 vs Fable 5：真实工作流中的模型路由策略",
+      "summary": "周末 Reddit 和 HN 出现首批 GPT-5.6 Sol 真实用户对比：同一开发任务 Sol 用不到 40% 的 token 配额完成，Fable 5 错误更多且两次触顶额度；但在数学推理和深度分析上 Fable 5 仍占优。",
+      "why": "Benchmark 数据只告诉'模型能考多少分'，用户实测告诉'模型在实际工作流里表现如何'。Sol 的 token 效率和速度优势在日常编码中更显著，但 Fable 5 在需要深度推理的场景仍有壁垒。这验证了'模型路由'比'单模型依赖'更务实。",
+      "action_fact": "【事实】如果你有 Claude 和 OpenAI 双账号，用同一个真实任务（如重构一个模块、写一份数据分析报告）对比 Sol 和 Fable 5 的 token 消耗、完成时间和错误率。",
+      "action_judge": "【判断】日常编码/快速任务用 Sol，深度推理/数学证明用 Fable 5，成本敏感任务用 Terra/Luna。建议建立自己的'任务-模型'映射表。",
+      "tags": ["GPT-5.6", "OpenAI", "Claude-Fable-5", "Benchmark", "User-Testing"],
+      "sources": ["https://news.stormzhang.ai/", "https://juejin.cn/post/7660435816799617070"]
+    },
+    {
+      "rank": "P1",
+      "title": "Grok 4.5 × Cursor 联合训练：工具数据反哺模型的首个公开案例",
+      "summary": "周末多篇深度分析拆解 Grok 4.5 的训练细节：Cursor 的真实开发者交互数据（接受/拒绝/迭代/多文件编辑轨迹）被用于补充训练，而非传统编码模型使用的 GitHub 成品代码。这使 Grok 4.5 的 token 效率比 Opus 4.8 高 4.2 倍。",
+      "why": "传统编码模型训练在 GitHub 成品代码上，缺乏'开发者决策过程'信号。Cursor 的数据包含接受/拒绝模式、中途放弃、注释编写、上下文修复等行为，为模型提供了真实的工程工作流反馈。这是'工具数据反哺模型训练'的首个公开案例。",
+      "action_fact": "【事实】Cursor 用户可直接使用 Grok 4.5（Composer 复杂任务默认路由）；非 Cursor 用户通过 xAI API 调用，定价 $2/$6 per MTok。",
+      "action_judge": "【判断】Cursor 的数据飞轮正在强化：用户使用 Grok 4.5 → 产生更多交互数据 → 进一步优化模型。这解释了 xAI 收购 Cursor 的 600 亿美元估值逻辑。",
+      "tags": ["Grok-4.5", "xAI", "Cursor", "Training-Data", "Token-Efficiency"],
+      "sources": ["https://andrew.ooo/answers/what-is-grok-4-5-cursor-collaboration-training-july-2026", "https://friday-go.icu/ai/grok-4-5-cursor-coding-agent-2026"]
+    },
+    {
+      "rank": "P1",
+      "title": "Meta Muse Spark 1.1：美国最便宜近前沿模型的差异化定位",
+      "summary": "Meta 首个付费模型 Muse Spark 1.1 定价 $1.25/$4.25 per MTok，约为 OpenAI/Anthropic 的 1/4。但 Meta 刻意选择在'工具使用/Agent 评估'基准上赢，在'编码'基准上输，定位差异化。",
+      "why": "Meta 没有硬刚编程（Fable 5/GPT-5.6 Sol 的领域），而是选了一个'足够好且便宜'的定位：Agent 推理、多步骤任务、个人超级智能。这是 Zuckerberg 'Personal Superintelligence' 战略的落地，也避免了与 Llama 开源路线的直接竞争。",
+      "action_fact": "【事实】美国开发者可申请 Muse Spark API 公测（$20 免费额度），测试 Agent 任务和工具调用场景；不开放 OpenRouter，仅限 Meta 自有平台。",
+      "action_judge": "【判断】如果 Muse Spark 在 Agent 任务上稳定且足够便宜，可能成为'后台任务 Agent'的首选（非编码场景）。但其封闭分发策略（不开放第三方平台）会限制生态扩展。",
+      "tags": ["Meta", "Muse-Spark", "Pricing", "Agent", "Personal-Superintelligence"],
+      "sources": ["https://tokencost.app/blog/meta-muse-spark-1-1-pricing", "https://finance.yahoo.com/technology/ai/articles/meta-launches-paid-muse-spark-205823294.html"]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub Trending 7/11-12：Agent 技能化（Skills）成为明确赛道",
+      "summary": "7/11-12 GitHub 日榜显示 Agent 技能库持续霸榜：mattpocock/skills（1712 星/日）、OfficeCLI（1224 星/日）、agent-skills（1116 星/日）、superpowers（1013 星/日）。",
+      "why": "这不是单个爆款，而是明确趋势：开发者正在从'用 Agent'转向'教 Agent 怎么工作'。技能库让 Agent 可以复用特定工作流，从一次性 prompt 变成可版本化的能力模块。Skills 生态正在从单厂商走向多厂商标准。",
+      "action_fact": "【事实】Claude Code 用户可把常用工作流封装成 skills 放到 .claude/skills/ 目录；关注 agent-skills、superpowers、mattpocock/skills 的模块化设计。",
+      "action_judge": "【判断】Skills 标准化是下一个关键变量。如果 OpenAI、Google、Anthropic 能达成互操作标准，Skills 将成为 Agent 时代的'npm 包'；如果分化，则会形成生态壁垒。",
+      "tags": ["GitHub", "Skills", "Agent", "Open-Source", "Trending"],
+      "sources": ["https://new.qq.com/rain/a/20260711A053PX00", "https://github.com/mattpocock/skills", "https://github.com/addyosmani/agent-skills"]
+    },
+    {
+      "rank": "P1",
+      "title": "HN 热议：Claude Code 隐写标记信任危机持续发酵",
+      "summary": "Hacker News 7/10-12 关于 Claude Code 隐写标记的讨论持续发酵（2436 分/746 评论），核心争议：Claude Code 是否在请求中嵌入不可见的追踪标识。叠加 7/1 中国用户检测代码曝光和 7/10 工信部风险提示，信任危机加深。",
+      "why": "这是 Claude Code 信任危机的延续。从 7/1 的'中国用户检测代码'到 7/10 的'工信部风险提示'再到 7/10-12 的'隐写标记讨论'，Anthropic 面临的不是单一技术问题，而是系统性的透明度危机。",
+      "action_fact": "【事实】Claude Code 用户应关注 Anthropic 官方对隐写标记的回应；企业用户应审计 Claude Code 的网络流量和请求头。",
+      "action_judge": "【判断】信任问题比功能问题更难修复。Anthropic 如果不能在 7 月底前给出清晰的技术说明和整改计划，可能面临企业客户的持续流失。建议有替代方案的团队做双轨备份。",
+      "tags": ["Claude-Code", "Trust", "Security", "HN", "Transparency"],
+      "sources": ["https://github.com/headllines/hackernews-weekly/issues/344"]
+    },
+    {
+      "rank": "P2",
+      "title": "即刻 2.5 lab：利润优先而非规模的 AI 应用创业模式",
+      "summary": "即刻旗下 2.5 lab 技术负责人 7/11 透露，AI 旅游翻译应用 kulikuli 等产品'用户规模不大但已有利润'，在规模与利润之间优先选择利润。",
+      "why": "这是中文 AI 应用创业的一个务实转向：不再追求用户规模和融资故事，而是先验证商业可行性。在 AI 大模型能力快速泛化的背景下，'小而美+有利润'可能是更可持续的路径。",
+      "action_fact": "【事实】参考即刻 2.5 lab 的'小产品+利润优先'模式；关注 Chatbox 和 ChatHub 的定价策略。",
+      "action_judge": "【判断】对独立开发者和小团队，'2.5% 早期尝鲜者'定位+利润优先，可能比追逐大众市场更实际。",
+      "tags": ["即刻", "AI-应用", "商业模式", "创业", "利润优先"],
+      "sources": ["https://www.toutiao.com/article/7661105499157119503/"]
+    },
+    {
+      "rank": "P2",
+      "title": "WAIC 2026 本周开幕：中国 AI 年度风向标",
+      "summary": "2026 世界人工智能大会（WAIC）定档 7/17-20 上海，预计 3000+ 展品、多款重磅模型借势发布。中国大模型周调用量连续十周领跑全球。",
+      "why": "WAIC 是中国 AI 行业的年度风向标，模型发布、具身智能、AI 芯片、应用落地都会在密集窗口内展示。Kimi K3、DeepSeek V4 正式版等可能借势发布。",
+      "action_fact": "【事实】关注 WAIC 2026 的议程和参展商名单，提前锁定可能发布的新模型和产品；跟踪 7/17-20 的实时报道。",
+      "action_judge": "【判断】WAIC 期间信息密度高，但需区分'真正的首发'和'营销包装的旧闻'。",
+      "tags": ["WAIC-2026", "中国-AI", "行业大会", "Kimi-K3", "DeepSeek-V4"],
+      "sources": ["https://juejin.cn/post/7660435816799617070"]
+    }
+  ],
+  "tools": [
+    {"name":"mattpocock/skills","type":"Agent 技能库","highlight":"从真实 .claude 目录提取的实战技能，Shell 编写，面向真实工程师工作流","audience":"Claude Code 用户、希望标准化工作流的开发者","action":"浏览仓库，把适合自己的技能复制到 .claude/skills/ 目录","url":"https://github.com/mattpocock/skills"},
+    {"name":"OfficeCLI","type":"AI Office 自动化","highlight":"首个专为 AI Agent 设计的 Office CLI，支持读写 Word/Excel/PowerPoint，无需安装 Office","audience":"需要自动化文档处理的 Agent 开发者、办公自动化场景","action":"下载单二进制文件，测试用 Agent 生成/修改 Excel 和 PPT","url":"https://github.com/iOfficeAI/OfficeCLI"},
+    {"name":"TencentDB-Agent-Memory","type":"Agent 记忆","highlight":"腾讯云开源的 Agent 本地长期记忆方案，四层渐进式管道，零外部 API 依赖","audience":"需要长期记忆的 Agent 开发者、隐私敏感场景","action":"克隆仓库，按文档配置本地记忆管道，测试与 Claude Code 的集成","url":"https://github.com/TencentCloud/TencentDB-Agent-Memory"},
+    {"name":"CubeSandbox","type":"AI 沙箱","highlight":"腾讯云开源的硬件级隔离沙箱，RustVMM+KVM，冷启动低于 60ms，适合安全执行 AI 生成代码","audience":"需要安全运行 AI 代码的企业、CI/CD 场景","action":"了解架构设计，评估是否适合集成到现有 CI/CD 流程","url":"https://github.com/TencentCloud/CubeSandbox"},
+    {"name":"DesktopCommanderMCP","type":"MCP 服务器","highlight":"赋予 Claude 终端控制、文件系统搜索与 diff 编辑能力，本地开发环境深度集成","audience":"Claude Code 用户、需要本地文件操作的开发者","action":"安装 MCP 服务器，测试用 Claude 执行本地文件操作和终端命令","url":"https://github.com/wonderwhy-er/DesktopCommanderMCP"}
+  ],
+  "video_topics": [
+    {"title":"GPT-5.6 Sol vs Fable 5 真实开发任务对比","hook":"同一任务省 60% token，但 Fable 5 在数学上更强","angle":"对比实测：用同一个真实开发任务对比两者的 token 消耗、时间、错误率","materials":"双账号录屏 / 同一任务分屏对比 / token 消耗数字对比","difficulty":"中"},
+    {"title":"Claude Code 2.1.207 为什么把企业云默认改成 Auto Mode？","hook":"从'需申请'到'需关闭'，策略翻转意味着什么","angle":"解读 Anthropic 的策略意图：安全团队该如何重新评估 auto mode","materials":"Claude Code 设置界面录屏 / 企业安全策略文档 / 对比 2.1.205 和 2.1.207","difficulty":"中"},
+    {"title":"Grok 4.5 的 token 效率为什么比 Opus 4.8 高 4.2 倍？","hook":"Cursor 数据飞轮：你的每次接受/拒绝都在训练模型","angle":"科普'工具数据反哺模型训练'：用 Cursor 的实际交互数据解释为什么 Grok 4.5 更省 token","materials":"Cursor 界面录屏 / 接受/拒绝动画 / 数据流程图 / 价格对比表","difficulty":"低"},
+    {"title":"GitHub Trending 上为什么全是 'Skills'？","hook":"Agent 技能化趋势：从'用 Agent'到'教 Agent 工作'","angle":"拆解 5 个热门 Skills 仓库，说明技能库如何改变 Agent 工作流","materials":"GitHub Trending 截图 / Skills 仓库代码示例 / 工作流对比图","difficulty":"低"},
+    {"title":"Meta Muse Spark 1.1：最便宜的前沿模型值得用吗？","hook":"$1.25/$4.25 的定价，是性价比之王还是妥协之作","angle":"实测 Muse Spark 1.1 在 Agent 任务、编码、日常问答上的表现，对比 GPT-5.6 Luna 和 Grok 4.5","materials":"API 调用录屏 / 三模型对比 / 价格表 / 基准分数对比","difficulty":"中"}
+  ],
+  "noise_items": [
+    {"item":"旧模型盘点/全景回顾","reason":"周末出现多篇'2026 上半年 AI 模型盘点'，内容多为已知信息重组，无新信号，不纳入日报。"},
+    {"item":"Claude Code 隐写标记的技术细节推测","reason":"HN 上有大量基于逆向分析的推测，但 Anthropic 官方尚未给出完整技术说明，具体实现细节标记为'待验证'。"},
+    {"item":"Kimi K3 发布日期传闻","reason":"多个来源称'7 月内发布'，但无具体日期和官方确认，不纳入 P0。"},
+    {"item":"AI 工具排行榜/列表文","reason":"纯列表无深度分析，无链接或来源不可核实的，归入噪音。"},
+    {"item":"7/10 已报道内容的重复","reason":"GPT-5.6 全面开放、阿里禁用 Claude、DeepSeek V4 峰谷定价等已在 7/10 日报覆盖，今日日报聚焦后续发酵和新信息。"},
+    {"item":"GPT-5.5 Instant 假新闻","reason":"周末出现多个来源的 GPT-5.5 Instant 传闻，无官方确认，归入噪音。"},
+    {"item":"具身智能融资数字炒作","reason":"'2026 开年融资超 345 亿元'等数字缺乏完整来源核查，不纳入具体数字。"}
+  ],
+  "tracking_items": [
+    {"item":"Claude Code v2.1.207 企业部署反馈","reason":"Auto Mode 默认开启后，企业用户的实际使用情况和安全团队反馈是下一个关键变量。"},
+    {"item":"GPT-5.6 大规模 API 可用性","reason":"需要验证 Sol/Terra/Luna 在真实代码、表格、PPT 任务中的质量差距，以及 Programmatic Tool Calling 是否降低 token 和往返。"},
+    {"item":"Grok 4.5 在 Cursor 外的实际表现","reason":"通过 xAI API 独立调用 Grok 4.5，验证其 token 效率和编码能力是否保持。"},
+    {"item":"Meta Muse Spark 1.1 实际 Agent 任务质量","reason":"$1.25/$4.25 的定价很有吸引力，但需要实测其在复杂多步骤任务中的稳定性。"},
+    {"item":"WAIC 2026 7/17-20 首发产品","reason":"下周中国 AI 产品/模型/具身智能发布密度会很高，需要从实际首发中筛选 P0。"},
+    {"item":"Claude Code 信任危机后续","reason":"Anthropic 对隐写标记和中国用户检测的公开回应是否足够透明。"},
+    {"item":"Skills 生态标准化进展","reason":"agent-skills、superpowers、mattpocock/skills 等是否会形成互操作标准或分化。"}
+  ]
+}

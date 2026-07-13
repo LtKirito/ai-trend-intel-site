@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-13",
+    "label": "7 月 13 日 (周一)",
+    "count": "2P0 + 5P1 + 2P2",
+    "tags": "Claude-Code · v2.1.207 · Auto-Mode · Opus-4.8 · Desktop-Browser · GPT-5.6 · Grok-4.5 · Cursor · Meta-Muse-Spark · Skills · HN · Trust · WAIC-2026",
+    "summary": "Claude Code v2.1.207 企业云 Auto Mode 默认开启，策略从 opt-in 翻转为 opt-out；桌面版新增内置浏览器。GPT-5.6 用户实测、Grok 4.5 训练细节、Meta Muse Spark 定价、GitHub Skills 生态和 HN 隐写标记讨论构成周末发酵主线。WAIC 2026 本周开幕。"
+  },
+  {
     "date": "2026-07-10",
     "label": "7 月 10 日 (周五)",
     "count": "4P0 + 5P1 + 2P2",
