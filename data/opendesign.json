@@ -1,278 +1,206 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 76885,
-    "forks": 8775,
-    "open_issues": 527,
+    "stars": 77616,
+    "forks": 8886,
+    "open_issues": 653,
     "latest_release": {
-      "version": "open-design-v0.14.0",
-      "date": "2026-07-08",
-      "name": "Open Design 0.14.0 — Inspiration Time Machine"
+      "version": "open-design-v0.14.1",
+      "date": "2026-07-10",
+      "name": "Open Design 0.14.1 — Intelligence with everyone: Grok 4.5 Free, Plus GPT 5.6, Fable 5 & Muse 1.1"
     }
   },
   "recent_prs": [
     {
-      "number": 5407,
-      "title": "Use model metadata in picker badges",
+      "number": 5496,
+      "title": "feat(web): make Studio discovery visual and inline",
       "state": "open",
-      "author": "mrcfps",
-      "labels": [],
-      "impact": "模型选择器开始使用模型元数据展示 badge，说明 BYOK/多模型体验正在从可用性修复转向可理解性与选择效率优化。",
-      "url": "https://github.com/nexu-io/open-design/pull/5407"
+      "author": "open-design-crew[bot]",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
+      "impact": "Studio discovery 从独立的 Questions 面板改为聊天内视觉卡片，Deck / Prototype 风格选择可预览，回答后折叠成 brief，降低用户进入设计流程的认知摩擦。",
+      "url": "https://github.com/nexu-io/open-design/pull/5496"
     },
     {
-      "number": 3301,
-      "title": "feat(web): add display.dev deploy option",
+      "number": 5498,
+      "title": "fix(daemon): cancel active runs when deleting a conversation or project (#5468)",
       "state": "open",
-      "author": "carlrannaberg",
-      "labels": [
-        "size/XXL",
-        "risk/high",
-        "type/feature",
-        "needs-validation",
-        "needs-design-review"
-      ],
-      "impact": "HTML 预览新增 display.dev 一键部署选项，继续扩展 Share/Deploy 出口，降低原型公开分享门槛。",
-      "url": "https://github.com/nexu-io/open-design/pull/3301"
+      "author": "AriaZhao-coder",
+      "labels": ["size/M", "risk/high", "type/bugfix", "validated"],
+      "impact": "删除 conversation 或 project 时先取消进行中的 run，避免用户删对话后后台仍消耗 provider 额度或向已删除目录写入文件。",
+      "url": "https://github.com/nexu-io/open-design/pull/5498"
     },
     {
-      "number": 5344,
-      "title": "fix byok-opencode: route non-OpenAI openai-protocol hosts to @ai-sdk/openai-compatible",
-      "state": "merged",
-      "author": "JackChen-me",
-      "labels": [
-        "size/S",
-        "risk/high",
-        "type/bugfix",
-        "validated"
-      ],
-      "impact": "BYOK OpenCode 路由兼容性修复已合入，非 OpenAI 的 OpenAI-protocol 主机将走 openai-compatible 适配器，直接缓解自定义模型端点失败。",
-      "url": "https://github.com/nexu-io/open-design/pull/5344"
-    },
-    {
-      "number": 5395,
-      "title": "Team collaboration: read-only shared projects, cross-daemon comment + file sync, demo-aligned UI",
+      "number": 5322,
+      "title": "fix(desktop): break renderer crash-reload loops with a circuit breaker",
       "state": "open",
       "author": "lefarcen",
-      "labels": [
-        "size/XXL",
-        "risk/high",
-        "type/feature"
-      ],
-      "impact": "团队协作 PR 升级为只读共享项目、跨 daemon 评论与文件同步、demo 对齐 UI，是 v0.15.0 协作旗舰功能的核心集成点。",
-      "url": "https://github.com/nexu-io/open-design/pull/5395"
+      "labels": ["size/XL", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "桌面端对渲染进程崩溃循环引入熔断器，连续崩溃后进入恢复屏并收集 minidump/GPU 信息，解决单台设备一日触发数万次崩溃事件的问题。",
+      "url": "https://github.com/nexu-io/open-design/pull/5322"
     },
     {
-      "number": 5341,
-      "title": "fix(daemon): reset turnCompletedCleanly on same-run retry teardown",
+      "number": 5512,
+      "title": "fix(daemon): harden the AMR proxy against unhandled pipe errors",
       "state": "merged",
       "author": "tomsen02",
-      "labels": [
-        "size/M",
-        "risk/high",
-        "type/bugfix",
-        "validated"
-      ],
-      "impact": "daemon 同一 run 重试清理时重置 turnCompletedCleanly，修复重试后状态残留导致的完成态误判，属于运行生命周期稳定性修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5341"
+      "labels": ["size/S", "risk/high", "type/bugfix", "validated"],
+      "impact": "AMR/vela 代理两条流都加上 source-error 处理，上游重置或客户端中断上传时能更快清理连接，属于防御性加固而非确认崩溃修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5512"
     },
     {
-      "number": 5306,
-      "title": "fix(daemon): backfill Windows CLI cache env",
-      "state": "merged",
-      "author": "YOMXXX",
-      "labels": [
-        "size/M",
-        "risk/high",
-        "type/bugfix",
-        "validated"
-      ],
-      "impact": "Windows CLI cache 环境变量回填已合入，继续修复 Windows 上 agent/CLI 启动与缓存路径传递的系统性问题。",
-      "url": "https://github.com/nexu-io/open-design/pull/5306"
-    },
-    {
-      "number": 5343,
-      "title": "Add updater release notes recovery flow",
+      "number": 3388,
+      "title": "feat(deploy): add native support for Netlify, Render, and Railway deployments",
       "state": "open",
-      "author": "PerishCode",
-      "labels": [
-        "size/XXL",
-        "risk/high",
-        "type/enhancement",
-        "needs-validation"
-      ],
-      "impact": "更新器新增 release notes 恢复流程，目标是在更新说明拉取失败或缺失时保留用户可理解的恢复路径，降低发布体验断裂。",
-      "url": "https://github.com/nexu-io/open-design/pull/5343"
+      "author": "Maou3434",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-design-review"],
+      "impact": "Share/Deploy 面板新增 Netlify、Render、Railway 一键部署，补齐除 Vercel 外的 PaaS 出口，降低生成设计在线托管的门槛。",
+      "url": "https://github.com/nexu-io/open-design/pull/3388"
     },
     {
-      "number": 5321,
-      "title": "feat(chat): surface daemon failure_detail to sharpen run-error guidance",
-      "state": "merged",
-      "author": "open-design-crew[bot]",
-      "labels": [],
-      "impact": "daemon 的 failure_detail 已透传到聊天错误卡片，运行失败提示从原始错误向结构化、可行动指引推进。",
-      "url": "https://github.com/nexu-io/open-design/pull/5321"
+      "number": 5143,
+      "title": "fix(daemon): use dynamic model guidance in media dispatch hint (#5117)",
+      "state": "open",
+      "author": "xxiaoxiong",
+      "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "媒体生成提示不再硬编码 flux-pro-ultra，而是根据用户 BYOK 的 imageModel / videoModel 默认配置动态推荐，减少自定义端点下的模型路由错误。",
+      "url": "https://github.com/nexu-io/open-design/pull/5143"
+    },
+    {
+      "number": 4819,
+      "title": "feat: add macOS ZCode runtime support",
+      "state": "open",
+      "author": "jzhishu",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-design-review"],
+      "impact": "macOS 端新增 ZCode 运行时支持，通过 app-server 协议接入智谱 ZCode，扩展 OD 的 agent/CLI 生态到中文本地模型工具。",
+      "url": "https://github.com/nexu-io/open-design/pull/4819"
+    },
+    {
+      "number": 5505,
+      "title": "add liquid-glass-card skill",
+      "state": "open",
+      "author": "wiggdevin",
+      "labels": ["size/L", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "社区新增 liquid-glass-card 技能，提供 Apple 风格液态玻璃卡片效果，继续扩展 design-system 技能目录。",
+      "url": "https://github.com/nexu-io/open-design/pull/5505"
     }
   ],
   "recent_issues": [
     {
-      "number": 5352,
-      "title": "Auto-open generated HTML files after Plan mode completion",
-      "author": "AmyShang-alt",
-      "labels": [
-        "bug",
-        "good first issue",
-        "help wanted",
-        "ux"
-      ],
-      "comments": 5,
-      "summary": "Plan mode 生成 HTML 后不会自动打开文件，打断设计生成后的查看闭环，是高频 UX 摩擦点。",
-      "url": "https://github.com/nexu-io/open-design/issues/5352"
-    },
-    {
-      "number": 5370,
-      "title": "Show the full prompt text in the composer input",
+      "number": 5514,
+      "title": "Keep lock icons visible for long unavailable model names",
       "author": "open-design-crew[bot]",
-      "labels": [
-        "bug",
-        "good first issue",
-        "ux"
-      ],
-      "comments": 3,
-      "summary": "Composer 输入框无法完整展示长 prompt，影响用户确认和编辑复杂设计需求。",
-      "url": "https://github.com/nexu-io/open-design/issues/5370"
+      "labels": ["bug", "good first issue", "help wanted", "ux"],
+      "comments": 2,
+      "summary": "免费用户在模型选择器中查看长名称的不可用模型时，锁图标被截断，导致无法清晰识别 tier 限制。",
+      "url": "https://github.com/nexu-io/open-design/issues/5514"
     },
     {
-      "number": 5319,
-      "title": "Bug: internally generated html-preview.png captures viewer shell instead of slide canvas",
-      "author": "orangecatcat",
-      "labels": [
-        "bug"
-      ],
-      "comments": 6,
-      "summary": "html-preview.png 可能捕获预览器外壳而非 16:9 画布，导致 Mark/Draw 坐标与 agent 视觉上下文错位。",
-      "url": "https://github.com/nexu-io/open-design/issues/5319"
+      "number": 5513,
+      "title": "Polish Settings fullscreen control layout",
+      "author": "open-design-crew[bot]",
+      "labels": ["bug", "good first issue", "help wanted", "ux"],
+      "comments": 2,
+      "summary": "Settings 全屏模式下右上角全屏/关闭按钮贴边，视觉拥挤且与内容边距不一致，影响首屏配置体验。",
+      "url": "https://github.com/nexu-io/open-design/issues/5513"
+    },
+    {
+      "number": 473,
+      "title": "RFC: add file management actions to Design Files",
+      "author": "irixzafra",
+      "labels": ["enhancement", "help wanted", "feature"],
+      "comments": 8,
+      "summary": "提案在 Design Files 中支持文件重命名、移动、新建文件夹等基础文件管理，属于长期 backlog 近期被重新激活。",
+      "url": "https://github.com/nexu-io/open-design/issues/473"
+    },
+    {
+      "number": 5489,
+      "title": "Proposal: expose full per-run diagnostics to local users & external agents (od run inspect + diagnostics API)",
+      "author": "tomsen02",
+      "labels": ["feature", "needs-product-direction"],
+      "comments": 4,
+      "summary": "建议将 daemon 已有的运行失败分类、耗时分段、token/cache 明细通过 od run inspect 和 API 暴露给本地用户与外部 agent。",
+      "url": "https://github.com/nexu-io/open-design/issues/5489"
+    },
+    {
+      "number": 2623,
+      "title": "Home tab should be pinned as the first and only non-closable tab",
+      "author": "shangxinyu1",
+      "labels": ["bug", "priority:p2", "ux"],
+      "comments": 3,
+      "summary": "Home tab 应被固定为首且不可关闭的锚点 tab，避免工作 tab 占据首位导致导航状态混乱。",
+      "url": "https://github.com/nexu-io/open-design/issues/2623"
+    },
+    {
+      "number": 5365,
+      "title": "Restore the current Open Design logo on the Home page",
+      "author": "open-design-crew[bot]",
+      "labels": ["bug", "good first issue", "help wanted", "ux"],
+      "comments": 7,
+      "summary": "Home 页左侧导航和 hero 区域仍显示旧版 logo，影响品牌一致性和用户对当前版本的感知。",
+      "url": "https://github.com/nexu-io/open-design/issues/5365"
     },
     {
       "number": 5172,
       "title": "[Bug]: Switching tabs aborts active AI streaming output in the previous tab",
       "author": "KuitoInoguchi",
-      "labels": [
-        "bug"
-      ],
-      "comments": 15,
-      "summary": "切换 tab 会中止上一 tab 的 AI 流式输出，说明生成流仍与前端组件生命周期耦合过深。",
+      "labels": ["bug"],
+      "comments": 16,
+      "summary": "切换 tab 会立即中止前一 tab 的 AI 流式输出，前端组件生命周期与流绑定过深，影响长生成任务体验。",
       "url": "https://github.com/nexu-io/open-design/issues/5172"
     },
     {
-      "number": 3870,
-      "title": "Mark mode comment capture can show an unexplained popup",
-      "author": "kokisanai",
-      "labels": [
-        "bug",
-        "priority:p2",
-        "stale"
-      ],
-      "comments": 2,
-      "summary": "Mark mode 评论捕获会出现无法解释的弹窗，虽为 stale/P2，但与当前 html-preview 截图和标注上下文问题形成同一类交互可信度风险。",
-      "url": "https://github.com/nexu-io/open-design/issues/3870"
+      "number": 2356,
+      "title": "Add MCP support for creating new Open Design projects",
+      "author": "shangxinyu1",
+      "labels": [],
+      "comments": 7,
+      "summary": "MCP 目前只能操作已有项目，缺少 create_project 工具，外部 agent 无法从空状态启动 OD 工作流。",
+      "url": "https://github.com/nexu-io/open-design/issues/2356"
     },
     {
-      "number": 3850,
-      "title": "[Bug]: Tweaks Panel re-targets on mouse move — cannot interact with input fields",
-      "author": "chanxiusun",
-      "labels": [
-        "bug",
-        "priority:p1",
-        "stale"
-      ],
-      "comments": 3,
-      "summary": "Inspect/Tweaks 面板在鼠标移动时重新定位目标，导致输入框无法交互，是编辑微调链路上的 P1 级历史痛点。",
-      "url": "https://github.com/nexu-io/open-design/issues/3850"
-    },
-    {
-      "number": 3664,
-      "title": "Image export capture fails in Export as image dialog",
-      "author": "yinjialu",
-      "labels": [
-        "bug",
-        "priority:p1",
-        "stale"
-      ],
-      "comments": 6,
-      "summary": "Export as image 对话框图片捕获失败，和 #5319 一起说明 capture/export 管线仍是设计产物交付的薄弱点。",
-      "url": "https://github.com/nexu-io/open-design/issues/3664"
+      "number": 3561,
+      "title": "Deck bridge blanks nested scroll decks when navigating with arrow keys",
+      "author": "shangxinyu1",
+      "labels": ["stale"],
+      "comments": 1,
+      "summary": "嵌套横向滚动 deck 在使用键盘左右箭头导航时 preview 区域变白，deck bridge 对嵌套滚动容器识别不足。",
+      "url": "https://github.com/nexu-io/open-design/issues/3561"
     },
     {
       "number": 3366,
       "title": "Skill chip never mounts after @-mention pick — meta.skillIds always empty",
       "author": "estelledc",
-      "labels": [
-        "bug",
-        "priority:p1",
-        "stale"
-      ],
-      "comments": 2,
-      "summary": "@-mention 选择 Skill 后不会挂载 chip，meta.skillIds 仍为空，影响工具化工作流的 per-turn 调用可靠性。",
-      "url": "https://github.com/nexu-io/open-design/issues/3366"
-    },
-    {
-      "number": 3335,
-      "title": "[0.8.0] sayyada",
-      "author": "ololu",
-      "labels": [
-        "bug",
-        "priority:p2",
-        "preview/v0.8.0",
-        "stale"
-      ],
+      "labels": ["bug", "priority:p1"],
       "comments": 3,
-      "summary": "v0.8.0 预览期遗留插件/全应用问题再次被更新，信号价值较低，但显示 stale backlog 仍会污染最新问题列表。",
-      "url": "https://github.com/nexu-io/open-design/issues/3335"
-    },
-    {
-      "number": 3146,
-      "title": "Daemon-spawned claude runs complete the API call but never exit; 600s watchdog kills them",
-      "author": "dambailey-ai",
-      "labels": [
-        "bug",
-        "priority:p0",
-        "stale"
-      ],
-      "comments": 5,
-      "summary": "daemon 拉起的 Claude 子进程完成 API 调用后不退出，最终被 600s watchdog 杀死，是 P0 级运行生命周期风险。",
-      "url": "https://github.com/nexu-io/open-design/issues/3146"
+      "summary": "聊天输入框 @-mention 选择 Skill 后不会挂载 chip，也不会将 skillIds 传入 meta，导致整段技能调用路径静默失效。",
+      "url": "https://github.com/nexu-io/open-design/issues/3366"
     }
   ],
   "trends": {
-    "direction": "v0.14.0 发布后两天，主线从大版本功能交付转入稳定性与体验闭环：BYOK/OpenCode 路由修复已合入，daemon 重试状态、Windows CLI cache、failure_detail 错误提示等运行可靠性修复连续合入。与此同时，团队协作 #5395 继续放大，说明 v0.15.0 的协作能力仍是下一阶段旗舰方向。",
+    "direction": "v0.14.1 已于 7/10 发布，主打模型生态普惠（Grok 4.5 Free、Plus GPT 5.6、Fable 5、Muse 1.1）和模型选择器成本/质量元数据展示；当前主线围绕 v0.14.1 发布后体验闭环（桌面崩溃熔断、删除时取消运行、AMR 代理加固）与 v0.15.0 大功能预热（Studio 内联发现、ZCode macOS、PaaS 一键部署）双线并进。",
     "affected_modules": [
-      "模型选择器与 BYOK/OpenAI-compatible 路由",
-      "HTML 预览、截图与自动打开链路",
-      "Plan mode 产物查看闭环",
-      "Composer 输入框与长 prompt 展示",
-      "团队协作：共享项目、跨 daemon 评论与文件同步",
-      "daemon 重试状态、failure_detail 与运行生命周期",
-      "Windows CLI cache 环境变量",
-      "AI streaming 生命周期与 tab 切换",
-      "Mark/Inspect/Tweaks 交互",
-      "图片导出与 capture 管线",
-      "Skill chip 与 per-turn metadata"
+      "apps/web：Studio discovery、模型选择器、Settings 全屏布局、Home 页 logo 与 tab 固定",
+      "apps/desktop：渲染进程崩溃循环熔断、恢复屏与诊断收集",
+      "apps/daemon：删除时取消运行、AMR 代理流、媒体提示动态模型、每运行诊断暴露提案",
+      "BYOK/多模型：模型元数据 badge、OpenAI-compatible 路由、媒体生成模型选择",
+      "部署/分享：Netlify / Render / Railway 一键部署",
+      "Agent 生态：ZCode macOS 运行时、MCP create_project、Skill chip 与 @-mention",
+      "Design Files 与 Deck bridge：文件管理、嵌套滚动 deck 导航"
     ],
     "risks": [
-      "open_issues 回升至 527，较上一轮缓存 504 反弹，说明 v0.14.0 后问题流入仍未完全收敛。",
-      "#5319、#3664 等预览/截图/导出问题会影响视觉上下文准确性，直接降低设计编辑与交付可信度。",
-      "#5172 和 #3146 指向运行生命周期治理不足：前端 tab 切换会中止流式输出，daemon 子进程也可能长时间不退出。",
-      "团队协作 #5395 为 XXL/high risk，若与稳定性修复并行推进，review 和回归测试压力会继续上升。",
-      "BYOK/OpenCode 虽已有 #5344 修复，但多模型端点兼容性仍可能在模型选择器、路由和错误提示之间产生新回归。"
+      "open_issues 从 527 升至 653（+126），v0.14.1 发布后的 issue influx 明显放大，可能包含回归、陈旧问题复活或新功能 backlog。",
+      "多个 XXL / high-risk PR 同时处于 needs-validation 或 design-review 状态（Studio discovery、ZCode、PaaS deploy），review 与回归测试压力持续上升。",
+      "桌面端崩溃循环熔断 (#5322) 与 AMR 代理加固 (#5512) 属于稳定性高敏感区域，验证不充分可能引入新的启动/代理行为。",
+      "#5172 切换 tab 中止流式输出与 #5498 删除时取消运行共同指向运行生命周期治理仍是薄弱点。",
+      "模型选择器同时推进元数据展示 (#5407)、锁图标布局 (#5514) 和媒体动态提示 (#5143)，若协调不足易产生多模型选择体验碎片化。"
     ],
     "actions": [
-      "优先跟踪 #5344 合入后的 BYOK/OpenCode 用户反馈，确认非 OpenAI OpenAI-protocol 主机是否恢复可用。",
-      "关注 #5407 模型元数据 badge 是否继续推进，它能改善多模型选择时的认知成本。",
-      "持续观察 #5352、#5370、#5319 三类 UX/预览问题是否进入 v0.14.x hotfix。",
-      "跟踪 #5395 的 review、拆分和回归测试状态，判断团队协作是否会成为 v0.15.0 主干。",
-      "对 #5172、#3146 这类生命周期问题保持 P0/P1 级追踪，避免长任务生成稳定性继续恶化。"
+      "优先观察 v0.14.1 发布后 open_issues 增速是否回落，区分真实回归、重复提交与 stale 问题重激活。",
+      "跟踪 #5512、#5498 等高优先级稳定性修复的合入节奏，确认是否进入 v0.14.2 补丁。",
+      "关注 #5496 Studio discovery 和 #4819 ZCode 的验证/拆分进展，判断 v0.15.0 功能旗舰候选。",
+      "验证模型选择器相关改动（#5514、#5143、#5407）是否形成连贯的 BYOK/多模型体验优化。",
+      "将 #5172 流式生命周期与 #3366 Skill chip 失效列为核心 UX 债务，持续跟踪是否有修复 PR。"
     ],
-    "next_week": "下周最值得看三条线：一是 v0.14.x 是否围绕 BYOK/OpenCode、HTML preview、Plan mode 产物查看推出 hotfix；二是团队协作 #5395 是否拆分或合入，决定 v0.15.0 节奏；三是 open_issues 能否重新压回 500 附近，否则 v0.14.0 的稳定性债务会继续拖慢功能迭代。"
+    "next_week": "下周重点观察三条线：一是 open_issues 能否从 653 回落，判断 v0.14.1 稳定性债务是否收敛；二是 #5496 Studio discovery、#4819 ZCode、#3388 PaaS 部署是否拆分或进入验证通过，决定 v0.15.0 节奏；三是 #5322 桌面崩溃熔断、#5498 删除取消运行、#5512 AMR 代理加固是否形成新的 patch 批次。"
   }
 }
