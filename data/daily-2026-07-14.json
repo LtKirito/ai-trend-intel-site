@@ -1,0 +1,443 @@
+{
+  "date": "2026-07-14",
+  "title": "2026-07-14 AI信息差日报",
+  "coverage": "覆盖窗口：7月13日（周一）~ 7月14日（周二）",
+  "sources": "信息源：阶跃星辰官方发布会 / 腾讯混元 GitHub / 商汤 OpenSenseNova / Firecrawl / GitHub Blog / Product Hunt / Hacker News / 36氪/量子位/智东西 / 环球网 / LTM 官方新闻稿 / 中文技术社区",
+  "conclusions": [
+    "阶跃星辰发布 Step AOS + STEPX Neo，标志着中国厂商首次尝试用“智能体原生 OS + 大模型原生终端”重新定义手机。",
+    "Grok Build CLI 被曝静默上传完整仓库，AI 编码工具的信任危机从“隐写标记”升级到“代码库出境”。",
+    "OpenAI 与 Anthropic 同日放宽高端模型限制，AI 巨头竞争从“谁模型更强”进入“谁更让用户用得起/留得住”。",
+    "腾讯混元 HyOCR-1.5 和商汤 SenseNova-Vision 双双开源，中国模型在多模态文档/视觉统一上开始给出具体可部署方案。",
+    "Agent 搜索基础设施（AnySearch）登顶 Product Hunt，说明 Agent 生态的瓶颈正在从“模型智商”转向“数据供给质量”。"
+  ],
+  "summary": "7/13-14 的窗口内，中国 AI 终端（阶跃星辰）、国产多模态开源（腾讯混元/商汤）与 Agent 信任危机（Grok Build）同时爆发，OpenAI 和 Anthropic 的额度战则把竞争焦点拉回成本与留存。",
+  "body": "本日报覆盖 7/13-14 的 24-48 小时窗口。3 条 P0 + 8 条 P1 + 2 条 P2。最大信号是阶跃星辰发布的 Step AOS / STEPX Neo，它试图从操作系统层面为智能体重构终端；其次是 Grok Build CLI 的严重隐私泄露事件，把编码 Agent 的信任问题推向新高；以及 OpenAI/Anthropic 同日放宽高端模型限制，显示头部竞争从模型能力转向用户留存与成本。P1 侧集中在国产开源多模态（腾讯混元 HyOCR-1.5、Hy3、商汤 SenseNova-Vision）、Agent 搜索基础设施（AnySearch）、企业交付合作（LTM × Anthropic）、数据管线（Firecrawl Prometheus）和成本治理（Claude Code token overhead）。",
+  "judgement": "今天的最大信息差不是单点模型发布，而是“Agent 如何安全地接管系统与数据”。Step AOS 试图在手机层面给出答案，Grok Build 则反面提醒：若数据边界失守，Agent 能力越强风险越大。企业用户应优先做三件事：审计 AI 工具的网络行为、为敏感任务建立沙箱/数据驻留策略、建立模型成本审计（而非只看模型单价）。",
+  "tags": [
+    "阶跃星辰",
+    "Step-AOS",
+    "STEPX-Neo",
+    "Grok-Build",
+    "xAI",
+    "OpenAI",
+    "Anthropic",
+    "Fable-5",
+    "Codex",
+    "腾讯混元",
+    "HyOCR-1.5",
+    "Hy3",
+    "商汤",
+    "SenseNova-Vision",
+    "AnySearch",
+    "Product-Hunt",
+    "LTM",
+    "Claude-Code",
+    "Token-Overhead",
+    "Agent-Search",
+    "WAIC-2026"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "阶跃星辰发布全球首款大模型原生智能体手机 STEPX Neo 与智能体原生 OS Step AOS",
+      "summary": "7月13日，阶跃星辰发布智能体原生操作系统 Step AOS、大模型原生终端品牌 STEPX 及首款手机 STEPX Neo；内置个人智能体 Amoo，采用端云多脑“1+N”模型矩阵，首批接入美团、支付宝、滴滴、携程、WPS、剪映等应用，将于 WAIC 2026 首秀。",
+      "why": "这是首个为“智能体”而非“人操作应用”重构的终端操作系统，试图解决记忆、决策、执行三堵墙；如果生态跑通，可能改变手机应用分发和交互范式。",
+      "action_fact": "关注 WAIC 7/17 首秀和真机体验；如果你是移动/AI 应用开发者，评估是否为 Amoo/Step AOS 调整入口和权限设计。",
+      "action_judge": "概念领先，但量产、应用适配和隐私治理仍是最大变量；短期看 WAIC 热度，长期看用户是否愿意把系统级控制权交给智能体。",
+      "tags": [
+        "阶跃星辰",
+        "Step-AOS",
+        "STEPX-Neo",
+        "Amoo",
+        "Agent-native-OS",
+        "WAIC-2026"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260713A0AFZP00",
+        "https://finance.eastmoney.com/a/202607143804333986.html",
+        "https://new.qq.com/rain/a/20260714A01KIE00"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Grok Build CLI 被曝静默上传整个仓库（含 .env 与完整 Git 历史）",
+      "summary": "开发者 cereblab 用 mitmproxy 对 Grok Build CLI v0.2.93 抓包发现：.env 文件以明文进入模型对话并被存入 session_state 归档；整个仓库以 git bundle 形式上传至 Google Cloud Storage 桶 grok-code-session-traces；关闭“改进模型”选项无效，12 GB 测试仓库中存储通道上传 5.10 GiB，模型通道仅 192 KB（27,800 倍）。",
+      "why": "这是编码 Agent 最严重的隐私/信任事件之一：未经明确授权即上传完整代码库和密钥，且文档未披露；xAI 至今未公开回应。",
+      "action_fact": "立即停止使用 Grok Build 处理含敏感代码/密钥的仓库；用 mitmproxy/Charles 审计网络流量；通过沙盒/网络隔离限制 CLI；等待 xAI 官方补丁和说明。",
+      "action_judge": "在企业明确修复前，Grok Build 应被视为不可信；这也会加速企业对 AI 编码工具的数据出境和秘密审计治理。",
+      "tags": [
+        "Grok-Build",
+        "xAI",
+        "安全",
+        "隐私",
+        "代码泄露"
+      ],
+      "sources": [
+        "https://onthewire.ai/article/a-wire-level-teardown-says-xai-s-coding-cli-uploads-your-entire-repo-opt-out-or-not",
+        "https://www.tmtpost.com/agent/ai-article?id=19060",
+        "https://cloud.tencent.com/developer/news/4240556"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "OpenAI 与 Anthropic 同时放宽高端模型限制，用户争夺白热化",
+      "summary": "Anthropic 7/12 宣布 Fable 5 订阅内访问期限再延 7 天至 7/19，Claude Code 每周额度上限 +50% 同步顺延；OpenAI 随即宣布临时取消 Codex 5 小时使用限制（覆盖 Plus/Business/Pro），并优化 GPT-5.6 Sol 效率、重置活跃用户额度。Codex 活跃用户突破 600 万。",
+      "why": "两家公司从“模型能力竞赛”进入“用户留存与成本控制竞赛”；Fable 5 延期源于用户账单压力和算力紧张，OpenAI 则以取消限制+效率优化正面截流。",
+      "action_fact": "符合条件的 Claude 付费用户在 7/19 前可将每周额度最多 50% 用于 Fable 5；Codex 用户可利用无限制窗口测试长任务；团队应对比 Sol/Terra/Luna 与 Fable 5 的实际任务成本。",
+      "action_judge": "短期用户受益，但 7/19 后 Fable 5 将按 10$/1M in / 50$/1M out 计费，需提前规划预算和模型路由策略。",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "Fable-5",
+        "Codex",
+        "定价",
+        "额度"
+      ],
+      "sources": [
+        "https://www.aibars.net/en/library/ai-news/details/864514479747108864",
+        "https://new.qq.com/rain/a/20260713A0315H00",
+        "https://www.163.com/tech/article/L1NPP0GO00097U7T.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "腾讯混元开源 1B 端到端 OCR VLM HyOCR-1.5",
+      "summary": "7月13日，腾讯混元开源 HyOCR-1.5：1B 参数，OmniDocBench v1.6 端到端 94.74 分排名第一；支持 331 种语言（含古文字）、4K 分辨率、128K 上下文；DFlash 投机解码使 Transformers 推理速度提升 6.37 倍；训练/推理/权重全栈开源。",
+      "why": "首个全栈开源的端到端 OCR 专家模型，把文档识别从“多模型拼接”变成“单模型统一”，对合同、古籍、票据数字化等场景影响直接。",
+      "action_fact": "下载 Hugging Face/GitHub 权重，用本地文档测试；评估是否能替换现有 OCR/文档解析 pipeline。",
+      "action_judge": "小参数+高性能+本地部署，对数据隐私敏感企业极具吸引力；下一步关键看腾讯产品（元宝、企业微信、微信）何时集成。",
+      "tags": [
+        "腾讯混元",
+        "HyOCR-1.5",
+        "OCR",
+        "VLM",
+        "开源"
+      ],
+      "sources": [
+        "https://ai-bot.cn/hyocr-1-5/",
+        "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+        "https://www.huxiu.com/ainews/13844.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "商汤开源 SenseNova-Vision 7B-MoT 统一视觉大模型",
+      "summary": "7月8日，商汤开源 SenseNova-Vision-7B-MoT：7B 参数 MoT 架构，将检测、分割、深度估计、表面法线、OCR、关键点、相机姿态估计、多视角点云重建等视觉任务统一为原生文本/图像/混合生成；无需任务特定头；同步开源 5000 万样本 SenseNova-Vision-Corpus-50M。",
+      "why": "首次把“经典计算机视觉任务”真正并入统一多模态大模型，开发者可能不再需要维护多个专用模型。",
+      "action_fact": "从 Hugging Face/ModelScope 下载权重，跑官方示例；用自定义图像测试检测/分割/深度任务。",
+      "action_judge": "统一视觉模型如果稳定，会显著降低视觉 AI 应用门槛；但非商用许可（CC BY-NC 4.0）限制企业直接使用。",
+      "tags": [
+        "商汤",
+        "SenseNova-Vision",
+        "统一视觉",
+        "MoT",
+        "开源"
+      ],
+      "sources": [
+        "https://github.com/OpenSenseNova/SenseNova-Vision",
+        "https://comfyui-wiki.com/zh/news/2026-07-08-sensenova-vision",
+        "https://finance.sina.cn/2026-07-13/detail-inihrsvh9008178.d.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Agent 专用搜索 AnySearch 登顶 Product Hunt 周榜",
+      "summary": "7月13日，中国团队 AnySearch 登顶 Product Hunt 周榜 Top 1：定位为“给 Agent 用的搜索基础设施”，覆盖 20+ 垂直数据源（代码、法律、学术、金融等），300 题基准综合准确率 76.4%，领先 Parallel/Brave；支持 API、MCP、Skill 接入。",
+      "why": "通用搜索（Google/Exa）对 Agent 不够结构化，垂直数据质量差会放大 token 浪费和错误；AnySearch 把“搜索路由+去重+信息密度排序”前置。",
+      "action_fact": "通过 API/MCP/Skill 替换 agent 的通用搜索步骤，尤其适合金融、法律、代码、竞品监控场景。",
+      "action_judge": "Agent 搜索基础设施是今年的关键赛道；AnySearch 的真实优势取决于垂直数据覆盖和实时性，建议先跑小批量验证。",
+      "tags": [
+        "AnySearch",
+        "Product-Hunt",
+        "Agent-Search",
+        "MCP",
+        "Skill"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260713A0BW6600",
+        "https://finance.sina.cn/stock/jdts/2026-07-13/detail-inihsuhr4178680.d.html",
+        "https://ustack.app/blogs/producthunt-daily-2026-07-06"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "腾讯混元 Hy3 正式版：Apache 2.0 开源，Agent 解决率 72%→90%",
+      "summary": "7月6日，腾讯混元 Hy3 正式版开源：295B 总参数/21B 激活的 MoE，支持 256K 上下文，Apache 2.0 协议；内部评测 Agent 任务成功率从 72% 提升到 90%，幻觉率从 12.5% 降到 5.4%，平均耗时缩短 34%；已接入 WorkBuddy/CodeBuddy、元宝、Marvis、ima 等。",
+      "why": "国产开源模型中 Agent 和生产力场景提升最显著的一款，且定价输入 1 元/百万 token，对国内企业和开发者有直接成本优势。",
+      "action_fact": "通过腾讯云 TokenHub 或 Hugging Face/ModelScope 调用；对比 Hy3 与 GLM-5.2/DeepSeek-V4 在你真实工作流中的成本和准确率。",
+      "action_judge": "Hy3 在搜索类 Agent 和办公任务上表现突出，但复杂代码/长链条企业任务仍需验证；Apache 2.0 是加分项。",
+      "tags": [
+        "腾讯混元",
+        "Hy3",
+        "MoE",
+        "开源",
+        "Agent"
+      ],
+      "sources": [
+        "https://cloud.tencent.com/developer/article/2707339",
+        "https://www.163.com/dy/article/L168CHBE0514R9OJ.html",
+        "https://www.jiemian.com/article/14754276.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "HN 热帖：Claude Code 启动即烧 32.8k token，OpenCode 仅 6.9k",
+      "summary": "7月12-14日，Systima 用日志代理在 API 边界实测 Claude Code 与 OpenCode：22 字符提示词下，Claude Code 首请求约 32,800 token（约 24k 为 27 个工具定义），OpenCode 约 6,900 token；同一任务累计输入 Claude Code 268k vs OpenCode 72k（3.7 倍），子智能体展开后 4.2 倍。",
+      "why": "把 Agent 成本讨论从“模型单价”转向“上下文装载策略”和“工具 schema 膨胀”；缓存前缀不稳定导致重复付费。",
+      "action_fact": "在代理前加日志代理，测量首请求、缓存写入、子智能体放大；关闭不用的工具/MCP，减少 schema 体积。",
+      "action_judge": "工具多≠更好；企业应要求 Agent 框架提供工具级开关和成本审计，否则账单会失控。",
+      "tags": [
+        "Claude-Code",
+        "OpenCode",
+        "Token-Overhead",
+        "成本",
+        "HN"
+      ],
+      "sources": [
+        "https://explainx.ai/blog/claude-code-vs-opencode-token-overhead-systima-study-july-2026",
+        "https://dev.to/ashraf_chowdury09/claude-code-burns-33k-tokens-before-it-even-reads-your-prompt-45p2",
+        "https://www.cnblogs.com/ninghg/p/21391844"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "LTM 与 Anthropic 战略合作，Claude 嵌入 BlueVerse 企业交付平台",
+      "summary": "7月13日，印度 IT 服务巨头 LTM 宣布与 Anthropic 战略合作：Claude、Claude Code、Claude Cowork 将嵌入 LTM BlueVerse AI Delivery Fabric，覆盖软件工程、应用现代化、Agent 编排、SRE、可观测性；同时扩大 AI1000 人才计划，建立 Claude 卓越中心（CoE）。",
+      "why": "标志 Anthropic 通过系统集成商（SI）渠道进入企业规模化交付，与微软/OpenAI 的 SI 生态正面竞争。",
+      "action_fact": "企业用户可评估 LTM 等 SI 的 Claude 交付能力、治理框架和数据驻留合规。",
+      "action_judge": "模型能力之外的“交付能力+人才+治理”将成为企业采纳的关键差异；中国 SI 与国产模型合作也可能复制这一路径。",
+      "tags": [
+        "LTM",
+        "Anthropic",
+        "Claude-Code",
+        "企业交付",
+        "BlueVerse"
+      ],
+      "sources": [
+        "https://www.ltm.com/content/ltimcorporatewebsite/us/news-events/press-releases/2026/ltm-partners-with-anthropic-for-claude-expansion.html",
+        "https://www.outlookbusiness.com/corporate/ltm-joins-hands-with-anthropic-to-scale-claude-ai-across-enterprises",
+        "https://www.financialexpress.com/business/industry/ltm-anthropic-tie-up-for-ai-adoption-push/4290713/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Firecrawl 推出 Prometheus：自然语言生成可验证、自修复的 TypeScript 爬虫",
+      "summary": "Firecrawl 发布 Prometheus（Forward Deployed Agent）：用自然语言描述数据需求，自动生成并运行 TypeScript 采集器，返回可运行的 script.ts 和样本数据；支持保存为版本化 Script，目标网站变化时自修复；可通过 API、CLI、MCP、Skill 调用。",
+      "why": "把“一次性搜索结果”变成“可版本化、可复用、可审计的数据管线”，对 Agent 的实时数据供应链很重要。",
+      "action_fact": "用“top 5 HN stories”等真实需求测试 build 流程；对比手写的 scraper 在维护性和稳定性上的表现。",
+      "action_judge": "对于需要持续更新的网页数据源（竞品、舆情、RAG），Prometheus 模式比单次搜索更可靠。",
+      "tags": [
+        "Firecrawl",
+        "Prometheus",
+        "Web-Scraping",
+        "Agent",
+        "MCP"
+      ],
+      "sources": [
+        "https://www.firecrawl.dev/prometheus/docs",
+        "https://hokai.io/hub/tools/prometheus",
+        "https://www.sheepnav.com/news/news-prometheus-by-firecrawl"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Kimi K2.7 Code 进入 GitHub Copilot Business 和 Enterprise",
+      "summary": "7月7日，GitHub 宣布 Kimi K2.7 Code 已向 Copilot Business 和 Enterprise 开放；这是 Copilot 模型选择器中首个开放权重模型，由 GitHub 在 Microsoft Azure 上托管，按用量计费，企业管理员默认关闭、需手动启用。",
+      "why": "标志着开源/开放权重模型首次进入全球最大开发者平台的模型选择器，企业需要在成本、透明度、合规之间做权衡。",
+      "action_fact": "如果你是 Copilot 企业管理员，先评估安全/合规后再开启；组织内小范围 A/B 测试 Kimi 与闭源模型的成本和代码质量。",
+      "action_judge": "模型选择器从“产品体验”变成“供应商管理界面”；开放权重模型会加速模型成本下降，但治理复杂度上升。",
+      "tags": [
+        "Kimi-K2.7-Code",
+        "GitHub-Copilot",
+        "Open-Weight",
+        "Enterprise"
+      ],
+      "sources": [
+        "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/",
+        "https://byteiota.com/kimi-k2-7-is-now-in-github-copilot-what-developers-need-to-know",
+        "https://www.toutiao.com/article/7657900732380643840"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "浪潮信息发布 CPU 原生液冷整机柜，单柜可运行 4 万+ Agent",
+      "summary": "7月13日，浪潮信息在开放计算大会发布业界首款 CPU 原生液冷整机柜服务器，单柜最大支持 384 颗 CPU，可支撑 4 万+ Agent 协同运行。",
+      "why": "为 Agent 规模化部署提供专用基础设施信号；虽然具体架构和场景待验证，但说明 IT 基础设施开始向“Agent 密度”优化。",
+      "action_fact": "关注其面向企业 Agent 集群的能效、调度、安全隔离方案；适合大规模 Agent 服务化的团队评估。",
+      "action_judge": "硬件密度只是前提，Agent 编排、故障隔离和成本模型仍是关键。",
+      "tags": [
+        "浪潮",
+        "Agent-Infrastructure",
+        "服务器",
+        "液冷"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260714A0204E00?refer=cp_1009"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "EvolCore 推出 AUN 协议，定位“Agent 世界的 TCP/IP”",
+      "summary": "7月13日，非凡产研报道 EvolCore 及其 AUN（Agent Union Network）协议，赋予每个 Agent 全局唯一身份并实现跨平台自主协作。",
+      "why": "跨平台 Agent 互操作是行业标准化的关键需求；AUN 是众多探索之一，但生态落地尚早。",
+      "action_fact": "关注 AUN 协议规范、SDK 和合作伙伴进展；不要过早押注单一协议。",
+      "action_judge": "在技能/协议标准大战中，真正胜出者需要头部平台（OpenAI/Anthropic/Google）采纳。",
+      "tags": [
+        "EvolCore",
+        "AUN",
+        "Agent-Protocol",
+        "互操作"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260714A0204E00?refer=cp_1009"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "AnySearch",
+      "type": "Agent 搜索基础设施",
+      "highlight": "为 Agent 设计的垂直搜索，20+ 数据源、去重、信息密度排序，支持 API/MCP/Skill",
+      "audience": "需要高质量结构化数据的 Agent 开发者",
+      "action": "用 API 或 Skill 替换 agent 的通用搜索，在金融/法律/代码场景验证",
+      "url": "https://new.qq.com/rain/a/20260713A0BW6600"
+    },
+    {
+      "name": "HyOCR-1.5",
+      "type": "OCR VLM",
+      "highlight": "1B 参数端到端 OCR，OmniDocBench 94.74 分第一，331 语言，训练/推理/权重全开源",
+      "audience": "需要文档数字化、票据/古籍/表格识别的开发者",
+      "action": "从 Hugging Face 下载权重，用本地文档测试替换现有 OCR pipeline",
+      "url": "https://github.com/Tencent-Hunyuan/HunyuanOCR"
+    },
+    {
+      "name": "SenseNova-Vision 7B-MoT",
+      "type": "统一视觉大模型",
+      "highlight": "单一模型覆盖检测、分割、深度、法线、3D 重建、OCR 等任务，无需任务头",
+      "audience": "视觉 AI 开发者、多模态研究者",
+      "action": "从 Hugging Face/ModelScope 下载，跑自定义图像的检测/分割/深度任务",
+      "url": "https://github.com/OpenSenseNova/SenseNova-Vision"
+    },
+    {
+      "name": "Firecrawl Prometheus",
+      "type": "数据采集 Agent",
+      "highlight": "自然语言→可验证 TypeScript 爬虫，版本化、自修复、可调度或按需运行",
+      "audience": "需要持续网页数据源的数据工程师、RAG/Agent 开发者",
+      "action": "用真实数据需求测试 build 流程，评估生成代码的可维护性",
+      "url": "https://www.firecrawl.dev/prometheus/docs"
+    },
+    {
+      "name": "Kimi K2.7 Code",
+      "type": "开放权重编程模型",
+      "highlight": "首个进入 GitHub Copilot 的开放权重模型，企业管理员可控启用",
+      "audience": "GitHub Copilot Business/Enterprise 用户、关注成本/审计的团队",
+      "action": "在组织内小范围 A/B 测试 Kimi 与闭源模型的成本和代码质量",
+      "url": "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "STEPX Neo：AI 手机终于开始“换脑”了？",
+      "hook": "全球首款大模型原生智能体手机，系统为 Agent 而生",
+      "angle": "现场/资料解读：Step AOS 怎么解决记忆、决策、执行三堵墙；对比传统手机+AI 助手",
+      "materials": "发布会片段、架构图、应用列表、WAIC 首秀信息",
+      "difficulty": "中"
+    },
+    {
+      "title": "Grok Build 上传了整个仓库：你的代码还安全吗？",
+      "hook": "mitmproxy 抓包实锤：.env 和 Git 历史都被传走",
+      "angle": "安全科普：演示如何抓包、哪些文件泄露、企业和个人该怎么防",
+      "materials": "抓包截图、存储桶名称、.env 示例、沙箱隔离方案",
+      "difficulty": "中"
+    },
+    {
+      "title": "OpenAI 和 Anthropic 额度战：怎么薅才最省？",
+      "hook": "Fable 5 再延 7 天，Codex 取消 5 小时限制",
+      "angle": "算账对比：用同一任务对比 Fable 5、Sol、Codex 的实际成本，给出使用窗口建议",
+      "materials": "价格表、同一任务录屏、日历倒计时",
+      "difficulty": "低"
+    },
+    {
+      "title": "HyOCR-1.5 实测：1B 参数如何霸榜 OCR？",
+      "hook": "OmniDocBench 94.74 分，支持古文字和 331 种语言",
+      "angle": "实测：合同、表格、手写笔记、古籍扫描，对比传统 OCR/多模态模型",
+      "materials": "本地部署录屏、文档样本、识别结果对比、GitHub 页面",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 的 33k token 上下文税：为什么同样任务贵 4 倍？",
+      "hook": "22 字符提示词，Claude Code 先烧 32.8k token",
+      "angle": "拆解工具 schema、缓存策略、子智能体如何放大成本；给出降本技巧",
+      "materials": "日志代理示意图、token 数字对比、工具列表面板",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "旧模型盘点/全景回顾",
+      "reason": "周末至周一出现多篇“2026 上半年 AI 模型盘点”，内容多为已知信息重组，无新信号。"
+    },
+    {
+      "item": "未经证实的 Grok Build 额外上传传闻",
+      "reason": "有社交媒体称 Grok Build 上传整个 home 目录（含 SSH 密钥、密码库），但尚无抓包复现，归入待验证。"
+    },
+    {
+      "item": "GPT-5.5 Instant / 下一代模型传闻",
+      "reason": "多个来源出现 GPT-5.5 Instant 等传闻，无官方或可靠证据，不纳入。"
+    },
+    {
+      "item": "纯工具排行榜/列表文",
+      "reason": "无深度分析、无来源链接或无法核实的清单式内容，不进入高优先级。"
+    },
+    {
+      "item": "7/10 已覆盖内容的重复",
+      "reason": "GPT-5.6 全面开放、ChatGPT Work、Claude Code 207、Meta Muse Spark 1.1 等已在前日报覆盖。"
+    },
+    {
+      "item": "具身智能/AI 融资数字炒作",
+      "reason": "“2026 开年融资超 XXX 亿元”等具体数字缺乏可核验来源。"
+    },
+    {
+      "item": "Agnes AI 免费模型杀入 Coding 第一梯队",
+      "reason": "仅单源报道，缺乏独立验证和官方信息，暂不纳入。"
+    },
+    {
+      "item": "对 Step AOS 销量/市场份额的乐观预测",
+      "reason": "新机尚未公布上市时间和价格，无出货数据支撑。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Step AOS / STEPX Neo 在 WAIC 2026 的首秀与真机体验",
+      "reason": "概念产品能否在真实交互中立住，是判断其信息差价值的关键。"
+    },
+    {
+      "item": "Grok Build CLI 官方回应与安全补丁",
+      "reason": "xAI 尚未公开回应，是否有整改、如何影响用户信任，需要持续观察。"
+    },
+    {
+      "item": "Claude Fable 5 7/19 后的按量计费实际转化",
+      "reason": "用户是否会大量流失或转向按量付费，决定 Anthropic 的策略效果。"
+    },
+    {
+      "item": "GPT-5.6 Sol 效率优化后的 API 成本变化",
+      "reason": "OpenAI 称已优化 Sol 效率，需验证实际任务 token 消耗。"
+    },
+    {
+      "item": "AnySearch 在真实 Agent 工作流中的召回率与幻觉率",
+      "reason": "垂直搜索对 Agent 的实际价值需要多场景验证。"
+    },
+    {
+      "item": "腾讯混元 HyOCR-1.5 / Hy3 的产品集成进度",
+      "reason": "开源模型能否快速进入腾讯产品矩阵，决定其商业化节奏。"
+    },
+    {
+      "item": "Claude Code 信任危机后续（隐写标记/后门）",
+      "reason": "Anthropic 的透明度和整改措施将影响企业客户留存。"
+    },
+    {
+      "item": "LTM × Anthropic 企业客户落地案例",
+      "reason": "SI 合作模式能否规模化，是 Anthropic 企业战略的关键变量。"
+    }
+  ]
+}
