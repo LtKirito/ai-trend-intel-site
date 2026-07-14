@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 77616,
-    "forks": 8886,
-    "open_issues": 653,
+    "stars": 77899,
+    "forks": 8930,
+    "open_issues": 651,
     "latest_release": {
       "version": "open-design-v0.14.1",
       "date": "2026-07-10",
@@ -12,195 +12,195 @@
   },
   "recent_prs": [
     {
-      "number": 5496,
-      "title": "feat(web): make Studio discovery visual and inline",
+      "number": 5583,
+      "title": "feat: Open Loop - critique loop engineering with Design Jury auto-fix cycle",
+      "state": "open",
+      "author": "pixcore598-design",
+      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-product-review"],
+      "impact": "引入设计评审自修复循环：agent 生成设计→自动 critique→发现问题→自动迭代修复，减少人工 back-and-forth，向自驱式设计质量闭环演进，是 v0.15.0 可能的旗舰功能候选。",
+      "url": "https://github.com/nexu-io/open-design/pull/5583"
+    },
+    {
+      "number": 5586,
+      "title": "feat(prompts): pin photo-overlay placement discipline in the slim charter",
       "state": "open",
       "author": "open-design-crew[bot]",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "Studio discovery 从独立的 Questions 面板改为聊天内视觉卡片，Deck / Prototype 风格选择可预览，回答后折叠成 brief，降低用户进入设计流程的认知摩擦。",
-      "url": "https://github.com/nexu-io/open-design/pull/5496"
+      "labels": ["size/S", "risk/high", "type/feature"],
+      "impact": "在 slim charter 中固化 photo-overlay 定位纪律，约束生成结果中图片叠加层的位置行为，属于 prompt 层面的设计一致性加固。",
+      "url": "https://github.com/nexu-io/open-design/pull/5586"
     },
     {
-      "number": 5498,
-      "title": "fix(daemon): cancel active runs when deleting a conversation or project (#5468)",
+      "number": 5517,
+      "title": "style(demo): UI polish round 3 — glass materials, browser add-to-chat, smoother tabs",
       "state": "open",
-      "author": "AriaZhao-coder",
-      "labels": ["size/M", "risk/high", "type/bugfix", "validated"],
-      "impact": "删除 conversation 或 project 时先取消进行中的 run，避免用户删对话后后台仍消耗 provider 额度或向已删除目录写入文件。",
-      "url": "https://github.com/nexu-io/open-design/pull/5498"
+      "author": "wangchenglong0001",
+      "labels": ["size/XXL", "risk/high", "type/enhancement"],
+      "impact": "Demo UI 打磨第三轮：frosted-glass 材质统一、浏览器 add-to-chat 入口、tab 切换流畅度，继续推进展示型 UI 的视觉一致性。",
+      "url": "https://github.com/nexu-io/open-design/pull/5517"
     },
     {
-      "number": 5322,
-      "title": "fix(desktop): break renderer crash-reload loops with a circuit breaker",
+      "number": 5557,
+      "title": "feat(web): add preview delivery status feedback",
       "state": "open",
-      "author": "lefarcen",
-      "labels": ["size/XL", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "桌面端对渲染进程崩溃循环引入熔断器，连续崩溃后进入恢复屏并收集 minidump/GPU 信息，解决单台设备一日触发数万次崩溃事件的问题。",
-      "url": "https://github.com/nexu-io/open-design/pull/5322"
+      "author": "open-design-crew[bot]",
+      "labels": ["size/XL", "risk/medium", "type/feature", "needs-validation"],
+      "impact": "Preview workspace 新增交付状态反馈（进度/确认/恢复），补齐 #5525 分离 agent 成功与结果交付后的 UX 空缺，用户可感知设计结果是否成功送达。",
+      "url": "https://github.com/nexu-io/open-design/pull/5557"
     },
     {
-      "number": 5512,
-      "title": "fix(daemon): harden the AMR proxy against unhandled pipe errors",
-      "state": "merged",
+      "number": 5584,
+      "title": "fix(daemon): reject a second concurrent run on one conversation (409)",
+      "state": "open",
       "author": "tomsen02",
-      "labels": ["size/S", "risk/high", "type/bugfix", "validated"],
-      "impact": "AMR/vela 代理两条流都加上 source-error 处理，上游重置或客户端中断上传时能更快清理连接，属于防御性加固而非确认崩溃修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5512"
+      "labels": ["size/L", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "同一 conversation 上发起第二个并发 run 时返回 409 拒绝，直接修复 #5490 并发 run fork native session 导致丢失更新问题，属于运行生命周期治理关键补丁。",
+      "url": "https://github.com/nexu-io/open-design/pull/5584"
     },
     {
-      "number": 3388,
-      "title": "feat(deploy): add native support for Netlify, Render, and Railway deployments",
+      "number": 5585,
+      "title": "fix daemon Antigravity prompt delivery after agy 1.1.1",
       "state": "open",
-      "author": "Maou3434",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-design-review"],
-      "impact": "Share/Deploy 面板新增 Netlify、Render、Railway 一键部署，补齐除 Vercel 外的 PaaS 出口，降低生成设计在线托管的门槛。",
-      "url": "https://github.com/nexu-io/open-design/pull/3388"
-    },
-    {
-      "number": 5143,
-      "title": "fix(daemon): use dynamic model guidance in media dispatch hint (#5117)",
-      "state": "open",
-      "author": "xxiaoxiong",
+      "author": "thebtf",
       "labels": ["size/S", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "媒体生成提示不再硬编码 flux-pro-ultra，而是根据用户 BYOK 的 imageModel / videoModel 默认配置动态推荐，减少自定义端点下的模型路由错误。",
-      "url": "https://github.com/nexu-io/open-design/pull/5143"
+      "impact": "修复 Antigravity (agy) 适配器在 agy 1.1.1 后的 prompt 传递问题，直接对应 #5495/#5448 两个 24 评论高热 bug，解决 agy CLI 用 -p 而非 stdin 读取 prompt 的路由错误。",
+      "url": "https://github.com/nexu-io/open-design/pull/5585"
     },
     {
-      "number": 4819,
-      "title": "feat: add macOS ZCode runtime support",
+      "number": 5577,
+      "title": "fix(web): auto-open Plan-mode HTML files that rewrite an existing artifact (#5352)",
       "state": "open",
-      "author": "jzhishu",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation", "needs-design-review"],
-      "impact": "macOS 端新增 ZCode 运行时支持，通过 app-server 协议接入智谱 ZCode，扩展 OD 的 agent/CLI 生态到中文本地模型工具。",
-      "url": "https://github.com/nexu-io/open-design/pull/4819"
+      "author": "maxmilian",
+      "labels": ["size/M", "risk/medium", "type/bugfix", "needs-validation"],
+      "impact": "Plan 模式重写已有 artifact 时自动打开 HTML 文件，修复 #5352 重写不刷新预览的问题，提升 Plan 模式迭代体验。",
+      "url": "https://github.com/nexu-io/open-design/pull/5577"
     },
     {
-      "number": 5505,
-      "title": "add liquid-glass-card skill",
-      "state": "open",
-      "author": "wiggdevin",
-      "labels": ["size/L", "risk/medium", "type/feature", "needs-validation"],
-      "impact": "社区新增 liquid-glass-card 技能，提供 Apple 风格液态玻璃卡片效果，继续扩展 design-system 技能目录。",
-      "url": "https://github.com/nexu-io/open-design/pull/5505"
+      "number": 5579,
+      "title": "docs(agent-adapters): describe the data-oriented RuntimeAgentDef registry (not a class interface)",
+      "state": "closed",
+      "author": "Nissimmiracles",
+      "labels": ["size/M", "risk/low", "type/docs"],
+      "impact": "补充 agent 适配器文档，阐明 RuntimeAgentDef 是数据导向注册而非类接口，降低社区贡献适配器的认知门槛。",
+      "url": "https://github.com/nexu-io/open-design/pull/5579"
     }
   ],
   "recent_issues": [
     {
-      "number": 5514,
-      "title": "Keep lock icons visible for long unavailable model names",
+      "number": 5528,
+      "title": "Bug: ACP child_close timeout marks completed artifact run as failed",
       "author": "open-design-crew[bot]",
-      "labels": ["bug", "good first issue", "help wanted", "ux"],
-      "comments": 2,
-      "summary": "免费用户在模型选择器中查看长名称的不可用模型时，锁图标被截断，导致无法清晰识别 tier 限制。",
-      "url": "https://github.com/nexu-io/open-design/issues/5514"
-    },
-    {
-      "number": 5513,
-      "title": "Polish Settings fullscreen control layout",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "good first issue", "help wanted", "ux"],
-      "comments": 2,
-      "summary": "Settings 全屏模式下右上角全屏/关闭按钮贴边，视觉拥挤且与内容边距不一致，影响首屏配置体验。",
-      "url": "https://github.com/nexu-io/open-design/issues/5513"
-    },
-    {
-      "number": 473,
-      "title": "RFC: add file management actions to Design Files",
-      "author": "irixzafra",
-      "labels": ["enhancement", "help wanted", "feature"],
-      "comments": 8,
-      "summary": "提案在 Design Files 中支持文件重命名、移动、新建文件夹等基础文件管理，属于长期 backlog 近期被重新激活。",
-      "url": "https://github.com/nexu-io/open-design/issues/473"
-    },
-    {
-      "number": 5489,
-      "title": "Proposal: expose full per-run diagnostics to local users & external agents (od run inspect + diagnostics API)",
-      "author": "tomsen02",
-      "labels": ["feature", "needs-product-direction"],
-      "comments": 4,
-      "summary": "建议将 daemon 已有的运行失败分类、耗时分段、token/cache 明细通过 od run inspect 和 API 暴露给本地用户与外部 agent。",
-      "url": "https://github.com/nexu-io/open-design/issues/5489"
-    },
-    {
-      "number": 2623,
-      "title": "Home tab should be pinned as the first and only non-closable tab",
-      "author": "shangxinyu1",
-      "labels": ["bug", "priority:p2", "ux"],
-      "comments": 3,
-      "summary": "Home tab 应被固定为首且不可关闭的锚点 tab，避免工作 tab 占据首位导致导航状态混乱。",
-      "url": "https://github.com/nexu-io/open-design/issues/2623"
-    },
-    {
-      "number": 5365,
-      "title": "Restore the current Open Design logo on the Home page",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "good first issue", "help wanted", "ux"],
-      "comments": 7,
-      "summary": "Home 页左侧导航和 hero 区域仍显示旧版 logo，影响品牌一致性和用户对当前版本的感知。",
-      "url": "https://github.com/nexu-io/open-design/issues/5365"
-    },
-    {
-      "number": 5172,
-      "title": "[Bug]: Switching tabs aborts active AI streaming output in the previous tab",
-      "author": "KuitoInoguchi",
       "labels": ["bug"],
-      "comments": 16,
-      "summary": "切换 tab 会立即中止前一 tab 的 AI 流式输出，前端组件生命周期与流绑定过深，影响长生成任务体验。",
-      "url": "https://github.com/nexu-io/open-design/issues/5172"
-    },
-    {
-      "number": 2356,
-      "title": "Add MCP support for creating new Open Design projects",
-      "author": "shangxinyu1",
-      "labels": [],
-      "comments": 7,
-      "summary": "MCP 目前只能操作已有项目，缺少 create_project 工具，外部 agent 无法从空状态启动 OD 工作流。",
-      "url": "https://github.com/nexu-io/open-design/issues/2356"
-    },
-    {
-      "number": 3561,
-      "title": "Deck bridge blanks nested scroll decks when navigating with arrow keys",
-      "author": "shangxinyu1",
-      "labels": ["stale"],
-      "comments": 1,
-      "summary": "嵌套横向滚动 deck 在使用键盘左右箭头导航时 preview 区域变白，deck bridge 对嵌套滚动容器识别不足。",
-      "url": "https://github.com/nexu-io/open-design/issues/3561"
-    },
-    {
-      "number": 3366,
-      "title": "Skill chip never mounts after @-mention pick — meta.skillIds always empty",
-      "author": "estelledc",
-      "labels": ["bug", "priority:p1"],
       "comments": 3,
-      "summary": "聊天输入框 @-mention 选择 Skill 后不会挂载 chip，也不会将 skillIds 传入 meta，导致整段技能调用路径静默失效。",
-      "url": "https://github.com/nexu-io/open-design/issues/3366"
+      "summary": "ACP 子进程关闭超时将已完成的设计 artifact 标记为失败，用户成功生成的设计结果在 UI 中显示为错误状态。",
+      "url": "https://github.com/nexu-io/open-design/issues/5528"
+    },
+    {
+      "number": 5527,
+      "title": "Codex imagegen outputs call_*.png but daemon only accepts ig_*.png",
+      "author": "AmyShang-alt",
+      "labels": ["bug", "priority:p0", "area/runtime"],
+      "comments": 3,
+      "summary": "P0 级 bug：Codex 图像生成输出文件名格式 call_*.png 与 daemon 期望的 ig_*.png 不匹配，导致所有 Codex 图像生成结果静默丢失。",
+      "url": "https://github.com/nexu-io/open-design/issues/5527"
+    },
+    {
+      "number": 5448,
+      "title": "[Bug]: Antigravity CLI on 0.14.1",
+      "author": "delorean2020",
+      "labels": ["bug"],
+      "comments": 24,
+      "summary": "Antigravity 适配器在 v0.14.1 后大面积失败，24 评论高热，agy CLI 用 -p 参数而非 stdin 传递 prompt 导致路由中断，已有修复 PR #5585。",
+      "url": "https://github.com/nexu-io/open-design/issues/5448"
+    },
+    {
+      "number": 5495,
+      "title": "Antigravity agent adapter fails to pass prompts: agy CLI reads -p literally instead of from stdin",
+      "author": "pratikforge",
+      "labels": ["bug"],
+      "comments": 3,
+      "summary": "与 #5448 同根因：agy CLI 把 -p 当作字面参数而非 stdin，prompt 传递路径中断，属于适配器协议层 bug。",
+      "url": "https://github.com/nexu-io/open-design/issues/5495"
+    },
+    {
+      "number": 5490,
+      "title": "[Bug]: concurrent runs on the same conversation fork the native session (lost update on agent_sessions)",
+      "author": "tomsen02",
+      "labels": ["bug"],
+      "comments": 2,
+      "summary": "同一 conversation 上并发 run 导致 native session 分叉，更新丢失，已有修复 PR #5584 通过返回 409 拒绝第二个 run。",
+      "url": "https://github.com/nexu-io/open-design/issues/5490"
+    },
+    {
+      "number": 5581,
+      "title": "Redesign the oversized Home settings popover",
+      "author": "open-design-crew[bot]",
+      "labels": ["enhancement", "needs-product-direction", "ux"],
+      "comments": 1,
+      "summary": "Home 页 Settings 弹出框过大影响首屏体验，提议重新设计为更紧凑的布局，目前需要产品方向确认。",
+      "url": "https://github.com/nexu-io/open-design/issues/5581"
+    },
+    {
+      "number": 3302,
+      "title": "[Kubernetes Deployment] Configure Web Base Path via Environment Variable",
+      "author": "McFredward",
+      "labels": ["enhancement", "stale"],
+      "comments": 8,
+      "summary": "K8s 部署场景需要通过环境变量配置 Web 基路径，企业自托管部署的关键需求，stale 后近期被重新激活。",
+      "url": "https://github.com/nexu-io/open-design/issues/3302"
+    },
+    {
+      "number": 3259,
+      "title": "Track mac/win server-mode tools-pack package closure",
+      "author": "nettee",
+      "labels": ["bug", "priority:p2"],
+      "comments": 5,
+      "summary": "macOS/Windows server-mode 工具包的打包闭环跟踪，涉及 headless/容器化部署的基础完整性。",
+      "url": "https://github.com/nexu-io/open-design/issues/3259"
+    },
+    {
+      "number": 2661,
+      "title": "Left/right keyboard arrows advance two slides at a time in preview",
+      "author": "shangxinyu1",
+      "labels": ["bug", "priority:p2", "stale"],
+      "comments": 6,
+      "summary": "预览模式中左右箭头一次跳两页，deck bridge 键盘导航逻辑错误，stale 后近期重新活跃。",
+      "url": "https://github.com/nexu-io/open-design/issues/2661"
+    },
+    {
+      "number": 2643,
+      "title": "Onboarding dropdown is too close to the bottom edge and not fully visible",
+      "author": "shangxinyu1",
+      "labels": ["bug", "priority:p2", "stale"],
+      "comments": 4,
+      "summary": "Onboarding 下拉框距底部边缘过近导致不完全可见，新用户首次体验受阻，stale 后近期重新活跃。",
+      "url": "https://github.com/nexu-io/open-design/issues/2643"
     }
   ],
   "trends": {
-    "direction": "v0.14.1 已于 7/10 发布，主打模型生态普惠（Grok 4.5 Free、Plus GPT 5.6、Fable 5、Muse 1.1）和模型选择器成本/质量元数据展示；当前主线围绕 v0.14.1 发布后体验闭环（桌面崩溃熔断、删除时取消运行、AMR 代理加固）与 v0.15.0 大功能预热（Studio 内联发现、ZCode macOS、PaaS 一键部署）双线并进。",
+    "direction": "v0.14.1 发布第 4 天，主线进入 bugfix 密集期：Antigravity 适配器修复 (#5585)、并发 run 409 拒绝 (#5584)、ACP 超时误标失败 (#5528)、Codex 图像文件名 P0 (#5527) 四线齐发；同时 v0.15.0 预热功能开始浮现——Open Loop 设计评审自修复循环 (#5583 XXL) 和 preview 交付状态反馈 (#5557) 显示迭代质量闭环方向。",
     "affected_modules": [
-      "apps/web：Studio discovery、模型选择器、Settings 全屏布局、Home 页 logo 与 tab 固定",
-      "apps/desktop：渲染进程崩溃循环熔断、恢复屏与诊断收集",
-      "apps/daemon：删除时取消运行、AMR 代理流、媒体提示动态模型、每运行诊断暴露提案",
-      "BYOK/多模型：模型元数据 badge、OpenAI-compatible 路由、媒体生成模型选择",
-      "部署/分享：Netlify / Render / Railway 一键部署",
-      "Agent 生态：ZCode macOS 运行时、MCP create_project、Skill chip 与 @-mention",
-      "Design Files 与 Deck bridge：文件管理、嵌套滚动 deck 导航"
+      "apps/daemon：并发 run 生命周期治理（409 拒绝）、ACP child_close 超时误判、Codex 图像文件名匹配、Antigravity prompt 路由",
+      "apps/web：preview 交付状态反馈、Plan 模式 HTML 自动打开、Home Settings popover 重设计",
+      "Agent 适配器：Antigravity (agy) prompt 传递修复、RuntimeAgentDef 数据导向文档",
+      "Design 迭代闭环：Open Loop Design Jury 自修复循环（v0.15.0 旗舰候选）",
+      "Demo/UI polish：第三轮 glass 材质 + add-to-chat + tab 流畅度",
+      "Prompt 工程层：photo-overlay 定位纪律固化",
+      "自托管/企业部署：K8s Web Base Path、mac/win server-mode tools-pack"
     ],
     "risks": [
-      "open_issues 从 527 升至 653（+126），v0.14.1 发布后的 issue influx 明显放大，可能包含回归、陈旧问题复活或新功能 backlog。",
-      "多个 XXL / high-risk PR 同时处于 needs-validation 或 design-review 状态（Studio discovery、ZCode、PaaS deploy），review 与回归测试压力持续上升。",
-      "桌面端崩溃循环熔断 (#5322) 与 AMR 代理加固 (#5512) 属于稳定性高敏感区域，验证不充分可能引入新的启动/代理行为。",
-      "#5172 切换 tab 中止流式输出与 #5498 删除时取消运行共同指向运行生命周期治理仍是薄弱点。",
-      "模型选择器同时推进元数据展示 (#5407)、锁图标布局 (#5514) 和媒体动态提示 (#5143)，若协调不足易产生多模型选择体验碎片化。"
+      "P0 级 #5527 Codex 图像文件名不匹配导致所有 Codex 图像静默丢失，直接影响 v0.14.1 用户核心体验。",
+      "Antigravity 适配器大面积失败（#5448 24 评论高热 + #5495），agy CLI 协议层 bug 阻断整个 Antigravity 用户群。",
+      "#5583 Open Loop XXL 高风险需 product-review，设计评审自修复若实现不精确可能引入过度迭代或设计漂移。",
+      "ACP child_close 超时将成功设计误标失败 (#5528)，与 #5584 并发 run 409 共同指向运行生命周期状态判定仍是系统性薄弱点。",
+      "open_issues 651 仍高位，4 个 stale issue 近期复活（#3302/#2661/#2643/#3259）增加 backlog 噪音，可能稀释 P0/P1 的处理优先级。"
     ],
     "actions": [
-      "优先观察 v0.14.1 发布后 open_issues 增速是否回落，区分真实回归、重复提交与 stale 问题重激活。",
-      "跟踪 #5512、#5498 等高优先级稳定性修复的合入节奏，确认是否进入 v0.14.2 补丁。",
-      "关注 #5496 Studio discovery 和 #4819 ZCode 的验证/拆分进展，判断 v0.15.0 功能旗舰候选。",
-      "验证模型选择器相关改动（#5514、#5143、#5407）是否形成连贯的 BYOK/多模型体验优化。",
-      "将 #5172 流式生命周期与 #3366 Skill chip 失效列为核心 UX 债务，持续跟踪是否有修复 PR。"
+      "紧急关注 #5527 P0 Codex 图像静默丢失是否有 hotfix PR 或 backport 计划，这是 v0.14.1 最严重回归。",
+      "跟踪 #5585 Antigravity prompt 修复和 #5584 并发 run 409 的合入节奏，确认是否进入 v0.14.2 patch。",
+      "观察 #5583 Open Loop 的 product-review 结果，判断是否纳入 v0.15.0 旗舰路线图。",
+      "关注 #5528 ACP 超时误标和 #5557 preview 交付反馈的协同进展，评估运行状态判定体系是否形成闭环。",
+      "留意 stale issue 复活潮（#3302 K8s/#2661/#2643 onboarding），判断是真实需求还是 backlog 噪音。"
     ],
-    "next_week": "下周重点观察三条线：一是 open_issues 能否从 653 回落，判断 v0.14.1 稳定性债务是否收敛；二是 #5496 Studio discovery、#4819 ZCode、#3388 PaaS 部署是否拆分或进入验证通过，决定 v0.15.0 节奏；三是 #5322 桌面崩溃熔断、#5498 删除取消运行、#5512 AMR 代理加固是否形成新的 patch 批次。"
+    "next_week": "下周三条观察主线：一是 #5527 P0 和 #5585/#5584 等关键 bugfix 是否快速合入并触发 v0.14.2；二是 #5583 Open Loop 的 product-review 走向，决定 v0.15.0 旗舰节奏；三是 open_issues 从 651 能否继续回落至 600 以下，验证 v0.14.1 后稳定性债务是否开始收敛。"
   }
 }
