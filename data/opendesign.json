@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 78267,
-    "forks": 9005,
-    "open_issues": 661,
+    "stars": 78658,
+    "forks": 9050,
+    "open_issues": 643,
     "latest_release": {
       "version": "open-design-v0.15.0",
       "date": "2026-07-14",
@@ -12,193 +12,193 @@
   },
   "recent_prs": [
     {
-      "number": 5671,
-      "title": "fix(tools-dev): rebuild stale contracts before daemon",
+      "number": 4576,
+      "title": "fix(deploy): honor target preview/production for Cloudflare Pages (#4483)",
       "state": "open",
+      "author": "cbeaulieu-gt",
+      "labels": ["size/XL", "risk/high", "type/bugfix", "needs-validation", "needs-design-review", "design-approved"],
+      "impact": "修复 Cloudflare Pages 部署时未区分 preview/production 目标环境的问题，XL 级 bugfix，直接影响部署准确性和生产环境安全。",
+      "url": "https://github.com/nexu-io/open-design/pull/4576"
+    },
+    {
+      "number": 5722,
+      "title": "[backport release/v0.15.1] feat(web): add agent-assisted home headline",
+      "state": "open",
+      "author": "open-design-release-bot[bot]",
+      "labels": ["size/S", "risk/medium", "type/feature"],
+      "impact": "v0.15.1 backport：将首页标题改为 agent 辅助文案，S 级小改动，预示 v0.15.1 patch 版本已启动。",
+      "url": "https://github.com/nexu-io/open-design/pull/5722"
+    },
+    {
+      "number": 5584,
+      "title": "fix(daemon): reject a second concurrent run on one conversation (409)",
+      "state": "open",
+      "author": "tomsen02",
+      "labels": ["size/L", "risk/high", "type/bugfix", "needs-validation"],
+      "impact": "修复同一对话上并发运行竞争导致静默失败的问题，引入 409 CONVERSATION_BUSY 错误码，L 级 daemon 运行稳定性关键修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5584"
+    },
+    {
+      "number": 5720,
+      "title": "Add Design System Inspired by Hugging Face plugin",
+      "state": "open",
+      "author": "latinzx-gif",
+      "labels": ["size/L", "risk/medium", "type/feature"],
+      "impact": "新增受 Hugging Face 启发的设计系统插件，L 级社区贡献，扩展 AI 平台风格的设计模板生态。",
+      "url": "https://github.com/nexu-io/open-design/pull/5720"
+    },
+    {
+      "number": 5699,
+      "title": "feat(web): add agent-assisted home headline",
+      "state": "merged",
       "author": "open-design-crew[bot]",
-      "labels": [],
-      "impact": "在 daemon 启动前重建过期的工具合约，确保运行时契约与最新代码一致，避免契约漂移导致的静默失败。",
-      "url": "https://github.com/nexu-io/open-design/pull/5671"
+      "labels": ["size/M", "risk/medium", "type/feature", "validated", "backport release/v0.15.1"],
+      "impact": "首页标题改为 'What will you design with your agent today?'，M 级已合入，同时触发 v0.15.1 backport #5722。",
+      "url": "https://github.com/nexu-io/open-design/pull/5699"
     },
     {
-      "number": 5496,
-      "title": "feat(web): make Studio discovery visual and inline",
+      "number": 5713,
+      "title": "Surface provider errors before connection-test timeout",
       "state": "open",
-      "author": "open-design-crew[bot]",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "Studio 发现功能内联视觉化升级，XXL 级 web 体验改造，让设计发现流程从跳转式变为沉浸式，直接影响用户创作动线。",
-      "url": "https://github.com/nexu-io/open-design/pull/5496"
+      "author": "mturac",
+      "labels": ["size/M", "risk/high", "type/bugfix", "validated"],
+      "impact": "修复 BYOK provider 连接测试超时前无法显示错误信息的问题，M 级已 validated，改善模型配置调试体验。",
+      "url": "https://github.com/nexu-io/open-design/pull/5713"
     },
     {
-      "number": 5228,
-      "title": "refactor(web): decompose MemorySection into a features/memory vertical slice",
-      "state": "open",
-      "author": "leonaburime-ucla",
-      "labels": ["size/XXL", "risk/high", "type/refactor", "validated"],
-      "impact": "MemorySection 重构为 features/memory 垂直切片，XXL 架构治理，将内存模块从 monolith 中解耦，降低后续功能迭代复杂度。",
-      "url": "https://github.com/nexu-io/open-design/pull/5228"
-    },
-    {
-      "number": 5670,
-      "title": "fix(brand): preserve authored seed overrides in validateBrand (#5612)",
+      "number": 5455,
+      "title": "fix(web): portal deploy success toast above deploy modal backdrop (#5326)",
       "state": "open",
       "author": "xxiaoxiong",
-      "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复 brand 验证时丢弃用户自定义 seed 覆盖值的问题，XS 体积但 high risk，直接影响用户品牌一致性体验。",
-      "url": "https://github.com/nexu-io/open-design/pull/5670"
+      "labels": ["size/XS", "risk/medium", "type/bugfix", "needs-validation", "design-approved"],
+      "impact": "修复部署成功 toast 弹出层级被 modal backdrop 遮挡的问题，XS 级 UX 修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5455"
     },
     {
-      "number": 5668,
-      "title": "fix(web): widen artifact present-menu popover to avoid text wrapping (#5663)",
+      "number": 5530,
+      "title": "fix(web): improve disabled import button contrast",
       "state": "open",
       "author": "xxiaoxiong",
       "labels": ["size/XS", "risk/medium", "type/bugfix", "skip-validation", "needs-design-review"],
-      "impact": "加宽 artifact 打开模式弹出框以避免文本换行，XS 级体验打磨，直接对应 #5663 issue。",
-      "url": "https://github.com/nexu-io/open-design/pull/5668"
-    },
-    {
-      "number": 5446,
-      "title": "fix(web): open chat file links in project context",
-      "state": "open",
-      "author": "kiqueHD",
-      "labels": ["size/S", "risk/medium", "type/bugfix", "needs-validation", "design-approved"],
-      "impact": "修复聊天文件链接在项目上下文中打开的问题，S 级 bugfix，提升跨模块导航的连贯性。",
-      "url": "https://github.com/nexu-io/open-design/pull/5446"
-    },
-    {
-      "number": 5660,
-      "title": "Add Skill: facebook-post-studio",
-      "state": "open",
-      "author": "ryanjordan11",
-      "labels": ["size/XL", "risk/medium", "type/enhancement", "needs-validation", "needs-design-review"],
-      "impact": "新增 facebook-post-studio 社区技能，XL 级贡献，扩展社交媒体设计自动化能力，丰富社区技能生态。",
-      "url": "https://github.com/nexu-io/open-design/pull/5660"
-    },
-    {
-      "number": 5657,
-      "title": "Add Vertical — Framer portfolio clone plugin",
-      "state": "open",
-      "author": "ryanjordan11",
-      "labels": [],
-      "impact": "新增 Vertical Framer 作品集克隆插件，社区插件生态进一步扩展，丰富落地页和作品集设计模板。",
-      "url": "https://github.com/nexu-io/open-design/pull/5657"
+      "impact": "改善禁用状态导入按钮对比度，XS 级视觉可用性修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5530"
     }
   ],
   "recent_issues": [
     {
-      "number": 5672,
-      "title": "Editable PPTX export overlaps large English heading text in WPS",
+      "number": 5719,
+      "title": "Allow deleting the default custom model id in Local CLI mode",
       "author": "open-design-crew[bot]",
-      "labels": [],
-      "comments": 0,
-      "summary": "WPS 中可编辑 PPTX 导出时英文大标题文本重叠，格式兼容性 regression，影响第三方办公套件的导出可用性。",
-      "url": "https://github.com/nexu-io/open-design/issues/5672"
-    },
-    {
-      "number": 5612,
-      "title": "[Bug]: brand finalize drops authored seed overrides",
-      "author": "Bodhi848",
-      "labels": ["bug"],
-      "comments": 5,
-      "summary": "品牌最终化流程丢弃用户自定义的 seed 覆盖值，导致个性化品牌配置丢失，与 #5670 修复 PR 同根因。",
-      "url": "https://github.com/nexu-io/open-design/issues/5612"
-    },
-    {
-      "number": 5627,
-      "title": "[Bug]: Question form cannot be submitted",
-      "author": "kaustabhws",
       "labels": ["bug", "help wanted"],
-      "comments": 10,
-      "summary": "问题表单无法提交，10 评论高热，直接影响用户反馈和工单收集通道，可能为前端验证或后端 API 问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/5627"
-    },
-    {
-      "number": 5527,
-      "title": "Codex imagegen outputs call_*.png but daemon only accepts ig_*.png",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "priority:p0", "area/runtime"],
       "comments": 6,
-      "summary": "P0 级 bug：Codex 图像生成输出文件名格式 call_*.png 与 daemon 期望的 ig_*.png 不匹配，导致所有 Codex 图像生成结果静默丢失，6 评论持续发酵。",
-      "url": "https://github.com/nexu-io/open-design/issues/5527"
+      "summary": "Local CLI 模式下默认自定义模型 ID 'default' 无法删除，6 评论，BYOK 配置管理体验缺陷。",
+      "url": "https://github.com/nexu-io/open-design/issues/5719"
     },
     {
-      "number": 5663,
-      "title": "Widen the artifact open-mode popover to avoid awkward text wrapping",
-      "author": "open-design-crew[bot]",
-      "labels": ["enhancement", "needs-product-direction", "ux"],
-      "comments": 3,
-      "summary": "artifact 打开模式弹出框宽度不足导致文本换行尴尬，影响首屏操作体验，已有修复 PR #5668。",
-      "url": "https://github.com/nexu-io/open-design/issues/5663"
+      "number": 5721,
+      "title": "Flaky test: run-retry-runtime.test.ts retry cases race node cold-start against the inactivity watchdog",
+      "author": "tomsen02",
+      "labels": ["bug", "area/runtime"],
+      "comments": 1,
+      "summary": "run-retry-runtime 测试间歇性失败，node 冷启动与 inactivity watchdog 竞态条件，daemon 运行时测试稳定性问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/5721"
     },
     {
-      "number": 5665,
-      "title": "Image export should respect the selected mobile preview viewport",
+      "number": 5718,
+      "title": "Do not fail image-reading runs with ARTIFACT_NOT_FOUND when no new artifact is expected",
       "author": "open-design-crew[bot]",
       "labels": ["bug"],
       "comments": 2,
-      "summary": "图像导出未尊重当前选中的移动端预览视口，导致移动端设计图导出为桌面尺寸，预览与实际输出不一致。",
-      "url": "https://github.com/nexu-io/open-design/issues/5665"
+      "summary": "图像分析 run 完成后因不产生新 artifact 而被误报为 ARTIFACT_NOT_FOUND 失败，daemon 运行结果判定逻辑缺陷。",
+      "url": "https://github.com/nexu-io/open-design/issues/5718"
     },
     {
-      "number": 5549,
-      "title": "Fix RTL layout alignment on home and workspace screens",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "help wanted"],
-      "comments": 5,
-      "summary": "首页和工作区 RTL（从右到左）语言布局对齐错误，5 评论，影响阿拉伯语/希伯来语等用户的可用性。",
-      "url": "https://github.com/nexu-io/open-design/issues/5549"
-    },
-    {
-      "number": 5664,
-      "title": "PPTX export does not preserve HTML font sizing and causes text wrapping/clipping",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "priority:p2"],
-      "comments": 1,
-      "summary": "PPTX 导出不保留 HTML 原始字号设置，导致文本换行或截断，与 #5672 同属导出格式精确度问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/5664"
-    },
-    {
-      "number": 5528,
-      "title": "Bug: ACP child_close timeout marks completed artifact run as failed",
-      "author": "open-design-crew[bot]",
+      "number": 5715,
+      "title": "[Bug]: Claude code with 3P provider not working",
+      "author": "TheSuperAgent",
       "labels": ["bug"],
+      "comments": 2,
+      "summary": "Claude Code 配合第三方 BYOK provider 无法正常工作，2 评论，BYOK 生态兼容性回归。",
+      "url": "https://github.com/nexu-io/open-design/issues/5715"
+    },
+    {
+      "number": 2146,
+      "title": "Proposal: Bundle plugin layout contract for Phase 3 installer and doctor",
+      "author": "bulai0408",
+      "labels": ["enhancement", "stale"],
+      "comments": 6,
+      "summary": "Phase 3 安装器和诊断工具的 bundle plugin 布局合约提案，stale 后近期重新活跃，插件安装治理基建。",
+      "url": "https://github.com/nexu-io/open-design/issues/2146"
+    },
+    {
+      "number": 3147,
+      "title": "feat(codex): expose GPT-5.5 Fast service tier in the model picker",
+      "author": "jaehanbyun",
+      "labels": ["feature", "needs-product-direction", "stale"],
       "comments": 5,
-      "summary": "ACP 子进程关闭超时将已完成的设计 artifact 标记为失败，5 评论，用户成功生成的设计结果在 UI 中显示为错误状态，运行时生命周期判定仍不稳定。",
-      "url": "https://github.com/nexu-io/open-design/issues/5528"
+      "summary": "请求在模型选择器中暴露 Codex GPT-5.5 Fast 服务层级，stale 复活，BYOK 模型选择体验增强诉求。",
+      "url": "https://github.com/nexu-io/open-design/issues/3147"
+    },
+    {
+      "number": 1894,
+      "title": "i18n locale coverage drift: 13 of 14 locales bypass key-parity test, with 56–351 missing keys vs English",
+      "author": "leessju",
+      "labels": ["bug", "priority:p2"],
+      "comments": 14,
+      "summary": "i18n 覆盖率漂移严重：13/14 语言绕过 key-parity 测试，56-351 key 缺失，14 评论，国际化质量系统性退化。",
+      "url": "https://github.com/nexu-io/open-design/issues/1894"
+    },
+    {
+      "number": 1842,
+      "title": "The content becomes unstable when downloading the PPTX file.",
+      "author": "Derrick-xn",
+      "labels": ["bug", "priority:p0", "stale"],
+      "comments": 13,
+      "summary": "P0 级 stale：PPTX 下载后内容与预览不一致，13 评论，导出格式引擎存在系统性兼容债务。",
+      "url": "https://github.com/nexu-io/open-design/issues/1842"
     },
     {
       "number": 1531,
       "title": "open-design-landing-deck can render cropped with black area on the right in artifact preview",
       "author": "shangxinyu1",
-      "labels": ["bug", "priority:p2", "stale"],
+      "labels": ["bug", "priority:p2"],
       "comments": 3,
-      "summary": "landing deck 在 artifact 预览中右侧渲染出黑边，stale 后近期重新活跃，预览裁剪逻辑存在边界计算偏差。",
+      "summary": "landing deck 在 artifact 预览中右侧渲染出黑边，p2 优先级，预览裁剪逻辑边界计算偏差。",
       "url": "https://github.com/nexu-io/open-design/issues/1531"
+    },
+    {
+      "number": 1146,
+      "title": "[Enhancement] Incorporate CMS - The natural next step in the user-journey",
+      "author": "paulstean",
+      "labels": ["enhancement", "stale"],
+      "comments": 7,
+      "summary": "设计完成后集成 CMS 的增强提案，stale 复活，代表从设计到部署的用户旅程完整化诉求。",
+      "url": "https://github.com/nexu-io/open-design/issues/1146"
     }
   ],
   "trends": {
-    "direction": "v0.15.0 'Cost Less. Ship Faster' 于 2026-07-14 正式发布，主题明确对标 DeepSeek 的成本效率与迭代速度；发布当天即有密集修复跟进：工具合约重建 (#5671)、brand seed 覆盖修复 (#5670/#5612)、ACP 子进程保活 (#5593 closed)、PPTX 导出兼容性 (#5672/#5664) 多线齐发。Studio 发现功能可视化 (#5496 XXL) 和 MemorySection 垂直切片重构 (#5228 XXL) 是 v0.15.x 后续演进的核心基建。",
+    "direction": "v0.15.0 发布后第二天，主线转入 v0.15.1 backport 修复窗口（#5699 merged→#5722 backport），运行稳定性修复多线并行（并发 run 409 #5584 / provider 错误暴露 #5713 / desktop packaged payload handoff #5678 XXL），同时 Cloudflare Pages 部署适配修复 #4576 XL 和社区技能生态扩展 #5720 HuggingFace design system。",
     "affected_modules": [
-      "apps/daemon：工具合约重建、ACP child_close 超时误判、ACP 输出写入后保活 (#5593)",
-      "apps/web：Studio 发现内联视觉化、MemorySection 垂直切片重构、artifact popover 宽度、RTL 布局、聊天文件链接上下文",
-      "Brand/Design：seed 覆盖值丢失 (#5612/#5670)、图像导出视口匹配、PPTX 导出字号保留与兼容性",
-      "Community/Plugins：facebook-post-studio 技能、Vertical Framer 作品集克隆插件",
-      "Runtime lifecycle：daemon 启动契约一致性、ACP 子进程状态判定"
+      "apps/daemon：并发 run 409 拒绝 (#5584)、provider 错误暴露 (#5713)、flaky test 竞态 (#5721)",
+      "apps/web：agent-assisted home headline (#5699/#5722 backport)、portal deploy toast (#5455)、disabled import button contrast (#5530)",
+      "BYOK/Provider：3P provider 不工作 (#5715)、默认模型 ID 不可删除 (#5719)、GPT-5.5 Fast tier 需求 (#3147)",
+      "Desktop/Packaging：packaged payload handoff #5678 XXL、Cloudflare Pages 部署 #4576 XL",
+      "Community/Plugins：HuggingFace design system plugin (#5720)、bundle plugin layout (#2146 stale)"
     ],
     "risks": [
-      "P0 级 #5527 Codex 图像文件名不匹配已持续多日，6 评论继续发酵，v0.15.0 发布仍未见 hotfix，影响 Codex 用户核心体验。",
-      "brand 最终化丢弃 seed 覆盖 (#5612) 与 #5670 修复同步推进，但用户自定义品牌配置已存在丢失风险窗口。",
-      "问题表单无法提交 (#5627) 10 评论高热，阻断用户反馈通道，可能掩盖其他回归问题。",
-      "PPTX 导出多线并发问题 (#5672 WPS 重叠、#5664 字号丢失、#5670 导出无响应) 指向导出格式引擎存在系统性兼容债务。",
-      "open_issues 661 持续攀升，v0.15.0 发布日 issue influx 仍在放大，稳定性收敛速度未跟上版本发布节奏。"
+      "P0 #1842 PPTX 导出内容不稳定 stale 复活 13 评论，导出格式引擎存在系统性兼容债务，v0.15.0 未见修复进展。",
+      "i18n 覆盖率漂移 #1894 14 评论，56-351 key 缺失，国际化质量退化影响非英语用户体验。",
+      "两条 XXL/high 风险 PR 待合入（#5678 desktop handoff / #4576 Cloudflare Pages），v0.15.1 关键路径但合入风险高。",
+      "#5715 Claude Code 3P provider 不工作和 #5719 默认模型 ID 不可删除，BYOK 配置体验出现新回归。",
+      "open_issues 661→643（-18）首次明显收敛，但基数仍高（643），趋势可持续性需验证。"
     ],
     "actions": [
-      "紧急跟踪 #5527 P0 Codex 图像静默丢失的修复进展，确认是否有 backport 或 hotfix 计划。",
-      "关注 #5627 问题表单提交失败是否已指派修复者，该问题直接阻塞用户反馈路径。",
-      "观察 #5670 brand seed 修复和 #5593 ACP 保活是否合入 v0.15.1 patch 或主线。",
-      "跟踪 #5496 Studio 发现 XXL 和 #5228 MemorySection 重构的验证进度，判断 v0.15.x 旗舰功能的落地节奏。",
-      "评估 PPTX 导出问题集群 (#5672/#5664) 是否需专项攻坚，避免导出格式成为用户流失点。"
+      "关注 #5678 desktop handoff XXL 和 #5584 并发 run 409 L 的合入进度，判断 v0.15.1 patch 是否能快速落地。",
+      "跟踪 #5713 provider 错误暴露 M validated 是否进入 v0.15.1，BYOK 体验闭环是用户留存关键。",
+      "观察 open_issues 643 是否持续收敛至 600 以下，验证 v0.15.0 后 regression 吸收节奏。",
+      "评估 #1842 P0 PPTX 导出和 #1894 i18n 漂移是否需要专项攻坚，避免 stale P0 持续恶化。",
+      "关注 v0.15.1 backport pipeline 常态化（#5722），判断 patch 发版节奏是否从 v0.14.x 的 1 周间隔缩短。"
     ],
-    "next_week": "下周三条观察主线：一是 v0.15.0 发布后的 regression 潮是否被快速吸收，open_issues 能否从 661 回落；二是 #5527 P0 和 #5627 表单提交等关键 bugfix 是否快速合入；三是 #5496 Studio 发现视觉化和 #5228 MemorySection 重构的验证进展，决定 v0.15.x 后续版本的核心功能节奏。"
+    "next_week": "v0.15.1 小版本修复窗口，重点三条主线：daemon 运行稳定性（并发 409 + provider 错误暴露 + ARTIFACT_NOT_FOUND 误判）+ BYOK 配置体验闭环（3P provider + 默认模型 ID）+ desktop 打包 handoff。同时观察 stale P0/P1 问题是否被批量清理，以及 v0.15.1 patch 发版间隔是否加速。"
   }
 }
