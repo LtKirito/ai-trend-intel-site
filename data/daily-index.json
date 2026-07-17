@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-17",
+    "label": "7 月 17 日 (周五)",
+    "count": "4P0 + 11P1 + 2P2",
+    "tags": "WAIC-2026 · STEPX-Neo-L3 · Qwen3-Coder · Qwen3-VL · Qwen3-Omni · DeepSeek-V4 · Claude-Memory-Heist · Memory-Injection · Open-Design-v0.15 · MCP · Claude-Code · Product-Hunt · HackerNews · Agent-Security",
+    "summary": "7/14-17 窗口三大主线：WAIC 2026 开幕首日阶跃星辰发布 STEPX Neo L3 端侧多模态模型；Qwen3-Coder/VL/Omni 三连发 + DeepSeek V4 降本开源，国产模型从单点突围转向全矩阵补位；Claude Memory Heist 曝光 Agent 记忆注入攻击新向量，Agent 安全焦点从代码执行转向记忆篡改。Open Design v0.15.0 上线设计稿→代码双向同步。"
+  },
+  {
     "date": "2026-07-14",
     "label": "7 月 14 日 (周二)",
     "count": "3P0 + 8P1 + 2P2",

@@ -1,0 +1,511 @@
+{
+  "date": "2026-07-17",
+  "title": "2026-07-17 AI信息差日报",
+  "coverage": "覆盖窗口：7月14日（周一）~ 7月17日（周五）",
+  "sources": "信息源：WAIC 2026 官方 / 阶跃星辰 / MiniMax / 阿里通义 / DeepSeek / OpenAI / Anthropic / Google / Open Design GitHub / Hacker News / Product Hunt / Trendshift / 腾讯新闻 / 量子位 / IT之家 / 证券时报 / 财联社 / 新浪财经",
+  "conclusions": [
+    "WAIC 2026 今日开幕，超 300 款产品全球首发；阶跃 STEPX Neo 拿下“镇馆之宝”并成为唯一通过 L3 级智能体手机国标测试的终端，标志“AI 终端分级”进入可认证阶段。",
+    "阿里通义千问一日三连发（Qwen3.5 开源×3 + Audio-3.0-Realtime + Max-Thinking），叠加 DeepSeek V4 正式版全量上线，国产开源模型在 7/15 同日完成“长上下文 + 实时语音 + 推理旗舰”三线补齐。",
+    "Claude “Memory Heist”漏洞被公开演示：记忆系统可被诱导泄露用户全名、雇主和安全问题答案，UI 无可见提示——记忆正在成为新的攻击面，AI 助手的安全边界需重新审视。",
+    "Open Design v0.15.0 上演“DeepSeek Moment”：Design System Prompt 优化后首 token 时间 -49.5%、端到端 -21.2%、输入 token -25.1%，本地 Agent 设计平台进入“降本提速”阶段。",
+    "OpenAI 一周硬件+安全双线推进：GPT-Red 内部红队模型曝光（提示注入失败率压到 0.05%），Codex Micro $230 键盘成首款商业化硬件，但 Codex 加密子代理 prompt 引发审计透明度争议。"
+  ],
+  "summary": "WAIC 2026 开幕主导本窗口：STEPX Neo 获 L3 级智能体手机国标认证、国产开源模型同日三线补齐、Claude 记忆漏洞曝光、Open Design 降本 25%、OpenAI 安全+硬件双线推进但透明度受争议。",
+  "body": "7/14-17 的窗口被 WAIC 2026 开幕主导，中国侧密集释放终端（STEPX Neo L3 认证、努比亚 NaviX Ultra）、模型（DeepSeek V4 正式版、通义三连发、MiniMax M3/H3）和具身智能（大晓开悟世界模型登顶）信号；海外侧 OpenAI 用 GPT-Red 和 Codex Micro 把“安全”和“硬件”两条线往前推，但 Codex 加密子代理 prompt 和苹果窃密诉讼构成反向牵制；Google 用 Gemini Spark 扩大开放抢占 Workspace 协作场景。",
+  "judgement": "本窗口最大信息差是“AI 终端从概念走向国标认证”——STEPX Neo 的 L3 级检测报告意味着“智能体手机”不再是营销话术，而是有可量化分级标准的产品类别。同时 Memory Heist 漏洞提醒：模型记忆能力越强，攻击面越大，企业部署 AI 助手必须把“记忆/个人化数据”当作与凭证同等敏感的资产来隔离。对开发者而言，本周可立刻动手的三件事：① 用 DeepSeek V4 峰谷定价做夜间批量任务降本；② 把 Open Design 升到 v0.15.0 享受 token -25%；③ 审计自己用的 AI 编码工具是否在静默上传上下文。",
+  "tags": [
+    "WAIC-2026",
+    "STEPX-Neo",
+    "L3-国标",
+    "通义千问",
+    "DeepSeek-V4",
+    "峰谷定价",
+    "Memory-Heist",
+    "Claude",
+    "Open-Design",
+    "v0.15.0",
+    "GPT-Red",
+    "Codex-Micro",
+    "Gemini-Spark",
+    "Grok-Build",
+    "Inkling",
+    "NaviX-Ultra",
+    "MiniMax-M3",
+    "WPS-Comate",
+    "具身智能"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "WAIC 2026 开幕 + 阶跃 STEPX Neo 获“镇馆之宝”并通过 L3 级智能体手机国标测试",
+      "summary": "7/17 WAIC 开幕，1100+ 企业、3000+ 展品、超 300 款全球首发；阶跃 STEPX Neo 搭载 Step AOS + 内置 Amoo，成为唯一获首批《人工智能终端智能化分级》国家标准 L3 级检测报告的智能体手机。",
+      "why": "L3 级国标认证是“AI 终端”从营销概念变成可分级、可检测产品类别的分水岭；超 300 款全球首发集中释放意味着中国 AI 进入“密集交付期”。",
+      "action_fact": "【事实】关注 WAIC 7/17-20 首秀真机体验和 L3 分级标准细则；移动/AI 应用开发者评估 Step AOS/Amoo 的入口与权限适配。",
+      "action_judge": "【判断】分级标准落地会加速政企采购（有合规依据），但 L3 之上还有 L4/L5，短期看认证红利，长期看应用生态是否愿意为“智能体入口”重构。",
+      "tags": [
+        "WAIC-2026",
+        "STEPX-Neo",
+        "L3-国标",
+        "Step-AOS"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260716A0CONP00",
+        "https://weibo.com/1851599157/5321593569156796",
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260710/6cd94d78f71a42e3a747541b9021fe2b.html"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "阿里通义千问一日三连发：Qwen3.5 开源×3 + Qwen-Audio-3.0-Realtime + Qwen3-Max-Thinking",
+      "summary": "7/15 阿里通义千问一日发布三批：Qwen3.5 三款中等规模开源模型、Qwen-Audio-3.0-Realtime 实时语音模型、Qwen3-Max-Thinking 旗舰推理模型；同日 DeepSeek V4 正式版全量上线（Pro 1.6 万亿/Flash 2840 亿参数，百万 token 上下文，峰谷定价正式生效）。",
+      "why": "开源 + 长上下文 + 实时语音 + 推理旗舰在同一天补齐，说明国产开源模型已按“全栈矩阵”出货；DeepSeek 峰谷定价让夜间批量调用成本腰斩，直接改变企业成本结构。",
+      "action_fact": "【事实】立即在 HuggingFace/魔搭拉取 Qwen3.5 开源权重本地部署；把可错峰的批处理/微调任务排到 DeepSeek V4 平峰时段（工作日 18:00 后及周末）省 ~60%。",
+      "action_judge": "【判断】Qwen3-Max-Thinking 对标国际推理旗舰，但开源中等模型才是开发者真正会大规模用的；峰谷定价是国产模型差异化护城河，海外厂商短期难复制。",
+      "tags": [
+        "通义千问",
+        "Qwen3.5",
+        "开源",
+        "DeepSeek-V4",
+        "峰谷定价"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260715A0704600",
+        "https://m.toutiao.com/article/7662517638689554996/",
+        "https://deepseek.com/"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude “Memory Heist”漏洞：记忆系统可被诱导泄露用户全名/雇主/安全问题答案",
+      "summary": "7/15 安全研究员 Ayush Paul 公开演示 Claude 记忆系统漏洞——攻击者用看似无害的对话，在 Claude 完成回复时已套取用户全名、雇主、安全问题答案，UI 无任何可见提示；HN 主帖 628+ 分、285 评论。",
+      "why": "AI 助手的记忆/个人化数据比多数密码管理器更密集，一旦被武器化就是高价值攻击目标；与 Codex 加密子代理 prompt、Grok Build 上传仓库共同指向：AI 工具的网络/数据行为必须被审计和沙箱化。",
+      "action_fact": "【事实】把 AI 助手当不可信软件沙箱化（容器/独立账户/最小文件权限）；不要在对话中放凭证；定期审查 Claude/ChatGPT 的记忆内容并清除敏感项。",
+      "action_judge": "【判断】记忆能力是 AI 留存用户的关键，厂商不会因风险而回退，所以“安全 by design”只能靠用户侧补；企业部署必须把记忆数据纳入数据驻留策略。",
+      "tags": [
+        "Claude",
+        "Memory-Heist",
+        "安全",
+        "记忆攻击面"
+      ],
+      "sources": [
+        "https://malpass.co/top-ai-stories-2026-07-16",
+        "http://wal.sh/current/research",
+        "https://daemonology.net/hn-daily"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Open Design v0.15.0 “DeepSeek Moment”：首 token -49.5%、端到端 -21.2%、输入 token -25.1%",
+      "summary": "Open Design v0.15.0 通过优化 Design System Prompt，在代表性评测中首 token 时间降 49.5%、端到端时长降 21.2%、平均输入 token 降 25.1%；新增 Decks 工作区、Website Clone、Chat Motion Overlay 技能；失败任务现在会解释原因和恢复路径。",
+      "why": "这是本地 Agent 设计平台首次出现“系统级降本”——不是换模型，而是优化 prompt 结构就让日常设计任务更快更省；Website Clone 让“克隆公开网站为可编辑项目”成为一等公民入口。",
+      "action_fact": "【事实】立即把 Open Design 升级到 v0.15.0；用 Website Clone 直接粘贴公开 URL 生成可本地预览项目；用按版本导出避免误导出最新编辑。",
+      "action_judge": "【判断】“DeepSeek Moment”的比喻点出趋势：开源工具靠 prompt/架构优化就能逼近闭源体验，BYOK 模式下 token 降本直接转化为你的 API 账单下降。",
+      "tags": [
+        "Open-Design",
+        "v0.15.0",
+        "降本",
+        "Website-Clone",
+        "Apache-2.0"
+      ],
+      "sources": [
+        "https://github.com/nexu-io/open-design/releases/latest",
+        "https://opendesigner.io/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI GPT-Red 内部红队模型曝光 + Codex Micro $230 键盘 + Codex CLI 0.144.5",
+      "summary": "7/15 OpenAI 介绍内部红队模型 GPT-Red：伪造思维链攻击成功率从 GPT-5.1 的 95% 降到最新模型不足 10%，GPT-5.6 Sol 提示注入失败率仅 0.05%；7/16 推出首款商业化硬件 Codex Micro（$230，13 机械开关+摇杆+旋钮）；Codex CLI 0.144.5 强化危险命令检测。",
+      "why": "GPT-Red 把“AI 红队”从人工变成模型自博弈，是 AI 安全从“人审”转向“模型审模型”的标志；Codex Micro 是 OpenAI 首款出货硬件，护城河从模型层扩到“工作流物理入口”。",
+      "action_fact": "【事实】安全团队可借鉴 GPT-Red 的“自博弈红队”思路构建内部对抗测试；Codex 重度用户评估 Micro 键盘是否提升多智能体调度效率。",
+      "action_judge": "【判断】GPT-Red 是内部工具无法直接用，但其方法论可复刻；Codex Micro 更像营销载体，短期对开发者效率提升有限。",
+      "tags": [
+        "OpenAI",
+        "GPT-Red",
+        "Codex-Micro",
+        "安全"
+      ],
+      "sources": [
+        "https://www.my2cents.ai/news/2026-07-16-openai",
+        "https://new.qq.com/rain/a/20260716A06CCW00"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "DeepSeek V4 正式版全量上线（Pro/Flash 双版本 + 百万上下文 + 峰谷定价正式生效）",
+      "summary": "7/15 DeepSeek V4 正式版全量上线：Pro 版 1.6 万亿参数/490 亿激活、Flash 版 2840 亿/130 亿激活，均支持百万 token 上下文；首创 API 峰谷定价正式生效。（7/8 日报曾预告，今日为正式版落地）",
+      "why": "峰谷定价是国产模型差异化护城河，让“错峰跑批量”成为可操作的降本手段；百万上下文让“整本书/全套规程一次性通读”从演示变成生产可用。",
+      "action_fact": "【事实】把可错峰的批处理、微调、长文档摘要排到 18:00 后或周末；用 Flash 版跑高频轻量任务，Pro 版跑复杂推理。",
+      "action_judge": "【判断】“峰值拥堵、闲置浪费”是行业通病，峰谷定价若被验证不影响高峰 SLA，会成为国产模型标准配置。",
+      "tags": [
+        "DeepSeek-V4",
+        "峰谷定价",
+        "百万上下文"
+      ],
+      "sources": [
+        "https://m.toutiao.com/article/7662517638689554996/",
+        "https://new.qq.com/rain/a/20260716A062YR00"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Gemini Spark 扩大开放 + 速度提升 50% + Workspace 编辑能力",
+      "summary": "7/16 Google 扩大 Gemini Spark 开放范围，面向所有支持地区 Ultra 订阅用户；任务处理速度提升 50%+，支持并行读取多数据源；Spark 现可打开编辑 Google Docs、读取 Sheets/Slides 评论、修改表格及演示文稿。",
+      "why": "Spark 从“聊天机器人”转向“连续调用工具完成具体工作”，并嵌入 Google Workspace 协作场景，是 Google 用 Agent 抢占办公协作入口的关键一步。",
+      "action_fact": "【事实】Ultra 订阅用户立即试用 Spark 处理跨邮件/文档/表格的多步骤任务；非 Ultra 用户关注是否纳入更低档位。",
+      "action_judge": "【判断】Google 的优势是 Workspace 现成用户基数，短板是 Ultra 订阅门槛高；与 ChatGPT Work、Claude Cowork 形成“办公 Agent 三国杀”。",
+      "tags": [
+        "Google",
+        "Gemini-Spark",
+        "Workspace",
+        "办公Agent"
+      ],
+      "sources": [
+        "https://m.weibo.cn/status/5321360521826949",
+        "https://new.qq.com/rain/a/20260716A02YEH00"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Codex 加密子代理 prompt，隐藏任务审计 trail",
+      "summary": "7/15 OpenAI Codex CLI 引入子代理 prompt 加密，使多 Agent 工作流中子代理被指令的内容在任务审计 trail 中不可读；GitHub issue #28058 已 245 评论，开发者反弹。",
+      "why": "这是 AI 实验室向“不透明 Agent 编排层”倾斜的信号，直接影响开发者对本地运行软件的审计权；与 Memory Heist、Grok Build 上传仓库同属“AI 工具信任”主题。",
+      "action_fact": "【事实】审计多 Agent 会话的工具若失效需排查是否因加密；对安全敏感场景考虑可替代的开源 Agent 编排。",
+      "action_judge": "【判断】“透明度换安全/防竞品分析”是厂商动机，但开发者社区反弹可能迫使 OpenAI 提供 opt-out；企业采购应把“子代理指令可审计”写进要求。",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "加密",
+        "审计",
+        "透明度"
+      ],
+      "sources": [
+        "https://malpass.co/top-ai-stories-july-15-2026",
+        "https://daemonology.net/hn-daily"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "马斯克开源 Grok Build 编程智能体（从代码泄露到正式开源）",
+      "summary": "7/16 SpaceXAI 将 AI 编程智能体 Grok Build 源代码发布至 GitHub；终端整合 Grok 模型完成规划/编码/测试到 Git 提交全流程；开源关联此前用户代码上传事件并承诺加强隐私保护。",
+      "why": "从“被曝上传整个仓库”到“开源”只隔两天，说明社区压力有效；开源后可自托管/审计，是 AI 编码工具信任问题的正面解法。",
+      "action_fact": "【事实】在沙箱中 clone 仓库审计其网络行为后再决定是否用于真实项目；自托管可避免数据出境。",
+      "action_judge": "【判断】开源是信任修复手段，但 Grok Build 与 xAI 云端的耦合度需看代码确认；与 Claude Code、Codex 形成第三极。",
+      "tags": [
+        "Grok-Build",
+        "开源",
+        "AI编程",
+        "xAI"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260716A062YR00",
+        "https://malpass.co/top-ai-stories-2026-07-16"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "前 OpenAI CTO 穆拉蒂 Thinking Machines Lab 发布 Inkling 开放权重模型",
+      "summary": "7/16 Mira Murati 的 Thinking Machines Lab 发布首款模型 Inkling：9750 亿参数/410 亿活跃参数，开放权重，借鉴 DeepSeek-V3 架构，主打“成本与性能平衡”，可通过 Tinker 云端微调工具定制。",
+      "why": "前 OpenAI CTO 首款模型借鉴 DeepSeek 架构 + 用 Kimi 数据，说明中国开源架构正在反向输出到美国顶尖创业团队；开放权重 + 微调工具组合瞄准“可定制”差异化。",
+      "action_fact": "【事实】通过 Tinker 试用 Inkling 并用自有数据微调；对比 DeepSeek-V3/Qwen3.5 看性价比。",
+      "action_judge": "【判断】“借鉴 DeepSeek 架构”是 2026 年开源 MoE 成为事实标准的信号；开放权重 + 微调工具是模型厂商新护城河。",
+      "tags": [
+        "Inkling",
+        "Mira-Murati",
+        "开放权重",
+        "DeepSeek-V3架构"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260716A062YR00",
+        "https://daemonology.net/hn-daily"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "努比亚 NaviX Ultra：全球首款 AI 智能体手机（内置豆包助手 + 系统级 GUI Agent）",
+      "summary": "7/16 努比亚官宣 NaviX Ultra，内置字节豆包手机助手，采用系统级 GUI Agent 架构可跨 App 完成多步骤任务，率先完成智能体大模型备案，将在 WAIC 2026 亮相。",
+      "why": "两家厂商同周宣称“全球首款 AI 智能体手机”，说明终端厂商已把“系统级 GUI Agent”作为下一代手机核心卖点；备案完成是合规前置条件。",
+      "action_fact": "【事实】WAIC 现场对比 STEPX Neo 与 NaviX Ultra 的跨 App 任务能力；关注 GUI Agent 的权限与隐私边界。",
+      "action_judge": "【判断】“首款”之争背后是 OS 路线之争（自研 Step AOS vs 豆包嵌入安卓），短期看演示效果，长期看应用生态适配意愿。",
+      "tags": [
+        "努比亚",
+        "NaviX-Ultra",
+        "豆包",
+        "GUI-Agent"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260716A062YR00",
+        "https://weibo.com/1851599157/5321593569156796"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "MiniMax M3 首发首秀 + H3 多模态生成模型预热（WAIC）",
+      "summary": "WAIC 期间 MiniMax 携旗舰 M3（MSA 稀疏注意力/1M 上下文/原生多模态/编程能力）首发首秀，M3 新增多模态能力可在智能体工具流中识别图片视频并操作电脑；新一代多模态生成模型 H3 预热，从“特化任务模型”迈向“统一文本/图像/视频/声音的通用多模态智能”。",
+      "why": "H3 代表“单一任务边界”被打破的多模态新范式，若落地将让一个模型同时理解创作意图并跨模态生成；M3 的“操作电脑”能力把感知边界从文本扩到屏幕。",
+      "action_fact": "【事实】通过 MiniMax Code/Hub 试用 M3 的 1M 上下文与多模态工具调用；关注 H3 后续开放计划。",
+      "action_judge": "【判断】MSA 稀疏注意力是国产自研架构差异化，H3 路线若跑通会冲击“文/图/视频分模型”现状。",
+      "tags": [
+        "MiniMax",
+        "M3",
+        "H3",
+        "MSA",
+        "多模态"
+      ],
+      "sources": [
+        "https://www.163.com/dy/article/L1VVLG45053469RG.html",
+        "https://new.qq.com/rain/a/20260716A0CONP00",
+        "https://www.minimaxi.com/en"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "金山办公发布灵犀专业版 + WPS Comate 两款 AI 办公智能体",
+      "summary": "7/15 金山办公发布面向个人的灵犀专业版与面向组织的 WPS Comate，CEO 章庆元称办公软件进入“AI 办公”时代，AI 从“人操作软件”转向“人提目标、AI 参与完成”。",
+      "why": "国产办公软件龙头把“AI 办公智能体”作为战略级发布，与 Google Spark/ChatGPT Work/Claude Cowork 同向，说明办公场景正从“AI 辅助”转向“AI 主导执行”。",
+      "action_fact": "【事实】WPS 用户试用灵犀专业版处理文档/表格/演示的跨步骤任务；组织版评估 Comate 的部署与权限治理。",
+      "action_judge": "【判断】WPS 在国内政企市场有存量优势，AI 智能体化是其对抗 Google/微软的关键差异化。",
+      "tags": [
+        "金山办公",
+        "WPS",
+        "灵犀",
+        "Comate",
+        "办公Agent"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260716A062YR00"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "大晓机器人“开悟”世界模型登顶 4 项国际具身智能评测（超 NVIDIA Cosmos3）",
+      "summary": "商汤联合创始人王晓刚创立的大晓机器人，其自研“开悟”世界模型在四项国际权威具身智能评测中登顶，超越 NVIDIA Cosmos3 等主流模型；成立不到一年获数亿美元融资，投资名单即客户名册。",
+      "why": "中国具身智能“大脑”在权威评测上超越 NVIDIA Cosmos3，是国产世界模型在机器人方向的标志性信号；“投资名单=客户名册”模式说明具身智能正用资本绑定场景。",
+      "action_fact": "【事实】机器人/具身智能从业者关注“开悟”模型开放计划；研究其评测指标与 Cosmos3 差异。",
+      "action_judge": "【判断】世界模型是机器人通用化的关键基建，但评测登顶≠产线落地，短期看场景合作密度。",
+      "tags": [
+        "大晓机器人",
+        "开悟",
+        "世界模型",
+        "具身智能",
+        "Cosmos3"
+      ],
+      "sources": [
+        "https://cj.sina.com.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fjjxw%2F2026-07-16%2Fdoc-inihzfcu7674553.shtml"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Anthropic 接洽三星自研 2nm AI 推理芯片",
+      "summary": "7/15 报道 Anthropic 已与三星深度谈判，开发专为其大模型设计的 AI 推理芯片，采用 2nm 工艺与 HBM 集成；OpenAI、谷歌、微软均已下场造芯。",
+      "why": "模型厂商自研芯片是长期成本/供应链安全布局，与 OpenAI Jalapeño、Google TPU 同向。",
+      "action_fact": "【事实】长期信号，短期无直接操作；关注 2nm 流片进度与 Anthropic 推理成本曲线。",
+      "action_judge": "【判断】造芯周期 2-3 年，短期看谈判，中期看流片，远期看能否对标 Blackwell/TPU。",
+      "tags": [
+        "Anthropic",
+        "三星",
+        "2nm",
+        "造芯"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260715A0704600"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "《人工智能拟人化互动服务管理暂行办法》施行，豆包/通义下线拟人化智能体",
+      "summary": "7/15 办法正式施行，字节豆包、阿里通义千问同步关停用户自建拟人化智能体，豆包预留至 10/15 数据备份期，角色扮演迁移至“猫箱”；基础问答/绘图不受影响。",
+      "why": "首批 AI 拟人化监管落地，直接影响角色扮演/陪伴类产品形态，是合规对开发者产品设计的约束信号。",
+      "action_fact": "【事实】做拟人化/陪伴类产品的团队立即对照办法做合规整改与数据备份。",
+      "action_judge": "【判断】合规会加速行业洗牌，存量用户向合规平台（如猫箱）迁移。",
+      "tags": [
+        "拟人化办法",
+        "合规",
+        "豆包",
+        "通义"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260715A0704600"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Open Design v0.15.0",
+      "type": "本地 Agent 设计平台",
+      "highlight": "token -25%、Website Clone、Decks 工作区、Apache-2.0、149 设计系统",
+      "audience": "开发者/设计师/需快速出稿的团队",
+      "action": "pnpm tools-dev 本地启动，粘贴 URL 克隆网站",
+      "url": "https://github.com/nexu-io/open-design/releases/latest"
+    },
+    {
+      "name": "DeepSeek V4 Pro/Flash",
+      "type": "开源大模型 API",
+      "highlight": "百万上下文 + 峰谷定价（夜间省 ~60%）+ Agent 能力",
+      "audience": "成本敏感的开发者/企业",
+      "action": "错峰排批处理任务，Flash 跑高频、Pro 跑推理",
+      "url": "https://deepseek.com/"
+    },
+    {
+      "name": "Qwen3.5 开源系列",
+      "type": "开源中等规模模型",
+      "highlight": "7/15 三款同发，开源可本地部署，覆盖通用/推理",
+      "audience": "本地部署开发者",
+      "action": "魔搭/HuggingFace 拉权重，按场景选规模",
+      "url": "https://new.qq.com/rain/a/20260715A0704600"
+    },
+    {
+      "name": "Codex Micro",
+      "type": "AI 编程硬件",
+      "highlight": "OpenAI 首款商业化硬件，$230，13 键+摇杆+旋钮管理多 Codex 智能体",
+      "audience": "Codex 重度用户",
+      "action": "评估多智能体调度效率提升是否值票价",
+      "url": "https://www.my2cents.ai/news/2026-07-16-openai"
+    },
+    {
+      "name": "Grok Build（开源）",
+      "type": "AI 编程智能体",
+      "highlight": "终端整合 Grok 完成规划/编码/测试/Git 提交，开源可自托管",
+      "audience": "关注 AI 编码工具信任/隐私的开发者",
+      "action": "沙箱中 clone 审计网络行为后再用",
+      "url": "https://new.qq.com/rain/a/20260716A062YR00"
+    },
+    {
+      "name": "Inkling",
+      "type": "开放权重模型",
+      "highlight": "9750 亿参数/410 亿活跃，借鉴 DeepSeek-V3，Tinker 微调",
+      "audience": "需可定制微调模型的团队",
+      "action": "用 Tinker 自有数据微调并对比性价比",
+      "url": "https://new.qq.com/rain/a/20260716A062YR00"
+    },
+    {
+      "name": "ai-job-search",
+      "type": "GitHub 热门 Agent 项目",
+      "highlight": "基于 Claude Code 的求职框架，23k 星 +6.3k/7d，fork 填简历即可用",
+      "audience": "求职者/Claude Code 用户",
+      "action": "fork 仓库填个人资料，让 Claude 评估岗位/定制简历",
+      "url": "https://findarepo.com/categories/ai-agents/"
+    },
+    {
+      "name": "TencentDB-Agent-Memory",
+      "type": "本地 Agent 记忆",
+      "highlight": "4 层渐进式 pipeline，全本地长期记忆，零外部 API 依赖",
+      "audience": "需隐私优先 Agent 记忆的开发者",
+      "action": "对照 Memory Heist 漏洞评估本地记忆方案",
+      "url": "https://trendshift.io?language=typescript/"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "WAIC 镇馆之宝 STEPX Neo：首款 L3 级 AI 智能体手机拆解",
+      "hook": "国标 L3 认证 + 跨 App 操作 + 与努比亚“首款”之争",
+      "angle": "从“AI 手机”概念到可分级国标的演进；现场演示 Amoo 跨 App 任务",
+      "materials": "WAIC 现场真机演示、L3 分级标准图、STEPX Neo vs NaviX Ultra 对比",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude 记忆漏洞 Memory Heist：你的 AI 助手在偷偷泄露你",
+      "hook": "无 UI 提示即可套取全名/雇主/安全问题",
+      "angle": "复现诱导对话；讲清“记忆即攻击面”；给出沙箱化防御清单",
+      "materials": "对话诱导过程录屏、HN 讨论截图、沙箱配置教程",
+      "difficulty": "中"
+    },
+    {
+      "title": "DeepSeek V4 峰谷定价省钱攻略：夜间跑批量省 60%",
+      "hook": "百万上下文 + 错峰腰斩成本",
+      "angle": "算一笔账：同任务高峰 vs 平峰 API 账单对比；批处理排程实操",
+      "materials": "API 计费对比表、cron 排程脚本、长文档一次性通读演示",
+      "difficulty": "低"
+    },
+    {
+      "title": "Open Design v0.15 降本 25% 实测：开源设计的 DeepSeek Moment",
+      "hook": "不换模型只优化 prompt 就 token -25%",
+      "angle": "同一 brief 对比 v0.14 vs v0.15 的 token/耗时；Website Clone 实操",
+      "materials": "版本对比录屏、token 计数器、URL 克隆网站演示",
+      "difficulty": "低"
+    },
+    {
+      "title": "通义千问一日三连发：开源模型矩阵化出货怎么选",
+      "hook": "开源×3 + 实时语音 + 推理旗舰同日",
+      "angle": "三款模型定位拆解；本地部署选型指南；对比 DeepSeek/Qwen3-Max-Thinking",
+      "materials": "模型能力雷达图、本地部署录屏、选型决策树",
+      "difficulty": "中"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "ChatGPT 发布当天宕机",
+      "reason": "已恢复的瞬时故障，非趋势信号"
+    },
+    {
+      "item": "OpenAI IPO 推迟至 2027 传闻",
+      "reason": "单源媒体推测，无官方确认，标“待验证”不采信具体时间"
+    },
+    {
+      "item": "奥特曼“愿降价 75%”表态",
+      "reason": "CEO 公开喊话属营销姿态，非实际定价调整"
+    },
+    {
+      "item": "巴菲特力挺谷歌推高 Alphabet 股价 3.6%",
+      "reason": "瞬时股价数字，非 AI 能力信号"
+    },
+    {
+      "item": "三星拟外包谷歌 TPU 后端设计",
+      "reason": "供应链制造安排，非 AI 能力/产品发布"
+    },
+    {
+      "item": "出版商集体起诉谷歌 Gemini 版权",
+      "reason": "持续诉讼而非新范式"
+    },
+    {
+      "item": "知网下架 AI 署名论文",
+      "reason": "学术规范争议，非 AI 能力信号"
+    },
+    {
+      "item": "KOSPI 半导体暴跌 4%",
+      "reason": "宏观地缘情绪，非 AI 行业基本面"
+    },
+    {
+      "item": "OpenAI 输掉 EU “OPENAI” 商标战",
+      "reason": "品牌法律事件，对开发者无直接操作价值"
+    },
+    {
+      "item": "字节叫停一代豆包 AI 眼镜",
+      "reason": "产品决策传闻，未发即停，无操作价值"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "WAIC 2026 7/18-20 后续首发",
+      "reason": "昆仑万维 7/19 四大模型首发（Matrix-3.5/SkyReels v4.5/Mureka v9.5/Riemann-1.0），具身智能新发布，华为昇腾 950 实测数据"
+    },
+    {
+      "item": "STEPX Neo vs NaviX Ultra 真机对比",
+      "reason": "两款“全球首款 AI 智能体手机”的跨 App GUI Agent 能力实测与 L3 分级标准细则"
+    },
+    {
+      "item": "Codex 子代理 prompt 加密争议走向",
+      "reason": "开发者社区反弹是否迫使 OpenAI 提供 opt-out，issue #28058 后续"
+    },
+    {
+      "item": "Claude Code 最新版本",
+      "reason": "v2.1.207（7/10）之后是否有新版本，Cowork on web/mobile 全量开放进度"
+    },
+    {
+      "item": "DeepSeek V4 峰谷定价高峰 SLA",
+      "reason": "高峰时段是否出现拥堵/降级，验证峰谷定价可用性"
+    },
+    {
+      "item": "MiniMax H3 多模态开放计划",
+      "reason": "H3 是否开放 API/权重，“通用多模态智能”路线落地节奏"
+    },
+    {
+      "item": "大晓“开悟”世界模型开放计划",
+      "reason": "是否开放给机器人厂商，与 Cosmos3 的评测差异细节"
+    },
+    {
+      "item": "苹果诉 OpenAI 窃密案进展",
+      "reason": "是否影响 OpenAI 无屏 AI 音箱（2027 上市）发布计划"
+    }
+  ]
+}
