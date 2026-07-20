@@ -1,9 +1,9 @@
 {
   "repo": {
     "name": "nexu-io/open-design",
-    "stars": 79420,
-    "forks": 9157,
-    "open_issues": 679,
+    "stars": 79768,
+    "forks": 9208,
+    "open_issues": 664,
     "latest_release": {
       "version": "open-design-v0.15.1",
       "date": "2026-07-17",
@@ -12,193 +12,264 @@
   },
   "recent_prs": [
     {
-      "number": 5848,
-      "title": "feat(settings): expose Local CLI model refresh",
+      "number": 5881,
+      "title": "chore(plugins-home): refresh template popularity ordering",
       "state": "open",
-      "author": "vinkiYu",
-      "labels": ["size/L", "risk/high", "type/feature", "needs-validation", "needs-product-review", "needs-design-review"],
-      "impact": "在 Settings 中暴露 Local CLI 模型刷新功能，L 级 feature，继续深化 BYOK 模型管理体验。",
-      "url": "https://github.com/nexu-io/open-design/pull/5848"
+      "author": "open-design-bot[bot]",
+      "labels": [
+        "size/M",
+        "risk/medium",
+        "type/chore",
+        "needs-validation"
+      ],
+      "impact": "插件首页模板 popularity 排序自动刷新，size/M，bot 自动提交，属于插件市场运营数据维护。",
+      "url": "https://github.com/nexu-io/open-design/pull/5881"
     },
     {
-      "number": 5857,
-      "title": "fix(daemon): stop imported folders exposing home dotfiles + block $HOME import",
-      "state": "open",
-      "author": "tomsen02",
-      "labels": ["size/M", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复导入任意文件夹时暴露 ~/.ssh、~/.aws 等敏感 dotfiles 的安全漏洞，同时阻止 $HOME 直接导入，M 级高优先级安全修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5857"
-    },
-    {
-      "number": 5818,
-      "title": "fix(daemon): persist user message on /api/runs & /api/chat with explicit conversationId",
+      "number": 5820,
+      "title": "fix(web): make PPT/slide zoom actually take effect in desktop viewport",
       "state": "open",
       "author": "xxiaoxiong",
-      "labels": ["size/M", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复带显式 conversationId 的 /api/runs 和 /api/chat 调用静默丢失用户消息的问题，M 级 daemon API 可靠性关键修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5818"
+      "labels": [
+        "size/XS",
+        "risk/medium",
+        "type/bugfix",
+        "needs-validation",
+        "needs-design-review"
+      ],
+      "impact": "修复桌面视口下 PPT/slide 缩放控件实际不生效的问题，XS 级 web bugfix，属于 PPT 导出体验链持续打磨。",
+      "url": "https://github.com/nexu-io/open-design/pull/5820"
     },
     {
-      "number": 5855,
-      "title": "fix(daemon): validate plugin id before uninstall rm to block path traversal",
+      "number": 5880,
+      "title": "fix(daemon): block SSRF in marketplace add/refresh and plugin install fetch",
       "state": "open",
       "author": "tomsen02",
-      "labels": ["size/M", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复 POST /api/plugins/:id/uninstall 路径穿越漏洞（可删除任意目录），M 级安全修复，与 #5854 issue 配套。",
-      "url": "https://github.com/nexu-io/open-design/pull/5855"
+      "labels": [
+        "size/M",
+        "risk/high",
+        "type/bugfix",
+        "needs-validation"
+      ],
+      "impact": "修复 marketplace add/refresh 与 plugin install 中用户可控 URL 导致的 SSRF 漏洞，size/M risk/high，tomsen02 主导，安全硬修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5880"
     },
     {
-      "number": 5850,
-      "title": "fix(daemon): persist plain-stream artifacts past the event ring buffer",
-      "state": "open",
-      "author": "tomsen02",
-      "labels": ["size/L", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复 plain-stream artifact 在 2000-event ring buffer 溢出后静默丢失的问题，L 级 daemon artifact 持久化修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5850"
+      "number": 5772,
+      "title": "fix(updater): quiet Windows payload extraction",
+      "state": "closed",
+      "author": "PerishCode",
+      "labels": [],
+      "impact": "静默修复 Windows 更新包解压日志输出，已 closed，属于 updater 维护。",
+      "url": "https://github.com/nexu-io/open-design/pull/5772"
     },
     {
-      "number": 5851,
-      "title": "Fix MCP prompts for resumed runs",
+      "number": 5530,
+      "title": "fix(web): improve disabled import button contrast",
       "state": "open",
-      "author": "mturac",
-      "labels": ["size/XS", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "修复 MCP resumed runs 的 prompt 处理错误，XS 级 MCP 可靠性修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5851"
+      "author": "xxiaoxiong",
+      "labels": [
+        "size/XS",
+        "risk/medium",
+        "type/bugfix",
+        "skip-validation",
+        "needs-design-review",
+        "design-approved"
+      ],
+      "impact": "改善禁用状态导入按钮对比度，XS 级 web UI 修复，design-approved。",
+      "url": "https://github.com/nexu-io/open-design/pull/5530"
     },
     {
-      "number": 5784,
-      "title": "Surface blocked preview asset errors",
+      "number": 5510,
+      "title": "fix(web): clear sticky design-system hover preview when searching (#2695)",
       "state": "open",
-      "author": "mturac",
-      "labels": ["size/M", "risk/medium", "type/bugfix", "needs-validation", "needs-design-review"],
-      "impact": "预览中被阻止的资源错误不再静默，M 级 preview 调试体验改善。",
-      "url": "https://github.com/nexu-io/open-design/pull/5784"
+      "author": "maxmilian",
+      "labels": [
+        "size/S",
+        "risk/medium",
+        "type/bugfix",
+        "needs-validation"
+      ],
+      "impact": "修复设计系统搜索时 sticky hover preview 残留问题，S 级 web UX 修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5510"
     },
     {
-      "number": 5443,
-      "title": "fix(web): anchor browser-assist extraction error toasts in the chat pane",
+      "number": 5877,
+      "title": "docs(wsl): point daemon reachability check at /api/health",
       "state": "open",
-      "author": "yogendrarau",
-      "labels": ["size/S", "risk/medium", "type/bugfix", "needs-validation", "design-approved"],
-      "impact": "将 browser-assist 提取错误 toast 锚定在聊天面板中，S 级 UX 修复。",
-      "url": "https://github.com/nexu-io/open-design/pull/5443"
+      "author": "crumgary",
+      "labels": [
+        "size/XS",
+        "risk/low",
+        "type/docs"
+      ],
+      "impact": "WSL 文档修正 daemon 可达性检查指向 /api/health，XS 级 docs 修正。",
+      "url": "https://github.com/nexu-io/open-design/pull/5877"
+    },
+    {
+      "number": 5876,
+      "title": "chore: upgrade pnpm from 10.33.2 to 11.15.0",
+      "state": "open",
+      "author": "VikingOwl91",
+      "labels": [
+        "size/L",
+        "risk/high",
+        "type/chore",
+        "skip-validation",
+        "tutorials"
+      ],
+      "impact": "升级 pnpm 10.33.2 到 11.15.0，size/L risk/high，工具链大版本变更，需验证构建与 lockfile 兼容性。",
+      "url": "https://github.com/nexu-io/open-design/pull/5876"
     }
   ],
   "recent_issues": [
     {
-      "number": 4638,
-      "title": "[Bug]: The app for Macos crashed",
-      "author": "KanoCifer",
-      "labels": ["bug", "help wanted"],
-      "comments": 46,
-      "summary": "macOS 崩溃长期积压，46 评论（较 07-13 日 38 增长显著），仍无明确复现路径和修复方案，用户情绪恶化。",
-      "url": "https://github.com/nexu-io/open-design/issues/4638"
+      "number": 5402,
+      "title": "feat(codex): honor model-specific reasoning levels for GPT-5.6",
+      "author": "jaehanbyun",
+      "labels": [
+        "help wanted",
+        "feature",
+        "needs-product-direction"
+      ],
+      "comments": 10,
+      "summary": "Codex CLI 已按模型报告不同 reasoning level，但 OD 仍用全局 reasoning 列表，需要模型级 reasoning 适配。10 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/5402"
     },
     {
-      "number": 5803,
-      "title": "Make Projects page preview thumbnails fill cards like Home page",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug"],
-      "comments": 7,
-      "summary": "Projects 页面预览缩略图未填满卡片，与 Home 页面视觉不一致，7 评论，UX 一致性问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/5803"
-    },
-    {
-      "number": 5805,
-      "title": "Fix PPT preview zoom controls not taking effect",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "help wanted"],
-      "comments": 6,
-      "summary": "PPT 预览缩放控件不生效，6 评论，PPT 导出相关体验缺陷链之三（#5664 字体/#1842 内容不一致）。",
-      "url": "https://github.com/nexu-io/open-design/issues/5805"
-    },
-    {
-      "number": 5856,
-      "title": "[Bug]: arbitrary-folder import exposes home dotfiles (~/.ssh, ~/.aws) as an HTTP read/delete primitive",
+      "number": 5879,
+      "title": "[Bug]: SSRF in marketplace add/refresh and plugin install — user URL fetched with no private-host guard",
       "author": "tomsen02",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "🔒 安全漏洞：任意文件夹导入将 ~/.ssh、~/.aws 等敏感 dotfiles 暴露为 HTTP 读写原语，配套修复 PR #5857 已提交。",
-      "url": "https://github.com/nexu-io/open-design/issues/5856"
-    },
-    {
-      "number": 5811,
-      "title": "Explicit conversationId on /api/runs or /api/chat silently persists zero messages",
-      "author": "waveriderai",
-      "labels": ["bug"],
-      "comments": 5,
-      "summary": "带显式 conversationId 的 API 调用静默持久化零条消息，目录中有真实文件但对话为空，5 评论，配套修复 PR #5818。",
-      "url": "https://github.com/nexu-io/open-design/issues/5811"
-    },
-    {
-      "number": 5854,
-      "title": "[Bug]: POST /api/plugins/:id/uninstall path traversal — deletes an arbitrary directory (missing id validation)",
-      "author": "tomsen02",
-      "labels": ["bug"],
-      "comments": 2,
-      "summary": "🔒 安全漏洞：plugin uninstall API 缺少 id 校验导致路径穿越，可删除任意目录，配套修复 PR #5855。",
-      "url": "https://github.com/nexu-io/open-design/issues/5854"
-    },
-    {
-      "number": 5319,
-      "title": "Bug: internally generated html-preview.png captures viewer shell instead of slide canvas",
-      "author": "orangecatcat",
-      "labels": ["bug"],
-      "comments": 7,
-      "summary": "html-preview.png 自动截图捕获的是查看器外壳而非幻灯片画布，7 评论，预览缩略图生成逻辑缺陷。",
-      "url": "https://github.com/nexu-io/open-design/issues/5319"
-    },
-    {
-      "number": 5664,
-      "title": "PPTX export does not preserve HTML font sizing and causes text wrapping/clipping",
-      "author": "open-design-crew[bot]",
-      "labels": ["bug", "priority:p2"],
-      "comments": 2,
-      "summary": "PPTX 导出不保留 HTML 字体大小导致文字换行/裁剪，p2 优先级，导出格式引擎精度问题持续。",
-      "url": "https://github.com/nexu-io/open-design/issues/5664"
-    },
-    {
-      "number": 5810,
-      "title": "MCP start_run: second run on the same conversation silently produces no artifacts (reports succeeded)",
-      "author": "waveriderai",
-      "labels": ["bug"],
-      "comments": 3,
-      "summary": "MCP start_run 在同一对话上第二次运行时静默不产生 artifact 但报告成功，3 评论，MCP 可靠性退化。",
-      "url": "https://github.com/nexu-io/open-design/issues/5810"
-    },
-    {
-      "number": 5849,
-      "title": "[Bug]: plain-stream artifact silently dropped when its <artifact> tag is evicted from the 2000-event ring buffer",
-      "author": "tomsen02",
-      "labels": ["bug"],
+      "labels": [
+        "bug"
+      ],
       "comments": 1,
-      "summary": "plain-stream artifact 的 <artifact> 标签被 2000-event ring buffer 淘汰后静默丢失，配套修复 PR #5850。",
-      "url": "https://github.com/nexu-io/open-design/issues/5849"
+      "summary": "安全漏洞：marketplace add/refresh 与 plugin install 中用户 URL 未做私有地址防护，可导致 SSRF。配套 PR #5880 已提交。1 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/5879"
+    },
+    {
+      "number": 5172,
+      "title": "[Bug]: Switching tabs aborts active AI streaming output in the previous tab",
+      "author": "KuitoInoguchi",
+      "labels": [
+        "bug"
+      ],
+      "comments": 18,
+      "summary": "切换标签页会中断当前标签的 AI streaming 输出，100% 复现，长期 UX 痛点。18 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/5172"
+    },
+    {
+      "number": 3482,
+      "title": "BYOK custom baseUrl blocked by SSRF guard in 0.8.0 — worked in 0.5.0",
+      "author": "mickmix9",
+      "labels": [
+        "bug",
+        "priority:p1",
+        "preview/v0.8.0"
+      ],
+      "comments": 8,
+      "summary": "BYOK 自定义 baseUrl 在 0.8.0 被 SSRF 防护拦截，0.5.0 可用，BYOK 私有部署回归问题。8 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/3482"
+    },
+    {
+      "number": 963,
+      "title": "Add /finalize/claude-code provider so Max plan users avoid per-token API costs",
+      "author": "bankielewicz",
+      "labels": [
+        "feature"
+      ],
+      "comments": 27,
+      "summary": "希望为 Anthropic Max 订阅用户增加 /finalize/claude-code provider，避免按 token 付费。27 评论高需求。",
+      "url": "https://github.com/nexu-io/open-design/issues/963"
+    },
+    {
+      "number": 3343,
+      "title": "Merge request: OD sandbox runtime PR stack (#3242-#3246)",
+      "author": "dredozubov",
+      "labels": [
+        "area/runtime",
+        "triaged",
+        "kind/feature"
+      ],
+      "comments": 19,
+      "summary": "OD sandbox runtime 5 个 PR 堆叠（#3242-#3246），rebase 成本高，请求合并。19 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/3343"
+    },
+    {
+      "number": 3196,
+      "title": "Add password-based login page & session token for Docker/web deployment",
+      "author": "RoverKai",
+      "labels": [
+        "enhancement",
+        "needs-product-direction"
+      ],
+      "comments": 10,
+      "summary": "Docker/web 部署场景需要密码登录页与会话 token，非本地回环部署的安全需求。10 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/3196"
+    },
+    {
+      "number": 3517,
+      "title": "cannot start a new conversation",
+      "author": "QC2168",
+      "labels": [
+        "bug",
+        "priority:p0",
+        "stale"
+      ],
+      "comments": 11,
+      "summary": "无法开启新对话，P0 优先级 bug，stale 标签，11 评论，影响用户 onboarding。",
+      "url": "https://github.com/nexu-io/open-design/issues/3517"
+    },
+    {
+      "number": 2685,
+      "title": "Selected button text has low contrast and is hard to read",
+      "author": "shangxinyu1",
+      "labels": [
+        "bug",
+        "good first issue",
+        "help wanted"
+      ],
+      "comments": 6,
+      "summary": "按钮选中状态文本对比度低难以阅读，good first issue，6 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/2685"
+    },
+    {
+      "number": 5352,
+      "title": "Auto-open generated HTML files after Plan mode completion",
+      "author": "AmyShang-alt",
+      "labels": [
+        "bug",
+        "ux"
+      ],
+      "comments": 12,
+      "summary": "Plan 模式生成 HTML 后未自动打开文件，UX 断点。12 评论。",
+      "url": "https://github.com/nexu-io/open-design/issues/5352"
     }
   ],
   "trends": {
-    "direction": "v0.15.1 于 2026-07-17 正式发布（距 v0.15.0 仅 3 天），当前进入安全漏洞修复紧急窗口。tomsen02 主导两条安全漏洞修复（home dotfiles HTTP 暴露 #5857 + plugin uninstall 路径穿越 #5855），同时 daemon 消息持久化全链路修复三连击（/api/runs 静默丢失 #5818 + plain-stream ring buffer #5850 + MCP resumed runs #5851）并行推进。Local CLI 模型刷新功能（#5848）代表 BYOK 体验持续优化方向。整体节奏从 v0.15.0 功能发布转向 v0.15.1 后安全与可靠性修补。",
+    "direction": "v0.15.1 发布后第 3 天，社区 star/fork 持续增长、open_issues 从 679 回落至 664，主线从安全漏洞紧急修复过渡到 SSRF 深度治理与 PPT/导出体验链修复。daemon 安全（marketplace/plugin install SSRF #5879/#5880）成为当前最高优先级，同时 web 层 PPT 缩放、导入按钮、设计系统 hover 预览等 UX 细节密集打磨，工具链大版本（pnpm 11）进入升级窗口。",
     "affected_modules": [
-      "apps/daemon：home dotfiles 暴露修复 (#5857)、plugin 路径穿越 (#5855)、API 消息持久化 (#5818)、plain-stream 持久化 (#5850)、MCP resumed runs (#5851)",
-      "apps/web：Settings Local CLI 模型刷新 (#5848)、browser-assist toast 锚定 (#5443)",
-      "Security：home dotfiles HTTP 暴露 (#5856/#5857)、plugin uninstall 路径穿越 (#5854/#5855)——v0.15.1 后安全漏洞集中曝光",
-      "Preview/Artifact：plain-stream ring buffer (#5849/#5850)、blocked asset 错误 (#5784)、PPT 预览缩放 (#5805)、html-preview.png 误捕获 (#5319)",
-      "BYOK/Local CLI：模型刷新 UI (#5848)——BYOK 管理体验持续迭代"
+      "daemon：marketplace/plugin install SSRF 修复 (#5879/#5880)",
+      "web：PPT/slide 缩放 (#5820)、导入按钮对比度 (#5530)、设计系统 hover 预览 (#5510)",
+      "updater：Windows 更新包静默解压 (#5772)",
+      "toolchain：pnpm 10.33.2 到 11.15.0 升级 (#5876)",
+      "plugins-home：模板 popularity 排序刷新 (#5881)",
+      "docs：WSL daemon 可达性检查文档 (#5877)"
     ],
     "risks": [
-      "🔒 安全漏洞集中曝光为当前最大风险：home dotfiles HTTP 暴露 #5856 可读取 ~/.ssh、~/.aws + plugin uninstall 路径穿越 #5854 可删除任意目录，两条均有修复 PR 但尚未合入，需尽快落地 v0.15.2 hotfix。",
-      "open_issues 643→679（+36），v0.15.1 发布日 issue influx 打断 07-16 短暂收敛趋势，问题积压压力回升。",
-      "macOS 崩溃 #4638 46 评论（+8 vs 07-13），仍然无明确修复方案，是平台稳定性最长期未闭环的 P0 级用户痛点。",
-      "PPTX 导出体验系统性缺陷：#5664 字体/换行 + #5805 缩放控件 + #1842 内容不一致三线并行，导出引擎精度不足影响核心价值交付。",
-      "daemon 消息静默丢失三连击（#5811/#5849/#5810）暴露 MCP/API run 可靠性基础设施缺陷，可能影响下游集成。"
+      "新增 SSRF 安全漏洞 #5879：marketplace add/refresh 与 plugin install 获取用户 URL 时缺少私有地址防护，配套 PR #5880 尚未合入，需尽快进入 v0.15.2 hotfix。",
+      "工具链大版本升级 pnpm 11.15.0 (#5876) size/L risk/high，可能影响 CI、lockfile 与本地构建稳定性，需验证后再合入。",
+      "长期 UX 痛点 #5172（切换标签页中断 AI stream）18 评论仍未修复，影响多任务使用体验。",
+      "BYOK 自定义 baseUrl 被 SSRF 拦截 (#3482) 与 Anthropic Max provider (#963) 等高需求功能长期积压，可能削弱企业/付费用户采用意愿。",
+      "P0 级 onboarding 阻断 #3517（无法开启新对话）stale 但仍未闭环，影响新用户留存。"
     ],
     "actions": [
-      "重点跟踪 #5857 home dotfiles 和 #5855 plugin path traversal 两条安全修复的合入进度——v0.15.2 是否已在 backport pipeline 中。",
-      "关注 tomsen02 安全漏洞挖掘模式（#5856→#5857 + #5854→#5855 + #5849→#5850），评估安全审计是否成为 v0.15.x 持续工作流。",
-      "观察 open_issues 679 是否在 v0.15.1 一周内回落至 650 以下，评估修复速率能否跟上 influx。",
-      "跟踪 daemon 消息持久化全链路修复（#5818 + #5850 + #5851），MCP/API 可靠性对 Plugin/Studio 生态至关重要。",
-      "评估 macOS crash #4638 在 v0.15.1 中是否改善——46 评论的用户情绪恶化若不缓解，macOS 用户留存风险加剧。"
+      "重点跟踪 #5880 SSRF 修复合入进度，确认是否触发 v0.15.2 安全 hotfix。",
+      "验证 pnpm 11 升级 (#5876) 对构建/lockfile/CI 的影响，避免工具链回归。",
+      "评估 #5172 tab 切换中断 stream 与 #3517 无法开启新对话是否进入 v0.15.x 修复队列。",
+      "关注 open_issues 664 是否持续回落，验证 v0.15.1 后修复速率是否跑赢 influx。",
+      "观察 sandbox runtime PR stack (#3343) 合并进展，避免架构债务进一步堆积。"
     ],
-    "next_week": "v0.15.1 发布后首个完整工作周，重点两条紧急主线：安全漏洞修复闭环（home dotfiles HTTP 暴露 + plugin uninstall 路径穿越，判断是否触发 v0.15.2 hotfix）+ daemon 消息持久化全链路（API run 静默丢失 + plain-stream ring buffer + MCP resumed runs）。同时关注 BYOK 体验迭代 #5848 是否进入 review、PPTX 导出系统性缺陷是否被专项攻坚，以及 open_issues 能否从 679 开启回落通道。"
+    "next_week": "v0.15.1 发布后第 2 周，优先看两条主线：SSRF 安全修复 (#5880) 是否合入并形成 v0.15.2 计划，以及 pnpm 11 升级 (#5876) 是否平稳落地。同时关注 PPT/导出体验链（#5820/#5805/#5664）是否被专项攻坚、open_issues 能否从 664 继续下探，以及 #5172/#3517 等长期 UX 痛点是否被重新激活。"
   }
 }
