@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-24",
+    "label": "7 月 24 日 (周五)",
+    "count": "3P0 + 7P1 + 3P2",
+    "tags": "OpenAI-Presence · Claude-Code-v2.1.218 · Tencent-Miora · GitHub-Bug-Bounty · Copilot-Canvases · Anthropic-Economic-Index · Gemini-3.6-Flash · Agent-Governance · Creative-Agent · AI-Labor",
+    "summary": "7/22-7/24 的主线不是新旗舰模型，而是 AI Agent 产品化进入第二阶段：OpenAI Presence 把企业语音/聊天 Agent 做成托管交付，Claude Code v2.1.218 收紧自动触发和信任边界，腾讯 Miora 把创意工作流做成多 Agent 画布。并行信号是 GitHub 赏金计划因 AI 噪音重构、Anthropic 将 AI 劳动力影响数据连接器化。"
+  },
+  {
     "date": "2026-07-18",
     "label": "7 月 18 日 (周六)",
     "count": "5P0 + 12P1 + 6P2",

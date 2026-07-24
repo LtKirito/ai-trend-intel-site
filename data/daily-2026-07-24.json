@@ -1,0 +1,432 @@
+{
+  "date": "2026-07-24",
+  "title": "2026-07-24 AI信息差日报",
+  "coverage": "覆盖窗口：7月22日（周三）~ 7月24日（周五）09:48 GMT+8",
+  "sources": "OpenAI 官方 / GitHub Blog / Anthropic 官方 / Claude Code Daily Briefing / Google Blog / 9to5Google / 腾讯 Miora 发布报道 / 虎嗅 / AI Daily Dev / Product Hunt / 腾讯新闻聚合",
+  "conclusions": [
+    "OpenAI Presence 是今天最硬的企业 Agent 信号：OpenAI 把语音/聊天 Agent 做成有限 GA 的托管交付产品，而不是继续只卖 API。关键点是政策、审批、评估、人工接管和 Codex 改进循环。",
+    "Claude Code v2.1.218 的核心不是小版本更新，而是 Agent 产品开始收紧自动化默认值：重型研究显式触发、代码审查后台化、hooks 信任边界更严格。Agent 工具进入成本与安全治理阶段。",
+    "腾讯 Miora 全量上线显示创意智能体开始从“单张生成”走向“整套视觉资产生产线”：图片、视频、3D、UI、局部编辑、记忆和 Skill 复用被放到同一画布。",
+    "GitHub 赏金计划下调公开奖励并永久化 VIP 通道，是 AI 生成低质安全报告泛滥后的平台反应。安全研究的收益逻辑从数量转向可信记录和高影响 PoC。",
+    "Anthropic 同日推出 Economic Index Connector 和 2 亿美元研究基金，说明“AI 对就业影响”正在从宏大叙事转成可查询数据和可资助干预实验。"
+  ],
+  "summary": "7/22-7/24 的主线不是新旗舰模型，而是 AI Agent 产品化进入第二阶段：OpenAI Presence 把企业语音/聊天 Agent 做成托管交付，Claude Code v2.1.218 收紧自动触发和信任边界，腾讯 Miora 把创意工作流做成多 Agent 画布。并行信号是 GitHub 赏金计划因 AI 噪音重构、Anthropic 将 AI 劳动力影响数据连接器化。",
+  "body": "本窗口没有可靠的新一代旗舰模型 P0，价值集中在 Agent 产品形态和治理机制。OpenAI Presence 把企业 Agent 从 API 调用推向托管交付；Claude Code v2.1.218 把深度研究、代码审查、hooks、auto mode 的默认行为继续收紧；腾讯 Miora 则把创意工作从单点生成推向多模态资产链。安全和研究侧，GitHub 赏金计划因 AI 低质报告重构，Anthropic 将 Economic Index 变成 Claude 连接器并投入 2 亿美元研究基金。",
+  "judgement": "编辑判断：今天的信息差集中在“Agent 从能力演示进入生产治理”。OpenAI Presence 说明企业真正愿意付费的不是模型智商，而是可上线、可审批、可评估、可接管的流程；Claude Code 的自动化收紧说明开发者工具也必须直面 token 成本和权限风险；Miora 则说明生成式创意工具要赢，必须交付完整资产链，而不是单张图。对个人和团队最直接的动作是：审计自己的 Agent 自动触发规则、挑一个真实创意 brief 测 Miora、把 GitHub 漏洞赏金新规作为“AI 噪音时代质量门槛上升”的案例。",
+  "tags": [
+    "OpenAI-Presence",
+    "Claude-Code-v2.1.218",
+    "Tencent-Miora",
+    "GitHub-Bug-Bounty",
+    "Copilot-Canvases",
+    "Anthropic-Economic-Index",
+    "Gemini-3.6-Flash",
+    "Agent-Governance",
+    "Creative-Agent",
+    "AI-Labor"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "OpenAI Presence：企业语音/聊天 Agent 从 API 走向托管交付",
+      "summary": "OpenAI 7月22日推出 Presence，定位为面向客户服务和内部流程的生产级企业 Agent 产品。它不是自助 API，而是由 OpenAI FDE 和系统集成商交付的有限 GA 产品，组合企业知识、SOP、批准动作、模拟、评估、护栏、升级规则和 Codex 驱动的持续改进循环。OpenAI 称自家英文电话支持 75% 入站问题无需人工处理，10 天内人工交接率下降 15 个百分点。",
+      "why": "这代表 OpenAI 的商业化重心从“卖模型/API”进一步转向“卖可控生产流程”。对企业买家而言，核心价值不是单次回答质量，而是权限、评估、人工接管和上线后持续改进的闭环。",
+      "action_fact": "【事实】Presence 已对符合条件的企业客户有限 GA，支持 voice/chat；BBVA、SoftBank、IAG 为早期客户或设计伙伴；暂不提供自助购买。",
+      "action_judge": "【判断】适合高价值、强流程、可评估的客服/IT/理赔场景；不适合短期小团队试用。企业评估时应优先问清数据边界、SLA、第三方系统接入和总交付成本。",
+      "score": {
+        "novelty": 5,
+        "utility": 4,
+        "credibility": 5,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "OpenAI",
+        "Presence",
+        "Enterprise-Agent",
+        "Voice-Agent"
+      ],
+      "sources": [
+        "https://openai.com/index/introducing-openai-presence/"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.218：重型技能改为显式触发，代码审查后台化",
+      "summary": "Claude Code 7月22日发布 v2.1.218：/deep-research 不再自动启动，/code-review 改为后台 subagent，不占用主对话；auto mode classifier 扩展到 dangerous-rm、后台 &、可疑 Windows 路径和计划模式下无法静态证明只读的 Bash；agent frontmatter hooks 仅在 agent 文件夹已信任时运行。此前 v2.1.217/216 还限制并发 subagent、阻止默认嵌套 spawning，并修复 symlink/worktree 隔离问题。",
+      "why": "这是 Agent 工具从“自动多跑一步”转向“成本、安全、信任边界可控”的信号。重型研究/审查不再隐式触发，说明厂商开始把 token 成本和自动化误触发当作产品风险处理。",
+      "action_fact": "【事实】依赖 /deep-research、/verify、/code-review 自动触发的工作流需显式改写调用规则；检查 context: fork skill 是否需要 background:false。",
+      "action_judge": "【判断】无人值守 auto mode 需要重新审计，尤其是危险删除、后台任务、Windows 路径和 plan-mode Bash。后台化提升并行效率，但也要求团队更重视日志和预算上限。",
+      "score": {
+        "novelty": 4,
+        "utility": 5,
+        "credibility": 4,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "Claude-Code",
+        "Agent-Governance",
+        "Auto-Mode",
+        "Code-Review"
+      ],
+      "sources": [
+        "https://claude-news.today/en/briefings/briefing-2026-07-23"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "腾讯 Miora 全量上线：创意智能体开始交付整套视觉资产",
+      "summary": "腾讯 7月22日宣布首个自研创意智能体 Miora（腾讯设计妙境）正式全量上线。Miora 采用多 AI Agent 协作，可在同一画布内完成图片、视频、3D、UI 等多模态内容生成，并支持框选、圈画、字体编辑、元素编辑、智能体记忆和 Skill 开放生态。官方称内测期间超过一半用户并非设计师，覆盖研发、市场运营等岗位。",
+      "why": "Miora 的价值不在“又一个文生图”，而在把创意 brief、局部编辑、品牌记忆、Skill 复用和多模态交付放进同一 Agent 工作室。设计工具正在从单点生成转向“整套创意资产生产线”。",
+      "action_fact": "【事实】普通用户已可注册体验；新用户有体验积分；场景包括品牌方案、社媒创意、宣传视频、游戏 UI、广告素材、电商素材和 3D 建模。",
+      "action_judge": "【判断】最适合先用在运营物料、电商素材和视频号封面/分镜，而不是高精度品牌 VI 定稿。团队应把高频创作流程沉淀为 Skill，测试记忆系统是否能稳定复用品牌规范。",
+      "score": {
+        "novelty": 4,
+        "utility": 5,
+        "credibility": 4,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "腾讯",
+        "Miora",
+        "创意智能体",
+        "多模态",
+        "Skill"
+      ],
+      "sources": [
+        "https://www.sohu.com/a/1053335755_122135404",
+        "https://www.huxiu.com/ainews/14050.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber 三模型分工",
+      "summary": "Google 7月21-22日发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber。3.6 Flash 相比 3.5 Flash 平均减少 17% 输出 token，并降低多步骤任务推理步骤和工具调用；Flash-Lite 面向低延迟高吞吐；Flash Cyber 面向漏洞发现、验证和修复，初期经 CodeMender 提供给政府和可信合作伙伴。",
+      "why": "Google 的重点不是单纯堆能力，而是按 Agent 成本结构拆分模型：主力 Flash 降 token，Lite 跑高吞吐，Cyber 跑安全场景。这是大模型“按工作负载分工上岗”的典型案例。",
+      "action_fact": "【事实】3.6 Flash 和 Flash-Lite 已面向开发者与应用场景开放；Cyber 属双重用途，采用有限试点。",
+      "action_judge": "【判断】如果你的 Agent 工作流有高频工具调用，优先测试 3.6 Flash 的端到端成本，而不只看单 token 价格。Cyber 适合作为安全趋势跟踪，不应包装成人人可用工具。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Google",
+        "Gemini",
+        "Flash",
+        "CodeMender",
+        "Agent-Cost"
+      ],
+      "sources": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+        "https://9to5google.com/2026/07/21/gemini-3-6-flash-launch/"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub Bug Bounty 重构：公开赏金下调，VIP 研究者通道永久化",
+      "summary": "GitHub 7月22日宣布重构漏洞赏金计划。7月27日起，公开项目改为固定金额：低危 $250、中危 $2,000、高危 $5,000、严重 $10,000；邀请制 VIP 通道永久化，低危 $1,000、中危 $7,500、高危 $20,000、严重 $30,000+。7月27日前提交的报告沿用旧规则。GitHub 同时引入 HackerOne signal 要求，限制低信号账号提交量，以减少低质量和 AI 生成报告。",
+      "why": "这是 AI 自动化渗透安全研究后的反作用：平台开始从“鼓励更多提交”转向“筛选高信号研究者”。对 Bug Bounty 参与者来说，策略从刷量变成建立可信记录。",
+      "action_fact": "【事实】新规则适用于 2026-07-27 起提交的报告；VIP 资格门槛包括至少 1 个严重、2 个高危、4 个中危或 7 个低危有效发现之一。",
+      "action_judge": "【判断】安全研究者应在 7/27 前提交已验证高质量报告；之后要减少 AI 扫描器式噪音，优先打磨 PoC、影响证明和复现质量。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 5
+      },
+      "tags": [
+        "GitHub",
+        "Bug-Bounty",
+        "Security",
+        "AI-Noise"
+      ],
+      "sources": [
+        "https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub Copilot Canvases：Agent 协作从聊天框变成可交互界面",
+      "summary": "GitHub 7月21日介绍 Copilot canvases：开发者可在 Copilot app 中用 /create-canvas 创建共享交互式界面，Agent 可实时更新画布，用户可通过点击、编辑、拖拽等方式与同一工作区协作。示例包括 Issue triage、代码库交互图、worktree 管理、prompt coach、跨 Slack/Teams/Email/docs 的知识查找。",
+      "why": "聊天框对复杂任务是低带宽界面。Canvases 把 Agent 输出变成可操作 UI，说明 AI 编程产品正在从“生成文本/代码”走向“生成工作表面”。",
+      "action_fact": "【事实】创建方式是 /create-canvas + 描述目标界面；画布可随 workflow 持续迭代。",
+      "action_judge": "【判断】最值得尝试的是 issue triage、代码库地图和 worktree 清理三类可视化任务；这些场景比纯聊天更容易降低认知负担。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "GitHub-Copilot",
+        "Canvas",
+        "Interactive-UI",
+        "Agent-Workspace"
+      ],
+      "sources": [
+        "https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic Economic Index Connector：研究报告变成可查询数据连接器",
+      "summary": "Anthropic 7月22日推出 Economic Index connector for Claude。用户可在 claude.ai 连接器目录启用，无需安装，在任意 Claude 模型对话中查询 AI 在职业、地区和任务上的使用模式，并要求 Claude 展示底层数据。Anthropic 明确说明该 Index 反映的是 Claude 使用模式，而不是整个劳动力市场。",
+      "why": "这不是单纯发布一份就业报告，而是把研究数据做成 MCP-style 连接器。知识产品的默认形态从“读 PDF”变成“按自己关心的切片问数据”。",
+      "action_fact": "【事实】连接器可在 claude.ai 的 connectors menu 中启用；完整数据集仍在 Anthropic 网站免费提供。",
+      "action_judge": "【判断】研究员、记者和行业分析师可用它快速做职业/地区切片，但不能把 Claude 使用数据直接等同于全社会 AI 渗透率。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 5
+      },
+      "tags": [
+        "Anthropic",
+        "Economic-Index",
+        "Connector",
+        "MCP",
+        "AI-Labor"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/anthropic-economic-index-connector"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Anthropic 2亿美元 Economic Futures Fund：AI 劳动力冲击研究进入大额资助阶段",
+      "summary": "Anthropic 7月22日公布 Economic Futures Research Fund 研究议程，承诺 2 亿美元支持外部研究，重点包括工作场所影响、职业转型、收入支持现代化、劳动者分享 AI 增长收益、公共投资证据。项目主要资助 500万-3000万美元规模，原则上不直接资助 100万美元以下项目。",
+      "why": "Anthropic 正在把“AI 对就业的影响”从舆论议题变成数据、资助和政策实验工程。这与 Economic Index Connector 形成组合：一边开放数据查询，一边资助干预研究。",
+      "action_fact": "【事实】面向大学、研究机构、政策组织和有规模化实验经验的非营利组织，不接受个人直接申请。",
+      "action_judge": "【判断】值得关注其研究结果是否影响未来 AI 税、再培训、收入保障和公共岗位政策讨论；短期对开发者无直接操作价值，但对 AI 行业叙事有长期影响。",
+      "score": {
+        "novelty": 3,
+        "utility": 3,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 5
+      },
+      "tags": [
+        "Anthropic",
+        "Economic-Futures",
+        "AI-Policy",
+        "Labor"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/economic-futures-research-fund-agenda"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "AMD MI400 / Helios Rack：AI 算力竞争继续向整机柜和供电承诺扩张",
+      "summary": "AMD 在 Advancing AI 2026 Day 2 发布 MI400 系列和 Helios Rack 相关信息，行业日报称 OpenAI 与 Meta 已预订跨代 12GW AMD 加速器容量，早期客户包括 Azure、Oracle、Tata。",
+      "why": "这条信号说明 AI 算力竞争正在从单卡性能转向整机柜、HBM、供电容量和云厂商长期承诺。",
+      "action_fact": "【事实】本条来自行业聚合与 DataCenterDynamics 报道，需继续关注 AMD 官方规格与客户合同细节。",
+      "action_judge": "【判断】适合放入明日追踪，不作为今日 P0；真正影响在于是否改变英伟达高端机柜定价权。",
+      "score": {
+        "novelty": 3,
+        "utility": 2,
+        "credibility": 3,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "AMD",
+        "MI400",
+        "Helios",
+        "AI-Infrastructure"
+      ],
+      "sources": [
+        "https://www.datacenterdynamics.com/en/news/amd-unveils-full-mi400-product-lineup-claims-mi500-chips-will-deliver-1000x-increase-in-ai-performance/",
+        "http://www.ai-daily.dev/"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "腾讯混元 Hyra-1.0 / 高德 ABot-World-0 等中文侧科研与世界模型信号",
+      "summary": "中文聚合源显示，7月22日前后出现腾讯混元 Hyra-1.0 递归自我改进科研智能体、高德 ABot-World-0 交互式世界模型等候选。信息具备方向价值，但当前可见结果以聚合转载为主，尚需官方页面或代码仓库复核。",
+      "why": "科研 Agent 和可本地部署世界模型都是下一阶段 Agent 能力的重要方向，但必须避免把聚合快讯包装成确认发布。",
+      "action_fact": "【事实】暂列 P2/追踪项，等待官方论文、GitHub、模型卡或产品页。",
+      "action_judge": "【判断】如果 Hyra-1.0 确有开源 Harness，明日可上升为 P1；若只有媒体简讯则继续过滤。",
+      "score": {
+        "novelty": 4,
+        "utility": 2,
+        "credibility": 2,
+        "content": 3,
+        "timeliness": 4
+      },
+      "tags": [
+        "Hyra",
+        "ABot-World",
+        "Research-Agent",
+        "World-Model"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260723A0377900?refer=cp_1009"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Product Hunt / Agent 工具继续场景化：搜索、API Hub、MCP 入口",
+      "summary": "Product Hunt 和 AI 工具聚合中继续出现 AnySearch、ApyHub、Product Hunt MCP、AgentKey 等候选，方向集中在搜索、API 编排、MCP 连接和 Agent 工具入口。多数尚不是模型级或平台级发布。",
+      "why": "工具层的信号在于“Agent 需要更多可控连接器和工作入口”，但单个产品缺少足够差异化时不宜升 P1。",
+      "action_fact": "【事实】可作为视频号工具箱素材池，逐个实测后再决定是否单独写。",
+      "action_judge": "【判断】优先测试能接入现有工作流、支持 MCP/权限管理、可导出结果的工具；纯 landing page 不采信。",
+      "score": {
+        "novelty": 3,
+        "utility": 3,
+        "credibility": 3,
+        "content": 3,
+        "timeliness": 3
+      },
+      "tags": [
+        "Product-Hunt",
+        "MCP",
+        "Agent-Tools",
+        "Search-Agent"
+      ],
+      "sources": [
+        "https://www.producthunt.com/",
+        "http://www.ai-daily.dev/"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "OpenAI Presence",
+      "type": "企业语音/聊天 Agent 平台",
+      "highlight": "把知识、SOP、批准动作、评估、护栏、人工接管和 Codex 改进循环打包成托管交付",
+      "audience": "大型客服、IT 服务、保险理赔、金融客户支持团队",
+      "action": "准备一个可量化高价值流程，找 OpenAI account team 评估；重点追问数据边界、SLA 和交付成本",
+      "link": "https://openai.com/index/introducing-openai-presence/"
+    },
+    {
+      "name": "Claude Code v2.1.218",
+      "type": "AI 编程 Agent / CLI",
+      "highlight": "重型技能显式触发、/code-review 后台化、auto mode 判断范围扩大、hooks 信任边界收紧",
+      "audience": "长期使用 Claude Code 的开发者和自动化流水线维护者",
+      "action": "检查是否依赖 /deep-research 或 /code-review 自动触发；审计 auto mode 与 context: fork skill",
+      "link": "https://claude-news.today/en/briefings/briefing-2026-07-23"
+    },
+    {
+      "name": "Tencent Miora",
+      "type": "多模态创意智能体",
+      "highlight": "同一画布生成图片、视频、3D、UI，并支持局部编辑、记忆和 Skill 复用",
+      "audience": "运营、市场、电商、游戏 UI、非专业设计师和内容团队",
+      "action": "用一个真实品牌 brief 测试从主视觉到短视频分镜的整套输出，再沉淀可复用 Skill",
+      "link": "https://www.sohu.com/a/1053335755_122135404"
+    },
+    {
+      "name": "GitHub Copilot Canvases",
+      "type": "交互式 Agent 工作表面",
+      "highlight": "/create-canvas 可生成 issue triage、代码库图、worktree 管理等交互界面",
+      "audience": "需要把复杂开发信息可视化的团队",
+      "action": "先尝试 issue triage、代码库关系图和 worktree 清理三类高收益场景",
+      "link": "https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases"
+    },
+    {
+      "name": "Anthropic Economic Index Connector",
+      "type": "数据连接器 / 研究工具",
+      "highlight": "在 Claude 中直接查询职业、地区、任务层面的 AI 使用数据，并能回看底层数据",
+      "audience": "研究员、记者、政策分析师、行业报告作者",
+      "action": "用于生成行业切片，但报告中明确说明它反映 Claude 使用而非全劳动力市场",
+      "link": "https://www.anthropic.com/news/anthropic-economic-index-connector"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "OpenAI Presence 是什么：ChatGPT 为什么开始卖“客服系统”",
+      "hook": "OpenAI 不只卖 API 了，而是在卖可上线、可接管、可评估的企业 Agent。",
+      "angle": "用客服账单问题举例，拆解知识、权限、审批、人工接管、Codex 改进循环。",
+      "materials": "OpenAI Presence 官方页、客服流程图、75% 自动解决数据",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 2.1.218：为什么 AI 不再自动帮你跑深度研究",
+      "hook": "AI 工具开始主动限制自己，因为自动化误触发会烧钱、污染上下文、带来安全风险。",
+      "angle": "对比自动触发与显式调用，演示 /code-review 后台化和 auto mode 风险点。",
+      "materials": "Claude Code briefing、旧工作流示意、auto mode checklist",
+      "difficulty": "中"
+    },
+    {
+      "title": "腾讯 Miora 实测选题：一句话能不能做出一套品牌物料",
+      "hook": "设计智能体的关键不是出一张图，而是同一画布交付图片、视频、3D、UI 和后续修改。",
+      "angle": "用一个咖啡品牌 brief 测试主视觉、社媒图、短视频分镜、局部修改和记忆复用。",
+      "materials": "Miora 页面、品牌 brief、生成前后对比",
+      "difficulty": "低"
+    },
+    {
+      "title": "GitHub 漏洞赏金为什么降价：AI 生成报告把安全团队淹没了",
+      "hook": "以后不是提交越多赚越多，而是报告越准越值钱。",
+      "angle": "用新旧赏金表解释公开通道、VIP 通道和 HackerOne signal 门槛。",
+      "materials": "GitHub 官方 bounty 表、7月27日时间线",
+      "difficulty": "低"
+    },
+    {
+      "title": "从 PDF 到 Connector：Anthropic 把 AI 就业数据变成可问的数据源",
+      "hook": "研究报告的下一代形态不是 PDF，而是你直接问“我这行的人怎么用 AI”。",
+      "angle": "演示职业/地区/任务三个切片，强调 Claude 使用数据的边界。",
+      "materials": "Anthropic Economic Index Connector 官方示例、数据限制说明",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Qwen-Image-3.0 / Qwen-Audio-3.0-TTS 零散传闻",
+      "reason": "搜索结果中存在中文聚合提及，但缺少当前窗口官方发布页或模型卡，暂不写入高优先级。"
+    },
+    {
+      "item": "DeepSeek V4 即将发布/融资/上市传闻",
+      "reason": "多为市场传闻或旧信息延续；缺少 7/22-7/24 官方确认，且此前日报已覆盖 V4 主线。"
+    },
+    {
+      "item": "xAI 2 万亿参数模型喊话 Kimi",
+      "reason": "主要来自人物表态和社交传播，不构成可操作产品更新。"
+    },
+    {
+      "item": "AI 融资周报和机器人展会数量",
+      "reason": "大多是资本/展会汇总，信息密度高但操作价值低，除非出现具体可用产品或开源模型。"
+    },
+    {
+      "item": "自媒体“500 个技能”式标题",
+      "reason": "包含可能有价值的企业 Agent 信号，但标题和数据需回到官方 API/平台文档核查，今日不作为事实主线。"
+    },
+    {
+      "item": "Google Gemini 3.5 Pro 继续跳票情绪化标题",
+      "reason": "真实信号是 Flash 系列按工作负载分工，而不是 Pro 跳票本身。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "OpenAI Presence 是否公布定价、SLA、第三方模型/系统接入边界",
+      "why": "决定其是咨询交付产品还是可规模化企业软件。"
+    },
+    {
+      "item": "Claude Code 后续是否继续收紧自动触发 skills 与 auto mode 权限",
+      "why": "关系到无人值守 Agent 的成本治理和安全默认值。"
+    },
+    {
+      "item": "Miora 是否开放 Skill 市场、API 或团队协作能力",
+      "why": "决定它能否从设计工具升级为创意生产平台。"
+    },
+    {
+      "item": "Gemini 3.5 Flash Cyber / CodeMender 是否扩大到普通企业或开发者",
+      "why": "若开放，会影响代码安全扫描与漏洞赏金生态。"
+    },
+    {
+      "item": "Anthropic Economic Index Connector 的数据覆盖频率和可导出能力",
+      "why": "决定其能否成为长期研究数据源。"
+    },
+    {
+      "item": "腾讯混元 Hyra-1.0、高德 ABot-World-0 是否出现官方代码/模型卡",
+      "why": "若有一手材料，可从追踪项升为 P1。"
+    }
+  ]
+}
