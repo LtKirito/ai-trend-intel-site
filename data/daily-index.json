@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-25",
+    "label": "7 月 25 日 (周六)",
+    "count": "3P0 + 7P1 + 2P2",
+    "tags": "Claude-Opus-5 · Claude-Code-v2.1.219 · Prompt-Removal-80% · FLUX-3 · GPT-Live · Project-Camellia · AMD-Helios · DeepSeek-Funding · HeyGen-Hyperframes · Fields-Medal · Product-Hunt · GitHub-Trending",
+    "summary": "7/24-25 三大主线交汇：Claude Opus 5 正式发布（新旗舰模型，推理+编程双线提升）+ Claude Code v2.1.219 砍掉 80% 系统提示词（Agent 架构精简化标志性事件）+ FLUX 3 统一多模态生成（文生图/视频/3D 一体化）。并行信号：OpenAI 基础设施扩张（GPT-Live + Project Camellia）、DeepSeek 新一轮融资、AMD Helios AI 芯片亮相、HeyGen Hyperframes 视频生成框架。"
+  },
+  {
     "date": "2026-07-24",
     "label": "7 月 24 日 (周五)",
     "count": "3P0 + 7P1 + 3P2",

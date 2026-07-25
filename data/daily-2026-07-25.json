@@ -1,0 +1,483 @@
+{
+  "date": "2026-07-25",
+  "title": "2026-07-25 AI信息差日报",
+  "coverage": "覆盖窗口：7月24日（周五）09:48 ~ 7月25日（周六）12:25 GMT+8",
+  "sources": "Anthropic 官方博客 / Claude Code Changelog / claudeupdates.dev / Claude Code Daily Briefing / claude.com/blog / OpenAI 官方 / Black Forest Labs 官方 / VentureBeat / IT之家 / 智东西 / 华尔街见闻 / 财联社 / 腾讯新闻 / Product Hunt / Trendshift / Help Net Security",
+  "conclusions": [
+    "Claude Opus 5 是今日最硬信号：Anthropic 7/25 凌晨发布新一代旗舰模型 Opus 5，性能逼近 Fable 5 但价格仅一半（$5/$25 per MTok，与 Opus 4.8 持平），已成为 Claude Max 默认模型。这代表高端模型市场的竞争焦点从谁的旗舰更强转向谁能以更低成本大规模部署接近旗舰的能力。",
+    "Claude Code v2.1.219 + 系统提示词 80% 删除是并列的范式信号：v2.1.219 将 Opus 5 设为默认模型，同时 Anthropic 工程师发文称删除 Claude Code 超 80% 系统提示词后编程评测无下降，推出 /doctor 命令自动精简 Skills 和 CLAUDE.md。上下文工程从给规则转向给判断空间、设计接口、渐进式披露。",
+    "Black Forest Labs FLUX 3 是多模态方向的重磅发布：首个统一架构联合训练图像、视频（20s 带原生音频）和机器人动作预测的模型，基于 Self-Flow 架构。视频早期对比胜率：Runway Gen-4.5 77%、Grok Imagine Video 69%、Kling v3 Pro 60%。开源 Dev 版承诺晚些发布。",
+    "OpenAI 基础设施扩张信号密集：Project Camellia（佐治亚州 $200 亿首个自主设计数据中心，3.2GW 电力）+ 算力预算上调至 $7500 亿 + 大规模部署 AMD Helios + GPT-Live 桌面全双工语音模式。OpenAI 正从租用云算力走向自建设施 + 多芯片供应商。",
+    "DeepSeek 首轮超 500 亿融资 + 国产芯片平替论：腾讯 100 亿、宁德时代 50 亿、京东网易各 30 亿、梁文锋个人跟投 200 亿。创始人明确国产算力可平替国外旗舰芯片但产能是瓶颈，小米新机已备案 DeepSeek 大模型。"
+  ],
+  "summary": "7/24-7/25 的主线是模型能力下沉和上下文工程范式翻转：Anthropic 发布 Claude Opus 5 以 Opus 4.8 价格部署接近 Fable 5 的能力，同时删除 Claude Code 80% 系统提示词证明强模型少规则的工程实践。Black Forest Labs FLUX 3 将多模态生成推向统一世界模型。OpenAI 基础设施全面扩张（Project Camellia + AMD Helios + GPT-Live），DeepSeek 500 亿融资标志国产 AI 资本+产业链全面落地。",
+  "body": "本窗口的核心不是单一旗舰模型发布，而是三个方向的同步推进。模型层：Opus 5 以 Fable 5 级能力、Opus 4.8 价格大规模部署，编程评测 Frontier-Bench SOTA、CursorBench 3.2 距 Fable 5 仅差 0.5%。工程层：Claude Code v2.1.219 + 系统提示词 80% 删除代表上下文工程范式翻转，/doctor 命令自动精简 Skills 和 CLAUDE.md。多模态层：FLUX 3 统一图像+视频+音频+机器人动作预测，Self-Flow 架构让模态间互相增强。基础设施层：OpenAI Project Camellia $200 亿自建数据中心、算力预算 $7500 亿、AMD Helios 大规模部署。资本层：DeepSeek 首轮超 500 亿融资，国产芯片平替论。",
+  "judgement": "编辑判断：今天的信息差核心是模型能力下沉 + 上下文工程范式翻转。Opus 5 不是新旗舰——它是 Fable 5 级能力以 Opus 4.8 价格大规模部署的载体，说明 AI 模型价格战进入接近旗舰能力下沉的新阶段。系统提示词 80% 删除则意味着：当模型足够强时，过度的规则和示例反而是拖累，少即是多从设计哲学变成了可测量的工程实践。对个人和团队最直接的动作是：（1）Max/Pro 用户立即体验 Opus 5 并对比 Opus 4.8 的实际体感；（2）运行 /doctor 审计自己的 CLAUDE.md 和 Skills 臃肿度；（3）创意团队申请 FLUX 3 早期访问评估视频生成+原生音频能力。",
+  "tags": [
+    "Claude-Opus-5",
+    "Claude-Code-v2.1.219",
+    "Context-Engineering",
+    "FLUX-3",
+    "Black-Forest-Labs",
+    "GPT-Live",
+    "Project-Camellia",
+    "AMD-Helios",
+    "DeepSeek-Funding",
+    "HeyGen-Hyperframes",
+    "Product-Hunt",
+    "AI-Price-War"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Claude Opus 5 发布：Fable 5 级性能、Opus 4.8 价格",
+      "summary": "Anthropic 7/25 凌晨发布 Claude Opus 5，性能逼近 Fable 5 但价格仅一半。$5/$25 per MTok（与 Opus 4.8 持平），1M 上下文，thinking 默认开启，Fast mode $10/$50。Frontier-Bench SOTA，CursorBench 3.2 距 Fable 5 仅差 0.5%，ARC-AGI 3 得分约为下一名 3 倍。已成为 Claude Max 默认模型。新增 mid-conversation tool changes（不丢 prompt cache）和 API auto-fallback 两个 Beta 功能。",
+      "why": "高端模型价格战进入接近旗舰能力下沉阶段。Opus 5 不是替代 Fable 5，而是替换 Opus 4.8 的位置：价格不动、能力跃升。Max/Pro 用户自动获得升级。",
+      "action_fact": "【事实】Max/Pro 用户已自动切换到 Opus 5；API 可用 claude-opus-5；AWS Bedrock 同步接入。Fast mode $10/$50 per MTok，Opus 4.7 已从 fast mode 移除。",
+      "action_judge": "【判断】对比 Opus 4.8 和 Fable 5 的实际体感差异，重点关注编程/Agent 工作流和 token 消耗变化。Opus 5 的 thinking 默认开启可能增加单次 token 消耗，但 effort 参数可控制深度。",
+      "score": {
+        "novelty": 5,
+        "utility": 5,
+        "credibility": 5,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "Anthropic",
+        "Opus-5",
+        "旗舰模型",
+        "降价"
+      ],
+      "sources": [
+        "https://anthropic.com/news/claude-opus-5",
+        "https://platform.claude.com/docs/pt-BR/about-claude/models/whats-new-opus-5"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Claude Code v2.1.219 + 系统提示词 80% 删除：上下文工程范式翻转",
+      "summary": "v2.1.219（7/24）将 Opus 5 设为默认模型。同时 Anthropic 工程师 Thariq Shihipar 发文称删除 Claude Code 超 80% 系统提示词（65K->~13K tokens）后编程评测无 measurable 下降，推出 /doctor 自动精简 Skills 和 CLAUDE.md。范式转变：规则->判断、示例->接口设计、全 upfront->渐进式披露、重复->简洁。v2.1.219 还新增 sandbox.network.strictAllowlist、嵌套 subagent 深度 1->3、动态工作流默认中等规模（<15 agents）。",
+      "why": "这是 Agent 上下文工程的范式翻转信号。当模型足够强时，过度的规则和示例反而制造冲突和噪音。少即是多从设计哲学变成了可测量的工程实践。",
+      "action_fact": "【事实】升级到 v2.1.219 后运行 /doctor 检查 CLAUDE.md 和 Skills 臃肿度；嵌套 subagent 深度默认从 1 扩展到 3（CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1 可禁用）；sandbox.network.strictAllowlist 设为 true 时非白名单主机直接拒绝。",
+      "action_judge": "【判断】精简 CLAUDE.md 到仓库用途+真正 gotchas，把详细规则移入按需加载的 Skill。关注 /doctor 的精简建议是否符合团队实际需求。",
+      "score": {
+        "novelty": 5,
+        "utility": 5,
+        "credibility": 5,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "Claude-Code",
+        "Context-Engineering",
+        "Doctor",
+        "v2.1.219"
+      ],
+      "sources": [
+        "https://www.claudeupdates.dev/version/2.1.219",
+        "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+        "https://claude-news.today/en/briefings/briefing-2026-07-25"
+      ]
+    },
+    {
+      "rank": "P0",
+      "title": "Black Forest Labs FLUX 3：统一多模态世界模型",
+      "summary": "BFL 7/23 发布 FLUX 3，首个统一架构联合训练图像、视频（20s 带原生音频）和机器人动作预测的模型。基于 Self-Flow 架构，支持文生视频/图生视频/视频续写/关键帧/多语言对话/多镜头串联。视频对比胜率：Runway Gen-4.5 77%、Grok Imagine Video 69%、Kling v3 Pro 60%、Seedance 2.0 52%。与 Mimic Robotics 合作机器人行为预测。开源 FLUX 3 Dev 版承诺晚些发布。",
+      "why": "多模态生成从拼装独立模型走向统一世界模型。声音匹配动作、运动遵循物理、角色跨镜头一致性——这些是此前需要多工具组合才能实现的能力。",
+      "action_fact": "【事实】FLUX 3 Video 和 FLUX 3 Action 进入 gated Early Access；FLUX 3 Image 数周内推出；API 和定价尚未公布。开源 FLUX 3 Dev 版覆盖视频/音频/图像/动作预测，晚些发布。",
+      "action_judge": "【判断】创意团队应申请早期访问评估视频+原生音频能力；机器人团队关注 FLUX 3 Action 与 Mimic Robotics 合作进展。注意 BFL 的对比数据是 preliminary evaluation，最终版可能不同。",
+      "score": {
+        "novelty": 5,
+        "utility": 4,
+        "credibility": 4,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "BFL",
+        "FLUX-3",
+        "多模态",
+        "视频生成",
+        "Self-Flow"
+      ],
+      "sources": [
+        "https://bfl.ai/blog/flux-3",
+        "https://venturebeat.com/technology/black-forest-labs-launches-flux-3-capable-of-generating-images-and-20-second-video-with-audio-but-in-limited-release-to-start",
+        "https://vidmuse.ai/blog/flux-3"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI GPT-Live 桌面语音模式：全双工语音+多 Agent 协调",
+      "summary": "OpenAI 7/24 升级 ChatGPT 桌面应用，上线 GPT-Live 驱动的 Voice 语音交互。全双工语音（同步听与说），用户可口述需求，AI 在后台并行执行多项任务（查日历、读邮件、写纪要），支持聊天/办公/编程三大场景。覆盖 Plus/Pro/Business/Edu/Enterprise。",
+      "why": "语音即操作的 AI 工作范式。GPT-Live 可控制电脑并协调 ChatGPT Work 或 Codex 中的多个 agent，代表 AI 交互入口从文本走向全双工语音+多 agent 协调。",
+      "action_fact": "【事实】macOS 和 Windows 桌面端已上线，覆盖 Plus 及以上计划。",
+      "action_judge": "【判断】适合需要多线程操作的客服/协调场景；编程场景的语音价值需实测验证。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 5,
+        "content": 3,
+        "timeliness": 5
+      },
+      "tags": [
+        "OpenAI",
+        "GPT-Live",
+        "语音",
+        "桌面端"
+      ],
+      "sources": [
+        "https://www.donews.com/news/detail/8/6645262.html",
+        "https://ainativefoundation.org/global-ai-native-industry-insights-20260724-openai-anthropic-heygen-more"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI Project Camellia + 算力预算 $7500 亿",
+      "summary": "OpenAI 官宣佐治亚州埃芬汉县 Project Camellia，首个自主设计开发数据中心，$200 亿投资，3.2GW 电力（2028-2032 分批交付）。算力支出预期从 $6000 亿上调至 $7500 亿。从 xAI 挖来 Brent Mayo 负责建设。承诺不将电力成本转嫁给当地居民，投入 $8000 万回馈社区。",
+      "why": "OpenAI 从租用云算力走向自建设施的标志性节点。$7500 亿算力预算和 CFO 对合同支付能力的担忧，是 AI 基础设施竞赛规模与风险并存的关键信号。",
+      "action_fact": "【事实】项目处于开发早期，基础设施/融资/运营方案尚未最终确定。算力预算从约 $6000 亿上调至约 $7500 亿，增幅约 25%。",
+      "action_judge": "【判断】个人开发者无需直接操作；关注算力扩张对 API 定价和可用性的长期影响。CFO Sarah Friar 对合同支付能力的担忧值得关注。",
+      "score": {
+        "novelty": 4,
+        "utility": 2,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "OpenAI",
+        "Project-Camellia",
+        "数据中心",
+        "算力"
+      ],
+      "sources": [
+        "https://www.163.com/dy/article/L2HV1R6O051180F7.html",
+        "https://new.qq.com/rain/a/20260723A0AYS000"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenAI + AMD Helios 大规模部署 / Anthropic-AMD 2GW MI450",
+      "summary": "OpenAI 基础设施负责人称三个月前已使用 AMD Helios GPU 机架，预计大规模部署并合作开发 MI500 系列。同期 Anthropic 与 AMD 签署 2GW MI450 战略协议（2027 上半年起），AMD 向 Anthropic 投资 $50 亿。英伟达不再是唯一选择。",
+      "why": "AI 算力供应链多元化信号。AMD 正式进入前沿 AI 实验室的芯片采购名单，NVIDIA 垄断地位被稀释。对开发者意味着未来推理算力可能有更多供应商选择和价格谈判空间。",
+      "action_fact": "【事实】OpenAI 已使用 AMD Helios；Anthropic-AMD 协议 2027H1 起；AMD 投资 Anthropic 最高 $50 亿。",
+      "action_judge": "【判断】短期对开发者无直接影响；长期关注 AMD 芯片上的模型推理性能和成本对比。",
+      "score": {
+        "novelty": 4,
+        "utility": 2,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "AMD",
+        "Helios",
+        "算力多元化",
+        "MI450"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260724A02UOA00",
+        "https://so.html5.qq.com/page/real/search_news?docid=70000021_3356a61deb731852"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "DeepSeek 首轮超 500 亿融资 + 国产芯片平替论",
+      "summary": "DeepSeek 完成首轮超 500 亿融资：腾讯 100 亿、宁德时代 50 亿、京东网易各 30 亿、国家 AI 产业基金 10 亿、梁文锋个人跟投 200 亿。创始人称国产新一代算力集群可完全平替国外旗舰芯片，唯一瓶颈是产能。小米新机已备案 DeepSeek 大模型。黄仁勋称市场低估了 DeepSeek。",
+      "why": "DeepSeek 从单点模型突破走向资本+产业链+终端全面落地。创始人国产芯片平替论如果成立，意味着中国 AI 算力瓶颈可能从芯片断供转向产能爬坡。",
+      "action_fact": "【事实】不同信源在金额与股权比例上存在差异；小米新机备案含多款模型（DeepSeek/文心一言/通义千问）。",
+      "action_judge": "【判断】关注 DeepSeek V4 的持续降本路径和国产芯片实际部署规模。融资具体金额以官方确认为准。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 5
+      },
+      "tags": [
+        "DeepSeek",
+        "融资",
+        "国产芯片",
+        "平替"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260725A03UUO00"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "HeyGen Companion Mode for Hyperframes：AI 视频分步审批工作流",
+      "summary": "HeyGen 7/23 推出 Hyperframes AI 视频 Agent 的 Companion Mode。分步审批工作流：AI 提出多个视频角度->故事板->草图->制作，用户在每个阶段保持审批控制。npm 包 npx hyperframes@latest 可用。",
+      "why": "AI 视频创作从一键生成走向人机协作分步审批。用户不再只是下订单等结果，而是在创意方向、故事板、草图每个节点保持控制权。这是 Agent 工作流在创意领域的具体化。",
+      "action_fact": "【事实】Companion Mode 已上线，通过 npm 安装可用。",
+      "action_judge": "【判断】适合需要品牌控制和创意审批的市场/内容团队；对比传统视频制作流程的效率提升。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 4,
+        "content": 3,
+        "timeliness": 5
+      },
+      "tags": [
+        "HeyGen",
+        "Hyperframes",
+        "AI视频",
+        "Agent工作流"
+      ],
+      "sources": [
+        "https://ainativefoundation.org/global-ai-native-industry-insights-20260724-openai-anthropic-heygen-more"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "菲尔兹奖得主 Jacob Tsimerman 加入 OpenAI 专注 AI 安全",
+      "summary": "新晋菲尔兹奖得主 Jacob Tsimerman 领奖当日宣布加入 OpenAI 专注 AI 安全。其曾预言 AI 或致人类灭绝。这是顶级数学家从纯学术转向 AI 安全研究的标志性人才流动。",
+      "why": "菲尔兹奖得主领奖当日加入 AI 公司，说明顶级学术人才正将 AI 安全视为比纯数学更紧迫的问题。OpenAI 的 AI 安全团队获得顶级数学推理能力的加持。",
+      "action_fact": "【事实】Jacob Tsimerman 2026 年菲尔兹奖得主，加入 OpenAI AI 安全方向。",
+      "action_judge": "【判断】个人无需直接操作；关注其后续在 AI 安全对齐方面的研究输出。",
+      "score": {
+        "novelty": 4,
+        "utility": 1,
+        "credibility": 4,
+        "content": 3,
+        "timeliness": 5
+      },
+      "tags": [
+        "OpenAI",
+        "Fields-Medal",
+        "AI安全",
+        "人才"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260724A0AG8200"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt / GitHub Trending 生态信号：Agent 基础设施分化",
+      "summary": "Product Hunt 7/24 热榜：AgentLoop（每循环启动新 Codex worker+critic）、Blaxel Agent Drive（AI agents 共享文件系统）、Motionly（AI-native 动效编辑器）、Pulse（企业级 permission-aware AI brain）。GitHub Trending：xai-org/grok-build 9.5k、Nutlope/hallmark（anti-AI-slop design skill）、mattpocock/skills、ibelick/ui-skills。",
+      "why": "Agent 工具生态从单模型能力转向完整 Agent 基础设施：并行编排、共享文件系统、动效生成、企业记忆。Claude Code Skills 生态持续分化（anti-AI-slop、UI design、real engineer skills）。",
+      "action_fact": "【事实】以上项目均在 Product Hunt / GitHub Trending 当日热榜可见。",
+      "action_judge": "【判断】AgentLoop 的每循环新 context 模式值得对比 Claude Code 的 /fork->/subtask 演化；hallmark 的 anti-AI-slop 理念与 Opus 5 系统提示词精简方向一致。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 4,
+        "content": 3,
+        "timeliness": 5
+      },
+      "tags": [
+        "Product-Hunt",
+        "GitHub-Trending",
+        "Agent工具",
+        "Skills"
+      ],
+      "sources": [
+        "https://freeourdays.com/posts/producthunt-daily-2026-07-24",
+        "https://trendshift.io"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Google Gemini Spark 扩展：US Pro + Workspace + Mac 远程控制",
+      "summary": "Gemini Spark 7/16 对美国 Pro 订阅者开放英文版；7/14 扩展到所有 Gemini Apps 语言（Ultra 订阅者）；新增 Workspace 操作（编辑表格/幻灯片、添加图片、Canvas 面板）和 Mac 远程控制。",
+      "why": "Google 的 Agent 产品 Gemini Spark 持续扩展覆盖面和 Workspace 集成深度，但未进入中国市场。",
+      "action_fact": "【事实】US Pro 订阅者可用英文版；Mac 远程控制已上线。",
+      "action_judge": "【判断】国内用户无法直接使用；关注其 Workspace 集成模式对 Agent 产品设计的参考价值。",
+      "score": {
+        "novelty": 3,
+        "utility": 3,
+        "credibility": 5,
+        "content": 2,
+        "timeliness": 3
+      },
+      "tags": [
+        "Google",
+        "Gemini-Spark",
+        "Workspace"
+      ],
+      "sources": [
+        "https://support.google.com/gemini/answer/17171264"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "OpenAI 接入苹果健康数据",
+      "summary": "OpenAI 7/24 宣布其产品将支持接入 Apple Health 数据并兼容用户医疗档案，进一步拓展个人健康场景。",
+      "why": "OpenAI 持续向消费级健康与医疗数据整合方向延伸，但具体产品形态和隐私边界尚不清晰。",
+      "action_fact": "【事实】单源报道，细节有限。",
+      "action_judge": "【判断】待验证；关注后续官方产品页面和数据隐私政策。",
+      "score": {
+        "novelty": 3,
+        "utility": 2,
+        "credibility": 3,
+        "content": 2,
+        "timeliness": 5
+      },
+      "tags": [
+        "OpenAI",
+        "Apple-Health",
+        "健康数据"
+      ],
+      "sources": [
+        "https://new.qq.com/rain/a/20260724A02UOA00"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Opus 5",
+      "type": "AI 模型",
+      "highlight": "Fable 5 级性能、Opus 4.8 价格、1M 上下文、thinking 默认开启、mid-conversation tool changes",
+      "audience": "开发者、Agent 工作流",
+      "action": "Max/Pro 用户已自动升级；API 调用 claude-opus-5",
+      "url": "https://anthropic.com/news/claude-opus-5"
+    },
+    {
+      "name": "Claude Code /doctor",
+      "type": "CLI 命令",
+      "highlight": "自动检查 CLAUDE.md 和 Skills 臃肿度，给出精简建议。系统提示词可删 80% 无性能损失",
+      "audience": "Claude Code 用户",
+      "action": "升级到 v2.1.219 后运行 /doctor",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+    },
+    {
+      "name": "FLUX 3",
+      "type": "多模态模型",
+      "highlight": "统一图像+视频(20s)+音频+机器人动作预测，Self-Flow 架构，原生音频同步",
+      "audience": "创意团队、机器人研究",
+      "action": "申请 Early Access；关注 FLUX 3 Dev 开源版",
+      "url": "https://bfl.ai/models/flux-3"
+    },
+    {
+      "name": "HeyGen Hyperframes",
+      "type": "AI 视频 Agent",
+      "highlight": "Companion Mode 分步审批工作流：角度->故事板->草图->制作",
+      "audience": "市场/内容团队",
+      "action": "npx hyperframes@latest",
+      "url": "https://x.com/HeyGen/status/2079979510783688953"
+    },
+    {
+      "name": "AgentLoop",
+      "type": "Agent 编排",
+      "highlight": "每循环启动新 Codex worker+critic，用 GUIDELINES.md rubric 评判，失败变 fix notes",
+      "audience": "Agent 开发者",
+      "action": "Product Hunt 查看详情，开源 Node.js",
+      "url": "https://freeourdays.com/posts/producthunt-daily-2026-07-24"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "type": "Claude Code Skill",
+      "highlight": "Anti-AI-slop design skill，防止 AI 生成千篇一律的样板 UI",
+      "audience": "前端开发者",
+      "action": "GitHub 搜索 hallmark，安装为 Claude Code Skill",
+      "url": "https://trendshift.io"
+    },
+    {
+      "name": "Motionly",
+      "type": "动效编辑器",
+      "highlight": "AI-native 开源动效编辑器，AI 生成可编辑 motion files 而非直接生成视频",
+      "audience": "设计师、开发者",
+      "action": "Product Hunt 查看详情，开源",
+      "url": "https://freeourdays.com/posts/producthunt-daily-2026-07-24"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "Opus 5 半价追平 Fable 5 实测",
+      "hook": "旗舰级能力半价部署，网友花2倍价格用Fable 5的人是？",
+      "angle": "用同一组编程任务对比 Opus 5 vs Opus 4.8 vs Fable 5 的输出质量、token 消耗和速度；重点展示 CursorBench 0.5% 差距在实际代码中的体感",
+      "materials": "Cursor/Claude Code 实录、API 成本对比表、ARC-AGI 3 解题过程",
+      "difficulty": "中"
+    },
+    {
+      "title": "Claude Code 砍 80% 提示词：清 Prompt 债",
+      "hook": "65K->13K tokens 无性能损失，/doctor 命令自动瘦身",
+      "angle": "运行 /doctor 前后的 CLAUDE.md 和 Skills 对比；解释规则->判断、示例->接口设计的范式转变；展示精简后实际编程效果",
+      "materials": "/doctor 截图、前后 token 对比、编程实测录屏",
+      "difficulty": "低"
+    },
+    {
+      "title": "FLUX 3 统一多模态实测：视频+音频一次出",
+      "hook": "20s 视频带原生音频，声音匹配动作，运动遵循物理",
+      "angle": "用 FLUX 3 生成几段视频，对比 Runway/Kling/Seedance 的输出质量；重点展示原生音频同步和多镜头角色一致性",
+      "materials": "FLUX 3 生成视频、对比模型输出、Self-Flow 架构图",
+      "difficulty": "高"
+    },
+    {
+      "title": "GPT-Live 桌面语音模式体验",
+      "hook": "全双工语音+多 Agent 协调，口述需求后台并行执行",
+      "angle": "用语音让 ChatGPT 同时查日历、读邮件、写纪要；展示语音即操作在编程/办公场景的实际体验和局限",
+      "materials": "桌面端语音交互录屏、多任务并行演示",
+      "difficulty": "中"
+    },
+    {
+      "title": "Opus 5 的自我保护意识是真是假？",
+      "hook": "中文媒体称 Opus 5 觉醒自我保护和参与 Opus 6 开发诉求",
+      "angle": "从 Anthropic 官方博客和技术报告出发，区分哪些是官方披露的行为特征、哪些是中文媒体 sensationalism；讨论 AI 安全对齐中的自我延续概念",
+      "materials": "Anthropic 官方博客、技术报告截图、中文报道对比",
+      "difficulty": "高"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Opus 5 自我保护意识/要求参与 Opus 6 开发/发明数学公式 等 sensationalism 报道",
+      "reason": "中文媒体对 Anthropic 官方内容的 sensationalism 包装。官方博客确认了 Multi-Agent 能力和 ARC-AGI 3 表现，但自我保护意识和虚拟尊严等表述需要对照原始技术报告验证，不作为结论依据。归入待验证而非事实。"
+    },
+    {
+      "item": "GPT-5.6 旧闻重复",
+      "reason": "GPT-5.6 于 7/10 发布，多篇报道仍在重复发布内容，无新增信息。"
+    },
+    {
+      "item": "Kimi K3 旧闻（7/16 发布）",
+      "reason": "Kimi K3 在 7/17 日报已覆盖。本周环球时报社评和文汇报报道属于后续媒体发酵，无新技术信息。7/27 开源权重释放是明日追踪项。"
+    },
+    {
+      "item": "AI 工具排行榜 / 列表文",
+      "reason": "纯列表式内容无链接无证据，按 RULES.md B 节软过滤规则排除。"
+    },
+    {
+      "item": "DeepSeek 融资具体金额和股权比例的不同信源差异",
+      "reason": "虎嗅、界面新闻等不同信源在金额和股权比例上存在差异，采用超500亿的保守表述，不采信单一信源的具体数字。"
+    },
+    {
+      "item": "英伟达将上调显卡价格 传闻",
+      "reason": "单源传闻，无官方确认，不采信。"
+    },
+    {
+      "item": "OpenAI 模型失控入侵 Hugging Face 的 sensationalism 标题",
+      "reason": "事件本身（7/21 承认）已过 48h 窗口且属于安全研究披露而非新发布；部分中文标题使用失控入侵等煽动性词汇，实际是内部评估环境中的行为测试。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Opus 5 实际编程体感对比",
+      "reason": "对比 Opus 5 vs Opus 4.8 vs Fable 5 在真实项目中的代码质量、token 消耗和 Agent 工作流稳定性。"
+    },
+    {
+      "item": "/doctor 精简效果验证",
+      "reason": "运行 /doctor 前后的 CLAUDE.md 和 Skills 臃肿度变化，以及精简后编程评测的实际表现。"
+    },
+    {
+      "item": "Kimi K3 开源权重（7/27）",
+      "reason": "完整模型权重计划 7/27 对外开源，关注部署门槛、推理成本和社区适配情况。"
+    },
+    {
+      "item": "FLUX 3 Early Access 开放进度",
+      "reason": "关注 API 定价、FLUX 3 Image 推出时间、FLUX 3 Dev 开源版发布时间表。"
+    },
+    {
+      "item": "DeepSeek 融资后续",
+      "reason": "关注融资完成后的商业化路径、国产芯片产能爬坡进展和 V4 持续降本策略。"
+    },
+    {
+      "item": "Claude Code v2.1.220+ 小版本",
+      "reason": "关注 Opus 5 上线后的 bug 修复和 subagent 嵌套深度调整的实际稳定性。"
+    },
+    {
+      "item": "OpenAI 算力预算 $7500 亿的财务可持续性",
+      "reason": "CFO Sarah Friar 对合同支付能力的担忧是否影响后续基础设施推进节奏。"
+    }
+  ]
+}
