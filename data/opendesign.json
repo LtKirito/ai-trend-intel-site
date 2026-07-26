@@ -14,194 +14,194 @@
   },
   "recent_prs": [
     {
+      "number": 5585,
+      "title": "fix daemon Antigravity prompt delivery after agy 1.1.1",
+      "state": "closed",
+      "author": "thebtf",
+      "labels": ["risk/high", "size/S", "type/bugfix", "validated"],
+      "impact": "修复 daemon 在 Antigravity 1.1.1 之后的提示词投递问题，属于高风险 bugfix，已标记 validated。",
+      "url": "https://github.com/nexu-io/open-design/pull/5585"
+    },
+    {
+      "number": 5491,
+      "title": "fix: wrap composer placeholder text instead of clipping",
+      "state": "closed",
+      "author": "Kameti77",
+      "labels": ["design-approved", "risk/medium", "size/S", "type/bugfix", "validated"],
+      "impact": "修复 composer 占位文案被裁切的问题，属于低体量但直接影响编辑体验的 UI 修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/5491"
+    },
+    {
+      "number": 6080,
+      "title": "Add Material Design 3 Brand System plugin",
+      "state": "open",
+      "author": "5151561",
+      "labels": ["risk/medium", "size/M", "type/feature"],
+      "impact": "新增 Material Design 3 品牌系统插件，说明插件生态与设计系统扩展仍在推进。",
+      "url": "https://github.com/nexu-io/open-design/pull/6080"
+    },
+    {
+      "number": 6081,
+      "title": "test(e2e): lock the cleared-state invariant for hero pendingPrompt (#2878)",
+      "state": "open",
+      "author": "maxmilian",
+      "labels": ["risk/medium", "size/S", "skip-validation", "type/chore"],
+      "impact": "通过端到端测试锁定 pendingPrompt 清空不变量，目标是防止会话状态残留回归。",
+      "url": "https://github.com/nexu-io/open-design/pull/6081"
+    },
+    {
       "number": 6068,
       "title": "fix: upgrade tar to 7.5.19 (CVE-2026-59873)",
       "state": "open",
       "author": "anupamme",
-      "labels": ["size/XS", "risk/high", "type/bugfix"],
-      "impact": "依赖安全升级，修复 tar CVE-2026-59873，属于高优先级安全修复，需尽快合入。",
+      "labels": ["risk/high", "size/XS", "type/bugfix"],
+      "impact": "tar 依赖安全升级，修复 CVE-2026-59873，属于必须优先处理的安全修复。",
       "url": "https://github.com/nexu-io/open-design/pull/6068"
     },
     {
-      "number": 6067,
-      "title": "fix(web): local-CLI balance card reads vela's USD figure, not raw credits",
-      "state": "closed",
-      "author": "lefarcen",
-      "labels": ["size/S", "risk/medium", "type/bugfix"],
-      "impact": "本地 CLI 余额卡片从 raw credits 改为显示 vela 的 USD 金额，提升账单可读性。",
-      "url": "https://github.com/nexu-io/open-design/pull/6067"
+      "number": 6023,
+      "title": "fix(web): refresh MiniMax provider presets",
+      "state": "open",
+      "author": "octo-patch",
+      "labels": ["needs-validation", "risk/medium", "size/S", "type/bugfix"],
+      "impact": "刷新 MiniMax provider 预设，反映出模型/提供商配置仍在持续校准。",
+      "url": "https://github.com/nexu-io/open-design/pull/6023"
     },
     {
-      "number": 6031,
-      "title": "feat(prompts): optimize Open Design system charter",
+      "number": 4547,
+      "title": "fix(web): fill card width and stabilize the Execution-mode model picker chevron (#4443)",
       "state": "open",
-      "author": "open-design-crew[bot]",
-      "labels": ["size/XXL", "risk/high", "type/feature"],
-      "impact": "系统 charter 提示词优化，XXL 级 feature，直接影响核心设计系统生成质量与一致性。",
-      "url": "https://github.com/nexu-io/open-design/pull/6031"
+      "author": "maxmilian",
+      "labels": ["design-approved", "needs-design-review", "needs-validation", "risk/medium", "size/M", "type/bugfix"],
+      "impact": "执行模式下模型选择器与卡片布局继续被打磨，属于高频交互稳定性修复。",
+      "url": "https://github.com/nexu-io/open-design/pull/4547"
     },
     {
-      "number": 5840,
-      "title": "docs(readme): refresh contributors wall",
+      "number": 5269,
+      "title": "Normalize cross-agent native-resume invalidation and fallback policy",
       "state": "open",
-      "author": "open-design-bot[bot]",
-      "labels": ["size/M", "risk/low", "type/docs"],
-      "impact": "README 贡献者墙刷新，低风险的文档维护类更新。",
-      "url": "https://github.com/nexu-io/open-design/pull/5840"
-    },
-    {
-      "number": 5950,
-      "title": "up",
-      "state": "open",
-      "author": "cetinmustafa83",
-      "labels": ["size/XS", "risk/high", "type/bugfix"],
-      "impact": "标题信息不透明的高风险 XS PR，需进一步审查实际改动范围与意图。",
-      "url": "https://github.com/nexu-io/open-design/pull/5950"
-    },
-    {
-      "number": 5931,
-      "title": "Add Source Project Context plugin",
-      "state": "open",
-      "author": "sohamthakkar",
-      "labels": ["size/M", "risk/medium", "type/feature"],
-      "impact": "新增 Source Project Context 插件，扩展项目上下文理解能力。",
-      "url": "https://github.com/nexu-io/open-design/pull/5931"
-    },
-    {
-      "number": 6057,
-      "title": "fix(daemon): full ACP tool transcript and richer usage telemetry",
-      "state": "open",
-      "author": "mrcfps",
-      "labels": ["size/XXL", "risk/high", "type/bugfix", "needs-validation"],
-      "impact": "daemon 层 ACP 工具完整转录与使用 telemetry 增强，XXL 级 bugfix，提升可观测性与调试能力。",
-      "url": "https://github.com/nexu-io/open-design/pull/6057"
-    },
-    {
-      "number": 6055,
-      "title": "feat(integrations): add the local Open Design Cloud flow for Codex",
-      "state": "open",
-      "author": "open-design-crew[bot]",
-      "labels": ["size/XXL", "risk/high", "type/feature", "needs-validation"],
-      "impact": "为 Codex 添加本地 Open Design Cloud 流程，XXL 级 feature，推进 Codex 与云端集成。",
-      "url": "https://github.com/nexu-io/open-design/pull/6055"
+      "author": "alucero270",
+      "labels": ["enhancement", "needs-product-direction", "needs-product-review", "needs-validation", "risk/high", "size/M", "type/enhancement"],
+      "impact": "统一跨 agent 的 native resume 失效与回退策略，说明会话恢复与运行边界正在被系统化处理。",
+      "url": "https://github.com/nexu-io/open-design/pull/5269"
     }
   ],
   "recent_issues": [
     {
-      "number": 5942,
-      "title": "[Bug]: i paid max subscription but no useful ,it still pro ,and i click it twice ,it cost me double fee but still pro",
-      "author": "zspof",
+      "number": 6077,
+      "title": "Enable model discovery (Fetch models) for the Ollama BYOK provider",
+      "author": "dpeterson01",
+      "labels": ["enhancement", "help wanted"],
+      "comments": 0,
+      "summary": "Ollama BYOK 需要支持模型发现能力，反映出 provider 兼容性和配置体验仍在扩展。",
+      "url": "https://github.com/nexu-io/open-design/issues/6077"
+    },
+    {
+      "number": 6074,
+      "title": "[Bug]: during onboarding using localhost:port cannot get to local agent setup",
+      "author": "idkfakata",
       "labels": ["bug"],
-      "comments": 4,
-      "summary": "用户支付最高档订阅后仍显示 Pro 且重复扣费，订阅状态同步与支付系统存在严重问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/5942"
+      "comments": 0,
+      "summary": "本地 localhost:port 场景下 onboarding 无法进入 local agent setup，属于直接阻断安装/接入路径的问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/6074"
+    },
+    {
+      "number": 6065,
+      "title": "Windows 0.16.1: bundled `node.exe` missing from `resources/open-design/bin/`, so the #5731 fix (OD_NODE_BIN) doesn't take effect",
+      "author": "Bad-Fish666",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "Windows 打包缺少 bundled node.exe，导致 OD_NODE_BIN 相关修复无法生效，是典型的发行包回归。",
+      "url": "https://github.com/nexu-io/open-design/issues/6065"
     },
     {
       "number": 6063,
       "title": "Deck thumbnail rail stays black while the slide canvas renders on macOS",
       "author": "kforris",
       "labels": ["bug"],
-      "comments": 4,
-      "summary": "macOS 上 deck 缩略图轨道黑屏但 slide canvas 正常渲染，平台特定的预览渲染缺陷。",
+      "comments": 0,
+      "summary": "macOS deck 缩略图轨黑屏但主画布正常，说明预览渲染链路仍有平台特定问题。",
       "url": "https://github.com/nexu-io/open-design/issues/6063"
     },
     {
-      "number": 2695,
-      "title": "Hover-triggered preview in the design system picker does not clear when switching to search",
-      "author": "shangxinyu1",
-      "labels": ["bug", "good first issue", "help wanted"],
-      "comments": 10,
-      "summary": "设计系统选择器悬停预览切换搜索时未清除，长期 UX 问题，适合新手贡献但无人接手。",
-      "url": "https://github.com/nexu-io/open-design/issues/2695"
-    },
-    {
-      "number": 4443,
-      "title": "Polish model selector layout in Execution mode settings",
-      "author": "AmyShang-alt",
-      "labels": ["bug"],
-      "comments": 10,
-      "summary": "执行模式设置中模型选择器布局需 polish，持续影响设置页 UX。",
-      "url": "https://github.com/nexu-io/open-design/issues/4443"
-    },
-    {
-      "number": 3547,
-      "title": "Pick and implement the first ROI-ranked latency or token optimization",
-      "author": "yinjialu",
+      "number": 6054,
+      "title": "Add a Codex plugin backed by local Open Design and Vela",
+      "author": "open-design-crew",
       "labels": ["feature"],
-      "comments": 9,
-      "summary": "ROI 排序的延迟/Token 优化提案，与 v0.16.x 的 cost-efficiency 主题一致。",
-      "url": "https://github.com/nexu-io/open-design/issues/3547"
+      "comments": 0,
+      "summary": "希望增加基于本地 Open Design 和 Vela 的 Codex 插件，表明 Codex 集成仍是明确方向。",
+      "url": "https://github.com/nexu-io/open-design/issues/6054"
     },
     {
-      "number": 3846,
-      "title": "Require confirmation before deleting elements in manual edit mode",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "help wanted", "priority:p2"],
-      "comments": 7,
-      "summary": "手动编辑模式下删除元素前缺少确认，存在误操作风险。",
-      "url": "https://github.com/nexu-io/open-design/issues/3846"
+      "number": 6044,
+      "title": "[Bug] Timed out and Task failed, but still taking money out of my account balance",
+      "author": "kevinyunu7-pixel",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "任务失败后仍扣费，属于计费可信度与异常回滚问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/6044"
     },
     {
-      "number": 4401,
-      "title": "Improve Discord support bot routing and stale version guardrails",
-      "author": "kokisanai",
-      "labels": ["bug", "stale"],
-      "comments": 9,
-      "summary": "Discord 支持机器人路由与过期版本护栏需改进，影响社区支持效率。",
-      "url": "https://github.com/nexu-io/open-design/issues/4401"
+      "number": 6041,
+      "title": "[Bug]: tools-dev exits before a cold Windows desktop becomes visible",
+      "author": "PerishCode",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "cold Windows desktop 尚未可见时 tools-dev 过早退出，影响桌面自动化启动稳定性。",
+      "url": "https://github.com/nexu-io/open-design/issues/6041"
     },
     {
-      "number": 2878,
-      "title": "Prevent new sessions from inheriting prompt content from the previous session",
-      "author": "AmyShang-alt",
-      "labels": ["bug", "good first issue", "help wanted", "priority:p2"],
-      "comments": 15,
-      "summary": "新会话继承上一会话 prompt 内容，15 条评论的高关注隐私/状态隔离问题。",
-      "url": "https://github.com/nexu-io/open-design/issues/2878"
+      "number": 6028,
+      "title": "[BUG] Azure OpenAI configured from UI does not allow custom deployment and causes Resource not found failures",
+      "author": "marcoriccio-enel",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "Azure OpenAI UI 配置不支持自定义 deployment，导致 Resource not found，属于 provider 配置缺陷。",
+      "url": "https://github.com/nexu-io/open-design/issues/6028"
     },
     {
-      "number": 4538,
-      "title": "[Discord][help] Shipper connection reset failures still consume credits",
-      "author": "kokisanai",
-      "labels": ["bug", "stale"],
-      "comments": 2,
-      "summary": "Shipper 连接重置失败后仍消耗 credits，涉及计费公平性。",
-      "url": "https://github.com/nexu-io/open-design/issues/4538"
+      "number": 6024,
+      "title": "[Bug]: 从home页面创建项目，进入项目之后，在富文本框中@插件执行，总是无效，总是使用的是他自己默认的插件，但是如果进入项目已经选好了@插件，就可以",
+      "author": "chiwei1125",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "从 home 页创建项目后，富文本框中的 @ 插件执行失效，暴露出插件上下文继承问题。",
+      "url": "https://github.com/nexu-io/open-design/issues/6024"
     },
     {
-      "number": 4536,
-      "title": "[0.8.0]",
-      "author": "octaviomendiola-glitch",
-      "labels": ["question", "preview/v0.8.0", "stale"],
-      "comments": 3,
-      "summary": "v0.8.0 预览版本的遗留问题，信息不完整且已 stale。",
-      "url": "https://github.com/nexu-io/open-design/issues/4536"
+      "number": 6022,
+      "title": "Design run that only writes files outside the project folder reports a misleading \"no deliverable project file\" failure",
+      "author": "lucaszhouc",
+      "labels": ["bug"],
+      "comments": 0,
+      "summary": "仅在项目外写文件的设计运行会被误报为无可交付文件，说明产物判定与失败提示需要修正。",
+      "url": "https://github.com/nexu-io/open-design/issues/6022"
     }
   ],
   "trends": {
-    "direction": "v0.16.1 发布后第二天，项目主线转入安全修复与 Codex/Cloud 集成预热：tar 依赖 CVE 升级（#6068）、daemon 层 ACP 完整转录与 telemetry 加固（#6057）、Codex 本地 Open Design Cloud 流程（#6055）和系统 charter 提示词优化（#6031）构成当前活跃焦点。",
+    "direction": "项目当前仍围绕 v0.16.x 的收尾与巩固展开，重点集中在预览稳定性、provider 兼容性、Codex/Open Design Cloud 集成，以及会话恢复和插件生态的边界收敛。近期 PR 和 issue 共同指向一个信号：产品正在从“能生成”转向“可预期、可恢复、可部署”。",
     "affected_modules": [
-      "security/dependency（tar CVE 升级）",
-      "daemon/ACP（工具转录与使用 telemetry）",
-      "web/local-CLI（余额卡片 USD 显示）",
-      "prompts/system charter（核心生成提示词优化）",
-      "integrations/Codex Cloud（本地云流程）",
-      "plugins/source context（Source Project Context 插件）"
+      "preview/rendering",
+      "daemon/runtime",
+      "provider presets / BYOK",
+      "onboarding / local agent setup",
+      "billing / account balance",
+      "plugin system / plugin context",
+      "session resume / invalidation"
     ],
     "risks": [
-      "open_issues 从 659 升至 672（+13），v0.16.1 发布后 issue influx 仍在继续",
-      "#6068 tar CVE-2026-59873 安全修复尚未合入，需快速闭环",
-      "#5950 标题为'up'的高风险 XS PR 信息不透明，实际改动范围待审查",
-      "#6055 与 #6057 两个 XXL PR 均处于 needs-validation，验证周期和回退风险较高",
-      "#5942 订阅扣费状态同步问题可能引发用户信任危机"
+      "Windows 与 macOS 的平台回归仍然密集，发行包完整性和预览稳定性存在持续风险",
+      "计费、订阅状态和失败回滚相关 issue 直接影响用户信任",
+      "高风险 PR 与 needs-validation 项较多，验证周期会拉长合入节奏",
+      "Codex、Ollama、Azure OpenAI 等 provider 配置碎片化，兼容性边界仍不统一"
     ],
     "actions": [
-      "优先推动 #6068 tar CVE 修复合入并发布安全补丁",
-      "跟踪 #6057 daemon ACP transcript 的 validation 进展",
-      "观察 #6055 Codex Cloud 本地化是否进入 v0.17.0 路线图",
-      "审查 #5950 实际改动意图与影响范围",
-      "关注 #5942 付费订阅状态同步问题的官方回应"
+      "优先跟踪 tar CVE 修复与 Windows 打包完整性，避免安全和发行层问题叠加",
+      "对 provider 预设、模型发现和 Azure/Ollama 配置做一次系统性回归验证",
+      "推动预览渲染、deck 缩略图和 onboading 路径的跨平台修复闭环",
+      "审查计费/扣费与失败态提示，确保异常状态不会误导用户",
+      "关注 Codex Cloud、本地 resume 和插件上下文三条集成主线的验证结果"
     ],
-    "next_week": "观察 open_issues 是否突破 680；判断 v0.16.2 hotfix 或 v0.17.0 首个 preview release 是否启动；#6031 system charter XXL PR 是否获得产品评审；Codex Cloud 与 daemon 可观测性两条主线的 validation 结果是下周评估重点。"
+    "next_week": "重点观察 open issue 是否继续上升，以及 v0.16.2 hotfix 或 v0.17.0 候选是否开始聚焦；如果 provider 兼容、Windows 打包和预览黑屏问题能连续关闭，说明项目将从修补窗口转入下一轮能力扩张。"
   }
 }
