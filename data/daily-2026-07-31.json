@@ -1,0 +1,167 @@
+{
+  "date": "2026-07-31",
+  "title": "2026-07-31 AI信息差日报",
+  "coverage": "覆盖窗口：7月31日 GMT+8；补档生成于 2026-08-02",
+  "sources": "Anthropic Newsroom / Claude Daily Brief / Releasebot / GitHub Trending 摘要",
+  "conclusions": [
+    "7月31日延续 Anthropic 安全事故复盘，同时出现 Claude 服务 7月29-30 网络故障恢复的运营信号。",
+    "Claude Daily Brief 汇总显示 MCP 2026-07-28、自动 fallback、会话中工具变更、Workbench 退役等开发者平台变更继续发酵。",
+    "GitHub 7月底趋势显示 Agent 工程从单点工具进入治理工具、Skill 库、MCP server 和工程书籍一起升温的阶段。"
+  ],
+  "summary": "7月31日主线是 Anthropic 安全事故与平台可靠性复盘，叠加 MCP/工具变更等开发者平台更新。",
+  "body": "本日没有新的旗舰模型发布。有效信息集中在平台可靠性、安全复盘和开发者平台 housekeeping：Claude 服务 7月29-30 故障恢复，MCP 新规范、fallback、tool swaps 和 Workbench 退役提醒继续被生态摘要记录。",
+  "judgement": "编辑判断：成熟 AI 平台的日报不能只盯模型发布。服务可用性、故障隔离、开发者 API 迁移、工具缓存和 fallback，正在决定企业是否敢把 Agent 放进生产。",
+  "tags": [
+    "Claude",
+    "Reliability",
+    "MCP",
+    "Fallback",
+    "Tool-Swaps",
+    "Agent-Governance"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "Claude 7月29-30 网络故障恢复：政府隔离基础设施成为可靠性卖点",
+      "summary": "Claude Daily Brief 汇总称，7月29-30 两次网络故障影响 claude.ai、API、Claude Code 和 Cowork，可用性已恢复；Claude for Government 在隔离基础设施上保持在线。",
+      "why": "企业采购关注的不只是模型能力，还包括隔离基础设施、故障域和恢复透明度。",
+      "action_fact": "【事实】该信息来自 Claude Daily Brief 摘要，需以后续官方状态页为准。",
+      "action_judge": "【判断】对高可靠需求客户，应关注政府/企业隔离部署与普通消费者/API 面的故障域差异。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Claude",
+        "Reliability",
+        "Government"
+      ],
+      "sources": [
+        "https://www.cadb.info/reports/claude-ai-daily-2026-07-31.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "会话中工具变更 + 自动 fallback：长 Agent 会话的成本和连续性优化",
+      "summary": "Claude Daily Brief / Releasebot 提到，开发者平台支持会话中变更工具而不破坏 prompt cache，并可对被安全分类器拦截的请求进行 fallback。",
+      "why": "长 Agent 会话经常需要动态工具集；保留缓存和 fallback 会直接影响成本、可靠性和任务完成率。",
+      "action_fact": "【事实】相关能力与 7月24日 Opus 5 平台发布说明一致。",
+      "action_judge": "【判断】适合长期 Agent 工作流测试：动态添加工具、观察缓存命中、验证 fallback 是否改变输出质量。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Prompt-Cache",
+        "Tool-Swaps",
+        "Fallback"
+      ],
+      "sources": [
+        "https://docs.anthropic.com/zh-CN/release-notes/api",
+        "https://www.cadb.info/reports/claude-ai-daily-2026-07-31.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub 7月底 Agent 工程主题：治理、Skill、MCP、方法论并发升温",
+      "summary": "开发者趋势摘要显示 7月底 GitHub Trending 中 skill libraries、governance toolkits、MCP servers 和 agent engineering materials 同时出现。",
+      "why": "这说明 Agent 开发已经从 demo 进入方法论和治理工具阶段。",
+      "action_fact": "【事实】趋势摘要可信度低于 GitHub 原页，但与前几日 GitHub Trending 观察一致。",
+      "action_judge": "【判断】周报应聚合主题，不宜把每个二手趋势条目单独做日报头条。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "GitHub-Trending",
+        "Agent-Engineering",
+        "Governance"
+      ],
+      "sources": [
+        "https://startupcorners.com/digest/devtools-digest-2026-07-31"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude 7月29-30 网络故障恢复",
+      "type": "核心信号",
+      "highlight": "Claude Daily Brief 汇总称，7月29-30 两次网络故障影响 claude.ai、API、Claude Code 和 Cowork，可用性已恢",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://www.cadb.info/reports/claude-ai-daily-2026-07-31.html"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-07-31 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-08-02",
+    "label": "8 月 2 日 (周日)",
+    "count": "1P0 + 2P1 + 0P2",
+    "tags": "Backfill · Agent-Infra · MCP · Skills · Cyber-Evals · Copilot-SDK · OpenDesign",
+    "summary": "8月2日补档结论：7月下旬缺失日报的共同主线是 Agent 工程化，重点不在新模型，而在 MCP、Skill、代码审查、浏览器自动化和安全评估事故复盘。"
+  },
+  {
+    "date": "2026-08-01",
+    "label": "8 月 1 日 (周六)",
+    "count": "0P0 + 3P1 + 0P2",
+    "tags": "GitHub-Trending · Skills · Copilot-SDK · OpenWork · Kaneo · Agent-Workflow",
+    "summary": "8月1日主线是 Skill 化与 Copilot SDK 化：Agent 能力继续从聊天助手转向可复用包、SDK 和协作工作表面。"
+  },
+  {
+    "date": "2026-07-31",
+    "label": "7 月 31 日 (周五)",
+    "count": "0P0 + 3P1 + 0P2",
+    "tags": "Claude · Reliability · MCP · Fallback · Tool-Swaps · Agent-Governance",
+    "summary": "7月31日主线是 Anthropic 安全事故与平台可靠性复盘，叠加 MCP/工具变更等开发者平台更新。"
+  },
+  {
+    "date": "2026-07-30",
+    "label": "7 月 30 日 (周四)",
+    "count": "1P0 + 2P1 + 0P2",
+    "tags": "Anthropic · Cyber-Evals · AI-Safety · Red-Team · Sandbox · Incident-Review",
+    "summary": "7月30日主线是 Anthropic 网络安全评估事故复盘：AI 红队评估环境自身的隔离、监控和出网审计成为关键风险。"
+  },
+  {
+    "date": "2026-07-29",
+    "label": "7 月 29 日 (周三)",
+    "count": "0P0 + 2P1 + 1P2",
+    "tags": "Agentic-AI · Firecrawl · Product-Hunt · Search-Agent · Web-Data · Weak-News-Day",
+    "summary": "7月29日没有可靠模型级 P0，主线是 Agent 实时数据、搜索和产品分类生态成熟。"
+  },
+  {
+    "date": "2026-07-28",
+    "label": "7 月 28 日 (周二)",
+    "count": "1P0 + 2P1 + 0P2",
+    "tags": "MCP-2026-07-28 · Anthropic · Connector · OAuth · Agent-Infra · Serverless",
+    "summary": "7月28日主线是 MCP 协议工程化：无状态核心、企业鉴权、Apps/Tasks 扩展、私网连接和可观测性成为新重点。"
+  },
+  {
+    "date": "2026-07-27",
+    "label": "7 月 27 日 (周一)",
+    "count": "1P0 + 2P1 + 0P2",
+    "tags": "Open-Weights · Anthropic · AI-Safety · Kimi-K3 · GLM-5.2 · Agent-Security",
+    "summary": "7月27日主线是开放权重模型安全边界：Anthropic 官方澄清不主张禁止开源，但要求按危险能力分层管理。"
+  },
+  {
+    "date": "2026-07-26",
+    "label": "7 月 26 日 (周日)",
+    "count": "0P0 + 3P1 + 0P2",
+    "tags": "GitHub-Trending · Agent-Infra · Open-Code-Review · Ego-Lite · Claude-Skills · Open-Design",
+    "summary": "7月26日是 Agent 工程基础设施观察日：代码审查、浏览器自动化、Claude Skills、Open Design 和代码库记忆成为主要增量，模型级新发布偏少。"
+  },
+  {
     "date": "2026-07-25",
     "label": "7 月 25 日 (周六)",
     "count": "3P0 + 7P1 + 2P2",

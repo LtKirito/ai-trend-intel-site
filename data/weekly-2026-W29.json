@@ -1,0 +1,99 @@
+{
+  "week": "2026-W29",
+  "title": "2026 W29 GitHub AI 星标周报",
+  "summary": "Agent 工程化继续成为主线：代码审查、浏览器自动化、Skills、Open Design 和安全工具链从单点项目扩展为完整工作流。",
+  "count": "10 个项目",
+  "theme": "代码审查 · 浏览器自动化 · Skills 生态",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "alibaba/open-code-review",
+      "category": "Coding Agent",
+      "stars": "13.0k",
+      "growth": "+431/day",
+      "why": "确定性规则 + LLM Agent 的开源代码审查工具",
+      "url": "https://github.com/alibaba/open-code-review"
+    },
+    {
+      "rank": "02",
+      "name": "citrolabs/ego-lite",
+      "category": "Browser Agent",
+      "stars": "3.6k",
+      "growth": "+986/day",
+      "why": "为 Codex/Claude Code 共享已登录浏览器状态",
+      "url": "https://github.com/citrolabs/ego-lite"
+    },
+    {
+      "rank": "03",
+      "name": "ComposioHQ/awesome-claude-skills",
+      "category": "Skills",
+      "stars": "70.6k",
+      "growth": "+577/day",
+      "why": "Claude Skills 资源与工作流精选集",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills"
+    },
+    {
+      "rank": "04",
+      "name": "mattpocock/skills",
+      "category": "Skills",
+      "stars": "n/a",
+      "growth": "+1.7k/day",
+      "why": "面向工程师的可复用 Skill 集合",
+      "url": "https://github.com/mattpocock/skills"
+    },
+    {
+      "rank": "05",
+      "name": "nexu-io/open-design",
+      "category": "Design Agent",
+      "stars": "81.6k",
+      "growth": "持续增长",
+      "why": "本地优先、agent-native 的开源设计工作区",
+      "url": "https://github.com/nexu-io/open-design"
+    },
+    {
+      "rank": "06",
+      "name": "anthropics/claude-cookbooks",
+      "category": "LLM Recipes",
+      "stars": "49.9k",
+      "growth": "+132/day",
+      "why": "Claude 使用 recipes 与 notebooks 集合",
+      "url": "https://github.com/anthropics/claude-cookbooks"
+    },
+    {
+      "rank": "07",
+      "name": "obra/superpowers",
+      "category": "Agent Skills",
+      "stars": "n/a",
+      "growth": "+479/day",
+      "why": "Agentic skills framework 与软件开发方法论",
+      "url": "https://github.com/obra/superpowers"
+    },
+    {
+      "rank": "08",
+      "name": "CoreBunch/Instatic",
+      "category": "Agentic CMS",
+      "stars": "n/a",
+      "growth": "+426/day",
+      "why": "自托管可视化 CMS，适合 Agent 生成静态页面",
+      "url": "https://github.com/CoreBunch/Instatic"
+    },
+    {
+      "rank": "09",
+      "name": "OtterMind/Chat2DB",
+      "category": "Data Tool",
+      "stars": "n/a",
+      "growth": "+360/day",
+      "why": "AI 驱动 SQL 客户端与数据库工具",
+      "url": "https://github.com/OtterMind/Chat2DB"
+    },
+    {
+      "rank": "10",
+      "name": "affaan-m/ECC",
+      "category": "Agent Harness",
+      "stars": "n/a",
+      "growth": "+377/day",
+      "why": "面向 Claude Code/Codex/OpenCode/Cursor 的 harness 优化系统",
+      "url": "https://github.com/affaan-m/ECC"
+    }
+  ]
+}

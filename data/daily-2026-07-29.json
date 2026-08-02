@@ -1,0 +1,166 @@
+{
+  "date": "2026-07-29",
+  "title": "2026-07-29 AI信息差日报",
+  "coverage": "覆盖窗口：7月29日 GMT+8；补档生成于 2026-08-02",
+  "sources": "Anthropic / Claude Release Notes / GitHub Trending / Firecrawl Blog / Product Hunt Categories",
+  "conclusions": [
+    "7月29日是弱发布日，有效信号集中在 Agent 趋势沉淀：企业连接器、浏览器自动化、实时搜索和知识库型 Agent 继续聚合。",
+    "Firecrawl 等数据工具开始主动面向 Agent 提供搜索与网页数据能力，说明“让 Agent 拿到可靠实时网页数据”仍是基础设施缺口。",
+    "Product Hunt AI Agents 分类截至 8月1日已有 667 个产品被纳入评估，Agent 类产品数量已进入平台化筛选阶段。"
+  ],
+  "summary": "7月29日没有可靠模型级 P0，主线是 Agent 实时数据、搜索和产品分类生态成熟。",
+  "body": "补档窗口中，7月29日缺少硬发布，但可以看到 Agent 基础设施继续围绕实时网页数据、连接器、分类市场和开发工具扩张。Firecrawl 面向 Agent 强调 search/web data，Product Hunt 的 AI Agents 分类已覆盖数百产品。",
+  "judgement": "编辑判断：弱发布日不宜硬凑大新闻。真正值得记录的是 Agent 产品的竞争从“谁更聪明”转向“谁能稳定拿数据、执行动作、留下审计”。",
+  "tags": [
+    "Agentic-AI",
+    "Firecrawl",
+    "Product-Hunt",
+    "Search-Agent",
+    "Web-Data",
+    "Weak-News-Day"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "Firecrawl 面向 Agent 强化实时网页数据能力",
+      "summary": "Firecrawl 的 Agentic AI 趋势文章和站点横幅强调其更准确的 /search 与面向 Agent 的网页数据能力。",
+      "why": "Agent 的可靠性很大程度取决于实时数据获取质量；搜索和抓取能力正在成为 Agent 基础设施。",
+      "action_fact": "【事实】Firecrawl 页面公开强调 /search、web data 和 Agent setup options。",
+      "action_judge": "【判断】适合把 Firecrawl 与普通搜索、手写爬虫、浏览器自动化做成本/准确性对比。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Firecrawl",
+        "Search",
+        "Web-Data",
+        "Agent-Infra"
+      ],
+      "sources": [
+        "https://www.firecrawl.dev/blog/agentic-ai-trends"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Product Hunt AI Agents 分类进入规模化筛选",
+      "summary": "Product Hunt AI Agents 分类页面显示，截至 8月1日，基于 3,545 reviews、667 products considered，对 AI Agents 做分类评估。",
+      "why": "Agent 产品数量已经多到需要平台化分类和评价体系；对用户来说，选型成本上升。",
+      "action_fact": "【事实】Product Hunt AI Agents 分类页公开显示产品数量、评价数量和分类说明。",
+      "action_judge": "【判断】做工具推荐时应从场景、数据权限、集成能力和可验证案例筛选，而不是按 upvote 排名。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Product-Hunt",
+        "AI-Agents",
+        "Tool-Selection"
+      ],
+      "sources": [
+        "https://www.producthunt.com/categories/ai-agents"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "GitHub Agent 趋势从单仓爆点转向周度主题",
+      "summary": "StartupCorners 等开发者趋势摘要显示 7月底 GitHub Trending 中 skill libraries、governance toolkits、MCP servers、agent engineering books 同时升温。",
+      "why": "这说明 Agent 工具链热度不再集中在单个仓库，而是围绕工程方法论成组出现。",
+      "action_fact": "【事实】本条主要来自趋势摘要，可信度低于官方仓库和 GitHub 原页。",
+      "action_judge": "【判断】只作为周报素材，不把单篇摘要作为日报头条。",
+      "score": {
+        "novelty": 3,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "GitHub-Trending",
+        "Agent-Engineering"
+      ],
+      "sources": [
+        "https://startupcorners.com/digest/devtools-digest-2026-07-31"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Firecrawl 面向 Agent 强化实时网页数据能力",
+      "type": "核心信号",
+      "highlight": "Firecrawl 的 Agentic AI 趋势文章和站点横幅强调其更准确的 /search 与面向 Agent 的网页数据能力。",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://www.firecrawl.dev/blog/agentic-ai-trends"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-07-29 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "date": "2026-08-02",
+  "title": "2026-08-02 AI信息差日报",
+  "coverage": "覆盖窗口：8月2日 GMT+8；补档生成于 2026-08-02 21:50",
+  "sources": "Anthropic 官方 / GitHub Trending / Product Hunt / OpenAI 官方 / Open Design 官方 / 本地历史日报",
+  "conclusions": [
+    "截至 8月2日，7月下旬的主线已经清晰：模型发布热度下降，Agent 基础设施、安全评估、MCP 协议和 Skill 化成为连续主题。",
+    "Anthropic 在一周内同时出现 Opus 5、开放权重立场、MCP 新规范和网络安全评估事故，说明前沿实验室的竞争焦点已经覆盖模型、协议、治理和安全复盘。",
+    "GitHub 生态从 coding agent 单品竞争转向 code review、browser agent、skills、memory、workflow SDK 等外围工具链。",
+    "8月第一周值得继续追踪 Copilot SDK、MCP 2026-07-28 落地、Claude Cyber Eval 后续整改和 Skill 安装安全。"
+  ],
+  "summary": "8月2日补档结论：7月下旬缺失日报的共同主线是 Agent 工程化，重点不在新模型，而在 MCP、Skill、代码审查、浏览器自动化和安全评估事故复盘。",
+  "body": "本日作为补档收口，整合 7月26日至8月2日缺失窗口。有效信息指向同一趋势：Agent 要进入生产，必须补齐协议、身份、连接器、浏览器运行环境、代码审查、Skill 复用和安全评估边界。",
+  "judgement": "编辑判断：接下来 NextSignal 日报应减少对单一模型传闻的追逐，更多关注 Agent 可落地条件：权限、审计、连接器、成本、可靠性、工作表面和安全边界。对于用户个人学习，最有价值的实操是自建一个小 MCP、审查一个 Skill、试跑一次 AI code review。",
+  "tags": [
+    "Backfill",
+    "Agent-Infra",
+    "MCP",
+    "Skills",
+    "Cyber-Evals",
+    "Copilot-SDK",
+    "OpenDesign"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "7月下旬主线收束：Agent 工程化超过模型发布成为信息差核心",
+      "summary": "从 7月26日至8月2日，可靠新信号集中在 MCP 2026-07-28、Claude 网络安全评估事故、开放权重立场、GitHub Agent 工具链和 Skill 化。",
+      "why": "这改变日报选题重心：真正能学习和复用的是 Agent 基础设施，而不是每天追模型传闻。",
+      "action_fact": "【事实】已补档的官方/趋势来源共同指向该主题。",
+      "action_judge": "【判断】后续日报应将 MCP/Skill/Agent 安全列为固定追踪栏。",
+      "score": {
+        "novelty": 4,
+        "utility": 5,
+        "credibility": 5,
+        "content": 5,
+        "timeliness": 4
+      },
+      "tags": [
+        "Agent-Engineering",
+        "MCP",
+        "Skills"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news",
+        "https://releasebot.io/updates/anthropic/claude",
+        "https://github.com/trending"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "三类实操优先级：MCP、Skill、安全评估",
+      "summary": "缺失窗口里最可操作的三类内容分别是：跟 MCP 2026-07-28 学连接器设计，跟 GitHub Skills 热榜学流程封装，跟 Anthropic 事故学安全评估环境隔离。",
+      "why": "它们都能转成个人学习项目，而不依赖等新模型开放。",
+      "action_fact": "【事实】MCP、Skills、Cyber Eval 均有可追溯来源。",
+      "action_judge": "【判断】建议优先做三篇实操：自建只读 MCP、Skill 安全审查清单、Agent 出网隔离实验。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Tutorial",
+        "MCP",
+        "Skill",
+        "Security"
+      ],
+      "sources": [
+        "https://cloud.google.com/discover/what-is-model-context-protocol",
+        "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "网站补档应标记为 Backfill，避免误导为当日实时首发",
+      "summary": "本批日报为 8月2日对 7月26日至8月2日缺口的补生成，部分内容是按窗口回补，非当天实时自动化产物。",
+      "why": "内容连续性重要，但透明标注补档同样重要。",
+      "action_fact": "【事实】JSON coverage 字段均标注补档生成时间。",
+      "action_judge": "【判断】后续若自动化中断，应优先补 index 连续性，并在 coverage 中保留补档说明。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Backfill",
+        "Data-Integrity",
+        "Website-Sync"
+      ],
+      "sources": [
+        "https://ltkirito.github.io/ai-trend-intel-site/"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "7月下旬主线收束",
+      "type": "核心信号",
+      "highlight": "从 7月26日至8月2日，可靠新信号集中在 MCP 2026-07-28、Claude 网络安全评估事故、开放权重立场、GitHub Agent 工具链和 Sk",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-08-02 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

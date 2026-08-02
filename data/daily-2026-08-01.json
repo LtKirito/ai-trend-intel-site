@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-01",
+  "title": "2026-08-01 AI信息差日报",
+  "coverage": "覆盖窗口：8月1日 GMT+8；补档生成于 2026-08-02",
+  "sources": "OrangeBot GitHub Trending / GitHub Repositories / Product Hunt / Open Design / Microsoft AI for Beginners",
+  "conclusions": [
+    "8月1日 GitHub 热榜显示 Skill 化继续扩散：reverse-skill、last30days-skill、copilot-sdk 等进入可观察列表，Agent 的可复用知识包仍是高热方向。",
+    "GitHub/copilot-sdk 出现在热榜，说明 Copilot 生态正在从单一 IDE 助手向 SDK 化、可集成能力扩展。",
+    "OpenWork、Kaneo 等工作管理/开源协作类工具与 Agent 热榜同现，表明 Agent 正向项目管理和协作表面外溢。"
+  ],
+  "summary": "8月1日主线是 Skill 化与 Copilot SDK 化：Agent 能力继续从聊天助手转向可复用包、SDK 和协作工作表面。",
+  "body": "OrangeBot 的 8月1日 GitHub Trending 快照显示，reverse-skill、openwork、last30days-skill、github/copilot-sdk、kaneo 等项目进入当日趋势。单个项目可信度需回到 GitHub 仓库验证，但整体方向与 7月底 Agent 工程化一致。",
+  "judgement": "编辑判断：Skill 不只是 Claude 生态概念，正在变成跨 agent 的工作流包装格式；SDK 化则意味着平台希望开发者把 AI 能力嵌进自己的产品，而不是停留在 IDE 里。",
+  "tags": [
+    "GitHub-Trending",
+    "Skills",
+    "Copilot-SDK",
+    "OpenWork",
+    "Kaneo",
+    "Agent-Workflow"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "github/copilot-sdk 进入 8月1日 GitHub 热榜观察",
+      "summary": "OrangeBot 8月1日 GitHub Trending 快照列出 github/copilot-sdk，显示 Copilot 生态的 SDK 化方向受到关注。",
+      "why": "SDK 化意味着 Copilot 能力可能外溢到更多开发者产品和自动化场景。",
+      "action_fact": "【事实】OrangeBot 快照列出 github/copilot-sdk；需进一步以 GitHub 仓库和官方文档核验具体 API。",
+      "action_judge": "【判断】明日应追踪 SDK 是否有官方发布、文档和可用示例；若确认可升 P1/P0。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "GitHub",
+        "Copilot-SDK",
+        "Developer-Platform"
+      ],
+      "sources": [
+        "https://orangebot.ai/github-trending-today",
+        "https://github.com/github/copilot-sdk"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "reverse-skill / last30days-skill：Skill 热榜继续扩散",
+      "summary": "8月1日 GitHub 快照列出 reverse-skill 和 last30days-skill 等 Skill 项目，延续 7月底 Claude Skills / Agent Skills 热度。",
+      "why": "Skill 将可复用流程从提示词升级为版本化文件资产。",
+      "action_fact": "【事实】趋势快照可见项目名；仓库内容需后续核查。",
+      "action_judge": "【判断】适合做“如何判断一个 Skill 是否值得安装”的视频选题，强调安全审查和可维护性。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "AI-Skills",
+        "Workflow",
+        "Claude-Code"
+      ],
+      "sources": [
+        "https://orangebot.ai/github-trending-today"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "OpenWork / Kaneo：Agent 进入协作和项目管理工作表面",
+      "summary": "GitHub 8月1日趋势中 openwork、kaneo 等协作/项目管理相关工具与 AI/Skill 项目同榜出现。",
+      "why": "Agent 的落点正在从写代码扩展到任务协作、项目追踪和知识组织。",
+      "action_fact": "【事实】趋势快照列出 different-ai/openwork、usekaneo/kaneo。",
+      "action_judge": "【判断】应追踪这些项目是否有 AI 原生工作流，而不是仅因名字进入热榜。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "OpenWork",
+        "Kaneo",
+        "Collaboration-Agent"
+      ],
+      "sources": [
+        "https://orangebot.ai/github-trending-today"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "github/copilot-sdk 进入 8月1日 GitHub 热榜观察",
+      "type": "核心信号",
+      "highlight": "OrangeBot 8月1日 GitHub Trending 快照列出 github/copilot-sdk，显示 Copilot 生态的 SDK 化方向受到关",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://orangebot.ai/github-trending-today"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-08-01 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

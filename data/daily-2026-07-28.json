@@ -1,0 +1,168 @@
+{
+  "date": "2026-07-28",
+  "title": "2026-07-28 AI信息差日报",
+  "coverage": "覆盖窗口：7月28日 GMT+8；补档生成于 2026-08-02",
+  "sources": "Anthropic / Releasebot / Claude Daily Brief / Google Cloud MCP Guide / GitHub Trending",
+  "conclusions": [
+    "MCP 2026-07-28 是本日核心信号：协议从长期连接思路进一步走向无状态 request/response 核心，并强化 OAuth/OIDC、Apps、Tasks 等扩展方向。",
+    "MCP 的重点从“让模型能连工具”升级为“让企业连接器能规模化部署、鉴权、观测和接入私有网络”。",
+    "Google Cloud 的 MCP 解释页表明，MCP 已从 Anthropic 生态概念变成主流云厂商面向企业解释的基础协议。"
+  ],
+  "summary": "7月28日主线是 MCP 协议工程化：无状态核心、企业鉴权、Apps/Tasks 扩展、私网连接和可观测性成为新重点。",
+  "body": "MCP 2026-07-28 的价值不在新增一个名词，而在把企业连接器部署问题前移处理。无状态 request/response 更适合 serverless/edge，OAuth/OIDC 与企业托管授权回应企业安全诉求，Apps/Tasks 则让连接器从“工具调用”向“可视化应用和长任务”扩展。",
+  "judgement": "编辑判断：MCP 正从开发者新玩具变成 Agent 基础设施标准。团队如果要自建 MCP，应优先考虑鉴权、日志、私网访问和版本兼容，而不是只写一个 stdio demo。",
+  "tags": [
+    "MCP-2026-07-28",
+    "Anthropic",
+    "Connector",
+    "OAuth",
+    "Agent-Infra",
+    "Serverless"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "MCP 2026-07-28：协议走向无状态核心和企业级连接器",
+      "summary": "Releasebot/Claude 更新源显示，Claude 扩展支持 MCP 2026-07-28，新规范强调 stateless core、更强 OAuth/OIDC、Apps/Tasks 扩展、私网隧道和连接器观测能力。",
+      "why": "MCP 从本地工具协议升级为企业连接器平台协议；这决定未来 Agent 如何规模化接入内部系统。",
+      "action_fact": "【事实】Releasebot 汇总显示 7月28日 Anthropic/Claude 更新；Google Cloud 也已提供 MCP 企业解释页。",
+      "action_judge": "【判断】自建 MCP 服务时应优先设计鉴权、可观测性和网络边界，不应只关注工具 schema。",
+      "score": {
+        "novelty": 5,
+        "utility": 5,
+        "credibility": 4,
+        "content": 5,
+        "timeliness": 5
+      },
+      "tags": [
+        "MCP",
+        "OAuth",
+        "Enterprise-Auth",
+        "Connector"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude",
+        "https://cloud.google.com/discover/what-is-model-context-protocol"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "MCP Apps / Tasks：连接器开始承载界面和长任务",
+      "summary": "新规范相关描述突出 Apps、Tasks、embedded UI、observability 等方向，说明连接器不再只是函数调用列表。",
+      "why": "Agent 产品的交互会从纯聊天扩展到嵌入式 UI 和可追踪长任务。",
+      "action_fact": "【事实】公开摘要提到 Apps、Tasks、embedded UI、observability。",
+      "action_judge": "【判断】设计企业 Agent 时，应为长任务状态、失败重试、审计日志预留产品界面。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "MCP-Apps",
+        "MCP-Tasks",
+        "Embedded-UI"
+      ],
+      "sources": [
+        "https://releasebot.io/updates/anthropic/claude"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Google Cloud MCP Guide：MCP 进入主流云厂商企业解释体系",
+      "summary": "Google Cloud MCP 指南将 MCP 定义为让 LLM 访问实时数据、执行动作和连接外部服务的开放标准。",
+      "why": "当云厂商开始面向企业解释 MCP，说明其不再只是 Anthropic 文档里的开发者概念。",
+      "action_fact": "【事实】Google Cloud Discover 页面介绍 MCP 架构、host、server 与企业用例。",
+      "action_judge": "【判断】企业内部推广 Agent 时，可用该类云厂商材料降低非技术管理层理解成本。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Google-Cloud",
+        "MCP",
+        "Enterprise-Agent"
+      ],
+      "sources": [
+        "https://cloud.google.com/discover/what-is-model-context-protocol"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "MCP 2026-07-28",
+      "type": "核心信号",
+      "highlight": "Releasebot/Claude 更新源显示，Claude 扩展支持 MCP 2026-07-28，新规范强调 stateless core、更强 OAuth",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://releasebot.io/updates/anthropic/claude"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-07-28 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

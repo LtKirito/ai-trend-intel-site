@@ -1,0 +1,166 @@
+{
+  "date": "2026-07-27",
+  "title": "2026-07-27 AI信息差日报",
+  "coverage": "覆盖窗口：7月27日 GMT+8；补档生成于 2026-08-02",
+  "sources": "Anthropic 官方 / GitHub Trending / Trendshift / OpenAI 官方 / 中文可靠媒体转述",
+  "conclusions": [
+    "Anthropic 7月27日发布开放权重模型立场，是本日最重要的政策/生态信号：其否认倡导禁止开源，承认不具备危险能力的开放权重模型具有公共产品价值。",
+    "围绕 Kimi K3、GLM-5.2、Hugging Face 事故和开放权重安全争论，前沿实验室开始把“开放”拆成能力阈值、滥用风险和公共利益三个层面。",
+    "GitHub 趋势继续显示 Agent Skill、MCP 和 coding harness 方向升温，但大部分是生态延续，不单独升 P0。"
+  ],
+  "summary": "7月27日主线是开放权重模型安全边界：Anthropic 官方澄清不主张禁止开源，但要求按危险能力分层管理。",
+  "body": "本日补档的核心不是新模型，而是开源/开放权重争论进入前沿实验室正式表态阶段。Anthropic CEO Dario Amodei 公开说明，低危险能力开放权重模型是公共产品，但对防御方是否必然受益提出保留。",
+  "judgement": "编辑判断：开放权重之争不应简化为开源对闭源。更合理的分析框架是：模型能力阈值、可复制性、滥用成本、防御收益和治理责任。对内容创作而言，这比单纯争论站队更有解释价值。",
+  "tags": [
+    "Open-Weights",
+    "Anthropic",
+    "AI-Safety",
+    "Kimi-K3",
+    "GLM-5.2",
+    "Agent-Security"
+  ],
+  "signals": [
+    {
+      "rank": "P0",
+      "title": "Anthropic 表态开放权重：不主张禁止，但强调危险能力阈值",
+      "summary": "Anthropic 7月27日发布其对开放权重模型的立场，称从未倡导或支持禁止开放权重模型；不具备危险能力的模型是公共产品，但对强能力模型的开放风险保持警惕。",
+      "why": "这是闭源前沿实验室对开源压力的正式回应，后续可能影响政策、模型许可和企业采购讨论。",
+      "action_fact": "【事实】Anthropic 官方新闻页列出 7月27日 Our position on open-weights models。",
+      "action_judge": "【判断】内容上应避免二元对立，重点拆解能力分级、滥用风险和公共产品价值。",
+      "score": {
+        "novelty": 4,
+        "utility": 4,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Anthropic",
+        "Open-Weights",
+        "AI-Governance"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "开源模型安全争论与 Hugging Face / OpenAI 事故形成连锁反应",
+      "summary": "中文媒体转述称，OpenAI 模型相关安全事故、Kimi K3 开源讨论和英伟达等机构支持开放权重的公开信，共同把开放权重模型推上监管讨论中心。",
+      "why": "开放权重模型的政策风险会影响国产模型、企业私有化部署和开发者生态。",
+      "action_fact": "【事实】本条以 Anthropic 官方表态为主，中文报道仅作背景。",
+      "action_judge": "【判断】跟踪后续应优先看官方博客、政策文件和模型许可证，而不是社交争论。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "OpenAI",
+        "HuggingFace",
+        "Open-Weights"
+      ],
+      "sources": [
+        "https://dy.163.com/article/L2U6QJLF0514R9P4.html"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Agent Skill 热榜继续升温：技能文件成为 Agent 可迁移资产",
+      "summary": "Trendshift 与 GitHub Trending 中持续出现 hallmark、skills、archify、deja-vu 等 Skill/Agent memory 项目，说明 Agent 能力正在被拆成可复用文件包。",
+      "why": "对个人和团队而言，Skill 是比一次性提示词更可维护的知识资产。",
+      "action_fact": "【事实】Trendshift 7月下旬榜单显示多个 AI skills / AI workflow 项目。",
+      "action_judge": "【判断】应优先沉淀高频流程 Skill，而不是继续堆长 CLAUDE.md。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "AI-Skills",
+        "Agent-Memory",
+        "Workflow"
+      ],
+      "sources": [
+        "https://trendshift.io?language=python/"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Anthropic 表态开放权重",
+      "type": "核心信号",
+      "highlight": "Anthropic 7月27日发布其对开放权重模型的立场，称从未倡导或支持禁止开放权重模型；不具备危险能力的模型是公共产品，但对强能力模型的开放风险保持警惕。",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-07-27 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}

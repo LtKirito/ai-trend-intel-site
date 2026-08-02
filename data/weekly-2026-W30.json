@@ -1,0 +1,99 @@
+{
+  "week": "2026-W30",
+  "title": "2026 W30 GitHub AI 星标周报",
+  "summary": "MCP、Skill 和 Agent 治理成为本周核心：协议从连接工具升级为企业基础设施，GitHub 热榜持续出现 Skill、SDK、协作工作表面与代码记忆项目。",
+  "count": "10 个项目",
+  "theme": "MCP 协议 · Skill 化 · Agent 治理",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "github/copilot-sdk",
+      "category": "SDK",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "Copilot 能力外溢到 SDK 和可集成开发者平台",
+      "url": "https://github.com/github/copilot-sdk"
+    },
+    {
+      "rank": "02",
+      "name": "zhaoxuya520/reverse-skill",
+      "category": "Skills",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "Skill 化继续扩散到具体工作流",
+      "url": "https://github.com/zhaoxuya520/reverse-skill"
+    },
+    {
+      "rank": "03",
+      "name": "mvanhorn/last30days-skill",
+      "category": "Skills",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "面向时间窗口复盘的 Agent Skill",
+      "url": "https://github.com/mvanhorn/last30days-skill"
+    },
+    {
+      "rank": "04",
+      "name": "different-ai/openwork",
+      "category": "Workflow",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "协作/工作管理类项目与 Agent 主题同榜出现",
+      "url": "https://github.com/different-ai/openwork"
+    },
+    {
+      "rank": "05",
+      "name": "usekaneo/kaneo",
+      "category": "Project Tool",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "项目管理工作表面可能成为 Agent 落点",
+      "url": "https://github.com/usekaneo/kaneo"
+    },
+    {
+      "rank": "06",
+      "name": "modelcontextprotocol/servers",
+      "category": "MCP Servers",
+      "stars": "60.5k",
+      "growth": "+106/28d",
+      "why": "MCP Server 官方生态持续增长",
+      "url": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "rank": "07",
+      "name": "anthropics/claude-code",
+      "category": "Coding Agent",
+      "stars": "44.5k",
+      "growth": "+561/28d",
+      "why": "Claude Code 继续围绕 Opus 5、MCP、subagent 和 sandbox 更新",
+      "url": "https://github.com/anthropics/claude-code"
+    },
+    {
+      "rank": "08",
+      "name": "openai/codex",
+      "category": "Coding Agent",
+      "stars": "44.6k",
+      "growth": "+533/28d",
+      "why": "Codex 仍是 coding agent 生态核心仓库之一",
+      "url": "https://github.com/openai/codex"
+    },
+    {
+      "rank": "09",
+      "name": "upstash/context7",
+      "category": "MCP Server",
+      "stars": "28.3k",
+      "growth": "+139/28d",
+      "why": "MCP 文档/上下文服务持续受关注",
+      "url": "https://github.com/upstash/context7"
+    },
+    {
+      "rank": "10",
+      "name": "anomalyco/opencode",
+      "category": "Coding Agent",
+      "stars": "55.3k",
+      "growth": "+901/28d",
+      "why": "开源 coding agent 在 28 日增长榜中领先",
+      "url": "https://github.com/anomalyco/opencode"
+    }
+  ]
+}

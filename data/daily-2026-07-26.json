@@ -1,0 +1,168 @@
+{
+  "date": "2026-07-26",
+  "title": "2026-07-26 AI信息差日报",
+  "coverage": "覆盖窗口：7月25日午后 ~ 7月26日 GMT+8；补档生成于 2026-08-02",
+  "sources": "GitHub Trending / Trendshift / OSSInsight / OpenAI 官方 / Anthropic Docs / Open Design 官方",
+  "conclusions": [
+    "7月26日没有新的模型级官方发布超过 Opus 5，主线转向 Agent 工程基础设施：代码审查、浏览器自动化、Skills、代码库记忆和 Open Design 工作流继续升温。",
+    "GitHub Trending 当日出现 alibaba/open-code-review、citrolabs/ego-lite、ComposioHQ/awesome-claude-skills、mattpocock/skills 等项目，说明开发者关注点从模型能力转到 Agent 可落地工具链。",
+    "Open Design 的 81K+ stars、21+ agent 适配和本地 DESIGN.md/Skill 工作流，继续强化“设计也变成 agent-native 文件系统工作流”的趋势。",
+    "OpenAI Health in ChatGPT 与 GPT-Live 属于 7月下旬官方延续信号，适合跟踪入口扩张，不宜重复包装成全新发布。"
+  ],
+  "summary": "7月26日是 Agent 工程基础设施观察日：代码审查、浏览器自动化、Claude Skills、Open Design 和代码库记忆成为主要增量，模型级新发布偏少。",
+  "body": "补档窗口显示，7月26日有效信息集中在 GitHub 与产品生态。alibaba/open-code-review 将确定性规则与 LLM Agent 结合，citrolabs/ego-lite 把已登录浏览器状态安全交给 Agent，ComposioHQ/awesome-claude-skills 与 mattpocock/skills 体现 Skills 工作流继续升温。Open Design 官方页显示其已成为本地优先的 agent-native 设计工作区。",
+  "judgement": "编辑判断：这一天不应硬造模型 P0。真正的信息差是 Agent 工程从模型调用走向外围基础设施：代码审查、浏览器上下文、技能库、设计系统和本地文件工作流。个人最值得做的是挑一个项目测试 open-code-review，另一个真实设计 brief 测 Open Design。",
+  "tags": [
+    "GitHub-Trending",
+    "Agent-Infra",
+    "Open-Code-Review",
+    "Ego-Lite",
+    "Claude-Skills",
+    "Open-Design"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "alibaba/open-code-review：阿里开源混合式 AI 代码审查工具",
+      "summary": "GitHub Trending 显示该项目将 deterministic pipelines 与 LLM Agent 结合，支持精准行级评论，并内置 NPE、线程安全、XSS、SQL 注入等规则，兼容 OpenAI 与 Anthropic。",
+      "why": "代码审查是最容易落地的企业 Agent 场景之一；规则引擎负责确定性，LLM 负责解释和上下文判断。",
+      "action_fact": "【事实】仓库位于 GitHub alibaba/open-code-review；GitHub Trending 当日显示其进入高位。",
+      "action_judge": "【判断】适合先在非生产分支试跑，把结果与现有 SonarQube/人工 Review 对比，评估误报率。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Code-Review",
+        "Alibaba",
+        "LLM-Agent"
+      ],
+      "sources": [
+        "https://github.com/alibaba/open-code-review"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "citrolabs/ego-lite：给 AI Agent 用的共享登录态浏览器",
+      "summary": "ego-lite 定位为面向 Codex、Claude Code 等 Agent 的高速浏览器，可共享已登录浏览器状态，同时不干扰用户正常浏览。",
+      "why": "浏览器自动化的核心难点是登录态和用户干扰；ego-lite 把这一层做成独立运行环境。",
+      "action_fact": "【事实】仓库位于 GitHub citrolabs/ego-lite，GitHub Trending 当日显示相关描述。",
+      "action_judge": "【判断】适合测试内部后台、低风险网页流程；涉及真实账号和敏感数据时必须隔离账户。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Browser-Agent",
+        "Claude-Code",
+        "Codex"
+      ],
+      "sources": [
+        "https://github.com/citrolabs/ego-lite"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Open Design：本地优先的 Claude Design 开源替代继续扩张",
+      "summary": "Open Design 官方页显示其定位为 open-source local vibe design workspace，支持 21+ coding agents、151+ design systems、217+ plugins、HTML/PDF/PPTX/MP4 导出，GitHub Stars 超 81K。",
+      "why": "设计工作流正在从云端画布转为本地文件、DESIGN.md、Skill 和 Agent 组合的工程化流程。",
+      "action_fact": "【事实】官方页列出 Windows 桌面下载、21+ agents、151+ design systems 和 81.6K GitHub Stars。",
+      "action_judge": "【判断】适合把已有品牌截图或 Figma 导出转成 DESIGN.md，再让 Claude Code/Codex 驱动生成落地页和幻灯片。",
+      "score": {
+        "novelty": 4,
+        "utility": 3,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "OpenDesign",
+        "Design-Agent",
+        "Local-First"
+      ],
+      "sources": [
+        "https://open-design.ai/",
+        "https://github.com/nexu-io/open-design"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "alibaba/open-code-review",
+      "type": "核心信号",
+      "highlight": "GitHub Trending 显示该项目将 deterministic pipelines 与 LLM Agent 结合，支持精准行级评论，并内置 NPE、线",
+      "audience": "AI 趋势跟踪者 / Agent 开发者",
+      "action": "阅读来源并提炼为实操 checklist",
+      "url": "https://github.com/alibaba/open-code-review"
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "highlight": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "url": "https://github.com/trending"
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "highlight": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "2026-07-26 AI 信息差：为什么今天不是模型日",
+      "hook": "没有新模型也有信息差，Agent 基础设施正在变化。",
+      "angle": "从当天 3 个信号拆解协议、工具和安全边界。",
+      "materials": "官网截图、GitHub 仓库、趋势表",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP/Skill/Agent 安全三件套",
+      "hook": "会写 prompt 不够了，Agent 要进入生产必须有协议、技能和隔离。",
+      "angle": "用一天信号串成实操路线图。",
+      "materials": "MCP 文档、Skill 仓库、事故复盘",
+      "difficulty": "中"
+    },
+    {
+      "title": "如何过滤 AI 新闻噪音",
+      "hook": "不是每条热榜都值得追，来源级别决定可信度。",
+      "angle": "演示从聚合文回到官方源和 GitHub 仓库。",
+      "materials": "搜索结果、官方页、噪音清单",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。"
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "MCP 2026-07-28 的真实落地项目",
+      "reason": "观察哪些连接器开始支持 Apps、Tasks、企业鉴权和可观测性。"
+    },
+    {
+      "item": "GitHub Agent Skill 项目是否持续维护",
+      "reason": "热榜项目需要看 README、最近 commit、issue 和安全边界。"
+    },
+    {
+      "item": "Anthropic / OpenAI 安全评估事故后续整改",
+      "reason": "安全评估流程可能成为行业新规范。"
+    }
+  ]
+}
