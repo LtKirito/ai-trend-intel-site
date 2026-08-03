@@ -1,0 +1,213 @@
+{
+  "date": "2026-08-03",
+  "title": "2026-08-03 AI信息差日报",
+  "coverage": "覆盖窗口：8月1日 ~ 8月3日 GMT+8；自动化补跑生成于 2026-08-03",
+  "sources": "Claude Code Changelog / Claude Cowork Changelog / GitHub Trending / OrangeBot.AI / Firecrawl / Google Cloud AI Agent Trends / 本地历史日报",
+  "conclusions": [
+    "8月3日没有足够可靠的模型级 P0；有效信号延续 7月下旬以来的 Agent 工程化主线，重点落在 MCP、Skill、观测性、代码会话可靠性和工作流封装。",
+    "Claude Code 最新可见小版本集中修复 MCP 连接失败可见性、配置空白字符告警、异步 MCP 首轮工具缺失、stdio 非 JSON 输出挂起等问题，说明 Coding Agent 的生产瓶颈仍是连接器可靠性与错误可诊断性。",
+    "Claude Cowork changelog 增加 OpenTelemetry traces 导出和 SSH workspace folders 策略覆盖，表明企业 Agent 平台正在把可观测性、远程主机权限和托管 Auto mode 管理做成基础能力。",
+    "GitHub/OrangeBot 热榜延续 reverse-skill、last30days-skill、copilot-sdk、openwork、kaneo 等方向；这些不是单独 P0，但足以说明 Skill 与 SDK 化仍是本周观察重点。"
+  ],
+  "summary": "8月3日是弱发布日：没有可靠模型级 P0，主线继续是 Agent 工程化，尤其是 MCP 可诊断性、OpenTelemetry 可观测性、Skill 化和 Copilot SDK 化。",
+  "body": "本轮检索覆盖官方 changelog、GitHub 趋势与 Agent 生态文章。可验证的一手信号主要来自 Claude Code/Cowork 文档：MCP 连接失败诊断、配置空白字符告警、非 JSON stdio 输出 fail-fast、异步 MCP 首轮工具缺失修复，以及 Cowork/Code 会话 OpenTelemetry traces 导出。生态侧，GitHub 热榜继续出现 skill、copilot-sdk、openwork、kaneo 等项目，但多为趋势线索，应回到仓库 README 和 commit 复核后再采纳。",
+  "judgement": "编辑判断：8月3日不应硬凑大模型新闻。真正有价值的学习路径是把 Agent 工程化拆成三件事：连接器能否稳定诊断、任务执行能否被追踪、工作流能否沉淀为 Skill 或 SDK。日报应把聚合榜单放在 P1/P2 或周报素材中，把官方 changelog 和可复现实操放在正文核心。",
+  "tags": [
+    "Weak-News-Day",
+    "Claude-Code",
+    "MCP",
+    "OpenTelemetry",
+    "Skills",
+    "Copilot-SDK",
+    "Agent-Engineering"
+  ],
+  "signals": [
+    {
+      "rank": "P1",
+      "title": "Claude Code 小版本继续补 MCP 与会话可靠性",
+      "summary": "最新可见 changelog 显示，Claude Code 修复了 MCP 连接失败状态展示、隐藏首尾空白配置告警、stdio MCP 非 JSON 输出挂起、异步 MCP 首轮工具缺失等问题。",
+      "why": "这类更新不显眼，但直接影响 Coding Agent 在真实工程里的可诊断性和任务完成率。",
+      "action_fact": "【事实】Claude Code 官方 changelog/GitHub releases 显示 MCP、marketplace、session、remote/headless 等可靠性修复。",
+      "action_judge": "【判断】团队接入 MCP 时，应建立连接测试、配置 lint、首轮工具可用性检查和异常输出 fail-fast 清单。",
+      "score": {
+        "novelty": 3,
+        "utility": 5,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Claude-Code",
+        "MCP",
+        "Reliability"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog",
+        "https://github.com/anthropics/claude-code/releases"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "Claude Cowork 加入 OpenTelemetry traces 导出",
+      "summary": "Claude Cowork changelog 显示新增 otlpTracesEnabled beta，可将 Cowork tasks 和 Code sessions 的 OpenTelemetry traces 导出到配置的 collector，并强化 SSH host workspace folders 策略。",
+      "why": "企业 Agent 进入生产后，日志、trace、远程主机权限和策略执行比单次生成效果更关键。",
+      "action_fact": "【事实】Claude.ai 文档 changelog 明确提到 otlpTracesEnabled、SSH host workspace folders policy、managed Auto mode opt-out enforcement。",
+      "action_judge": "【判断】如果要做团队级 Agent，应优先规划 trace collector、任务 ID、工具调用跨度和远程目录权限审计。",
+      "score": {
+        "novelty": 4,
+        "utility": 5,
+        "credibility": 5,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "Cowork",
+        "OpenTelemetry",
+        "Enterprise-Agent"
+      ],
+      "sources": [
+        "https://claude.com/docs/cowork/changelog"
+      ]
+    },
+    {
+      "rank": "P1",
+      "title": "GitHub 热榜延续 Skill 与 Copilot SDK 化",
+      "summary": "OrangeBot 8月1日 GitHub Trending 快照列出 reverse-skill、last30days-skill、github/copilot-sdk、openwork、kaneo 等项目，延续 Skill 化、SDK 化和协作工作表面趋势。",
+      "why": "Agent 能力正在从单一聊天界面拆成可复用技能包、SDK 和项目协作工具。",
+      "action_fact": "【事实】OrangeBot 快照列出相关仓库；具体仓库质量仍需回到 GitHub 页面复核。",
+      "action_judge": "【判断】这类内容适合做周报聚合和工具试用候选，不宜仅凭热榜标题升为 P0。",
+      "score": {
+        "novelty": 3,
+        "utility": 4,
+        "credibility": 4,
+        "content": 4,
+        "timeliness": 4
+      },
+      "tags": [
+        "GitHub-Trending",
+        "Skills",
+        "Copilot-SDK"
+      ],
+      "sources": [
+        "https://orangebot.ai/github-trending-today",
+        "https://github.com/github/copilot-sdk"
+      ]
+    },
+    {
+      "rank": "P2",
+      "title": "Agent 趋势文章强化 CLI Agents、MCP、实时数据与可验证性",
+      "summary": "Firecrawl 的 Agentic AI Trends 文章将 CLI agents、MCP resurgence、multi-agent systems、live web data access、browser agents 和 verifiability 列为 2026 关键趋势。",
+      "why": "这不是当日新闻，但可作为对 7月底到 8月初信号的背景解释。",
+      "action_fact": "【事实】Firecrawl 文章于 7月28日更新，并给出 MCP 使用增长、CLI agents、实时网页数据等趋势描述。",
+      "action_judge": "【判断】可用于视频脚本背景，但日报结论仍应优先依据官方 changelog 和仓库源。",
+      "score": {
+        "novelty": 2,
+        "utility": 3,
+        "credibility": 3,
+        "content": 4,
+        "timeliness": 3
+      },
+      "tags": [
+        "Firecrawl",
+        "Agent-Trends",
+        "Web-Data"
+      ],
+      "sources": [
+        "https://www.firecrawl.dev/blog/agentic-ai-trends"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code changelog",
+      "type": "官方更新源",
+      "highlight": "追踪 MCP、sandbox、subagent、session、remote/headless 修复",
+      "audience": "Coding Agent 使用者",
+      "action": "每次升级前查看 MCP 与 sandbox 相关条目",
+      "url": "https://code.claude.com/docs/en/changelog"
+    },
+    {
+      "name": "Claude Cowork changelog",
+      "type": "企业 Agent 更新源",
+      "highlight": "关注 OpenTelemetry、workspace policy、Auto mode 管理",
+      "audience": "团队级 Agent 负责人",
+      "action": "建立 trace 与权限审计 checklist",
+      "url": "https://claude.com/docs/cowork/changelog"
+    },
+    {
+      "name": "OrangeBot GitHub Trending",
+      "type": "趋势线索源",
+      "highlight": "快速发现 Skill/SDK/Agent workflow 候选项目",
+      "audience": "内容创作者 / 开发者",
+      "action": "只作线索，回 GitHub 仓库复核后再采纳",
+      "url": "https://orangebot.ai/github-trending-today"
+    },
+    {
+      "name": "Firecrawl Agent Trends",
+      "type": "背景材料",
+      "highlight": "总结 CLI agents、MCP、实时网页数据、browser agents 等趋势",
+      "audience": "脚本创作者",
+      "action": "用于补充趋势叙事，不替代官方来源",
+      "url": "https://www.firecrawl.dev/blog/agentic-ai-trends"
+    }
+  ],
+  "video_topics": [
+    {
+      "title": "今天没有大模型，但 Agent 工程在补课",
+      "hook": "小版本 changelog 才是生产级 Agent 的真信号。",
+      "angle": "用 Claude Code/Cowork 的 MCP、trace、workspace policy 更新拆解 Agent 落地门槛。",
+      "materials": "Claude Code changelog、Cowork changelog、MCP 配置截图",
+      "difficulty": "低"
+    },
+    {
+      "title": "MCP 出问题时你能看见什么？",
+      "hook": "Agent 失败不可怕，看不见失败才可怕。",
+      "angle": "从连接测试、HTTP 状态、stderr 非 JSON、首轮工具缺失四类问题讲 MCP 诊断。",
+      "materials": "MCP 配置示例、错误日志、修复清单",
+      "difficulty": "中"
+    },
+    {
+      "title": "Skill 和 SDK 为什么比提示词更重要",
+      "hook": "热榜项目正在把提示词变成可复用资产。",
+      "angle": "用 reverse-skill、last30days-skill、copilot-sdk 做趋势拆解，强调安全审查。",
+      "materials": "GitHub Trending 快照、仓库 README、安全 checklist",
+      "difficulty": "低"
+    }
+  ],
+  "noise_items": [
+    {
+      "item": "Top 20/Top 300 AI Agent 清单文",
+      "reason": "多为二手聚合，适合做候选库，不作为当日事实结论。"
+    },
+    {
+      "item": "OSSInsight 当前 AI Trending 返回 No repositories found",
+      "reason": "页面本身可作为趋势源，但本次结果为空，不用于排名结论。"
+    },
+    {
+      "item": "OpenAI/Google 首页级搜索结果",
+      "reason": "仅返回泛化首页或旧报告，未发现 8月3日可核验新发布。"
+    },
+    {
+      "item": "Claude Code 第三方旧 changelog 镜像",
+      "reason": "部分第三方页面版本停留在 5月或 7月旧版本，优先采用官方文档和 GitHub releases。"
+    }
+  ],
+  "tracking_items": [
+    {
+      "item": "Claude Code 2.1.221+ 是否出现新功能级发布",
+      "reason": "目前最新高信号仍是 2.1.220 可靠性修复；后续如出现功能级变更再升权重。"
+    },
+    {
+      "item": "Copilot SDK 是否有官方文档或公开 API 示例",
+      "reason": "目前从热榜看到仓库线索，需确认 GitHub 官方发布节奏和可用性。"
+    },
+    {
+      "item": "MCP 2026-07-28 是否被更多连接器采用",
+      "reason": "重点看 Apps、Tasks、OAuth/OIDC、OpenTelemetry、私网连接与企业策略。"
+    },
+    {
+      "item": "OpenAI 开源权重模型预期是否落地",
+      "reason": "本轮未找到 8月3日官方新发布，继续观察官方 newsroom/API docs。"
+    }
+  ]
+}

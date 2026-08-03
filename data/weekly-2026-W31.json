@@ -1,0 +1,99 @@
+{
+  "week": "2026-W31",
+  "title": "2026 W31 GitHub AI 星标周报",
+  "summary": "上周 GitHub AI 生态主线不是新模型，而是 Agent 工程化资产：Skill、Copilot SDK、MCP server、Coding Agent、协作工作表面和代码记忆工具继续聚合。",
+  "count": "10 个项目",
+  "theme": "Skill 化 · Copilot SDK · MCP 可观测性",
+  "rows": [
+    {
+      "rank": "01",
+      "name": "zhaoxuya520/reverse-skill",
+      "category": "Skills",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "Skill 化从 Claude 生态扩散到具体可复用工作流",
+      "url": "https://github.com/zhaoxuya520/reverse-skill"
+    },
+    {
+      "rank": "02",
+      "name": "mvanhorn/last30days-skill",
+      "category": "Skills",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "面向时间窗口复盘的 Agent Skill，适合日报/周报类工作流",
+      "url": "https://github.com/mvanhorn/last30days-skill"
+    },
+    {
+      "rank": "03",
+      "name": "github/copilot-sdk",
+      "category": "SDK",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "Copilot 能力从 IDE 助手外溢到可集成 SDK",
+      "url": "https://github.com/github/copilot-sdk"
+    },
+    {
+      "rank": "04",
+      "name": "different-ai/openwork",
+      "category": "Workflow",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "协作与工作管理成为 Agent 新工作表面",
+      "url": "https://github.com/different-ai/openwork"
+    },
+    {
+      "rank": "05",
+      "name": "usekaneo/kaneo",
+      "category": "Project Tool",
+      "stars": "n/a",
+      "growth": "热榜候选",
+      "why": "项目管理类工具适合作为 Agent 任务执行面板",
+      "url": "https://github.com/usekaneo/kaneo"
+    },
+    {
+      "rank": "06",
+      "name": "anthropics/claude-code",
+      "category": "Coding Agent",
+      "stars": "n/a",
+      "growth": "v2.1.220",
+      "why": "继续修复 MCP、session、marketplace、remote/headless 可靠性",
+      "url": "https://github.com/anthropics/claude-code"
+    },
+    {
+      "rank": "07",
+      "name": "modelcontextprotocol/servers",
+      "category": "MCP Servers",
+      "stars": "n/a",
+      "growth": "持续关注",
+      "why": "MCP server 生态是 Agent 接工具与企业系统的基础层",
+      "url": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "rank": "08",
+      "name": "upstash/context7",
+      "category": "MCP Server",
+      "stars": "n/a",
+      "growth": "持续关注",
+      "why": "文档/上下文 MCP 服务仍是 Coding Agent 高频基础设施",
+      "url": "https://github.com/upstash/context7"
+    },
+    {
+      "rank": "09",
+      "name": "anomalyco/opencode",
+      "category": "Coding Agent",
+      "stars": "n/a",
+      "growth": "持续关注",
+      "why": "开源 terminal coding agent 与 Claude Code/Codex 形成对照",
+      "url": "https://github.com/anomalyco/opencode"
+    },
+    {
+      "rank": "10",
+      "name": "caramaschiHG/awesome-ai-agents-2026",
+      "category": "Agent Directory",
+      "stars": "1.5k",
+      "growth": "月更清单",
+      "why": "可作为 Agent 框架与工具候选库，但不替代官方源核验",
+      "url": "https://github.com/caramaschiHG/awesome-ai-agents-2026"
+    }
+  ]
+}

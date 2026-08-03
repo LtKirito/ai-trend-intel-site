@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-03",
+    "label": "8 月 3 日 (周一)",
+    "count": "0P0 + 3P1 + 1P2",
+    "tags": "Weak-News-Day · Claude-Code · MCP · OpenTelemetry · Skills · Copilot-SDK · Agent-Engineering",
+    "summary": "8月3日是弱发布日：没有可靠模型级 P0，主线继续是 Agent 工程化，尤其是 MCP 可诊断性、OpenTelemetry 可观测性、Skill 化和 Copilot SDK 化。"
+  },
+  {
     "date": "2026-08-02",
     "label": "8 月 2 日 (周日)",
     "count": "1P0 + 2P1 + 0P2",
