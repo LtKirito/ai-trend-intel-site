@@ -21,6 +21,7 @@
         <button class="active" data-view-link="home">首页</button>
         <button data-view-link="daily">AI 日报</button>
         <button data-view-link="github">GitHub 周报</button>
+        <button data-view-link="monthly">AI 月报</button>
         <button data-view-link="opendesign">OpenDesign</button>
       </nav>
 
@@ -48,6 +49,10 @@
                 <span class="module-title">⭐ GitHub 星级周报</span>
                 <span class="module-meta">先选择哪一周，再查看 Top10</span>
               </button>
+              <button class="module-button" data-view-link="monthly">
+                <span class="module-title">📊 AI 月报</span>
+                <span class="module-meta">按月复盘趋势线、工具和下月追踪</span>
+              </button>
               <button class="module-button" data-view-link="opendesign">
                 <span class="module-title">🔍 OpenDesign 追踪</span>
                 <span class="module-meta">PR / Issue / 趋势 / 风险观察</span>
@@ -72,6 +77,10 @@
                 <span class="stat-label">周报可用周数</span>
               </div>
               <div class="stat">
+                <span class="stat-value" id="homeMonthlyCount">—</span>
+                <span class="stat-label">月报可用月份</span>
+              </div>
+              <div class="stat">
                 <span class="stat-value" id="homeODCount">—</span>
                 <span class="stat-label">OpenDesign 动态条目</span>
               </div>
@@ -88,7 +97,7 @@
           </div>
         </div>
 
-        <div class="grid grid-3">
+        <div class="grid grid-4">
           <article class="card clickable" data-view-link="daily" id="homeDailyCard">
             <div class="card-head">
               <div><div class="kicker">最新日报</div><h3>加载中…</h3></div>
@@ -101,6 +110,13 @@
               <div><div class="kicker">最新周报</div><h3>加载中…</h3></div>
             </div>
             <p class="card-desc">正在加载最新周报摘要…</p>
+          </article>
+
+          <article class="card clickable" data-view-link="monthly" id="homeMonthlyCard">
+            <div class="card-head">
+              <div><div class="kicker">最新月报</div><h3>加载中…</h3></div>
+            </div>
+            <p class="card-desc">正在加载最新月报摘要…</p>
           </article>
 
           <article class="card clickable" data-view-link="opendesign" id="homeODCard">
@@ -295,6 +311,94 @@
       </div>
     </section>
 
+    <!-- ==================== MONTHLY ==================== -->
+    <section class="screen" id="screen-monthly">
+      <div class="container page-title">
+        <div class="kicker">AI monthly intelligence review</div>
+        <h1>AI 月报</h1>
+        <p>按自然月聚合日报、周报和项目记忆，提炼结构性趋势、月内高价值工具、视频选题和下月追踪清单。</p>
+      </div>
+
+      <div class="container section">
+        <section class="selector-panel" aria-label="选择 AI 月报">
+          <div class="selector-header">
+            <div>
+              <div class="kicker">Step 1 · Choose a month</div>
+              <h3>选择要查看的 AI 趋势月报</h3>
+              <p>月报不是日报拼接，而是跨日报去重后的趋势复盘。</p>
+            </div>
+          </div>
+
+          <div class="period-grid" id="monthlyPeriodGrid">
+            <div class="loading">加载月报索引中…</div>
+          </div>
+        </section>
+
+        <div class="selected-banner">
+          <div>
+            <div class="kicker">Step 2 · Selected monthly report</div>
+            <h3 id="monthlyTitle">—</h3>
+            <p id="monthlySummary">—</p>
+          </div>
+          <button class="button primary" id="copyMonthLink">复制链接</button>
+        </div>
+
+        <div class="layout-main">
+          <article class="article">
+            <h3>数据覆盖</h3>
+            <div class="stats" id="monthlyCoverage">
+              <div class="stat"><span class="stat-value">—</span><span class="stat-label">日报数量</span></div>
+            </div>
+            <div class="callout"><strong>覆盖说明</strong><p id="monthlyMissing">—</p></div>
+
+            <h3>本月结论</h3>
+            <div id="monthlyConclusions"><div class="loading">请选择月份查看月报内容</div></div>
+
+            <h3>本月关键趋势</h3>
+            <div class="signal-list" id="monthlyTrends">
+              <div class="loading">—</div>
+            </div>
+
+            <h3>月内高价值工具/项目</h3>
+            <div class="table-wrap"><table class="table"><thead><tr><th>名称</th><th>类型</th><th>月内变化</th><th>适合人群</th><th>上手动作</th><th>来源</th></tr></thead><tbody id="monthlyTools"><tr><td colspan="6" class="loading">—</td></tr></tbody></table></div>
+
+            <h3>Agent / MCP / AI 编程专题</h3>
+            <ul id="monthlyWorkflows" class="tracking-list"><li><span class="loading">—</span></li></ul>
+
+            <h3>OpenDesign / AI 产品设计专题</h3>
+            <ul id="monthlyDesignPatterns" class="tracking-list"><li><span class="loading">—</span></li></ul>
+
+            <h3>视频号选题池</h3>
+            <div class="table-wrap"><table class="table"><thead><tr><th>选题</th><th>爆点</th><th>脚本角度</th><th>演示素材</th><th>难度</th></tr></thead><tbody id="monthlyVideos"><tr><td colspan="5" class="loading">—</td></tr></tbody></table></div>
+
+            <h3>噪音与误判复盘</h3>
+            <div id="monthlyNoise"><div class="loading">—</div></div>
+
+            <h3>下月追踪清单</h3>
+            <ul id="monthlyTracking" class="tracking-list"><li><span class="loading">—</span></li></ul>
+          </article>
+
+          <aside class="side-stack">
+            <section class="card">
+              <div class="kicker">月报说明</div>
+              <h3>M0 / M1 / M2</h3>
+              <p class="card-desc">月报使用月度优先级：M0 代表结构性趋势，M1 代表主趋势，M2 代表观察项。评分依据包括趋势强度、实用价值、可信度、内容价值和下月延续性。</p>
+              <div class="tag-row">
+                <span class="tag danger">M0 · 月报头条趋势</span>
+                <span class="tag warn">M1 · 本月主趋势</span>
+                <span class="tag">M2 · 观察清单</span>
+              </div>
+            </section>
+            <section class="card">
+              <div class="kicker">质量规则</div>
+              <h3>不机械拼接日报</h3>
+              <p class="card-desc">月报仅将多次出现、跨来源验证、具备下月延续性的信号提升为趋势；覆盖缺口会显式标注。</p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== OPENDESIGN ==================== -->
     <section class="screen" id="screen-opendesign">
       <div class="container page-title">
@@ -373,6 +477,7 @@
   <script src="js/home.js"></script>
   <script src="js/daily.js"></script>
   <script src="js/weekly.js"></script>
+  <script src="js/monthly.js"></script>
   <script src="js/opendesign.js"></script>
 </body>
 </html>

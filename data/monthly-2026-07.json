@@ -1,0 +1,681 @@
+{
+  "month": "2026-07",
+  "title": "2026-07 AI信息差月报",
+  "coverage": {
+    "start": "2026-07-01",
+    "end": "2026-07-31",
+    "daily_count": 15,
+    "weekly_count": 5,
+    "missing_dates": [
+      "2026-07-01",
+      "2026-07-02",
+      "2026-07-03",
+      "2026-07-05",
+      "2026-07-06",
+      "2026-07-07",
+      "2026-07-09",
+      "2026-07-11",
+      "2026-07-12",
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-19",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22",
+      "2026-07-23"
+    ],
+    "source_count": 252,
+    "backfill": true
+  },
+  "conclusions": [
+    "【事实】7 月结构化日报覆盖 15 天、周报覆盖 5 个周次；覆盖不完整，因此本月报是基于已有日报/周报的月度复盘，不伪装为全月逐日完整采样。",
+    "【判断】本月最强主线是 AI 编程 Agent 工程化：Claude Code、MCP、权限治理、代码审查、Skill 化和 SDK 化持续出现，重要性超过单次模型新闻。",
+    "【判断】Agent 安全从提示词注入扩展到记忆、凭证、网络隔离、评估环境和开放权重治理，8 月仍应高优先级追踪。",
+    "【判断】国产模型与开放权重生态在 7 月形成连续信号，后续价值取决于官方可用性、许可证、工具调用和部署成本，而非发布热度本身。",
+    "【判断】OpenDesign、视频生成和多模态工具适合转为实操内容，但应以可复现 demo 和工作流为核心，避免只做发布名词堆叠。"
+  ],
+  "summary": "7 月 AI 信息差主线从模型发布转向 Agent 工程化：Claude Code/MCP/Skill/安全治理成为最强趋势，国产开源模型、多模态视频和 OpenDesign 构成重要副线。",
+  "trend_lines": [
+    {
+      "rank": "M0",
+      "title": "AI 编程从模型能力竞争转向 Agent 工程治理",
+      "evidence": [
+        "2026-07-04 · P0 · Claude Sonnet 5 发布",
+        "2026-07-04 · P0 · Claude Code 暗藏中国用户检测代码",
+        "2026-07-04 · P0 · ZCode — 智谱免费 AI 编程工具发布",
+        "2026-07-04 · P0 · Claude Code v2.1.196→201 密集更新",
+        "2026-07-04 · P0 · GitHub Agent Skills 生态平台级信号"
+      ],
+      "why": "7 月多篇日报显示 Claude Code、Codex、Copilot SDK、OpenCode、代码审查和 sandbox/权限治理反复出现，说明 AI 编程的瓶颈从“模型会不会写代码”转向“长期任务能否可靠、安全、可审计地执行”。",
+      "action_fact": "【事实】7 月日报覆盖 Claude Code 多版本更新、Agent 安全护栏、MCP 修复、代码审查工具、浏览器自动化与 Copilot SDK 热榜线索。",
+      "action_judge": "【判断】个人学习应优先做一个可复现的 Coding Agent 工作流：明确权限、日志、MCP 连接测试和人工 review 节点。",
+      "risks": "热榜工具质量不一，不能仅凭 stars 或榜单判断生产可用性。",
+      "tags": [
+        "Claude-Code",
+        "Coding-Agent",
+        "MCP",
+        "Governance"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-sonnet-5",
+        "https://www.ithome.com/0/970/809.htm",
+        "https://www.ithome.com/0/971/118.htm",
+        "https://news.qq.com/rain/a/20260701A03JHU00",
+        "https://www.leiphone.com/category/ai/rzmbSvqty7wRNC3N.html",
+        "https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding",
+        "https://zcode.z.ai/cn",
+        "https://www.163.com/dy/article/L0SPTEKO05568W0A.html"
+      ],
+      "scores": {
+        "trend_strength": 5,
+        "utility": 5,
+        "credibility": 5,
+        "content": 5,
+        "continuity": 5
+      }
+    },
+    {
+      "rank": "M0",
+      "title": "Agent 安全焦点从提示词扩展到记忆、凭证、网络和评估环境",
+      "evidence": [
+        "2026-07-04 · P0 · Claude Code 暗藏中国用户检测代码",
+        "2026-07-10 · P0 · Claude Code v2.1.205：生产级 Agent 安全和可靠性补丁",
+        "2026-07-10 · P1 · Product Hunt Agent 工具分层：Timbal、Auriko、Perfai、Aura、Coasty",
+        "2026-07-13 · P0 · Claude Code v2.1.207：企业云 Auto Mode 默认开启，策略从 opt-in 翻转为 opt-out",
+        "2026-07-13 · P0 · Claude Code 桌面版内置浏览器：Agent 自主浏览的新入口"
+      ],
+      "why": "7 月的 Claude Memory Heist、1Password 零暴露、Anthropic 网络安全评估事故、开放权重安全争论共同表明，Agent 风险不再只是提示词注入，而是覆盖记忆层、身份凭证、出网控制和测试环境。",
+      "action_fact": "【事实】7 月日报多次记录记忆注入、凭证隔离、评估环境误配置和开放权重安全边界。",
+      "action_judge": "【判断】任何 Agent 实操都应默认加入三项控制：最小权限、敏感数据隔离、出网与日志审计。",
+      "risks": "安全事件容易被夸张叙事污染，应优先采用官方复盘与技术报告。",
+      "tags": [
+        "Agent-Security",
+        "Memory",
+        "Credentials",
+        "Cyber-Evals"
+      ],
+      "sources": [
+        "https://www.ithome.com/0/971/118.htm",
+        "https://news.qq.com/rain/a/20260701A03JHU00",
+        "https://www.leiphone.com/category/ai/rzmbSvqty7wRNC3N.html",
+        "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md",
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://www.producthunt.com/leaderboard/daily/2026/7/9",
+        "https://releases.sh/source/claude-code",
+        "https://chatforest.com/builders-log/claude-code-v2-1-206-mcp-timeout-fix-doctor-background-agents-july-2026-builder-guide"
+      ],
+      "scores": {
+        "trend_strength": 5,
+        "utility": 5,
+        "credibility": 5,
+        "content": 5,
+        "continuity": 5
+      }
+    },
+    {
+      "rank": "M0",
+      "title": "国产模型与开源权重进入全矩阵竞争阶段",
+      "evidence": [
+        "2026-07-04 · P0 · ZCode — 智谱免费 AI 编程工具发布",
+        "2026-07-04 · P1 · Kimi K3 确认 7 月发布 + DeepSeek V4 正式版 7 月中旬",
+        "2026-07-04 · P1 · GLM-5.2 OpenRouter 使用量超越 Anthropic 多款模型",
+        "2026-07-08 · P0 · Deep Code — DeepSeek 专用开源编程 Agent",
+        "2026-07-08 · P0 · DeepSeek V4 正式版 7/15 上线 + 峰谷定价"
+      ],
+      "why": "7 月中旬到下旬，WAIC、Qwen3-Coder/VL/Omni、DeepSeek、Kimi、GLM 与开放权重治理讨论形成连续线索，国产模型不再只是单点追赶，而是覆盖编程、多模态、端侧和开源生态。",
+      "action_fact": "【事实】7 月日报记录 WAIC 2026、Qwen/DeepSeek/Kimi/GLM 等多条国产模型和开源权重相关信号。",
+      "action_judge": "【判断】后续选型应同时评估模型能力、许可证、部署成本、上下文长度和工具调用生态，而不是只看榜单名次。",
+      "risks": "部分模型发布和融资信息依赖二手报道，需继续回到官方模型卡、论文和仓库验证。",
+      "tags": [
+        "Open-Weights",
+        "Qwen",
+        "DeepSeek",
+        "Kimi",
+        "GLM"
+      ],
+      "sources": [
+        "https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding",
+        "https://zcode.z.ai/cn",
+        "https://www.163.com/dy/article/L0SPTEKO05568W0A.html",
+        "https://finance.sina.com.cn/tech/roll/2026-07-01/doc-inifihnu3004697.shtml",
+        "https://www.jzl.com/industry-news/deepseek-v4",
+        "https://industry.cfi.cn/p20260702000756.html",
+        "https://github.com/zai-org/GLM-5",
+        "https://github.com/lessweb/deepcode-cli"
+      ],
+      "scores": {
+        "trend_strength": 4,
+        "utility": 5,
+        "credibility": 4,
+        "content": 5,
+        "continuity": 5
+      }
+    },
+    {
+      "rank": "M1",
+      "title": "MCP 从工具连接协议升级为企业 Agent 基础设施",
+      "evidence": [
+        "2026-07-04 · P1 · Claude Science 科研工作台发布",
+        "2026-07-08 · P0 · Deep Code — DeepSeek 专用开源编程 Agent",
+        "2026-07-10 · P0 · Claude Code v2.1.205：生产级 Agent 安全和可靠性补丁",
+        "2026-07-10 · P1 · Dokie AI 支持 MCP：从 Codex/Claude Code 直接生成商务 PPT",
+        "2026-07-10 · P1 · OpenPencil MCP：设计文件开始成为 Agent 可读写对象"
+      ],
+      "why": "7 月下旬 MCP 2026-07-28、Google Cloud MCP 指南、Context7/MCP Servers 等信号显示，MCP 的重点从 demo 工具调用转向鉴权、可观测性、私网连接、Apps/Tasks 和企业部署。",
+      "action_fact": "【事实】日报和周报反复记录 MCP 协议、server、连接器、OAuth/OIDC、上下文服务等条目。",
+      "action_judge": "【判断】建议把 MCP 学习拆成两个项目：只读资料库 MCP 和内部工具 MCP，并分别测试鉴权、错误处理和日志。",
+      "risks": "MCP 在某些 CLI 任务中 token 成本高，不能替代直接 shell/API 调用。",
+      "tags": [
+        "MCP",
+        "Connector",
+        "Enterprise-Agent"
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/claude-science-ai-workbench",
+        "https://finance.sina.com.cn/tech/roll/2026-07-01/doc-inifhmie3179147.shtml",
+        "https://github.com/lessweb/deepcode-cli",
+        "https://finance.sina.com.cn/wm/2026-07-06/doc-inifvzha8568745.shtml",
+        "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md",
+        "https://releasebot.io/updates/anthropic/claude-code",
+        "https://www.einpresswire.com/article/925127608/dokie-ai-announces-mcp-support-enabling-presentation-generation-from-codex-and-claude-code",
+        "https://dokie.ai/"
+      ],
+      "scores": {
+        "trend_strength": 4,
+        "utility": 5,
+        "credibility": 5,
+        "content": 4,
+        "continuity": 5
+      }
+    },
+    {
+      "rank": "M1",
+      "title": "Skill 化把提示词沉淀为可复用工作流资产",
+      "evidence": [
+        "2026-07-04 · P0 · Claude Code v2.1.196→201 密集更新",
+        "2026-07-04 · P0 · GitHub Agent Skills 生态平台级信号",
+        "2026-07-08 · P0 · Claude Code v2.1.200-203 密集更新",
+        "2026-07-08 · P0 · Deep Code — DeepSeek 专用开源编程 Agent",
+        "2026-07-10 · P0 · ChatGPT Work 发布：Codex 能力扩展到跨应用工作代理"
+      ],
+      "why": "7 月多次出现 Agent Skills、Claude Skills、superpowers、skills 仓库和工作流封装项目，说明高频任务正从长提示词迁移到可安装、可版本化、可审查的技能包。",
+      "action_fact": "【事实】日报与周报记录 ComposioHQ/awesome-claude-skills、mattpocock/skills、superpowers、reverse-skill、last30days-skill 等 Skill 相关项目。",
+      "action_judge": "【判断】最值得沉淀的不是一次性 prompt，而是带输入、步骤、质量规则和安全审查的项目级 Skill。",
+      "risks": "第三方 Skill 可能包含危险脚本或过宽权限，安装前必须审查 SKILL.md 和 scripts。",
+      "tags": [
+        "Skills",
+        "Workflow",
+        "Prompt-Ops"
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/changelog",
+        "https://www.claudeupdates.dev/version/2.1.198",
+        "https://startupcorners.com/digest/devtools-digest-2026-07-03",
+        "https://github.com/agentskills/agentskills",
+        "https://www.claudeupdates.dev/version/2.1.200",
+        "https://www.claudeupdates.dev/version/2.1.203",
+        "https://github.com/lessweb/deepcode-cli",
+        "https://finance.sina.com.cn/wm/2026-07-06/doc-inifvzha8568745.shtml"
+      ],
+      "scores": {
+        "trend_strength": 4,
+        "utility": 5,
+        "credibility": 4,
+        "content": 4,
+        "continuity": 5
+      }
+    },
+    {
+      "rank": "M1",
+      "title": "OpenDesign 与 AI 产品设计进入本地优先、Agent-native 工作流",
+      "evidence": [
+        "2026-07-04 · P0 · GitHub Agent Skills 生态平台级信号",
+        "2026-07-10 · P1 · Framer AI Agents：把 Claude Code/Codex 接进网站设计发布流程",
+        "2026-07-10 · P1 · OpenPencil MCP：设计文件开始成为 Agent 可读写对象",
+        "2026-07-10 · P2 · Open Design 中文站与 GitHub 信息继续更新，但今日不是新发布",
+        "2026-07-17 · P0 · Open Design v0.15.0 “DeepSeek Moment”：首 token -49.5%、端到端 -21.2%、输入 token -25.1%"
+      ],
+      "why": "7 月多次记录 Open Design、设计稿到代码、DESIGN.md、插件和本地设计工作区，说明 AI 产品设计正在从云端画布协作扩展到本地文件、Agent 与代码生成闭环。",
+      "action_fact": "【事实】日报记录 Open Design v0.15、OpenDesign 追踪、设计系统/插件/导出能力等信息。",
+      "action_judge": "【判断】适合将现有前端页面沉淀成 DESIGN.md + 组件截图 + 品牌规则，再用 Agent 驱动页面与文档生成。",
+      "risks": "设计生成仍需人工审美和品牌一致性审查，不能直接替代产品设计决策。",
+      "tags": [
+        "OpenDesign",
+        "Design-Agent",
+        "Local-First"
+      ],
+      "sources": [
+        "https://startupcorners.com/digest/devtools-digest-2026-07-03",
+        "https://github.com/agentskills/agentskills",
+        "https://www.producthunt.com/leaderboard/daily/2026/7/9",
+        "https://openpencil.dev/programmable/mcp-server",
+        "https://github.com/open-pencil/open-pencil",
+        "https://open-design.ai/zh",
+        "https://github.com/nexu-io/open-design",
+        "https://github.com/nexu-io/open-design/releases/latest"
+      ],
+      "scores": {
+        "trend_strength": 3,
+        "utility": 4,
+        "credibility": 4,
+        "content": 5,
+        "continuity": 4
+      }
+    },
+    {
+      "rank": "M1",
+      "title": "多模态与视频生成继续外溢到内容生产和具身智能",
+      "evidence": [
+        "2026-07-08 · P1 · 可灵 AI 完成近 30 亿美元融资，估值 180 亿美元",
+        "2026-07-08 · P2 · WAIC 2026 预览：300+ 产品全球首发",
+        "2026-07-10 · P2 · Anthropic 7月9日转向治理与透明度叙事",
+        "2026-07-13 · P2 · WAIC 2026 本周开幕：中国 AI 年度风向标",
+        "2026-07-14 · P1 · 腾讯混元开源 1B 端到端 OCR VLM HyOCR-1.5"
+      ],
+      "why": "7 月信号覆盖视频生成、统一多模态、具身智能、端侧多模态和创意 Agent，表明 AI 内容生产与物理世界交互正在并行推进。",
+      "action_fact": "【事实】日报中出现 HeyGen Hyperframes、FLUX 3、WAIC 具身智能、腾讯/商汤/阿里多模态等相关内容。",
+      "action_judge": "【判断】内容创作应优先做可演示工作流：图像生成、视频生成、PPT/网页导出和自动剪辑，而不是只介绍模型名。",
+      "risks": "视频与 3D 工具演示成本较高，需区分官方 demo、真实可用产品和未开放能力。",
+      "tags": [
+        "Multimodal",
+        "Video",
+        "Embodied-AI"
+      ],
+      "sources": [
+        "https://news.qq.com/rain/a/20260702A04ZPQ00",
+        "https://finance.sina.com.cn/wm/2026-07-03/doc-inifpqkw3591894.shtml",
+        "https://www.jiemian.com/article/14715426.html",
+        "https://news.qq.com/rain/a/20260707A04Y0D00",
+        "https://www.anthropic.com/news",
+        "https://www.anthropic.com/news/hard-questions",
+        "https://www.anthropic.com/news/reflect-with-claude",
+        "https://www.anthropic.com/news/ust-claude"
+      ],
+      "scores": {
+        "trend_strength": 4,
+        "utility": 4,
+        "credibility": 4,
+        "content": 5,
+        "continuity": 4
+      }
+    }
+  ],
+  "top_tools": [
+    {
+      "name": "Open Design v0.15.0",
+      "type": "本地 Agent 设计平台",
+      "monthly_change": "token -25%、Website Clone、Decks 工作区、Apache-2.0、149 设计系统",
+      "audience": "开发者/设计师/需快速出稿的团队",
+      "action": "pnpm tools-dev 本地启动，粘贴 URL 克隆网站",
+      "sources": [
+        "https://github.com/nexu-io/open-design/releases/latest"
+      ]
+    },
+    {
+      "name": "GitHub Trending / Trendshift",
+      "type": "趋势源",
+      "monthly_change": "观察 Agent、MCP、Skills、Coding Agent 工具热度",
+      "audience": "开发者、内容创作者",
+      "action": "按仓库 README 和最近 commit 复核后再试用",
+      "sources": [
+        "https://github.com/trending"
+      ]
+    },
+    {
+      "name": "Product Hunt AI Agents",
+      "type": "产品发现",
+      "monthly_change": "AI Agent 产品分类与评论池",
+      "audience": "工具选型者",
+      "action": "按场景筛选，不按榜单盲试",
+      "sources": [
+        "https://www.producthunt.com/categories/ai-agents"
+      ]
+    },
+    {
+      "name": "modelcontextprotocol/servers",
+      "type": "MCP Servers",
+      "monthly_change": "MCP Server 官方生态持续增长",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/modelcontextprotocol/servers"
+      ]
+    },
+    {
+      "name": "anthropics/claude-code",
+      "type": "Coding Agent",
+      "monthly_change": "Claude Code 继续围绕 Opus 5、MCP、subagent 和 sandbox 更新",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/anthropics/claude-code"
+      ]
+    },
+    {
+      "name": "github/copilot-sdk",
+      "type": "SDK",
+      "monthly_change": "Copilot 能力外溢到 SDK 和可集成开发者平台",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/github/copilot-sdk"
+      ]
+    },
+    {
+      "name": "upstash/context7",
+      "type": "MCP Server",
+      "monthly_change": "MCP 文档/上下文服务持续受关注",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/upstash/context7"
+      ]
+    },
+    {
+      "name": "anomalyco/opencode",
+      "type": "Coding Agent",
+      "monthly_change": "开源 coding agent 在 28 日增长榜中领先",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/anomalyco/opencode"
+      ]
+    },
+    {
+      "name": "ComposioHQ/awesome-claude-skills",
+      "type": "Skills",
+      "monthly_change": "Claude Skills 资源与工作流精选集",
+      "audience": "AI 工具选型者 / Agent 开发者",
+      "action": "阅读 README、最近 commit 和 issue 后再试用",
+      "sources": [
+        "https://github.com/ComposioHQ/awesome-claude-skills"
+      ]
+    },
+    {
+      "name": "mattpocock/skills",
+      "type": "Agent 技能库",
+      "monthly_change": "从真实 .claude 目录提取的实战技能，Shell 编写，面向真实工程师工作流",
+      "audience": "Claude Code 用户、希望标准化工作流的开发者",
+      "action": "浏览仓库，把适合自己的技能复制到 .claude/skills/ 目录",
+      "sources": [
+        "https://github.com/mattpocock/skills"
+      ]
+    }
+  ],
+  "agent_workflows": [
+    "构建一个最小可用 MCP：只读数据源、OAuth/Key 管理、错误可诊断、日志可追踪。",
+    "把高频日报/周报流程沉淀为 Skill：明确输入、步骤、质量规则、风险边界和输出 schema。",
+    "Coding Agent 实操闭环：需求拆解 -> 子任务 -> 代码生成 -> 测试 -> code review -> 权限/出网审计。",
+    "Agent 安全 checklist：记忆注入检测、凭证隔离、sandbox、出网 allowlist、日志留存。"
+  ],
+  "opendesign_patterns": [
+    "本地优先：将设计资产、DESIGN.md、截图、品牌规则保存在项目仓库中。",
+    "设计到代码闭环：用 Agent 读取设计约束并生成落地页、PPT、PDF 或前端组件。",
+    "插件化工作流：把导出、截图分析、组件规范和报告生成拆成可复用 Skill。"
+  ],
+  "video_topics": [
+    {
+      "title": "Claude Code 偷看你信息？逆向工程师实锤全过程",
+      "hook": "强隐私焦虑 + 悬疑叙事 + 有 GitHub 逆向代码可展示",
+      "angle": "从 Reddit 爆料到 GitHub 逆向分析再到 Anthropic 回应的时间线。科普时区检测/关键词匹配的技术原理，讨论'AI 工具信任'话题。评论区天然高互动。",
+      "materials": "Reddit 原帖截图 / GitHub 逆向代码片段 / Claude Code 版本对比 / Anthropic 回应截图",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "ZCode 实测：国产免费 IDE 能不能取代 Claude Code？",
+      "hook": "Fable 5 禁运后'替代方案'天然流量 + 微信远程控制 AI 新奇感",
+      "angle": "实操对比：同一个编程任务分别在 ZCode (GLM-5.2)、Claude Code (Sonnet 5)、Cursor 上完成。展示微信远程控制 Agent 的实况。结尾对比成本。",
+      "materials": "三个工具屏幕录制对比 / 微信控制 Agent 实况录制 / 价格计算可视化",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "AI 模型被政府'关开关'是什么体验？Fable 5 18天禁运全回顾",
+      "hook": "强烈的话题性和'不可抗力'恐惧感",
+      "angle": "时间线叙事：6/9 发布 → 6/12 禁运 → 6/30 解除。穿插受影响开发者的真实案例、企业的应急方案。引出'主权 AI'概念讨论。",
+      "materials": "时间线信息图 / 禁运新闻截图 / Anthropic 公告 / 开发者社区反应截图",
+      "difficulty": "低",
+      "sources": []
+    },
+    {
+      "title": "Agent Skills 是什么？为什么微软谷歌英伟达都在抢？",
+      "hook": "'行业标准竞赛'有知识增量，对开发者有实操价值",
+      "angle": "先解释 Agent Skills 是什么（文件夹+SKILL.md），展示 Anthropic → Microsoft → Google → NVIDIA → Vercel 的竞速时间线。手把手教观众写一个 Skill 并让 Claude Code 加载。",
+      "materials": "Skill 文件结构截图 / Claude Code 加载 Skill 演示 / 各家 skills 仓库对比",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "Deep Code 实测：DeepSeek 终于有了自己的 Claude Code",
+      "hook": "国产开源 + Claude Code 用不了双重流量",
+      "angle": "从安装配置到跑一个真实编程任务，对比 Deep Code + DeepSeek V4 与 Claude Code + Sonnet 5 的完成质量、速度和成本。重点展示 Skills 和 MCP 配置。",
+      "materials": "Deep Code 安装录屏 / 配置文件截图 / 同一任务双工具对比 / 成本计算表",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "Claude Code 后台 Agent 能过夜的秘密：v2.1.200-203 实测",
+      "hook": "AI 编程工具从聊天到异步工作的转折",
+      "angle": "解释 Manual 默认权限、动态工作流规模、后台 daemon 修复。实测：设置一个 overnight 重构任务，第二天早上验收结果。",
+      "materials": "Claude Code 版本更新截图 / /config 设置录屏 / overnight 任务前后对比 / 错误日志（如果有）",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "可灵 AI 融资 30 亿美元：视频生成赛道要独立 IPO 了",
+      "hook": "全球最大视频模型融资纪录",
+      "angle": "从快手分拆、融资结构、估值逻辑讲到与 Runway/Sora/Pika 的竞争格局。分析中国视频生成公司的资本化路径。",
+      "materials": "快手公告截图 / 融资结构图 / 可灵/Runway/Sora 对比表 / 视频生成效果对比",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "GPT-5.6 不只是新模型：OpenAI 正在重做办公入口",
+      "hook": "同一天更新模型、ChatGPT Work、Microsoft 365 Copilot、Codex 桌面端",
+      "angle": "用一张图讲清 GPT-5.6 Sol/Terra/Luna、ChatGPT Work、Microsoft 365 Copilot、Codex 的关系，再实测生成 PPT/Excel/代码任务。",
+      "materials": "OpenAI GPT-5.6 页面截图 / ChatGPT Work 页面 / Microsoft 365 Copilot 页面 / 同一任务三模型对比录屏",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "Claude Code 2.1.205 为什么重要：它修的是 Agent 真正会翻车的地方",
+      "hook": "不是新功能，是生产环境保命补丁",
+      "angle": "用 Windows junction 误删、JSON schema 静默失败、transcript 防篡改、后台 agent 状态这四个例子解释为什么工程护栏比炫技功能更重要。",
+      "materials": "Claude Code changelog 截图 / /doctor 运行录屏 / JSON schema 测试 / Windows 文件结构示意",
+      "difficulty": "中",
+      "sources": []
+    },
+    {
+      "title": "Product Hunt 一天冒出 5 类 Agent 工具，说明 AI 创业变了",
+      "hook": "Agent 构建栈、LLM 交易台、Vibe App 安全、Coding Agent IDE、Computer Use Agent 同日上榜",
+      "angle": "用 Timbal、Auriko、Perfai、Aura、Coasty 拆解 Agent 工具生态如何从万能助手分化成具体工作流节点。",
+      "materials": "Product Hunt 榜单截图 / 五类工具对比表 / 每类一个使用场景 / 适合谁用",
+      "difficulty": "低",
+      "sources": []
+    }
+  ],
+  "noise_review": [
+    {
+      "item": "模型失控/觉醒类夸张标题",
+      "reason": "只采纳官方披露的安全评估、事故复盘或技术报告；不采纳情绪化二次加工。",
+      "watch_next_month": false
+    },
+    {
+      "item": "纯 AI 工具榜单",
+      "reason": "无原始产品页、GitHub 仓库或官方文档支撑的清单文仅作线索，不作为事实来源。",
+      "watch_next_month": false
+    },
+    {
+      "item": "GPT-5.6 系列旧闻重提",
+      "reason": "6/26-27 已充分覆盖，7 月搜索结果中仍大量出现但均为旧内容复述，非新进展。",
+      "watch_next_month": false
+    },
+    {
+      "item": "AI 编程工具年度榜单/横评文章",
+      "reason": "典型列表文，无新信息，纯 SEO 内容，不符合'信息差'定位。",
+      "watch_next_month": false
+    },
+    {
+      "item": "OpenAI Jalapeño 芯片旧闻",
+      "reason": "6/24 已报道，7 月中文搜索结果以回顾和解读为主，无新动态。",
+      "watch_next_month": false
+    },
+    {
+      "item": "AI 开源项目合集（知乎/CSDN/掘金）",
+      "reason": "盘点性质内容，无一手信息，时效性差。",
+      "watch_next_month": false
+    },
+    {
+      "item": "awesome-ai-agents-2026 等 Awesome List",
+      "reason": "典藏列表而非新闻，P2 以下不占用日报空间。",
+      "watch_next_month": false
+    },
+    {
+      "item": "'Claude Code 偷查'标题党的夸大叙事",
+      "reason": "部分中文自媒体使用'监视代码''间谍行为'等煽动性标题，与 Reddit 原始报告的技术准确性有差距。",
+      "watch_next_month": false
+    }
+  ],
+  "tracking_next_month": [
+    {
+      "item": "Claude Code / Codex / Copilot SDK 的 8 月功能级更新",
+      "reason": "7 月 Agent 工程化主题强，8 月可能继续出现 MCP、subagent、trace、SDK 化更新。",
+      "verification": "跟踪官方 changelog、GitHub releases、API docs。"
+    },
+    {
+      "item": "MCP 2026-07-28 的真实落地",
+      "reason": "协议已进入企业鉴权、Apps/Tasks、可观测性阶段，需要确认哪些项目实际采用。",
+      "verification": "检查 modelcontextprotocol、Google Cloud、Anthropic docs 与热门 MCP server changelog。"
+    },
+    {
+      "item": "国产开源模型 8 月延续性",
+      "reason": "7 月 Qwen/DeepSeek/Kimi/GLM 信号密集，8 月需观察是否转化为可用生态和教程。",
+      "verification": "核验官方模型卡、论文、GitHub、Hugging Face/OpenRouter 可用性。"
+    },
+    {
+      "item": "Agent 安全事故与治理实践",
+      "reason": "7 月安全事件显示 memory、credential、sandbox、cyber eval 均是高风险面。",
+      "verification": "优先看官方复盘、CVE、研究论文和工具治理 changelog。"
+    },
+    {
+      "item": "OpenDesign 与 AI 产品设计工具链",
+      "reason": "7 月 OpenDesign 进入稳定观察对象，适合继续跟踪设计到代码闭环。",
+      "verification": "跟踪 nexu-io/open-design PR、Issue、release 和实际导出能力。"
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-08-03",
+    "daily_dates": [
+      "2026-07-04",
+      "2026-07-08",
+      "2026-07-10",
+      "2026-07-13",
+      "2026-07-14",
+      "2026-07-17",
+      "2026-07-18",
+      "2026-07-24",
+      "2026-07-25",
+      "2026-07-26",
+      "2026-07-27",
+      "2026-07-28",
+      "2026-07-29",
+      "2026-07-30",
+      "2026-07-31"
+    ],
+    "weekly_weeks": [
+      "2026-W27",
+      "2026-W28",
+      "2026-W29",
+      "2026-W30",
+      "2026-W31"
+    ],
+    "rank_counts": {
+      "P0": 37,
+      "P1": 72,
+      "P2": 16
+    },
+    "top_tags": [
+      [
+        "Claude-Code",
+        16
+      ],
+      [
+        "Anthropic",
+        13
+      ],
+      [
+        "MCP",
+        11
+      ],
+      [
+        "OpenAI",
+        11
+      ],
+      [
+        "开源",
+        9
+      ],
+      [
+        "Agent",
+        8
+      ],
+      [
+        "Security",
+        7
+      ],
+      [
+        "Tool",
+        6
+      ],
+      [
+        "Agent-Workflow",
+        6
+      ],
+      [
+        "DeepSeek-V4",
+        6
+      ],
+      [
+        "Codex",
+        6
+      ],
+      [
+        "DeepSeek",
+        5
+      ],
+      [
+        "中国",
+        5
+      ],
+      [
+        "Product-Hunt",
+        5
+      ],
+      [
+        "New-Model",
+        4
+      ],
+      [
+        "Google",
+        4
+      ],
+      [
+        "WAIC-2026",
+        4
+      ],
+      [
+        "安全",
+        4
+      ],
+      [
+        "Skill",
+        4
+      ],
+      [
+        "Model",
+        3
+      ]
+    ]
+  }
+}

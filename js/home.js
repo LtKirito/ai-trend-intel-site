@@ -21,6 +21,12 @@ function updateHomeStats() {
     weeklyCount.textContent = state.weeklyIndex.length || '—';
   }
 
+  // Monthly count
+  const monthlyCount = document.getElementById('homeMonthlyCount');
+  if (monthlyCount && state.monthlyIndex) {
+    monthlyCount.textContent = state.monthlyIndex.length || '—';
+  }
+
   // OpenDesign count
   const odCount = document.getElementById('homeODCount');
   if (odCount && state.opendesignData) {
@@ -59,6 +65,23 @@ function updateHomeWeeklySummary(data) {
   `;
 }
 
+function updateHomeMonthlySummary(data) {
+  const el = document.getElementById('homeMonthlyCard');
+  if (!el || !data) return;
+  const coverage = data.coverage || {};
+  el.innerHTML = `
+    <div class="card-head">
+      <div><div class="kicker">最新月报</div><h3>${data.title || 'AI 月报'}</h3></div>
+      <span class="tag accent">${state.currentMonth || ''}</span>
+    </div>
+    <p class="card-desc">${data.summary || ''}</p>
+    <div class="meta-line">
+      <span class="mono" style="color:var(--success)">${coverage.daily_count || 0} 份日报</span>
+      <span>${(data.trend_lines || []).length} 条趋势线</span>
+    </div>
+  `;
+}
+
 function updateHomeODSummary(data) {
   const el = document.getElementById('homeODCard');
   if (!el || !data) return;
@@ -83,6 +106,9 @@ function renderHomeCards() {
     }
     if (state.weeklyIndex && state.weeklyIndex.length > 0) {
       loadJSON(`weekly-${state.weeklyIndex[0].week}.json`).then(updateHomeWeeklySummary);
+    }
+    if (state.monthlyIndex && state.monthlyIndex.length > 0) {
+      loadJSON(`monthly-${state.monthlyIndex[0].month}.json`).then(updateHomeMonthlySummary);
     }
   }, 200);
 }

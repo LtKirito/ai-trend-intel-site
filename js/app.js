@@ -2,7 +2,7 @@
 
 const CONFIG = {
   dataPath: 'data/',
-  screens: ['home', 'daily', 'github', 'opendesign'],
+  screens: ['home', 'daily', 'github', 'monthly', 'opendesign'],
   defaultScreen: 'home'
 };
 
@@ -10,9 +10,11 @@ let state = {
   currentScreen: CONFIG.defaultScreen,
   dailyIndex: null,
   weeklyIndex: null,
+  monthlyIndex: null,
   opendesignData: null,
   currentDay: null,
-  currentWeek: null
+  currentWeek: null,
+  currentMonth: null
 };
 
 /* ---- Toast ---- */
@@ -66,6 +68,7 @@ async function initApp() {
   // Load indices
   state.dailyIndex = await loadJSON('daily-index.json');
   state.weeklyIndex = await loadJSON('weekly-index.json');
+  state.monthlyIndex = await loadJSON('monthly-index.json');
   
   // Set default selections to latest
   if (state.dailyIndex && state.dailyIndex.length > 0) {
@@ -74,11 +77,15 @@ async function initApp() {
   if (state.weeklyIndex && state.weeklyIndex.length > 0) {
     state.currentWeek = state.weeklyIndex[0].week;
   }
+  if (state.monthlyIndex && state.monthlyIndex.length > 0) {
+    state.currentMonth = state.monthlyIndex[0].month;
+  }
   
   // Render initial state
   renderHome();
   renderDaily();
   renderGithub();
+  renderMonthly();
   
   // Load OpenDesign data on demand
   state.opendesignData = await loadJSON('opendesign.json');
@@ -96,6 +103,7 @@ document.querySelectorAll('[data-view-link]').forEach(btn => {
       showScreen(target);
       if (target === 'daily') renderDaily();
       if (target === 'github') renderGithub();
+      if (target === 'monthly') renderMonthly();
       if (target === 'opendesign') renderOpenDesign();
     }
   });
@@ -118,7 +126,7 @@ if (search) {
     if (e.key === 'Enter') {
       const q = search.value.toLowerCase();
       // Find matching screen
-      const screens = { daily: 'daily报', github: 'github周报周', opendesign: 'opendesign专题' };
+      const screens = { daily: 'daily日报', github: 'github周报周', monthly: 'monthly月报月度', opendesign: 'opendesign专题' };
       for (const [key, val] of Object.entries(screens)) {
         if (val.includes(q)) { showScreen(key); break; }
       }
@@ -127,19 +135,24 @@ if (search) {
 }
 
 /* ---- Hash Routing ---- */
+function parseHashScreen() {
+  return window.location.hash.replace('#', '').split('&')[0];
+}
+
 window.addEventListener('hashchange', () => {
-  const hash = window.location.hash.replace('#', '');
+  const hash = parseHashScreen();
   if (CONFIG.screens.includes(hash)) {
     showScreen(hash);
     if (hash === 'daily') renderDaily();
     if (hash === 'github') renderGithub();
+    if (hash === 'monthly') renderMonthly();
     if (hash === 'opendesign') renderOpenDesign();
   }
 });
 
 // Handle initial hash
 if (window.location.hash) {
-  const hash = window.location.hash.replace('#', '');
+  const hash = parseHashScreen();
   if (CONFIG.screens.includes(hash)) state.currentScreen = hash;
 }
 
